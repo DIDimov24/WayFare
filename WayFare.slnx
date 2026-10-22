@@ -1,0 +1,10 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+  </Configurations>
+  <Project Path="WayFare.Application/WayFare.Application.vcxproj" Id="82d328dd-cee2-42d7-9308-78116bed3a4a" />
+  <Project Path="WayFare.Presentation/WayFare.Presentation.vcxproj" Id="62f075dc-693f-40b2-be22-116f6ec68c80" />
+  <Project Path="WayFare.Business/WayFare.Business.vcxproj" Id="d2f6950f-c02f-4333-92cd-87a03609d9a8" />
+  <Project Path="WayFare.DataAccess/WayFare.DataAccess.vcxproj" Id="984f8682-5372-42af-b207-515738326808" />
+  <Project Path="WayFare.Tests/WayFare.Tests.vcxproj" Id="64236927-6bf7-9365-d64d-071bbf05c9a5" />
+</Solution>

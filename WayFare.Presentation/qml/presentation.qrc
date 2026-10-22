@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/qt/qml/wayfare/presentation">
+        <file>qmldir</file>
+        <file>views/HomeView.qml</file>
+    </qresource>
+</RCC>

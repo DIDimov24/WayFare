@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/qt/qml/wayfare">
+        <file>Main.qml</file>
+        <file>qmldir</file>
+    </qresource>
+</RCC>
