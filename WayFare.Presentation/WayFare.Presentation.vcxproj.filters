@@ -10,6 +10,93 @@
     <Filter Include="viewModels">
       <UniqueIdentifier>{58043ccd-07f0-44f8-9152-b62e84a16ecd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="assets">
+      <UniqueIdentifier>{05afdb01-a8c3-4f2e-859b-c69c23660636}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models">
+      <UniqueIdentifier>{ff4b769d-ba0e-4cd0-853c-67ec9512c3f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\diving_gear">
+      <UniqueIdentifier>{01982434-e511-4130-a41c-34418ab301d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\diving_gear\meshes">
+      <UniqueIdentifier>{f9e9bf3e-241c-4a0c-89d8-e40b339b97bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\hero">
+      <UniqueIdentifier>{969ba2fe-3c29-4abe-bf08-64b53519a0c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\hero\maps">
+      <UniqueIdentifier>{22eb463c-e4a9-4c4a-a4b7-d3186ab21552}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\hero\meshes">
+      <UniqueIdentifier>{4d99a64b-2d3d-4dd8-8719-23de87a08fa5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\nightmare_creature">
+      <UniqueIdentifier>{e012a433-dfa4-4cc8-b4c3-60c4b09a3fb9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\nightmare_creature\maps">
+      <UniqueIdentifier>{1823885b-1b37-4490-be90-6edc8101740b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\nightmare_creature\meshes">
+      <UniqueIdentifier>{5837394b-ad15-45e1-a9e8-e18bac956afb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\pistol">
+      <UniqueIdentifier>{4568d5ad-f1f7-4e26-b7bd-0cee737ded39}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\pistol\meshes">
+      <UniqueIdentifier>{de82ea20-6607-4d28-aeee-1b42a9cf1453}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\potion">
+      <UniqueIdentifier>{a9927c65-4caa-4009-9d77-8c7bcd49e88e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\potion\maps">
+      <UniqueIdentifier>{2ba5f560-d31e-49e7-96c4-73d27b71f9b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\potion\meshes">
+      <UniqueIdentifier>{429cd8e9-98a6-4dbb-beb8-0d585c504dc8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\sword">
+      <UniqueIdentifier>{cc4f4394-588c-4510-99a5-8cbe48ca00a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\sword\maps">
+      <UniqueIdentifier>{106d2494-55c6-48ae-8f62-63a312448771}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\sword\meshes">
+      <UniqueIdentifier>{f4c67f7e-a071-4ae6-8552-bf20e451361d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\troll_cave">
+      <UniqueIdentifier>{5cf43a63-1822-4806-a1fd-e2e06ebc8c23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\troll_cave\maps">
+      <UniqueIdentifier>{0dc9e69a-ff46-4aa2-9fff-6e53c9d43306}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\troll_cave\meshes">
+      <UniqueIdentifier>{2ec9390c-25cf-4f6d-8786-b8c6e3cf7c5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\zombie">
+      <UniqueIdentifier>{3853598e-83d0-4a16-b04a-c2a6b7040294}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\zombie\maps">
+      <UniqueIdentifier>{77816386-88fb-4b2e-b661-4912b561bdc7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\zombie\meshes">
+      <UniqueIdentifier>{37b8c286-b257-476c-bc74-fc40ea98a174}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\sky">
+      <UniqueIdentifier>{e9e3d3fe-76dd-423e-9a50-9aa5d526eeed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\textures">
+      <UniqueIdentifier>{ebb14ae3-0e56-41f8-9b6d-49f4d9b52ecd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\textures\dungeon">
+      <UniqueIdentifier>{0cc66d74-6a1f-4d53-911d-df7bcc115048}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\textures\temple">
+      <UniqueIdentifier>{05be5575-8c30-49b0-b534-59ed82681043}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\textures\village">
+      <UniqueIdentifier>{ef2f6020-4d09-4cdc-8ef5-b08ab9f7488c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Module.cpp" />
@@ -28,6 +115,237 @@
     </None>
     <None Include="qml\views\HomeView.qml">
       <Filter>qml\views</Filter>
+    </None>
+    <None Include="assets\models\diving_gear\DivingGear.qml">
+      <Filter>assets\models\diving_gear</Filter>
+    </None>
+    <None Include="assets\models\diving_gear\meshes\node_mesh.mesh">
+      <Filter>assets\models\diving_gear\meshes</Filter>
+    </None>
+    <None Include="assets\models\hero\Hero.qml">
+      <Filter>assets\models\hero</Filter>
+    </None>
+    <None Include="assets\models\hero\maps\textureData.png">
+      <Filter>assets\models\hero\maps</Filter>
+    </None>
+    <None Include="assets\models\hero\maps\textureData10.png">
+      <Filter>assets\models\hero\maps</Filter>
+    </None>
+    <None Include="assets\models\hero\maps\textureData18.png">
+      <Filter>assets\models\hero\maps</Filter>
+    </None>
+    <None Include="assets\models\hero\maps\textureData20.png">
+      <Filter>assets\models\hero\maps</Filter>
+    </None>
+    <None Include="assets\models\hero\maps\textureData26.png">
+      <Filter>assets\models\hero\maps</Filter>
+    </None>
+    <None Include="assets\models\hero\maps\textureData35.png">
+      <Filter>assets\models\hero\maps</Filter>
+    </None>
+    <None Include="assets\models\hero\maps\textureData37.png">
+      <Filter>assets\models\hero\maps</Filter>
+    </None>
+    <None Include="assets\models\hero\maps\textureData39.png">
+      <Filter>assets\models\hero\maps</Filter>
+    </None>
+    <None Include="assets\models\hero\maps\textureData45.png">
+      <Filter>assets\models\hero\maps</Filter>
+    </None>
+    <None Include="assets\models\hero\maps\textureData47.png">
+      <Filter>assets\models\hero\maps</Filter>
+    </None>
+    <None Include="assets\models\hero\maps\textureData49.png">
+      <Filter>assets\models\hero\maps</Filter>
+    </None>
+    <None Include="assets\models\hero\maps\textureData55.png">
+      <Filter>assets\models\hero\maps</Filter>
+    </None>
+    <None Include="assets\models\hero\maps\textureData57.png">
+      <Filter>assets\models\hero\maps</Filter>
+    </None>
+    <None Include="assets\models\hero\maps\textureData59.png">
+      <Filter>assets\models\hero\maps</Filter>
+    </None>
+    <None Include="assets\models\hero\maps\textureData6.png">
+      <Filter>assets\models\hero\maps</Filter>
+    </None>
+    <None Include="assets\models\hero\maps\textureData8.png">
+      <Filter>assets\models\hero\maps</Filter>
+    </None>
+    <None Include="assets\models\hero\meshes\body_mesh.mesh">
+      <Filter>assets\models\hero\meshes</Filter>
+    </None>
+    <None Include="assets\models\hero\meshes\bottoms_mesh.mesh">
+      <Filter>assets\models\hero\meshes</Filter>
+    </None>
+    <None Include="assets\models\hero\meshes\eyelashes_mesh.mesh">
+      <Filter>assets\models\hero\meshes</Filter>
+    </None>
+    <None Include="assets\models\hero\meshes\eyes_mesh.mesh">
+      <Filter>assets\models\hero\meshes</Filter>
+    </None>
+    <None Include="assets\models\hero\meshes\hair_mesh.mesh">
+      <Filter>assets\models\hero\meshes</Filter>
+    </None>
+    <None Include="assets\models\hero\meshes\shoes_mesh.mesh">
+      <Filter>assets\models\hero\meshes</Filter>
+    </None>
+    <None Include="assets\models\hero\meshes\tops_mesh.mesh">
+      <Filter>assets\models\hero\meshes</Filter>
+    </None>
+    <None Include="assets\models\nightmare_creature\NightmareCreature.qml">
+      <Filter>assets\models\nightmare_creature</Filter>
+    </None>
+    <None Include="assets\models\nightmare_creature\maps\Horror1_baseColor.png">
+      <Filter>assets\models\nightmare_creature\maps</Filter>
+    </None>
+    <None Include="assets\models\nightmare_creature\maps\Horror1_metallicRoughness.png">
+      <Filter>assets\models\nightmare_creature\maps</Filter>
+    </None>
+    <None Include="assets\models\nightmare_creature\maps\Horror1_normal.png">
+      <Filter>assets\models\nightmare_creature\maps</Filter>
+    </None>
+    <None Include="assets\models\nightmare_creature\meshes\horror1_LP_Horror1_0_mesh.mesh">
+      <Filter>assets\models\nightmare_creature\meshes</Filter>
+    </None>
+    <None Include="assets\models\pistol\Pistol.qml">
+      <Filter>assets\models\pistol</Filter>
+    </None>
+    <None Include="assets\models\pistol\meshes\pistol_5_mesh.mesh">
+      <Filter>assets\models\pistol\meshes</Filter>
+    </None>
+    <None Include="assets\models\potion\Potion.qml">
+      <Filter>assets\models\potion</Filter>
+    </None>
+    <None Include="assets\models\potion\maps\textureData.png">
+      <Filter>assets\models\potion\maps</Filter>
+    </None>
+    <None Include="assets\models\potion\meshes\cube_15957_mesh.mesh">
+      <Filter>assets\models\potion\meshes</Filter>
+    </None>
+    <None Include="assets\models\sword\Sword.qml">
+      <Filter>assets\models\sword</Filter>
+    </None>
+    <None Include="assets\models\sword\maps\knight_texture.png">
+      <Filter>assets\models\sword\maps</Filter>
+    </None>
+    <None Include="assets\models\sword\meshes\cube_11839_mesh.mesh">
+      <Filter>assets\models\sword\meshes</Filter>
+    </None>
+    <None Include="assets\models\troll_cave\TrollCave.qml">
+      <Filter>assets\models\troll_cave</Filter>
+    </None>
+    <None Include="assets\models\troll_cave\maps\MI_Troll_Body_Mountain01_Lower_baseColor.png">
+      <Filter>assets\models\troll_cave\maps</Filter>
+    </None>
+    <None Include="assets\models\troll_cave\maps\MI_Troll_Body_Mountain01_Lower_normal.png">
+      <Filter>assets\models\troll_cave\maps</Filter>
+    </None>
+    <None Include="assets\models\troll_cave\maps\MI_Troll_Body_Mountain01_Upper_baseColor.png">
+      <Filter>assets\models\troll_cave\maps</Filter>
+    </None>
+    <None Include="assets\models\troll_cave\maps\MI_Troll_Body_Mountain01_Upper_normal.png">
+      <Filter>assets\models\troll_cave\maps</Filter>
+    </None>
+    <None Include="assets\models\troll_cave\maps\MI_Troll_Heads_Cave_baseColor.png">
+      <Filter>assets\models\troll_cave\maps</Filter>
+    </None>
+    <None Include="assets\models\troll_cave\maps\MI_Troll_Heads_Cave_normal.png">
+      <Filter>assets\models\troll_cave\maps</Filter>
+    </None>
+    <None Include="assets\models\troll_cave\maps\MI_Troll_Heads_Eye_Master_baseColor.png">
+      <Filter>assets\models\troll_cave\maps</Filter>
+    </None>
+    <None Include="assets\models\troll_cave\maps\MI_Troll_Heads_Teeth_baseColor.png">
+      <Filter>assets\models\troll_cave\maps</Filter>
+    </None>
+    <None Include="assets\models\troll_cave\meshes\node0000_SK_Troll_Cave_MI_Troll_Body_Mountain01_Upper_0_mesh.mesh">
+      <Filter>assets\models\troll_cave\meshes</Filter>
+    </None>
+    <None Include="assets\models\troll_cave\meshes\node0001_SK_Troll_Cave_MI_Troll_Body_Mountain01_Lower_0_mesh.mesh">
+      <Filter>assets\models\troll_cave\meshes</Filter>
+    </None>
+    <None Include="assets\models\troll_cave\meshes\node0002_SK_Troll_Cave_MI_Troll_Heads_Eye_Master_0_mesh.mesh">
+      <Filter>assets\models\troll_cave\meshes</Filter>
+    </None>
+    <None Include="assets\models\troll_cave\meshes\node0003_SK_Troll_Cave_MI_Troll_Heads_Cave_0_mesh.mesh">
+      <Filter>assets\models\troll_cave\meshes</Filter>
+    </None>
+    <None Include="assets\models\troll_cave\meshes\node0004_SK_Troll_Cave_MI_Troll_Heads_Teeth_0_mesh.mesh">
+      <Filter>assets\models\troll_cave\meshes</Filter>
+    </None>
+    <None Include="assets\models\zombie\Zombie.qml">
+      <Filter>assets\models\zombie</Filter>
+    </None>
+    <None Include="assets\models\zombie\maps\zombie1_diffuse.png">
+      <Filter>assets\models\zombie\maps</Filter>
+    </None>
+    <None Include="assets\models\zombie\maps\zombie1_normal.png">
+      <Filter>assets\models\zombie\maps</Filter>
+    </None>
+    <None Include="assets\models\zombie\maps\zombie1_specularGlossiness.png">
+      <Filter>assets\models\zombie\maps</Filter>
+    </None>
+    <None Include="assets\models\zombie\meshes\mesh_zombie1_0_mesh.mesh">
+      <Filter>assets\models\zombie\meshes</Filter>
+    </None>
+    <None Include="assets\sky\kloofendal_overcast_puresky_2k.hdr">
+      <Filter>assets\sky</Filter>
+    </None>
+    <None Include="assets\textures\dungeon\floor_diffuse.jpg">
+      <Filter>assets\textures\dungeon</Filter>
+    </None>
+    <None Include="assets\textures\dungeon\floor_normal.jpg">
+      <Filter>assets\textures\dungeon</Filter>
+    </None>
+    <None Include="assets\textures\dungeon\floor_roughness.jpg">
+      <Filter>assets\textures\dungeon</Filter>
+    </None>
+    <None Include="assets\textures\dungeon\wall_diffuse.jpg">
+      <Filter>assets\textures\dungeon</Filter>
+    </None>
+    <None Include="assets\textures\dungeon\wall_normal.jpg">
+      <Filter>assets\textures\dungeon</Filter>
+    </None>
+    <None Include="assets\textures\dungeon\wall_roughness.jpg">
+      <Filter>assets\textures\dungeon</Filter>
+    </None>
+    <None Include="assets\textures\temple\floor_diffuse.jpg">
+      <Filter>assets\textures\temple</Filter>
+    </None>
+    <None Include="assets\textures\temple\floor_normal.jpg">
+      <Filter>assets\textures\temple</Filter>
+    </None>
+    <None Include="assets\textures\temple\floor_roughness.jpg">
+      <Filter>assets\textures\temple</Filter>
+    </None>
+    <None Include="assets\textures\temple\wall_diffuse.jpg">
+      <Filter>assets\textures\temple</Filter>
+    </None>
+    <None Include="assets\textures\temple\wall_normal.jpg">
+      <Filter>assets\textures\temple</Filter>
+    </None>
+    <None Include="assets\textures\temple\wall_roughness.jpg">
+      <Filter>assets\textures\temple</Filter>
+    </None>
+    <None Include="assets\textures\village\floor_diffuse.jpg">
+      <Filter>assets\textures\village</Filter>
+    </None>
+    <None Include="assets\textures\village\floor_normal.jpg">
+      <Filter>assets\textures\village</Filter>
+    </None>
+    <None Include="assets\textures\village\floor_roughness.jpg">
+      <Filter>assets\textures\village</Filter>
+    </None>
+    <None Include="assets\textures\village\wall_diffuse.jpg">
+      <Filter>assets\textures\village</Filter>
+    </None>
+    <None Include="assets\textures\village\wall_normal.jpg">
+      <Filter>assets\textures\village</Filter>
+    </None>
+    <None Include="assets\textures\village\wall_roughness.jpg">
+      <Filter>assets\textures\village</Filter>
     </None>
   </ItemGroup>
 </Project>
