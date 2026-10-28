@@ -10,6 +10,15 @@
     <ClInclude Include="models\Maze.hpp">
       <Filter>models</Filter>
     </ClInclude>
+    <ClInclude Include="models\Player.hpp">
+      <Filter>models</Filter>
+    </ClInclude>
+    <ClCompile Include="Player\PlayerMovement.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClInclude Include="Player\PlayerMovement.hpp">
+      <Filter>Player</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="MazeGenerator">
@@ -17,6 +26,9 @@
     </Filter>
     <Filter Include="models">
       <UniqueIdentifier>{6b1f3a52-8c4e-4d7a-9f21-3e5b7c9d0a14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Player">
+      <UniqueIdentifier>{4e8d2c71-9a3b-4f65-b1d7-c2e5a8f30b96}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

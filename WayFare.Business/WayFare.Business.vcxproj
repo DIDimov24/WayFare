@@ -84,6 +84,9 @@
     <ClInclude Include="MazeGenerator\MazeGenerator.hpp" />
     <ClCompile Include="MazeGenerator\MazeGenerator.cpp" />
     <ClInclude Include="models\Maze.hpp" />
+    <ClInclude Include="models\Player.hpp" />
+    <ClInclude Include="Player\PlayerMovement.hpp" />
+    <ClCompile Include="Player\PlayerMovement.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WayFare.DataAccess\WayFare.DataAccess.vcxproj">
