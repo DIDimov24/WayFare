@@ -1,5 +1,5 @@
-#include "WayFare.Business/MazeGenerator/MazeGenerator.hpp"
-
+#include <cstdint>
+#include <WayFare.Business/models/Maze.hpp>
 #include <random>
 #include <vector>
 
