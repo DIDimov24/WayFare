@@ -84,11 +84,6 @@
     <ClInclude Include="DataAccess.hpp" />
     <ClCompile Include="DataAccess.cpp" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\WayFare.Business\WayFare.Business.vcxproj">
-      <Project>{d2f6950f-c02f-4333-92cd-87a03609d9a8}</Project>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

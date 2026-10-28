@@ -81,8 +81,14 @@
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Business.hpp" />
-    <ClCompile Include="Business.cpp" />
+    <ClInclude Include="MazeGenerator\MazeGenerator.hpp" />
+    <ClCompile Include="MazeGenerator\MazeGenerator.cpp" />
+    <ClInclude Include="models\Maze.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WayFare.DataAccess\WayFare.DataAccess.vcxproj">
+      <Project>{984f8682-5372-42af-b207-515738326808}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
