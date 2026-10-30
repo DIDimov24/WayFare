@@ -40,7 +40,7 @@
     <QtInstall>6.12.0_msvc2022_64</QtInstall>
     <QtModules>core;gui;qml;quick</QtModules>
     <QtBuildConfig>debug</QtBuildConfig>
-    <QtQMLDebugEnable>true</QtQMLDebugEnable>
+    <QtQMLDebugEnable>false</QtQMLDebugEnable>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="QtSettings">
     <QtInstall>6.12.0_msvc2022_64</QtInstall>

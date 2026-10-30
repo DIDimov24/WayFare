@@ -1,2 +1,11 @@
 module wayfare.presentation
-HomeView 1.0 views/HomeView.qml
+FenceModel 1.0 models/FenceModel.qml
+GrassModel 1.0 models/GrassModel.qml
+HeroModel 1.0 models/HeroModel.qml
+LogStackModel 1.0 models/LogStackModel.qml
+PineModel 1.0 models/PineModel.qml
+RockModel 1.0 models/RockModel.qml
+StumpModel 1.0 models/StumpModel.qml
+MainMenuButton 1.0 views/MainMenuButton.qml
+MainMenuView 1.0 views/MainMenuView.qml
+VillageScene 1.0 views/VillageScene.qml

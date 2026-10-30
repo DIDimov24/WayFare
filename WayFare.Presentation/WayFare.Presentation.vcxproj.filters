@@ -4,6 +4,9 @@
     <Filter Include="qml">
       <UniqueIdentifier>{03fe52d2-c3ee-485d-9252-ca19e669f123}</UniqueIdentifier>
     </Filter>
+    <Filter Include="qml\models">
+      <UniqueIdentifier>{6b0e2d1c-4f5a-4e8b-9c27-3a1d5e7f9b40}</UniqueIdentifier>
+    </Filter>
     <Filter Include="qml\views">
       <UniqueIdentifier>{a7f42d32-05f9-491f-907a-2f359c8bd776}</UniqueIdentifier>
     </Filter>
@@ -82,6 +85,78 @@
     <Filter Include="assets\models\zombie\meshes">
       <UniqueIdentifier>{37b8c286-b257-476c-bc74-fc40ea98a174}</UniqueIdentifier>
     </Filter>
+    <Filter Include="assets\models\fence_planks">
+      <UniqueIdentifier>{e9fc9c65-94f7-4a42-9a70-4135e36aa1fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\fence_planks\meshes">
+      <UniqueIdentifier>{7134a4c9-75a9-43e0-ae73-702e2acbd346}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\fence_simple">
+      <UniqueIdentifier>{1340064b-ddae-4594-8de3-5eb0dd0df651}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\fence_simple\meshes">
+      <UniqueIdentifier>{aa6b3435-f7a3-4890-8aca-42dacc2b5f4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\grass_large">
+      <UniqueIdentifier>{5a743387-edc3-4ba2-9f63-2df435ea1cf2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\grass_large\meshes">
+      <UniqueIdentifier>{ecf0d968-789b-4778-8094-59741b218768}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\log_stack">
+      <UniqueIdentifier>{06ba5f19-bcc6-4457-8846-5251fe3526f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\log_stack\meshes">
+      <UniqueIdentifier>{2c67c062-1574-4060-a8fc-75b02eca2a49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\pine_default">
+      <UniqueIdentifier>{bd7f26a7-b32c-4152-97f2-9832b6e1f879}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\pine_default\meshes">
+      <UniqueIdentifier>{2af76f75-b23b-439b-8d44-e53eb20c33ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\pine_small">
+      <UniqueIdentifier>{f5c44da4-e579-4bba-ac82-f45e56eef3f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\pine_small\meshes">
+      <UniqueIdentifier>{bb2d64d8-0d72-4d1f-9d05-eeacfb479bf1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\pine_tall_a">
+      <UniqueIdentifier>{434a722b-e02c-45f9-8395-7bd40106bceb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\pine_tall_a\meshes">
+      <UniqueIdentifier>{b6fbb114-b1a3-4f8a-99a6-94990a7fcf1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\pine_tall_b">
+      <UniqueIdentifier>{b760d822-e5dd-41d6-a8df-b091ac388891}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\pine_tall_b\meshes">
+      <UniqueIdentifier>{81341384-8463-4e4d-a3a9-5701c3094b44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\pine_tall_c">
+      <UniqueIdentifier>{9b592fd1-a105-4979-b50b-3856e3a51d2b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\pine_tall_c\meshes">
+      <UniqueIdentifier>{c28b5cc6-d9e0-49a5-b148-53f2eb5fd76a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\rock_large">
+      <UniqueIdentifier>{639ec316-010d-442e-a773-b9336b26b8b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\rock_large\meshes">
+      <UniqueIdentifier>{f46b340d-978f-4d6d-b450-2f55339a0acd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\rock_tall">
+      <UniqueIdentifier>{9ddea3cf-cb88-4ab9-b652-b482383182ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\rock_tall\meshes">
+      <UniqueIdentifier>{d72b6a73-e4f1-4a2f-aedb-d7b791796aac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\stump_old">
+      <UniqueIdentifier>{30bf6cf4-b70e-4e38-891e-f9d94cf780e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\stump_old\meshes">
+      <UniqueIdentifier>{2c503c54-36bf-4d79-a95c-86dc5939201d}</UniqueIdentifier>
+    </Filter>
     <Filter Include="assets\sky">
       <UniqueIdentifier>{e9e3d3fe-76dd-423e-9a50-9aa5d526eeed}</UniqueIdentifier>
     </Filter>
@@ -100,11 +175,17 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Module.cpp" />
-    <ClCompile Include="viewModels\HomeViewModel.cpp">
+    <ClCompile Include="viewModels\Assets.cpp">
+      <Filter>viewModels</Filter>
+    </ClCompile>
+    <ClCompile Include="viewModels\MainMenu.cpp">
       <Filter>viewModels</Filter>
     </ClCompile>
     <ClInclude Include="Module.hpp" />
-    <QtMoc Include="viewModels\HomeViewModel.hpp">
+    <QtMoc Include="viewModels\Assets.hpp">
+      <Filter>viewModels</Filter>
+    </QtMoc>
+    <QtMoc Include="viewModels\MainMenu.hpp">
       <Filter>viewModels</Filter>
     </QtMoc>
     <QtRcc Include="qml\presentation.qrc">
@@ -113,7 +194,34 @@
     <None Include="qml\qmldir">
       <Filter>qml</Filter>
     </None>
-    <None Include="qml\views\HomeView.qml">
+    <None Include="qml\models\HeroModel.qml">
+      <Filter>qml\models</Filter>
+    </None>
+    <None Include="qml\models\FenceModel.qml">
+      <Filter>qml\models</Filter>
+    </None>
+    <None Include="qml\models\GrassModel.qml">
+      <Filter>qml\models</Filter>
+    </None>
+    <None Include="qml\models\LogStackModel.qml">
+      <Filter>qml\models</Filter>
+    </None>
+    <None Include="qml\models\PineModel.qml">
+      <Filter>qml\models</Filter>
+    </None>
+    <None Include="qml\models\RockModel.qml">
+      <Filter>qml\models</Filter>
+    </None>
+    <None Include="qml\models\StumpModel.qml">
+      <Filter>qml\models</Filter>
+    </None>
+    <None Include="qml\views\MainMenuButton.qml">
+      <Filter>qml\views</Filter>
+    </None>
+    <None Include="qml\views\MainMenuView.qml">
+      <Filter>qml\views</Filter>
+    </None>
+    <None Include="qml\views\VillageScene.qml">
       <Filter>qml\views</Filter>
     </None>
     <None Include="assets\models\diving_gear\DivingGear.qml">
@@ -289,6 +397,78 @@
     </None>
     <None Include="assets\models\zombie\meshes\mesh_zombie1_0_mesh.mesh">
       <Filter>assets\models\zombie\meshes</Filter>
+    </None>
+    <None Include="assets\models\fence_planks\FencePlanks.qml">
+      <Filter>assets\models\fence_planks</Filter>
+    </None>
+    <None Include="assets\models\fence_planks\meshes\mesh_fence_planks_mesh.mesh">
+      <Filter>assets\models\fence_planks\meshes</Filter>
+    </None>
+    <None Include="assets\models\fence_simple\FenceSimple.qml">
+      <Filter>assets\models\fence_simple</Filter>
+    </None>
+    <None Include="assets\models\fence_simple\meshes\fence_simple_mesh.mesh">
+      <Filter>assets\models\fence_simple\meshes</Filter>
+    </None>
+    <None Include="assets\models\grass_large\GrassLarge.qml">
+      <Filter>assets\models\grass_large</Filter>
+    </None>
+    <None Include="assets\models\grass_large\meshes\mesh_grass_large_mesh.mesh">
+      <Filter>assets\models\grass_large\meshes</Filter>
+    </None>
+    <None Include="assets\models\log_stack\LogStack.qml">
+      <Filter>assets\models\log_stack</Filter>
+    </None>
+    <None Include="assets\models\log_stack\meshes\log_stack_mesh.mesh">
+      <Filter>assets\models\log_stack\meshes</Filter>
+    </None>
+    <None Include="assets\models\pine_default\PineDefault.qml">
+      <Filter>assets\models\pine_default</Filter>
+    </None>
+    <None Include="assets\models\pine_default\meshes\tree_pineDefaultA_mesh.mesh">
+      <Filter>assets\models\pine_default\meshes</Filter>
+    </None>
+    <None Include="assets\models\pine_small\PineSmall.qml">
+      <Filter>assets\models\pine_small</Filter>
+    </None>
+    <None Include="assets\models\pine_small\meshes\tree_pineSmallA_mesh.mesh">
+      <Filter>assets\models\pine_small\meshes</Filter>
+    </None>
+    <None Include="assets\models\pine_tall_a\PineTallA.qml">
+      <Filter>assets\models\pine_tall_a</Filter>
+    </None>
+    <None Include="assets\models\pine_tall_a\meshes\tree_pineTallA_detailed_mesh.mesh">
+      <Filter>assets\models\pine_tall_a\meshes</Filter>
+    </None>
+    <None Include="assets\models\pine_tall_b\PineTallB.qml">
+      <Filter>assets\models\pine_tall_b</Filter>
+    </None>
+    <None Include="assets\models\pine_tall_b\meshes\tree_pineTallB_detailed_mesh.mesh">
+      <Filter>assets\models\pine_tall_b\meshes</Filter>
+    </None>
+    <None Include="assets\models\pine_tall_c\PineTallC.qml">
+      <Filter>assets\models\pine_tall_c</Filter>
+    </None>
+    <None Include="assets\models\pine_tall_c\meshes\tree_pineTallC_detailed_mesh.mesh">
+      <Filter>assets\models\pine_tall_c\meshes</Filter>
+    </None>
+    <None Include="assets\models\rock_large\RockLarge.qml">
+      <Filter>assets\models\rock_large</Filter>
+    </None>
+    <None Include="assets\models\rock_large\meshes\rock_largeA_mesh.mesh">
+      <Filter>assets\models\rock_large\meshes</Filter>
+    </None>
+    <None Include="assets\models\rock_tall\RockTall.qml">
+      <Filter>assets\models\rock_tall</Filter>
+    </None>
+    <None Include="assets\models\rock_tall\meshes\rock_tallA_mesh.mesh">
+      <Filter>assets\models\rock_tall\meshes</Filter>
+    </None>
+    <None Include="assets\models\stump_old\StumpOld.qml">
+      <Filter>assets\models\stump_old</Filter>
+    </None>
+    <None Include="assets\models\stump_old\meshes\mesh_stump_old_mesh.mesh">
+      <Filter>assets\models\stump_old\meshes</Filter>
     </None>
     <None Include="assets\sky\kloofendal_overcast_puresky_2k.hdr">
       <Filter>assets\sky</Filter>

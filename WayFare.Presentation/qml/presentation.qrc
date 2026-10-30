@@ -1,6 +1,15 @@
 <RCC>
     <qresource prefix="/qt/qml/wayfare/presentation">
         <file>qmldir</file>
-        <file>views/HomeView.qml</file>
+        <file>models/HeroModel.qml</file>
+        <file>models/FenceModel.qml</file>
+        <file>models/GrassModel.qml</file>
+        <file>models/LogStackModel.qml</file>
+        <file>models/PineModel.qml</file>
+        <file>models/RockModel.qml</file>
+        <file>models/StumpModel.qml</file>
+        <file>views/MainMenuButton.qml</file>
+        <file>views/MainMenuView.qml</file>
+        <file>views/VillageScene.qml</file>
     </qresource>
 </RCC>

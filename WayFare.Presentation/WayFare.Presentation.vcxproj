@@ -103,11 +103,22 @@
   <ItemGroup>
     <ClInclude Include="Module.hpp" />
     <ClCompile Include="Module.cpp" />
-    <QtMoc Include="viewModels\HomeViewModel.hpp" />
-    <ClCompile Include="viewModels\HomeViewModel.cpp" />
+    <QtMoc Include="viewModels\Assets.hpp" />
+    <ClCompile Include="viewModels\Assets.cpp" />
+    <QtMoc Include="viewModels\MainMenu.hpp" />
+    <ClCompile Include="viewModels\MainMenu.cpp" />
     <QtRcc Include="qml\presentation.qrc" />
     <None Include="qml\qmldir" />
-    <None Include="qml\views\HomeView.qml" />
+    <None Include="qml\models\HeroModel.qml" />
+    <None Include="qml\models\FenceModel.qml" />
+    <None Include="qml\models\GrassModel.qml" />
+    <None Include="qml\models\LogStackModel.qml" />
+    <None Include="qml\models\PineModel.qml" />
+    <None Include="qml\models\RockModel.qml" />
+    <None Include="qml\models\StumpModel.qml" />
+    <None Include="qml\views\MainMenuButton.qml" />
+    <None Include="qml\views\MainMenuView.qml" />
+    <None Include="qml\views\VillageScene.qml" />
     <None Include="assets\models\diving_gear\DivingGear.qml" />
     <None Include="assets\models\diving_gear\meshes\node_mesh.mesh" />
     <None Include="assets\models\hero\Hero.qml" />
@@ -166,6 +177,30 @@
     <None Include="assets\models\zombie\maps\zombie1_normal.png" />
     <None Include="assets\models\zombie\maps\zombie1_specularGlossiness.png" />
     <None Include="assets\models\zombie\meshes\mesh_zombie1_0_mesh.mesh" />
+    <None Include="assets\models\fence_planks\FencePlanks.qml" />
+    <None Include="assets\models\fence_planks\meshes\mesh_fence_planks_mesh.mesh" />
+    <None Include="assets\models\fence_simple\FenceSimple.qml" />
+    <None Include="assets\models\fence_simple\meshes\fence_simple_mesh.mesh" />
+    <None Include="assets\models\grass_large\GrassLarge.qml" />
+    <None Include="assets\models\grass_large\meshes\mesh_grass_large_mesh.mesh" />
+    <None Include="assets\models\log_stack\LogStack.qml" />
+    <None Include="assets\models\log_stack\meshes\log_stack_mesh.mesh" />
+    <None Include="assets\models\pine_default\PineDefault.qml" />
+    <None Include="assets\models\pine_default\meshes\tree_pineDefaultA_mesh.mesh" />
+    <None Include="assets\models\pine_small\PineSmall.qml" />
+    <None Include="assets\models\pine_small\meshes\tree_pineSmallA_mesh.mesh" />
+    <None Include="assets\models\pine_tall_a\PineTallA.qml" />
+    <None Include="assets\models\pine_tall_a\meshes\tree_pineTallA_detailed_mesh.mesh" />
+    <None Include="assets\models\pine_tall_b\PineTallB.qml" />
+    <None Include="assets\models\pine_tall_b\meshes\tree_pineTallB_detailed_mesh.mesh" />
+    <None Include="assets\models\pine_tall_c\PineTallC.qml" />
+    <None Include="assets\models\pine_tall_c\meshes\tree_pineTallC_detailed_mesh.mesh" />
+    <None Include="assets\models\rock_large\RockLarge.qml" />
+    <None Include="assets\models\rock_large\meshes\rock_largeA_mesh.mesh" />
+    <None Include="assets\models\rock_tall\RockTall.qml" />
+    <None Include="assets\models\rock_tall\meshes\rock_tallA_mesh.mesh" />
+    <None Include="assets\models\stump_old\StumpOld.qml" />
+    <None Include="assets\models\stump_old\meshes\mesh_stump_old_mesh.mesh" />
     <None Include="assets\sky\kloofendal_overcast_puresky_2k.hdr" />
     <None Include="assets\textures\dungeon\floor_diffuse.jpg" />
     <None Include="assets\textures\dungeon\floor_normal.jpg" />
@@ -191,6 +226,36 @@
       <Project>{d2f6950f-c02f-4333-92cd-87a03609d9a8}</Project>
     </ProjectReference>
   </ItemGroup>
+  <!-- QML loads the render assets from disk, next to the .exe -->
+  <Target Name="CopyAssets" AfterTargets="Build">
+    <ItemGroup>
+      <AssetFiles Include="$(MSBuildProjectDirectory)\assets\**\*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(AssetFiles)" DestinationFiles="@(AssetFiles->'$(OutDir)assets\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
+  </Target>
+  <!-- QML code completion (qmlls in Visual Studio): describes the C++ types and the wayfare.presentation module.
+       Writes obj\qml\wayfare\presentation (qmldir + presentation.qmltypes) and .qmlls.ini, which needs an absolute path. -->
+  <Target Name="GenerateQmlTooling" AfterTargets="Build">
+    <PropertyGroup>
+      <QmlToolingImportDir>$([System.IO.Path]::GetFullPath('$(MSBuildProjectDirectory)\..\obj\qml'))</QmlToolingImportDir>
+      <QmlToolingModuleDir>$(QmlToolingImportDir)\wayfare\presentation\</QmlToolingModuleDir>
+      <QmlToolingWorkDir>$(IntDir)qmltooling\</QmlToolingWorkDir>
+      <QmlToolingMetatypes>$(QmlToolingWorkDir)presentation_metatypes.json</QmlToolingMetatypes>
+    </PropertyGroup>
+    <MakeDir Directories="$(QmlToolingModuleDir);$(QmlToolingWorkDir)" />
+    <Exec Command="&quot;$(QtInstallDir)\bin\moc.exe&quot; -I&quot;$(QtInstallDir)\include&quot; -I&quot;$(QtInstallDir)\include\QtCore&quot; -I&quot;$(QtInstallDir)\include\QtQml&quot; --output-json &quot;%(QtMoc.FullPath)&quot; -o &quot;$(QmlToolingWorkDir)%(QtMoc.Filename).moc.cpp&quot;" />
+    <Exec Command="&quot;$(QtInstallDir)\bin\moc.exe&quot; --collect-json @(QtMoc->'&quot;$(QmlToolingWorkDir)%(Filename).moc.cpp.json&quot;', ' ') -o &quot;$(QmlToolingMetatypes)&quot;" />
+    <Exec Command="&quot;$(QtInstallDir)\bin\qmltyperegistrar.exe&quot; --import-name wayfare.presentation --major-version 1 --minor-version 0 --foreign-types &quot;$(QtInstallDir)\metatypes\qt6core_metatypes.json,$(QtInstallDir)\metatypes\qt6qml_metatypes.json&quot; --generate-qmltypes &quot;$(QmlToolingModuleDir)presentation.qmltypes&quot; -o &quot;$(QmlToolingWorkDir)presentation_qmltyperegistrations.cpp&quot; &quot;$(QmlToolingMetatypes)&quot;" />
+    <ReadLinesFromFile File="$(MSBuildProjectDirectory)\qml\qmldir">
+      <Output TaskParameter="Lines" ItemName="QmlToolingQmldirLine" />
+    </ReadLinesFromFile>
+    <ItemGroup>
+      <QmlToolingLine Include="$([System.String]::Copy('%(QmlToolingQmldirLine.Identity)').Replace(' 1.0 ', ' 1.0 ../../../../WayFare.Presentation/qml/'))" />
+      <QmlToolingLine Include="typeinfo presentation.qmltypes" />
+    </ItemGroup>
+    <WriteLinesToFile File="$(QmlToolingModuleDir)qmldir" Lines="@(QmlToolingLine)" Overwrite="true" WriteOnlyWhenDifferent="true" />
+    <WriteLinesToFile File="$(MSBuildProjectDirectory)\..\.qmlls.ini" Lines="[General];importPaths=$(QmlToolingImportDir.Replace('\', '/'));no-cmake-calls=true" Overwrite="true" WriteOnlyWhenDifferent="true" />
+  </Target>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
     <Import Project="$(QtMsBuild)\qt.targets" />

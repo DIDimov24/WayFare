@@ -20,6 +20,12 @@ WayFare uses only free third-party assets.
 | Pistol | ["Pistol"](https://poly.pizza/m/J3i9KDQ3kt) | Quaternius | CC0 1.0 |
 | Diving gear | ["Scuba tank"](https://poly.pizza/m/4GhtCNARi8c) | Steren Giannini | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) |
 
+## Environment
+
+| Used as | Asset | Author | License |
+|---|---|---|---|
+| Pines, rocks, fences, grass, logs, stump (menu scene) | [Nature Kit 2.1](https://kenney.nl/assets/nature-kit) | [Kenney](https://www.kenney.nl) | CC0 1.0 |
+
 ## Textures and sky
 
 All from [Poly Haven](https://polyhaven.com), CC0 1.0.
