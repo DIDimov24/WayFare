@@ -89,6 +89,17 @@
     <ClCompile Include="Player\PlayerMovement.cpp" />
     <ClInclude Include="Player\PlayerHealth.hpp" />
     <ClCompile Include="Player\PlayerHealth.cpp" />
+    <ClInclude Include="models\Inventory.hpp" />
+    <ClInclude Include="Inventory\Inventory.hpp" />
+    <ClCompile Include="Inventory\Inventory.cpp" />
+    <ClInclude Include="Inventory\Pickups.hpp" />
+    <ClCompile Include="Inventory\Pickups.cpp" />
+    <ClInclude Include="models\Drowning.hpp" />
+    <ClInclude Include="Hazards\Drowning.hpp" />
+    <ClCompile Include="Hazards\Drowning.cpp" />
+    <ClInclude Include="models\Exit.hpp" />
+    <ClInclude Include="Level\TempleExit.hpp" />
+    <ClCompile Include="Level\TempleExit.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WayFare.DataAccess\WayFare.DataAccess.vcxproj">
