@@ -40,6 +40,15 @@
     <ClCompile Include="Inventory\Pickups.cpp">
       <Filter>Inventory</Filter>
     </ClCompile>
+    <ClInclude Include="models\Drowning.hpp">
+      <Filter>models</Filter>
+    </ClInclude>
+    <ClInclude Include="Hazards\Drowning.hpp">
+      <Filter>Hazards</Filter>
+    </ClInclude>
+    <ClCompile Include="Hazards\Drowning.cpp">
+      <Filter>Hazards</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="MazeGenerator">
@@ -53,6 +62,9 @@
     </Filter>
     <Filter Include="Inventory">
       <UniqueIdentifier>{8f2a6d14-3c9e-4b57-a1e8-5d7c0b4f9e62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hazards">
+      <UniqueIdentifier>{c5e19b37-7d2a-4f86-9b03-e4a6d1f82c75}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

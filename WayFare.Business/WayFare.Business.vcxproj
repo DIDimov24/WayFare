@@ -94,6 +94,9 @@
     <ClCompile Include="Inventory\Inventory.cpp" />
     <ClInclude Include="Inventory\Pickups.hpp" />
     <ClCompile Include="Inventory\Pickups.cpp" />
+    <ClInclude Include="models\Drowning.hpp" />
+    <ClInclude Include="Hazards\Drowning.hpp" />
+    <ClCompile Include="Hazards\Drowning.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WayFare.DataAccess\WayFare.DataAccess.vcxproj">
