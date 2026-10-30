@@ -19,6 +19,12 @@
     <ClInclude Include="Player\PlayerMovement.hpp">
       <Filter>Player</Filter>
     </ClInclude>
+    <ClCompile Include="Player\PlayerHealth.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClInclude Include="Player\PlayerHealth.hpp">
+      <Filter>Player</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="MazeGenerator">

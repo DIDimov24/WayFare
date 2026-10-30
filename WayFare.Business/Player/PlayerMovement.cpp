@@ -2,6 +2,7 @@
 #include <cmath>
 #include <WayFare.Business/models/Maze.hpp>
 #include <WayFare.Business/models/Player.hpp>
+#include <WayFare.Business/Player/PlayerHealth.hpp>
 
 namespace WayFare::Business {
 	const double playerRadius = 0.25;
@@ -38,7 +39,7 @@ namespace WayFare::Business {
 	}
 
 	Player createPlayer(const Maze& maze) {
-		Player player = { 0.0, 0.0, 0.0 };
+		Player player = { 0.0, 0.0, 0.0, maxPlayerHealth, 0.0 };
 
 		for (size_t y = 0; y < maze.tiles.size(); y++) {
 			for (size_t x = 0; x < maze.tiles[y].size(); x++) {

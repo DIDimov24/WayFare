@@ -87,6 +87,8 @@
     <ClInclude Include="models\Player.hpp" />
     <ClInclude Include="Player\PlayerMovement.hpp" />
     <ClCompile Include="Player\PlayerMovement.cpp" />
+    <ClInclude Include="Player\PlayerHealth.hpp" />
+    <ClCompile Include="Player\PlayerHealth.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WayFare.DataAccess\WayFare.DataAccess.vcxproj">
