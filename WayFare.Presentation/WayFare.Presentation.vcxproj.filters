@@ -285,6 +285,9 @@
     <None Include="qml\views\MainMenuView.qml">
       <Filter>qml\views</Filter>
     </None>
+    <None Include="qml\views\Minimap.qml">
+      <Filter>qml\views</Filter>
+    </None>
     <None Include="qml\views\SettingsPanel.qml">
       <Filter>qml\views</Filter>
     </None>

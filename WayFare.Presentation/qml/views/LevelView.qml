@@ -16,6 +16,7 @@ Item {
     property bool backKey: false
     property bool leftKey: false
     property bool rightKey: false
+    property bool mapLarge: false
 
     focus: true
 
@@ -71,6 +72,10 @@ Item {
     Keys.onPressed: (event) => {
         if (event.key === Qt.Key_Escape) {
             root.releaseInput()
+            return
+        }
+        if (event.key === Qt.Key_M && !event.isAutoRepeat) {
+            root.mapLarge = !root.mapLarge
             return
         }
         if (!event.isAutoRepeat) {
@@ -239,6 +244,11 @@ Item {
 
     Hud {
         anchors.fill: parent
+    }
+
+    Minimap {
+        anchors.fill: parent
+        large: root.mapLarge
     }
 
     LoadingCover {

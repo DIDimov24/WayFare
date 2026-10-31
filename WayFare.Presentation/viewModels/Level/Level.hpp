@@ -1,6 +1,7 @@
 #pragma once
 
 #include <cstdint>
+#include <vector>
 #include <QObject>
 #include <QString>
 #include <QStringList>
@@ -19,6 +20,9 @@ namespace WayFare::Presentation {
 		Q_PROPERTY(int size READ size NOTIFY mazeChanged)
 		Q_PROPERTY(QString theme READ theme NOTIFY mazeChanged)
 		Q_PROPERTY(QVariantList walls READ walls NOTIFY mazeChanged)
+		Q_PROPERTY(int exitX READ exitX NOTIFY mazeChanged)
+		Q_PROPERTY(int exitY READ exitY NOTIFY mazeChanged)
+		Q_PROPERTY(QVariantList pickups READ pickups NOTIFY pickupsChanged)
 		Q_PROPERTY(double playerX READ playerX NOTIFY playerChanged)
 		Q_PROPERTY(double playerY READ playerY NOTIFY playerChanged)
 		Q_PROPERTY(double facing READ facing NOTIFY playerChanged)
@@ -36,6 +40,9 @@ namespace WayFare::Presentation {
 		int size() const;
 		QString theme() const;
 		QVariantList walls() const;
+		int exitX() const;
+		int exitY() const;
+		QVariantList pickups() const;
 		double playerX() const;
 		double playerY() const;
 		double facing() const;
@@ -57,6 +64,7 @@ namespace WayFare::Presentation {
 		void mazeChanged();
 		void playerChanged();
 		void hudChanged();
+		void pickupsChanged();
 
 	private:
 		Settings& _settings;
@@ -64,8 +72,11 @@ namespace WayFare::Presentation {
 		Business::Player _player;
 		Business::Inventory _inventory;
 		Business::Drowning _drowning;
+		std::vector<Business::Pickup> _pickups;
 		QString _theme;
 		QVariantList _walls;
+		int _exitX;
+		int _exitY;
 		double _pitch;
 	};
 }

@@ -130,6 +130,7 @@
     <None Include="qml\views\LoadingCover.qml" />
     <None Include="qml\views\MainMenuButton.qml" />
     <None Include="qml\views\MainMenuView.qml" />
+    <None Include="qml\views\Minimap.qml" />
     <None Include="qml\views\SettingsPanel.qml" />
     <None Include="qml\views\VillageScene.qml" />
     <None Include="assets\models\diving_gear\DivingGear.qml" />

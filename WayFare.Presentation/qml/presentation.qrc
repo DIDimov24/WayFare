@@ -14,6 +14,7 @@
         <file>views/LoadingCover.qml</file>
         <file>views/MainMenuButton.qml</file>
         <file>views/MainMenuView.qml</file>
+        <file>views/Minimap.qml</file>
         <file>views/SettingsPanel.qml</file>
         <file>views/VillageScene.qml</file>
     </qresource>

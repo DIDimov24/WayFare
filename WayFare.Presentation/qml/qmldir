@@ -12,5 +12,6 @@ LevelView 1.0 views/LevelView.qml
 LoadingCover 1.0 views/LoadingCover.qml
 MainMenuButton 1.0 views/MainMenuButton.qml
 MainMenuView 1.0 views/MainMenuView.qml
+Minimap 1.0 views/Minimap.qml
 SettingsPanel 1.0 views/SettingsPanel.qml
 VillageScene 1.0 views/VillageScene.qml
