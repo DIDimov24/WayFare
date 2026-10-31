@@ -2,7 +2,7 @@ import QtQuick
 import wayfare.presentation
 
 Window {
-    visible: true
+    visibility: Window.FullScreen
     width: 1280
     height: 720
     title: "WayFare"
@@ -10,5 +10,15 @@ Window {
 
     MainMenuView {
         anchors.fill: parent
+        visible: Game.phase === "menu"
+        focus: Game.phase === "menu"
+    }
+
+    Loader {
+        anchors.fill: parent
+        active: Game.phase === "level"
+        asynchronous: true
+        focus: Game.phase === "level"
+        sourceComponent: LevelView {}
     }
 }

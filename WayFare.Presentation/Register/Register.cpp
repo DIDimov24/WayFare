@@ -4,7 +4,10 @@
 #include <QtCore/qtresource.h>
 #include <QtQml/qqml.h>
 
+#include "WayFare.Presentation/helpers/Cursor/Cursor.hpp"
 #include "WayFare.Presentation/viewModels/Assets/Assets.hpp"
+#include "WayFare.Presentation/viewModels/Game/Game.hpp"
+#include "WayFare.Presentation/viewModels/Level/Level.hpp"
 #include "WayFare.Presentation/viewModels/MainMenu/MainMenu.hpp"
 #include "WayFare.Presentation/viewModels/Settings/Settings.hpp"
 
@@ -18,8 +21,15 @@ namespace WayFare::Presentation {
 		initializeResources();
 
 		QCoreApplication* app = QCoreApplication::instance();
+		Settings* settings = new Settings(app);
+		Game* game = new Game(app);
+		Level* level = new Level(*settings, app);
+
 		qmlRegisterSingletonInstance(QmlModuleUri, 1, 0, "Assets", new Assets(app));
-		qmlRegisterSingletonInstance(QmlModuleUri, 1, 0, "MainMenu", new MainMenu(app));
-		qmlRegisterSingletonInstance(QmlModuleUri, 1, 0, "Settings", new Settings(app));
+		qmlRegisterSingletonInstance(QmlModuleUri, 1, 0, "Cursor", new Cursor(app));
+		qmlRegisterSingletonInstance(QmlModuleUri, 1, 0, "Game", game);
+		qmlRegisterSingletonInstance(QmlModuleUri, 1, 0, "Level", level);
+		qmlRegisterSingletonInstance(QmlModuleUri, 1, 0, "MainMenu", new MainMenu(*game, *level, app));
+		qmlRegisterSingletonInstance(QmlModuleUri, 1, 0, "Settings", settings);
 	}
 }

@@ -1,9 +1,10 @@
 #include "WayFare.Presentation/viewModels/MainMenu/MainMenu.hpp"
 
 #include <QCoreApplication>
+#include <QRandomGenerator>
 
 namespace WayFare::Presentation {
-	MainMenu::MainMenu(QObject* parent) : QObject(parent) {
+	MainMenu::MainMenu(Game& game, Level& level, QObject* parent) : QObject(parent), _game(game), _level(level) {
 		// resume stays disabled until DAL implementation
 		_hasSave = false;
 	}
@@ -13,6 +14,8 @@ namespace WayFare::Presentation {
 	}
 
 	void MainMenu::newGame() {
+		_level.load(1, QRandomGenerator::global()->generate());
+		_game.setPhase(QStringLiteral("level"));
 	}
 
 	void MainMenu::resume() {

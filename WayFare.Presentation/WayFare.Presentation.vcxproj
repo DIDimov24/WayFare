@@ -103,8 +103,14 @@
   <ItemGroup>
     <ClInclude Include="Register\Register.hpp" />
     <ClCompile Include="Register\Register.cpp" />
+    <QtMoc Include="helpers\Cursor\Cursor.hpp" />
+    <ClCompile Include="helpers\Cursor\Cursor.cpp" />
     <QtMoc Include="viewModels\Assets\Assets.hpp" />
     <ClCompile Include="viewModels\Assets\Assets.cpp" />
+    <QtMoc Include="viewModels\Game\Game.hpp" />
+    <ClCompile Include="viewModels\Game\Game.cpp" />
+    <QtMoc Include="viewModels\Level\Level.hpp" />
+    <ClCompile Include="viewModels\Level\Level.cpp" />
     <QtMoc Include="viewModels\MainMenu\MainMenu.hpp" />
     <ClCompile Include="viewModels\MainMenu\MainMenu.cpp" />
     <QtMoc Include="viewModels\Settings\Settings.hpp" />
@@ -119,6 +125,8 @@
     <None Include="qml\models\RockModel.qml" />
     <None Include="qml\models\StumpModel.qml" />
     <None Include="qml\views\HowToPlayPanel.qml" />
+    <None Include="qml\views\LevelView.qml" />
+    <None Include="qml\views\LoadingCover.qml" />
     <None Include="qml\views\MainMenuButton.qml" />
     <None Include="qml\views\MainMenuView.qml" />
     <None Include="qml\views\SettingsPanel.qml" />
@@ -247,15 +255,16 @@
       <QmlToolingMetatypes>$(QmlToolingWorkDir)presentation_metatypes.json</QmlToolingMetatypes>
     </PropertyGroup>
     <MakeDir Directories="$(QmlToolingModuleDir);$(QmlToolingWorkDir)" />
-    <Exec Command="&quot;$(QtInstallDir)\bin\moc.exe&quot; -I&quot;$(QtInstallDir)\include&quot; -I&quot;$(QtInstallDir)\include\QtCore&quot; -I&quot;$(QtInstallDir)\include\QtQml&quot; --output-json &quot;%(QtMoc.FullPath)&quot; -o &quot;$(QmlToolingWorkDir)%(QtMoc.Filename).moc.cpp&quot;" />
+    <Exec Command="&quot;$(QtInstallDir)\bin\moc.exe&quot; -I&quot;$(QtInstallDir)\include&quot; -I&quot;$(QtInstallDir)\include\QtCore&quot; -I&quot;$(QtInstallDir)\include\QtGui&quot; -I&quot;$(QtInstallDir)\include\QtQml&quot; -I&quot;$(QtInstallDir)\include\QtQuick&quot; --output-json &quot;%(QtMoc.FullPath)&quot; -o &quot;$(QmlToolingWorkDir)%(QtMoc.Filename).moc.cpp&quot;" />
     <Exec Command="&quot;$(QtInstallDir)\bin\moc.exe&quot; --collect-json @(QtMoc->'&quot;$(QmlToolingWorkDir)%(Filename).moc.cpp.json&quot;', ' ') -o &quot;$(QmlToolingMetatypes)&quot;" />
-    <Exec Command="&quot;$(QtInstallDir)\bin\qmltyperegistrar.exe&quot; --import-name wayfare.presentation --major-version 1 --minor-version 0 --foreign-types &quot;$(QtInstallDir)\metatypes\qt6core_metatypes.json,$(QtInstallDir)\metatypes\qt6qml_metatypes.json&quot; --generate-qmltypes &quot;$(QmlToolingModuleDir)presentation.qmltypes&quot; -o &quot;$(QmlToolingWorkDir)presentation_qmltyperegistrations.cpp&quot; &quot;$(QmlToolingMetatypes)&quot;" />
+    <Exec Command="&quot;$(QtInstallDir)\bin\qmltyperegistrar.exe&quot; --import-name wayfare.presentation --major-version 1 --minor-version 0 --foreign-types &quot;$(QtInstallDir)\metatypes\qt6core_metatypes.json,$(QtInstallDir)\metatypes\qt6qml_metatypes.json,$(QtInstallDir)\metatypes\qt6gui_metatypes.json,$(QtInstallDir)\metatypes\qt6quick_metatypes.json&quot; --generate-qmltypes &quot;$(QmlToolingModuleDir)presentation.qmltypes&quot; -o &quot;$(QmlToolingWorkDir)presentation_qmltyperegistrations.cpp&quot; &quot;$(QmlToolingMetatypes)&quot;" />
     <ReadLinesFromFile File="$(MSBuildProjectDirectory)\qml\qmldir">
       <Output TaskParameter="Lines" ItemName="QmlToolingQmldirLine" />
     </ReadLinesFromFile>
     <ItemGroup>
       <QmlToolingLine Include="$([System.String]::Copy('%(QmlToolingQmldirLine.Identity)').Replace(' 1.0 ', ' 1.0 ../../../../WayFare.Presentation/qml/'))" />
       <QmlToolingLine Include="typeinfo presentation.qmltypes" />
+      <QmlToolingLine Include="depends QtQuick" />
     </ItemGroup>
     <WriteLinesToFile File="$(QmlToolingModuleDir)qmldir" Lines="@(QmlToolingLine)" Overwrite="true" WriteOnlyWhenDifferent="true" />
     <WriteLinesToFile File="$(MSBuildProjectDirectory)\..\.qmlls.ini" Lines="[General];importPaths=$(QmlToolingImportDir.Replace('\', '/'));no-cmake-calls=true" Overwrite="true" WriteOnlyWhenDifferent="true" />

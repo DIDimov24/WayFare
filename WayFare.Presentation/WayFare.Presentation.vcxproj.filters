@@ -13,11 +13,23 @@
     <Filter Include="Register">
       <UniqueIdentifier>{c978270d-b4a4-4f09-8fec-48e433324b62}</UniqueIdentifier>
     </Filter>
+    <Filter Include="helpers">
+      <UniqueIdentifier>{103e6049-985e-4647-891b-1a359a4df359}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="helpers\Cursor">
+      <UniqueIdentifier>{a6ec08ef-c6f5-4dd6-8606-34b6195b7b07}</UniqueIdentifier>
+    </Filter>
     <Filter Include="viewModels">
       <UniqueIdentifier>{58043ccd-07f0-44f8-9152-b62e84a16ecd}</UniqueIdentifier>
     </Filter>
     <Filter Include="viewModels\Assets">
       <UniqueIdentifier>{076c8f42-fc52-462e-8626-5e1793d93b52}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="viewModels\Game">
+      <UniqueIdentifier>{ad50d7e6-4081-45f5-ae90-37f82210d346}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="viewModels\Level">
+      <UniqueIdentifier>{001566a2-4c54-498c-97f9-6ec1ee749d9a}</UniqueIdentifier>
     </Filter>
     <Filter Include="viewModels\MainMenu">
       <UniqueIdentifier>{33f92470-7016-443b-8c8b-40b4c1aa5363}</UniqueIdentifier>
@@ -189,8 +201,17 @@
     <ClCompile Include="Register\Register.cpp">
       <Filter>Register</Filter>
     </ClCompile>
+    <ClCompile Include="helpers\Cursor\Cursor.cpp">
+      <Filter>helpers\Cursor</Filter>
+    </ClCompile>
     <ClCompile Include="viewModels\Assets\Assets.cpp">
       <Filter>viewModels\Assets</Filter>
+    </ClCompile>
+    <ClCompile Include="viewModels\Game\Game.cpp">
+      <Filter>viewModels\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="viewModels\Level\Level.cpp">
+      <Filter>viewModels\Level</Filter>
     </ClCompile>
     <ClCompile Include="viewModels\MainMenu\MainMenu.cpp">
       <Filter>viewModels\MainMenu</Filter>
@@ -201,8 +222,17 @@
     <ClInclude Include="Register\Register.hpp">
       <Filter>Register</Filter>
     </ClInclude>
+    <QtMoc Include="helpers\Cursor\Cursor.hpp">
+      <Filter>helpers\Cursor</Filter>
+    </QtMoc>
     <QtMoc Include="viewModels\Assets\Assets.hpp">
       <Filter>viewModels\Assets</Filter>
+    </QtMoc>
+    <QtMoc Include="viewModels\Game\Game.hpp">
+      <Filter>viewModels\Game</Filter>
+    </QtMoc>
+    <QtMoc Include="viewModels\Level\Level.hpp">
+      <Filter>viewModels\Level</Filter>
     </QtMoc>
     <QtMoc Include="viewModels\MainMenu\MainMenu.hpp">
       <Filter>viewModels\MainMenu</Filter>
@@ -238,6 +268,12 @@
       <Filter>qml\models</Filter>
     </None>
     <None Include="qml\views\HowToPlayPanel.qml">
+      <Filter>qml\views</Filter>
+    </None>
+    <None Include="qml\views\LevelView.qml">
+      <Filter>qml\views</Filter>
+    </None>
+    <None Include="qml\views\LoadingCover.qml">
       <Filter>qml\views</Filter>
     </None>
     <None Include="qml\views\MainMenuButton.qml">
