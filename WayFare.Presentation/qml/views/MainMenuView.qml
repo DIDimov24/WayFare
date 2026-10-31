@@ -8,6 +8,9 @@ Item {
     property string panel: ""
     property int sceneFrames: 0
 
+    focus: true
+    Keys.onEscapePressed: root.panel = ""
+
     Connections {
         target: root.Window.window
         enabled: root.sceneFrames < 3
@@ -90,11 +93,33 @@ Item {
         }
     }
 
+    Rectangle {
+        anchors.fill: parent
+        opacity: root.panel === "" ? 0 : 1
+        visible: opacity > 0
+        gradient: Gradient {
+            orientation: Gradient.Horizontal
+            GradientStop { position: 0.0; color: "#99080b12" }
+            GradientStop { position: 0.45; color: "#80080b12" }
+            GradientStop { position: 0.75; color: "#00080b12" }
+        }
+
+        Behavior on opacity {
+            NumberAnimation { duration: 150 }
+        }
+    }
+
     Column {
         anchors.left: parent.left
         anchors.leftMargin: 80
         anchors.verticalCenter: parent.verticalCenter
         spacing: 6
+        opacity: root.panel === "" ? 1 : 0
+        visible: opacity > 0
+
+        Behavior on opacity {
+            NumberAnimation { duration: 150 }
+        }
 
         Text {
             text: "WayFare"
@@ -133,6 +158,32 @@ Item {
         MainMenuButton {
             text: "Quit"
             onClicked: MainMenu.quit()
+        }
+    }
+
+    HowToPlayPanel {
+        anchors.left: parent.left
+        anchors.leftMargin: 80
+        anchors.verticalCenter: parent.verticalCenter
+        opacity: root.panel === "howToPlay" ? 1 : 0
+        visible: opacity > 0
+        onBackClicked: root.panel = ""
+
+        Behavior on opacity {
+            NumberAnimation { duration: 150 }
+        }
+    }
+
+    SettingsPanel {
+        anchors.left: parent.left
+        anchors.leftMargin: 80
+        anchors.verticalCenter: parent.verticalCenter
+        opacity: root.panel === "settings" ? 1 : 0
+        visible: opacity > 0
+        onBackClicked: root.panel = ""
+
+        Behavior on opacity {
+            NumberAnimation { duration: 150 }
         }
     }
 }

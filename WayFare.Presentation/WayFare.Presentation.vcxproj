@@ -101,12 +101,14 @@
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Module.hpp" />
-    <ClCompile Include="Module.cpp" />
-    <QtMoc Include="viewModels\Assets.hpp" />
-    <ClCompile Include="viewModels\Assets.cpp" />
-    <QtMoc Include="viewModels\MainMenu.hpp" />
-    <ClCompile Include="viewModels\MainMenu.cpp" />
+    <ClInclude Include="Register\Register.hpp" />
+    <ClCompile Include="Register\Register.cpp" />
+    <QtMoc Include="viewModels\Assets\Assets.hpp" />
+    <ClCompile Include="viewModels\Assets\Assets.cpp" />
+    <QtMoc Include="viewModels\MainMenu\MainMenu.hpp" />
+    <ClCompile Include="viewModels\MainMenu\MainMenu.cpp" />
+    <QtMoc Include="viewModels\Settings\Settings.hpp" />
+    <ClCompile Include="viewModels\Settings\Settings.cpp" />
     <QtRcc Include="qml\presentation.qrc" />
     <None Include="qml\qmldir" />
     <None Include="qml\models\HeroModel.qml" />
@@ -116,8 +118,10 @@
     <None Include="qml\models\PineModel.qml" />
     <None Include="qml\models\RockModel.qml" />
     <None Include="qml\models\StumpModel.qml" />
+    <None Include="qml\views\HowToPlayPanel.qml" />
     <None Include="qml\views\MainMenuButton.qml" />
     <None Include="qml\views\MainMenuView.qml" />
+    <None Include="qml\views\SettingsPanel.qml" />
     <None Include="qml\views\VillageScene.qml" />
     <None Include="assets\models\diving_gear\DivingGear.qml" />
     <None Include="assets\models\diving_gear\meshes\node_mesh.mesh" />
