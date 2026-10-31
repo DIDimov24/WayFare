@@ -1,4 +1,4 @@
-#include "WayFare.Presentation/viewModels/Assets.hpp"
+#include "WayFare.Presentation/viewModels/Assets/Assets.hpp"
 
 #include <QCoreApplication>
 #include <QFile>

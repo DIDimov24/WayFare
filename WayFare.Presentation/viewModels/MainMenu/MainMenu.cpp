@@ -1,4 +1,4 @@
-#include "WayFare.Presentation/viewModels/MainMenu.hpp"
+#include "WayFare.Presentation/viewModels/MainMenu/MainMenu.hpp"
 
 #include <QCoreApplication>
 

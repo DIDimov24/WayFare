@@ -1,7 +1,7 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 
-#include "WayFare.Presentation/Module.hpp"
+#include "WayFare.Presentation/Register/Register.hpp"
 
 int main(int argc, char* argv[]) {
 	QGuiApplication app(argc, argv);

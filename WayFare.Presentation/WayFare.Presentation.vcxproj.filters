@@ -10,8 +10,20 @@
     <Filter Include="qml\views">
       <UniqueIdentifier>{a7f42d32-05f9-491f-907a-2f359c8bd776}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Register">
+      <UniqueIdentifier>{c978270d-b4a4-4f09-8fec-48e433324b62}</UniqueIdentifier>
+    </Filter>
     <Filter Include="viewModels">
       <UniqueIdentifier>{58043ccd-07f0-44f8-9152-b62e84a16ecd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="viewModels\Assets">
+      <UniqueIdentifier>{076c8f42-fc52-462e-8626-5e1793d93b52}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="viewModels\MainMenu">
+      <UniqueIdentifier>{33f92470-7016-443b-8c8b-40b4c1aa5363}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="viewModels\Settings">
+      <UniqueIdentifier>{01e5bd9d-75a8-481f-b008-16889f82cf0b}</UniqueIdentifier>
     </Filter>
     <Filter Include="assets">
       <UniqueIdentifier>{05afdb01-a8c3-4f2e-859b-c69c23660636}</UniqueIdentifier>
@@ -174,19 +186,29 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Module.cpp" />
-    <ClCompile Include="viewModels\Assets.cpp">
-      <Filter>viewModels</Filter>
+    <ClCompile Include="Register\Register.cpp">
+      <Filter>Register</Filter>
     </ClCompile>
-    <ClCompile Include="viewModels\MainMenu.cpp">
-      <Filter>viewModels</Filter>
+    <ClCompile Include="viewModels\Assets\Assets.cpp">
+      <Filter>viewModels\Assets</Filter>
     </ClCompile>
-    <ClInclude Include="Module.hpp" />
-    <QtMoc Include="viewModels\Assets.hpp">
-      <Filter>viewModels</Filter>
+    <ClCompile Include="viewModels\MainMenu\MainMenu.cpp">
+      <Filter>viewModels\MainMenu</Filter>
+    </ClCompile>
+    <ClCompile Include="viewModels\Settings\Settings.cpp">
+      <Filter>viewModels\Settings</Filter>
+    </ClCompile>
+    <ClInclude Include="Register\Register.hpp">
+      <Filter>Register</Filter>
+    </ClInclude>
+    <QtMoc Include="viewModels\Assets\Assets.hpp">
+      <Filter>viewModels\Assets</Filter>
     </QtMoc>
-    <QtMoc Include="viewModels\MainMenu.hpp">
-      <Filter>viewModels</Filter>
+    <QtMoc Include="viewModels\MainMenu\MainMenu.hpp">
+      <Filter>viewModels\MainMenu</Filter>
+    </QtMoc>
+    <QtMoc Include="viewModels\Settings\Settings.hpp">
+      <Filter>viewModels\Settings</Filter>
     </QtMoc>
     <QtRcc Include="qml\presentation.qrc">
       <Filter>qml</Filter>
@@ -215,10 +237,16 @@
     <None Include="qml\models\StumpModel.qml">
       <Filter>qml\models</Filter>
     </None>
+    <None Include="qml\views\HowToPlayPanel.qml">
+      <Filter>qml\views</Filter>
+    </None>
     <None Include="qml\views\MainMenuButton.qml">
       <Filter>qml\views</Filter>
     </None>
     <None Include="qml\views\MainMenuView.qml">
+      <Filter>qml\views</Filter>
+    </None>
+    <None Include="qml\views\SettingsPanel.qml">
       <Filter>qml\views</Filter>
     </None>
     <None Include="qml\views\VillageScene.qml">
