@@ -270,6 +270,9 @@
     <None Include="qml\views\HowToPlayPanel.qml">
       <Filter>qml\views</Filter>
     </None>
+    <None Include="qml\views\Hud.qml">
+      <Filter>qml\views</Filter>
+    </None>
     <None Include="qml\views\LevelView.qml">
       <Filter>qml\views</Filter>
     </None>

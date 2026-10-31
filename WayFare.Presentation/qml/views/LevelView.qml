@@ -237,6 +237,10 @@ Item {
         }
     }
 
+    Hud {
+        anchors.fill: parent
+    }
+
     LoadingCover {
         anchors.fill: parent
         loading: root.readyFrames < 3

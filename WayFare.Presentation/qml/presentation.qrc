@@ -9,6 +9,7 @@
         <file>models/RockModel.qml</file>
         <file>models/StumpModel.qml</file>
         <file>views/HowToPlayPanel.qml</file>
+        <file>views/Hud.qml</file>
         <file>views/LevelView.qml</file>
         <file>views/LoadingCover.qml</file>
         <file>views/MainMenuButton.qml</file>

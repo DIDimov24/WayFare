@@ -7,6 +7,7 @@ PineModel 1.0 models/PineModel.qml
 RockModel 1.0 models/RockModel.qml
 StumpModel 1.0 models/StumpModel.qml
 HowToPlayPanel 1.0 views/HowToPlayPanel.qml
+Hud 1.0 views/Hud.qml
 LevelView 1.0 views/LevelView.qml
 LoadingCover 1.0 views/LoadingCover.qml
 MainMenuButton 1.0 views/MainMenuButton.qml

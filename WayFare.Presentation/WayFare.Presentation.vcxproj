@@ -125,6 +125,7 @@
     <None Include="qml\models\RockModel.qml" />
     <None Include="qml\models\StumpModel.qml" />
     <None Include="qml\views\HowToPlayPanel.qml" />
+    <None Include="qml\views\Hud.qml" />
     <None Include="qml\views\LevelView.qml" />
     <None Include="qml\views\LoadingCover.qml" />
     <None Include="qml\views\MainMenuButton.qml" />

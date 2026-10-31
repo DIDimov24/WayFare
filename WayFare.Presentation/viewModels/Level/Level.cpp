@@ -2,7 +2,10 @@
 
 #include <QPoint>
 
+#include "WayFare.Business/Hazards/Drowning.hpp"
+#include "WayFare.Business/Inventory/Inventory.hpp"
 #include "WayFare.Business/MazeGenerator/MazeGenerator.hpp"
+#include "WayFare.Business/Player/PlayerHealth.hpp"
 #include "WayFare.Business/Player/PlayerMovement.hpp"
 
 namespace WayFare::Presentation {
@@ -11,6 +14,8 @@ namespace WayFare::Presentation {
 
 	Level::Level(Settings& settings, QObject* parent) : QObject(parent), _settings(settings) {
 		_player = { 0.0, 0.0, 0.0, 0, 0.0 };
+		_inventory = Business::createInventory();
+		_drowning = Business::createDrowning();
 		_pitch = 0.0;
 	}
 
@@ -42,6 +47,42 @@ namespace WayFare::Presentation {
 		return _pitch;
 	}
 
+	int Level::health() const {
+		return _player.health;
+	}
+
+	int Level::maxHealth() const {
+		return Business::maxPlayerHealth;
+	}
+
+	double Level::air() const {
+		return _drowning.air / Business::maxAir;
+	}
+
+	bool Level::showAir() const {
+		return _theme == QStringLiteral("temple") && !Business::hasItem(_inventory, Business::ItemType::DivingGear);
+	}
+
+	QStringList Level::items() const {
+		QStringList names;
+		for (size_t i = 0; i < _inventory.items.size(); i++) {
+			if (_inventory.items[i] == Business::ItemType::DivingGear) {
+				names.append(QStringLiteral("Diving gear"));
+			}
+			if (_inventory.items[i] == Business::ItemType::Sword) {
+				names.append(QStringLiteral("Sword"));
+			}
+			if (_inventory.items[i] == Business::ItemType::Pistol) {
+				names.append(QStringLiteral("Pistol"));
+			}
+		}
+		return names;
+	}
+
+	int Level::potionCount() const {
+		return _inventory.potionCount;
+	}
+
 	void Level::load(int number, uint32_t seed) {
 		int size = 15;
 		_theme = QStringLiteral("temple");
@@ -69,10 +110,13 @@ namespace WayFare::Presentation {
 		}
 
 		_player = Business::createPlayer(_maze);
+		_inventory = Business::createInventory();
+		_drowning = Business::createDrowning();
 		_pitch = 0.0;
 
 		emit mazeChanged();
 		emit playerChanged();
+		emit hudChanged();
 	}
 
 	void Level::move(double forward, double strafe, double deltaTime) {
