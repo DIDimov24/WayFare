@@ -40,6 +40,9 @@
     <Filter Include="assets">
       <UniqueIdentifier>{05afdb01-a8c3-4f2e-859b-c69c23660636}</UniqueIdentifier>
     </Filter>
+    <Filter Include="assets\icons">
+      <UniqueIdentifier>{d03e1da9-761b-4d18-b4c3-3707999a8dd3}</UniqueIdentifier>
+    </Filter>
     <Filter Include="assets\models">
       <UniqueIdentifier>{ff4b769d-ba0e-4cd0-853c-67ec9512c3f6}</UniqueIdentifier>
     </Filter>
@@ -270,6 +273,9 @@
     <None Include="qml\views\HowToPlayPanel.qml">
       <Filter>qml\views</Filter>
     </None>
+    <None Include="qml\views\Hud.qml">
+      <Filter>qml\views</Filter>
+    </None>
     <None Include="qml\views\LevelView.qml">
       <Filter>qml\views</Filter>
     </None>
@@ -280,6 +286,9 @@
       <Filter>qml\views</Filter>
     </None>
     <None Include="qml\views\MainMenuView.qml">
+      <Filter>qml\views</Filter>
+    </None>
+    <None Include="qml\views\Minimap.qml">
       <Filter>qml\views</Filter>
     </None>
     <None Include="qml\views\SettingsPanel.qml">
@@ -533,6 +542,30 @@
     </None>
     <None Include="assets\models\stump_old\meshes\mesh_stump_old_mesh.mesh">
       <Filter>assets\models\stump_old\meshes</Filter>
+    </None>
+    <None Include="assets\icons\air.png">
+      <Filter>assets\icons</Filter>
+    </None>
+    <None Include="assets\icons\diving_gear.png">
+      <Filter>assets\icons</Filter>
+    </None>
+    <None Include="assets\icons\exit.png">
+      <Filter>assets\icons</Filter>
+    </None>
+    <None Include="assets\icons\heart.png">
+      <Filter>assets\icons</Filter>
+    </None>
+    <None Include="assets\icons\heart_lost.png">
+      <Filter>assets\icons</Filter>
+    </None>
+    <None Include="assets\icons\pistol.png">
+      <Filter>assets\icons</Filter>
+    </None>
+    <None Include="assets\icons\potion.png">
+      <Filter>assets\icons</Filter>
+    </None>
+    <None Include="assets\icons\sword.png">
+      <Filter>assets\icons</Filter>
     </None>
     <None Include="assets\sky\kloofendal_overcast_puresky_2k.hdr">
       <Filter>assets\sky</Filter>
