@@ -6,12 +6,14 @@ Node {
     id: root
 
     property string clip: "breathing_idle"
+    readonly property bool ready: !loader.active || loader.status === Loader3D.Ready || loader.status === Loader3D.Error
 
     onClipChanged: playClip()
 
     Loader3D {
         id: loader
         active: Assets.exists("models/hero/Hero.qml")
+        asynchronous: true
         source: Assets.url + "models/hero/Hero.qml"
         scale: Qt.vector3d(0.6, 0.6, 0.6)
         onLoaded: root.playClip()

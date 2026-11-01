@@ -351,33 +351,10 @@ Item {
                     roughnessChannel: Material.R
                 }
 
-                CustomMaterial {
+                TempleWallMaterial {
                     id: templeWall
 
-                    property TextureInput diffuseMap: TextureInput {
-                        texture: Texture {
-                            source: root.texture("wall_diffuse")
-                            tilingModeHorizontal: Texture.Repeat
-                            tilingModeVertical: Texture.Repeat
-                        }
-                    }
-                    property TextureInput normalMap: TextureInput {
-                        texture: Texture {
-                            source: root.texture("wall_normal")
-                            tilingModeHorizontal: Texture.Repeat
-                            tilingModeVertical: Texture.Repeat
-                        }
-                    }
-                    property TextureInput roughnessMap: TextureInput {
-                        texture: Texture {
-                            source: root.texture("wall_roughness")
-                            tilingModeHorizontal: Texture.Repeat
-                            tilingModeVertical: Texture.Repeat
-                        }
-                    }
-
-                    shadingMode: CustomMaterial.Shaded
-                    fragmentShader: "../shaders/TempleWall.frag"
+                    wallTop: root.wallHeight
                 }
             }
         }

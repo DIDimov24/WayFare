@@ -15,7 +15,7 @@ namespace WayFare::Presentation {
 
 	void MainMenu::newGame() {
 		_level.load(1, QRandomGenerator::global()->generate());
-		_game.setPhase(QStringLiteral("level"));
+		_game.setPhase(QStringLiteral("intro"));
 	}
 
 	void MainMenu::resume() {

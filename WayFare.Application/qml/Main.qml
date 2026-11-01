@@ -16,6 +16,14 @@ Window {
 
     Loader {
         anchors.fill: parent
+        active: Game.phase === "intro"
+        asynchronous: true
+        focus: Game.phase === "intro"
+        sourceComponent: IntroCutscene {}
+    }
+
+    Loader {
+        anchors.fill: parent
         active: Game.phase === "level"
         asynchronous: true
         focus: Game.phase === "level"

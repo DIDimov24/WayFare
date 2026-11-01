@@ -16,4 +16,8 @@ namespace WayFare::Presentation {
 		_phase = phase;
 		emit phaseChanged();
 	}
+
+	void Game::startLevel() {
+		setPhase(QStringLiteral("level"));
+	}
 }

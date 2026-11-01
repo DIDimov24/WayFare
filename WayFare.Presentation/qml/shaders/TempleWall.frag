@@ -48,7 +48,7 @@ void MAIN()
         t = normalize(cross(b, n));
     }
 
-    vec2 uv = UV0 * vec2(1.0, 1.5);
+    vec2 uv = UV0 * uvScale;
     vec3 albedo = texture(diffuseMap, uv).rgb;
     vec3 mapNormal = texture(normalMap, uv).rgb * 2.0 - 1.0;
     float roughness = texture(roughnessMap, uv).r;
@@ -96,7 +96,7 @@ void MAIN()
     color = mix(color, color * 0.15, hole);
 
     float y = VAR_WORLD_POSITION.y;
-    float contact = mix(0.55, 1.0, smoothstep(0.0, 0.35, y)) * mix(0.65, 1.0, smoothstep(0.0, 0.35, 3.0 - y));
+    float contact = mix(0.55, 1.0, smoothstep(0.0, 0.35, y)) * mix(0.65, 1.0, smoothstep(0.0, 0.35, wallTop - y));
 
     vec3 shaped = t * mapNormal.x * 1.6 + b * mapNormal.y * 1.6 + n * mapNormal.z;
     shaped += (t * tilt.x + b * tilt.y) * bevel * 0.6;

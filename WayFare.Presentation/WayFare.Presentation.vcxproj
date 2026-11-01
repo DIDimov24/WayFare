@@ -127,10 +127,12 @@
     <None Include="qml\models\RockModel.qml" />
     <None Include="qml\models\SeaweedModel.qml" />
     <None Include="qml\models\StumpModel.qml" />
+    <None Include="qml\models\TempleWallMaterial.qml" />
     <None Include="qml\shaders\TempleWall.frag" />
     <None Include="qml\views\DeathScreen.qml" />
     <None Include="qml\views\HowToPlayPanel.qml" />
     <None Include="qml\views\Hud.qml" />
+    <None Include="qml\views\IntroCutscene.qml" />
     <None Include="qml\views\LevelView.qml" />
     <None Include="qml\views\LoadingCover.qml" />
     <None Include="qml\views\MainMenuButton.qml" />
