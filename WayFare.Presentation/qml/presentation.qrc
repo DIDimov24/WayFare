@@ -2,12 +2,17 @@
     <qresource prefix="/qt/qml/wayfare/presentation">
         <file>qmldir</file>
         <file>models/HeroModel.qml</file>
+        <file>models/CoralModel.qml</file>
         <file>models/FenceModel.qml</file>
         <file>models/GrassModel.qml</file>
+        <file>models/ItemModel.qml</file>
         <file>models/LogStackModel.qml</file>
         <file>models/PineModel.qml</file>
         <file>models/RockModel.qml</file>
+        <file>models/SeaweedModel.qml</file>
         <file>models/StumpModel.qml</file>
+        <file>shaders/TempleWall.frag</file>
+        <file>views/DeathScreen.qml</file>
         <file>views/HowToPlayPanel.qml</file>
         <file>views/Hud.qml</file>
         <file>views/LevelView.qml</file>
@@ -16,6 +21,7 @@
         <file>views/MainMenuView.qml</file>
         <file>views/Minimap.qml</file>
         <file>views/SettingsPanel.qml</file>
+        <file>views/TempleScene.qml</file>
         <file>views/VillageScene.qml</file>
     </qresource>
 </RCC>

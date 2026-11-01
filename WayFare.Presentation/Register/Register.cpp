@@ -23,7 +23,7 @@ namespace WayFare::Presentation {
 		QCoreApplication* app = QCoreApplication::instance();
 		Settings* settings = new Settings(app);
 		Game* game = new Game(app);
-		Level* level = new Level(*settings, app);
+		Level* level = new Level(*settings, *game, app);
 
 		qmlRegisterSingletonInstance(QmlModuleUri, 1, 0, "Assets", new Assets(app));
 		qmlRegisterSingletonInstance(QmlModuleUri, 1, 0, "Cursor", new Cursor(app));

@@ -1,13 +1,49 @@
 pragma ComponentBehavior: Bound
 
 import QtQuick
+import QtQuick.Effects
 import wayfare.presentation
 
 Item {
     id: root
 
+    property string message: ""
+    property real flash: 0
+
     function iconPath(name: string): url {
         return Assets.url + "icons/" + name + ".png"
+    }
+
+    Connections {
+        target: Level
+
+        function onExitLocked(message: string) {
+            root.message = message
+            messageFade.restart()
+        }
+    }
+
+    Text {
+        id: messageText
+
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.verticalCenterOffset: parent.height * 0.15
+        text: root.message
+        color: "#ffffff"
+        font.pixelSize: 26
+        font.bold: true
+        style: Text.Outline
+        styleColor: "#000000"
+        opacity: 0
+
+        SequentialAnimation {
+            id: messageFade
+
+            NumberAnimation { target: messageText; property: "opacity"; to: 1; duration: 200 }
+            PauseAnimation { duration: 2000 }
+            NumberAnimation { target: messageText; property: "opacity"; to: 0; duration: 800 }
+        }
     }
 
     Column {
@@ -22,14 +58,38 @@ Item {
             Repeater {
                 model: Level.maxHealth
 
-                Image {
+                Item {
+                    id: heart
+
                     required property int index
+                    readonly property string icon: root.iconPath(heart.index < Level.health ? "heart" : "heart_lost")
 
                     width: 36
                     height: 36
-                    smooth: false
-                    opacity: index < Level.health ? 1 : 0.55
-                    source: root.iconPath(index < Level.health ? "heart" : "heart_lost")
+
+                    Image {
+                        y: root.flash * 4
+                        width: 36
+                        height: 36
+                        smooth: false
+                        scale: 1.25
+                        visible: root.flash > 0
+                        opacity: root.flash
+                        source: heart.icon
+                        layer.enabled: true
+                        layer.effect: MultiEffect {
+                            brightness: 1
+                        }
+                    }
+
+                    Image {
+                        y: root.flash * 4
+                        width: 36
+                        height: 36
+                        smooth: false
+                        opacity: heart.index < Level.health ? 1 : 0.55
+                        source: heart.icon
+                    }
                 }
             }
         }

@@ -7,6 +7,9 @@
     <Filter Include="qml\models">
       <UniqueIdentifier>{6b0e2d1c-4f5a-4e8b-9c27-3a1d5e7f9b40}</UniqueIdentifier>
     </Filter>
+    <Filter Include="qml\shaders">
+      <UniqueIdentifier>{65c41fb1-2b77-4b79-a252-18615b27f9ee}</UniqueIdentifier>
+    </Filter>
     <Filter Include="qml\views">
       <UniqueIdentifier>{a7f42d32-05f9-491f-907a-2f359c8bd776}</UniqueIdentifier>
     </Filter>
@@ -112,6 +115,12 @@
     <Filter Include="assets\models\zombie\meshes">
       <UniqueIdentifier>{37b8c286-b257-476c-bc74-fc40ea98a174}</UniqueIdentifier>
     </Filter>
+    <Filter Include="assets\models\fan_coral">
+      <UniqueIdentifier>{027a96d8-91aa-4017-b351-c4e846f74200}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\fan_coral\meshes">
+      <UniqueIdentifier>{a61837af-4ea7-46ca-9d07-96464baab41c}</UniqueIdentifier>
+    </Filter>
     <Filter Include="assets\models\fence_planks">
       <UniqueIdentifier>{e9fc9c65-94f7-4a42-9a70-4135e36aa1fe}</UniqueIdentifier>
     </Filter>
@@ -135,6 +144,12 @@
     </Filter>
     <Filter Include="assets\models\log_stack\meshes">
       <UniqueIdentifier>{2c67c062-1574-4060-a8fc-75b02eca2a49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\orange_coral">
+      <UniqueIdentifier>{66989ee0-7c66-4cac-a63a-3239a99eee00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\orange_coral\meshes">
+      <UniqueIdentifier>{f831886b-6a79-4053-9b67-c282beb690a2}</UniqueIdentifier>
     </Filter>
     <Filter Include="assets\models\pine_default">
       <UniqueIdentifier>{bd7f26a7-b32c-4152-97f2-9832b6e1f879}</UniqueIdentifier>
@@ -178,6 +193,12 @@
     <Filter Include="assets\models\rock_tall\meshes">
       <UniqueIdentifier>{d72b6a73-e4f1-4a2f-aedb-d7b791796aac}</UniqueIdentifier>
     </Filter>
+    <Filter Include="assets\models\seaweed">
+      <UniqueIdentifier>{2fc015df-ea30-4368-90d1-70c9e24fcb39}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\seaweed\meshes">
+      <UniqueIdentifier>{d50c784f-29c2-48d9-bc6e-d92e20c50c03}</UniqueIdentifier>
+    </Filter>
     <Filter Include="assets\models\stump_old">
       <UniqueIdentifier>{30bf6cf4-b70e-4e38-891e-f9d94cf780e4}</UniqueIdentifier>
     </Filter>
@@ -195,6 +216,9 @@
     </Filter>
     <Filter Include="assets\textures\temple">
       <UniqueIdentifier>{05be5575-8c30-49b0-b534-59ed82681043}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\textures\temple\caustics">
+      <UniqueIdentifier>{c4b7752e-e003-491c-97ef-001c6f2b8013}</UniqueIdentifier>
     </Filter>
     <Filter Include="assets\textures\village">
       <UniqueIdentifier>{ef2f6020-4d09-4cdc-8ef5-b08ab9f7488c}</UniqueIdentifier>
@@ -252,10 +276,16 @@
     <None Include="qml\models\HeroModel.qml">
       <Filter>qml\models</Filter>
     </None>
+    <None Include="qml\models\CoralModel.qml">
+      <Filter>qml\models</Filter>
+    </None>
     <None Include="qml\models\FenceModel.qml">
       <Filter>qml\models</Filter>
     </None>
     <None Include="qml\models\GrassModel.qml">
+      <Filter>qml\models</Filter>
+    </None>
+    <None Include="qml\models\ItemModel.qml">
       <Filter>qml\models</Filter>
     </None>
     <None Include="qml\models\LogStackModel.qml">
@@ -267,8 +297,17 @@
     <None Include="qml\models\RockModel.qml">
       <Filter>qml\models</Filter>
     </None>
+    <None Include="qml\models\SeaweedModel.qml">
+      <Filter>qml\models</Filter>
+    </None>
     <None Include="qml\models\StumpModel.qml">
       <Filter>qml\models</Filter>
+    </None>
+    <None Include="qml\shaders\TempleWall.frag">
+      <Filter>qml\shaders</Filter>
+    </None>
+    <None Include="qml\views\DeathScreen.qml">
+      <Filter>qml\views</Filter>
     </None>
     <None Include="qml\views\HowToPlayPanel.qml">
       <Filter>qml\views</Filter>
@@ -292,6 +331,9 @@
       <Filter>qml\views</Filter>
     </None>
     <None Include="qml\views\SettingsPanel.qml">
+      <Filter>qml\views</Filter>
+    </None>
+    <None Include="qml\views\TempleScene.qml">
       <Filter>qml\views</Filter>
     </None>
     <None Include="qml\views\VillageScene.qml">
@@ -471,6 +513,12 @@
     <None Include="assets\models\zombie\meshes\mesh_zombie1_0_mesh.mesh">
       <Filter>assets\models\zombie\meshes</Filter>
     </None>
+    <None Include="assets\models\fan_coral\FanCoral.qml">
+      <Filter>assets\models\fan_coral</Filter>
+    </None>
+    <None Include="assets\models\fan_coral\meshes\mesh1533979519_mesh.mesh">
+      <Filter>assets\models\fan_coral\meshes</Filter>
+    </None>
     <None Include="assets\models\fence_planks\FencePlanks.qml">
       <Filter>assets\models\fence_planks</Filter>
     </None>
@@ -494,6 +542,12 @@
     </None>
     <None Include="assets\models\log_stack\meshes\log_stack_mesh.mesh">
       <Filter>assets\models\log_stack\meshes</Filter>
+    </None>
+    <None Include="assets\models\orange_coral\OrangeCoral.qml">
+      <Filter>assets\models\orange_coral</Filter>
+    </None>
+    <None Include="assets\models\orange_coral\meshes\group1965416314_mesh.mesh">
+      <Filter>assets\models\orange_coral\meshes</Filter>
     </None>
     <None Include="assets\models\pine_default\PineDefault.qml">
       <Filter>assets\models\pine_default</Filter>
@@ -536,6 +590,12 @@
     </None>
     <None Include="assets\models\rock_tall\meshes\rock_tallA_mesh.mesh">
       <Filter>assets\models\rock_tall\meshes</Filter>
+    </None>
+    <None Include="assets\models\seaweed\Seaweed.qml">
+      <Filter>assets\models\seaweed</Filter>
+    </None>
+    <None Include="assets\models\seaweed\meshes\node_Mesh_mesh.mesh">
+      <Filter>assets\models\seaweed\meshes</Filter>
     </None>
     <None Include="assets\models\stump_old\StumpOld.qml">
       <Filter>assets\models\stump_old</Filter>
@@ -587,6 +647,9 @@
     </None>
     <None Include="assets\textures\dungeon\wall_roughness.jpg">
       <Filter>assets\textures\dungeon</Filter>
+    </None>
+    <None Include="assets\textures\temple\caustics\caust00.png">
+      <Filter>assets\textures\temple\caustics</Filter>
     </None>
     <None Include="assets\textures\temple\floor_diffuse.jpg">
       <Filter>assets\textures\temple</Filter>

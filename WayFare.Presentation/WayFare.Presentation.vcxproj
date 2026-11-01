@@ -118,12 +118,17 @@
     <QtRcc Include="qml\presentation.qrc" />
     <None Include="qml\qmldir" />
     <None Include="qml\models\HeroModel.qml" />
+    <None Include="qml\models\CoralModel.qml" />
     <None Include="qml\models\FenceModel.qml" />
     <None Include="qml\models\GrassModel.qml" />
+    <None Include="qml\models\ItemModel.qml" />
     <None Include="qml\models\LogStackModel.qml" />
     <None Include="qml\models\PineModel.qml" />
     <None Include="qml\models\RockModel.qml" />
+    <None Include="qml\models\SeaweedModel.qml" />
     <None Include="qml\models\StumpModel.qml" />
+    <None Include="qml\shaders\TempleWall.frag" />
+    <None Include="qml\views\DeathScreen.qml" />
     <None Include="qml\views\HowToPlayPanel.qml" />
     <None Include="qml\views\Hud.qml" />
     <None Include="qml\views\LevelView.qml" />
@@ -132,6 +137,7 @@
     <None Include="qml\views\MainMenuView.qml" />
     <None Include="qml\views\Minimap.qml" />
     <None Include="qml\views\SettingsPanel.qml" />
+    <None Include="qml\views\TempleScene.qml" />
     <None Include="qml\views\VillageScene.qml" />
     <None Include="assets\icons\air.png" />
     <None Include="assets\icons\diving_gear.png" />
@@ -199,6 +205,8 @@
     <None Include="assets\models\zombie\maps\zombie1_normal.png" />
     <None Include="assets\models\zombie\maps\zombie1_specularGlossiness.png" />
     <None Include="assets\models\zombie\meshes\mesh_zombie1_0_mesh.mesh" />
+    <None Include="assets\models\fan_coral\FanCoral.qml" />
+    <None Include="assets\models\fan_coral\meshes\mesh1533979519_mesh.mesh" />
     <None Include="assets\models\fence_planks\FencePlanks.qml" />
     <None Include="assets\models\fence_planks\meshes\mesh_fence_planks_mesh.mesh" />
     <None Include="assets\models\fence_simple\FenceSimple.qml" />
@@ -207,6 +215,8 @@
     <None Include="assets\models\grass_large\meshes\mesh_grass_large_mesh.mesh" />
     <None Include="assets\models\log_stack\LogStack.qml" />
     <None Include="assets\models\log_stack\meshes\log_stack_mesh.mesh" />
+    <None Include="assets\models\orange_coral\OrangeCoral.qml" />
+    <None Include="assets\models\orange_coral\meshes\group1965416314_mesh.mesh" />
     <None Include="assets\models\pine_default\PineDefault.qml" />
     <None Include="assets\models\pine_default\meshes\tree_pineDefaultA_mesh.mesh" />
     <None Include="assets\models\pine_small\PineSmall.qml" />
@@ -221,6 +231,8 @@
     <None Include="assets\models\rock_large\meshes\rock_largeA_mesh.mesh" />
     <None Include="assets\models\rock_tall\RockTall.qml" />
     <None Include="assets\models\rock_tall\meshes\rock_tallA_mesh.mesh" />
+    <None Include="assets\models\seaweed\Seaweed.qml" />
+    <None Include="assets\models\seaweed\meshes\node_Mesh_mesh.mesh" />
     <None Include="assets\models\stump_old\StumpOld.qml" />
     <None Include="assets\models\stump_old\meshes\mesh_stump_old_mesh.mesh" />
     <None Include="assets\sky\kloofendal_overcast_puresky_2k.hdr" />
@@ -230,6 +242,7 @@
     <None Include="assets\textures\dungeon\wall_diffuse.jpg" />
     <None Include="assets\textures\dungeon\wall_normal.jpg" />
     <None Include="assets\textures\dungeon\wall_roughness.jpg" />
+    <None Include="assets\textures\temple\caustics\caust00.png" />
     <None Include="assets\textures\temple\floor_diffuse.jpg" />
     <None Include="assets\textures\temple\floor_normal.jpg" />
     <None Include="assets\textures\temple\floor_roughness.jpg" />
