@@ -11,6 +11,7 @@ Item {
     readonly property real tileSize: 2
     readonly property real wallHeight: 3
     readonly property real eyeHeight: 1.6
+    readonly property real nicheDepth: 0.8
     readonly property int lastStage: 6
     readonly property bool temple: Level.theme === "temple"
     property int stage: 0
@@ -71,13 +72,37 @@ Item {
     function buildWalls() {
         const walls = Level.walls
         const entries = []
+        const yaw = root.exitYaw()
+        const nicheX = yaw === -90 ? Level.exitX + 1 : Level.exitX
+        const nicheY = yaw === -90 ? Level.exitY : Level.exitY + 1
         for (let i = 0; i < walls.length; i++) {
+            const position = Qt.vector3d((walls[i].x + 0.5) * root.tileSize, root.wallHeight / 2, (walls[i].y + 0.5) * root.tileSize)
+            const scale = Qt.vector3d(root.tileSize / 100, root.wallHeight / 100, root.tileSize / 100)
+            if (root.temple && walls[i].x === nicheX && walls[i].y === nicheY) {
+                if (yaw === -90) {
+                    position.x = position.x + root.nicheDepth / 2
+                    scale.x = (root.tileSize - root.nicheDepth) / 100
+                } else {
+                    position.z = position.z + root.nicheDepth / 2
+                    scale.z = (root.tileSize - root.nicheDepth) / 100
+                }
+            }
             entries.push(wallEntry.createObject(wallList, {
-                position: Qt.vector3d((walls[i].x + 0.5) * root.tileSize, root.wallHeight / 2, (walls[i].y + 0.5) * root.tileSize),
-                scale: Qt.vector3d(root.tileSize / 100, root.wallHeight / 100, root.tileSize / 100)
+                position: position,
+                scale: scale
             }))
         }
         wallList.instances = entries
+    }
+
+    function exitYaw(): real {
+        const walls = Level.walls
+        for (let i = 0; i < walls.length; i++) {
+            if (walls[i].x === Level.exitX - 1 && walls[i].y === Level.exitY) {
+                return 180
+            }
+        }
+        return -90
     }
 
     function releaseInput() {
@@ -273,6 +298,38 @@ Item {
                 }
 
                 Node {
+                    visible: root.temple
+                    position: Qt.vector3d((Level.exitX + 0.5) * root.tileSize, 0, (Level.exitY + 0.5) * root.tileSize)
+                    eulerRotation.y: root.exitYaw()
+
+                    LadderModel {
+                        z: -root.tileSize / 2 - root.nicheDepth + 0.08
+                        height: root.wallHeight
+                    }
+
+                    Model {
+                        position: Qt.vector3d(0, root.wallHeight - 0.01, -root.tileSize / 2 - root.nicheDepth / 2)
+                        source: "#Rectangle"
+                        eulerRotation.x: 90
+                        scale: Qt.vector3d(root.tileSize * 0.0045, root.nicheDepth * 0.01, 1)
+                        castsShadows: false
+                        receivesShadows: false
+                        materials: PrincipledMaterial {
+                            lighting: PrincipledMaterial.NoLighting
+                            baseColor: "#010405"
+                        }
+                    }
+
+                    PointLight {
+                        position: Qt.vector3d(0, root.wallHeight - 0.4, -root.tileSize / 2)
+                        color: Level.exitUnlocked ? "#9ff4ff" : "#e09040"
+                        brightness: Level.exitUnlocked ? 1 : 0.5
+                        quadraticFade: 6000
+                    }
+                }
+
+                Node {
+                    visible: !root.temple
                     position: Qt.vector3d((Level.exitX + 0.5) * root.tileSize, 0, (Level.exitY + 0.5) * root.tileSize)
 
                     Model {

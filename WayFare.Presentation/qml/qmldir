@@ -4,6 +4,7 @@ FenceModel 1.0 models/FenceModel.qml
 GrassModel 1.0 models/GrassModel.qml
 HeroModel 1.0 models/HeroModel.qml
 ItemModel 1.0 models/ItemModel.qml
+LadderModel 1.0 models/LadderModel.qml
 LogStackModel 1.0 models/LogStackModel.qml
 PineModel 1.0 models/PineModel.qml
 RockModel 1.0 models/RockModel.qml
@@ -20,5 +21,6 @@ MainMenuButton 1.0 views/MainMenuButton.qml
 MainMenuView 1.0 views/MainMenuView.qml
 Minimap 1.0 views/Minimap.qml
 SettingsPanel 1.0 views/SettingsPanel.qml
+TempleExitCutscene 1.0 views/TempleExitCutscene.qml
 TempleScene 1.0 views/TempleScene.qml
 VillageScene 1.0 views/VillageScene.qml

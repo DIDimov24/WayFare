@@ -139,6 +139,15 @@
     <Filter Include="assets\models\grass_large\meshes">
       <UniqueIdentifier>{ecf0d968-789b-4778-8094-59741b218768}</UniqueIdentifier>
     </Filter>
+    <Filter Include="assets\models\ladder_long">
+      <UniqueIdentifier>{0a799de8-2278-4922-a67e-a48b02e11e38}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\ladder_long\maps">
+      <UniqueIdentifier>{a38d66c1-4ad2-4488-aee5-3dfcda2e99dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\ladder_long\meshes">
+      <UniqueIdentifier>{7515e273-fac9-4bd8-b0ea-1fe15a580a2b}</UniqueIdentifier>
+    </Filter>
     <Filter Include="assets\models\log_stack">
       <UniqueIdentifier>{06ba5f19-bcc6-4457-8846-5251fe3526f4}</UniqueIdentifier>
     </Filter>
@@ -288,6 +297,9 @@
     <None Include="qml\models\ItemModel.qml">
       <Filter>qml\models</Filter>
     </None>
+    <None Include="qml\models\LadderModel.qml">
+      <Filter>qml\models</Filter>
+    </None>
     <None Include="qml\models\LogStackModel.qml">
       <Filter>qml\models</Filter>
     </None>
@@ -337,6 +349,9 @@
       <Filter>qml\views</Filter>
     </None>
     <None Include="qml\views\SettingsPanel.qml">
+      <Filter>qml\views</Filter>
+    </None>
+    <None Include="qml\views\TempleExitCutscene.qml">
       <Filter>qml\views</Filter>
     </None>
     <None Include="qml\views\TempleScene.qml">
@@ -542,6 +557,15 @@
     </None>
     <None Include="assets\models\grass_large\meshes\mesh_grass_large_mesh.mesh">
       <Filter>assets\models\grass_large\meshes</Filter>
+    </None>
+    <None Include="assets\models\ladder_long\LadderLong.qml">
+      <Filter>assets\models\ladder_long</Filter>
+    </None>
+    <None Include="assets\models\ladder_long\maps\colormap.png">
+      <Filter>assets\models\ladder_long\maps</Filter>
+    </None>
+    <None Include="assets\models\ladder_long\meshes\ladder_long_mesh.mesh">
+      <Filter>assets\models\ladder_long\meshes</Filter>
     </None>
     <None Include="assets\models\log_stack\LogStack.qml">
       <Filter>assets\models\log_stack</Filter>

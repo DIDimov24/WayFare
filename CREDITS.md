@@ -27,6 +27,7 @@ WayFare uses only free third-party assets.
 | Pines, rocks, fences, grass, logs, stump (menu scene) | [Nature Kit 2.1](https://kenney.nl/assets/nature-kit) | [Kenney](https://www.kenney.nl) | CC0 1.0 |
 | Seaweed (Underwater Temple) | ["Seaweed"](https://poly.pizza/m/461xlaa6SZW) | Laney XR Labs | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) |
 | Orange coral (Underwater Temple) | ["Orange Coral"](https://poly.pizza/m/3HEc6LvqCJd) | Device Lab | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) |
+| Exit ladder (Underwater Temple) | [Platformer Kit](https://kenney.nl/assets/platformer-kit) | [Kenney](https://www.kenney.nl) | CC0 1.0 |
 | Fan coral (Underwater Temple) | ["underwater_enviro_coral"](https://poly.pizza/m/0CrDBiCnI5e) | God Appeasers | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) |
 
 ## HUD and minimap icons

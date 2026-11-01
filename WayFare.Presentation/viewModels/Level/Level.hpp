@@ -69,6 +69,7 @@ namespace WayFare::Presentation {
 		void move(double forward, double strafe, double deltaTime);
 		void look(double mouseDeltaX, double mouseDeltaY);
 		void respawn();
+		void nextLevel();
 		void quitToMenu();
 
 	signals:
@@ -86,6 +87,7 @@ namespace WayFare::Presentation {
 		Business::Maze _maze;
 		Business::Player _player;
 		Business::Inventory _inventory;
+		Business::Inventory _startInventory;
 		Business::Drowning _drowning;
 		std::vector<Business::Pickup> _pickups;
 		QString _theme;

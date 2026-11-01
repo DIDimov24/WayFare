@@ -24,6 +24,14 @@ Window {
 
     Loader {
         anchors.fill: parent
+        active: Game.phase === "templeExit"
+        asynchronous: true
+        focus: Game.phase === "templeExit"
+        sourceComponent: TempleExitCutscene {}
+    }
+
+    Loader {
+        anchors.fill: parent
         active: Game.phase === "level"
         asynchronous: true
         focus: Game.phase === "level"

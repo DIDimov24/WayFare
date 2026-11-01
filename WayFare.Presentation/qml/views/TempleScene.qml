@@ -11,6 +11,7 @@ Node {
     property real tileSize: 2
     property int stage: 0
     property real sway: 0
+
     readonly property var shafts: root.decorOf("shaft")
     readonly property var vents: root.decorOf("vent")
     readonly property var glows: root.decorOf("glow")
@@ -111,44 +112,13 @@ Node {
     Repeater3D {
         model: root.shafts
 
-        delegate: Node {
+        delegate: PointLight {
             required property var modelData
 
-            position: Qt.vector3d(modelData.x * root.tileSize, 0, modelData.y * root.tileSize)
-
-            PointLight {
-                y: 2.8
-                color: "#8ff0ff"
-                brightness: 3
-                quadraticFade: 1100
-            }
-
-            Model {
-                y: 1.49
-                source: "#Cylinder"
-                scale: Qt.vector3d(0.012, 0.0298, 0.012)
-                castsShadows: false
-                receivesShadows: false
-                materials: PrincipledMaterial {
-                    lighting: PrincipledMaterial.NoLighting
-                    blendMode: PrincipledMaterial.Screen
-                    baseColor: "#061a1e"
-                    depthDrawMode: Material.NeverDepthDraw
-                }
-            }
-
-            Model {
-                visible: root.stage >= 6
-                y: 2.985
-                source: "#Cylinder"
-                scale: Qt.vector3d(0.012, 0.0002, 0.012)
-                castsShadows: false
-                receivesShadows: false
-                materials: PrincipledMaterial {
-                    lighting: PrincipledMaterial.NoLighting
-                    baseColor: "#4fb8c4"
-                }
-            }
+            position: Qt.vector3d(modelData.x * root.tileSize, 2.8, modelData.y * root.tileSize)
+            color: "#8ff0ff"
+            brightness: 3
+            quadraticFade: 1100
         }
     }
 

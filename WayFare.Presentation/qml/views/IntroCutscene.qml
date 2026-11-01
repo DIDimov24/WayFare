@@ -271,6 +271,8 @@ Item {
 
             eulerRotation.y: 180
             clip: root.time < 6000 ? "swimming" : (root.time < 11030 ? "swimming_to_edge" : "walking")
+            loop: clip !== "swimming_to_edge"
+            time: root.time < 6000 ? root.time : Math.max(0, root.time - (root.time < 11030 ? 6001 : 11031))
         }
 
         Model {

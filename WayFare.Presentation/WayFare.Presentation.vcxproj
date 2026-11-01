@@ -122,6 +122,7 @@
     <None Include="qml\models\FenceModel.qml" />
     <None Include="qml\models\GrassModel.qml" />
     <None Include="qml\models\ItemModel.qml" />
+    <None Include="qml\models\LadderModel.qml" />
     <None Include="qml\models\LogStackModel.qml" />
     <None Include="qml\models\PineModel.qml" />
     <None Include="qml\models\RockModel.qml" />
@@ -139,6 +140,7 @@
     <None Include="qml\views\MainMenuView.qml" />
     <None Include="qml\views\Minimap.qml" />
     <None Include="qml\views\SettingsPanel.qml" />
+    <None Include="qml\views\TempleExitCutscene.qml" />
     <None Include="qml\views\TempleScene.qml" />
     <None Include="qml\views\VillageScene.qml" />
     <None Include="assets\icons\air.png" />
@@ -215,6 +217,9 @@
     <None Include="assets\models\fence_simple\meshes\fence_simple_mesh.mesh" />
     <None Include="assets\models\grass_large\GrassLarge.qml" />
     <None Include="assets\models\grass_large\meshes\mesh_grass_large_mesh.mesh" />
+    <None Include="assets\models\ladder_long\LadderLong.qml" />
+    <None Include="assets\models\ladder_long\maps\colormap.png" />
+    <None Include="assets\models\ladder_long\meshes\ladder_long_mesh.mesh" />
     <None Include="assets\models\log_stack\LogStack.qml" />
     <None Include="assets\models\log_stack\meshes\log_stack_mesh.mesh" />
     <None Include="assets\models\orange_coral\OrangeCoral.qml" />

@@ -2,6 +2,7 @@
 
 #include <random>
 #include <QPoint>
+#include <QRandomGenerator>
 #include <QVariantMap>
 
 #include "WayFare.Business/Hazards/Drowning.hpp"
@@ -129,6 +130,7 @@ namespace WayFare::Presentation {
 	Level::Level(Settings& settings, Game& game, QObject* parent) : QObject(parent), _settings(settings), _game(game) {
 		_player = { 0.0, 0.0, 0.0, 0, 0.0 };
 		_inventory = Business::createInventory();
+		_startInventory = Business::createInventory();
 		_drowning = Business::createDrowning();
 		_number = 1;
 		_seed = 0;
@@ -286,7 +288,10 @@ namespace WayFare::Presentation {
 		}
 
 		_player = Business::createPlayer(_maze);
-		_inventory = Business::createInventory();
+		if (number == 1) {
+			_startInventory = Business::createInventory();
+		}
+		_inventory = _startInventory;
 		_drowning = Business::createDrowning();
 		_onExit = false;
 		_dead = false;
@@ -340,12 +345,22 @@ namespace WayFare::Presentation {
 			if (status == Business::ExitStatus::Locked && !_onExit) {
 				emit exitLocked(QString::fromStdString(Business::templeExitLockedMessage));
 			}
+			if (status == Business::ExitStatus::Success) {
+				_game.setPhase(QStringLiteral("templeExit"));
+				return;
+			}
 		}
 		_onExit = Business::isPlayerOnExit(_player, _maze);
 	}
 
 	void Level::respawn() {
 		load(_number, _seed);
+	}
+
+	void Level::nextLevel() {
+		_startInventory = _inventory;
+		load(_number + 1, QRandomGenerator::global()->generate());
+		_game.setPhase(QStringLiteral("level"));
 	}
 
 	void Level::quitToMenu() {
