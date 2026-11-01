@@ -25,6 +25,10 @@ WayFare uses only free third-party assets.
 | Used as | Asset | Author | License |
 |---|---|---|---|
 | Pines, rocks, fences, grass, logs, stump (menu scene) | [Nature Kit 2.1](https://kenney.nl/assets/nature-kit) | [Kenney](https://www.kenney.nl) | CC0 1.0 |
+| Seaweed (Underwater Temple) | ["Seaweed"](https://poly.pizza/m/461xlaa6SZW) | Laney XR Labs | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) |
+| Orange coral (Underwater Temple) | ["Orange Coral"](https://poly.pizza/m/3HEc6LvqCJd) | Device Lab | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) |
+| Exit ladder (Underwater Temple) | [Platformer Kit](https://kenney.nl/assets/platformer-kit) | [Kenney](https://www.kenney.nl) | CC0 1.0 |
+| Fan coral (Underwater Temple) | ["underwater_enviro_coral"](https://poly.pizza/m/0CrDBiCnI5e) | God Appeasers | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) |
 
 ## HUD and minimap icons
 
@@ -42,3 +46,5 @@ All from [Poly Haven](https://polyhaven.com), CC0 1.0.
 | Dungeon | [Castle Brick 07](https://polyhaven.com/a/castle_brick_07), [Cobblestone Floor 04](https://polyhaven.com/a/cobblestone_floor_04) |
 | Snowy Village | [Wood Planks Grey](https://polyhaven.com/a/wood_planks_grey), [Snow 02](https://polyhaven.com/a/snow_02) |
 | Sky | [Kloofendal Overcast (Pure Sky)](https://polyhaven.com/a/kloofendal_overcast_puresky) |
+
+Caustics on the temple floor: one frame of ["Caustic Textures"](https://opengameart.org/content/caustic-textures) by Calinou (OpenGameArt), CC0 1.0.

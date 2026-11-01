@@ -12,6 +12,7 @@
 #include "WayFare.Business/models/Inventory.hpp"
 #include "WayFare.Business/models/Maze.hpp"
 #include "WayFare.Business/models/Player.hpp"
+#include "WayFare.Presentation/viewModels/Game/Game.hpp"
 #include "WayFare.Presentation/viewModels/Settings/Settings.hpp"
 
 namespace WayFare::Presentation {
@@ -22,6 +23,10 @@ namespace WayFare::Presentation {
 		Q_PROPERTY(QVariantList walls READ walls NOTIFY mazeChanged)
 		Q_PROPERTY(int exitX READ exitX NOTIFY mazeChanged)
 		Q_PROPERTY(int exitY READ exitY NOTIFY mazeChanged)
+		Q_PROPERTY(QVariantList decor READ decor NOTIFY mazeChanged)
+		Q_PROPERTY(bool exitUnlocked READ exitUnlocked NOTIFY inventoryChanged)
+		Q_PROPERTY(bool dead READ dead NOTIFY deadChanged)
+		Q_PROPERTY(QString deathMessage READ deathMessage NOTIFY deadChanged)
 		Q_PROPERTY(QVariantList pickups READ pickups NOTIFY pickupsChanged)
 		Q_PROPERTY(double playerX READ playerX NOTIFY playerChanged)
 		Q_PROPERTY(double playerY READ playerY NOTIFY playerChanged)
@@ -35,13 +40,17 @@ namespace WayFare::Presentation {
 		Q_PROPERTY(int potionCount READ potionCount NOTIFY inventoryChanged)
 
 	public:
-		explicit Level(Settings& settings, QObject* parent = nullptr);
+		explicit Level(Settings& settings, Game& game, QObject* parent = nullptr);
 
 		int size() const;
 		QString theme() const;
 		QVariantList walls() const;
 		int exitX() const;
 		int exitY() const;
+		QVariantList decor() const;
+		bool exitUnlocked() const;
+		bool dead() const;
+		QString deathMessage() const;
 		QVariantList pickups() const;
 		double playerX() const;
 		double playerY() const;
@@ -59,6 +68,9 @@ namespace WayFare::Presentation {
 	public slots:
 		void move(double forward, double strafe, double deltaTime);
 		void look(double mouseDeltaX, double mouseDeltaY);
+		void respawn();
+		void nextLevel();
+		void quitToMenu();
 
 	signals:
 		void mazeChanged();
@@ -66,18 +78,28 @@ namespace WayFare::Presentation {
 		void hudChanged();
 		void inventoryChanged();
 		void pickupsChanged();
+		void exitLocked(QString message);
+		void deadChanged();
 
 	private:
 		Settings& _settings;
+		Game& _game;
 		Business::Maze _maze;
 		Business::Player _player;
 		Business::Inventory _inventory;
+		Business::Inventory _startInventory;
 		Business::Drowning _drowning;
 		std::vector<Business::Pickup> _pickups;
 		QString _theme;
 		QVariantList _walls;
+		QVariantList _decor;
+		QString _deathMessage;
+		int _number;
+		uint32_t _seed;
 		int _exitX;
 		int _exitY;
+		bool _onExit;
+		bool _dead;
 		double _pitch;
 	};
 }
