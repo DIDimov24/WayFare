@@ -26,6 +26,12 @@ WayFare uses only free third-party assets.
 |---|---|---|---|
 | Pines, rocks, fences, grass, logs, stump (menu scene) | [Nature Kit 2.1](https://kenney.nl/assets/nature-kit) | [Kenney](https://www.kenney.nl) | CC0 1.0 |
 
+## HUD and minimap icons
+
+| Used as | Asset | Author | License |
+|---|---|---|---|
+| Hearts, items, air and exit sprites | [1-Bit Pack](https://kenney.nl/assets/1-bit-pack) | [Kenney](https://www.kenney.nl) | CC0 1.0 |
+
 ## Textures and sky
 
 All from [Poly Haven](https://polyhaven.com), CC0 1.0.

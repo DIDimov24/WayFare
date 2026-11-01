@@ -30,9 +30,9 @@ namespace WayFare::Presentation {
 		Q_PROPERTY(int health READ health NOTIFY hudChanged)
 		Q_PROPERTY(int maxHealth READ maxHealth CONSTANT)
 		Q_PROPERTY(double air READ air NOTIFY hudChanged)
-		Q_PROPERTY(bool showAir READ showAir NOTIFY hudChanged)
-		Q_PROPERTY(QStringList items READ items NOTIFY hudChanged)
-		Q_PROPERTY(int potionCount READ potionCount NOTIFY hudChanged)
+		Q_PROPERTY(bool showAir READ showAir NOTIFY inventoryChanged)
+		Q_PROPERTY(QStringList items READ items NOTIFY inventoryChanged)
+		Q_PROPERTY(int potionCount READ potionCount NOTIFY inventoryChanged)
 
 	public:
 		explicit Level(Settings& settings, QObject* parent = nullptr);
@@ -64,6 +64,7 @@ namespace WayFare::Presentation {
 		void mazeChanged();
 		void playerChanged();
 		void hudChanged();
+		void inventoryChanged();
 		void pickupsChanged();
 
 	private:

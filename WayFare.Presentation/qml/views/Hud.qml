@@ -1,8 +1,14 @@
+pragma ComponentBehavior: Bound
+
 import QtQuick
 import wayfare.presentation
 
 Item {
     id: root
+
+    function iconPath(name: string): url {
+        return Assets.url + "icons/" + name + ".png"
+    }
 
     Column {
         anchors.left: parent.left
@@ -11,96 +17,110 @@ Item {
         spacing: 12
 
         Row {
-            spacing: 4
+            spacing: 2
 
             Repeater {
                 model: Level.maxHealth
 
-                Text {
+                Image {
                     required property int index
 
-                    text: String.fromCharCode(0x2665)
-                    color: index < Level.health ? "#e0404a" : "#40ffffff"
-                    font.pixelSize: 34
-                    style: Text.Outline
-                    styleColor: "#99080b12"
+                    width: 36
+                    height: 36
+                    smooth: false
+                    opacity: index < Level.health ? 1 : 0.55
+                    source: root.iconPath(index < Level.health ? "heart" : "heart_lost")
                 }
             }
         }
 
         Row {
-            spacing: 8
+            spacing: 6
             visible: Level.items.length > 0 || Level.potionCount > 0
 
             Repeater {
                 model: Level.items
 
                 Rectangle {
+                    id: slot
+
                     required property string modelData
 
-                    width: itemLabel.implicitWidth + 24
-                    height: 32
-                    radius: 6
-                    color: "#99080b12"
-                    border.color: "#33ffffff"
+                    width: 52
+                    height: 52
+                    color: "#cc0a0806"
+                    border.color: "#a87a35"
+                    border.width: 2
 
-                    Text {
-                        id: itemLabel
+                    Image {
                         anchors.centerIn: parent
-                        text: parent.modelData
-                        color: "#ffffff"
-                        font.pixelSize: 15
+                        width: 36
+                        height: 36
+                        smooth: false
+                        source: root.iconPath(slot.modelData)
                     }
                 }
             }
 
             Rectangle {
                 visible: Level.potionCount > 0
-                width: potionLabel.implicitWidth + 24
-                height: 32
-                radius: 6
-                color: "#99080b12"
-                border.color: "#33ffffff"
+                width: 52
+                height: 52
+                color: "#cc0a0806"
+                border.color: "#a87a35"
+                border.width: 2
+
+                Image {
+                    anchors.centerIn: parent
+                    width: 36
+                    height: 36
+                    smooth: false
+                    source: root.iconPath("potion")
+                }
 
                 Text {
-                    id: potionLabel
-                    anchors.centerIn: parent
-                    text: "Potion x" + Level.potionCount
+                    anchors.right: parent.right
+                    anchors.bottom: parent.bottom
+                    anchors.rightMargin: 4
+                    anchors.bottomMargin: 1
+                    text: Level.potionCount
                     color: "#ffffff"
-                    font.pixelSize: 15
+                    font.pixelSize: 16
+                    font.bold: true
+                    style: Text.Outline
+                    styleColor: "#000000"
                 }
             }
         }
     }
 
-    Column {
+    Row {
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.top: parent.top
-        anchors.topMargin: 28
-        spacing: 6
+        anchors.topMargin: 24
+        spacing: 8
         visible: Level.showAir
 
-        Text {
-            anchors.horizontalCenter: parent.horizontalCenter
-            text: "AIR"
-            color: "#d6dde6"
-            font.pixelSize: 13
-            font.letterSpacing: 2
-            style: Text.Outline
-            styleColor: "#99080b12"
+        Image {
+            anchors.verticalCenter: parent.verticalCenter
+            width: 36
+            height: 36
+            smooth: false
+            source: root.iconPath("air")
         }
 
         Rectangle {
+            anchors.verticalCenter: parent.verticalCenter
             width: 260
-            height: 8
-            radius: 4
-            color: "#33ffffff"
+            height: 14
+            color: "#000000"
 
             Rectangle {
-                width: Level.air * parent.width
-                height: parent.height
-                radius: 4
-                color: Level.air < 0.25 ? "#e0404a" : "#7cc4ff"
+                x: 2
+                y: 2
+                width: Level.air * (parent.width - 4)
+                height: parent.height - 4
+                color: Level.air < 0.25 ? "#e04a3a" : "#e8eef4"
             }
         }
     }

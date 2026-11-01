@@ -14,6 +14,19 @@ namespace WayFare::Presentation {
 	const double cameraPitchSpeed = 0.003;
 	const double maxCameraPitch = 1.4;
 
+	QString levelItemKey(Business::ItemType type) {
+		if (type == Business::ItemType::DivingGear) {
+			return QStringLiteral("diving_gear");
+		}
+		if (type == Business::ItemType::Sword) {
+			return QStringLiteral("sword");
+		}
+		if (type == Business::ItemType::Pistol) {
+			return QStringLiteral("pistol");
+		}
+		return QStringLiteral("potion");
+	}
+
 	Level::Level(Settings& settings, QObject* parent) : QObject(parent), _settings(settings) {
 		_player = { 0.0, 0.0, 0.0, 0, 0.0 };
 		_inventory = Business::createInventory();
@@ -50,21 +63,10 @@ namespace WayFare::Presentation {
 				continue;
 			}
 
-			QString type = QStringLiteral("potion");
-			if (_pickups[i].type == Business::ItemType::DivingGear) {
-				type = QStringLiteral("divingGear");
-			}
-			if (_pickups[i].type == Business::ItemType::Sword) {
-				type = QStringLiteral("sword");
-			}
-			if (_pickups[i].type == Business::ItemType::Pistol) {
-				type = QStringLiteral("pistol");
-			}
-
 			QVariantMap pickup;
 			pickup.insert(QStringLiteral("x"), _pickups[i].x);
 			pickup.insert(QStringLiteral("y"), _pickups[i].y);
-			pickup.insert(QStringLiteral("type"), type);
+			pickup.insert(QStringLiteral("type"), levelItemKey(_pickups[i].type));
 			list.append(pickup);
 		}
 		return list;
@@ -103,19 +105,13 @@ namespace WayFare::Presentation {
 	}
 
 	QStringList Level::items() const {
-		QStringList names;
+		QStringList keys;
 		for (size_t i = 0; i < _inventory.items.size(); i++) {
-			if (_inventory.items[i] == Business::ItemType::DivingGear) {
-				names.append(QStringLiteral("Diving gear"));
-			}
-			if (_inventory.items[i] == Business::ItemType::Sword) {
-				names.append(QStringLiteral("Sword"));
-			}
-			if (_inventory.items[i] == Business::ItemType::Pistol) {
-				names.append(QStringLiteral("Pistol"));
+			if (_inventory.items[i] != Business::ItemType::Potion) {
+				keys.append(levelItemKey(_inventory.items[i]));
 			}
 		}
-		return names;
+		return keys;
 	}
 
 	int Level::potionCount() const {
@@ -168,6 +164,7 @@ namespace WayFare::Presentation {
 		emit mazeChanged();
 		emit playerChanged();
 		emit hudChanged();
+		emit inventoryChanged();
 		emit pickupsChanged();
 	}
 
@@ -177,6 +174,22 @@ namespace WayFare::Presentation {
 		}
 		Business::movePlayer(_player, _maze, forward, strafe, deltaTime);
 		emit playerChanged();
+
+		std::vector<Business::ItemType> collected = Business::collectPickups(_player, _inventory, _pickups);
+		if (collected.size() > 0) {
+			emit inventoryChanged();
+			emit pickupsChanged();
+		}
+
+		int health = _player.health;
+		double air = _drowning.air;
+		Business::updatePlayerHealth(_player, deltaTime);
+		if (_theme == QStringLiteral("temple")) {
+			Business::updateDrowning(_drowning, _player, _inventory, deltaTime);
+		}
+		if (_player.health != health || _drowning.air != air) {
+			emit hudChanged();
+		}
 	}
 
 	void Level::look(double mouseDeltaX, double mouseDeltaY) {
