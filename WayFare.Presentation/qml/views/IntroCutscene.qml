@@ -1,4 +1,5 @@
 import QtQuick
+import QtMultimedia
 import QtQuick3D
 import QtQuick3D.Helpers
 import QtQuick3D.Particles3D
@@ -20,6 +21,15 @@ Item {
 
     function start() {
         root.started = true
+        music.play()
+    }
+
+    MediaPlayer {
+        id: music
+        source: Assets.url + "audio/intro_music.ogg"
+        audioOutput: AudioOutput {
+            volume: Settings.musicVolume / 100 * Math.min(1, (root.length - root.time) / 1200)
+        }
     }
 
     Keys.onPressed: (event) => {

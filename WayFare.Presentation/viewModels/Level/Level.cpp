@@ -318,6 +318,9 @@ namespace WayFare::Presentation {
 			emit inventoryChanged();
 			emit pickupsChanged();
 		}
+		for (size_t i = 0; i < collected.size(); i++) {
+			emit itemCollected(levelItemKey(collected[i]));
+		}
 
 		int health = _player.health;
 		double air = _drowning.air;

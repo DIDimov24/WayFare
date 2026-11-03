@@ -1,4 +1,5 @@
 import QtQuick
+import QtMultimedia
 import QtQuick3D
 import QtQuick.Timeline
 import wayfare.presentation
@@ -17,6 +18,20 @@ Item {
     property real time: 0
 
     focus: true
+
+    onStartedChanged: {
+        if (root.started) {
+            music.play()
+        }
+    }
+
+    MediaPlayer {
+        id: music
+        source: Assets.url + "audio/temple_outro.ogg"
+        audioOutput: AudioOutput {
+            volume: Settings.musicVolume / 100 * Math.min(1, (root.length - root.time) / 1200)
+        }
+    }
 
     function finish() {
         if (root.finished) {

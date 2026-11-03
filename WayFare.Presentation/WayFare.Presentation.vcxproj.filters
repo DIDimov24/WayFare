@@ -43,6 +43,9 @@
     <Filter Include="assets">
       <UniqueIdentifier>{05afdb01-a8c3-4f2e-859b-c69c23660636}</UniqueIdentifier>
     </Filter>
+    <Filter Include="assets\audio">
+      <UniqueIdentifier>{7c3e9a52-4b1d-4f6e-a8d2-91e5c0b3f7a4}</UniqueIdentifier>
+    </Filter>
     <Filter Include="assets\icons">
       <UniqueIdentifier>{d03e1da9-761b-4d18-b4c3-3707999a8dd3}</UniqueIdentifier>
     </Filter>
@@ -351,6 +354,12 @@
     <None Include="qml\views\SettingsPanel.qml">
       <Filter>qml\views</Filter>
     </None>
+    <None Include="qml\views\SettingsSlider.qml">
+      <Filter>qml\views</Filter>
+    </None>
+    <None Include="qml\views\Sounds.qml">
+      <Filter>qml\views</Filter>
+    </None>
     <None Include="qml\views\TempleExitCutscene.qml">
       <Filter>qml\views</Filter>
     </None>
@@ -632,6 +641,72 @@
     </None>
     <None Include="assets\models\stump_old\meshes\mesh_stump_old_mesh.mesh">
       <Filter>assets\models\stump_old\meshes</Filter>
+    </None>
+    <None Include="assets\audio\54427377-sword-slash-476148.wav">
+      <Filter>assets\audio</Filter>
+    </None>
+    <None Include="assets\audio\click.wav">
+      <Filter>assets\audio</Filter>
+    </None>
+    <None Include="assets\audio\daviddumaisaudio-sword-slash-with-metallic-impact-185435.wav">
+      <Filter>assets\audio</Filter>
+    </None>
+    <None Include="assets\audio\dragon-studio-gunshot-511311.wav">
+      <Filter>assets\audio</Filter>
+    </None>
+    <None Include="assets\audio\dragon-studio-sword-clashhit-393837.wav">
+      <Filter>assets\audio</Filter>
+    </None>
+    <None Include="assets\audio\dragon-studio-violent-sword-slice-2-393841.wav">
+      <Filter>assets\audio</Filter>
+    </None>
+    <None Include="assets\audio\dragon-studio-violent-sword-slice-393848.wav">
+      <Filter>assets\audio</Filter>
+    </None>
+    <None Include="assets\audio\equip.wav">
+      <Filter>assets\audio</Filter>
+    </None>
+    <None Include="assets\audio\freesound_community-bottle-break-1-89987.wav">
+      <Filter>assets\audio</Filter>
+    </None>
+    <None Include="assets\audio\freesound_community-ladder-82581.wav">
+      <Filter>assets\audio</Filter>
+    </None>
+    <None Include="assets\audio\freesound_community-pistol-cock-6014.wav">
+      <Filter>assets\audio</Filter>
+    </None>
+    <None Include="assets\audio\gasp.wav">
+      <Filter>assets\audio</Filter>
+    </None>
+    <None Include="assets\audio\hover.wav">
+      <Filter>assets\audio</Filter>
+    </None>
+    <None Include="assets\audio\intro_music.ogg">
+      <Filter>assets\audio</Filter>
+    </None>
+    <None Include="assets\audio\melbeebelbee-gun-full-reload-384507.wav">
+      <Filter>assets\audio</Filter>
+    </None>
+    <None Include="assets\audio\menu_music.ogg">
+      <Filter>assets\audio</Filter>
+    </None>
+    <None Include="assets\audio\temple_ambience.ogg">
+      <Filter>assets\audio</Filter>
+    </None>
+    <None Include="assets\audio\temple_outro.ogg">
+      <Filter>assets\audio</Filter>
+    </None>
+    <None Include="assets\audio\tinnitus.wav">
+      <Filter>assets\audio</Filter>
+    </None>
+    <None Include="assets\audio\universfield-pistol-shot-278821.wav">
+      <Filter>assets\audio</Filter>
+    </None>
+    <None Include="assets\audio\universfield-sword-blade-slicing-flesh-352708.wav">
+      <Filter>assets\audio</Filter>
+    </None>
+    <None Include="assets\audio\yodguard-potion-drink-3-540167.wav">
+      <Filter>assets\audio</Filter>
     </None>
     <None Include="assets\icons\air.png">
       <Filter>assets\icons</Filter>

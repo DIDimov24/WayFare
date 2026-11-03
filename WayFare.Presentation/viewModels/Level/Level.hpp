@@ -78,6 +78,7 @@ namespace WayFare::Presentation {
 		void hudChanged();
 		void inventoryChanged();
 		void pickupsChanged();
+		void itemCollected(QString item);
 		void exitLocked(QString message);
 		void deadChanged();
 

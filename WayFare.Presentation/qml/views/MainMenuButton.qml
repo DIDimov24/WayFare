@@ -1,4 +1,5 @@
 import QtQuick
+import wayfare.presentation
 
 Item {
     id: root
@@ -27,6 +28,14 @@ Item {
         anchors.fill: parent
         hoverEnabled: true
         cursorShape: root.enabled ? Qt.PointingHandCursor : Qt.ArrowCursor
-        onClicked: root.clicked()
+        onContainsMouseChanged: {
+            if (mouseArea.containsMouse && root.enabled) {
+                Sounds.hover.play()
+            }
+        }
+        onClicked: {
+            Sounds.click.play()
+            root.clicked()
+        }
     }
 }
