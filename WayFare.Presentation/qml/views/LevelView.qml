@@ -1,6 +1,7 @@
 pragma ComponentBehavior: Bound
 
 import QtQuick
+import QtMultimedia
 import QtQuick3D
 import QtQuick.Effects
 import wayfare.presentation
@@ -31,11 +32,41 @@ Item {
     }
 
     onShakingChanged: {
-        if (!root.shaking) {
-            pulseAnimation.stop()
-            root.hurtTilt = 0
-            root.pulse = 0
+        if (root.shaking) {
+            tinnitus.volume = 0
+            tinnitus.play()
+            tinnitusRise.restart()
+            return
         }
+        tinnitusRise.stop()
+        tinnitus.stop()
+        pulseAnimation.stop()
+        root.hurtTilt = 0
+        root.pulse = 0
+    }
+
+    MediaPlayer {
+        id: ambience
+        source: Assets.url + "audio/temple_ambience.ogg"
+        loops: MediaPlayer.Infinite
+        audioOutput: AudioOutput {}
+    }
+
+    SoundEffect {
+        id: tinnitus
+        source: Assets.url + "audio/tinnitus.wav"
+        loops: SoundEffect.Infinite
+        volume: 0
+    }
+
+    NumberAnimation {
+        id: tinnitusRise
+        target: tinnitus
+        property: "volume"
+        from: 0
+        to: 1
+        duration: 9500
+        easing.type: Easing.InCubic
     }
 
     property int readyFrames: 0
@@ -154,6 +185,9 @@ Item {
             if (root.readyFrames === 3) {
                 root.forceActiveFocus()
                 root.captured = root.Window.active
+                if (root.temple) {
+                    ambience.play()
+                }
             }
         }
     }
@@ -170,6 +204,10 @@ Item {
 
     Connections {
         target: Level
+
+        function onItemCollected(item: string) {
+            Sounds.pickUp(item)
+        }
 
         function onDeadChanged() {
             if (Level.dead) {

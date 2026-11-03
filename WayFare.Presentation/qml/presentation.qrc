@@ -24,6 +24,7 @@
         <file>views/MainMenuView.qml</file>
         <file>views/Minimap.qml</file>
         <file>views/SettingsPanel.qml</file>
+        <file>views/Sounds.qml</file>
         <file>views/TempleExitCutscene.qml</file>
         <file>views/TempleScene.qml</file>
         <file>views/VillageScene.qml</file>

@@ -1,4 +1,5 @@
 import QtQuick
+import QtMultimedia
 import wayfare.presentation
 
 Item {
@@ -9,6 +10,27 @@ Item {
 
     focus: true
     Keys.onEscapePressed: root.panel = ""
+
+    onVisibleChanged: {
+        if (root.visible) {
+            menuMusic.play()
+        } else {
+            menuMusic.pause()
+        }
+    }
+
+    Component.onCompleted: {
+        if (root.visible) {
+            menuMusic.play()
+        }
+    }
+
+    MediaPlayer {
+        id: menuMusic
+        source: Assets.url + "audio/menu_music.ogg"
+        loops: MediaPlayer.Infinite
+        audioOutput: AudioOutput {}
+    }
 
     Connections {
         target: root.Window.window

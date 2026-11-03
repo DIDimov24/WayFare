@@ -48,3 +48,19 @@ All from [Poly Haven](https://polyhaven.com), CC0 1.0.
 | Sky | [Kloofendal Overcast (Pure Sky)](https://polyhaven.com/a/kloofendal_overcast_puresky) |
 
 Caustics on the temple floor: one frame of ["Caustic Textures"](https://opengameart.org/content/caustic-textures) by Calinou (OpenGameArt), CC0 1.0.
+
+## Audio
+
+Converted to OGG (music) and WAV (effects), and levelled to the same loudness (-22 LUFS; the Underwater Temple ambience -19 LUFS and the drowning tinnitus -26 LUFS). The tinnitus is a loop cut from the end of the original sound.
+
+| Used as | Asset | Author | License |
+|---|---|---|---|
+| Main menu music | ["snow city NL 0009PM 210206_0243.wav"](https://freesound.org/s/610365/) | klankbeeld (Freesound) | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
+| Underwater Temple ambience | ["Underwater Ambience.wav"](https://freesound.org/s/482167/) | Tim_Verberne (Freesound) | CC0 1.0 |
+| Underwater Temple exit cutscene | ["C0005i_c.aif"](https://freesound.org/s/61672/) | thanvannispen (Freesound) | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
+| Button click | ["Button Click / Selection.wav"](https://freesound.org/s/623175/) | aphom000 (Freesound) | CC0 1.0 |
+| Button hover | ["fidget toy"](https://freesound.org/s/857285/) | dyingSatyr (Freesound) | CC0 1.0 |
+| Drowning tinnitus | ["High pitched tone [quiet to loud]"](https://freesound.org/s/207744/), via [Pixabay](https://pixabay.com/sound-effects/film-special-effects-high-pitched-tone-quiet-to-loud-14549/) | SoundsExciting (Freesound) | CC0 1.0 |
+| Intro cutscene music | "Opening Chakras with Water (Intro/Outro FX)" (Pixabay, 395549) | meditativetiger | [Pixabay Content License](https://pixabay.com/service/license-summary/) |
+| Diving gear gasp | "Gasp SFX" (Pixabay, 351568) | DRAGON-STUDIO | [Pixabay Content License](https://pixabay.com/service/license-summary/) |
+| Item pickup | "Item Equip" (Pixabay, 6904) | freesound_community | [Pixabay Content License](https://pixabay.com/service/license-summary/) |
