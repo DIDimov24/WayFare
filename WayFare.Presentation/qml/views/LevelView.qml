@@ -22,6 +22,7 @@ Item {
     property real blur: root.strength > 0 ? 0.1 + 0.7 * root.strength : 0
     property real hurtTilt: 0
     property real pulse: 0
+    property real tinnitusLevel: 0
 
     Behavior on strength {
         NumberAnimation { duration: 800 }
@@ -33,7 +34,7 @@ Item {
 
     onShakingChanged: {
         if (root.shaking) {
-            tinnitus.volume = 0
+            root.tinnitusLevel = 0
             tinnitus.play()
             tinnitusRise.restart()
             return
@@ -49,20 +50,22 @@ Item {
         id: ambience
         source: Assets.url + "audio/temple_ambience.ogg"
         loops: MediaPlayer.Infinite
-        audioOutput: AudioOutput {}
+        audioOutput: AudioOutput {
+            volume: Settings.musicVolume / 100
+        }
     }
 
     SoundEffect {
         id: tinnitus
         source: Assets.url + "audio/tinnitus.wav"
         loops: SoundEffect.Infinite
-        volume: 0
+        volume: root.tinnitusLevel * Settings.sfxVolume / 100
     }
 
     NumberAnimation {
         id: tinnitusRise
-        target: tinnitus
-        property: "volume"
+        target: root
+        property: "tinnitusLevel"
         from: 0
         to: 1
         duration: 9500

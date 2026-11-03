@@ -29,7 +29,9 @@ Item {
         id: menuMusic
         source: Assets.url + "audio/menu_music.ogg"
         loops: MediaPlayer.Infinite
-        audioOutput: AudioOutput {}
+        audioOutput: AudioOutput {
+            volume: Settings.musicVolume / 100
+        }
     }
 
     Connections {

@@ -354,6 +354,9 @@
     <None Include="qml\views\SettingsPanel.qml">
       <Filter>qml\views</Filter>
     </None>
+    <None Include="qml\views\SettingsSlider.qml">
+      <Filter>qml\views</Filter>
+    </None>
     <None Include="qml\views\Sounds.qml">
       <Filter>qml\views</Filter>
     </None>

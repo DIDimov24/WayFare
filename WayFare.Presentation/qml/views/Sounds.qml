@@ -9,18 +9,22 @@ QtObject {
 
     readonly property SoundEffect click: SoundEffect {
         source: Assets.url + "audio/click.wav"
+        volume: Settings.sfxVolume / 100
     }
 
     readonly property SoundEffect hover: SoundEffect {
         source: Assets.url + "audio/hover.wav"
+        volume: Settings.sfxVolume / 100
     }
 
     readonly property SoundEffect equip: SoundEffect {
         source: Assets.url + "audio/equip.wav"
+        volume: Settings.sfxVolume / 100
     }
 
     readonly property SoundEffect gasp: SoundEffect {
         source: Assets.url + "audio/gasp.wav"
+        volume: Settings.sfxVolume / 100
     }
 
     readonly property Timer gaspDelay: Timer {

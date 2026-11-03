@@ -28,7 +28,7 @@ Item {
         id: music
         source: Assets.url + "audio/intro_music.ogg"
         audioOutput: AudioOutput {
-            volume: Math.min(1, (root.length - root.time) / 1200)
+            volume: Settings.musicVolume / 100 * Math.min(1, (root.length - root.time) / 1200)
         }
     }
 
