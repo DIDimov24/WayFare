@@ -100,6 +100,17 @@
     <ClInclude Include="models\Exit.hpp" />
     <ClInclude Include="Level\TempleExit.hpp" />
     <ClCompile Include="Level\TempleExit.cpp" />
+    <ClInclude Include="models\Enemy.hpp" />
+    <ClInclude Include="models\Combat.hpp" />
+    <ClInclude Include="models\Trap.hpp" />
+    <ClInclude Include="Enemies\EnemySpawner.hpp" />
+    <ClCompile Include="Enemies\EnemySpawner.cpp" />
+    <ClInclude Include="Enemies\EnemyAI.hpp" />
+    <ClCompile Include="Enemies\EnemyAI.cpp" />
+    <ClInclude Include="Combat\Weapons.hpp" />
+    <ClCompile Include="Combat\Weapons.cpp" />
+    <ClInclude Include="Hazards\SpikeTraps.hpp" />
+    <ClCompile Include="Hazards\SpikeTraps.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WayFare.DataAccess\WayFare.DataAccess.vcxproj">
