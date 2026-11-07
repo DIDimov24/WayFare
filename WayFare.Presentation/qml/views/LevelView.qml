@@ -15,6 +15,11 @@ Item {
     readonly property real nicheDepth: 0.8
     readonly property int lastStage: 6
     readonly property bool temple: Level.theme === "temple"
+    readonly property bool dungeon: Level.theme === "dungeon"
+    readonly property bool ladderExit: root.temple || root.dungeon
+    readonly property var enemies: Level.enemies
+    readonly property var trapHeights: Level.trapHeights
+    property int loadedEnemies: 0
     property int stage: 0
     property real spin: 0
     property real strength: Level.air > 0.4 ? 0 : (Level.air > 0 ? 0.6 * (0.4 - Level.air) / 0.4 : 0.6 + 0.4 * (1 - Level.health / Level.maxHealth))
@@ -112,7 +117,7 @@ Item {
         for (let i = 0; i < walls.length; i++) {
             const position = Qt.vector3d((walls[i].x + 0.5) * root.tileSize, root.wallHeight / 2, (walls[i].y + 0.5) * root.tileSize)
             const scale = Qt.vector3d(root.tileSize / 100, root.wallHeight / 100, root.tileSize / 100)
-            if (root.temple && walls[i].x === nicheX && walls[i].y === nicheY) {
+            if (root.ladderExit && walls[i].x === nicheX && walls[i].y === nicheY) {
                 if (yaw === -90) {
                     position.x = position.x + root.nicheDepth / 2
                     scale.x = (root.tileSize - root.nicheDepth) / 100
@@ -166,6 +171,15 @@ Item {
         }
         if (!event.isAutoRepeat) {
             root.setKey(event.key, true)
+            if (event.key === Qt.Key_1) {
+                Level.selectWeapon("sword")
+            }
+            if (event.key === Qt.Key_2) {
+                Level.selectWeapon("pistol")
+            }
+            if (event.key === Qt.Key_Q) {
+                Level.drinkPotion()
+            }
         }
     }
 
@@ -182,6 +196,9 @@ Item {
         function onAfterAnimating() {
             if (root.stage < root.lastStage) {
                 root.stage++
+                return
+            }
+            if (root.loadedEnemies < Level.enemyCount) {
                 return
             }
             root.readyFrames++
@@ -210,6 +227,24 @@ Item {
 
         function onItemCollected(item: string) {
             Sounds.pickUp(item)
+        }
+
+        function onPlayerDamaged() {
+            pulseAnimation.restart()
+        }
+
+        function onWeaponUsed(weapon: string, hit: bool) {
+            Sounds.attack(weapon, hit)
+        }
+
+        function onWeaponChanged() {
+            if (root.readyFrames >= 3) {
+                Sounds.equipWeapon(Level.weapon)
+            }
+        }
+
+        function onPotionUsed() {
+            Sounds.potion.play()
         }
 
         function onDeadChanged() {
@@ -264,7 +299,15 @@ Item {
 
     FrameAnimation {
         running: root.readyFrames >= 3 && !Level.dead
-        onTriggered: Level.move((root.forwardKey ? 1 : 0) - (root.backKey ? 1 : 0), (root.rightKey ? 1 : 0) - (root.leftKey ? 1 : 0), frameTime)
+        onTriggered: {
+            if (root.captured) {
+                const delta = Cursor.takeDelta(root)
+                if (delta.x !== 0 || delta.y !== 0) {
+                    Level.look(delta.x, delta.y)
+                }
+            }
+            Level.move((root.forwardKey ? 1 : 0) - (root.backKey ? 1 : 0), (root.rightKey ? 1 : 0) - (root.leftKey ? 1 : 0), frameTime)
+        }
     }
 
     Item {
@@ -288,8 +331,8 @@ Item {
                     color: root.temple ? "#0b3a44" : "#05070b"
                     density: root.temple ? 0.95 : 1
                     depthEnabled: true
-                    depthNear: root.temple ? 2.5 : 4
-                    depthFar: root.temple ? 22 : 24
+                    depthNear: root.temple ? 2.5 : (root.dungeon ? 2 : 4)
+                    depthFar: root.temple ? 22 : (root.dungeon ? 17 : 24)
                     depthCurve: root.temple ? 0.8 : 1
                 }
             }
@@ -305,8 +348,12 @@ Item {
 
                 PointLight {
                     color: root.temple ? "#7fd0dc" : "#ffe6c4"
-                    brightness: root.temple ? 2.5 : 6
-                    quadraticFade: root.temple ? 300 : 1.2
+                    brightness: root.temple ? 2.5 : (root.dungeon ? 0.75 : 6)
+                    quadraticFade: root.temple ? 300 : (root.dungeon ? 3000 : 1.2)
+                }
+
+                FirstPersonWeapon {
+                    visible: root.stage >= 3 && Level.armed
                 }
             }
 
@@ -314,13 +361,62 @@ Item {
                 visible: !root.temple
                 eulerRotation: Qt.vector3d(-60, 30, 0)
                 color: "#7c8aa8"
-                brightness: 0.3
+                brightness: root.dungeon ? 0.04 : 0.3
+                ambientColor: root.dungeon ? "#1c1814" : "#000000"
             }
 
             TempleScene {
                 visible: root.temple
                 tileSize: root.tileSize
                 stage: root.stage
+            }
+
+            Loader3D {
+                active: root.dungeon
+                sourceComponent: DungeonScene {
+                    tileSize: root.tileSize
+                    stage: root.stage
+                }
+            }
+
+            Node {
+                visible: root.stage >= 5
+
+                Repeater3D {
+                    model: Level.traps
+
+                    delegate: SpikeTrapModel {
+                        required property var modelData
+                        required property int index
+
+                        position: Qt.vector3d((modelData.x + 0.5) * root.tileSize, 0, (modelData.y + 0.5) * root.tileSize)
+                        tileSize: root.tileSize
+                        rise: root.trapHeights[index]
+                    }
+                }
+
+                Repeater3D {
+                    model: Level.enemyCount
+
+                    delegate: ZombieModel {
+                        id: zombie
+
+                        required property int index
+                        readonly property var enemy: root.enemies[zombie.index]
+
+                        position: Qt.vector3d(zombie.enemy.x * root.tileSize, 0, zombie.enemy.y * root.tileSize)
+                        eulerRotation.y: 90 - zombie.enemy.facing * 180 / Math.PI
+                        mode: zombie.enemy.state
+                        hurt: zombie.enemy.hurt
+                        phase: zombie.index * 870
+                        animated: zombie.enemy.seen
+                        onReadyChanged: {
+                            if (zombie.ready) {
+                                root.loadedEnemies++
+                            }
+                        }
+                    }
+                }
             }
 
             Node {
@@ -339,7 +435,7 @@ Item {
                 }
 
                 Node {
-                    visible: root.temple
+                    visible: root.ladderExit
                     position: Qt.vector3d((Level.exitX + 0.5) * root.tileSize, 0, (Level.exitY + 0.5) * root.tileSize)
                     eulerRotation.y: root.exitYaw()
 
@@ -363,14 +459,14 @@ Item {
 
                     PointLight {
                         position: Qt.vector3d(0, root.wallHeight - 0.4, -root.tileSize / 2)
-                        color: Level.exitUnlocked ? "#9ff4ff" : "#e09040"
+                        color: root.dungeon ? "#ffb060" : (Level.exitUnlocked ? "#9ff4ff" : "#e09040")
                         brightness: Level.exitUnlocked ? 1 : 0.5
                         quadraticFade: 6000
                     }
                 }
 
                 Node {
-                    visible: !root.temple
+                    visible: !root.ladderExit
                     position: Qt.vector3d((Level.exitX + 0.5) * root.tileSize, 0, (Level.exitY + 0.5) * root.tileSize)
 
                     Model {
@@ -420,6 +516,7 @@ Item {
                         scaleV: Level.size
                     }
                     roughnessChannel: Material.R
+                    specularAmount: root.dungeon ? 0 : 0.5
                 }
             }
 
@@ -447,6 +544,7 @@ Item {
                         scaleV: root.wallHeight / root.tileSize
                     }
                     roughnessChannel: Material.R
+                    specularAmount: root.dungeon ? 0 : 0.5
                 }
 
                 TempleWallMaterial {
@@ -489,23 +587,15 @@ Item {
         cursorShape: root.captured ? Qt.BlankCursor : Qt.ArrowCursor
 
         onPressed: {
-            if (root.readyFrames >= 3 && !Level.dead) {
-                root.forceActiveFocus()
-                root.captured = true
-            }
-        }
-
-        onPositionChanged: (mouse) => {
-            if (!root.captured) {
+            if (root.readyFrames < 3 || Level.dead) {
                 return
             }
-            const deltaX = mouse.x - width / 2
-            const deltaY = mouse.y - height / 2
-            if (Math.abs(deltaX) < 1 && Math.abs(deltaY) < 1) {
+            if (root.captured) {
+                Level.attack()
                 return
             }
-            Level.look(deltaX, deltaY)
-            Cursor.center(root)
+            root.forceActiveFocus()
+            root.captured = true
         }
     }
 

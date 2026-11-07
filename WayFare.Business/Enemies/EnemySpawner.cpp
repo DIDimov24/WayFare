@@ -17,7 +17,7 @@ namespace WayFare::Business {
 			health = nightmareCreatureMaxHealth;
 		}
 
-		Enemy enemy = { type, x, y, 0.0, health, EnemyState::Idle, 0.0, 0.0, 0.0 };
+		Enemy enemy = { type, x, y, 0.0, health, EnemyState::Idle, 0.0, 0.0, 0.0, 0.0, false };
 		return enemy;
 	}
 

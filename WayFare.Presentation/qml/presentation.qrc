@@ -3,6 +3,9 @@
         <file>qmldir</file>
         <file>models/HeroModel.qml</file>
         <file>models/CoralModel.qml</file>
+        <file>models/SpikeTrapModel.qml</file>
+        <file>models/TorchModel.qml</file>
+        <file>models/ZombieModel.qml</file>
         <file>models/FenceModel.qml</file>
         <file>models/GrassModel.qml</file>
         <file>models/ItemModel.qml</file>
@@ -15,6 +18,9 @@
         <file>models/TempleWallMaterial.qml</file>
         <file>shaders/TempleWall.frag</file>
         <file>views/DeathScreen.qml</file>
+        <file>views/DungeonExitCutscene.qml</file>
+        <file>views/DungeonScene.qml</file>
+        <file>views/FirstPersonWeapon.qml</file>
         <file>views/HowToPlayPanel.qml</file>
         <file>views/Hud.qml</file>
         <file>views/IntroCutscene.qml</file>

@@ -40,6 +40,12 @@ namespace WayFare::Business {
 			return true;
 		}
 
+		if (enemy.state == EnemyState::Attacking || enemy.state == EnemyState::Alerted) {
+			enemy.state = EnemyState::Chasing;
+			enemy.attackTimer = 0.0;
+			enemy.alertTime = 0.0;
+		}
+
 		return false;
 	}
 

@@ -16,7 +16,7 @@ namespace WayFare::Business {
 	const double pistolRange = 15.0;
 	const double pistolHitRadius = 0.35;
 	const int pistolDamage = 1;
-	const double enemyHurtDuration = 0.3;
+	const double enemyHurtDuration = 0.35;
 
 	Combat createCombat();
 

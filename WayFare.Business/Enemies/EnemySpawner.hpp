@@ -7,10 +7,10 @@
 #include "WayFare.Business/models/Maze.hpp"
 
 namespace WayFare::Business {
-	const int dungeonZombieCount = 8;
+	const int dungeonZombieCount = 14;
 	const int villageCreatureCount = 16;
 	const int villageArenaSize = 15;
-	const int enemyMinStartDistance = 6;
+	const int enemyMinStartDistance = 3;
 	const int zombieMaxHealth = 3;
 	const int nightmareCreatureMaxHealth = 4;
 

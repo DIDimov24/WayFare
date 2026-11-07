@@ -8,6 +8,7 @@
 
 namespace WayFare::Business {
 	const double enemyRadius = 0.3;
+	const double zombieAlertDuration = 2.2;
 	const double enemyAttackRange = 0.8;
 
 	EnemyUpdateResponse updateEnemies(std::vector<Enemy>& enemies, Player& player, const Maze& maze, double deltaTime);
