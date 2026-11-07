@@ -1,5 +1,8 @@
 module wayfare.presentation
 CoralModel 1.0 models/CoralModel.qml
+ZombieModel 1.0 models/ZombieModel.qml
+SpikeTrapModel 1.0 models/SpikeTrapModel.qml
+TorchModel 1.0 models/TorchModel.qml
 FenceModel 1.0 models/FenceModel.qml
 GrassModel 1.0 models/GrassModel.qml
 HeroModel 1.0 models/HeroModel.qml
@@ -12,6 +15,9 @@ SeaweedModel 1.0 models/SeaweedModel.qml
 StumpModel 1.0 models/StumpModel.qml
 TempleWallMaterial 1.0 models/TempleWallMaterial.qml
 DeathScreen 1.0 views/DeathScreen.qml
+DungeonExitCutscene 1.0 views/DungeonExitCutscene.qml
+DungeonScene 1.0 views/DungeonScene.qml
+FirstPersonWeapon 1.0 views/FirstPersonWeapon.qml
 HowToPlayPanel 1.0 views/HowToPlayPanel.qml
 Hud 1.0 views/Hud.qml
 IntroCutscene 1.0 views/IntroCutscene.qml

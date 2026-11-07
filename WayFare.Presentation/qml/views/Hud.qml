@@ -23,6 +23,17 @@ Item {
         }
     }
 
+    Rectangle {
+        anchors.centerIn: parent
+        visible: Level.armed
+        width: 6
+        height: 6
+        radius: 3
+        color: "#d0ffffff"
+        border.color: "#a0000000"
+        border.width: 1
+    }
+
     Text {
         id: messageText
 
@@ -108,9 +119,11 @@ Item {
 
                     width: 52
                     height: 52
+                    readonly property bool selected: Level.armed && Level.weapon === slot.modelData
+
                     color: "#cc0a0806"
-                    border.color: "#a87a35"
-                    border.width: 2
+                    border.color: slot.selected ? "#f3d48e" : "#a87a35"
+                    border.width: slot.selected ? 3 : 2
 
                     Image {
                         anchors.centerIn: parent

@@ -7,7 +7,7 @@ WayFare uses only free third-party assets.
 | Used as | Asset | Author | License |
 |---|---|---|---|
 | Hero | Remy, with Mixamo animations | [Mixamo](https://www.mixamo.com) (Adobe) | [Mixamo terms](https://helpx.adobe.com/creative-cloud/faq/mixamo-faq.html) |
-| Zombies | ["Zombie"](https://sketchfab.com/3d-models/zombie-25c230a1e2f2462fa3de298fc8bca30a) | [DJMaesen](https://sketchfab.com/bumstrum) | [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/) |
+| Zombies | ["Zombie Fantasy Animated"](https://sketchfab.com/3d-models/zombie-fantasy-animated-4e966d5df4e54260b69487919dbe7660) | [Larnox Assets](https://sketchfab.com/larnox) | [CC BY-NC 4.0](http://creativecommons.org/licenses/by-nc/4.0/) |
 | Nightmare Creatures | ["Nightmare Creature 1#"](https://sketchfab.com/3d-models/nightmare-creature-1-9fb509d207d744babeb5d87a486f7de1) | [Idk](https://sketchfab.com/Rodolfoisreal1423) | [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/) |
 | Boss | ["Troll Cave"](https://sketchfab.com/3d-models/troll-cave-16eabe8c1e244bc99d87c181a907c58f) | [Vasian-Digital3D](https://sketchfab.com/Vasian-Digital3D) | [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/) |
 
@@ -27,7 +27,8 @@ WayFare uses only free third-party assets.
 | Pines, rocks, fences, grass, logs, stump (menu scene) | [Nature Kit 2.1](https://kenney.nl/assets/nature-kit) | [Kenney](https://www.kenney.nl) | CC0 1.0 |
 | Seaweed (Underwater Temple) | ["Seaweed"](https://poly.pizza/m/461xlaa6SZW) | Laney XR Labs | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) |
 | Orange coral (Underwater Temple) | ["Orange Coral"](https://poly.pizza/m/3HEc6LvqCJd) | Device Lab | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) |
-| Exit ladder (Underwater Temple) | [Platformer Kit](https://kenney.nl/assets/platformer-kit) | [Kenney](https://www.kenney.nl) | CC0 1.0 |
+| Spike traps and wall torches (Dungeon) | [KayKit Dungeon Remastered 1.0](https://github.com/KayKit-Game-Assets/KayKit-Dungeon-Remastered-1.0) | [Kay Lousberg](https://www.kaylousberg.com) | CC0 1.0 |
+| Exit ladder (Underwater Temple, Dungeon) | [Platformer Kit](https://kenney.nl/assets/platformer-kit) | [Kenney](https://www.kenney.nl) | CC0 1.0 |
 | Fan coral (Underwater Temple) | ["underwater_enviro_coral"](https://poly.pizza/m/0CrDBiCnI5e) | God Appeasers | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) |
 
 ## HUD and minimap icons
@@ -64,3 +65,9 @@ Converted to OGG (music) and WAV (effects), and levelled to the same loudness (-
 | Intro cutscene music | "Opening Chakras with Water (Intro/Outro FX)" (Pixabay, 395549) | meditativetiger | [Pixabay Content License](https://pixabay.com/service/license-summary/) |
 | Diving gear gasp | "Gasp SFX" (Pixabay, 351568) | DRAGON-STUDIO | [Pixabay Content License](https://pixabay.com/service/license-summary/) |
 | Item pickup | "Item Equip" (Pixabay, 6904) | freesound_community | [Pixabay Content License](https://pixabay.com/service/license-summary/) |
+| Sword swing | "Violent Sword Slice" (Pixabay, 393848) | DRAGON-STUDIO | [Pixabay Content License](https://pixabay.com/service/license-summary/) |
+| Sword hit | "Sword Blade Slicing Flesh" (Pixabay, 352708) | Universfield | [Pixabay Content License](https://pixabay.com/service/license-summary/) |
+| Pistol shot | "Gunshot" (Pixabay, 511311) | DRAGON-STUDIO | [Pixabay Content License](https://pixabay.com/service/license-summary/) |
+| Pistol equip | "Pistol Cock" (Pixabay, 6014) | freesound_community | [Pixabay Content License](https://pixabay.com/service/license-summary/) |
+| Ladder climb (Dungeon exit cutscene) | "Ladder" (Pixabay, 82581) | freesound_community | [Pixabay Content License](https://pixabay.com/service/license-summary/) |
+| Potion | "Potion Drink 3" (Pixabay, 540167) | yodguard | [Pixabay Content License](https://pixabay.com/service/license-summary/) |

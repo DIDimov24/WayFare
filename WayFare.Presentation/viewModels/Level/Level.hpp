@@ -8,10 +8,13 @@
 #include <QVariantList>
 #include <QtQml/qqmlregistration.h>
 
+#include "WayFare.Business/models/Combat.hpp"
 #include "WayFare.Business/models/Drowning.hpp"
+#include "WayFare.Business/models/Enemy.hpp"
 #include "WayFare.Business/models/Inventory.hpp"
 #include "WayFare.Business/models/Maze.hpp"
 #include "WayFare.Business/models/Player.hpp"
+#include "WayFare.Business/models/Trap.hpp"
 #include "WayFare.Presentation/viewModels/Game/Game.hpp"
 #include "WayFare.Presentation/viewModels/Settings/Settings.hpp"
 
@@ -38,6 +41,12 @@ namespace WayFare::Presentation {
 		Q_PROPERTY(bool showAir READ showAir NOTIFY inventoryChanged)
 		Q_PROPERTY(QStringList items READ items NOTIFY inventoryChanged)
 		Q_PROPERTY(int potionCount READ potionCount NOTIFY inventoryChanged)
+		Q_PROPERTY(bool armed READ armed NOTIFY inventoryChanged)
+		Q_PROPERTY(QString weapon READ weapon NOTIFY weaponChanged)
+		Q_PROPERTY(int enemyCount READ enemyCount NOTIFY mazeChanged)
+		Q_PROPERTY(QVariantList enemies READ enemies NOTIFY enemiesChanged)
+		Q_PROPERTY(QVariantList traps READ traps NOTIFY mazeChanged)
+		Q_PROPERTY(QVariantList trapHeights READ trapHeights NOTIFY trapsChanged)
 
 	public:
 		explicit Level(Settings& settings, Game& game, QObject* parent = nullptr);
@@ -62,12 +71,21 @@ namespace WayFare::Presentation {
 		bool showAir() const;
 		QStringList items() const;
 		int potionCount() const;
+		bool armed() const;
+		QString weapon() const;
+		int enemyCount() const;
+		QVariantList enemies() const;
+		QVariantList traps() const;
+		QVariantList trapHeights() const;
 
 		void load(int number, uint32_t seed);
 
 	public slots:
 		void move(double forward, double strafe, double deltaTime);
 		void look(double mouseDeltaX, double mouseDeltaY);
+		void attack();
+		void selectWeapon(const QString& weapon);
+		void drinkPotion();
 		void respawn();
 		void nextLevel();
 		void quitToMenu();
@@ -81,6 +99,12 @@ namespace WayFare::Presentation {
 		void itemCollected(QString item);
 		void exitLocked(QString message);
 		void deadChanged();
+		void weaponChanged();
+		void enemiesChanged();
+		void trapsChanged();
+		void playerDamaged();
+		void weaponUsed(QString weapon, bool hit);
+		void potionUsed();
 
 	private:
 		Settings& _settings;
@@ -90,7 +114,11 @@ namespace WayFare::Presentation {
 		Business::Inventory _inventory;
 		Business::Inventory _startInventory;
 		Business::Drowning _drowning;
+		Business::Combat _combat;
+		Business::ItemType _weapon;
 		std::vector<Business::Pickup> _pickups;
+		std::vector<Business::Enemy> _enemies;
+		std::vector<Business::SpikeTrap> _traps;
 		QString _theme;
 		QVariantList _walls;
 		QVariantList _decor;

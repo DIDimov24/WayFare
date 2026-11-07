@@ -10,6 +10,7 @@ namespace WayFare::Business {
 
 	enum class EnemyState {
 		Idle,
+		Alerted,
 		Chasing,
 		Attacking,
 		Dead
@@ -25,6 +26,8 @@ namespace WayFare::Business {
 		double attackTimer;
 		double cooldown;
 		double hurtTime;
+		double alertTime;
+		bool alerted;
 	};
 
 	struct EnemyUpdateResponse {

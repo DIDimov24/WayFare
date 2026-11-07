@@ -203,6 +203,18 @@ namespace WayFare::Business {
 				continue;
 			}
 
+			if (enemy.state == EnemyState::Alerted) {
+				enemy.facing = std::atan2(toPlayerY, toPlayerX);
+				enemy.alertTime = enemy.alertTime - deltaTime;
+
+				if (enemy.alertTime <= 0.0) {
+					enemy.alertTime = 0.0;
+					enemy.state = EnemyState::Chasing;
+				}
+
+				continue;
+			}
+
 			int tileX = int(enemy.x);
 			int tileY = int(enemy.y);
 			int pathDistance = distances[tileY][tileX];
@@ -212,7 +224,19 @@ namespace WayFare::Business {
 				continue;
 			}
 
+			if (enemy.type == EnemyType::Zombie && !enemy.alerted) {
+				enemy.alerted = true;
+				enemy.alertTime = zombieAlertDuration;
+				enemy.state = EnemyState::Alerted;
+				enemy.facing = std::atan2(toPlayerY, toPlayerX);
+				continue;
+			}
+
 			enemy.state = EnemyState::Chasing;
+
+			if (enemy.hurtTime > 0.0) {
+				continue;
+			}
 
 			if (playerDistance <= enemyAttackRange) {
 				enemy.facing = std::atan2(toPlayerY, toPlayerX);

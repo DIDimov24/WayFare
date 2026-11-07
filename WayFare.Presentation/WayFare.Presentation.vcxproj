@@ -119,6 +119,9 @@
     <None Include="qml\qmldir" />
     <None Include="qml\models\HeroModel.qml" />
     <None Include="qml\models\CoralModel.qml" />
+    <None Include="qml\models\SpikeTrapModel.qml" />
+    <None Include="qml\models\TorchModel.qml" />
+    <None Include="qml\models\ZombieModel.qml" />
     <None Include="qml\models\FenceModel.qml" />
     <None Include="qml\models\GrassModel.qml" />
     <None Include="qml\models\ItemModel.qml" />
@@ -131,6 +134,9 @@
     <None Include="qml\models\TempleWallMaterial.qml" />
     <None Include="qml\shaders\TempleWall.frag" />
     <None Include="qml\views\DeathScreen.qml" />
+    <None Include="qml\views\DungeonExitCutscene.qml" />
+    <None Include="qml\views\DungeonScene.qml" />
+    <None Include="qml\views\FirstPersonWeapon.qml" />
     <None Include="qml\views\HowToPlayPanel.qml" />
     <None Include="qml\views\Hud.qml" />
     <None Include="qml\views\IntroCutscene.qml" />
@@ -148,14 +154,14 @@
     <None Include="assets\audio\54427377-sword-slash-476148.wav" />
     <None Include="assets\audio\click.wav" />
     <None Include="assets\audio\daviddumaisaudio-sword-slash-with-metallic-impact-185435.wav" />
-    <None Include="assets\audio\dragon-studio-gunshot-511311.wav" />
+    <None Include="assets\audio\pistol_shot.wav" />
     <None Include="assets\audio\dragon-studio-sword-clashhit-393837.wav" />
     <None Include="assets\audio\dragon-studio-violent-sword-slice-2-393841.wav" />
-    <None Include="assets\audio\dragon-studio-violent-sword-slice-393848.wav" />
+    <None Include="assets\audio\sword_swing.wav" />
     <None Include="assets\audio\equip.wav" />
     <None Include="assets\audio\freesound_community-bottle-break-1-89987.wav" />
-    <None Include="assets\audio\freesound_community-ladder-82581.wav" />
-    <None Include="assets\audio\freesound_community-pistol-cock-6014.wav" />
+    <None Include="assets\audio\ladder.wav" />
+    <None Include="assets\audio\pistol_cock.wav" />
     <None Include="assets\audio\gasp.wav" />
     <None Include="assets\audio\hover.wav" />
     <None Include="assets\audio\intro_music.ogg" />
@@ -165,8 +171,8 @@
     <None Include="assets\audio\temple_outro.ogg" />
     <None Include="assets\audio\tinnitus.wav" />
     <None Include="assets\audio\universfield-pistol-shot-278821.wav" />
-    <None Include="assets\audio\universfield-sword-blade-slicing-flesh-352708.wav" />
-    <None Include="assets\audio\yodguard-potion-drink-3-540167.wav" />
+    <None Include="assets\audio\sword_hit.wav" />
+    <None Include="assets\audio\potion_drink.wav" />
     <None Include="assets\icons\air.png" />
     <None Include="assets\icons\diving_gear.png" />
     <None Include="assets\icons\exit.png" />
@@ -228,11 +234,11 @@
     <None Include="assets\models\troll_cave\meshes\node0002_SK_Troll_Cave_MI_Troll_Heads_Eye_Master_0_mesh.mesh" />
     <None Include="assets\models\troll_cave\meshes\node0003_SK_Troll_Cave_MI_Troll_Heads_Cave_0_mesh.mesh" />
     <None Include="assets\models\troll_cave\meshes\node0004_SK_Troll_Cave_MI_Troll_Heads_Teeth_0_mesh.mesh" />
-    <None Include="assets\models\zombie\Zombie.qml" />
-    <None Include="assets\models\zombie\maps\zombie1_diffuse.png" />
-    <None Include="assets\models\zombie\maps\zombie1_normal.png" />
-    <None Include="assets\models\zombie\maps\zombie1_specularGlossiness.png" />
-    <None Include="assets\models\zombie\meshes\mesh_zombie1_0_mesh.mesh" />
+    <None Include="assets\models\zombie_fantasy\ZombieFantasy.qml" />
+    <None Include="assets\models\zombie_fantasy\maps\zombieBody_baseColor.png" />
+    <None Include="assets\models\zombie_fantasy\maps\zombieBody_normal.png" />
+    <None Include="assets\models\zombie_fantasy\maps\zombieBody_metallicRoughness.png" />
+    <None Include="assets\models\zombie_fantasy\meshes\body_zombieBody_0_mesh.mesh" />
     <None Include="assets\models\fan_coral\FanCoral.qml" />
     <None Include="assets\models\fan_coral\meshes\mesh1533979519_mesh.mesh" />
     <None Include="assets\models\fence_planks\FencePlanks.qml" />
@@ -241,6 +247,13 @@
     <None Include="assets\models\fence_simple\meshes\fence_simple_mesh.mesh" />
     <None Include="assets\models\grass_large\GrassLarge.qml" />
     <None Include="assets\models\grass_large\meshes\mesh_grass_large_mesh.mesh" />
+    <None Include="assets\models\spike_trap\SpikeTrap.qml" />
+    <None Include="assets\models\spike_trap\maps\textureData.png" />
+    <None Include="assets\models\spike_trap\meshes\cube_14375_mesh.mesh" />
+    <None Include="assets\models\spike_trap\meshes\cube_14376_mesh.mesh" />
+    <None Include="assets\models\torch_mounted\TorchMounted.qml" />
+    <None Include="assets\models\torch_mounted\maps\textureData.png" />
+    <None Include="assets\models\torch_mounted\meshes\cylinder_022_mesh.mesh" />
     <None Include="assets\models\ladder_long\LadderLong.qml" />
     <None Include="assets\models\ladder_long\maps\colormap.png" />
     <None Include="assets\models\ladder_long\meshes\ladder_long_mesh.mesh" />
@@ -292,15 +305,12 @@
       <Project>{d2f6950f-c02f-4333-92cd-87a03609d9a8}</Project>
     </ProjectReference>
   </ItemGroup>
-  <!-- QML loads the render assets from disk, next to the .exe -->
   <Target Name="CopyAssets" AfterTargets="Build">
     <ItemGroup>
       <AssetFiles Include="$(MSBuildProjectDirectory)\assets\**\*" />
     </ItemGroup>
     <Copy SourceFiles="@(AssetFiles)" DestinationFiles="@(AssetFiles->'$(OutDir)assets\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
   </Target>
-  <!-- QML code completion (qmlls in Visual Studio): describes the C++ types and the wayfare.presentation module.
-       Writes obj\qml\wayfare\presentation (qmldir + presentation.qmltypes) and .qmlls.ini, which needs an absolute path. -->
   <Target Name="GenerateQmlTooling" AfterTargets="Build">
     <PropertyGroup>
       <QmlToolingImportDir>$([System.IO.Path]::GetFullPath('$(MSBuildProjectDirectory)\..\obj\qml'))</QmlToolingImportDir>
