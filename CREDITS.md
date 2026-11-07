@@ -71,3 +71,9 @@ Converted to OGG (music) and WAV (effects), and levelled to the same loudness (-
 | Pistol equip | "Pistol Cock" (Pixabay, 6014) | freesound_community | [Pixabay Content License](https://pixabay.com/service/license-summary/) |
 | Ladder climb (Dungeon exit cutscene) | "Ladder" (Pixabay, 82581) | freesound_community | [Pixabay Content License](https://pixabay.com/service/license-summary/) |
 | Potion | "Potion Drink 3" (Pixabay, 540167) | yodguard | [Pixabay Content License](https://pixabay.com/service/license-summary/) |
+| Boss fight music | ["Determined Pursuit (Epic Orchestra Loop)"](https://opengameart.org/content/determined-pursuit-epic-orchestra-loop) | Emma_MA (OpenGameArt) | CC0 1.0 |
+| Cave Troll roar and death roar, rumble when it turns to stone | ["CC0 Deep Monster Roar"](https://opengameart.org/content/cc0-deep-monster-roar), shortened (the rumble pitched down) | trazzz123 (OpenGameArt) | CC0 1.0 |
+| Cave Troll grunt, charge and hurt sounds, summoned creatures | ["80 CC0 creature SFX"](https://opengameart.org/content/80-cc0-creature-sfx) | rubberduck (OpenGameArt) | CC0 1.0 |
+| Cave Troll slam, footsteps and the thud when it turns to stone | [Impact Sounds](https://kenney.nl/assets/impact-sounds), layered | [Kenney](https://www.kenney.nl) | CC0 1.0 |
+| Crumbling stone when the Cave Troll turns to stone | ["Falling Rock"](https://opengameart.org/content/falling-rock), cut and layered | spookymodem (OpenGameArt) | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) |
+| Stone cracks and falling pieces when the Cave Troll turns to stone | ["75 CC0 breaking / falling / hit sfx"](https://opengameart.org/content/75-cc0-breaking-falling-hit-sfx) | rubberduck (OpenGameArt) | CC0 1.0 |

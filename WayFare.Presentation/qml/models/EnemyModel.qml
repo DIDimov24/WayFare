@@ -42,6 +42,7 @@ Node {
     readonly property bool animated: root.enemy.seen
     readonly property bool ready: root.loaded || !Assets.exists(root.modelPath)
 
+    visible: root.mode !== "dormant"
     position: Qt.vector3d(root.enemy.x * root.tileSize, 0, root.enemy.y * root.tileSize)
     eulerRotation.y: 90 - root.enemy.facing * 180 / Math.PI
 
@@ -146,7 +147,7 @@ Node {
     }
 
     FrameAnimation {
-        running: root.loaded && root.sink < 1
+        running: root.loaded && root.sink < 1 && root.mode !== "dormant"
 
         onTriggered: {
             const step = Math.min(frameTime, 0.1) * 1000

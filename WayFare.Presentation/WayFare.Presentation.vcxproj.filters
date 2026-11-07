@@ -354,6 +354,9 @@
     <None Include="qml\models\TempleWallMaterial.qml">
       <Filter>qml\models</Filter>
     </None>
+    <None Include="qml\models\TrollModel.qml">
+      <Filter>qml\models</Filter>
+    </None>
     <None Include="qml\shaders\TempleWall.frag">
       <Filter>qml\shaders</Filter>
     </None>
@@ -361,6 +364,15 @@
       <Filter>qml\views</Filter>
     </None>
     <None Include="qml\views\DungeonScene.qml">
+      <Filter>qml\views</Filter>
+    </None>
+    <None Include="qml\views\EndingCutscene.qml">
+      <Filter>qml\views</Filter>
+    </None>
+    <None Include="qml\views\BossAudio.qml">
+      <Filter>qml\views</Filter>
+    </None>
+    <None Include="qml\views\CreditsRoll.qml">
       <Filter>qml\views</Filter>
     </None>
     <None Include="qml\views\SnowyVillageScene.qml">

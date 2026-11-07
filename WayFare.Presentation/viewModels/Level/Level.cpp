@@ -1,11 +1,13 @@
 #include "WayFare.Presentation/viewModels/Level/Level.hpp"
 
+#include <algorithm>
 #include <cmath>
 #include <random>
 #include <QPoint>
 #include <QRandomGenerator>
 #include <QVariantMap>
 
+#include "WayFare.Business/Boss/BossFight.hpp"
 #include "WayFare.Business/Combat/Weapons.hpp"
 #include "WayFare.Business/Enemies/EnemyAI.hpp"
 #include "WayFare.Business/Enemies/EnemySpawner.hpp"
@@ -195,7 +197,7 @@ namespace WayFare::Presentation {
 
 		decor.append(levelTorchEntry(last, middle, 0, (rng() % 628) / 100.0));
 		decor.append(levelTorchEntry(arenaFirst, middle, 1, (rng() % 628) / 100.0));
-		decor.append(levelTorchEntry(middle, last, 2, (rng() % 628) / 100.0));
+		decor.append(levelTorchEntry(middle - Business::villageGateHalfWidth - 2, last, 2, (rng() % 628) / 100.0));
 		decor.append(levelTorchEntry(middle, arenaFirst, 3, (rng() % 628) / 100.0));
 	}
 
@@ -329,6 +331,12 @@ namespace WayFare::Presentation {
 
 	void levelAddVillagePines(QVariantList& decor, const Business::Maze& maze, std::mt19937& rng) {
 		int size = int(maze.tiles.size());
+		int gateX = (size - 1 - Business::villageArenaSize + size - 2) / 2;
+		std::vector<double> outsideX = { -9.0, -3.0, 2.0, 9.0, -7.0, 11.0, 4.5, -11.0 };
+		std::vector<double> outsideY = { 3.0, 8.0, 10.0, 2.5, 9.0, 7.0, 12.0, 6.0 };
+		for (size_t i = 0; i < outsideX.size(); i++) {
+			decor.append(levelDecorEntry(QStringLiteral("pine"), gateX + 0.5 + outsideX[i], size + outsideY[i], double(rng() % 360), 5.5 + (rng() % 300) / 100.0, double(i % 2)));
+		}
 
 		for (int y = 1; y < size - 1; y++) {
 			for (int x = 1; x < size - 1; x++) {
@@ -343,6 +351,9 @@ namespace WayFare::Presentation {
 				std::vector<double> ringX = { double(i), double(i), -ring + 0.5, size + ring - 0.5 };
 				std::vector<double> ringY = { -ring + 0.5, size + ring - 0.5, double(i), double(i) };
 				for (size_t side = 0; side < ringX.size(); side++) {
+					if (side == 1 && i >= gateX - 6 && i <= gateX + 7) {
+						continue;
+					}
 					double jitterX = (int(rng() % 81) - 40) / 100.0;
 					double jitterY = (int(rng() % 81) - 40) / 100.0;
 					decor.append(levelDecorEntry(QStringLiteral("pine"), ringX[side] + jitterX, ringY[side] + jitterY, double(rng() % 360), 6.0 + (rng() % 400) / 100.0, double(rng() % 2)));
@@ -414,7 +425,38 @@ namespace WayFare::Presentation {
 		if (state == Business::EnemyState::Dead) {
 			return QStringLiteral("dead");
 		}
+		if (state == Business::EnemyState::Dormant) {
+			return QStringLiteral("dormant");
+		}
 		return QStringLiteral("idle");
+	}
+
+	QString levelBossState(Business::BossState state) {
+		if (state == Business::BossState::Intro) {
+			return QStringLiteral("intro");
+		}
+		if (state == Business::BossState::Roaring) {
+			return QStringLiteral("roaring");
+		}
+		if (state == Business::BossState::Chasing) {
+			return QStringLiteral("chasing");
+		}
+		if (state == Business::BossState::Swiping) {
+			return QStringLiteral("swiping");
+		}
+		if (state == Business::BossState::Slamming) {
+			return QStringLiteral("slamming");
+		}
+		if (state == Business::BossState::Charging) {
+			return QStringLiteral("charging");
+		}
+		if (state == Business::BossState::Recovering) {
+			return QStringLiteral("recovering");
+		}
+		if (state == Business::BossState::Dead) {
+			return QStringLiteral("dead");
+		}
+		return QStringLiteral("waiting");
 	}
 
 	Level::Level(Settings& settings, Game& game, QObject* parent) : QObject(parent), _settings(settings), _game(game) {
@@ -424,12 +466,14 @@ namespace WayFare::Presentation {
 		_drowning = Business::createDrowning();
 		_combat = Business::createCombat();
 		_weapon = Business::ItemType::Sword;
+		_boss = Business::createBoss(_maze, 0);
 		_number = 1;
 		_seed = 0;
 		_exitX = 0;
 		_exitY = 0;
 		_onExit = false;
 		_dead = false;
+		_hasBoss = false;
 		_pitch = 0.0;
 	}
 
@@ -581,6 +625,33 @@ namespace WayFare::Presentation {
 		return list;
 	}
 
+	bool Level::hasBoss() const {
+		return _hasBoss;
+	}
+
+	QVariantMap Level::boss() const {
+		QVariantMap boss;
+		boss.insert(QStringLiteral("x"), _boss.x);
+		boss.insert(QStringLiteral("y"), _boss.y);
+		boss.insert(QStringLiteral("facing"), _boss.facing);
+		boss.insert(QStringLiteral("state"), levelBossState(_boss.state));
+		boss.insert(QStringLiteral("health"), _boss.health);
+		boss.insert(QStringLiteral("phase"), _boss.phase);
+		boss.insert(QStringLiteral("hurt"), _boss.hurtTime > 0.0);
+		boss.insert(QStringLiteral("attack"), _boss.attackCount);
+		boss.insert(QStringLiteral("arenaFirst"), _boss.arenaFirst);
+		boss.insert(QStringLiteral("arenaLast"), _boss.arenaLast);
+		return boss;
+	}
+
+	bool Level::bossCutscene() const {
+		return _hasBoss && Business::isBossCutscenePlaying(_boss);
+	}
+
+	int Level::bossMaxHealth() const {
+		return Business::bossMaxHealth;
+	}
+
 	void Level::load(int number, uint32_t seed) {
 		_number = number;
 		_seed = seed;
@@ -643,6 +714,24 @@ namespace WayFare::Presentation {
 		}
 		_combat = Business::createCombat();
 		_weapon = Business::ItemType::Sword;
+		_hasBoss = number == 3;
+		_boss = Business::createBoss(_maze, Business::villageArenaSize);
+		if (_hasBoss) {
+			_exitX = Business::getVillageGateX(_boss);
+			_exitY = Business::getVillageGateY(_boss);
+			for (qsizetype i = _walls.size() - 1; i >= 0; i--) {
+				QPoint wall = _walls[i].toPoint();
+				if (wall.y() == _exitY && wall.x() >= _exitX - Business::villageGateHalfWidth && wall.x() <= _exitX + Business::villageGateHalfWidth) {
+					_walls.removeAt(i);
+				}
+			}
+		}
+		if (_hasBoss) {
+			std::vector<Business::Enemy> minions = Business::createBossMinions(_boss);
+			for (size_t i = 0; i < minions.size(); i++) {
+				_enemies.push_back(minions[i]);
+			}
+		}
 
 		_player = Business::createPlayer(_maze);
 		if (number == 1) {
@@ -657,6 +746,7 @@ namespace WayFare::Presentation {
 
 		emit enemiesChanged();
 		emit trapsChanged();
+		emit bossChanged();
 		emit weaponChanged();
 		emit mazeChanged();
 		emit playerChanged();
@@ -672,7 +762,10 @@ namespace WayFare::Presentation {
 			return;
 		}
 
-		Business::movePlayer(_player, _maze, forward, strafe, deltaTime);
+		bool cutscene = bossCutscene();
+		if (!cutscene) {
+			Business::movePlayer(_player, _maze, forward, strafe, deltaTime);
+		}
 		emit playerChanged();
 
 		std::vector<Business::ItemType> collected = Business::collectPickups(_player, _inventory, _pickups);
@@ -695,7 +788,7 @@ namespace WayFare::Presentation {
 		}
 
 		bool damaged = false;
-		if (_enemies.size() > 0) {
+		if (_enemies.size() > 0 && !cutscene) {
 			Business::EnemyUpdateResponse response = Business::updateEnemies(_enemies, _player, _maze, deltaTime);
 			damaged = response.playerHit;
 			emit enemiesChanged();
@@ -705,6 +798,26 @@ namespace WayFare::Presentation {
 			Business::TrapUpdateResponse response = Business::updateSpikeTraps(_traps, _player, deltaTime);
 			damaged = damaged || response.playerHit;
 			emit trapsChanged();
+		}
+
+		if (_hasBoss) {
+			Business::BossUpdateResponse response = Business::updateBoss(_boss, _player, _maze, deltaTime);
+			Business::pushEnemiesFromBoss(_boss, _enemies, _player, _maze);
+			damaged = damaged || response.playerHit;
+			if (cutscene && _boss.state == Business::BossState::Intro) {
+				_pitch = _pitch * (1.0 - std::min(1.0, deltaTime * 3.0));
+			}
+			emit bossChanged();
+			emit playerChanged();
+
+			if (response.slammed) {
+				emit bossSlammed();
+			}
+
+			if (response.defeated) {
+				Business::openVillageGate(_maze, _boss);
+				emit bossDefeated();
+			}
 		}
 
 		if (damaged) {
@@ -742,11 +855,25 @@ namespace WayFare::Presentation {
 			return;
 		}
 
+		if (_hasBoss) {
+			Business::ExitStatus status = Business::checkVillageExit(_player, _maze, _boss);
+			bool locked = status == Business::ExitStatus::Locked;
+			if (locked && !_onExit) {
+				emit exitLocked(QString::fromStdString(Business::villageExitLockedMessage));
+			}
+			_onExit = locked;
+
+			if (status == Business::ExitStatus::Success) {
+				_game.setPhase(QStringLiteral("ending"));
+			}
+			return;
+		}
+
 		_onExit = Business::isPlayerOnExit(_player, _maze);
 	}
 
 	void Level::attack() {
-		if (_dead || !armed()) {
+		if (_dead || !armed() || bossCutscene()) {
 			return;
 		}
 
@@ -762,8 +889,24 @@ namespace WayFare::Presentation {
 			return;
 		}
 
+		bool bossHit = false;
+		if (_hasBoss) {
+			Business::BossHitStatus status = Business::BossHitStatus::Miss;
+			if (_weapon == Business::ItemType::Pistol) {
+				status = Business::hitBossWithPistol(_boss, _player, response.distance);
+			}
+			else {
+				status = Business::hitBossWithSword(_boss, _player);
+			}
+			bossHit = status == Business::BossHitStatus::Success || status == Business::BossHitStatus::PhaseChanged || status == Business::BossHitStatus::Killed;
+			if (status == Business::BossHitStatus::PhaseChanged) {
+				Business::summonBossMinions(_enemies, _boss);
+			}
+			emit bossChanged();
+		}
+
 		emit enemiesChanged();
-		emit weaponUsed(levelItemKey(_weapon), response.hitCount > 0);
+		emit weaponUsed(levelItemKey(_weapon), response.hitCount > 0 || bossHit);
 	}
 
 	void Level::selectWeapon(const QString& weapon) {
@@ -805,7 +948,7 @@ namespace WayFare::Presentation {
 	}
 
 	void Level::look(double mouseDeltaX, double mouseDeltaY) {
-		if (_dead) {
+		if (_dead || bossCutscene()) {
 			return;
 		}
 

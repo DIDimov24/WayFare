@@ -40,6 +40,14 @@ Window {
 
     Loader {
         anchors.fill: parent
+        active: Game.phase === "ending"
+        asynchronous: true
+        focus: Game.phase === "ending"
+        sourceComponent: EndingCutscene {}
+    }
+
+    Loader {
+        anchors.fill: parent
         active: Game.phase === "level"
         asynchronous: true
         focus: Game.phase === "level"

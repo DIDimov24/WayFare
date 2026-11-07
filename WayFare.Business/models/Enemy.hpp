@@ -13,7 +13,8 @@ namespace WayFare::Business {
 		Alerted,
 		Chasing,
 		Attacking,
-		Dead
+		Dead,
+		Dormant
 	};
 
 	struct Enemy {
