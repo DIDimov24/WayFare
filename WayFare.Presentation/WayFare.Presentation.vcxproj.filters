@@ -324,6 +324,12 @@
     <None Include="qml\models\TorchModel.qml">
       <Filter>qml\models</Filter>
     </None>
+    <None Include="qml\models\EnemyModel.qml">
+      <Filter>qml\models</Filter>
+    </None>
+    <None Include="qml\models\NightmareCreatureModel.qml">
+      <Filter>qml\models</Filter>
+    </None>
     <None Include="qml\models\ZombieModel.qml">
       <Filter>qml\models</Filter>
     </None>
@@ -355,6 +361,12 @@
       <Filter>qml\views</Filter>
     </None>
     <None Include="qml\views\DungeonScene.qml">
+      <Filter>qml\views</Filter>
+    </None>
+    <None Include="qml\views\SnowyVillageScene.qml">
+      <Filter>qml\views</Filter>
+    </None>
+    <None Include="qml\views\WallTorches.qml">
       <Filter>qml\views</Filter>
     </None>
     <None Include="qml\views\FirstPersonWeapon.qml">

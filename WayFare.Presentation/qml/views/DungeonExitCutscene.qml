@@ -9,10 +9,10 @@ Item {
     id: root
 
     readonly property int lastStage: 4
-    readonly property real length: 13400
+    readonly property real length: 12400
     readonly property real climbStart: 2030
     readonly property real barnStart: 4300
-    readonly property real doorStart: 7400
+    readonly property real doorStart: 6400
     readonly property real ladderX: 0.5
     readonly property real ladderZ: -2.72
     readonly property real floorY: 4.2
@@ -134,9 +134,9 @@ Item {
             Keyframe { frame: 2030; value: Qt.vector3d(0.2, 1.1, 1.6) }
             Keyframe { frame: 4299; value: Qt.vector3d(0.4, 0.8, 0.7) }
             Keyframe { frame: 4300; value: Qt.vector3d(-1.3, 5, -5) }
-            Keyframe { frame: 7399; value: Qt.vector3d(-1, 5.1, -5.2) }
-            Keyframe { frame: 7400; value: Qt.vector3d(-1.8, 5.7, 1.9) }
-            Keyframe { frame: 11000; value: Qt.vector3d(-1.2, 5.6, 2.6) }
+            Keyframe { frame: 6399; value: Qt.vector3d(-1.1, 5.07, -5.14) }
+            Keyframe { frame: 6400; value: Qt.vector3d(-1.8, 5.7, 1.9) }
+            Keyframe { frame: 10000; value: Qt.vector3d(-1.2, 5.6, 2.6) }
         }
 
         KeyframeGroup {
@@ -147,9 +147,9 @@ Item {
             Keyframe { frame: 2030; value: Qt.vector3d(0.4, 2.4, -2.4) }
             Keyframe { frame: 4299; value: Qt.vector3d(0.5, 4, -2.3) }
             Keyframe { frame: 4300; value: Qt.vector3d(0.5, 5, -2) }
-            Keyframe { frame: 7399; value: Qt.vector3d(0.5, 5.6, -1.8) }
-            Keyframe { frame: 7400; value: Qt.vector3d(0.4, 5.2, 6.2) }
-            Keyframe { frame: 11000; value: Qt.vector3d(0.6, 5.3, 8) }
+            Keyframe { frame: 6399; value: Qt.vector3d(0.5, 5.41, -1.86) }
+            Keyframe { frame: 6400; value: Qt.vector3d(0.4, 5.2, 6.2) }
+            Keyframe { frame: 10000; value: Qt.vector3d(0.6, 5.3, 8) }
         }
 
         KeyframeGroup {
@@ -158,8 +158,8 @@ Item {
 
             Keyframe { frame: 0; value: Qt.vector3d(root.ladderX - 1.22, 0, root.ladderZ - 0.16) }
             Keyframe { frame: 2030; value: Qt.vector3d(root.ladderX - 1.22, 0, root.ladderZ - 0.16) }
-            Keyframe { frame: 7399; value: Qt.vector3d(root.ladderX - 1.22, 3.02, root.ladderZ - 0.16) }
-            Keyframe { frame: 7400; value: Qt.vector3d(root.doorX - 0.2, root.floorY, 5.35) }
+            Keyframe { frame: 6399; value: Qt.vector3d(root.ladderX - 1.22, 2.458, root.ladderZ - 0.16) }
+            Keyframe { frame: 6400; value: Qt.vector3d(root.doorX - 0.2, root.floorY, 5.35) }
         }
 
         KeyframeGroup {
@@ -175,8 +175,8 @@ Item {
             target: root
             property: "doorAngle"
 
-            Keyframe { frame: 8100; value: 0 }
-            Keyframe { frame: 9100; value: -105; easing.type: Easing.OutQuad }
+            Keyframe { frame: 7100; value: 0 }
+            Keyframe { frame: 8100; value: -105; easing.type: Easing.OutQuad }
         }
 
         KeyframeGroup {
@@ -199,8 +199,8 @@ Item {
             target: doorLight
             property: "brightness"
 
-            Keyframe { frame: 8100; value: 0.3 }
-            Keyframe { frame: 9100; value: 3 }
+            Keyframe { frame: 7100; value: 0.3 }
+            Keyframe { frame: 8100; value: 3 }
         }
 
         KeyframeGroup {
@@ -217,8 +217,8 @@ Item {
 
             Keyframe { frame: 0; value: 1 }
             Keyframe { frame: 1000; value: 0 }
-            Keyframe { frame: 10300; value: 0 }
-            Keyframe { frame: 11000; value: 1 }
+            Keyframe { frame: 9300; value: 0 }
+            Keyframe { frame: 10000; value: 1 }
         }
 
         KeyframeGroup {
@@ -226,10 +226,10 @@ Item {
             property: "opacity"
 
             Keyframe { frame: 0; value: 0 }
-            Keyframe { frame: 11100; value: 0 }
-            Keyframe { frame: 11700; value: 1 }
-            Keyframe { frame: 12800; value: 1 }
-            Keyframe { frame: 13400; value: 0 }
+            Keyframe { frame: 10100; value: 0 }
+            Keyframe { frame: 10700; value: 1 }
+            Keyframe { frame: 11800; value: 1 }
+            Keyframe { frame: 12400; value: 0 }
         }
     }
 

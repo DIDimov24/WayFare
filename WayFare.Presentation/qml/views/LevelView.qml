@@ -16,6 +16,7 @@ Item {
     readonly property int lastStage: 6
     readonly property bool temple: Level.theme === "temple"
     readonly property bool dungeon: Level.theme === "dungeon"
+    readonly property bool village: Level.theme === "village"
     readonly property bool ladderExit: root.temple || root.dungeon
     readonly property var enemies: Level.enemies
     readonly property var trapHeights: Level.trapHeights
@@ -322,14 +323,14 @@ Item {
 
             environment: SceneEnvironment {
                 backgroundMode: SceneEnvironment.Color
-                clearColor: root.temple ? "#06232a" : "#05070b"
+                clearColor: root.temple ? "#06232a" : (root.dungeon ? "#05070b" : "#2a3342")
                 antialiasingMode: SceneEnvironment.MSAA
                 antialiasingQuality: SceneEnvironment.Medium
                 tonemapMode: SceneEnvironment.TonemapModeFilmic
                 fog: Fog {
                     enabled: true
-                    color: root.temple ? "#0b3a44" : "#05070b"
-                    density: root.temple ? 0.95 : 1
+                    color: root.temple ? "#0b3a44" : (root.dungeon ? "#05070b" : "#2a3342")
+                    density: root.temple ? 0.95 : (root.dungeon ? 1 : 0.9)
                     depthEnabled: true
                     depthNear: root.temple ? 2.5 : (root.dungeon ? 2 : 4)
                     depthFar: root.temple ? 22 : (root.dungeon ? 17 : 24)
@@ -347,9 +348,9 @@ Item {
                 clipFar: 200
 
                 PointLight {
-                    color: root.temple ? "#7fd0dc" : "#ffe6c4"
-                    brightness: root.temple ? 2.5 : (root.dungeon ? 0.75 : 6)
-                    quadraticFade: root.temple ? 300 : (root.dungeon ? 3000 : 1.2)
+                    color: root.temple ? "#7fd0dc" : (root.dungeon ? "#ffe6c4" : "#d5ddef")
+                    brightness: root.temple ? 2.5 : (root.dungeon ? 0.75 : 0.7)
+                    quadraticFade: root.temple ? 300 : (root.dungeon ? 3000 : 800)
                 }
 
                 FirstPersonWeapon {
@@ -360,9 +361,9 @@ Item {
             DirectionalLight {
                 visible: !root.temple
                 eulerRotation: Qt.vector3d(-60, 30, 0)
-                color: "#7c8aa8"
-                brightness: root.dungeon ? 0.04 : 0.3
-                ambientColor: root.dungeon ? "#1c1814" : "#000000"
+                color: root.dungeon ? "#7c8aa8" : "#a9bbdc"
+                brightness: root.dungeon ? 0.04 : 1.15
+                ambientColor: root.dungeon ? "#1c1814" : "#364256"
             }
 
             TempleScene {
@@ -375,6 +376,15 @@ Item {
                 active: root.dungeon
                 sourceComponent: DungeonScene {
                     tileSize: root.tileSize
+                    stage: root.stage
+                }
+            }
+
+            Loader3D {
+                active: root.village
+                sourceComponent: SnowyVillageScene {
+                    tileSize: root.tileSize
+                    wallHeight: root.wallHeight
                     stage: root.stage
                 }
             }
@@ -396,22 +406,37 @@ Item {
                 }
 
                 Repeater3D {
-                    model: Level.enemyCount
+                    model: root.dungeon ? Level.enemyCount : 0
 
                     delegate: ZombieModel {
                         id: zombie
 
                         required property int index
-                        readonly property var enemy: root.enemies[zombie.index]
 
-                        position: Qt.vector3d(zombie.enemy.x * root.tileSize, 0, zombie.enemy.y * root.tileSize)
-                        eulerRotation.y: 90 - zombie.enemy.facing * 180 / Math.PI
-                        mode: zombie.enemy.state
-                        hurt: zombie.enemy.hurt
+                        enemy: root.enemies[zombie.index]
+                        tileSize: root.tileSize
                         phase: zombie.index * 870
-                        animated: zombie.enemy.seen
                         onReadyChanged: {
                             if (zombie.ready) {
+                                root.loadedEnemies++
+                            }
+                        }
+                    }
+                }
+
+                Repeater3D {
+                    model: root.village ? Level.enemyCount : 0
+
+                    delegate: NightmareCreatureModel {
+                        id: creature
+
+                        required property int index
+
+                        enemy: root.enemies[creature.index]
+                        tileSize: root.tileSize
+                        phase: creature.index * 210
+                        onReadyChanged: {
+                            if (creature.ready) {
                                 root.loadedEnemies++
                             }
                         }
@@ -516,7 +541,7 @@ Item {
                         scaleV: Level.size
                     }
                     roughnessChannel: Material.R
-                    specularAmount: root.dungeon ? 0 : 0.5
+                    specularAmount: root.temple ? 0.5 : 0
                 }
             }
 
@@ -544,7 +569,7 @@ Item {
                         scaleV: root.wallHeight / root.tileSize
                     }
                     roughnessChannel: Material.R
-                    specularAmount: root.dungeon ? 0 : 0.5
+                    specularAmount: 0
                 }
 
                 TempleWallMaterial {

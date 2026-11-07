@@ -1,5 +1,7 @@
 module wayfare.presentation
 CoralModel 1.0 models/CoralModel.qml
+EnemyModel 1.0 models/EnemyModel.qml
+NightmareCreatureModel 1.0 models/NightmareCreatureModel.qml
 ZombieModel 1.0 models/ZombieModel.qml
 SpikeTrapModel 1.0 models/SpikeTrapModel.qml
 TorchModel 1.0 models/TorchModel.qml
@@ -28,7 +30,9 @@ MainMenuView 1.0 views/MainMenuView.qml
 Minimap 1.0 views/Minimap.qml
 SettingsPanel 1.0 views/SettingsPanel.qml
 SettingsSlider 1.0 views/SettingsSlider.qml
+SnowyVillageScene 1.0 views/SnowyVillageScene.qml
 singleton Sounds 1.0 views/Sounds.qml
 TempleExitCutscene 1.0 views/TempleExitCutscene.qml
 TempleScene 1.0 views/TempleScene.qml
 VillageScene 1.0 views/VillageScene.qml
+WallTorches 1.0 views/WallTorches.qml

@@ -121,6 +121,8 @@
     <None Include="qml\models\CoralModel.qml" />
     <None Include="qml\models\SpikeTrapModel.qml" />
     <None Include="qml\models\TorchModel.qml" />
+    <None Include="qml\models\EnemyModel.qml" />
+    <None Include="qml\models\NightmareCreatureModel.qml" />
     <None Include="qml\models\ZombieModel.qml" />
     <None Include="qml\models\FenceModel.qml" />
     <None Include="qml\models\GrassModel.qml" />
@@ -150,7 +152,9 @@
     <None Include="qml\views\Sounds.qml" />
     <None Include="qml\views\TempleExitCutscene.qml" />
     <None Include="qml\views\TempleScene.qml" />
+    <None Include="qml\views\SnowyVillageScene.qml" />
     <None Include="qml\views\VillageScene.qml" />
+    <None Include="qml\views\WallTorches.qml" />
     <None Include="assets\audio\54427377-sword-slash-476148.wav" />
     <None Include="assets\audio\click.wav" />
     <None Include="assets\audio\daviddumaisaudio-sword-slash-with-metallic-impact-185435.wav" />
