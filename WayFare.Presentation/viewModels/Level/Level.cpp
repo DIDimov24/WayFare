@@ -67,8 +67,10 @@ namespace WayFare::Presentation {
 				if (maze.tiles[y][x] == Business::Tile::Wall) {
 					continue;
 				}
+
 				openX.push_back(int(x));
 				openY.push_back(int(y));
+
 				if (maze.tiles[y][x] != Business::Tile::Path) {
 					continue;
 				}
@@ -139,15 +141,11 @@ namespace WayFare::Presentation {
 		return levelDecorEntry(QStringLiteral("torch"), x + 0.5 + stepX[side] * 0.5, y + 0.5 + stepY[side] * 0.5, sideYaw[side], 1.0, phase);
 	}
 
-	QVariantList levelDungeonDecor(const Business::Maze& maze, uint32_t seed) {
+	void levelAddSectorTorches(QVariantList& decor, const Business::Maze& maze, std::mt19937& rng, int arenaFirst) {
 		const int sectors = 3;
-		std::mt19937 rng(seed + 104729u);
 		std::vector<int> stepX = { 1, -1, 0, 0 };
 		std::vector<int> stepY = { 0, 0, 1, -1 };
 		int size = int(maze.tiles.size());
-		QVariantList decor;
-
-		decor.append(levelTorchEntry(1, 1, 3, 0.0));
 
 		for (int sectorY = 0; sectorY < sectors; sectorY++) {
 			for (int sectorX = 0; sectorX < sectors; sectorX++) {
@@ -157,9 +155,10 @@ namespace WayFare::Presentation {
 
 				for (int y = sectorY * size / sectors; y < (sectorY + 1) * size / sectors; y++) {
 					for (int x = sectorX * size / sectors; x < (sectorX + 1) * size / sectors; x++) {
-						if (maze.tiles[y][x] != Business::Tile::Path) {
+						if (maze.tiles[y][x] != Business::Tile::Path || (x >= arenaFirst && y >= arenaFirst)) {
 							continue;
 						}
+
 						for (size_t side = 0; side < stepX.size(); side++) {
 							if (levelIsWallTile(maze, x + stepX[side], y + stepY[side])) {
 								spotX.push_back(x);
@@ -178,6 +177,190 @@ namespace WayFare::Presentation {
 				decor.append(levelTorchEntry(spotX[index], spotY[index], spotSide[index], (rng() % 628) / 100.0));
 			}
 		}
+	}
+
+	QVariantList levelDungeonDecor(const Business::Maze& maze, uint32_t seed) {
+		std::mt19937 rng(seed + 104729u);
+		QVariantList decor;
+
+		decor.append(levelTorchEntry(1, 1, 3, 0.0));
+		levelAddSectorTorches(decor, maze, rng, int(maze.tiles.size()));
+
+		return decor;
+	}
+
+	void levelAddArenaTorches(QVariantList& decor, const Business::Maze& maze, std::mt19937& rng, int arenaFirst) {
+		int last = int(maze.tiles.size()) - 2;
+		int middle = (arenaFirst + last) / 2;
+
+		decor.append(levelTorchEntry(last, middle, 0, (rng() % 628) / 100.0));
+		decor.append(levelTorchEntry(arenaFirst, middle, 1, (rng() % 628) / 100.0));
+		decor.append(levelTorchEntry(middle, last, 2, (rng() % 628) / 100.0));
+		decor.append(levelTorchEntry(middle, arenaFirst, 3, (rng() % 628) / 100.0));
+	}
+
+	bool levelIsWallRun(const Business::Maze& maze, int x, int y, bool alongX, int length) {
+		for (int i = 0; i < length; i++) {
+			int tileX = alongX ? x + i : x;
+			int tileY = alongX ? y : y + i;
+			if (tileX <= 0 || tileY <= 0 || tileX >= int(maze.tiles.size()) - 1 || tileY >= int(maze.tiles.size()) - 1) {
+				return false;
+			}
+			if (maze.tiles[tileY][tileX] != Business::Tile::Wall) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+	void levelAddCabinFront(QVariantList& decor, std::mt19937& rng, int tileX, int tileY, bool alongX, bool door) {
+		double yaw = alongX ? 0.0 : 90.0;
+		for (int side = 0; side < 2; side++) {
+			double faceX = alongX ? tileX + 0.5 : tileX + double(side);
+			double faceY = alongX ? tileY + double(side) : tileY + 0.5;
+			if (door && side == 0) {
+				decor.append(levelDecorEntry(QStringLiteral("door"), faceX, faceY, yaw, 1.0, 0.0));
+				continue;
+			}
+			decor.append(levelDecorEntry(QStringLiteral("window"), faceX, faceY, yaw, 1.0, rng() % 100 < 65 ? 1.0 : 0.0));
+		}
+	}
+
+	void levelAddCabins(QVariantList& decor, const Business::Maze& maze, std::mt19937& rng) {
+		const int sectors = 5;
+		const int cabinLength = 5;
+		int size = int(maze.tiles.size());
+
+		for (int sectorY = 0; sectorY < sectors; sectorY++) {
+			for (int sectorX = 0; sectorX < sectors; sectorX++) {
+				std::vector<int> spotX;
+				std::vector<int> spotY;
+				std::vector<bool> spotAlongX;
+
+				for (int y = sectorY * size / sectors; y < (sectorY + 1) * size / sectors; y++) {
+					for (int x = sectorX * size / sectors; x < (sectorX + 1) * size / sectors; x++) {
+						if (x % 2 != 0 || y % 2 != 0) {
+							continue;
+						}
+						if (levelIsWallRun(maze, x, y, true, cabinLength)) {
+							spotX.push_back(x);
+							spotY.push_back(y);
+							spotAlongX.push_back(true);
+						}
+						if (levelIsWallRun(maze, x, y, false, cabinLength)) {
+							spotX.push_back(x);
+							spotY.push_back(y);
+							spotAlongX.push_back(false);
+						}
+					}
+				}
+
+				if (spotX.size() == 0 || rng() % 100 >= 70) {
+					continue;
+				}
+
+				size_t index = rng() % spotX.size();
+				int x = spotX[index];
+				int y = spotY[index];
+				bool alongX = spotAlongX[index];
+				double centerX = alongX ? x + cabinLength / 2.0 : x + 0.5;
+				double centerY = alongX ? y + 0.5 : y + cabinLength / 2.0;
+				decor.append(levelDecorEntry(QStringLiteral("cabin"), centerX, centerY, alongX ? 0.0 : 90.0, double(cabinLength), 0.0));
+				levelAddCabinFront(decor, rng, alongX ? x + 1 : x, alongX ? y : y + 1, alongX, true);
+				levelAddCabinFront(decor, rng, alongX ? x + 3 : x, alongX ? y : y + 3, alongX, false);
+			}
+		}
+	}
+
+	void levelAddVillageProps(QVariantList& decor, const Business::Maze& maze, std::mt19937& rng, int arenaFirst, const std::vector<Business::Pickup>& pickups) {
+		std::vector<int> stepX = { 1, -1, 0, 0 };
+		std::vector<int> stepY = { 0, 0, 1, -1 };
+
+		for (size_t y = 0; y < maze.tiles.size(); y++) {
+			for (size_t x = 0; x < maze.tiles[y].size(); x++) {
+				if (maze.tiles[y][x] != Business::Tile::Path || (int(x) >= arenaFirst && int(y) >= arenaFirst)) {
+					continue;
+				}
+
+				bool reserved = false;
+				for (size_t i = 0; i < pickups.size(); i++) {
+					if (pickups[i].x == int(x) && pickups[i].y == int(y)) {
+						reserved = true;
+					}
+				}
+				if (reserved) {
+					continue;
+				}
+
+				for (size_t side = 0; side < stepX.size(); side++) {
+					if (!levelIsWallTile(maze, int(x) + stepX[side], int(y) + stepY[side]) || rng() % 100 >= 9) {
+						continue;
+					}
+
+					double slide = (int(rng() % 51) - 25) / 100.0;
+					double propX = int(x) + 0.5 + stepX[side] * 0.36;
+					double propY = int(y) + 0.5 + stepY[side] * 0.36;
+					if (stepX[side] == 0) {
+						propX = propX + slide;
+					}
+					if (stepY[side] == 0) {
+						propY = propY + slide;
+					}
+
+					int roll = int(rng() % 100);
+					double yaw = double(rng() % 360);
+					double size = (rng() % 41) / 100.0;
+					if (roll < 45) {
+						decor.append(levelDecorEntry(QStringLiteral("grass"), propX, propY, yaw, 1.0 + size, 0.0));
+					}
+					else if (roll < 70) {
+						decor.append(levelDecorEntry(QStringLiteral("rock"), propX, propY, yaw, 0.6 + size, 0.0));
+					}
+					else if (roll < 88) {
+						decor.append(levelDecorEntry(QStringLiteral("stump"), propX, propY, yaw, 1.2 + size, 0.0));
+					}
+					else {
+						decor.append(levelDecorEntry(QStringLiteral("logs"), propX, propY, yaw, 1.0 + size, 0.0));
+					}
+				}
+			}
+		}
+	}
+
+	void levelAddVillagePines(QVariantList& decor, const Business::Maze& maze, std::mt19937& rng) {
+		int size = int(maze.tiles.size());
+
+		for (int y = 1; y < size - 1; y++) {
+			for (int x = 1; x < size - 1; x++) {
+				if (maze.tiles[y][x] == Business::Tile::Wall && rng() % 100 < 8) {
+					decor.append(levelDecorEntry(QStringLiteral("pine"), x + 0.5, y + 0.5, double(rng() % 360), 5.0 + (rng() % 300) / 100.0, double(rng() % 2)));
+				}
+			}
+		}
+
+		for (int ring = 1; ring <= 3; ring++) {
+			for (int i = -ring; i < size + ring; i += 2) {
+				std::vector<double> ringX = { double(i), double(i), -ring + 0.5, size + ring - 0.5 };
+				std::vector<double> ringY = { -ring + 0.5, size + ring - 0.5, double(i), double(i) };
+				for (size_t side = 0; side < ringX.size(); side++) {
+					double jitterX = (int(rng() % 81) - 40) / 100.0;
+					double jitterY = (int(rng() % 81) - 40) / 100.0;
+					decor.append(levelDecorEntry(QStringLiteral("pine"), ringX[side] + jitterX, ringY[side] + jitterY, double(rng() % 360), 6.0 + (rng() % 400) / 100.0, double(rng() % 2)));
+				}
+			}
+		}
+	}
+
+	QVariantList levelVillageDecor(const Business::Maze& maze, uint32_t seed, const std::vector<Business::Pickup>& pickups) {
+		std::mt19937 rng(seed + 15485863u);
+		int arenaFirst = int(maze.tiles.size()) - 1 - Business::villageArenaSize;
+		QVariantList decor;
+
+		levelAddSectorTorches(decor, maze, rng, arenaFirst);
+		levelAddArenaTorches(decor, maze, rng, arenaFirst);
+		levelAddCabins(decor, maze, rng);
+		levelAddVillageProps(decor, maze, rng, arenaFirst, pickups);
+		levelAddVillagePines(decor, maze, rng);
 
 		return decor;
 	}
@@ -197,8 +380,7 @@ namespace WayFare::Presentation {
 		return true;
 	}
 
-	bool levelIsEnemyInSight(const Business::Maze& maze, const Business::Player& player, const Business::Enemy& enemy) {
-		const double sightRange = 9.0;
+	bool levelIsEnemyInSight(const Business::Maze& maze, const Business::Player& player, const Business::Enemy& enemy, double sightRange) {
 		const double bodyHalfWidth = 0.3;
 		double dx = enemy.x - player.x;
 		double dy = enemy.y - player.y;
@@ -368,6 +550,7 @@ namespace WayFare::Presentation {
 	}
 
 	QVariantList Level::enemies() const {
+		double sightRange = _theme == QStringLiteral("village") ? 12.0 : 9.0;
 		QVariantList list;
 		for (size_t i = 0; i < _enemies.size(); i++) {
 			QVariantMap enemy;
@@ -376,7 +559,7 @@ namespace WayFare::Presentation {
 			enemy.insert(QStringLiteral("facing"), _enemies[i].facing);
 			enemy.insert(QStringLiteral("state"), levelEnemyState(_enemies[i].state));
 			enemy.insert(QStringLiteral("hurt"), _enemies[i].hurtTime > 0.0);
-			enemy.insert(QStringLiteral("seen"), levelIsEnemyInSight(_maze, _player, _enemies[i]));
+			enemy.insert(QStringLiteral("seen"), levelIsEnemyInSight(_maze, _player, _enemies[i], sightRange));
 			list.append(enemy);
 		}
 		return list;
@@ -414,7 +597,7 @@ namespace WayFare::Presentation {
 
 		_maze = Business::generateMaze(size, seed);
 		if (number == 3) {
-			Business::carveArena(_maze, 15);
+			Business::carveArena(_maze, Business::villageArenaSize);
 		}
 
 		_walls.clear();
@@ -445,12 +628,18 @@ namespace WayFare::Presentation {
 		if (number == 2) {
 			_decor = levelDungeonDecor(_maze, seed);
 		}
+		if (number == 3) {
+			_decor = levelVillageDecor(_maze, seed, _pickups);
+		}
 
 		_enemies.clear();
 		_traps.clear();
 		if (number == 2) {
 			_enemies = Business::spawnEnemies(_maze, seed, Business::EnemyType::Zombie, Business::dungeonZombieCount, 0);
 			_traps = Business::placeSpikeTraps(_maze, seed, Business::dungeonSpikeTrapCount, _pickups);
+		}
+		if (number == 3) {
+			_enemies = Business::spawnEnemies(_maze, seed, Business::EnemyType::NightmareCreature, Business::villageCreatureCount, Business::villageArenaSize);
 		}
 		_combat = Business::createCombat();
 		_weapon = Business::ItemType::Sword;
@@ -476,6 +665,7 @@ namespace WayFare::Presentation {
 		emit pickupsChanged();
 		emit deadChanged();
 	}
+
 
 	void Level::move(double forward, double strafe, double deltaTime) {
 		if (_maze.tiles.size() == 0 || _dead) {

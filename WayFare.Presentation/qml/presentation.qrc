@@ -5,6 +5,8 @@
         <file>models/CoralModel.qml</file>
         <file>models/SpikeTrapModel.qml</file>
         <file>models/TorchModel.qml</file>
+        <file>models/EnemyModel.qml</file>
+        <file>models/NightmareCreatureModel.qml</file>
         <file>models/ZombieModel.qml</file>
         <file>models/FenceModel.qml</file>
         <file>models/GrassModel.qml</file>
@@ -31,9 +33,11 @@
         <file>views/Minimap.qml</file>
         <file>views/SettingsPanel.qml</file>
         <file>views/SettingsSlider.qml</file>
+        <file>views/SnowyVillageScene.qml</file>
         <file>views/Sounds.qml</file>
         <file>views/TempleExitCutscene.qml</file>
         <file>views/TempleScene.qml</file>
         <file>views/VillageScene.qml</file>
+        <file>views/WallTorches.qml</file>
     </qresource>
 </RCC>
