@@ -91,6 +91,15 @@
     <ClCompile Include="Hazards\SpikeTraps.cpp">
       <Filter>Hazards</Filter>
     </ClCompile>
+    <ClInclude Include="models\Boss.hpp">
+      <Filter>models</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss\BossFight.hpp">
+      <Filter>Boss</Filter>
+    </ClInclude>
+    <ClCompile Include="Boss\BossFight.cpp">
+      <Filter>Boss</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="MazeGenerator">
@@ -116,6 +125,9 @@
     </Filter>
     <Filter Include="Combat">
       <UniqueIdentifier>{c3e81a94-6f27-4b0d-a5d8-91f4e2b6c708}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Boss">
+      <UniqueIdentifier>{6f1d2a4b-3c8e-4b7a-9d52-1e0f7c3a8b64}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

@@ -111,6 +111,9 @@
     <ClCompile Include="Combat\Weapons.cpp" />
     <ClInclude Include="Hazards\SpikeTraps.hpp" />
     <ClCompile Include="Hazards\SpikeTraps.cpp" />
+    <ClInclude Include="models\Boss.hpp" />
+    <ClInclude Include="Boss\BossFight.hpp" />
+    <ClCompile Include="Boss\BossFight.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WayFare.DataAccess\WayFare.DataAccess.vcxproj">

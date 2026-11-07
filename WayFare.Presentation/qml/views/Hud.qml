@@ -9,6 +9,12 @@ Item {
 
     property string message: ""
     property real flash: 0
+    readonly property string bossState: Level.hasBoss ? Level.boss.state : "waiting"
+    property real bossFill: root.bossState === "waiting" ? 0 : Level.boss.health / Level.bossMaxHealth
+
+    Behavior on bossFill {
+        SmoothedAnimation { velocity: 0.8 }
+    }
 
     function iconPath(name: string): url {
         return Assets.url + "icons/" + name + ".png"
@@ -19,6 +25,11 @@ Item {
 
         function onExitLocked(message: string) {
             root.message = message
+            messageFade.restart()
+        }
+
+        function onBossDefeated() {
+            root.message = "The exit is open"
             messageFade.restart()
         }
     }
@@ -194,6 +205,78 @@ Item {
                 width: Level.air * (parent.width - 4)
                 height: parent.height - 4
                 color: Level.air < 0.25 ? "#e04a3a" : "#e8eef4"
+            }
+        }
+    }
+
+    Text {
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.verticalCenterOffset: -parent.height * 0.22
+        text: "Cave Troll"
+        color: "#f2e6e6"
+        font.pixelSize: 56
+        font.weight: Font.Light
+        font.letterSpacing: 3
+        style: Text.Outline
+        styleColor: "#000000"
+        opacity: root.bossState === "intro" ? 1 : 0
+        visible: opacity > 0
+
+        Behavior on opacity {
+            NumberAnimation { duration: 900 }
+        }
+    }
+
+    Column {
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.top: parent.top
+        anchors.topMargin: 24
+        spacing: 6
+        opacity: root.bossState === "waiting" || root.bossState === "dead" ? 0 : 1
+        visible: opacity > 0
+
+        Behavior on opacity {
+            NumberAnimation { duration: 800 }
+        }
+
+        Text {
+            anchors.horizontalCenter: parent.horizontalCenter
+            text: "Cave Troll"
+            color: "#ffffff"
+            font.pixelSize: 20
+            font.bold: true
+            font.letterSpacing: 1
+            style: Text.Outline
+            styleColor: "#000000"
+        }
+
+        Rectangle {
+            width: Math.min(560, root.width * 0.5)
+            height: 18
+            color: "#000000"
+            border.color: "#a87a35"
+            border.width: 2
+
+            Rectangle {
+                x: 3
+                y: 3
+                width: root.bossFill * (parent.width - 6)
+                height: parent.height - 6
+                color: Level.boss.hurt ? "#ff8a7a" : "#b3261e"
+            }
+
+            Repeater {
+                model: 2
+
+                Rectangle {
+                    required property int index
+
+                    x: (parent.width - 2) * (index + 1) / 3
+                    width: 2
+                    height: parent.height
+                    color: "#a87a35"
+                }
             }
         }
     }

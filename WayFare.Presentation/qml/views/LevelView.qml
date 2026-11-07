@@ -27,6 +27,10 @@ Item {
     readonly property bool shaking: root.strength > 0 && !Level.dead
     property real blur: root.strength > 0 ? 0.1 + 0.7 * root.strength : 0
     property real hurtTilt: 0
+    property real quake: 0
+    property real letterbox: Level.bossCutscene ? 1 : 0
+    readonly property bool deathView: Level.bossCutscene && Level.boss.state === "dead"
+    property real deathDistance: 3.4
     property real pulse: 0
     property real tinnitusLevel: 0
 
@@ -36,6 +40,10 @@ Item {
 
     Behavior on blur {
         NumberAnimation { duration: 600 }
+    }
+
+    Behavior on letterbox {
+        NumberAnimation { duration: 400; easing.type: Easing.InOutQuad }
     }
 
     onShakingChanged: {
@@ -66,6 +74,10 @@ Item {
         source: Assets.url + "audio/tinnitus.wav"
         loops: SoundEffect.Infinite
         volume: root.tinnitusLevel * Settings.sfxVolume / 100
+    }
+
+    BossAudio {
+        active: root.readyFrames >= 3
     }
 
     NumberAnimation {
@@ -135,6 +147,14 @@ Item {
         wallList.instances = entries
     }
 
+    function deathCameraSpot(along: real, height: real): vector3d {
+        const low = (Level.boss.arenaFirst + 0.4) * root.tileSize
+        const high = (Level.boss.arenaLast + 0.6) * root.tileSize
+        const x = (Level.boss.x + Math.cos(Level.boss.facing) * along) * root.tileSize
+        const z = (Level.boss.y + Math.sin(Level.boss.facing) * along) * root.tileSize
+        return Qt.vector3d(Math.max(low, Math.min(high, x)), height, Math.max(low, Math.min(high, z)))
+    }
+
     function exitYaw(): real {
         const walls = Level.walls
         for (let i = 0; i < walls.length; i++) {
@@ -199,7 +219,7 @@ Item {
                 root.stage++
                 return
             }
-            if (root.loadedEnemies < Level.enemyCount) {
+            if (root.loadedEnemies < Level.enemyCount || !troll.ready) {
                 return
             }
             root.readyFrames++
@@ -246,6 +266,10 @@ Item {
 
         function onPotionUsed() {
             Sounds.potion.play()
+        }
+
+        function onBossSlammed() {
+            quakeAnimation.restart()
         }
 
         function onDeadChanged() {
@@ -298,6 +322,26 @@ Item {
         }
     }
 
+    NumberAnimation {
+        target: root
+        property: "deathDistance"
+        running: root.deathView
+        from: 3.4
+        to: 2.4
+        duration: 3000
+        easing.type: Easing.InOutSine
+    }
+
+    SequentialAnimation {
+        id: quakeAnimation
+
+        NumberAnimation { target: root; property: "quake"; to: 1; duration: 50 }
+        NumberAnimation { target: root; property: "quake"; to: -0.8; duration: 90 }
+        NumberAnimation { target: root; property: "quake"; to: 0.5; duration: 100 }
+        NumberAnimation { target: root; property: "quake"; to: -0.25; duration: 110 }
+        NumberAnimation { target: root; property: "quake"; to: 0; duration: 150 }
+    }
+
     FrameAnimation {
         running: root.readyFrames >= 3 && !Level.dead
         onTriggered: {
@@ -321,6 +365,7 @@ Item {
 
             anchors.fill: parent
 
+            camera: root.deathView ? deathCamera : playerCamera
             environment: SceneEnvironment {
                 backgroundMode: SceneEnvironment.Color
                 clearColor: root.temple ? "#06232a" : (root.dungeon ? "#05070b" : "#2a3342")
@@ -338,9 +383,27 @@ Item {
                 }
             }
 
+            Node {
+                id: deathFocus
+
+                position: root.deathCameraSpot(0, 2.4)
+            }
+
             PerspectiveCamera {
-                position: Qt.vector3d(Level.playerX * root.tileSize, root.eyeHeight, Level.playerY * root.tileSize)
-                eulerRotation.x: Level.pitch * 180 / Math.PI
+                id: deathCamera
+
+                position: root.deathCameraSpot(root.deathDistance, 1.7)
+                lookAtNode: deathFocus
+                fieldOfView: 55
+                clipNear: 0.05
+                clipFar: 200
+            }
+
+            PerspectiveCamera {
+                id: playerCamera
+
+                position: Qt.vector3d(Level.playerX * root.tileSize, root.eyeHeight + root.quake * 0.08, Level.playerY * root.tileSize)
+                eulerRotation.x: Level.pitch * 180 / Math.PI + root.quake * 2.5
                 eulerRotation.y: -Level.facing * 180 / Math.PI - 90
                 eulerRotation.z: root.hurtTilt
                 fieldOfView: 70
@@ -442,6 +505,16 @@ Item {
                         }
                     }
                 }
+
+                TrollModel {
+                    id: troll
+
+                    active: Level.hasBoss
+                    visible: Level.hasBoss
+                    boss: Level.boss
+                    tileSize: root.tileSize
+                    animated: Level.boss.state !== "waiting" || Math.abs(Level.boss.x - Level.playerX) + Math.abs(Level.boss.y - Level.playerY) < 20
+                }
             }
 
             Node {
@@ -491,23 +564,8 @@ Item {
                 }
 
                 Node {
-                    visible: !root.ladderExit
+                    visible: !root.ladderExit && (!Level.hasBoss || (Level.boss.state === "dead" && !Level.bossCutscene))
                     position: Qt.vector3d((Level.exitX + 0.5) * root.tileSize, 0, (Level.exitY + 0.5) * root.tileSize)
-
-                    Model {
-                        y: 0.04
-                        source: "#Rectangle"
-                        eulerRotation.x: -90
-                        scale: Qt.vector3d(root.tileSize * 0.008, root.tileSize * 0.008, 1)
-                        castsShadows: false
-                        receivesShadows: false
-                        materials: PrincipledMaterial {
-                            lighting: PrincipledMaterial.NoLighting
-                            alphaMode: PrincipledMaterial.Blend
-                            baseColor: Level.exitUnlocked ? "#7ff4ff" : "#d9822b"
-                            opacity: 0.6
-                        }
-                    }
 
                     PointLight {
                         y: 1.2
@@ -582,11 +640,13 @@ Item {
 
         Hud {
             anchors.fill: parent
+            visible: !root.deathView
             flash: root.pulse
         }
 
         Minimap {
             anchors.fill: parent
+            visible: !root.deathView
             large: root.mapLarge
         }
     }
@@ -604,6 +664,22 @@ Item {
         anchors.fill: parent
         color: "#c01010"
         opacity: root.pulse * (0.25 + 0.2 * root.strength)
+    }
+
+    Rectangle {
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.top: parent.top
+        height: parent.height * 0.11 * root.letterbox
+        color: "#000000"
+    }
+
+    Rectangle {
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.bottom: parent.bottom
+        height: parent.height * 0.11 * root.letterbox
+        color: "#000000"
     }
 
     MouseArea {

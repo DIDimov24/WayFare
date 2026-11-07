@@ -134,10 +134,14 @@
     <None Include="qml\models\SeaweedModel.qml" />
     <None Include="qml\models\StumpModel.qml" />
     <None Include="qml\models\TempleWallMaterial.qml" />
+    <None Include="qml\models\TrollModel.qml" />
     <None Include="qml\shaders\TempleWall.frag" />
+    <None Include="qml\views\BossAudio.qml" />
+    <None Include="qml\views\CreditsRoll.qml" />
     <None Include="qml\views\DeathScreen.qml" />
     <None Include="qml\views\DungeonExitCutscene.qml" />
     <None Include="qml\views\DungeonScene.qml" />
+    <None Include="qml\views\EndingCutscene.qml" />
     <None Include="qml\views\FirstPersonWeapon.qml" />
     <None Include="qml\views\HowToPlayPanel.qml" />
     <None Include="qml\views\Hud.qml" />

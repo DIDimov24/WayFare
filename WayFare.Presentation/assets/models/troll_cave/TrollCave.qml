@@ -3650,2688 +3650,6 @@ Node {
 
     // Animations:
     Timeline {
-        id: troll_Cave_Frames_timeline
-        objectName: "Troll_Cave|Frames"
-        property real framesPerSecond: 1000
-        startFrame: 0
-        endFrame: 61500
-        currentFrame: 0
-        enabled: true
-        animations: TimelineAnimation {
-            duration: 61500
-            from: 0
-            to: 61500
-            running: true
-            loops: Animation.Infinite
-        }
-        KeyframeGroup {
-            target: leftForeArmTwist2_056
-            property: "position"
-            keyframeSource: "animations/leftForeArmTwist2_056_position_0.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArmTwist2_056
-            property: "rotation"
-            keyframeSource: "animations/leftForeArmTwist2_056_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: skt_Reference_06
-            property: "rotation"
-            keyframeSource: "animations/skt_Reference_06_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: ik_Spine3_02
-            property: "position"
-            keyframeSource: "animations/ik_Spine3_02_position_0.qad"
-        }
-        KeyframeGroup {
-            target: ik_Spine3_02
-            property: "rotation"
-            keyframeSource: "animations/ik_Spine3_02_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: ik_LeftHand_07
-            property: "position"
-            keyframeSource: "animations/ik_LeftHand_07_position_0.qad"
-        }
-        KeyframeGroup {
-            target: ik_LeftHand_07
-            property: "rotation"
-            keyframeSource: "animations/ik_LeftHand_07_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: leftHandMiddle3_054
-            property: "position"
-            keyframeSource: "animations/leftHandMiddle3_054_position_0.qad"
-        }
-        KeyframeGroup {
-            target: leftHandMiddle3_054
-            property: "rotation"
-            keyframeSource: "animations/leftHandMiddle3_054_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: ik_RightHand_03
-            property: "position"
-            keyframeSource: "animations/ik_RightHand_03_position_0.qad"
-        }
-        KeyframeGroup {
-            target: ik_RightHand_03
-            property: "rotation"
-            keyframeSource: "animations/ik_RightHand_03_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: skt_HeadCamera_08
-            property: "position"
-            keyframeSource: "animations/skt_HeadCamera_08_position_0.qad"
-        }
-        KeyframeGroup {
-            target: skt_HeadCamera_08
-            property: "rotation"
-            keyframeSource: "animations/skt_HeadCamera_08_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: leftHandMiddle1_052
-            property: "position"
-            keyframeSource: "animations/leftHandMiddle1_052_position_0.qad"
-        }
-        KeyframeGroup {
-            target: leftHandMiddle1_052
-            property: "rotation"
-            keyframeSource: "animations/leftHandMiddle1_052_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_Reference2_04
-            property: "position"
-            keyframeSource: "animations/skt_FX_Reference2_04_position_0.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_Reference2_04
-            property: "rotation"
-            keyframeSource: "animations/skt_FX_Reference2_04_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: leftArm_032
-            property: "position"
-            keyframeSource: "animations/leftArm_032_position_0.qad"
-        }
-        KeyframeGroup {
-            target: leftArm_032
-            property: "rotation"
-            keyframeSource: "animations/leftArm_032_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: rightLegTwist1_012
-            property: "position"
-            keyframeSource: "animations/rightLegTwist1_012_position_0.qad"
-        }
-        KeyframeGroup {
-            target: rightLegTwist1_012
-            property: "rotation"
-            keyframeSource: "animations/rightLegTwist1_012_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: leftHand_036
-            property: "position"
-            keyframeSource: "animations/leftHand_036_position_0.qad"
-        }
-        KeyframeGroup {
-            target: leftHand_036
-            property: "rotation"
-            keyframeSource: "animations/leftHand_036_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_Reference1_05
-            property: "position"
-            keyframeSource: "animations/skt_FX_Reference1_05_position_0.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_Reference1_05
-            property: "rotation"
-            keyframeSource: "animations/skt_FX_Reference1_05_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: rightFootIndex3_017
-            property: "position"
-            keyframeSource: "animations/rightFootIndex3_017_position_0.qad"
-        }
-        KeyframeGroup {
-            target: rightFootIndex3_017
-            property: "rotation"
-            keyframeSource: "animations/rightFootIndex3_017_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: skt_Head_062
-            property: "position"
-            keyframeSource: "animations/skt_Head_062_position_0.qad"
-        }
-        KeyframeGroup {
-            target: skt_Head_062
-            property: "rotation"
-            keyframeSource: "animations/skt_Head_062_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: rightFootIndex2_016
-            property: "position"
-            keyframeSource: "animations/rightFootIndex2_016_position_0.qad"
-        }
-        KeyframeGroup {
-            target: rightFootIndex2_016
-            property: "rotation"
-            keyframeSource: "animations/rightFootIndex2_016_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: rightFootIndex1_015
-            property: "position"
-            keyframeSource: "animations/rightFootIndex1_015_position_0.qad"
-        }
-        KeyframeGroup {
-            target: rightFootIndex1_015
-            property: "rotation"
-            keyframeSource: "animations/rightFootIndex1_015_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: rightFootBigToe3_020
-            property: "position"
-            keyframeSource: "animations/rightFootBigToe3_020_position_0.qad"
-        }
-        KeyframeGroup {
-            target: rightFootBigToe3_020
-            property: "rotation"
-            keyframeSource: "animations/rightFootBigToe3_020_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: jaw_065
-            property: "position"
-            keyframeSource: "animations/jaw_065_position_0.qad"
-        }
-        KeyframeGroup {
-            target: jaw_065
-            property: "rotation"
-            keyframeSource: "animations/jaw_065_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: rightFootBigToe2_019
-            property: "position"
-            keyframeSource: "animations/rightFootBigToe2_019_position_0.qad"
-        }
-        KeyframeGroup {
-            target: rightFootBigToe2_019
-            property: "rotation"
-            keyframeSource: "animations/rightFootBigToe2_019_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: rightFootBigToe1_018
-            property: "rotation"
-            keyframeSource: "animations/rightFootBigToe1_018_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: rightToeBaseEnd_021
-            property: "position"
-            keyframeSource: "animations/rightToeBaseEnd_021_position_0.qad"
-        }
-        KeyframeGroup {
-            target: rightToeBaseEnd_021
-            property: "rotation"
-            keyframeSource: "animations/rightToeBaseEnd_021_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: nose_067
-            property: "position"
-            keyframeSource: "animations/nose_067_position_0.qad"
-        }
-        KeyframeGroup {
-            target: nose_067
-            property: "rotation"
-            keyframeSource: "animations/nose_067_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: rightToeBase_014
-            property: "position"
-            keyframeSource: "animations/rightToeBase_014_position_0.qad"
-        }
-        KeyframeGroup {
-            target: rightToeBase_014
-            property: "rotation"
-            keyframeSource: "animations/rightToeBase_014_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: rightFoot_013
-            property: "position"
-            keyframeSource: "animations/rightFoot_013_position_0.qad"
-        }
-        KeyframeGroup {
-            target: rightFoot_013
-            property: "rotation"
-            keyframeSource: "animations/rightFoot_013_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: lip_upper_069
-            property: "position"
-            keyframeSource: "animations/lip_upper_069_position_0.qad"
-        }
-        KeyframeGroup {
-            target: lip_upper_069
-            property: "rotation"
-            keyframeSource: "animations/lip_upper_069_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: rightLeg_011
-            property: "position"
-            keyframeSource: "animations/rightLeg_011_position_0.qad"
-        }
-        KeyframeGroup {
-            target: rightLeg_011
-            property: "rotation"
-            keyframeSource: "animations/rightLeg_011_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: lip_lower_070
-            property: "position"
-            keyframeSource: "animations/lip_lower_070_position_0.qad"
-        }
-        KeyframeGroup {
-            target: lip_lower_070
-            property: "rotation"
-            keyframeSource: "animations/lip_lower_070_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: rightUpLegTwist1_022
-            property: "position"
-            keyframeSource: "animations/rightUpLegTwist1_022_position_0.qad"
-        }
-        KeyframeGroup {
-            target: rightUpLegTwist1_022
-            property: "rotation"
-            keyframeSource: "animations/rightUpLegTwist1_022_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: rightUpLegTwist2_023
-            property: "position"
-            keyframeSource: "animations/rightUpLegTwist2_023_position_0.qad"
-        }
-        KeyframeGroup {
-            target: rightUpLegTwist2_023
-            property: "rotation"
-            keyframeSource: "animations/rightUpLegTwist2_023_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_in_right_072
-            property: "position"
-            keyframeSource: "animations/eye_lid_in_right_072_position_0.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_in_right_072
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_in_right_072_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: rightUpLeg_010
-            property: "rotation"
-            keyframeSource: "animations/rightUpLeg_010_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_out_right_073
-            property: "position"
-            keyframeSource: "animations/eye_lid_out_right_073_position_0.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_out_right_073
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_out_right_073_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_Hips_024
-            property: "position"
-            keyframeSource: "animations/skt_FX_Hips_024_position_0.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_Hips_024
-            property: "rotation"
-            keyframeSource: "animations/skt_FX_Hips_024_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: skt_Back_029
-            property: "position"
-            keyframeSource: "animations/skt_Back_029_position_0.qad"
-        }
-        KeyframeGroup {
-            target: skt_Back_029
-            property: "rotation"
-            keyframeSource: "animations/skt_Back_029_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: skt_Chest_030
-            property: "position"
-            keyframeSource: "animations/skt_Chest_030_position_0.qad"
-        }
-        KeyframeGroup {
-            target: skt_Chest_030
-            property: "rotation"
-            keyframeSource: "animations/skt_Chest_030_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArmTwist3_034
-            property: "position"
-            keyframeSource: "animations/leftForeArmTwist3_034_position_0.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArmTwist3_034
-            property: "rotation"
-            keyframeSource: "animations/leftForeArmTwist3_034_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArmTwist1_035
-            property: "position"
-            keyframeSource: "animations/leftForeArmTwist1_035_position_0.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArmTwist1_035
-            property: "rotation"
-            keyframeSource: "animations/leftForeArmTwist1_035_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky4_041
-            property: "position"
-            keyframeSource: "animations/leftHandPinky4_041_position_0.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky4_041
-            property: "rotation"
-            keyframeSource: "animations/leftHandPinky4_041_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky3_040
-            property: "position"
-            keyframeSource: "animations/leftHandPinky3_040_position_0.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky3_040
-            property: "rotation"
-            keyframeSource: "animations/leftHandPinky3_040_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky2_039
-            property: "position"
-            keyframeSource: "animations/leftHandPinky2_039_position_0.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky2_039
-            property: "rotation"
-            keyframeSource: "animations/leftHandPinky2_039_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky1_038
-            property: "position"
-            keyframeSource: "animations/leftHandPinky1_038_position_0.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky1_038
-            property: "rotation"
-            keyframeSource: "animations/leftHandPinky1_038_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: leftInHandPinky_037
-            property: "rotation"
-            keyframeSource: "animations/leftInHandPinky_037_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: skt_LeftHand_042
-            property: "position"
-            keyframeSource: "animations/skt_LeftHand_042_position_0.qad"
-        }
-        KeyframeGroup {
-            target: skt_LeftHand_042
-            property: "rotation"
-            keyframeSource: "animations/skt_LeftHand_042_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex4_047
-            property: "position"
-            keyframeSource: "animations/leftHandIndex4_047_position_0.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex4_047
-            property: "rotation"
-            keyframeSource: "animations/leftHandIndex4_047_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex3_046
-            property: "position"
-            keyframeSource: "animations/leftHandIndex3_046_position_0.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex3_046
-            property: "rotation"
-            keyframeSource: "animations/leftHandIndex3_046_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex2_045
-            property: "position"
-            keyframeSource: "animations/leftHandIndex2_045_position_0.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex2_045
-            property: "rotation"
-            keyframeSource: "animations/leftHandIndex2_045_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex1_044
-            property: "position"
-            keyframeSource: "animations/leftHandIndex1_044_position_0.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex1_044
-            property: "rotation"
-            keyframeSource: "animations/leftHandIndex1_044_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: leftInHandIndex_043
-            property: "position"
-            keyframeSource: "animations/leftInHandIndex_043_position_0.qad"
-        }
-        KeyframeGroup {
-            target: leftInHandIndex_043
-            property: "rotation"
-            keyframeSource: "animations/leftInHandIndex_043_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_LeftHand_00
-            property: "position"
-            keyframeSource: "animations/skt_FX_LeftHand_00_position_0.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_LeftHand_00
-            property: "rotation"
-            keyframeSource: "animations/skt_FX_LeftHand_00_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb4_050
-            property: "position"
-            keyframeSource: "animations/leftHandThumb4_050_position_0.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb4_050
-            property: "rotation"
-            keyframeSource: "animations/leftHandThumb4_050_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb3_049
-            property: "position"
-            keyframeSource: "animations/leftHandThumb3_049_position_0.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb3_049
-            property: "rotation"
-            keyframeSource: "animations/leftHandThumb3_049_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb2_048
-            property: "position"
-            keyframeSource: "animations/leftHandThumb2_048_position_0.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb2_048
-            property: "rotation"
-            keyframeSource: "animations/leftHandThumb2_048_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb1_01
-            property: "position"
-            keyframeSource: "animations/leftHandThumb1_01_position_0.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb1_01
-            property: "rotation"
-            keyframeSource: "animations/leftHandThumb1_01_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: leftHandMiddle4_055
-            property: "position"
-            keyframeSource: "animations/leftHandMiddle4_055_position_0.qad"
-        }
-        KeyframeGroup {
-            target: leftHandMiddle4_055
-            property: "rotation"
-            keyframeSource: "animations/leftHandMiddle4_055_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: leftHandMiddle2_053
-            property: "position"
-            keyframeSource: "animations/leftHandMiddle2_053_position_0.qad"
-        }
-        KeyframeGroup {
-            target: leftHandMiddle2_053
-            property: "rotation"
-            keyframeSource: "animations/leftHandMiddle2_053_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: leftInHandMiddle_051
-            property: "position"
-            keyframeSource: "animations/leftInHandMiddle_051_position_0.qad"
-        }
-        KeyframeGroup {
-            target: leftInHandMiddle_051
-            property: "rotation"
-            keyframeSource: "animations/leftInHandMiddle_051_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArm_033
-            property: "position"
-            keyframeSource: "animations/leftForeArm_033_position_0.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArm_033
-            property: "rotation"
-            keyframeSource: "animations/leftForeArm_033_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: leftArmTwist1_057
-            property: "position"
-            keyframeSource: "animations/leftArmTwist1_057_position_0.qad"
-        }
-        KeyframeGroup {
-            target: leftArmTwist1_057
-            property: "rotation"
-            keyframeSource: "animations/leftArmTwist1_057_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: leftArmTwist2_058
-            property: "position"
-            keyframeSource: "animations/leftArmTwist2_058_position_0.qad"
-        }
-        KeyframeGroup {
-            target: leftArmTwist2_058
-            property: "rotation"
-            keyframeSource: "animations/leftArmTwist2_058_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: leftShoulder_031
-            property: "position"
-            keyframeSource: "animations/leftShoulder_031_position_0.qad"
-        }
-        KeyframeGroup {
-            target: leftShoulder_031
-            property: "rotation"
-            keyframeSource: "animations/leftShoulder_031_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: headEnd_063
-            property: "position"
-            keyframeSource: "animations/headEnd_063_position_0.qad"
-        }
-        KeyframeGroup {
-            target: headEnd_063
-            property: "rotation"
-            keyframeSource: "animations/headEnd_063_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: eye_left_066
-            property: "position"
-            keyframeSource: "animations/eye_left_066_position_0.qad"
-        }
-        KeyframeGroup {
-            target: eye_left_066
-            property: "rotation"
-            keyframeSource: "animations/eye_left_066_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: lip_corners_068
-            property: "position"
-            keyframeSource: "animations/lip_corners_068_position_0.qad"
-        }
-        KeyframeGroup {
-            target: lip_corners_068
-            property: "rotation"
-            keyframeSource: "animations/lip_corners_068_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_right_071
-            property: "position"
-            keyframeSource: "animations/eye_lid_right_071_position_0.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_right_071
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_right_071_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: tongue_06_081
-            property: "position"
-            keyframeSource: "animations/tongue_06_081_position_0.qad"
-        }
-        KeyframeGroup {
-            target: tongue_06_081
-            property: "rotation"
-            keyframeSource: "animations/tongue_06_081_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: tongue_05_080
-            property: "position"
-            keyframeSource: "animations/tongue_05_080_position_0.qad"
-        }
-        KeyframeGroup {
-            target: tongue_05_080
-            property: "rotation"
-            keyframeSource: "animations/tongue_05_080_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: tongue_04_079
-            property: "position"
-            keyframeSource: "animations/tongue_04_079_position_0.qad"
-        }
-        KeyframeGroup {
-            target: tongue_04_079
-            property: "rotation"
-            keyframeSource: "animations/tongue_04_079_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: tongue_03_078
-            property: "position"
-            keyframeSource: "animations/tongue_03_078_position_0.qad"
-        }
-        KeyframeGroup {
-            target: tongue_03_078
-            property: "rotation"
-            keyframeSource: "animations/tongue_03_078_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: tongue_02_077
-            property: "position"
-            keyframeSource: "animations/tongue_02_077_position_0.qad"
-        }
-        KeyframeGroup {
-            target: tongue_02_077
-            property: "rotation"
-            keyframeSource: "animations/tongue_02_077_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: tongue_01_076
-            property: "position"
-            keyframeSource: "animations/tongue_01_076_position_0.qad"
-        }
-        KeyframeGroup {
-            target: tongue_01_076
-            property: "rotation"
-            keyframeSource: "animations/tongue_01_076_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: tongue_jaw_075
-            property: "position"
-            keyframeSource: "animations/tongue_jaw_075_position_0.qad"
-        }
-        KeyframeGroup {
-            target: tongue_jaw_075
-            property: "rotation"
-            keyframeSource: "animations/tongue_jaw_075_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: teeth_lwr_082
-            property: "position"
-            keyframeSource: "animations/teeth_lwr_082_position_0.qad"
-        }
-        KeyframeGroup {
-            target: teeth_lwr_082
-            property: "rotation"
-            keyframeSource: "animations/teeth_lwr_082_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: teeth_upr_083
-            property: "position"
-            keyframeSource: "animations/teeth_upr_083_position_0.qad"
-        }
-        KeyframeGroup {
-            target: teeth_upr_083
-            property: "rotation"
-            keyframeSource: "animations/teeth_upr_083_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: mouth_bag_074
-            property: "position"
-            keyframeSource: "animations/mouth_bag_074_position_0.qad"
-        }
-        KeyframeGroup {
-            target: mouth_bag_074
-            property: "rotation"
-            keyframeSource: "animations/mouth_bag_074_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: eye_right_084
-            property: "position"
-            keyframeSource: "animations/eye_right_084_position_0.qad"
-        }
-        KeyframeGroup {
-            target: eye_right_084
-            property: "rotation"
-            keyframeSource: "animations/eye_right_084_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_out_left_086
-            property: "position"
-            keyframeSource: "animations/eye_lid_out_left_086_position_0.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_out_left_086
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_out_left_086_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_in_left_087
-            property: "position"
-            keyframeSource: "animations/eye_lid_in_left_087_position_0.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_in_left_087
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_in_left_087_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_left_085
-            property: "position"
-            keyframeSource: "animations/eye_lid_left_085_position_0.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_left_085
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_left_085_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: face_064
-            property: "position"
-            keyframeSource: "animations/face_064_position_0.qad"
-        }
-        KeyframeGroup {
-            target: face_064
-            property: "rotation"
-            keyframeSource: "animations/face_064_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: head_061
-            property: "position"
-            keyframeSource: "animations/head_061_position_0.qad"
-        }
-        KeyframeGroup {
-            target: head_061
-            property: "rotation"
-            keyframeSource: "animations/head_061_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: neck1_060
-            property: "position"
-            keyframeSource: "animations/neck1_060_position_0.qad"
-        }
-        KeyframeGroup {
-            target: neck1_060
-            property: "rotation"
-            keyframeSource: "animations/neck1_060_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: neck_059
-            property: "position"
-            keyframeSource: "animations/neck_059_position_0.qad"
-        }
-        KeyframeGroup {
-            target: neck_059
-            property: "rotation"
-            keyframeSource: "animations/neck_059_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: rightArmTwist1_090
-            property: "position"
-            keyframeSource: "animations/rightArmTwist1_090_position_0.qad"
-        }
-        KeyframeGroup {
-            target: rightArmTwist1_090
-            property: "rotation"
-            keyframeSource: "animations/rightArmTwist1_090_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_RightHand_093
-            property: "position"
-            keyframeSource: "animations/skt_FX_RightHand_093_position_0.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_RightHand_093
-            property: "rotation"
-            keyframeSource: "animations/skt_FX_RightHand_093_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb4_097
-            property: "position"
-            keyframeSource: "animations/rightHandThumb4_097_position_0.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb4_097
-            property: "rotation"
-            keyframeSource: "animations/rightHandThumb4_097_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb3_096
-            property: "position"
-            keyframeSource: "animations/rightHandThumb3_096_position_0.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb3_096
-            property: "rotation"
-            keyframeSource: "animations/rightHandThumb3_096_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb2_095
-            property: "position"
-            keyframeSource: "animations/rightHandThumb2_095_position_0.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb2_095
-            property: "rotation"
-            keyframeSource: "animations/rightHandThumb2_095_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb1_094
-            property: "rotation"
-            keyframeSource: "animations/rightHandThumb1_094_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle4_0102
-            property: "position"
-            keyframeSource: "animations/rightHandMiddle4_0102_position_0.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle4_0102
-            property: "rotation"
-            keyframeSource: "animations/rightHandMiddle4_0102_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle3_0101
-            property: "position"
-            keyframeSource: "animations/rightHandMiddle3_0101_position_0.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle3_0101
-            property: "rotation"
-            keyframeSource: "animations/rightHandMiddle3_0101_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle2_0100
-            property: "position"
-            keyframeSource: "animations/rightHandMiddle2_0100_position_0.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle2_0100
-            property: "rotation"
-            keyframeSource: "animations/rightHandMiddle2_0100_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle1_099
-            property: "position"
-            keyframeSource: "animations/rightHandMiddle1_099_position_0.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle1_099
-            property: "rotation"
-            keyframeSource: "animations/rightHandMiddle1_099_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: rightInHandMiddle_098
-            property: "position"
-            keyframeSource: "animations/rightInHandMiddle_098_position_0.qad"
-        }
-        KeyframeGroup {
-            target: rightInHandMiddle_098
-            property: "rotation"
-            keyframeSource: "animations/rightInHandMiddle_098_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: skt_RightHand_0103
-            property: "position"
-            keyframeSource: "animations/skt_RightHand_0103_position_0.qad"
-        }
-        KeyframeGroup {
-            target: skt_RightHand_0103
-            property: "rotation"
-            keyframeSource: "animations/skt_RightHand_0103_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: rightHandIndex4_0108
-            property: "position"
-            keyframeSource: "animations/rightHandIndex4_0108_position_0.qad"
-        }
-        KeyframeGroup {
-            target: rightHandIndex4_0108
-            property: "rotation"
-            keyframeSource: "animations/rightHandIndex4_0108_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: rightHandIndex3_0107
-            property: "position"
-            keyframeSource: "animations/rightHandIndex3_0107_position_0.qad"
-        }
-        KeyframeGroup {
-            target: rightHandIndex3_0107
-            property: "rotation"
-            keyframeSource: "animations/rightHandIndex3_0107_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: rightHandIndex2_0106
-            property: "position"
-            keyframeSource: "animations/rightHandIndex2_0106_position_0.qad"
-        }
-        KeyframeGroup {
-            target: rightHandIndex2_0106
-            property: "rotation"
-            keyframeSource: "animations/rightHandIndex2_0106_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: rightHandIndex1_0105
-            property: "position"
-            keyframeSource: "animations/rightHandIndex1_0105_position_0.qad"
-        }
-        KeyframeGroup {
-            target: rightHandIndex1_0105
-            property: "rotation"
-            keyframeSource: "animations/rightHandIndex1_0105_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: rightInHandIndex_0104
-            property: "position"
-            keyframeSource: "animations/rightInHandIndex_0104_position_0.qad"
-        }
-        KeyframeGroup {
-            target: rightInHandIndex_0104
-            property: "rotation"
-            keyframeSource: "animations/rightInHandIndex_0104_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: rightHandPinky4_0113
-            property: "position"
-            keyframeSource: "animations/rightHandPinky4_0113_position_0.qad"
-        }
-        KeyframeGroup {
-            target: rightHandPinky4_0113
-            property: "rotation"
-            keyframeSource: "animations/rightHandPinky4_0113_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: rightHandPinky3_0112
-            property: "position"
-            keyframeSource: "animations/rightHandPinky3_0112_position_0.qad"
-        }
-        KeyframeGroup {
-            target: rightHandPinky3_0112
-            property: "rotation"
-            keyframeSource: "animations/rightHandPinky3_0112_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: rightHandPinky2_0111
-            property: "position"
-            keyframeSource: "animations/rightHandPinky2_0111_position_0.qad"
-        }
-        KeyframeGroup {
-            target: rightHandPinky2_0111
-            property: "rotation"
-            keyframeSource: "animations/rightHandPinky2_0111_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: rightHandPinky1_0110
-            property: "rotation"
-            keyframeSource: "animations/rightHandPinky1_0110_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: rightInHandPinky_0109
-            property: "position"
-            keyframeSource: "animations/rightInHandPinky_0109_position_0.qad"
-        }
-        KeyframeGroup {
-            target: rightInHandPinky_0109
-            property: "rotation"
-            keyframeSource: "animations/rightInHandPinky_0109_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: rightHand_092
-            property: "position"
-            keyframeSource: "animations/rightHand_092_position_0.qad"
-        }
-        KeyframeGroup {
-            target: rightHand_092
-            property: "rotation"
-            keyframeSource: "animations/rightHand_092_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArmTwist3_0114
-            property: "position"
-            keyframeSource: "animations/rightForeArmTwist3_0114_position_0.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArmTwist3_0114
-            property: "rotation"
-            keyframeSource: "animations/rightForeArmTwist3_0114_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArmTwist2_0115
-            property: "position"
-            keyframeSource: "animations/rightForeArmTwist2_0115_position_0.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArmTwist2_0115
-            property: "rotation"
-            keyframeSource: "animations/rightForeArmTwist2_0115_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArmTwist1_0116
-            property: "position"
-            keyframeSource: "animations/rightForeArmTwist1_0116_position_0.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArmTwist1_0116
-            property: "rotation"
-            keyframeSource: "animations/rightForeArmTwist1_0116_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArm_091
-            property: "position"
-            keyframeSource: "animations/rightForeArm_091_position_0.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArm_091
-            property: "rotation"
-            keyframeSource: "animations/rightForeArm_091_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: rightArmTwist2_0117
-            property: "position"
-            keyframeSource: "animations/rightArmTwist2_0117_position_0.qad"
-        }
-        KeyframeGroup {
-            target: rightArmTwist2_0117
-            property: "rotation"
-            keyframeSource: "animations/rightArmTwist2_0117_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: rightArm_089
-            property: "position"
-            keyframeSource: "animations/rightArm_089_position_0.qad"
-        }
-        KeyframeGroup {
-            target: rightArm_089
-            property: "rotation"
-            keyframeSource: "animations/rightArm_089_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: rightShoulder_088
-            property: "position"
-            keyframeSource: "animations/rightShoulder_088_position_0.qad"
-        }
-        KeyframeGroup {
-            target: rightShoulder_088
-            property: "rotation"
-            keyframeSource: "animations/rightShoulder_088_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: spine3_028
-            property: "position"
-            keyframeSource: "animations/spine3_028_position_0.qad"
-        }
-        KeyframeGroup {
-            target: spine3_028
-            property: "rotation"
-            keyframeSource: "animations/spine3_028_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: spine2_027
-            property: "position"
-            keyframeSource: "animations/spine2_027_position_0.qad"
-        }
-        KeyframeGroup {
-            target: spine2_027
-            property: "rotation"
-            keyframeSource: "animations/spine2_027_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: spine1_026
-            property: "position"
-            keyframeSource: "animations/spine1_026_position_0.qad"
-        }
-        KeyframeGroup {
-            target: spine1_026
-            property: "rotation"
-            keyframeSource: "animations/spine1_026_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: spine_025
-            property: "position"
-            keyframeSource: "animations/spine_025_position_0.qad"
-        }
-        KeyframeGroup {
-            target: spine_025
-            property: "rotation"
-            keyframeSource: "animations/spine_025_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: leftLegTwist1_0120
-            property: "position"
-            keyframeSource: "animations/leftLegTwist1_0120_position_0.qad"
-        }
-        KeyframeGroup {
-            target: leftLegTwist1_0120
-            property: "rotation"
-            keyframeSource: "animations/leftLegTwist1_0120_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: leftFootBigToe3_0125
-            property: "position"
-            keyframeSource: "animations/leftFootBigToe3_0125_position_0.qad"
-        }
-        KeyframeGroup {
-            target: leftFootBigToe3_0125
-            property: "rotation"
-            keyframeSource: "animations/leftFootBigToe3_0125_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: leftFootBigToe2_0124
-            property: "position"
-            keyframeSource: "animations/leftFootBigToe2_0124_position_0.qad"
-        }
-        KeyframeGroup {
-            target: leftFootBigToe2_0124
-            property: "rotation"
-            keyframeSource: "animations/leftFootBigToe2_0124_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: leftFootBigToe1_0123
-            property: "rotation"
-            keyframeSource: "animations/leftFootBigToe1_0123_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: leftFootIndex3_0128
-            property: "position"
-            keyframeSource: "animations/leftFootIndex3_0128_position_0.qad"
-        }
-        KeyframeGroup {
-            target: leftFootIndex3_0128
-            property: "rotation"
-            keyframeSource: "animations/leftFootIndex3_0128_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: leftFootIndex2_0127
-            property: "position"
-            keyframeSource: "animations/leftFootIndex2_0127_position_0.qad"
-        }
-        KeyframeGroup {
-            target: leftFootIndex2_0127
-            property: "rotation"
-            keyframeSource: "animations/leftFootIndex2_0127_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: leftFootIndex1_0126
-            property: "position"
-            keyframeSource: "animations/leftFootIndex1_0126_position_0.qad"
-        }
-        KeyframeGroup {
-            target: leftFootIndex1_0126
-            property: "rotation"
-            keyframeSource: "animations/leftFootIndex1_0126_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: leftToeBaseEnd_0129
-            property: "position"
-            keyframeSource: "animations/leftToeBaseEnd_0129_position_0.qad"
-        }
-        KeyframeGroup {
-            target: leftToeBaseEnd_0129
-            property: "rotation"
-            keyframeSource: "animations/leftToeBaseEnd_0129_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: leftToeBase_0122
-            property: "position"
-            keyframeSource: "animations/leftToeBase_0122_position_0.qad"
-        }
-        KeyframeGroup {
-            target: leftToeBase_0122
-            property: "rotation"
-            keyframeSource: "animations/leftToeBase_0122_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: leftFoot_0121
-            property: "position"
-            keyframeSource: "animations/leftFoot_0121_position_0.qad"
-        }
-        KeyframeGroup {
-            target: leftFoot_0121
-            property: "rotation"
-            keyframeSource: "animations/leftFoot_0121_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: leftLeg_0119
-            property: "position"
-            keyframeSource: "animations/leftLeg_0119_position_0.qad"
-        }
-        KeyframeGroup {
-            target: leftLeg_0119
-            property: "rotation"
-            keyframeSource: "animations/leftLeg_0119_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: leftUpLegTwist1_0130
-            property: "position"
-            keyframeSource: "animations/leftUpLegTwist1_0130_position_0.qad"
-        }
-        KeyframeGroup {
-            target: leftUpLegTwist1_0130
-            property: "rotation"
-            keyframeSource: "animations/leftUpLegTwist1_0130_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: leftUpLegTwist2_0131
-            property: "position"
-            keyframeSource: "animations/leftUpLegTwist2_0131_position_0.qad"
-        }
-        KeyframeGroup {
-            target: leftUpLegTwist2_0131
-            property: "rotation"
-            keyframeSource: "animations/leftUpLegTwist2_0131_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: leftUpLeg_0118
-            property: "rotation"
-            keyframeSource: "animations/leftUpLeg_0118_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: skt_Hips_0132
-            property: "position"
-            keyframeSource: "animations/skt_Hips_0132_position_0.qad"
-        }
-        KeyframeGroup {
-            target: skt_Hips_0132
-            property: "rotation"
-            keyframeSource: "animations/skt_Hips_0132_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: hips_09
-            property: "position"
-            keyframeSource: "animations/hips_09_position_0.qad"
-        }
-        KeyframeGroup {
-            target: hips_09
-            property: "rotation"
-            keyframeSource: "animations/hips_09_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: ik_Hips_0133
-            property: "position"
-            keyframeSource: "animations/ik_Hips_0133_position_0.qad"
-        }
-        KeyframeGroup {
-            target: ik_Hips_0133
-            property: "rotation"
-            keyframeSource: "animations/ik_Hips_0133_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: ik_LeftFoot_0134
-            property: "position"
-            keyframeSource: "animations/ik_LeftFoot_0134_position_0.qad"
-        }
-        KeyframeGroup {
-            target: ik_LeftFoot_0134
-            property: "rotation"
-            keyframeSource: "animations/ik_LeftFoot_0134_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: ik_RightFoot_0135
-            property: "position"
-            keyframeSource: "animations/ik_RightFoot_0135_position_0.qad"
-        }
-        KeyframeGroup {
-            target: ik_RightFoot_0135
-            property: "rotation"
-            keyframeSource: "animations/ik_RightFoot_0135_rotation_0.qad"
-        }
-        KeyframeGroup {
-            target: ik_Head_0136
-            property: "position"
-            keyframeSource: "animations/ik_Head_0136_position_0.qad"
-        }
-        KeyframeGroup {
-            target: ik_Head_0136
-            property: "rotation"
-            keyframeSource: "animations/ik_Head_0136_rotation_0.qad"
-        }
-    }
-    Timeline {
-        id: frames000_timeline
-        objectName: "Frames000"
-        property real framesPerSecond: 1000
-        startFrame: 0
-        endFrame: 2067
-        currentFrame: 0
-        enabled: true
-        animations: TimelineAnimation {
-            duration: 2067
-            from: 0
-            to: 2067
-            running: true
-            loops: Animation.Infinite
-        }
-        KeyframeGroup {
-            target: rightFootIndex3_017
-            property: "position"
-            keyframeSource: "animations/rightFootIndex3_017_position_1.qad"
-        }
-        KeyframeGroup {
-            target: rightFootIndex3_017
-            property: "rotation"
-            keyframeSource: "animations/rightFootIndex3_017_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: ik_Spine3_02
-            property: "position"
-            keyframeSource: "animations/ik_Spine3_02_position_1.qad"
-        }
-        KeyframeGroup {
-            target: ik_Spine3_02
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(1, 2.36187e-17, 0, 0)
-            }
-        }
-        KeyframeGroup {
-            target: rightFootIndex1_015
-            property: "rotation"
-            keyframeSource: "animations/rightFootIndex1_015_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: ik_LeftHand_07
-            property: "position"
-            keyframeSource: "animations/ik_LeftHand_07_position_1.qad"
-        }
-        KeyframeGroup {
-            target: ik_LeftHand_07
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(1, 2.36187e-17, 0, 0)
-            }
-        }
-        KeyframeGroup {
-            target: leftHandMiddle3_054
-            property: "position"
-            keyframeSource: "animations/leftHandMiddle3_054_position_1.qad"
-        }
-        KeyframeGroup {
-            target: leftHandMiddle3_054
-            property: "rotation"
-            keyframeSource: "animations/leftHandMiddle3_054_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: ik_RightHand_03
-            property: "position"
-            keyframeSource: "animations/ik_RightHand_03_position_1.qad"
-        }
-        KeyframeGroup {
-            target: ik_RightHand_03
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(1, 2.36187e-17, 0, 0)
-            }
-        }
-        KeyframeGroup {
-            target: skt_HeadCamera_08
-            property: "position"
-            keyframeSource: "animations/skt_HeadCamera_08_position_1.qad"
-        }
-        KeyframeGroup {
-            target: skt_HeadCamera_08
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(1, -5.68198e-14, 0, 0)
-            }
-        }
-        KeyframeGroup {
-            target: leftArm_032
-            property: "position"
-            keyframeSource: "animations/leftArm_032_position_1.qad"
-        }
-        KeyframeGroup {
-            target: leftArm_032
-            property: "rotation"
-            keyframeSource: "animations/leftArm_032_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: rightLegTwist1_012
-            property: "position"
-            keyframeSource: "animations/rightLegTwist1_012_position_1.qad"
-        }
-        KeyframeGroup {
-            target: rightLegTwist1_012
-            property: "rotation"
-            keyframeSource: "animations/rightLegTwist1_012_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: skt_Head_062
-            property: "position"
-            keyframeSource: "animations/skt_Head_062_position_1.qad"
-        }
-        KeyframeGroup {
-            target: skt_Head_062
-            property: "rotation"
-            keyframeSource: "animations/skt_Head_062_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: rightFootIndex2_016
-            property: "position"
-            keyframeSource: "animations/rightFootIndex2_016_position_1.qad"
-        }
-        KeyframeGroup {
-            target: rightFootIndex2_016
-            property: "rotation"
-            keyframeSource: "animations/rightFootIndex2_016_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: rightFootBigToe3_020
-            property: "position"
-            keyframeSource: "animations/rightFootBigToe3_020_position_1.qad"
-        }
-        KeyframeGroup {
-            target: rightFootBigToe3_020
-            property: "rotation"
-            keyframeSource: "animations/rightFootBigToe3_020_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: jaw_065
-            property: "position"
-            keyframeSource: "animations/jaw_065_position_1.qad"
-        }
-        KeyframeGroup {
-            target: jaw_065
-            property: "rotation"
-            keyframeSource: "animations/jaw_065_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: rightFootBigToe2_019
-            property: "position"
-            keyframeSource: "animations/rightFootBigToe2_019_position_1.qad"
-        }
-        KeyframeGroup {
-            target: rightFootBigToe2_019
-            property: "rotation"
-            keyframeSource: "animations/rightFootBigToe2_019_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: rightFootBigToe1_018
-            property: "rotation"
-            keyframeSource: "animations/rightFootBigToe1_018_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: rightToeBaseEnd_021
-            property: "position"
-            keyframeSource: "animations/rightToeBaseEnd_021_position_1.qad"
-        }
-        KeyframeGroup {
-            target: rightToeBaseEnd_021
-            property: "rotation"
-            keyframeSource: "animations/rightToeBaseEnd_021_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: nose_067
-            property: "position"
-            keyframeSource: "animations/nose_067_position_1.qad"
-        }
-        KeyframeGroup {
-            target: nose_067
-            property: "rotation"
-            keyframeSource: "animations/nose_067_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: rightToeBase_014
-            property: "position"
-            keyframeSource: "animations/rightToeBase_014_position_1.qad"
-        }
-        KeyframeGroup {
-            target: rightToeBase_014
-            property: "rotation"
-            keyframeSource: "animations/rightToeBase_014_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: rightFoot_013
-            property: "position"
-            keyframeSource: "animations/rightFoot_013_position_1.qad"
-        }
-        KeyframeGroup {
-            target: rightFoot_013
-            property: "rotation"
-            keyframeSource: "animations/rightFoot_013_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: lip_upper_069
-            property: "position"
-            keyframeSource: "animations/lip_upper_069_position_1.qad"
-        }
-        KeyframeGroup {
-            target: lip_upper_069
-            property: "rotation"
-            keyframeSource: "animations/lip_upper_069_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: rightLeg_011
-            property: "position"
-            keyframeSource: "animations/rightLeg_011_position_1.qad"
-        }
-        KeyframeGroup {
-            target: rightLeg_011
-            property: "rotation"
-            keyframeSource: "animations/rightLeg_011_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: lip_lower_070
-            property: "position"
-            keyframeSource: "animations/lip_lower_070_position_1.qad"
-        }
-        KeyframeGroup {
-            target: lip_lower_070
-            property: "rotation"
-            keyframeSource: "animations/lip_lower_070_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: rightUpLegTwist1_022
-            property: "position"
-            keyframeSource: "animations/rightUpLegTwist1_022_position_1.qad"
-        }
-        KeyframeGroup {
-            target: rightUpLegTwist1_022
-            property: "rotation"
-            keyframeSource: "animations/rightUpLegTwist1_022_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: rightUpLegTwist2_023
-            property: "position"
-            keyframeSource: "animations/rightUpLegTwist2_023_position_1.qad"
-        }
-        KeyframeGroup {
-            target: rightUpLegTwist2_023
-            property: "rotation"
-            keyframeSource: "animations/rightUpLegTwist2_023_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_in_right_072
-            property: "position"
-            keyframeSource: "animations/eye_lid_in_right_072_position_1.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_in_right_072
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_in_right_072_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: rightUpLeg_010
-            property: "rotation"
-            keyframeSource: "animations/rightUpLeg_010_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_out_right_073
-            property: "position"
-            keyframeSource: "animations/eye_lid_out_right_073_position_1.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_out_right_073
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_out_right_073_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_Hips_024
-            property: "position"
-            keyframeSource: "animations/skt_FX_Hips_024_position_1.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_Hips_024
-            property: "rotation"
-            keyframeSource: "animations/skt_FX_Hips_024_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: skt_Back_029
-            property: "position"
-            keyframeSource: "animations/skt_Back_029_position_1.qad"
-        }
-        KeyframeGroup {
-            target: skt_Back_029
-            property: "rotation"
-            keyframeSource: "animations/skt_Back_029_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: tongue_05_080
-            property: "position"
-            keyframeSource: "animations/tongue_05_080_position_1.qad"
-        }
-        KeyframeGroup {
-            target: tongue_05_080
-            property: "rotation"
-            keyframeSource: "animations/tongue_05_080_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: skt_Chest_030
-            property: "position"
-            keyframeSource: "animations/skt_Chest_030_position_1.qad"
-        }
-        KeyframeGroup {
-            target: skt_Chest_030
-            property: "rotation"
-            keyframeSource: "animations/skt_Chest_030_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArmTwist3_034
-            property: "position"
-            keyframeSource: "animations/leftForeArmTwist3_034_position_1.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArmTwist3_034
-            property: "rotation"
-            keyframeSource: "animations/leftForeArmTwist3_034_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArmTwist1_035
-            property: "position"
-            keyframeSource: "animations/leftForeArmTwist1_035_position_1.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArmTwist1_035
-            property: "rotation"
-            keyframeSource: "animations/leftForeArmTwist1_035_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky4_041
-            property: "position"
-            keyframeSource: "animations/leftHandPinky4_041_position_1.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky4_041
-            property: "rotation"
-            keyframeSource: "animations/leftHandPinky4_041_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky3_040
-            property: "position"
-            keyframeSource: "animations/leftHandPinky3_040_position_1.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky3_040
-            property: "rotation"
-            keyframeSource: "animations/leftHandPinky3_040_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky2_039
-            property: "position"
-            keyframeSource: "animations/leftHandPinky2_039_position_1.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky2_039
-            property: "rotation"
-            keyframeSource: "animations/leftHandPinky2_039_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky1_038
-            property: "rotation"
-            keyframeSource: "animations/leftHandPinky1_038_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: leftInHandPinky_037
-            property: "position"
-            keyframeSource: "animations/leftInHandPinky_037_position_1.qad"
-        }
-        KeyframeGroup {
-            target: leftInHandPinky_037
-            property: "rotation"
-            keyframeSource: "animations/leftInHandPinky_037_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: skt_LeftHand_042
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(48.0552, 20.9808, 0.72522)
-            }
-        }
-        KeyframeGroup {
-            target: skt_LeftHand_042
-            property: "rotation"
-            keyframeSource: "animations/skt_LeftHand_042_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex4_047
-            property: "position"
-            keyframeSource: "animations/leftHandIndex4_047_position_1.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex4_047
-            property: "rotation"
-            keyframeSource: "animations/leftHandIndex4_047_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex3_046
-            property: "position"
-            keyframeSource: "animations/leftHandIndex3_046_position_1.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex3_046
-            property: "rotation"
-            keyframeSource: "animations/leftHandIndex3_046_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex2_045
-            property: "position"
-            keyframeSource: "animations/leftHandIndex2_045_position_1.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex2_045
-            property: "rotation"
-            keyframeSource: "animations/leftHandIndex2_045_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex1_044
-            property: "position"
-            keyframeSource: "animations/leftHandIndex1_044_position_1.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex1_044
-            property: "rotation"
-            keyframeSource: "animations/leftHandIndex1_044_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: leftInHandIndex_043
-            property: "rotation"
-            keyframeSource: "animations/leftInHandIndex_043_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_LeftHand_00
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(48.0552, 20.9808, 0.72522)
-            }
-        }
-        KeyframeGroup {
-            target: skt_FX_LeftHand_00
-            property: "rotation"
-            keyframeSource: "animations/skt_FX_LeftHand_00_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb4_050
-            property: "position"
-            keyframeSource: "animations/leftHandThumb4_050_position_1.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb4_050
-            property: "rotation"
-            keyframeSource: "animations/leftHandThumb4_050_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb3_049
-            property: "position"
-            keyframeSource: "animations/leftHandThumb3_049_position_1.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb3_049
-            property: "rotation"
-            keyframeSource: "animations/leftHandThumb3_049_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb2_048
-            property: "position"
-            keyframeSource: "animations/leftHandThumb2_048_position_1.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb2_048
-            property: "rotation"
-            keyframeSource: "animations/leftHandThumb2_048_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb1_01
-            property: "rotation"
-            keyframeSource: "animations/leftHandThumb1_01_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: leftHandMiddle4_055
-            property: "position"
-            keyframeSource: "animations/leftHandMiddle4_055_position_1.qad"
-        }
-        KeyframeGroup {
-            target: leftHandMiddle4_055
-            property: "rotation"
-            keyframeSource: "animations/leftHandMiddle4_055_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: leftHandMiddle2_053
-            property: "position"
-            keyframeSource: "animations/leftHandMiddle2_053_position_1.qad"
-        }
-        KeyframeGroup {
-            target: leftHandMiddle2_053
-            property: "rotation"
-            keyframeSource: "animations/leftHandMiddle2_053_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: leftHandMiddle1_052
-            property: "position"
-            keyframeSource: "animations/leftHandMiddle1_052_position_1.qad"
-        }
-        KeyframeGroup {
-            target: leftHandMiddle1_052
-            property: "rotation"
-            keyframeSource: "animations/leftHandMiddle1_052_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: leftInHandMiddle_051
-            property: "position"
-            keyframeSource: "animations/leftInHandMiddle_051_position_1.qad"
-        }
-        KeyframeGroup {
-            target: leftInHandMiddle_051
-            property: "rotation"
-            keyframeSource: "animations/leftInHandMiddle_051_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: leftHand_036
-            property: "position"
-            keyframeSource: "animations/leftHand_036_position_1.qad"
-        }
-        KeyframeGroup {
-            target: leftHand_036
-            property: "rotation"
-            keyframeSource: "animations/leftHand_036_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArmTwist2_056
-            property: "position"
-            keyframeSource: "animations/leftForeArmTwist2_056_position_1.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArmTwist2_056
-            property: "rotation"
-            keyframeSource: "animations/leftForeArmTwist2_056_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArm_033
-            property: "position"
-            keyframeSource: "animations/leftForeArm_033_position_1.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArm_033
-            property: "rotation"
-            keyframeSource: "animations/leftForeArm_033_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: leftArmTwist1_057
-            property: "position"
-            keyframeSource: "animations/leftArmTwist1_057_position_1.qad"
-        }
-        KeyframeGroup {
-            target: leftArmTwist1_057
-            property: "rotation"
-            keyframeSource: "animations/leftArmTwist1_057_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: leftArmTwist2_058
-            property: "position"
-            keyframeSource: "animations/leftArmTwist2_058_position_1.qad"
-        }
-        KeyframeGroup {
-            target: leftArmTwist2_058
-            property: "rotation"
-            keyframeSource: "animations/leftArmTwist2_058_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: leftShoulder_031
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(8.80947, 6.336, -4.1949)
-            }
-        }
-        KeyframeGroup {
-            target: leftShoulder_031
-            property: "rotation"
-            keyframeSource: "animations/leftShoulder_031_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: headEnd_063
-            property: "position"
-            keyframeSource: "animations/headEnd_063_position_1.qad"
-        }
-        KeyframeGroup {
-            target: headEnd_063
-            property: "rotation"
-            keyframeSource: "animations/headEnd_063_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: eye_left_066
-            property: "position"
-            keyframeSource: "animations/eye_left_066_position_1.qad"
-        }
-        KeyframeGroup {
-            target: eye_left_066
-            property: "rotation"
-            keyframeSource: "animations/eye_left_066_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: lip_corners_068
-            property: "position"
-            keyframeSource: "animations/lip_corners_068_position_1.qad"
-        }
-        KeyframeGroup {
-            target: lip_corners_068
-            property: "rotation"
-            keyframeSource: "animations/lip_corners_068_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_right_071
-            property: "position"
-            keyframeSource: "animations/eye_lid_right_071_position_1.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_right_071
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_right_071_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: tongue_06_081
-            property: "position"
-            keyframeSource: "animations/tongue_06_081_position_1.qad"
-        }
-        KeyframeGroup {
-            target: tongue_06_081
-            property: "rotation"
-            keyframeSource: "animations/tongue_06_081_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: tongue_04_079
-            property: "position"
-            keyframeSource: "animations/tongue_04_079_position_1.qad"
-        }
-        KeyframeGroup {
-            target: tongue_04_079
-            property: "rotation"
-            keyframeSource: "animations/tongue_04_079_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: tongue_03_078
-            property: "position"
-            keyframeSource: "animations/tongue_03_078_position_1.qad"
-        }
-        KeyframeGroup {
-            target: tongue_03_078
-            property: "rotation"
-            keyframeSource: "animations/tongue_03_078_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: tongue_02_077
-            property: "position"
-            keyframeSource: "animations/tongue_02_077_position_1.qad"
-        }
-        KeyframeGroup {
-            target: tongue_02_077
-            property: "rotation"
-            keyframeSource: "animations/tongue_02_077_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: tongue_01_076
-            property: "position"
-            keyframeSource: "animations/tongue_01_076_position_1.qad"
-        }
-        KeyframeGroup {
-            target: tongue_01_076
-            property: "rotation"
-            keyframeSource: "animations/tongue_01_076_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: tongue_jaw_075
-            property: "position"
-            keyframeSource: "animations/tongue_jaw_075_position_1.qad"
-        }
-        KeyframeGroup {
-            target: tongue_jaw_075
-            property: "rotation"
-            keyframeSource: "animations/tongue_jaw_075_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: teeth_lwr_082
-            property: "position"
-            keyframeSource: "animations/teeth_lwr_082_position_1.qad"
-        }
-        KeyframeGroup {
-            target: teeth_lwr_082
-            property: "rotation"
-            keyframeSource: "animations/teeth_lwr_082_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: teeth_upr_083
-            property: "position"
-            keyframeSource: "animations/teeth_upr_083_position_1.qad"
-        }
-        KeyframeGroup {
-            target: teeth_upr_083
-            property: "rotation"
-            keyframeSource: "animations/teeth_upr_083_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: mouth_bag_074
-            property: "position"
-            keyframeSource: "animations/mouth_bag_074_position_1.qad"
-        }
-        KeyframeGroup {
-            target: mouth_bag_074
-            property: "rotation"
-            keyframeSource: "animations/mouth_bag_074_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: eye_right_084
-            property: "position"
-            keyframeSource: "animations/eye_right_084_position_1.qad"
-        }
-        KeyframeGroup {
-            target: eye_right_084
-            property: "rotation"
-            keyframeSource: "animations/eye_right_084_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_out_left_086
-            property: "position"
-            keyframeSource: "animations/eye_lid_out_left_086_position_1.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_out_left_086
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_out_left_086_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_in_left_087
-            property: "position"
-            keyframeSource: "animations/eye_lid_in_left_087_position_1.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_in_left_087
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_in_left_087_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_left_085
-            property: "position"
-            keyframeSource: "animations/eye_lid_left_085_position_1.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_left_085
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_left_085_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: face_064
-            property: "position"
-            keyframeSource: "animations/face_064_position_1.qad"
-        }
-        KeyframeGroup {
-            target: face_064
-            property: "rotation"
-            keyframeSource: "animations/face_064_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: head_061
-            property: "position"
-            keyframeSource: "animations/head_061_position_1.qad"
-        }
-        KeyframeGroup {
-            target: head_061
-            property: "rotation"
-            keyframeSource: "animations/head_061_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: neck1_060
-            property: "position"
-            keyframeSource: "animations/neck1_060_position_1.qad"
-        }
-        KeyframeGroup {
-            target: neck1_060
-            property: "rotation"
-            keyframeSource: "animations/neck1_060_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: neck_059
-            property: "position"
-            keyframeSource: "animations/neck_059_position_1.qad"
-        }
-        KeyframeGroup {
-            target: neck_059
-            property: "rotation"
-            keyframeSource: "animations/neck_059_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: rightArmTwist1_090
-            property: "position"
-            keyframeSource: "animations/rightArmTwist1_090_position_1.qad"
-        }
-        KeyframeGroup {
-            target: rightArmTwist1_090
-            property: "rotation"
-            keyframeSource: "animations/rightArmTwist1_090_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_RightHand_093
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(-48.0548, -20.9804, -0.725115)
-            }
-        }
-        KeyframeGroup {
-            target: skt_FX_RightHand_093
-            property: "rotation"
-            keyframeSource: "animations/skt_FX_RightHand_093_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb4_097
-            property: "position"
-            keyframeSource: "animations/rightHandThumb4_097_position_1.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb4_097
-            property: "rotation"
-            keyframeSource: "animations/rightHandThumb4_097_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb3_096
-            property: "position"
-            keyframeSource: "animations/rightHandThumb3_096_position_1.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb3_096
-            property: "rotation"
-            keyframeSource: "animations/rightHandThumb3_096_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb2_095
-            property: "position"
-            keyframeSource: "animations/rightHandThumb2_095_position_1.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb2_095
-            property: "rotation"
-            keyframeSource: "animations/rightHandThumb2_095_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb1_094
-            property: "rotation"
-            keyframeSource: "animations/rightHandThumb1_094_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle4_0102
-            property: "position"
-            keyframeSource: "animations/rightHandMiddle4_0102_position_1.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle4_0102
-            property: "rotation"
-            keyframeSource: "animations/rightHandMiddle4_0102_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle3_0101
-            property: "position"
-            keyframeSource: "animations/rightHandMiddle3_0101_position_1.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle3_0101
-            property: "rotation"
-            keyframeSource: "animations/rightHandMiddle3_0101_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle2_0100
-            property: "position"
-            keyframeSource: "animations/rightHandMiddle2_0100_position_1.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle2_0100
-            property: "rotation"
-            keyframeSource: "animations/rightHandMiddle2_0100_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle1_099
-            property: "rotation"
-            keyframeSource: "animations/rightHandMiddle1_099_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: rightInHandMiddle_098
-            property: "position"
-            keyframeSource: "animations/rightInHandMiddle_098_position_1.qad"
-        }
-        KeyframeGroup {
-            target: rightInHandMiddle_098
-            property: "rotation"
-            keyframeSource: "animations/rightInHandMiddle_098_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: skt_RightHand_0103
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(-48.0548, -20.9804, -0.725115)
-            }
-        }
-        KeyframeGroup {
-            target: skt_RightHand_0103
-            property: "rotation"
-            keyframeSource: "animations/skt_RightHand_0103_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: rightHandIndex4_0108
-            property: "position"
-            keyframeSource: "animations/rightHandIndex4_0108_position_1.qad"
-        }
-        KeyframeGroup {
-            target: rightHandIndex4_0108
-            property: "rotation"
-            keyframeSource: "animations/rightHandIndex4_0108_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: rightHandIndex3_0107
-            property: "position"
-            keyframeSource: "animations/rightHandIndex3_0107_position_1.qad"
-        }
-        KeyframeGroup {
-            target: rightHandIndex3_0107
-            property: "rotation"
-            keyframeSource: "animations/rightHandIndex3_0107_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: rightHandIndex2_0106
-            property: "position"
-            keyframeSource: "animations/rightHandIndex2_0106_position_1.qad"
-        }
-        KeyframeGroup {
-            target: rightHandIndex2_0106
-            property: "rotation"
-            keyframeSource: "animations/rightHandIndex2_0106_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: rightHandIndex1_0105
-            property: "position"
-            keyframeSource: "animations/rightHandIndex1_0105_position_1.qad"
-        }
-        KeyframeGroup {
-            target: rightHandIndex1_0105
-            property: "rotation"
-            keyframeSource: "animations/rightHandIndex1_0105_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: rightInHandIndex_0104
-            property: "rotation"
-            keyframeSource: "animations/rightInHandIndex_0104_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: rightHandPinky4_0113
-            property: "position"
-            keyframeSource: "animations/rightHandPinky4_0113_position_1.qad"
-        }
-        KeyframeGroup {
-            target: rightHandPinky4_0113
-            property: "rotation"
-            keyframeSource: "animations/rightHandPinky4_0113_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: rightHandPinky3_0112
-            property: "position"
-            keyframeSource: "animations/rightHandPinky3_0112_position_1.qad"
-        }
-        KeyframeGroup {
-            target: rightHandPinky3_0112
-            property: "rotation"
-            keyframeSource: "animations/rightHandPinky3_0112_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: rightHandPinky2_0111
-            property: "position"
-            keyframeSource: "animations/rightHandPinky2_0111_position_1.qad"
-        }
-        KeyframeGroup {
-            target: rightHandPinky2_0111
-            property: "rotation"
-            keyframeSource: "animations/rightHandPinky2_0111_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: rightHandPinky1_0110
-            property: "rotation"
-            keyframeSource: "animations/rightHandPinky1_0110_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: rightInHandPinky_0109
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(-7.95188, 1.34685, -19.4511)
-            }
-        }
-        KeyframeGroup {
-            target: rightInHandPinky_0109
-            property: "rotation"
-            keyframeSource: "animations/rightInHandPinky_0109_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: rightHand_092
-            property: "position"
-            keyframeSource: "animations/rightHand_092_position_1.qad"
-        }
-        KeyframeGroup {
-            target: rightHand_092
-            property: "rotation"
-            keyframeSource: "animations/rightHand_092_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArmTwist3_0114
-            property: "position"
-            keyframeSource: "animations/rightForeArmTwist3_0114_position_1.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArmTwist3_0114
-            property: "rotation"
-            keyframeSource: "animations/rightForeArmTwist3_0114_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArmTwist2_0115
-            property: "position"
-            keyframeSource: "animations/rightForeArmTwist2_0115_position_1.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArmTwist2_0115
-            property: "rotation"
-            keyframeSource: "animations/rightForeArmTwist2_0115_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArmTwist1_0116
-            property: "position"
-            keyframeSource: "animations/rightForeArmTwist1_0116_position_1.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArmTwist1_0116
-            property: "rotation"
-            keyframeSource: "animations/rightForeArmTwist1_0116_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArm_091
-            property: "position"
-            keyframeSource: "animations/rightForeArm_091_position_1.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArm_091
-            property: "rotation"
-            keyframeSource: "animations/rightForeArm_091_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: rightArmTwist2_0117
-            property: "position"
-            keyframeSource: "animations/rightArmTwist2_0117_position_1.qad"
-        }
-        KeyframeGroup {
-            target: rightArmTwist2_0117
-            property: "rotation"
-            keyframeSource: "animations/rightArmTwist2_0117_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: rightArm_089
-            property: "position"
-            keyframeSource: "animations/rightArm_089_position_1.qad"
-        }
-        KeyframeGroup {
-            target: rightArm_089
-            property: "rotation"
-            keyframeSource: "animations/rightArm_089_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: rightShoulder_088
-            property: "rotation"
-            keyframeSource: "animations/rightShoulder_088_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: spine3_028
-            property: "position"
-            keyframeSource: "animations/spine3_028_position_1.qad"
-        }
-        KeyframeGroup {
-            target: spine3_028
-            property: "rotation"
-            keyframeSource: "animations/spine3_028_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: spine2_027
-            property: "position"
-            keyframeSource: "animations/spine2_027_position_1.qad"
-        }
-        KeyframeGroup {
-            target: spine2_027
-            property: "rotation"
-            keyframeSource: "animations/spine2_027_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: spine1_026
-            property: "position"
-            keyframeSource: "animations/spine1_026_position_1.qad"
-        }
-        KeyframeGroup {
-            target: spine1_026
-            property: "rotation"
-            keyframeSource: "animations/spine1_026_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: spine_025
-            property: "position"
-            keyframeSource: "animations/spine_025_position_1.qad"
-        }
-        KeyframeGroup {
-            target: spine_025
-            property: "rotation"
-            keyframeSource: "animations/spine_025_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: leftLegTwist1_0120
-            property: "position"
-            keyframeSource: "animations/leftLegTwist1_0120_position_1.qad"
-        }
-        KeyframeGroup {
-            target: leftLegTwist1_0120
-            property: "rotation"
-            keyframeSource: "animations/leftLegTwist1_0120_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: leftFootBigToe3_0125
-            property: "position"
-            keyframeSource: "animations/leftFootBigToe3_0125_position_1.qad"
-        }
-        KeyframeGroup {
-            target: leftFootBigToe3_0125
-            property: "rotation"
-            keyframeSource: "animations/leftFootBigToe3_0125_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: leftFootBigToe2_0124
-            property: "position"
-            keyframeSource: "animations/leftFootBigToe2_0124_position_1.qad"
-        }
-        KeyframeGroup {
-            target: leftFootBigToe2_0124
-            property: "rotation"
-            keyframeSource: "animations/leftFootBigToe2_0124_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: leftFootBigToe1_0123
-            property: "rotation"
-            keyframeSource: "animations/leftFootBigToe1_0123_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: leftFootIndex3_0128
-            property: "position"
-            keyframeSource: "animations/leftFootIndex3_0128_position_1.qad"
-        }
-        KeyframeGroup {
-            target: leftFootIndex3_0128
-            property: "rotation"
-            keyframeSource: "animations/leftFootIndex3_0128_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: leftFootIndex2_0127
-            property: "position"
-            keyframeSource: "animations/leftFootIndex2_0127_position_1.qad"
-        }
-        KeyframeGroup {
-            target: leftFootIndex2_0127
-            property: "rotation"
-            keyframeSource: "animations/leftFootIndex2_0127_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: leftFootIndex1_0126
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(16.1655, 1.34472, -23.2399)
-            }
-        }
-        KeyframeGroup {
-            target: leftFootIndex1_0126
-            property: "rotation"
-            keyframeSource: "animations/leftFootIndex1_0126_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: leftToeBaseEnd_0129
-            property: "position"
-            keyframeSource: "animations/leftToeBaseEnd_0129_position_1.qad"
-        }
-        KeyframeGroup {
-            target: leftToeBaseEnd_0129
-            property: "rotation"
-            keyframeSource: "animations/leftToeBaseEnd_0129_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: leftToeBase_0122
-            property: "position"
-            keyframeSource: "animations/leftToeBase_0122_position_1.qad"
-        }
-        KeyframeGroup {
-            target: leftToeBase_0122
-            property: "rotation"
-            keyframeSource: "animations/leftToeBase_0122_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: leftFoot_0121
-            property: "position"
-            keyframeSource: "animations/leftFoot_0121_position_1.qad"
-        }
-        KeyframeGroup {
-            target: leftFoot_0121
-            property: "rotation"
-            keyframeSource: "animations/leftFoot_0121_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: leftLeg_0119
-            property: "position"
-            keyframeSource: "animations/leftLeg_0119_position_1.qad"
-        }
-        KeyframeGroup {
-            target: leftLeg_0119
-            property: "rotation"
-            keyframeSource: "animations/leftLeg_0119_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: leftUpLegTwist1_0130
-            property: "position"
-            keyframeSource: "animations/leftUpLegTwist1_0130_position_1.qad"
-        }
-        KeyframeGroup {
-            target: leftUpLegTwist1_0130
-            property: "rotation"
-            keyframeSource: "animations/leftUpLegTwist1_0130_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: leftUpLegTwist2_0131
-            property: "position"
-            keyframeSource: "animations/leftUpLegTwist2_0131_position_1.qad"
-        }
-        KeyframeGroup {
-            target: leftUpLegTwist2_0131
-            property: "rotation"
-            keyframeSource: "animations/leftUpLegTwist2_0131_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: leftUpLeg_0118
-            property: "rotation"
-            keyframeSource: "animations/leftUpLeg_0118_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: skt_Hips_0132
-            property: "position"
-            keyframeSource: "animations/skt_Hips_0132_position_1.qad"
-        }
-        KeyframeGroup {
-            target: skt_Hips_0132
-            property: "rotation"
-            keyframeSource: "animations/skt_Hips_0132_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: hips_09
-            property: "position"
-            keyframeSource: "animations/hips_09_position_1.qad"
-        }
-        KeyframeGroup {
-            target: hips_09
-            property: "rotation"
-            keyframeSource: "animations/hips_09_rotation_1.qad"
-        }
-        KeyframeGroup {
-            target: ik_Hips_0133
-            property: "position"
-            keyframeSource: "animations/ik_Hips_0133_position_1.qad"
-        }
-        KeyframeGroup {
-            target: ik_Hips_0133
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(1, 2.36187e-17, 0, 0)
-            }
-        }
-        KeyframeGroup {
-            target: ik_LeftFoot_0134
-            property: "position"
-            keyframeSource: "animations/ik_LeftFoot_0134_position_1.qad"
-        }
-        KeyframeGroup {
-            target: ik_LeftFoot_0134
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(1, 2.36187e-17, 0, 0)
-            }
-        }
-        KeyframeGroup {
-            target: ik_RightFoot_0135
-            property: "position"
-            keyframeSource: "animations/ik_RightFoot_0135_position_1.qad"
-        }
-        KeyframeGroup {
-            target: ik_RightFoot_0135
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(1, 2.36187e-17, 0, 0)
-            }
-        }
-        KeyframeGroup {
-            target: ik_Head_0136
-            property: "position"
-            keyframeSource: "animations/ik_Head_0136_position_1.qad"
-        }
-        KeyframeGroup {
-            target: ik_Head_0136
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(1, 2.36187e-17, 0, 0)
-            }
-        }
-    }
-    Timeline {
         id: frames_001_timeline
         objectName: "Frames.001"
         property real framesPerSecond: 1000
@@ -6347,16 +3665,6 @@ Node {
             loops: Animation.Infinite
         }
         KeyframeGroup {
-            target: rightFootIndex3_017
-            property: "position"
-            keyframeSource: "animations/rightFootIndex3_017_position_2.qad"
-        }
-        KeyframeGroup {
-            target: rightFootIndex3_017
-            property: "rotation"
-            keyframeSource: "animations/rightFootIndex3_017_rotation_2.qad"
-        }
-        KeyframeGroup {
             target: ik_Spine3_02
             property: "position"
             Keyframe {
@@ -6373,9 +3681,17 @@ Node {
             }
         }
         KeyframeGroup {
-            target: rightFootIndex1_015
+            target: rightFoot_013
             property: "rotation"
-            keyframeSource: "animations/rightFootIndex1_015_rotation_2.qad"
+            keyframeSource: "animations/rightFoot_013_rotation_0.qad"
+        }
+        KeyframeGroup {
+            target: rightInHandMiddle_098
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.997624, 0.038861, 0.0290057, 0.0489293)
+            }
         }
         KeyframeGroup {
             target: ik_LeftHand_07
@@ -6394,14 +3710,17 @@ Node {
             }
         }
         KeyframeGroup {
-            target: leftHandMiddle3_054
-            property: "position"
-            keyframeSource: "animations/leftHandMiddle3_054_position_2.qad"
+            target: rightHandThumb3_096
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.880624, -0.168962, 0.0711456, 0.43691)
+            }
         }
         KeyframeGroup {
             target: leftHandMiddle3_054
             property: "rotation"
-            keyframeSource: "animations/leftHandMiddle3_054_rotation_2.qad"
+            keyframeSource: "animations/leftHandMiddle3_054_rotation_0.qad"
         }
         KeyframeGroup {
             target: ik_RightHand_03
@@ -6436,765 +3755,149 @@ Node {
             }
         }
         KeyframeGroup {
-            target: leftArm_032
-            property: "position"
-            keyframeSource: "animations/leftArm_032_position_2.qad"
+            target: rightHandIndex4_0108
+            property: "rotation"
+            keyframeSource: "animations/rightHandIndex4_0108_rotation_0.qad"
         }
         KeyframeGroup {
             target: leftArm_032
             property: "rotation"
-            keyframeSource: "animations/leftArm_032_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: rightLegTwist1_012
-            property: "position"
-            keyframeSource: "animations/rightLegTwist1_012_position_2.qad"
+            keyframeSource: "animations/leftArm_032_rotation_0.qad"
         }
         KeyframeGroup {
             target: rightLegTwist1_012
             property: "rotation"
-            keyframeSource: "animations/rightLegTwist1_012_rotation_2.qad"
+            keyframeSource: "animations/rightLegTwist1_012_rotation_0.qad"
         }
         KeyframeGroup {
-            target: skt_Head_062
-            property: "position"
-            keyframeSource: "animations/skt_Head_062_position_2.qad"
-        }
-        KeyframeGroup {
-            target: skt_Head_062
+            target: rightHand_092
             property: "rotation"
-            keyframeSource: "animations/skt_Head_062_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: rightFootIndex2_016
-            property: "position"
-            keyframeSource: "animations/rightFootIndex2_016_position_2.qad"
-        }
-        KeyframeGroup {
-            target: rightFootIndex2_016
-            property: "rotation"
-            keyframeSource: "animations/rightFootIndex2_016_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: rightFootBigToe3_020
-            property: "position"
-            keyframeSource: "animations/rightFootBigToe3_020_position_2.qad"
-        }
-        KeyframeGroup {
-            target: rightFootBigToe3_020
-            property: "rotation"
-            keyframeSource: "animations/rightFootBigToe3_020_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: jaw_065
-            property: "position"
-            keyframeSource: "animations/jaw_065_position_2.qad"
-        }
-        KeyframeGroup {
-            target: jaw_065
-            property: "rotation"
-            keyframeSource: "animations/jaw_065_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: rightFootBigToe2_019
-            property: "position"
-            keyframeSource: "animations/rightFootBigToe2_019_position_2.qad"
-        }
-        KeyframeGroup {
-            target: rightFootBigToe2_019
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.988539, 0.0102476, -0.0303298, -0.147531)
-            }
-        }
-        KeyframeGroup {
-            target: rightFootBigToe1_018
-            property: "rotation"
-            keyframeSource: "animations/rightFootBigToe1_018_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: rightToeBaseEnd_021
-            property: "position"
-            keyframeSource: "animations/rightToeBaseEnd_021_position_2.qad"
-        }
-        KeyframeGroup {
-            target: rightToeBaseEnd_021
-            property: "rotation"
-            keyframeSource: "animations/rightToeBaseEnd_021_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: nose_067
-            property: "position"
-            keyframeSource: "animations/nose_067_position_2.qad"
-        }
-        KeyframeGroup {
-            target: nose_067
-            property: "rotation"
-            keyframeSource: "animations/nose_067_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: rightToeBase_014
-            property: "position"
-            keyframeSource: "animations/rightToeBase_014_position_2.qad"
+            keyframeSource: "animations/rightHand_092_rotation_0.qad"
         }
         KeyframeGroup {
             target: rightToeBase_014
             property: "rotation"
-            keyframeSource: "animations/rightToeBase_014_rotation_2.qad"
+            keyframeSource: "animations/rightToeBase_014_rotation_0.qad"
         }
         KeyframeGroup {
-            target: rightFoot_013
-            property: "position"
-            keyframeSource: "animations/rightFoot_013_position_2.qad"
-        }
-        KeyframeGroup {
-            target: rightFoot_013
+            target: rightForeArmTwist3_0114
             property: "rotation"
-            keyframeSource: "animations/rightFoot_013_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: lip_upper_069
-            property: "position"
-            keyframeSource: "animations/lip_upper_069_position_2.qad"
-        }
-        KeyframeGroup {
-            target: lip_upper_069
-            property: "rotation"
-            keyframeSource: "animations/lip_upper_069_rotation_2.qad"
+            keyframeSource: "animations/rightForeArmTwist3_0114_rotation_0.qad"
         }
         KeyframeGroup {
             target: rightLeg_011
             property: "position"
-            keyframeSource: "animations/rightLeg_011_position_2.qad"
+            keyframeSource: "animations/rightLeg_011_position_0.qad"
         }
         KeyframeGroup {
             target: rightLeg_011
             property: "rotation"
-            keyframeSource: "animations/rightLeg_011_rotation_2.qad"
+            keyframeSource: "animations/rightLeg_011_rotation_0.qad"
         }
         KeyframeGroup {
-            target: lip_lower_070
-            property: "position"
-            keyframeSource: "animations/lip_lower_070_position_2.qad"
-        }
-        KeyframeGroup {
-            target: lip_lower_070
+            target: rightForeArmTwist2_0115
             property: "rotation"
-            keyframeSource: "animations/lip_lower_070_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: rightUpLegTwist1_022
-            property: "position"
-            keyframeSource: "animations/rightUpLegTwist1_022_position_2.qad"
+            keyframeSource: "animations/rightForeArmTwist2_0115_rotation_0.qad"
         }
         KeyframeGroup {
             target: rightUpLegTwist1_022
             property: "rotation"
-            keyframeSource: "animations/rightUpLegTwist1_022_rotation_2.qad"
+            keyframeSource: "animations/rightUpLegTwist1_022_rotation_0.qad"
         }
         KeyframeGroup {
-            target: rightUpLegTwist2_023
-            property: "position"
-            keyframeSource: "animations/rightUpLegTwist2_023_position_2.qad"
+            target: rightForeArmTwist1_0116
+            property: "rotation"
+            keyframeSource: "animations/rightForeArmTwist1_0116_rotation_0.qad"
         }
         KeyframeGroup {
             target: rightUpLegTwist2_023
             property: "rotation"
-            keyframeSource: "animations/rightUpLegTwist2_023_rotation_2.qad"
+            keyframeSource: "animations/rightUpLegTwist2_023_rotation_0.qad"
         }
         KeyframeGroup {
-            target: eye_lid_in_right_072
+            target: rightForeArm_091
             property: "position"
-            keyframeSource: "animations/eye_lid_in_right_072_position_2.qad"
+            keyframeSource: "animations/rightForeArm_091_position_0.qad"
         }
         KeyframeGroup {
-            target: eye_lid_in_right_072
+            target: rightForeArm_091
             property: "rotation"
-            keyframeSource: "animations/eye_lid_in_right_072_rotation_2.qad"
+            keyframeSource: "animations/rightForeArm_091_rotation_0.qad"
         }
         KeyframeGroup {
             target: rightUpLeg_010
             property: "rotation"
-            keyframeSource: "animations/rightUpLeg_010_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_out_right_073
-            property: "position"
-            keyframeSource: "animations/eye_lid_out_right_073_position_2.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_out_right_073
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_out_right_073_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_Hips_024
-            property: "position"
-            keyframeSource: "animations/skt_FX_Hips_024_position_2.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_Hips_024
-            property: "rotation"
-            keyframeSource: "animations/skt_FX_Hips_024_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: skt_Back_029
-            property: "position"
-            keyframeSource: "animations/skt_Back_029_position_2.qad"
-        }
-        KeyframeGroup {
-            target: skt_Back_029
-            property: "rotation"
-            keyframeSource: "animations/skt_Back_029_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: tongue_05_080
-            property: "position"
-            keyframeSource: "animations/tongue_05_080_position_2.qad"
-        }
-        KeyframeGroup {
-            target: tongue_05_080
-            property: "rotation"
-            keyframeSource: "animations/tongue_05_080_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: skt_Chest_030
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(-14.521, -36.6974, -8.58307e-06)
-            }
-        }
-        KeyframeGroup {
-            target: skt_Chest_030
-            property: "rotation"
-            keyframeSource: "animations/skt_Chest_030_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArmTwist3_034
-            property: "position"
-            keyframeSource: "animations/leftForeArmTwist3_034_position_2.qad"
+            keyframeSource: "animations/rightUpLeg_010_rotation_0.qad"
         }
         KeyframeGroup {
             target: leftForeArmTwist3_034
             property: "rotation"
-            keyframeSource: "animations/leftForeArmTwist3_034_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArmTwist1_035
-            property: "position"
-            keyframeSource: "animations/leftForeArmTwist1_035_position_2.qad"
+            keyframeSource: "animations/leftForeArmTwist3_034_rotation_0.qad"
         }
         KeyframeGroup {
             target: leftForeArmTwist1_035
             property: "rotation"
-            keyframeSource: "animations/leftForeArmTwist1_035_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky4_041
-            property: "position"
-            keyframeSource: "animations/leftHandPinky4_041_position_2.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky4_041
-            property: "rotation"
-            keyframeSource: "animations/leftHandPinky4_041_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky3_040
-            property: "position"
-            keyframeSource: "animations/leftHandPinky3_040_position_2.qad"
+            keyframeSource: "animations/leftForeArmTwist1_035_rotation_0.qad"
         }
         KeyframeGroup {
             target: leftHandPinky3_040
             property: "rotation"
-            keyframeSource: "animations/leftHandPinky3_040_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky2_039
-            property: "position"
-            keyframeSource: "animations/leftHandPinky2_039_position_2.qad"
+            keyframeSource: "animations/leftHandPinky3_040_rotation_0.qad"
         }
         KeyframeGroup {
             target: leftHandPinky2_039
             property: "rotation"
-            keyframeSource: "animations/leftHandPinky2_039_rotation_2.qad"
+            keyframeSource: "animations/leftHandPinky2_039_rotation_0.qad"
         }
         KeyframeGroup {
             target: leftHandPinky1_038
             property: "rotation"
-            keyframeSource: "animations/leftHandPinky1_038_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: leftInHandPinky_037
-            property: "position"
-            keyframeSource: "animations/leftInHandPinky_037_position_2.qad"
+            keyframeSource: "animations/leftHandPinky1_038_rotation_0.qad"
         }
         KeyframeGroup {
             target: leftInHandPinky_037
             property: "rotation"
-            keyframeSource: "animations/leftInHandPinky_037_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: skt_LeftHand_042
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(48.0552, 20.9808, 0.725221)
-            }
-        }
-        KeyframeGroup {
-            target: skt_LeftHand_042
-            property: "rotation"
-            keyframeSource: "animations/skt_LeftHand_042_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex4_047
-            property: "position"
-            keyframeSource: "animations/leftHandIndex4_047_position_2.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex4_047
-            property: "rotation"
-            keyframeSource: "animations/leftHandIndex4_047_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex3_046
-            property: "position"
-            keyframeSource: "animations/leftHandIndex3_046_position_2.qad"
+            keyframeSource: "animations/leftInHandPinky_037_rotation_0.qad"
         }
         KeyframeGroup {
             target: leftHandIndex3_046
             property: "rotation"
-            keyframeSource: "animations/leftHandIndex3_046_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex2_045
-            property: "position"
-            keyframeSource: "animations/leftHandIndex2_045_position_2.qad"
+            keyframeSource: "animations/leftHandIndex3_046_rotation_0.qad"
         }
         KeyframeGroup {
             target: leftHandIndex2_045
             property: "rotation"
-            keyframeSource: "animations/leftHandIndex2_045_rotation_2.qad"
+            keyframeSource: "animations/leftHandIndex2_045_rotation_0.qad"
         }
         KeyframeGroup {
             target: leftHandIndex1_044
             property: "rotation"
-            keyframeSource: "animations/leftHandIndex1_044_rotation_2.qad"
+            keyframeSource: "animations/leftHandIndex1_044_rotation_0.qad"
         }
         KeyframeGroup {
             target: leftInHandIndex_043
             property: "rotation"
-            keyframeSource: "animations/leftInHandIndex_043_rotation_2.qad"
+            keyframeSource: "animations/leftInHandIndex_043_rotation_0.qad"
         }
         KeyframeGroup {
-            target: skt_FX_LeftHand_00
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(48.0552, 20.9808, 0.725221)
-            }
-        }
-        KeyframeGroup {
-            target: skt_FX_LeftHand_00
+            target: rightArmTwist1_090
             property: "rotation"
-            keyframeSource: "animations/skt_FX_LeftHand_00_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb4_050
-            property: "position"
-            keyframeSource: "animations/leftHandThumb4_050_position_2.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb4_050
-            property: "rotation"
-            keyframeSource: "animations/leftHandThumb4_050_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb3_049
-            property: "position"
-            keyframeSource: "animations/leftHandThumb3_049_position_2.qad"
+            keyframeSource: "animations/rightArmTwist1_090_rotation_0.qad"
         }
         KeyframeGroup {
             target: leftHandThumb3_049
             property: "rotation"
-            keyframeSource: "animations/leftHandThumb3_049_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb2_048
-            property: "position"
-            keyframeSource: "animations/leftHandThumb2_048_position_2.qad"
+            keyframeSource: "animations/leftHandThumb3_049_rotation_0.qad"
         }
         KeyframeGroup {
             target: leftHandThumb2_048
             property: "rotation"
-            keyframeSource: "animations/leftHandThumb2_048_rotation_2.qad"
+            keyframeSource: "animations/leftHandThumb2_048_rotation_0.qad"
         }
         KeyframeGroup {
             target: leftHandThumb1_01
             property: "rotation"
-            keyframeSource: "animations/leftHandThumb1_01_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: leftHandMiddle4_055
-            property: "position"
-            keyframeSource: "animations/leftHandMiddle4_055_position_2.qad"
-        }
-        KeyframeGroup {
-            target: leftHandMiddle4_055
-            property: "rotation"
-            keyframeSource: "animations/leftHandMiddle4_055_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: leftHandMiddle2_053
-            property: "position"
-            keyframeSource: "animations/leftHandMiddle2_053_position_2.qad"
-        }
-        KeyframeGroup {
-            target: leftHandMiddle2_053
-            property: "rotation"
-            keyframeSource: "animations/leftHandMiddle2_053_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: leftHandMiddle1_052
-            property: "position"
-            keyframeSource: "animations/leftHandMiddle1_052_position_2.qad"
-        }
-        KeyframeGroup {
-            target: leftHandMiddle1_052
-            property: "rotation"
-            keyframeSource: "animations/leftHandMiddle1_052_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: leftInHandMiddle_051
-            property: "position"
-            keyframeSource: "animations/leftInHandMiddle_051_position_2.qad"
-        }
-        KeyframeGroup {
-            target: leftInHandMiddle_051
-            property: "rotation"
-            keyframeSource: "animations/leftInHandMiddle_051_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: leftHand_036
-            property: "position"
-            keyframeSource: "animations/leftHand_036_position_2.qad"
-        }
-        KeyframeGroup {
-            target: leftHand_036
-            property: "rotation"
-            keyframeSource: "animations/leftHand_036_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArmTwist2_056
-            property: "position"
-            keyframeSource: "animations/leftForeArmTwist2_056_position_2.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArmTwist2_056
-            property: "rotation"
-            keyframeSource: "animations/leftForeArmTwist2_056_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArm_033
-            property: "position"
-            keyframeSource: "animations/leftForeArm_033_position_2.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArm_033
-            property: "rotation"
-            keyframeSource: "animations/leftForeArm_033_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: leftArmTwist1_057
-            property: "position"
-            keyframeSource: "animations/leftArmTwist1_057_position_2.qad"
-        }
-        KeyframeGroup {
-            target: leftArmTwist1_057
-            property: "rotation"
-            keyframeSource: "animations/leftArmTwist1_057_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: leftArmTwist2_058
-            property: "position"
-            keyframeSource: "animations/leftArmTwist2_058_position_2.qad"
-        }
-        KeyframeGroup {
-            target: leftArmTwist2_058
-            property: "rotation"
-            keyframeSource: "animations/leftArmTwist2_058_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: leftShoulder_031
-            property: "rotation"
-            keyframeSource: "animations/leftShoulder_031_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: headEnd_063
-            property: "position"
-            keyframeSource: "animations/headEnd_063_position_2.qad"
-        }
-        KeyframeGroup {
-            target: headEnd_063
-            property: "rotation"
-            keyframeSource: "animations/headEnd_063_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: eye_left_066
-            property: "position"
-            keyframeSource: "animations/eye_left_066_position_2.qad"
-        }
-        KeyframeGroup {
-            target: eye_left_066
-            property: "rotation"
-            keyframeSource: "animations/eye_left_066_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: lip_corners_068
-            property: "position"
-            keyframeSource: "animations/lip_corners_068_position_2.qad"
-        }
-        KeyframeGroup {
-            target: lip_corners_068
-            property: "rotation"
-            keyframeSource: "animations/lip_corners_068_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_right_071
-            property: "position"
-            keyframeSource: "animations/eye_lid_right_071_position_2.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_right_071
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_right_071_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: tongue_06_081
-            property: "position"
-            keyframeSource: "animations/tongue_06_081_position_2.qad"
-        }
-        KeyframeGroup {
-            target: tongue_06_081
-            property: "rotation"
-            keyframeSource: "animations/tongue_06_081_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: tongue_04_079
-            property: "position"
-            keyframeSource: "animations/tongue_04_079_position_2.qad"
-        }
-        KeyframeGroup {
-            target: tongue_04_079
-            property: "rotation"
-            keyframeSource: "animations/tongue_04_079_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: tongue_03_078
-            property: "position"
-            keyframeSource: "animations/tongue_03_078_position_2.qad"
-        }
-        KeyframeGroup {
-            target: tongue_03_078
-            property: "rotation"
-            keyframeSource: "animations/tongue_03_078_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: tongue_02_077
-            property: "position"
-            keyframeSource: "animations/tongue_02_077_position_2.qad"
-        }
-        KeyframeGroup {
-            target: tongue_02_077
-            property: "rotation"
-            keyframeSource: "animations/tongue_02_077_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: tongue_01_076
-            property: "position"
-            keyframeSource: "animations/tongue_01_076_position_2.qad"
-        }
-        KeyframeGroup {
-            target: tongue_01_076
-            property: "rotation"
-            keyframeSource: "animations/tongue_01_076_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: tongue_jaw_075
-            property: "position"
-            keyframeSource: "animations/tongue_jaw_075_position_2.qad"
-        }
-        KeyframeGroup {
-            target: tongue_jaw_075
-            property: "rotation"
-            keyframeSource: "animations/tongue_jaw_075_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: teeth_lwr_082
-            property: "position"
-            keyframeSource: "animations/teeth_lwr_082_position_2.qad"
-        }
-        KeyframeGroup {
-            target: teeth_lwr_082
-            property: "rotation"
-            keyframeSource: "animations/teeth_lwr_082_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: teeth_upr_083
-            property: "position"
-            keyframeSource: "animations/teeth_upr_083_position_2.qad"
-        }
-        KeyframeGroup {
-            target: teeth_upr_083
-            property: "rotation"
-            keyframeSource: "animations/teeth_upr_083_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: mouth_bag_074
-            property: "position"
-            keyframeSource: "animations/mouth_bag_074_position_2.qad"
-        }
-        KeyframeGroup {
-            target: mouth_bag_074
-            property: "rotation"
-            keyframeSource: "animations/mouth_bag_074_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: eye_right_084
-            property: "position"
-            keyframeSource: "animations/eye_right_084_position_2.qad"
-        }
-        KeyframeGroup {
-            target: eye_right_084
-            property: "rotation"
-            keyframeSource: "animations/eye_right_084_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_out_left_086
-            property: "position"
-            keyframeSource: "animations/eye_lid_out_left_086_position_2.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_out_left_086
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_out_left_086_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_in_left_087
-            property: "position"
-            keyframeSource: "animations/eye_lid_in_left_087_position_2.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_in_left_087
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_in_left_087_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_left_085
-            property: "position"
-            keyframeSource: "animations/eye_lid_left_085_position_2.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_left_085
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_left_085_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: face_064
-            property: "position"
-            keyframeSource: "animations/face_064_position_2.qad"
-        }
-        KeyframeGroup {
-            target: face_064
-            property: "rotation"
-            keyframeSource: "animations/face_064_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: head_061
-            property: "position"
-            keyframeSource: "animations/head_061_position_2.qad"
-        }
-        KeyframeGroup {
-            target: head_061
-            property: "rotation"
-            keyframeSource: "animations/head_061_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: neck1_060
-            property: "position"
-            keyframeSource: "animations/neck1_060_position_2.qad"
-        }
-        KeyframeGroup {
-            target: neck1_060
-            property: "rotation"
-            keyframeSource: "animations/neck1_060_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: neck_059
-            property: "position"
-            keyframeSource: "animations/neck_059_position_2.qad"
-        }
-        KeyframeGroup {
-            target: neck_059
-            property: "rotation"
-            keyframeSource: "animations/neck_059_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: rightArmTwist1_090
-            property: "position"
-            keyframeSource: "animations/rightArmTwist1_090_position_2.qad"
-        }
-        KeyframeGroup {
-            target: rightArmTwist1_090
-            property: "rotation"
-            keyframeSource: "animations/rightArmTwist1_090_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_RightHand_093
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(-48.0548, -20.9803, -0.725095)
-            }
-        }
-        KeyframeGroup {
-            target: skt_FX_RightHand_093
-            property: "rotation"
-            keyframeSource: "animations/skt_FX_RightHand_093_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb4_097
-            property: "position"
-            keyframeSource: "animations/rightHandThumb4_097_position_2.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb4_097
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.999301, 0.021254, -0.00852285, 0.0295585)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandThumb3_096
-            property: "position"
-            keyframeSource: "animations/rightHandThumb3_096_position_2.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb3_096
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.880624, -0.168962, 0.0711456, 0.43691)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandThumb2_095
-            property: "position"
-            keyframeSource: "animations/rightHandThumb2_095_position_2.qad"
+            keyframeSource: "animations/leftHandThumb1_01_rotation_0.qad"
         }
         KeyframeGroup {
             target: rightHandThumb2_095
@@ -7205,6 +3908,11 @@ Node {
             }
         }
         KeyframeGroup {
+            target: leftHandMiddle2_053
+            property: "rotation"
+            keyframeSource: "animations/leftHandMiddle2_053_rotation_0.qad"
+        }
+        KeyframeGroup {
             target: rightHandThumb1_094
             property: "rotation"
             Keyframe {
@@ -7213,32 +3921,24 @@ Node {
             }
         }
         KeyframeGroup {
-            target: rightHandMiddle4_0102
-            property: "position"
-            keyframeSource: "animations/rightHandMiddle4_0102_position_2.qad"
+            target: leftHandMiddle1_052
+            property: "rotation"
+            keyframeSource: "animations/leftHandMiddle1_052_rotation_0.qad"
+        }
+        KeyframeGroup {
+            target: leftInHandMiddle_051
+            property: "rotation"
+            keyframeSource: "animations/leftInHandMiddle_051_rotation_0.qad"
         }
         KeyframeGroup {
             target: rightHandMiddle4_0102
             property: "rotation"
-            keyframeSource: "animations/rightHandMiddle4_0102_rotation_2.qad"
+            keyframeSource: "animations/rightHandMiddle4_0102_rotation_0.qad"
         }
         KeyframeGroup {
-            target: rightHandMiddle3_0101
-            property: "position"
-            keyframeSource: "animations/rightHandMiddle3_0101_position_2.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle3_0101
+            target: leftHand_036
             property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.940086, 0.0498864, 0.022563, 0.336512)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandMiddle2_0100
-            property: "position"
-            keyframeSource: "animations/rightHandMiddle2_0100_position_2.qad"
+            keyframeSource: "animations/leftHand_036_rotation_0.qad"
         }
         KeyframeGroup {
             target: rightHandMiddle2_0100
@@ -7249,55 +3949,34 @@ Node {
             }
         }
         KeyframeGroup {
+            target: leftForeArmTwist2_056
+            property: "rotation"
+            keyframeSource: "animations/leftForeArmTwist2_056_rotation_0.qad"
+        }
+        KeyframeGroup {
             target: rightHandMiddle1_099
-            property: "position"
-            keyframeSource: "animations/rightHandMiddle1_099_position_2.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle1_099
             property: "rotation"
-            keyframeSource: "animations/rightHandMiddle1_099_rotation_2.qad"
+            keyframeSource: "animations/rightHandMiddle1_099_rotation_0.qad"
         }
         KeyframeGroup {
-            target: rightInHandMiddle_098
+            target: leftForeArm_033
             property: "position"
-            keyframeSource: "animations/rightInHandMiddle_098_position_2.qad"
+            keyframeSource: "animations/leftForeArm_033_position_0.qad"
         }
         KeyframeGroup {
-            target: rightInHandMiddle_098
+            target: leftForeArm_033
             property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.997624, 0.038861, 0.0290057, 0.0489293)
-            }
+            keyframeSource: "animations/leftForeArm_033_rotation_0.qad"
         }
         KeyframeGroup {
-            target: skt_RightHand_0103
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(-48.0548, -20.9803, -0.725095)
-            }
-        }
-        KeyframeGroup {
-            target: skt_RightHand_0103
+            target: leftArmTwist1_057
             property: "rotation"
-            keyframeSource: "animations/skt_RightHand_0103_rotation_2.qad"
+            keyframeSource: "animations/leftArmTwist1_057_rotation_0.qad"
         }
         KeyframeGroup {
-            target: rightHandIndex4_0108
-            property: "position"
-            keyframeSource: "animations/rightHandIndex4_0108_position_2.qad"
-        }
-        KeyframeGroup {
-            target: rightHandIndex4_0108
+            target: leftArmTwist2_058
             property: "rotation"
-            keyframeSource: "animations/rightHandIndex4_0108_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: rightHandIndex3_0107
-            property: "position"
-            keyframeSource: "animations/rightHandIndex3_0107_position_2.qad"
+            keyframeSource: "animations/leftArmTwist2_058_rotation_0.qad"
         }
         KeyframeGroup {
             target: rightHandIndex3_0107
@@ -7308,9 +3987,40 @@ Node {
             }
         }
         KeyframeGroup {
-            target: rightHandIndex2_0106
-            property: "position"
-            keyframeSource: "animations/rightHandIndex2_0106_position_2.qad"
+            target: leftShoulder_031
+            property: "rotation"
+            keyframeSource: "animations/leftShoulder_031_rotation_0.qad"
+        }
+        KeyframeGroup {
+            target: head_061
+            property: "rotation"
+            keyframeSource: "animations/head_061_rotation_0.qad"
+        }
+        KeyframeGroup {
+            target: neck1_060
+            property: "rotation"
+            keyframeSource: "animations/neck1_060_rotation_0.qad"
+        }
+        KeyframeGroup {
+            target: neck_059
+            property: "rotation"
+            keyframeSource: "animations/neck_059_rotation_0.qad"
+        }
+        KeyframeGroup {
+            target: rightHandThumb4_097
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.999301, 0.021254, -0.00852285, 0.0295585)
+            }
+        }
+        KeyframeGroup {
+            target: rightHandMiddle3_0101
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.940086, 0.0498864, 0.022563, 0.336512)
+            }
         }
         KeyframeGroup {
             target: rightHandIndex2_0106
@@ -7338,43 +4048,23 @@ Node {
         }
         KeyframeGroup {
             target: rightHandPinky4_0113
-            property: "position"
-            keyframeSource: "animations/rightHandPinky4_0113_position_2.qad"
-        }
-        KeyframeGroup {
-            target: rightHandPinky4_0113
             property: "rotation"
-            keyframeSource: "animations/rightHandPinky4_0113_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: rightHandPinky3_0112
-            property: "position"
-            keyframeSource: "animations/rightHandPinky3_0112_position_2.qad"
+            keyframeSource: "animations/rightHandPinky4_0113_rotation_0.qad"
         }
         KeyframeGroup {
             target: rightHandPinky3_0112
             property: "rotation"
-            keyframeSource: "animations/rightHandPinky3_0112_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: rightHandPinky2_0111
-            property: "position"
-            keyframeSource: "animations/rightHandPinky2_0111_position_2.qad"
+            keyframeSource: "animations/rightHandPinky3_0112_rotation_0.qad"
         }
         KeyframeGroup {
             target: rightHandPinky2_0111
             property: "rotation"
-            keyframeSource: "animations/rightHandPinky2_0111_rotation_2.qad"
+            keyframeSource: "animations/rightHandPinky2_0111_rotation_0.qad"
         }
         KeyframeGroup {
             target: rightHandPinky1_0110
             property: "rotation"
-            keyframeSource: "animations/rightHandPinky1_0110_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: rightInHandPinky_0109
-            property: "position"
-            keyframeSource: "animations/rightInHandPinky_0109_position_2.qad"
+            keyframeSource: "animations/rightHandPinky1_0110_rotation_0.qad"
         }
         KeyframeGroup {
             target: rightInHandPinky_0109
@@ -7385,272 +4075,89 @@ Node {
             }
         }
         KeyframeGroup {
-            target: rightHand_092
-            property: "position"
-            keyframeSource: "animations/rightHand_092_position_2.qad"
-        }
-        KeyframeGroup {
-            target: rightHand_092
-            property: "rotation"
-            keyframeSource: "animations/rightHand_092_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArmTwist3_0114
-            property: "position"
-            keyframeSource: "animations/rightForeArmTwist3_0114_position_2.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArmTwist3_0114
-            property: "rotation"
-            keyframeSource: "animations/rightForeArmTwist3_0114_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArmTwist2_0115
-            property: "position"
-            keyframeSource: "animations/rightForeArmTwist2_0115_position_2.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArmTwist2_0115
-            property: "rotation"
-            keyframeSource: "animations/rightForeArmTwist2_0115_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArmTwist1_0116
-            property: "position"
-            keyframeSource: "animations/rightForeArmTwist1_0116_position_2.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArmTwist1_0116
-            property: "rotation"
-            keyframeSource: "animations/rightForeArmTwist1_0116_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArm_091
-            property: "position"
-            keyframeSource: "animations/rightForeArm_091_position_2.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArm_091
-            property: "rotation"
-            keyframeSource: "animations/rightForeArm_091_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: rightArmTwist2_0117
-            property: "position"
-            keyframeSource: "animations/rightArmTwist2_0117_position_2.qad"
-        }
-        KeyframeGroup {
             target: rightArmTwist2_0117
             property: "rotation"
-            keyframeSource: "animations/rightArmTwist2_0117_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: rightArm_089
-            property: "position"
-            keyframeSource: "animations/rightArm_089_position_2.qad"
+            keyframeSource: "animations/rightArmTwist2_0117_rotation_0.qad"
         }
         KeyframeGroup {
             target: rightArm_089
             property: "rotation"
-            keyframeSource: "animations/rightArm_089_rotation_2.qad"
+            keyframeSource: "animations/rightArm_089_rotation_0.qad"
         }
         KeyframeGroup {
             target: rightShoulder_088
             property: "rotation"
-            keyframeSource: "animations/rightShoulder_088_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: spine3_028
-            property: "position"
-            keyframeSource: "animations/spine3_028_position_2.qad"
+            keyframeSource: "animations/rightShoulder_088_rotation_0.qad"
         }
         KeyframeGroup {
             target: spine3_028
             property: "rotation"
-            keyframeSource: "animations/spine3_028_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: spine2_027
-            property: "position"
-            keyframeSource: "animations/spine2_027_position_2.qad"
+            keyframeSource: "animations/spine3_028_rotation_0.qad"
         }
         KeyframeGroup {
             target: spine2_027
             property: "rotation"
-            keyframeSource: "animations/spine2_027_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: spine1_026
-            property: "position"
-            keyframeSource: "animations/spine1_026_position_2.qad"
+            keyframeSource: "animations/spine2_027_rotation_0.qad"
         }
         KeyframeGroup {
             target: spine1_026
             property: "rotation"
-            keyframeSource: "animations/spine1_026_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: spine_025
-            property: "position"
-            keyframeSource: "animations/spine_025_position_2.qad"
+            keyframeSource: "animations/spine1_026_rotation_0.qad"
         }
         KeyframeGroup {
             target: spine_025
             property: "rotation"
-            keyframeSource: "animations/spine_025_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: leftLegTwist1_0120
-            property: "position"
-            keyframeSource: "animations/leftLegTwist1_0120_position_2.qad"
+            keyframeSource: "animations/spine_025_rotation_0.qad"
         }
         KeyframeGroup {
             target: leftLegTwist1_0120
             property: "rotation"
-            keyframeSource: "animations/leftLegTwist1_0120_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: leftFootBigToe3_0125
-            property: "position"
-            keyframeSource: "animations/leftFootBigToe3_0125_position_2.qad"
-        }
-        KeyframeGroup {
-            target: leftFootBigToe3_0125
-            property: "rotation"
-            keyframeSource: "animations/leftFootBigToe3_0125_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: leftFootBigToe2_0124
-            property: "position"
-            keyframeSource: "animations/leftFootBigToe2_0124_position_2.qad"
-        }
-        KeyframeGroup {
-            target: leftFootBigToe2_0124
-            property: "rotation"
-            keyframeSource: "animations/leftFootBigToe2_0124_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: leftFootBigToe1_0123
-            property: "rotation"
-            keyframeSource: "animations/leftFootBigToe1_0123_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: leftFootIndex3_0128
-            property: "position"
-            keyframeSource: "animations/leftFootIndex3_0128_position_2.qad"
-        }
-        KeyframeGroup {
-            target: leftFootIndex3_0128
-            property: "rotation"
-            keyframeSource: "animations/leftFootIndex3_0128_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: leftFootIndex2_0127
-            property: "position"
-            keyframeSource: "animations/leftFootIndex2_0127_position_2.qad"
-        }
-        KeyframeGroup {
-            target: leftFootIndex2_0127
-            property: "rotation"
-            keyframeSource: "animations/leftFootIndex2_0127_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: leftFootIndex1_0126
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(16.1655, 1.34473, -23.2399)
-            }
-        }
-        KeyframeGroup {
-            target: leftFootIndex1_0126
-            property: "rotation"
-            keyframeSource: "animations/leftFootIndex1_0126_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: leftToeBaseEnd_0129
-            property: "position"
-            keyframeSource: "animations/leftToeBaseEnd_0129_position_2.qad"
-        }
-        KeyframeGroup {
-            target: leftToeBaseEnd_0129
-            property: "rotation"
-            keyframeSource: "animations/leftToeBaseEnd_0129_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: leftToeBase_0122
-            property: "position"
-            keyframeSource: "animations/leftToeBase_0122_position_2.qad"
+            keyframeSource: "animations/leftLegTwist1_0120_rotation_0.qad"
         }
         KeyframeGroup {
             target: leftToeBase_0122
             property: "rotation"
-            keyframeSource: "animations/leftToeBase_0122_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: leftFoot_0121
-            property: "position"
-            keyframeSource: "animations/leftFoot_0121_position_2.qad"
+            keyframeSource: "animations/leftToeBase_0122_rotation_0.qad"
         }
         KeyframeGroup {
             target: leftFoot_0121
             property: "rotation"
-            keyframeSource: "animations/leftFoot_0121_rotation_2.qad"
+            keyframeSource: "animations/leftFoot_0121_rotation_0.qad"
         }
         KeyframeGroup {
             target: leftLeg_0119
             property: "position"
-            keyframeSource: "animations/leftLeg_0119_position_2.qad"
+            keyframeSource: "animations/leftLeg_0119_position_0.qad"
         }
         KeyframeGroup {
             target: leftLeg_0119
             property: "rotation"
-            keyframeSource: "animations/leftLeg_0119_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: leftUpLegTwist1_0130
-            property: "position"
-            keyframeSource: "animations/leftUpLegTwist1_0130_position_2.qad"
+            keyframeSource: "animations/leftLeg_0119_rotation_0.qad"
         }
         KeyframeGroup {
             target: leftUpLegTwist1_0130
             property: "rotation"
-            keyframeSource: "animations/leftUpLegTwist1_0130_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: leftUpLegTwist2_0131
-            property: "position"
-            keyframeSource: "animations/leftUpLegTwist2_0131_position_2.qad"
+            keyframeSource: "animations/leftUpLegTwist1_0130_rotation_0.qad"
         }
         KeyframeGroup {
             target: leftUpLegTwist2_0131
             property: "rotation"
-            keyframeSource: "animations/leftUpLegTwist2_0131_rotation_2.qad"
+            keyframeSource: "animations/leftUpLegTwist2_0131_rotation_0.qad"
         }
         KeyframeGroup {
             target: leftUpLeg_0118
             property: "rotation"
-            keyframeSource: "animations/leftUpLeg_0118_rotation_2.qad"
-        }
-        KeyframeGroup {
-            target: skt_Hips_0132
-            property: "position"
-            keyframeSource: "animations/skt_Hips_0132_position_2.qad"
-        }
-        KeyframeGroup {
-            target: skt_Hips_0132
-            property: "rotation"
-            keyframeSource: "animations/skt_Hips_0132_rotation_2.qad"
+            keyframeSource: "animations/leftUpLeg_0118_rotation_0.qad"
         }
         KeyframeGroup {
             target: hips_09
             property: "position"
-            keyframeSource: "animations/hips_09_position_2.qad"
+            keyframeSource: "animations/hips_09_position_0.qad"
         }
         KeyframeGroup {
             target: hips_09
             property: "rotation"
-            keyframeSource: "animations/hips_09_rotation_2.qad"
+            keyframeSource: "animations/hips_09_rotation_0.qad"
         }
         KeyframeGroup {
             target: ik_Hips_0133
@@ -7733,19 +4240,19 @@ Node {
             loops: Animation.Infinite
         }
         KeyframeGroup {
-            target: rightFootIndex3_017
-            property: "position"
-            keyframeSource: "animations/rightFootIndex3_017_position_3.qad"
+            target: rightHandIndex2_0106
+            property: "rotation"
+            keyframeSource: "animations/rightHandIndex2_0106_rotation_1.qad"
         }
         KeyframeGroup {
             target: rightFootIndex3_017
             property: "rotation"
-            keyframeSource: "animations/rightFootIndex3_017_rotation_3.qad"
+            keyframeSource: "animations/rightFootIndex3_017_rotation_1.qad"
         }
         KeyframeGroup {
             target: ik_Spine3_02
             property: "position"
-            keyframeSource: "animations/ik_Spine3_02_position_3.qad"
+            keyframeSource: "animations/ik_Spine3_02_position_1.qad"
         }
         KeyframeGroup {
             target: ik_Spine3_02
@@ -7754,923 +4261,6 @@ Node {
                 frame: 0
                 value: Qt.quaternion(1, 2.36187e-17, 0, 0)
             }
-        }
-        KeyframeGroup {
-            target: rightFootIndex1_015
-            property: "rotation"
-            keyframeSource: "animations/rightFootIndex1_015_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: ik_LeftHand_07
-            property: "position"
-            keyframeSource: "animations/ik_LeftHand_07_position_3.qad"
-        }
-        KeyframeGroup {
-            target: ik_LeftHand_07
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(1, 2.36187e-17, 0, 0)
-            }
-        }
-        KeyframeGroup {
-            target: leftHandMiddle3_054
-            property: "position"
-            keyframeSource: "animations/leftHandMiddle3_054_position_3.qad"
-        }
-        KeyframeGroup {
-            target: leftHandMiddle3_054
-            property: "rotation"
-            keyframeSource: "animations/leftHandMiddle3_054_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: ik_RightHand_03
-            property: "position"
-            keyframeSource: "animations/ik_RightHand_03_position_3.qad"
-        }
-        KeyframeGroup {
-            target: ik_RightHand_03
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(1, 2.36187e-17, 0, 0)
-            }
-        }
-        KeyframeGroup {
-            target: skt_HeadCamera_08
-            property: "position"
-            keyframeSource: "animations/skt_HeadCamera_08_position_3.qad"
-        }
-        KeyframeGroup {
-            target: skt_HeadCamera_08
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(1, -5.68198e-14, 0, 0)
-            }
-        }
-        KeyframeGroup {
-            target: leftArm_032
-            property: "position"
-            keyframeSource: "animations/leftArm_032_position_3.qad"
-        }
-        KeyframeGroup {
-            target: leftArm_032
-            property: "rotation"
-            keyframeSource: "animations/leftArm_032_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: rightLegTwist1_012
-            property: "position"
-            keyframeSource: "animations/rightLegTwist1_012_position_3.qad"
-        }
-        KeyframeGroup {
-            target: rightLegTwist1_012
-            property: "rotation"
-            keyframeSource: "animations/rightLegTwist1_012_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: skt_Head_062
-            property: "position"
-            keyframeSource: "animations/skt_Head_062_position_3.qad"
-        }
-        KeyframeGroup {
-            target: skt_Head_062
-            property: "rotation"
-            keyframeSource: "animations/skt_Head_062_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: rightFootIndex2_016
-            property: "position"
-            keyframeSource: "animations/rightFootIndex2_016_position_3.qad"
-        }
-        KeyframeGroup {
-            target: rightFootIndex2_016
-            property: "rotation"
-            keyframeSource: "animations/rightFootIndex2_016_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: rightFootBigToe3_020
-            property: "position"
-            keyframeSource: "animations/rightFootBigToe3_020_position_3.qad"
-        }
-        KeyframeGroup {
-            target: rightFootBigToe3_020
-            property: "rotation"
-            keyframeSource: "animations/rightFootBigToe3_020_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: jaw_065
-            property: "position"
-            keyframeSource: "animations/jaw_065_position_3.qad"
-        }
-        KeyframeGroup {
-            target: jaw_065
-            property: "rotation"
-            keyframeSource: "animations/jaw_065_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: rightFootBigToe2_019
-            property: "position"
-            keyframeSource: "animations/rightFootBigToe2_019_position_3.qad"
-        }
-        KeyframeGroup {
-            target: rightFootBigToe2_019
-            property: "rotation"
-            keyframeSource: "animations/rightFootBigToe2_019_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: rightFootBigToe1_018
-            property: "rotation"
-            keyframeSource: "animations/rightFootBigToe1_018_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: rightToeBaseEnd_021
-            property: "position"
-            keyframeSource: "animations/rightToeBaseEnd_021_position_3.qad"
-        }
-        KeyframeGroup {
-            target: rightToeBaseEnd_021
-            property: "rotation"
-            keyframeSource: "animations/rightToeBaseEnd_021_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: nose_067
-            property: "position"
-            keyframeSource: "animations/nose_067_position_3.qad"
-        }
-        KeyframeGroup {
-            target: nose_067
-            property: "rotation"
-            keyframeSource: "animations/nose_067_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: rightToeBase_014
-            property: "position"
-            keyframeSource: "animations/rightToeBase_014_position_3.qad"
-        }
-        KeyframeGroup {
-            target: rightToeBase_014
-            property: "rotation"
-            keyframeSource: "animations/rightToeBase_014_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: rightFoot_013
-            property: "position"
-            keyframeSource: "animations/rightFoot_013_position_3.qad"
-        }
-        KeyframeGroup {
-            target: rightFoot_013
-            property: "rotation"
-            keyframeSource: "animations/rightFoot_013_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: lip_upper_069
-            property: "position"
-            keyframeSource: "animations/lip_upper_069_position_3.qad"
-        }
-        KeyframeGroup {
-            target: lip_upper_069
-            property: "rotation"
-            keyframeSource: "animations/lip_upper_069_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: rightLeg_011
-            property: "position"
-            keyframeSource: "animations/rightLeg_011_position_3.qad"
-        }
-        KeyframeGroup {
-            target: rightLeg_011
-            property: "rotation"
-            keyframeSource: "animations/rightLeg_011_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: lip_lower_070
-            property: "position"
-            keyframeSource: "animations/lip_lower_070_position_3.qad"
-        }
-        KeyframeGroup {
-            target: lip_lower_070
-            property: "rotation"
-            keyframeSource: "animations/lip_lower_070_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: rightUpLegTwist1_022
-            property: "position"
-            keyframeSource: "animations/rightUpLegTwist1_022_position_3.qad"
-        }
-        KeyframeGroup {
-            target: rightUpLegTwist1_022
-            property: "rotation"
-            keyframeSource: "animations/rightUpLegTwist1_022_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: rightUpLegTwist2_023
-            property: "position"
-            keyframeSource: "animations/rightUpLegTwist2_023_position_3.qad"
-        }
-        KeyframeGroup {
-            target: rightUpLegTwist2_023
-            property: "rotation"
-            keyframeSource: "animations/rightUpLegTwist2_023_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_in_right_072
-            property: "position"
-            keyframeSource: "animations/eye_lid_in_right_072_position_3.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_in_right_072
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_in_right_072_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: rightUpLeg_010
-            property: "rotation"
-            keyframeSource: "animations/rightUpLeg_010_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_out_right_073
-            property: "position"
-            keyframeSource: "animations/eye_lid_out_right_073_position_3.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_out_right_073
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_out_right_073_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_Hips_024
-            property: "position"
-            keyframeSource: "animations/skt_FX_Hips_024_position_3.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_Hips_024
-            property: "rotation"
-            keyframeSource: "animations/skt_FX_Hips_024_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: skt_Back_029
-            property: "position"
-            keyframeSource: "animations/skt_Back_029_position_3.qad"
-        }
-        KeyframeGroup {
-            target: skt_Back_029
-            property: "rotation"
-            keyframeSource: "animations/skt_Back_029_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: tongue_05_080
-            property: "position"
-            keyframeSource: "animations/tongue_05_080_position_3.qad"
-        }
-        KeyframeGroup {
-            target: tongue_05_080
-            property: "rotation"
-            keyframeSource: "animations/tongue_05_080_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: skt_Chest_030
-            property: "position"
-            keyframeSource: "animations/skt_Chest_030_position_3.qad"
-        }
-        KeyframeGroup {
-            target: skt_Chest_030
-            property: "rotation"
-            keyframeSource: "animations/skt_Chest_030_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArmTwist3_034
-            property: "position"
-            keyframeSource: "animations/leftForeArmTwist3_034_position_3.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArmTwist3_034
-            property: "rotation"
-            keyframeSource: "animations/leftForeArmTwist3_034_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArmTwist1_035
-            property: "position"
-            keyframeSource: "animations/leftForeArmTwist1_035_position_3.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArmTwist1_035
-            property: "rotation"
-            keyframeSource: "animations/leftForeArmTwist1_035_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky4_041
-            property: "position"
-            keyframeSource: "animations/leftHandPinky4_041_position_3.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky4_041
-            property: "rotation"
-            keyframeSource: "animations/leftHandPinky4_041_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky3_040
-            property: "position"
-            keyframeSource: "animations/leftHandPinky3_040_position_3.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky3_040
-            property: "rotation"
-            keyframeSource: "animations/leftHandPinky3_040_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky2_039
-            property: "position"
-            keyframeSource: "animations/leftHandPinky2_039_position_3.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky2_039
-            property: "rotation"
-            keyframeSource: "animations/leftHandPinky2_039_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky1_038
-            property: "rotation"
-            keyframeSource: "animations/leftHandPinky1_038_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: leftInHandPinky_037
-            property: "rotation"
-            keyframeSource: "animations/leftInHandPinky_037_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: skt_LeftHand_042
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(48.0552, 20.9807, 0.725223)
-            }
-        }
-        KeyframeGroup {
-            target: skt_LeftHand_042
-            property: "rotation"
-            keyframeSource: "animations/skt_LeftHand_042_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex4_047
-            property: "position"
-            keyframeSource: "animations/leftHandIndex4_047_position_3.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex4_047
-            property: "rotation"
-            keyframeSource: "animations/leftHandIndex4_047_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex3_046
-            property: "position"
-            keyframeSource: "animations/leftHandIndex3_046_position_3.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex3_046
-            property: "rotation"
-            keyframeSource: "animations/leftHandIndex3_046_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex2_045
-            property: "position"
-            keyframeSource: "animations/leftHandIndex2_045_position_3.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex2_045
-            property: "rotation"
-            keyframeSource: "animations/leftHandIndex2_045_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex1_044
-            property: "position"
-            keyframeSource: "animations/leftHandIndex1_044_position_3.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex1_044
-            property: "rotation"
-            keyframeSource: "animations/leftHandIndex1_044_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: leftInHandIndex_043
-            property: "rotation"
-            keyframeSource: "animations/leftInHandIndex_043_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_LeftHand_00
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(48.0552, 20.9807, 0.725223)
-            }
-        }
-        KeyframeGroup {
-            target: skt_FX_LeftHand_00
-            property: "rotation"
-            keyframeSource: "animations/skt_FX_LeftHand_00_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb4_050
-            property: "position"
-            keyframeSource: "animations/leftHandThumb4_050_position_3.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb4_050
-            property: "rotation"
-            keyframeSource: "animations/leftHandThumb4_050_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb3_049
-            property: "position"
-            keyframeSource: "animations/leftHandThumb3_049_position_3.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb3_049
-            property: "rotation"
-            keyframeSource: "animations/leftHandThumb3_049_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb2_048
-            property: "position"
-            keyframeSource: "animations/leftHandThumb2_048_position_3.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb2_048
-            property: "rotation"
-            keyframeSource: "animations/leftHandThumb2_048_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb1_01
-            property: "rotation"
-            keyframeSource: "animations/leftHandThumb1_01_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: leftHandMiddle4_055
-            property: "position"
-            keyframeSource: "animations/leftHandMiddle4_055_position_3.qad"
-        }
-        KeyframeGroup {
-            target: leftHandMiddle4_055
-            property: "rotation"
-            keyframeSource: "animations/leftHandMiddle4_055_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: leftHandMiddle2_053
-            property: "position"
-            keyframeSource: "animations/leftHandMiddle2_053_position_3.qad"
-        }
-        KeyframeGroup {
-            target: leftHandMiddle2_053
-            property: "rotation"
-            keyframeSource: "animations/leftHandMiddle2_053_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: leftHandMiddle1_052
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(48.584, -15.8558, -0.447483)
-            }
-        }
-        KeyframeGroup {
-            target: leftHandMiddle1_052
-            property: "rotation"
-            keyframeSource: "animations/leftHandMiddle1_052_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: leftInHandMiddle_051
-            property: "position"
-            keyframeSource: "animations/leftInHandMiddle_051_position_3.qad"
-        }
-        KeyframeGroup {
-            target: leftInHandMiddle_051
-            property: "rotation"
-            keyframeSource: "animations/leftInHandMiddle_051_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: leftHand_036
-            property: "position"
-            keyframeSource: "animations/leftHand_036_position_3.qad"
-        }
-        KeyframeGroup {
-            target: leftHand_036
-            property: "rotation"
-            keyframeSource: "animations/leftHand_036_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArmTwist2_056
-            property: "position"
-            keyframeSource: "animations/leftForeArmTwist2_056_position_3.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArmTwist2_056
-            property: "rotation"
-            keyframeSource: "animations/leftForeArmTwist2_056_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArm_033
-            property: "position"
-            keyframeSource: "animations/leftForeArm_033_position_3.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArm_033
-            property: "rotation"
-            keyframeSource: "animations/leftForeArm_033_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: leftArmTwist1_057
-            property: "position"
-            keyframeSource: "animations/leftArmTwist1_057_position_3.qad"
-        }
-        KeyframeGroup {
-            target: leftArmTwist1_057
-            property: "rotation"
-            keyframeSource: "animations/leftArmTwist1_057_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: leftArmTwist2_058
-            property: "position"
-            keyframeSource: "animations/leftArmTwist2_058_position_3.qad"
-        }
-        KeyframeGroup {
-            target: leftArmTwist2_058
-            property: "rotation"
-            keyframeSource: "animations/leftArmTwist2_058_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: leftShoulder_031
-            property: "rotation"
-            keyframeSource: "animations/leftShoulder_031_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: headEnd_063
-            property: "position"
-            keyframeSource: "animations/headEnd_063_position_3.qad"
-        }
-        KeyframeGroup {
-            target: headEnd_063
-            property: "rotation"
-            keyframeSource: "animations/headEnd_063_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: eye_left_066
-            property: "position"
-            keyframeSource: "animations/eye_left_066_position_3.qad"
-        }
-        KeyframeGroup {
-            target: eye_left_066
-            property: "rotation"
-            keyframeSource: "animations/eye_left_066_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: lip_corners_068
-            property: "position"
-            keyframeSource: "animations/lip_corners_068_position_3.qad"
-        }
-        KeyframeGroup {
-            target: lip_corners_068
-            property: "rotation"
-            keyframeSource: "animations/lip_corners_068_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_right_071
-            property: "position"
-            keyframeSource: "animations/eye_lid_right_071_position_3.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_right_071
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_right_071_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: tongue_06_081
-            property: "position"
-            keyframeSource: "animations/tongue_06_081_position_3.qad"
-        }
-        KeyframeGroup {
-            target: tongue_06_081
-            property: "rotation"
-            keyframeSource: "animations/tongue_06_081_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: tongue_04_079
-            property: "position"
-            keyframeSource: "animations/tongue_04_079_position_3.qad"
-        }
-        KeyframeGroup {
-            target: tongue_04_079
-            property: "rotation"
-            keyframeSource: "animations/tongue_04_079_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: tongue_03_078
-            property: "position"
-            keyframeSource: "animations/tongue_03_078_position_3.qad"
-        }
-        KeyframeGroup {
-            target: tongue_03_078
-            property: "rotation"
-            keyframeSource: "animations/tongue_03_078_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: tongue_02_077
-            property: "position"
-            keyframeSource: "animations/tongue_02_077_position_3.qad"
-        }
-        KeyframeGroup {
-            target: tongue_02_077
-            property: "rotation"
-            keyframeSource: "animations/tongue_02_077_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: tongue_01_076
-            property: "position"
-            keyframeSource: "animations/tongue_01_076_position_3.qad"
-        }
-        KeyframeGroup {
-            target: tongue_01_076
-            property: "rotation"
-            keyframeSource: "animations/tongue_01_076_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: tongue_jaw_075
-            property: "position"
-            keyframeSource: "animations/tongue_jaw_075_position_3.qad"
-        }
-        KeyframeGroup {
-            target: tongue_jaw_075
-            property: "rotation"
-            keyframeSource: "animations/tongue_jaw_075_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: teeth_lwr_082
-            property: "position"
-            keyframeSource: "animations/teeth_lwr_082_position_3.qad"
-        }
-        KeyframeGroup {
-            target: teeth_lwr_082
-            property: "rotation"
-            keyframeSource: "animations/teeth_lwr_082_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: teeth_upr_083
-            property: "position"
-            keyframeSource: "animations/teeth_upr_083_position_3.qad"
-        }
-        KeyframeGroup {
-            target: teeth_upr_083
-            property: "rotation"
-            keyframeSource: "animations/teeth_upr_083_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: mouth_bag_074
-            property: "position"
-            keyframeSource: "animations/mouth_bag_074_position_3.qad"
-        }
-        KeyframeGroup {
-            target: mouth_bag_074
-            property: "rotation"
-            keyframeSource: "animations/mouth_bag_074_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: eye_right_084
-            property: "position"
-            keyframeSource: "animations/eye_right_084_position_3.qad"
-        }
-        KeyframeGroup {
-            target: eye_right_084
-            property: "rotation"
-            keyframeSource: "animations/eye_right_084_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_out_left_086
-            property: "position"
-            keyframeSource: "animations/eye_lid_out_left_086_position_3.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_out_left_086
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_out_left_086_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_in_left_087
-            property: "position"
-            keyframeSource: "animations/eye_lid_in_left_087_position_3.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_in_left_087
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_in_left_087_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_left_085
-            property: "position"
-            keyframeSource: "animations/eye_lid_left_085_position_3.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_left_085
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_left_085_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: face_064
-            property: "position"
-            keyframeSource: "animations/face_064_position_3.qad"
-        }
-        KeyframeGroup {
-            target: face_064
-            property: "rotation"
-            keyframeSource: "animations/face_064_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: head_061
-            property: "position"
-            keyframeSource: "animations/head_061_position_3.qad"
-        }
-        KeyframeGroup {
-            target: head_061
-            property: "rotation"
-            keyframeSource: "animations/head_061_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: neck1_060
-            property: "position"
-            keyframeSource: "animations/neck1_060_position_3.qad"
-        }
-        KeyframeGroup {
-            target: neck1_060
-            property: "rotation"
-            keyframeSource: "animations/neck1_060_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: neck_059
-            property: "position"
-            keyframeSource: "animations/neck_059_position_3.qad"
-        }
-        KeyframeGroup {
-            target: neck_059
-            property: "rotation"
-            keyframeSource: "animations/neck_059_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: rightArmTwist1_090
-            property: "position"
-            keyframeSource: "animations/rightArmTwist1_090_position_3.qad"
-        }
-        KeyframeGroup {
-            target: rightArmTwist1_090
-            property: "rotation"
-            keyframeSource: "animations/rightArmTwist1_090_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_RightHand_093
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(-48.0548, -20.9804, -0.725111)
-            }
-        }
-        KeyframeGroup {
-            target: skt_FX_RightHand_093
-            property: "rotation"
-            keyframeSource: "animations/skt_FX_RightHand_093_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb4_097
-            property: "position"
-            keyframeSource: "animations/rightHandThumb4_097_position_3.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb4_097
-            property: "rotation"
-            keyframeSource: "animations/rightHandThumb4_097_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb3_096
-            property: "position"
-            keyframeSource: "animations/rightHandThumb3_096_position_3.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb3_096
-            property: "rotation"
-            keyframeSource: "animations/rightHandThumb3_096_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb2_095
-            property: "position"
-            keyframeSource: "animations/rightHandThumb2_095_position_3.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb2_095
-            property: "rotation"
-            keyframeSource: "animations/rightHandThumb2_095_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb1_094
-            property: "rotation"
-            keyframeSource: "animations/rightHandThumb1_094_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle4_0102
-            property: "position"
-            keyframeSource: "animations/rightHandMiddle4_0102_position_3.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle4_0102
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.973604, -0.0497169, -0.0333387, 0.220256)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandMiddle3_0101
-            property: "position"
-            keyframeSource: "animations/rightHandMiddle3_0101_position_3.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle3_0101
-            property: "rotation"
-            keyframeSource: "animations/rightHandMiddle3_0101_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle2_0100
-            property: "position"
-            keyframeSource: "animations/rightHandMiddle2_0100_position_3.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle2_0100
-            property: "rotation"
-            keyframeSource: "animations/rightHandMiddle2_0100_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle1_099
-            property: "position"
-            keyframeSource: "animations/rightHandMiddle1_099_position_3.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle1_099
-            property: "rotation"
-            keyframeSource: "animations/rightHandMiddle1_099_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: rightInHandMiddle_098
-            property: "position"
-            keyframeSource: "animations/rightInHandMiddle_098_position_3.qad"
-        }
-        KeyframeGroup {
-            target: rightInHandMiddle_098
-            property: "rotation"
-            keyframeSource: "animations/rightInHandMiddle_098_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: skt_RightHand_0103
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(-48.0548, -20.9804, -0.725111)
-            }
-        }
-        KeyframeGroup {
-            target: skt_RightHand_0103
-            property: "rotation"
-            keyframeSource: "animations/skt_RightHand_0103_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: rightHandIndex4_0108
-            property: "position"
-            keyframeSource: "animations/rightHandIndex4_0108_position_3.qad"
-        }
-        KeyframeGroup {
-            target: rightHandIndex4_0108
-            property: "rotation"
-            keyframeSource: "animations/rightHandIndex4_0108_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: rightHandIndex3_0107
-            property: "position"
-            keyframeSource: "animations/rightHandIndex3_0107_position_3.qad"
-        }
-        KeyframeGroup {
-            target: rightHandIndex3_0107
-            property: "rotation"
-            keyframeSource: "animations/rightHandIndex3_0107_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: rightHandIndex2_0106
-            property: "position"
-            keyframeSource: "animations/rightHandIndex2_0106_position_3.qad"
-        }
-        KeyframeGroup {
-            target: rightHandIndex2_0106
-            property: "rotation"
-            keyframeSource: "animations/rightHandIndex2_0106_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: rightHandIndex1_0105
-            property: "rotation"
-            keyframeSource: "animations/rightHandIndex1_0105_rotation_3.qad"
         }
         KeyframeGroup {
             target: rightInHandIndex_0104
@@ -8681,47 +4271,356 @@ Node {
             }
         }
         KeyframeGroup {
-            target: rightHandPinky4_0113
+            target: rightFootIndex1_015
+            property: "rotation"
+            keyframeSource: "animations/rightFootIndex1_015_rotation_1.qad"
+        }
+        KeyframeGroup {
+            target: rightInHandMiddle_098
+            property: "rotation"
+            keyframeSource: "animations/rightInHandMiddle_098_rotation_1.qad"
+        }
+        KeyframeGroup {
+            target: ik_LeftHand_07
             property: "position"
-            keyframeSource: "animations/rightHandPinky4_0113_position_3.qad"
+            keyframeSource: "animations/ik_LeftHand_07_position_1.qad"
+        }
+        KeyframeGroup {
+            target: ik_LeftHand_07
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(1, 2.36187e-17, 0, 0)
+            }
+        }
+        KeyframeGroup {
+            target: rightHandThumb3_096
+            property: "rotation"
+            keyframeSource: "animations/rightHandThumb3_096_rotation_1.qad"
+        }
+        KeyframeGroup {
+            target: leftHandMiddle3_054
+            property: "rotation"
+            keyframeSource: "animations/leftHandMiddle3_054_rotation_1.qad"
+        }
+        KeyframeGroup {
+            target: ik_RightHand_03
+            property: "position"
+            keyframeSource: "animations/ik_RightHand_03_position_1.qad"
+        }
+        KeyframeGroup {
+            target: ik_RightHand_03
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(1, 2.36187e-17, 0, 0)
+            }
+        }
+        KeyframeGroup {
+            target: skt_HeadCamera_08
+            property: "position"
+            keyframeSource: "animations/skt_HeadCamera_08_position_1.qad"
+        }
+        KeyframeGroup {
+            target: skt_HeadCamera_08
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(1, -5.68198e-14, 0, 0)
+            }
+        }
+        KeyframeGroup {
+            target: rightHandIndex4_0108
+            property: "rotation"
+            keyframeSource: "animations/rightHandIndex4_0108_rotation_1.qad"
+        }
+        KeyframeGroup {
+            target: leftArm_032
+            property: "rotation"
+            keyframeSource: "animations/leftArm_032_rotation_1.qad"
+        }
+        KeyframeGroup {
+            target: rightLegTwist1_012
+            property: "rotation"
+            keyframeSource: "animations/rightLegTwist1_012_rotation_1.qad"
+        }
+        KeyframeGroup {
+            target: rightHandIndex1_0105
+            property: "rotation"
+            keyframeSource: "animations/rightHandIndex1_0105_rotation_1.qad"
+        }
+        KeyframeGroup {
+            target: rightFootIndex2_016
+            property: "rotation"
+            keyframeSource: "animations/rightFootIndex2_016_rotation_1.qad"
         }
         KeyframeGroup {
             target: rightHandPinky4_0113
             property: "rotation"
-            keyframeSource: "animations/rightHandPinky4_0113_rotation_3.qad"
+            keyframeSource: "animations/rightHandPinky4_0113_rotation_1.qad"
+        }
+        KeyframeGroup {
+            target: rightFootBigToe3_020
+            property: "rotation"
+            keyframeSource: "animations/rightFootBigToe3_020_rotation_1.qad"
+        }
+        KeyframeGroup {
+            target: rightFootBigToe2_019
+            property: "rotation"
+            keyframeSource: "animations/rightFootBigToe2_019_rotation_1.qad"
+        }
+        KeyframeGroup {
+            target: rightFootBigToe1_018
+            property: "rotation"
+            keyframeSource: "animations/rightFootBigToe1_018_rotation_1.qad"
+        }
+        KeyframeGroup {
+            target: rightToeBase_014
+            property: "rotation"
+            keyframeSource: "animations/rightToeBase_014_rotation_1.qad"
+        }
+        KeyframeGroup {
+            target: rightFoot_013
+            property: "rotation"
+            keyframeSource: "animations/rightFoot_013_rotation_1.qad"
+        }
+        KeyframeGroup {
+            target: rightLeg_011
+            property: "position"
+            keyframeSource: "animations/rightLeg_011_position_1.qad"
+        }
+        KeyframeGroup {
+            target: rightLeg_011
+            property: "rotation"
+            keyframeSource: "animations/rightLeg_011_rotation_1.qad"
+        }
+        KeyframeGroup {
+            target: rightUpLegTwist1_022
+            property: "rotation"
+            keyframeSource: "animations/rightUpLegTwist1_022_rotation_1.qad"
+        }
+        KeyframeGroup {
+            target: rightUpLegTwist2_023
+            property: "rotation"
+            keyframeSource: "animations/rightUpLegTwist2_023_rotation_1.qad"
+        }
+        KeyframeGroup {
+            target: rightUpLeg_010
+            property: "rotation"
+            keyframeSource: "animations/rightUpLeg_010_rotation_1.qad"
+        }
+        KeyframeGroup {
+            target: leftForeArmTwist3_034
+            property: "rotation"
+            keyframeSource: "animations/leftForeArmTwist3_034_rotation_1.qad"
+        }
+        KeyframeGroup {
+            target: leftForeArmTwist1_035
+            property: "rotation"
+            keyframeSource: "animations/leftForeArmTwist1_035_rotation_1.qad"
+        }
+        KeyframeGroup {
+            target: leftHandPinky4_041
+            property: "rotation"
+            keyframeSource: "animations/leftHandPinky4_041_rotation_1.qad"
+        }
+        KeyframeGroup {
+            target: leftHandPinky3_040
+            property: "rotation"
+            keyframeSource: "animations/leftHandPinky3_040_rotation_1.qad"
+        }
+        KeyframeGroup {
+            target: leftHandPinky2_039
+            property: "rotation"
+            keyframeSource: "animations/leftHandPinky2_039_rotation_1.qad"
+        }
+        KeyframeGroup {
+            target: leftHandPinky1_038
+            property: "rotation"
+            keyframeSource: "animations/leftHandPinky1_038_rotation_1.qad"
+        }
+        KeyframeGroup {
+            target: leftInHandPinky_037
+            property: "rotation"
+            keyframeSource: "animations/leftInHandPinky_037_rotation_1.qad"
+        }
+        KeyframeGroup {
+            target: leftHandIndex4_047
+            property: "rotation"
+            keyframeSource: "animations/leftHandIndex4_047_rotation_1.qad"
+        }
+        KeyframeGroup {
+            target: leftHandIndex3_046
+            property: "rotation"
+            keyframeSource: "animations/leftHandIndex3_046_rotation_1.qad"
+        }
+        KeyframeGroup {
+            target: leftHandIndex2_045
+            property: "rotation"
+            keyframeSource: "animations/leftHandIndex2_045_rotation_1.qad"
+        }
+        KeyframeGroup {
+            target: leftHandIndex1_044
+            property: "rotation"
+            keyframeSource: "animations/leftHandIndex1_044_rotation_1.qad"
+        }
+        KeyframeGroup {
+            target: leftInHandIndex_043
+            property: "rotation"
+            keyframeSource: "animations/leftInHandIndex_043_rotation_1.qad"
+        }
+        KeyframeGroup {
+            target: leftHandThumb4_050
+            property: "rotation"
+            keyframeSource: "animations/leftHandThumb4_050_rotation_1.qad"
+        }
+        KeyframeGroup {
+            target: rightArmTwist1_090
+            property: "rotation"
+            keyframeSource: "animations/rightArmTwist1_090_rotation_1.qad"
+        }
+        KeyframeGroup {
+            target: leftHandThumb3_049
+            property: "rotation"
+            keyframeSource: "animations/leftHandThumb3_049_rotation_1.qad"
+        }
+        KeyframeGroup {
+            target: leftHandThumb2_048
+            property: "rotation"
+            keyframeSource: "animations/leftHandThumb2_048_rotation_1.qad"
+        }
+        KeyframeGroup {
+            target: leftHandThumb1_01
+            property: "rotation"
+            keyframeSource: "animations/leftHandThumb1_01_rotation_1.qad"
+        }
+        KeyframeGroup {
+            target: rightHandThumb4_097
+            property: "rotation"
+            keyframeSource: "animations/rightHandThumb4_097_rotation_1.qad"
+        }
+        KeyframeGroup {
+            target: leftHandMiddle4_055
+            property: "rotation"
+            keyframeSource: "animations/leftHandMiddle4_055_rotation_1.qad"
+        }
+        KeyframeGroup {
+            target: rightHandThumb2_095
+            property: "rotation"
+            keyframeSource: "animations/rightHandThumb2_095_rotation_1.qad"
+        }
+        KeyframeGroup {
+            target: leftHandMiddle2_053
+            property: "rotation"
+            keyframeSource: "animations/leftHandMiddle2_053_rotation_1.qad"
+        }
+        KeyframeGroup {
+            target: rightHandThumb1_094
+            property: "rotation"
+            keyframeSource: "animations/rightHandThumb1_094_rotation_1.qad"
+        }
+        KeyframeGroup {
+            target: leftHandMiddle1_052
+            property: "rotation"
+            keyframeSource: "animations/leftHandMiddle1_052_rotation_1.qad"
+        }
+        KeyframeGroup {
+            target: leftInHandMiddle_051
+            property: "rotation"
+            keyframeSource: "animations/leftInHandMiddle_051_rotation_1.qad"
+        }
+        KeyframeGroup {
+            target: rightHandMiddle4_0102
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.973604, -0.0497169, -0.0333387, 0.220256)
+            }
+        }
+        KeyframeGroup {
+            target: leftHand_036
+            property: "rotation"
+            keyframeSource: "animations/leftHand_036_rotation_1.qad"
+        }
+        KeyframeGroup {
+            target: rightHandMiddle2_0100
+            property: "rotation"
+            keyframeSource: "animations/rightHandMiddle2_0100_rotation_1.qad"
+        }
+        KeyframeGroup {
+            target: leftForeArmTwist2_056
+            property: "rotation"
+            keyframeSource: "animations/leftForeArmTwist2_056_rotation_1.qad"
+        }
+        KeyframeGroup {
+            target: rightHandMiddle1_099
+            property: "rotation"
+            keyframeSource: "animations/rightHandMiddle1_099_rotation_1.qad"
+        }
+        KeyframeGroup {
+            target: leftForeArm_033
+            property: "position"
+            keyframeSource: "animations/leftForeArm_033_position_1.qad"
+        }
+        KeyframeGroup {
+            target: leftForeArm_033
+            property: "rotation"
+            keyframeSource: "animations/leftForeArm_033_rotation_1.qad"
+        }
+        KeyframeGroup {
+            target: leftArmTwist1_057
+            property: "rotation"
+            keyframeSource: "animations/leftArmTwist1_057_rotation_1.qad"
+        }
+        KeyframeGroup {
+            target: leftArmTwist2_058
+            property: "rotation"
+            keyframeSource: "animations/leftArmTwist2_058_rotation_1.qad"
+        }
+        KeyframeGroup {
+            target: rightHandIndex3_0107
+            property: "rotation"
+            keyframeSource: "animations/rightHandIndex3_0107_rotation_1.qad"
+        }
+        KeyframeGroup {
+            target: leftShoulder_031
+            property: "rotation"
+            keyframeSource: "animations/leftShoulder_031_rotation_1.qad"
+        }
+        KeyframeGroup {
+            target: head_061
+            property: "rotation"
+            keyframeSource: "animations/head_061_rotation_1.qad"
+        }
+        KeyframeGroup {
+            target: neck1_060
+            property: "rotation"
+            keyframeSource: "animations/neck1_060_rotation_1.qad"
+        }
+        KeyframeGroup {
+            target: neck_059
+            property: "rotation"
+            keyframeSource: "animations/neck_059_rotation_1.qad"
+        }
+        KeyframeGroup {
+            target: rightHandMiddle3_0101
+            property: "rotation"
+            keyframeSource: "animations/rightHandMiddle3_0101_rotation_1.qad"
         }
         KeyframeGroup {
             target: rightHandPinky3_0112
-            property: "position"
-            keyframeSource: "animations/rightHandPinky3_0112_position_3.qad"
-        }
-        KeyframeGroup {
-            target: rightHandPinky3_0112
             property: "rotation"
-            keyframeSource: "animations/rightHandPinky3_0112_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: rightHandPinky2_0111
-            property: "position"
-            keyframeSource: "animations/rightHandPinky2_0111_position_3.qad"
+            keyframeSource: "animations/rightHandPinky3_0112_rotation_1.qad"
         }
         KeyframeGroup {
             target: rightHandPinky2_0111
             property: "rotation"
-            keyframeSource: "animations/rightHandPinky2_0111_rotation_3.qad"
+            keyframeSource: "animations/rightHandPinky2_0111_rotation_1.qad"
         }
         KeyframeGroup {
             target: rightHandPinky1_0110
             property: "rotation"
-            keyframeSource: "animations/rightHandPinky1_0110_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: rightInHandPinky_0109
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(-7.95185, 1.34689, -19.4511)
-            }
+            keyframeSource: "animations/rightHandPinky1_0110_rotation_1.qad"
         }
         KeyframeGroup {
             target: rightInHandPinky_0109
@@ -8733,273 +4632,123 @@ Node {
         }
         KeyframeGroup {
             target: rightHand_092
-            property: "position"
-            keyframeSource: "animations/rightHand_092_position_3.qad"
-        }
-        KeyframeGroup {
-            target: rightHand_092
             property: "rotation"
-            keyframeSource: "animations/rightHand_092_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArmTwist3_0114
-            property: "position"
-            keyframeSource: "animations/rightForeArmTwist3_0114_position_3.qad"
+            keyframeSource: "animations/rightHand_092_rotation_1.qad"
         }
         KeyframeGroup {
             target: rightForeArmTwist3_0114
             property: "rotation"
-            keyframeSource: "animations/rightForeArmTwist3_0114_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArmTwist2_0115
-            property: "position"
-            keyframeSource: "animations/rightForeArmTwist2_0115_position_3.qad"
+            keyframeSource: "animations/rightForeArmTwist3_0114_rotation_1.qad"
         }
         KeyframeGroup {
             target: rightForeArmTwist2_0115
             property: "rotation"
-            keyframeSource: "animations/rightForeArmTwist2_0115_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArmTwist1_0116
-            property: "position"
-            keyframeSource: "animations/rightForeArmTwist1_0116_position_3.qad"
+            keyframeSource: "animations/rightForeArmTwist2_0115_rotation_1.qad"
         }
         KeyframeGroup {
             target: rightForeArmTwist1_0116
             property: "rotation"
-            keyframeSource: "animations/rightForeArmTwist1_0116_rotation_3.qad"
+            keyframeSource: "animations/rightForeArmTwist1_0116_rotation_1.qad"
         }
         KeyframeGroup {
             target: rightForeArm_091
             property: "position"
-            keyframeSource: "animations/rightForeArm_091_position_3.qad"
+            keyframeSource: "animations/rightForeArm_091_position_1.qad"
         }
         KeyframeGroup {
             target: rightForeArm_091
             property: "rotation"
-            keyframeSource: "animations/rightForeArm_091_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: rightArmTwist2_0117
-            property: "position"
-            keyframeSource: "animations/rightArmTwist2_0117_position_3.qad"
+            keyframeSource: "animations/rightForeArm_091_rotation_1.qad"
         }
         KeyframeGroup {
             target: rightArmTwist2_0117
             property: "rotation"
-            keyframeSource: "animations/rightArmTwist2_0117_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: rightArm_089
-            property: "position"
-            keyframeSource: "animations/rightArm_089_position_3.qad"
+            keyframeSource: "animations/rightArmTwist2_0117_rotation_1.qad"
         }
         KeyframeGroup {
             target: rightArm_089
             property: "rotation"
-            keyframeSource: "animations/rightArm_089_rotation_3.qad"
+            keyframeSource: "animations/rightArm_089_rotation_1.qad"
         }
         KeyframeGroup {
             target: rightShoulder_088
             property: "rotation"
-            keyframeSource: "animations/rightShoulder_088_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: spine3_028
-            property: "position"
-            keyframeSource: "animations/spine3_028_position_3.qad"
+            keyframeSource: "animations/rightShoulder_088_rotation_1.qad"
         }
         KeyframeGroup {
             target: spine3_028
             property: "rotation"
-            keyframeSource: "animations/spine3_028_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: spine2_027
-            property: "position"
-            keyframeSource: "animations/spine2_027_position_3.qad"
+            keyframeSource: "animations/spine3_028_rotation_1.qad"
         }
         KeyframeGroup {
             target: spine2_027
             property: "rotation"
-            keyframeSource: "animations/spine2_027_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: spine1_026
-            property: "position"
-            keyframeSource: "animations/spine1_026_position_3.qad"
+            keyframeSource: "animations/spine2_027_rotation_1.qad"
         }
         KeyframeGroup {
             target: spine1_026
             property: "rotation"
-            keyframeSource: "animations/spine1_026_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: spine_025
-            property: "position"
-            keyframeSource: "animations/spine_025_position_3.qad"
+            keyframeSource: "animations/spine1_026_rotation_1.qad"
         }
         KeyframeGroup {
             target: spine_025
             property: "rotation"
-            keyframeSource: "animations/spine_025_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: leftLegTwist1_0120
-            property: "position"
-            keyframeSource: "animations/leftLegTwist1_0120_position_3.qad"
+            keyframeSource: "animations/spine_025_rotation_1.qad"
         }
         KeyframeGroup {
             target: leftLegTwist1_0120
             property: "rotation"
-            keyframeSource: "animations/leftLegTwist1_0120_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: leftFootBigToe3_0125
-            property: "position"
-            keyframeSource: "animations/leftFootBigToe3_0125_position_3.qad"
-        }
-        KeyframeGroup {
-            target: leftFootBigToe3_0125
-            property: "rotation"
-            keyframeSource: "animations/leftFootBigToe3_0125_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: leftFootBigToe2_0124
-            property: "position"
-            keyframeSource: "animations/leftFootBigToe2_0124_position_3.qad"
-        }
-        KeyframeGroup {
-            target: leftFootBigToe2_0124
-            property: "rotation"
-            keyframeSource: "animations/leftFootBigToe2_0124_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: leftFootBigToe1_0123
-            property: "rotation"
-            keyframeSource: "animations/leftFootBigToe1_0123_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: leftFootIndex3_0128
-            property: "position"
-            keyframeSource: "animations/leftFootIndex3_0128_position_3.qad"
-        }
-        KeyframeGroup {
-            target: leftFootIndex3_0128
-            property: "rotation"
-            keyframeSource: "animations/leftFootIndex3_0128_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: leftFootIndex2_0127
-            property: "position"
-            keyframeSource: "animations/leftFootIndex2_0127_position_3.qad"
-        }
-        KeyframeGroup {
-            target: leftFootIndex2_0127
-            property: "rotation"
-            keyframeSource: "animations/leftFootIndex2_0127_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: leftFootIndex1_0126
-            property: "position"
-            keyframeSource: "animations/leftFootIndex1_0126_position_3.qad"
-        }
-        KeyframeGroup {
-            target: leftFootIndex1_0126
-            property: "rotation"
-            keyframeSource: "animations/leftFootIndex1_0126_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: leftToeBaseEnd_0129
-            property: "position"
-            keyframeSource: "animations/leftToeBaseEnd_0129_position_3.qad"
-        }
-        KeyframeGroup {
-            target: leftToeBaseEnd_0129
-            property: "rotation"
-            keyframeSource: "animations/leftToeBaseEnd_0129_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: leftToeBase_0122
-            property: "position"
-            keyframeSource: "animations/leftToeBase_0122_position_3.qad"
+            keyframeSource: "animations/leftLegTwist1_0120_rotation_1.qad"
         }
         KeyframeGroup {
             target: leftToeBase_0122
             property: "rotation"
-            keyframeSource: "animations/leftToeBase_0122_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: leftFoot_0121
-            property: "position"
-            keyframeSource: "animations/leftFoot_0121_position_3.qad"
+            keyframeSource: "animations/leftToeBase_0122_rotation_1.qad"
         }
         KeyframeGroup {
             target: leftFoot_0121
             property: "rotation"
-            keyframeSource: "animations/leftFoot_0121_rotation_3.qad"
+            keyframeSource: "animations/leftFoot_0121_rotation_1.qad"
         }
         KeyframeGroup {
             target: leftLeg_0119
             property: "position"
-            keyframeSource: "animations/leftLeg_0119_position_3.qad"
+            keyframeSource: "animations/leftLeg_0119_position_1.qad"
         }
         KeyframeGroup {
             target: leftLeg_0119
             property: "rotation"
-            keyframeSource: "animations/leftLeg_0119_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: leftUpLegTwist1_0130
-            property: "position"
-            keyframeSource: "animations/leftUpLegTwist1_0130_position_3.qad"
+            keyframeSource: "animations/leftLeg_0119_rotation_1.qad"
         }
         KeyframeGroup {
             target: leftUpLegTwist1_0130
             property: "rotation"
-            keyframeSource: "animations/leftUpLegTwist1_0130_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: leftUpLegTwist2_0131
-            property: "position"
-            keyframeSource: "animations/leftUpLegTwist2_0131_position_3.qad"
+            keyframeSource: "animations/leftUpLegTwist1_0130_rotation_1.qad"
         }
         KeyframeGroup {
             target: leftUpLegTwist2_0131
             property: "rotation"
-            keyframeSource: "animations/leftUpLegTwist2_0131_rotation_3.qad"
+            keyframeSource: "animations/leftUpLegTwist2_0131_rotation_1.qad"
         }
         KeyframeGroup {
             target: leftUpLeg_0118
             property: "rotation"
-            keyframeSource: "animations/leftUpLeg_0118_rotation_3.qad"
-        }
-        KeyframeGroup {
-            target: skt_Hips_0132
-            property: "position"
-            keyframeSource: "animations/skt_Hips_0132_position_3.qad"
-        }
-        KeyframeGroup {
-            target: skt_Hips_0132
-            property: "rotation"
-            keyframeSource: "animations/skt_Hips_0132_rotation_3.qad"
+            keyframeSource: "animations/leftUpLeg_0118_rotation_1.qad"
         }
         KeyframeGroup {
             target: hips_09
             property: "position"
-            keyframeSource: "animations/hips_09_position_3.qad"
+            keyframeSource: "animations/hips_09_position_1.qad"
         }
         KeyframeGroup {
             target: hips_09
             property: "rotation"
-            keyframeSource: "animations/hips_09_rotation_3.qad"
+            keyframeSource: "animations/hips_09_rotation_1.qad"
         }
         KeyframeGroup {
             target: ik_Hips_0133
             property: "position"
-            keyframeSource: "animations/ik_Hips_0133_position_3.qad"
+            keyframeSource: "animations/ik_Hips_0133_position_1.qad"
         }
         KeyframeGroup {
             target: ik_Hips_0133
@@ -9012,7 +4761,7 @@ Node {
         KeyframeGroup {
             target: ik_LeftFoot_0134
             property: "position"
-            keyframeSource: "animations/ik_LeftFoot_0134_position_3.qad"
+            keyframeSource: "animations/ik_LeftFoot_0134_position_1.qad"
         }
         KeyframeGroup {
             target: ik_LeftFoot_0134
@@ -9025,7 +4774,7 @@ Node {
         KeyframeGroup {
             target: ik_RightFoot_0135
             property: "position"
-            keyframeSource: "animations/ik_RightFoot_0135_position_3.qad"
+            keyframeSource: "animations/ik_RightFoot_0135_position_1.qad"
         }
         KeyframeGroup {
             target: ik_RightFoot_0135
@@ -9038,7 +4787,7 @@ Node {
         KeyframeGroup {
             target: ik_Head_0136
             property: "position"
-            keyframeSource: "animations/ik_Head_0136_position_3.qad"
+            keyframeSource: "animations/ik_Head_0136_position_1.qad"
         }
         KeyframeGroup {
             target: ik_Head_0136
@@ -9065,14 +4814,1288 @@ Node {
             loops: Animation.Infinite
         }
         KeyframeGroup {
-            target: rightFootIndex3_017
-            property: "position"
-            keyframeSource: "animations/rightFootIndex3_017_position_4.qad"
+            target: rightHandIndex2_0106
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.931262, -0.0566451, 0.0786065, 0.351231)
+            }
         }
         KeyframeGroup {
             target: rightFootIndex3_017
             property: "rotation"
-            keyframeSource: "animations/rightFootIndex3_017_rotation_4.qad"
+            keyframeSource: "animations/rightFootIndex3_017_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: ik_Spine3_02
+            property: "position"
+            keyframeSource: "animations/ik_Spine3_02_position_2.qad"
+        }
+        KeyframeGroup {
+            target: ik_Spine3_02
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(1, 2.36187e-17, 0, 0)
+            }
+        }
+        KeyframeGroup {
+            target: rightInHandIndex_0104
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.921629, 0.353523, 0.113846, -0.112521)
+            }
+        }
+        KeyframeGroup {
+            target: rightFootIndex1_015
+            property: "rotation"
+            keyframeSource: "animations/rightFootIndex1_015_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: rightInHandMiddle_098
+            property: "rotation"
+            keyframeSource: "animations/rightInHandMiddle_098_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: ik_LeftHand_07
+            property: "position"
+            keyframeSource: "animations/ik_LeftHand_07_position_2.qad"
+        }
+        KeyframeGroup {
+            target: ik_LeftHand_07
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(1, 2.36187e-17, 0, 0)
+            }
+        }
+        KeyframeGroup {
+            target: rightHandThumb3_096
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.880625, -0.168961, 0.0711458, 0.43691)
+            }
+        }
+        KeyframeGroup {
+            target: leftHandMiddle3_054
+            property: "rotation"
+            keyframeSource: "animations/leftHandMiddle3_054_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: ik_RightHand_03
+            property: "position"
+            keyframeSource: "animations/ik_RightHand_03_position_2.qad"
+        }
+        KeyframeGroup {
+            target: ik_RightHand_03
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(1, 2.36187e-17, 0, 0)
+            }
+        }
+        KeyframeGroup {
+            target: skt_HeadCamera_08
+            property: "position"
+            keyframeSource: "animations/skt_HeadCamera_08_position_2.qad"
+        }
+        KeyframeGroup {
+            target: skt_HeadCamera_08
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(1, -5.68198e-14, 0, 0)
+            }
+        }
+        KeyframeGroup {
+            target: rightHandIndex4_0108
+            property: "rotation"
+            keyframeSource: "animations/rightHandIndex4_0108_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: leftArm_032
+            property: "rotation"
+            keyframeSource: "animations/leftArm_032_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: rightLegTwist1_012
+            property: "rotation"
+            keyframeSource: "animations/rightLegTwist1_012_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: rightHandIndex1_0105
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.93939, -0.0955967, -0.0163223, 0.32885)
+            }
+        }
+        KeyframeGroup {
+            target: rightFootIndex2_016
+            property: "rotation"
+            keyframeSource: "animations/rightFootIndex2_016_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: rightHandPinky4_0113
+            property: "rotation"
+            keyframeSource: "animations/rightHandPinky4_0113_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: rightFootBigToe3_020
+            property: "rotation"
+            keyframeSource: "animations/rightFootBigToe3_020_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: rightFootBigToe2_019
+            property: "rotation"
+            keyframeSource: "animations/rightFootBigToe2_019_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: rightFootBigToe1_018
+            property: "rotation"
+            keyframeSource: "animations/rightFootBigToe1_018_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: rightToeBase_014
+            property: "rotation"
+            keyframeSource: "animations/rightToeBase_014_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: rightFoot_013
+            property: "rotation"
+            keyframeSource: "animations/rightFoot_013_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: rightLeg_011
+            property: "position"
+            keyframeSource: "animations/rightLeg_011_position_2.qad"
+        }
+        KeyframeGroup {
+            target: rightLeg_011
+            property: "rotation"
+            keyframeSource: "animations/rightLeg_011_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: rightUpLegTwist1_022
+            property: "rotation"
+            keyframeSource: "animations/rightUpLegTwist1_022_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: rightUpLegTwist2_023
+            property: "rotation"
+            keyframeSource: "animations/rightUpLegTwist2_023_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: rightUpLeg_010
+            property: "rotation"
+            keyframeSource: "animations/rightUpLeg_010_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: leftForeArmTwist3_034
+            property: "rotation"
+            keyframeSource: "animations/leftForeArmTwist3_034_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: leftForeArmTwist1_035
+            property: "rotation"
+            keyframeSource: "animations/leftForeArmTwist1_035_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: leftHandPinky4_041
+            property: "rotation"
+            keyframeSource: "animations/leftHandPinky4_041_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: leftHandPinky3_040
+            property: "rotation"
+            keyframeSource: "animations/leftHandPinky3_040_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: leftHandPinky2_039
+            property: "rotation"
+            keyframeSource: "animations/leftHandPinky2_039_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: leftHandPinky1_038
+            property: "rotation"
+            keyframeSource: "animations/leftHandPinky1_038_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: leftInHandPinky_037
+            property: "rotation"
+            keyframeSource: "animations/leftInHandPinky_037_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: leftHandIndex4_047
+            property: "rotation"
+            keyframeSource: "animations/leftHandIndex4_047_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: leftHandIndex3_046
+            property: "rotation"
+            keyframeSource: "animations/leftHandIndex3_046_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: leftHandIndex2_045
+            property: "rotation"
+            keyframeSource: "animations/leftHandIndex2_045_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: leftHandIndex1_044
+            property: "rotation"
+            keyframeSource: "animations/leftHandIndex1_044_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: leftInHandIndex_043
+            property: "rotation"
+            keyframeSource: "animations/leftInHandIndex_043_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: leftHandThumb4_050
+            property: "rotation"
+            keyframeSource: "animations/leftHandThumb4_050_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: rightArmTwist1_090
+            property: "rotation"
+            keyframeSource: "animations/rightArmTwist1_090_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: leftHandThumb3_049
+            property: "rotation"
+            keyframeSource: "animations/leftHandThumb3_049_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: leftHandThumb2_048
+            property: "rotation"
+            keyframeSource: "animations/leftHandThumb2_048_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: leftHandThumb1_01
+            property: "rotation"
+            keyframeSource: "animations/leftHandThumb1_01_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: rightHandThumb4_097
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.999301, 0.0212541, -0.00852276, 0.0295584)
+            }
+        }
+        KeyframeGroup {
+            target: leftHandMiddle4_055
+            property: "rotation"
+            keyframeSource: "animations/leftHandMiddle4_055_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: rightHandThumb2_095
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.969428, 0.224882, 0.0779005, 0.0597309)
+            }
+        }
+        KeyframeGroup {
+            target: leftHandMiddle2_053
+            property: "rotation"
+            keyframeSource: "animations/leftHandMiddle2_053_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: rightHandThumb1_094
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.529089, 0.708823, 0.466079, -0.0201291)
+            }
+        }
+        KeyframeGroup {
+            target: leftHandMiddle1_052
+            property: "rotation"
+            keyframeSource: "animations/leftHandMiddle1_052_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: leftInHandMiddle_051
+            property: "rotation"
+            keyframeSource: "animations/leftInHandMiddle_051_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: rightHandMiddle4_0102
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.973604, -0.0497167, -0.033339, 0.220253)
+            }
+        }
+        KeyframeGroup {
+            target: leftHand_036
+            property: "rotation"
+            keyframeSource: "animations/leftHand_036_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: rightHandMiddle2_0100
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.968908, 0.0430646, 0.0332208, 0.241368)
+            }
+        }
+        KeyframeGroup {
+            target: leftForeArmTwist2_056
+            property: "rotation"
+            keyframeSource: "animations/leftForeArmTwist2_056_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: rightHandMiddle1_099
+            property: "rotation"
+            keyframeSource: "animations/rightHandMiddle1_099_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: leftForeArm_033
+            property: "position"
+            keyframeSource: "animations/leftForeArm_033_position_2.qad"
+        }
+        KeyframeGroup {
+            target: leftForeArm_033
+            property: "rotation"
+            keyframeSource: "animations/leftForeArm_033_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: leftArmTwist1_057
+            property: "rotation"
+            keyframeSource: "animations/leftArmTwist1_057_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: leftArmTwist2_058
+            property: "rotation"
+            keyframeSource: "animations/leftArmTwist2_058_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: rightHandIndex3_0107
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.899129, -0.0327185, 0.117394, 0.420376)
+            }
+        }
+        KeyframeGroup {
+            target: leftShoulder_031
+            property: "rotation"
+            keyframeSource: "animations/leftShoulder_031_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: head_061
+            property: "rotation"
+            keyframeSource: "animations/head_061_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: neck1_060
+            property: "rotation"
+            keyframeSource: "animations/neck1_060_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: neck_059
+            property: "position"
+            keyframeSource: "animations/neck_059_position_2.qad"
+        }
+        KeyframeGroup {
+            target: neck_059
+            property: "rotation"
+            keyframeSource: "animations/neck_059_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: rightHandMiddle3_0101
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.940086, 0.0498863, 0.0225632, 0.336512)
+            }
+        }
+        KeyframeGroup {
+            target: rightHandPinky3_0112
+            property: "rotation"
+            keyframeSource: "animations/rightHandPinky3_0112_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: rightHandPinky2_0111
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.941364, 0.00502075, -0.0563829, 0.332612)
+            }
+        }
+        KeyframeGroup {
+            target: rightHandPinky1_0110
+            property: "rotation"
+            keyframeSource: "animations/rightHandPinky1_0110_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: rightInHandPinky_0109
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.987487, 0.107136, 0.102255, -0.0541685)
+            }
+        }
+        KeyframeGroup {
+            target: rightHand_092
+            property: "rotation"
+            keyframeSource: "animations/rightHand_092_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: rightForeArmTwist3_0114
+            property: "rotation"
+            keyframeSource: "animations/rightForeArmTwist3_0114_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: rightForeArmTwist2_0115
+            property: "rotation"
+            keyframeSource: "animations/rightForeArmTwist2_0115_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: rightForeArmTwist1_0116
+            property: "rotation"
+            keyframeSource: "animations/rightForeArmTwist1_0116_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: rightForeArm_091
+            property: "position"
+            keyframeSource: "animations/rightForeArm_091_position_2.qad"
+        }
+        KeyframeGroup {
+            target: rightForeArm_091
+            property: "rotation"
+            keyframeSource: "animations/rightForeArm_091_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: rightArmTwist2_0117
+            property: "rotation"
+            keyframeSource: "animations/rightArmTwist2_0117_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: rightArm_089
+            property: "rotation"
+            keyframeSource: "animations/rightArm_089_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: rightShoulder_088
+            property: "rotation"
+            keyframeSource: "animations/rightShoulder_088_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: spine3_028
+            property: "rotation"
+            keyframeSource: "animations/spine3_028_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: spine2_027
+            property: "rotation"
+            keyframeSource: "animations/spine2_027_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: spine1_026
+            property: "rotation"
+            keyframeSource: "animations/spine1_026_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: spine_025
+            property: "rotation"
+            keyframeSource: "animations/spine_025_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: leftLegTwist1_0120
+            property: "rotation"
+            keyframeSource: "animations/leftLegTwist1_0120_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: leftFootBigToe3_0125
+            property: "rotation"
+            keyframeSource: "animations/leftFootBigToe3_0125_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: leftFootBigToe2_0124
+            property: "rotation"
+            keyframeSource: "animations/leftFootBigToe2_0124_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: leftFootBigToe1_0123
+            property: "rotation"
+            keyframeSource: "animations/leftFootBigToe1_0123_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: leftFootIndex3_0128
+            property: "rotation"
+            keyframeSource: "animations/leftFootIndex3_0128_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: leftFootIndex2_0127
+            property: "rotation"
+            keyframeSource: "animations/leftFootIndex2_0127_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: leftFootIndex1_0126
+            property: "rotation"
+            keyframeSource: "animations/leftFootIndex1_0126_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: leftToeBase_0122
+            property: "rotation"
+            keyframeSource: "animations/leftToeBase_0122_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: leftFoot_0121
+            property: "rotation"
+            keyframeSource: "animations/leftFoot_0121_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: leftLeg_0119
+            property: "position"
+            keyframeSource: "animations/leftLeg_0119_position_2.qad"
+        }
+        KeyframeGroup {
+            target: leftLeg_0119
+            property: "rotation"
+            keyframeSource: "animations/leftLeg_0119_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: leftUpLegTwist1_0130
+            property: "rotation"
+            keyframeSource: "animations/leftUpLegTwist1_0130_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: leftUpLegTwist2_0131
+            property: "rotation"
+            keyframeSource: "animations/leftUpLegTwist2_0131_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: leftUpLeg_0118
+            property: "rotation"
+            keyframeSource: "animations/leftUpLeg_0118_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: hips_09
+            property: "position"
+            keyframeSource: "animations/hips_09_position_2.qad"
+        }
+        KeyframeGroup {
+            target: hips_09
+            property: "rotation"
+            keyframeSource: "animations/hips_09_rotation_2.qad"
+        }
+        KeyframeGroup {
+            target: ik_Hips_0133
+            property: "position"
+            keyframeSource: "animations/ik_Hips_0133_position_2.qad"
+        }
+        KeyframeGroup {
+            target: ik_Hips_0133
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(1, 2.36187e-17, 0, 0)
+            }
+        }
+        KeyframeGroup {
+            target: ik_LeftFoot_0134
+            property: "position"
+            keyframeSource: "animations/ik_LeftFoot_0134_position_2.qad"
+        }
+        KeyframeGroup {
+            target: ik_LeftFoot_0134
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(1, 2.36187e-17, 0, 0)
+            }
+        }
+        KeyframeGroup {
+            target: ik_RightFoot_0135
+            property: "position"
+            keyframeSource: "animations/ik_RightFoot_0135_position_2.qad"
+        }
+        KeyframeGroup {
+            target: ik_RightFoot_0135
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(1, 2.36187e-17, 0, 0)
+            }
+        }
+        KeyframeGroup {
+            target: ik_Head_0136
+            property: "position"
+            keyframeSource: "animations/ik_Head_0136_position_2.qad"
+        }
+        KeyframeGroup {
+            target: ik_Head_0136
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(1, 2.36187e-17, 0, 0)
+            }
+        }
+    }
+    Timeline {
+        id: frames_004_timeline
+        objectName: "Frames.004"
+        property real framesPerSecond: 1000
+        startFrame: 0
+        endFrame: 1200
+        currentFrame: 0
+        enabled: true
+        animations: TimelineAnimation {
+            duration: 1200
+            from: 0
+            to: 1200
+            running: true
+            loops: Animation.Infinite
+        }
+        KeyframeGroup {
+            target: rightHandIndex2_0106
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.931262, -0.0566455, 0.0786066, 0.351231)
+            }
+        }
+        KeyframeGroup {
+            target: rightFootIndex3_017
+            property: "rotation"
+            keyframeSource: "animations/rightFootIndex3_017_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: ik_Spine3_02
+            property: "position"
+            keyframeSource: "animations/ik_Spine3_02_position_3.qad"
+        }
+        KeyframeGroup {
+            target: ik_Spine3_02
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(1, 2.36187e-17, 0, 1.57772e-30)
+            }
+        }
+        KeyframeGroup {
+            target: rightInHandIndex_0104
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.921629, 0.353524, 0.113846, -0.112521)
+            }
+        }
+        KeyframeGroup {
+            target: rightFootIndex1_015
+            property: "rotation"
+            keyframeSource: "animations/rightFootIndex1_015_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: rightInHandMiddle_098
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.997624, 0.0388622, 0.0290058, 0.04893)
+            }
+        }
+        KeyframeGroup {
+            target: ik_LeftHand_07
+            property: "position"
+            keyframeSource: "animations/ik_LeftHand_07_position_3.qad"
+        }
+        KeyframeGroup {
+            target: ik_LeftHand_07
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(1, 2.36187e-17, 0, 1.57772e-30)
+            }
+        }
+        KeyframeGroup {
+            target: rightHandThumb3_096
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.880625, -0.168961, 0.071146, 0.43691)
+            }
+        }
+        KeyframeGroup {
+            target: leftHandMiddle3_054
+            property: "rotation"
+            keyframeSource: "animations/leftHandMiddle3_054_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: ik_RightHand_03
+            property: "position"
+            keyframeSource: "animations/ik_RightHand_03_position_3.qad"
+        }
+        KeyframeGroup {
+            target: ik_RightHand_03
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(1, 2.36187e-17, 0, 1.57772e-30)
+            }
+        }
+        KeyframeGroup {
+            target: skt_HeadCamera_08
+            property: "position"
+            keyframeSource: "animations/skt_HeadCamera_08_position_3.qad"
+        }
+        KeyframeGroup {
+            target: skt_HeadCamera_08
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(1, -5.68198e-14, 8.96831e-44, 1.57772e-30)
+            }
+        }
+        KeyframeGroup {
+            target: rightHandIndex4_0108
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.944937, 0.0293401, -0.033153, 0.324243)
+            }
+        }
+        KeyframeGroup {
+            target: leftArm_032
+            property: "rotation"
+            keyframeSource: "animations/leftArm_032_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: rightLegTwist1_012
+            property: "rotation"
+            keyframeSource: "animations/rightLegTwist1_012_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: rightHandIndex1_0105
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.93939, -0.0955965, -0.0163222, 0.32885)
+            }
+        }
+        KeyframeGroup {
+            target: rightFootIndex2_016
+            property: "rotation"
+            keyframeSource: "animations/rightFootIndex2_016_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: rightHandPinky4_0113
+            property: "rotation"
+            keyframeSource: "animations/rightHandPinky4_0113_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: rightFootBigToe3_020
+            property: "rotation"
+            keyframeSource: "animations/rightFootBigToe3_020_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: rightFootBigToe2_019
+            property: "rotation"
+            keyframeSource: "animations/rightFootBigToe2_019_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: rightFootBigToe1_018
+            property: "rotation"
+            keyframeSource: "animations/rightFootBigToe1_018_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: rightToeBase_014
+            property: "rotation"
+            keyframeSource: "animations/rightToeBase_014_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: rightFoot_013
+            property: "rotation"
+            keyframeSource: "animations/rightFoot_013_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: rightLeg_011
+            property: "position"
+            keyframeSource: "animations/rightLeg_011_position_3.qad"
+        }
+        KeyframeGroup {
+            target: rightLeg_011
+            property: "rotation"
+            keyframeSource: "animations/rightLeg_011_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: rightUpLegTwist1_022
+            property: "rotation"
+            keyframeSource: "animations/rightUpLegTwist1_022_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: rightUpLegTwist2_023
+            property: "rotation"
+            keyframeSource: "animations/rightUpLegTwist2_023_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: rightUpLeg_010
+            property: "rotation"
+            keyframeSource: "animations/rightUpLeg_010_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: leftForeArmTwist3_034
+            property: "rotation"
+            keyframeSource: "animations/leftForeArmTwist3_034_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: leftForeArmTwist1_035
+            property: "rotation"
+            keyframeSource: "animations/leftForeArmTwist1_035_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: leftHandPinky4_041
+            property: "rotation"
+            keyframeSource: "animations/leftHandPinky4_041_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: leftHandPinky3_040
+            property: "rotation"
+            keyframeSource: "animations/leftHandPinky3_040_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: leftHandPinky2_039
+            property: "rotation"
+            keyframeSource: "animations/leftHandPinky2_039_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: leftHandPinky1_038
+            property: "rotation"
+            keyframeSource: "animations/leftHandPinky1_038_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: leftInHandPinky_037
+            property: "rotation"
+            keyframeSource: "animations/leftInHandPinky_037_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: leftHandIndex4_047
+            property: "rotation"
+            keyframeSource: "animations/leftHandIndex4_047_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: leftHandIndex3_046
+            property: "rotation"
+            keyframeSource: "animations/leftHandIndex3_046_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: leftHandIndex2_045
+            property: "rotation"
+            keyframeSource: "animations/leftHandIndex2_045_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: leftHandIndex1_044
+            property: "rotation"
+            keyframeSource: "animations/leftHandIndex1_044_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: leftInHandIndex_043
+            property: "rotation"
+            keyframeSource: "animations/leftInHandIndex_043_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: leftHandThumb4_050
+            property: "rotation"
+            keyframeSource: "animations/leftHandThumb4_050_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: rightArmTwist1_090
+            property: "rotation"
+            keyframeSource: "animations/rightArmTwist1_090_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: leftHandThumb3_049
+            property: "rotation"
+            keyframeSource: "animations/leftHandThumb3_049_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: leftHandThumb2_048
+            property: "rotation"
+            keyframeSource: "animations/leftHandThumb2_048_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: leftHandThumb1_01
+            property: "rotation"
+            keyframeSource: "animations/leftHandThumb1_01_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: rightHandThumb4_097
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.999301, 0.0212543, -0.00852261, 0.0295586)
+            }
+        }
+        KeyframeGroup {
+            target: leftHandMiddle4_055
+            property: "rotation"
+            keyframeSource: "animations/leftHandMiddle4_055_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: rightHandThumb2_095
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.969429, 0.224882, 0.0779004, 0.0597307)
+            }
+        }
+        KeyframeGroup {
+            target: leftHandMiddle2_053
+            property: "rotation"
+            keyframeSource: "animations/leftHandMiddle2_053_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: rightHandThumb1_094
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.529089, 0.708823, 0.466079, -0.0201294)
+            }
+        }
+        KeyframeGroup {
+            target: leftHandMiddle1_052
+            property: "rotation"
+            keyframeSource: "animations/leftHandMiddle1_052_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: leftInHandMiddle_051
+            property: "rotation"
+            keyframeSource: "animations/leftInHandMiddle_051_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: rightHandMiddle4_0102
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.973604, -0.0497165, -0.0333389, 0.220253)
+            }
+        }
+        KeyframeGroup {
+            target: leftHand_036
+            property: "rotation"
+            keyframeSource: "animations/leftHand_036_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: rightHandMiddle2_0100
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.968908, 0.0430645, 0.0332209, 0.241368)
+            }
+        }
+        KeyframeGroup {
+            target: leftForeArmTwist2_056
+            property: "rotation"
+            keyframeSource: "animations/leftForeArmTwist2_056_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: rightHandMiddle1_099
+            property: "rotation"
+            keyframeSource: "animations/rightHandMiddle1_099_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: leftForeArm_033
+            property: "position"
+            keyframeSource: "animations/leftForeArm_033_position_3.qad"
+        }
+        KeyframeGroup {
+            target: leftForeArm_033
+            property: "rotation"
+            keyframeSource: "animations/leftForeArm_033_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: leftArmTwist1_057
+            property: "rotation"
+            keyframeSource: "animations/leftArmTwist1_057_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: leftArmTwist2_058
+            property: "rotation"
+            keyframeSource: "animations/leftArmTwist2_058_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: rightHandIndex3_0107
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.899129, -0.0327185, 0.117394, 0.420376)
+            }
+        }
+        KeyframeGroup {
+            target: leftShoulder_031
+            property: "rotation"
+            keyframeSource: "animations/leftShoulder_031_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: head_061
+            property: "rotation"
+            keyframeSource: "animations/head_061_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: neck1_060
+            property: "rotation"
+            keyframeSource: "animations/neck1_060_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: neck_059
+            property: "position"
+            keyframeSource: "animations/neck_059_position_3.qad"
+        }
+        KeyframeGroup {
+            target: neck_059
+            property: "rotation"
+            keyframeSource: "animations/neck_059_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: rightHandMiddle3_0101
+            property: "rotation"
+            keyframeSource: "animations/rightHandMiddle3_0101_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: rightHandPinky3_0112
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.951109, 0.00298444, -0.0479821, 0.305092)
+            }
+        }
+        KeyframeGroup {
+            target: rightHandPinky2_0111
+            property: "rotation"
+            keyframeSource: "animations/rightHandPinky2_0111_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: rightHandPinky1_0110
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.936626, -0.163248, 0.00375108, 0.309947)
+            }
+        }
+        KeyframeGroup {
+            target: rightInHandPinky_0109
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.987487, 0.107136, 0.102255, -0.0541685)
+            }
+        }
+        KeyframeGroup {
+            target: rightHand_092
+            property: "rotation"
+            keyframeSource: "animations/rightHand_092_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: rightForeArmTwist3_0114
+            property: "rotation"
+            keyframeSource: "animations/rightForeArmTwist3_0114_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: rightForeArmTwist2_0115
+            property: "rotation"
+            keyframeSource: "animations/rightForeArmTwist2_0115_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: rightForeArmTwist1_0116
+            property: "rotation"
+            keyframeSource: "animations/rightForeArmTwist1_0116_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: rightForeArm_091
+            property: "position"
+            keyframeSource: "animations/rightForeArm_091_position_3.qad"
+        }
+        KeyframeGroup {
+            target: rightForeArm_091
+            property: "rotation"
+            keyframeSource: "animations/rightForeArm_091_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: rightArmTwist2_0117
+            property: "rotation"
+            keyframeSource: "animations/rightArmTwist2_0117_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: rightArm_089
+            property: "rotation"
+            keyframeSource: "animations/rightArm_089_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: rightShoulder_088
+            property: "rotation"
+            keyframeSource: "animations/rightShoulder_088_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: spine3_028
+            property: "rotation"
+            keyframeSource: "animations/spine3_028_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: spine2_027
+            property: "rotation"
+            keyframeSource: "animations/spine2_027_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: spine1_026
+            property: "rotation"
+            keyframeSource: "animations/spine1_026_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: spine_025
+            property: "rotation"
+            keyframeSource: "animations/spine_025_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: leftLegTwist1_0120
+            property: "rotation"
+            keyframeSource: "animations/leftLegTwist1_0120_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: leftFootBigToe3_0125
+            property: "rotation"
+            keyframeSource: "animations/leftFootBigToe3_0125_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: leftFootBigToe2_0124
+            property: "rotation"
+            keyframeSource: "animations/leftFootBigToe2_0124_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: leftFootBigToe1_0123
+            property: "rotation"
+            keyframeSource: "animations/leftFootBigToe1_0123_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: leftFootIndex3_0128
+            property: "rotation"
+            keyframeSource: "animations/leftFootIndex3_0128_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: leftFootIndex2_0127
+            property: "rotation"
+            keyframeSource: "animations/leftFootIndex2_0127_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: leftFootIndex1_0126
+            property: "rotation"
+            keyframeSource: "animations/leftFootIndex1_0126_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: leftToeBase_0122
+            property: "rotation"
+            keyframeSource: "animations/leftToeBase_0122_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: leftFoot_0121
+            property: "rotation"
+            keyframeSource: "animations/leftFoot_0121_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: leftLeg_0119
+            property: "position"
+            keyframeSource: "animations/leftLeg_0119_position_3.qad"
+        }
+        KeyframeGroup {
+            target: leftLeg_0119
+            property: "rotation"
+            keyframeSource: "animations/leftLeg_0119_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: leftUpLegTwist1_0130
+            property: "rotation"
+            keyframeSource: "animations/leftUpLegTwist1_0130_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: leftUpLegTwist2_0131
+            property: "rotation"
+            keyframeSource: "animations/leftUpLegTwist2_0131_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: leftUpLeg_0118
+            property: "rotation"
+            keyframeSource: "animations/leftUpLeg_0118_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: hips_09
+            property: "position"
+            keyframeSource: "animations/hips_09_position_3.qad"
+        }
+        KeyframeGroup {
+            target: hips_09
+            property: "rotation"
+            keyframeSource: "animations/hips_09_rotation_3.qad"
+        }
+        KeyframeGroup {
+            target: ik_Hips_0133
+            property: "position"
+            keyframeSource: "animations/ik_Hips_0133_position_3.qad"
+        }
+        KeyframeGroup {
+            target: ik_Hips_0133
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(1, 2.36187e-17, 0, 1.57772e-30)
+            }
+        }
+        KeyframeGroup {
+            target: ik_LeftFoot_0134
+            property: "position"
+            keyframeSource: "animations/ik_LeftFoot_0134_position_3.qad"
+        }
+        KeyframeGroup {
+            target: ik_LeftFoot_0134
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(1, 2.36187e-17, 0, 1.57772e-30)
+            }
+        }
+        KeyframeGroup {
+            target: ik_RightFoot_0135
+            property: "position"
+            keyframeSource: "animations/ik_RightFoot_0135_position_3.qad"
+        }
+        KeyframeGroup {
+            target: ik_RightFoot_0135
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(1, 2.36187e-17, 0, 1.57772e-30)
+            }
+        }
+        KeyframeGroup {
+            target: ik_Head_0136
+            property: "position"
+            keyframeSource: "animations/ik_Head_0136_position_3.qad"
+        }
+        KeyframeGroup {
+            target: ik_Head_0136
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(1, 2.36187e-17, 0, 1.57772e-30)
+            }
+        }
+    }
+    Timeline {
+        id: frames_005_timeline
+        objectName: "Frames.005"
+        property real framesPerSecond: 1000
+        startFrame: 0
+        endFrame: 4867
+        currentFrame: 0
+        enabled: true
+        animations: TimelineAnimation {
+            duration: 4867
+            from: 0
+            to: 4867
+            running: true
+            loops: Animation.Infinite
         }
         KeyframeGroup {
             target: ik_Spine3_02
@@ -9082,15 +6105,17 @@ Node {
         KeyframeGroup {
             target: ik_Spine3_02
             property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(1, 2.36187e-17, 0, 0)
-            }
+            keyframeSource: "animations/ik_Spine3_02_rotation_4.qad"
         }
         KeyframeGroup {
-            target: rightFootIndex1_015
+            target: rightFoot_013
             property: "rotation"
-            keyframeSource: "animations/rightFootIndex1_015_rotation_4.qad"
+            keyframeSource: "animations/rightFoot_013_rotation_4.qad"
+        }
+        KeyframeGroup {
+            target: rightInHandMiddle_098
+            property: "rotation"
+            keyframeSource: "animations/rightInHandMiddle_098_rotation_4.qad"
         }
         KeyframeGroup {
             target: ik_LeftHand_07
@@ -9100,15 +6125,15 @@ Node {
         KeyframeGroup {
             target: ik_LeftHand_07
             property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(1, 2.36187e-17, 0, 0)
-            }
+            keyframeSource: "animations/ik_LeftHand_07_rotation_4.qad"
         }
         KeyframeGroup {
-            target: leftHandMiddle3_054
-            property: "position"
-            keyframeSource: "animations/leftHandMiddle3_054_position_4.qad"
+            target: rightHandThumb3_096
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.880625, -0.168961, 0.0711456, 0.43691)
+            }
         }
         KeyframeGroup {
             target: leftHandMiddle3_054
@@ -9123,10 +6148,7 @@ Node {
         KeyframeGroup {
             target: ik_RightHand_03
             property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(1, 2.36187e-17, 0, 0)
-            }
+            keyframeSource: "animations/ik_RightHand_03_rotation_4.qad"
         }
         KeyframeGroup {
             target: skt_HeadCamera_08
@@ -9136,15 +6158,15 @@ Node {
         KeyframeGroup {
             target: skt_HeadCamera_08
             property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(1, -5.68198e-14, 0, 0)
-            }
+            keyframeSource: "animations/skt_HeadCamera_08_rotation_4.qad"
         }
         KeyframeGroup {
-            target: leftArm_032
-            property: "position"
-            keyframeSource: "animations/leftArm_032_position_4.qad"
+            target: rightHandIndex4_0108
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.944937, 0.0293401, -0.0331531, 0.324243)
+            }
         }
         KeyframeGroup {
             target: leftArm_032
@@ -9153,93 +6175,13 @@ Node {
         }
         KeyframeGroup {
             target: rightLegTwist1_012
-            property: "position"
-            keyframeSource: "animations/rightLegTwist1_012_position_4.qad"
-        }
-        KeyframeGroup {
-            target: rightLegTwist1_012
             property: "rotation"
             keyframeSource: "animations/rightLegTwist1_012_rotation_4.qad"
         }
         KeyframeGroup {
-            target: skt_Head_062
-            property: "position"
-            keyframeSource: "animations/skt_Head_062_position_4.qad"
-        }
-        KeyframeGroup {
-            target: skt_Head_062
+            target: rightHand_092
             property: "rotation"
-            keyframeSource: "animations/skt_Head_062_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: rightFootIndex2_016
-            property: "position"
-            keyframeSource: "animations/rightFootIndex2_016_position_4.qad"
-        }
-        KeyframeGroup {
-            target: rightFootIndex2_016
-            property: "rotation"
-            keyframeSource: "animations/rightFootIndex2_016_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: rightFootBigToe3_020
-            property: "position"
-            keyframeSource: "animations/rightFootBigToe3_020_position_4.qad"
-        }
-        KeyframeGroup {
-            target: rightFootBigToe3_020
-            property: "rotation"
-            keyframeSource: "animations/rightFootBigToe3_020_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: jaw_065
-            property: "position"
-            keyframeSource: "animations/jaw_065_position_4.qad"
-        }
-        KeyframeGroup {
-            target: jaw_065
-            property: "rotation"
-            keyframeSource: "animations/jaw_065_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: rightFootBigToe2_019
-            property: "position"
-            keyframeSource: "animations/rightFootBigToe2_019_position_4.qad"
-        }
-        KeyframeGroup {
-            target: rightFootBigToe2_019
-            property: "rotation"
-            keyframeSource: "animations/rightFootBigToe2_019_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: rightFootBigToe1_018
-            property: "rotation"
-            keyframeSource: "animations/rightFootBigToe1_018_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: rightToeBaseEnd_021
-            property: "position"
-            keyframeSource: "animations/rightToeBaseEnd_021_position_4.qad"
-        }
-        KeyframeGroup {
-            target: rightToeBaseEnd_021
-            property: "rotation"
-            keyframeSource: "animations/rightToeBaseEnd_021_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: nose_067
-            property: "position"
-            keyframeSource: "animations/nose_067_position_4.qad"
-        }
-        KeyframeGroup {
-            target: nose_067
-            property: "rotation"
-            keyframeSource: "animations/nose_067_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: rightToeBase_014
-            property: "position"
-            keyframeSource: "animations/rightToeBase_014_position_4.qad"
+            keyframeSource: "animations/rightHand_092_rotation_4.qad"
         }
         KeyframeGroup {
             target: rightToeBase_014
@@ -9247,24 +6189,9 @@ Node {
             keyframeSource: "animations/rightToeBase_014_rotation_4.qad"
         }
         KeyframeGroup {
-            target: rightFoot_013
-            property: "position"
-            keyframeSource: "animations/rightFoot_013_position_4.qad"
-        }
-        KeyframeGroup {
-            target: rightFoot_013
+            target: rightForeArmTwist3_0114
             property: "rotation"
-            keyframeSource: "animations/rightFoot_013_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: lip_upper_069
-            property: "position"
-            keyframeSource: "animations/lip_upper_069_position_4.qad"
-        }
-        KeyframeGroup {
-            target: lip_upper_069
-            property: "rotation"
-            keyframeSource: "animations/lip_upper_069_rotation_4.qad"
+            keyframeSource: "animations/rightForeArmTwist3_0114_rotation_4.qad"
         }
         KeyframeGroup {
             target: rightLeg_011
@@ -9277,29 +6204,9 @@ Node {
             keyframeSource: "animations/rightLeg_011_rotation_4.qad"
         }
         KeyframeGroup {
-            target: lip_lower_070
-            property: "position"
-            keyframeSource: "animations/lip_lower_070_position_4.qad"
-        }
-        KeyframeGroup {
-            target: lip_lower_070
-            property: "rotation"
-            keyframeSource: "animations/lip_lower_070_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: rightUpLegTwist1_022
-            property: "position"
-            keyframeSource: "animations/rightUpLegTwist1_022_position_4.qad"
-        }
-        KeyframeGroup {
             target: rightUpLegTwist1_022
             property: "rotation"
             keyframeSource: "animations/rightUpLegTwist1_022_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: rightUpLegTwist2_023
-            property: "position"
-            keyframeSource: "animations/rightUpLegTwist2_023_position_4.qad"
         }
         KeyframeGroup {
             target: rightUpLegTwist2_023
@@ -9307,74 +6214,9 @@ Node {
             keyframeSource: "animations/rightUpLegTwist2_023_rotation_4.qad"
         }
         KeyframeGroup {
-            target: eye_lid_in_right_072
-            property: "position"
-            keyframeSource: "animations/eye_lid_in_right_072_position_4.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_in_right_072
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_in_right_072_rotation_4.qad"
-        }
-        KeyframeGroup {
             target: rightUpLeg_010
             property: "rotation"
             keyframeSource: "animations/rightUpLeg_010_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_out_right_073
-            property: "position"
-            keyframeSource: "animations/eye_lid_out_right_073_position_4.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_out_right_073
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_out_right_073_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_Hips_024
-            property: "position"
-            keyframeSource: "animations/skt_FX_Hips_024_position_4.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_Hips_024
-            property: "rotation"
-            keyframeSource: "animations/skt_FX_Hips_024_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: skt_Back_029
-            property: "position"
-            keyframeSource: "animations/skt_Back_029_position_4.qad"
-        }
-        KeyframeGroup {
-            target: skt_Back_029
-            property: "rotation"
-            keyframeSource: "animations/skt_Back_029_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: tongue_05_080
-            property: "position"
-            keyframeSource: "animations/tongue_05_080_position_4.qad"
-        }
-        KeyframeGroup {
-            target: tongue_05_080
-            property: "rotation"
-            keyframeSource: "animations/tongue_05_080_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: skt_Chest_030
-            property: "position"
-            keyframeSource: "animations/skt_Chest_030_position_4.qad"
-        }
-        KeyframeGroup {
-            target: skt_Chest_030
-            property: "rotation"
-            keyframeSource: "animations/skt_Chest_030_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArmTwist3_034
-            property: "position"
-            keyframeSource: "animations/leftForeArmTwist3_034_position_4.qad"
         }
         KeyframeGroup {
             target: leftForeArmTwist3_034
@@ -9383,18 +6225,8 @@ Node {
         }
         KeyframeGroup {
             target: leftForeArmTwist1_035
-            property: "position"
-            keyframeSource: "animations/leftForeArmTwist1_035_position_4.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArmTwist1_035
             property: "rotation"
             keyframeSource: "animations/leftForeArmTwist1_035_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky4_041
-            property: "position"
-            keyframeSource: "animations/leftHandPinky4_041_position_4.qad"
         }
         KeyframeGroup {
             target: leftHandPinky4_041
@@ -9403,18 +6235,8 @@ Node {
         }
         KeyframeGroup {
             target: leftHandPinky3_040
-            property: "position"
-            keyframeSource: "animations/leftHandPinky3_040_position_4.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky3_040
             property: "rotation"
             keyframeSource: "animations/leftHandPinky3_040_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky2_039
-            property: "position"
-            keyframeSource: "animations/leftHandPinky2_039_position_4.qad"
         }
         KeyframeGroup {
             target: leftHandPinky2_039
@@ -9428,31 +6250,8 @@ Node {
         }
         KeyframeGroup {
             target: leftInHandPinky_037
-            property: "position"
-            keyframeSource: "animations/leftInHandPinky_037_position_4.qad"
-        }
-        KeyframeGroup {
-            target: leftInHandPinky_037
             property: "rotation"
             keyframeSource: "animations/leftInHandPinky_037_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: skt_LeftHand_042
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(48.0552, 20.9807, 0.725232)
-            }
-        }
-        KeyframeGroup {
-            target: skt_LeftHand_042
-            property: "rotation"
-            keyframeSource: "animations/skt_LeftHand_042_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex4_047
-            property: "position"
-            keyframeSource: "animations/leftHandIndex4_047_position_4.qad"
         }
         KeyframeGroup {
             target: leftHandIndex4_047
@@ -9461,18 +6260,8 @@ Node {
         }
         KeyframeGroup {
             target: leftHandIndex3_046
-            property: "position"
-            keyframeSource: "animations/leftHandIndex3_046_position_4.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex3_046
             property: "rotation"
             keyframeSource: "animations/leftHandIndex3_046_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex2_045
-            property: "position"
-            keyframeSource: "animations/leftHandIndex2_045_position_4.qad"
         }
         KeyframeGroup {
             target: leftHandIndex2_045
@@ -9486,31 +6275,8 @@ Node {
         }
         KeyframeGroup {
             target: leftInHandIndex_043
-            property: "position"
-            keyframeSource: "animations/leftInHandIndex_043_position_4.qad"
-        }
-        KeyframeGroup {
-            target: leftInHandIndex_043
             property: "rotation"
             keyframeSource: "animations/leftInHandIndex_043_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_LeftHand_00
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(48.0552, 20.9807, 0.725232)
-            }
-        }
-        KeyframeGroup {
-            target: skt_FX_LeftHand_00
-            property: "rotation"
-            keyframeSource: "animations/skt_FX_LeftHand_00_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb4_050
-            property: "position"
-            keyframeSource: "animations/leftHandThumb4_050_position_4.qad"
         }
         KeyframeGroup {
             target: leftHandThumb4_050
@@ -9518,19 +6284,14 @@ Node {
             keyframeSource: "animations/leftHandThumb4_050_rotation_4.qad"
         }
         KeyframeGroup {
-            target: leftHandThumb3_049
-            property: "position"
-            keyframeSource: "animations/leftHandThumb3_049_position_4.qad"
+            target: rightArmTwist1_090
+            property: "rotation"
+            keyframeSource: "animations/rightArmTwist1_090_rotation_4.qad"
         }
         KeyframeGroup {
             target: leftHandThumb3_049
             property: "rotation"
             keyframeSource: "animations/leftHandThumb3_049_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb2_048
-            property: "position"
-            keyframeSource: "animations/leftHandThumb2_048_position_4.qad"
         }
         KeyframeGroup {
             target: leftHandThumb2_048
@@ -9543,9 +6304,12 @@ Node {
             keyframeSource: "animations/leftHandThumb1_01_rotation_4.qad"
         }
         KeyframeGroup {
-            target: leftHandMiddle4_055
-            property: "position"
-            keyframeSource: "animations/leftHandMiddle4_055_position_4.qad"
+            target: rightHandThumb4_097
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.999301, 0.0212542, -0.00852287, 0.0295585)
+            }
         }
         KeyframeGroup {
             target: leftHandMiddle4_055
@@ -9553,9 +6317,12 @@ Node {
             keyframeSource: "animations/leftHandMiddle4_055_rotation_4.qad"
         }
         KeyframeGroup {
-            target: leftHandMiddle2_053
-            property: "position"
-            keyframeSource: "animations/leftHandMiddle2_053_position_4.qad"
+            target: rightHandThumb2_095
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.969429, 0.224882, 0.0779006, 0.059731)
+            }
         }
         KeyframeGroup {
             target: leftHandMiddle2_053
@@ -9563,9 +6330,12 @@ Node {
             keyframeSource: "animations/leftHandMiddle2_053_rotation_4.qad"
         }
         KeyframeGroup {
-            target: leftHandMiddle1_052
-            property: "position"
-            keyframeSource: "animations/leftHandMiddle1_052_position_4.qad"
+            target: rightHandThumb1_094
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.529089, 0.708823, 0.466079, -0.0201289)
+            }
         }
         KeyframeGroup {
             target: leftHandMiddle1_052
@@ -9574,18 +6344,13 @@ Node {
         }
         KeyframeGroup {
             target: leftInHandMiddle_051
-            property: "position"
-            keyframeSource: "animations/leftInHandMiddle_051_position_4.qad"
-        }
-        KeyframeGroup {
-            target: leftInHandMiddle_051
             property: "rotation"
             keyframeSource: "animations/leftInHandMiddle_051_rotation_4.qad"
         }
         KeyframeGroup {
-            target: leftHand_036
-            property: "position"
-            keyframeSource: "animations/leftHand_036_position_4.qad"
+            target: rightHandMiddle4_0102
+            property: "rotation"
+            keyframeSource: "animations/rightHandMiddle4_0102_rotation_4.qad"
         }
         KeyframeGroup {
             target: leftHand_036
@@ -9593,14 +6358,22 @@ Node {
             keyframeSource: "animations/leftHand_036_rotation_4.qad"
         }
         KeyframeGroup {
-            target: leftForeArmTwist2_056
-            property: "position"
-            keyframeSource: "animations/leftForeArmTwist2_056_position_4.qad"
+            target: rightHandMiddle2_0100
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.968908, 0.0430646, 0.0332209, 0.241368)
+            }
         }
         KeyframeGroup {
             target: leftForeArmTwist2_056
             property: "rotation"
             keyframeSource: "animations/leftForeArmTwist2_056_rotation_4.qad"
+        }
+        KeyframeGroup {
+            target: rightHandMiddle1_099
+            property: "rotation"
+            keyframeSource: "animations/rightHandMiddle1_099_rotation_4.qad"
         }
         KeyframeGroup {
             target: leftForeArm_033
@@ -9614,18 +6387,8 @@ Node {
         }
         KeyframeGroup {
             target: leftArmTwist1_057
-            property: "position"
-            keyframeSource: "animations/leftArmTwist1_057_position_4.qad"
-        }
-        KeyframeGroup {
-            target: leftArmTwist1_057
             property: "rotation"
             keyframeSource: "animations/leftArmTwist1_057_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: leftArmTwist2_058
-            property: "position"
-            keyframeSource: "animations/leftArmTwist2_058_position_4.qad"
         }
         KeyframeGroup {
             target: leftArmTwist2_058
@@ -9633,194 +6396,17 @@ Node {
             keyframeSource: "animations/leftArmTwist2_058_rotation_4.qad"
         }
         KeyframeGroup {
+            target: rightHandIndex3_0107
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.899129, -0.0327184, 0.117394, 0.420376)
+            }
+        }
+        KeyframeGroup {
             target: leftShoulder_031
             property: "rotation"
             keyframeSource: "animations/leftShoulder_031_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: headEnd_063
-            property: "position"
-            keyframeSource: "animations/headEnd_063_position_4.qad"
-        }
-        KeyframeGroup {
-            target: headEnd_063
-            property: "rotation"
-            keyframeSource: "animations/headEnd_063_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: eye_left_066
-            property: "position"
-            keyframeSource: "animations/eye_left_066_position_4.qad"
-        }
-        KeyframeGroup {
-            target: eye_left_066
-            property: "rotation"
-            keyframeSource: "animations/eye_left_066_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: lip_corners_068
-            property: "position"
-            keyframeSource: "animations/lip_corners_068_position_4.qad"
-        }
-        KeyframeGroup {
-            target: lip_corners_068
-            property: "rotation"
-            keyframeSource: "animations/lip_corners_068_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_right_071
-            property: "position"
-            keyframeSource: "animations/eye_lid_right_071_position_4.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_right_071
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_right_071_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: tongue_06_081
-            property: "position"
-            keyframeSource: "animations/tongue_06_081_position_4.qad"
-        }
-        KeyframeGroup {
-            target: tongue_06_081
-            property: "rotation"
-            keyframeSource: "animations/tongue_06_081_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: tongue_04_079
-            property: "position"
-            keyframeSource: "animations/tongue_04_079_position_4.qad"
-        }
-        KeyframeGroup {
-            target: tongue_04_079
-            property: "rotation"
-            keyframeSource: "animations/tongue_04_079_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: tongue_03_078
-            property: "position"
-            keyframeSource: "animations/tongue_03_078_position_4.qad"
-        }
-        KeyframeGroup {
-            target: tongue_03_078
-            property: "rotation"
-            keyframeSource: "animations/tongue_03_078_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: tongue_02_077
-            property: "position"
-            keyframeSource: "animations/tongue_02_077_position_4.qad"
-        }
-        KeyframeGroup {
-            target: tongue_02_077
-            property: "rotation"
-            keyframeSource: "animations/tongue_02_077_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: tongue_01_076
-            property: "position"
-            keyframeSource: "animations/tongue_01_076_position_4.qad"
-        }
-        KeyframeGroup {
-            target: tongue_01_076
-            property: "rotation"
-            keyframeSource: "animations/tongue_01_076_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: tongue_jaw_075
-            property: "position"
-            keyframeSource: "animations/tongue_jaw_075_position_4.qad"
-        }
-        KeyframeGroup {
-            target: tongue_jaw_075
-            property: "rotation"
-            keyframeSource: "animations/tongue_jaw_075_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: teeth_lwr_082
-            property: "position"
-            keyframeSource: "animations/teeth_lwr_082_position_4.qad"
-        }
-        KeyframeGroup {
-            target: teeth_lwr_082
-            property: "rotation"
-            keyframeSource: "animations/teeth_lwr_082_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: teeth_upr_083
-            property: "position"
-            keyframeSource: "animations/teeth_upr_083_position_4.qad"
-        }
-        KeyframeGroup {
-            target: teeth_upr_083
-            property: "rotation"
-            keyframeSource: "animations/teeth_upr_083_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: mouth_bag_074
-            property: "position"
-            keyframeSource: "animations/mouth_bag_074_position_4.qad"
-        }
-        KeyframeGroup {
-            target: mouth_bag_074
-            property: "rotation"
-            keyframeSource: "animations/mouth_bag_074_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: eye_right_084
-            property: "position"
-            keyframeSource: "animations/eye_right_084_position_4.qad"
-        }
-        KeyframeGroup {
-            target: eye_right_084
-            property: "rotation"
-            keyframeSource: "animations/eye_right_084_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_out_left_086
-            property: "position"
-            keyframeSource: "animations/eye_lid_out_left_086_position_4.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_out_left_086
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_out_left_086_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_in_left_087
-            property: "position"
-            keyframeSource: "animations/eye_lid_in_left_087_position_4.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_in_left_087
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_in_left_087_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_left_085
-            property: "position"
-            keyframeSource: "animations/eye_lid_left_085_position_4.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_left_085
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_left_085_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: face_064
-            property: "position"
-            keyframeSource: "animations/face_064_position_4.qad"
-        }
-        KeyframeGroup {
-            target: face_064
-            property: "rotation"
-            keyframeSource: "animations/face_064_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: head_061
-            property: "position"
-            keyframeSource: "animations/head_061_position_4.qad"
         }
         KeyframeGroup {
             target: head_061
@@ -9829,18 +6415,8 @@ Node {
         }
         KeyframeGroup {
             target: neck1_060
-            property: "position"
-            keyframeSource: "animations/neck1_060_position_4.qad"
-        }
-        KeyframeGroup {
-            target: neck1_060
             property: "rotation"
             keyframeSource: "animations/neck1_060_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: neck_059
-            property: "position"
-            keyframeSource: "animations/neck_059_position_4.qad"
         }
         KeyframeGroup {
             target: neck_059
@@ -9848,203 +6424,22 @@ Node {
             keyframeSource: "animations/neck_059_rotation_4.qad"
         }
         KeyframeGroup {
-            target: rightArmTwist1_090
-            property: "position"
-            keyframeSource: "animations/rightArmTwist1_090_position_4.qad"
-        }
-        KeyframeGroup {
-            target: rightArmTwist1_090
-            property: "rotation"
-            keyframeSource: "animations/rightArmTwist1_090_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_RightHand_093
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(-48.0548, -20.9803, -0.725115)
-            }
-        }
-        KeyframeGroup {
-            target: skt_FX_RightHand_093
-            property: "rotation"
-            keyframeSource: "animations/skt_FX_RightHand_093_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb4_097
-            property: "position"
-            keyframeSource: "animations/rightHandThumb4_097_position_4.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb4_097
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.999301, 0.0212541, -0.00852276, 0.0295584)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandThumb3_096
-            property: "position"
-            keyframeSource: "animations/rightHandThumb3_096_position_4.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb3_096
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.880625, -0.168961, 0.0711458, 0.43691)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandThumb2_095
-            property: "position"
-            keyframeSource: "animations/rightHandThumb2_095_position_4.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb2_095
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.969428, 0.224882, 0.0779005, 0.0597309)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandThumb1_094
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.529089, 0.708823, 0.466079, -0.0201291)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandMiddle4_0102
-            property: "position"
-            keyframeSource: "animations/rightHandMiddle4_0102_position_4.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle4_0102
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.973604, -0.0497167, -0.033339, 0.220253)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandMiddle3_0101
-            property: "position"
-            keyframeSource: "animations/rightHandMiddle3_0101_position_4.qad"
-        }
-        KeyframeGroup {
             target: rightHandMiddle3_0101
             property: "rotation"
             Keyframe {
                 frame: 0
-                value: Qt.quaternion(0.940086, 0.0498863, 0.0225632, 0.336512)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandMiddle2_0100
-            property: "position"
-            keyframeSource: "animations/rightHandMiddle2_0100_position_4.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle2_0100
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.968908, 0.0430646, 0.0332208, 0.241368)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandMiddle1_099
-            property: "position"
-            keyframeSource: "animations/rightHandMiddle1_099_position_4.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle1_099
-            property: "rotation"
-            keyframeSource: "animations/rightHandMiddle1_099_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: rightInHandMiddle_098
-            property: "position"
-            keyframeSource: "animations/rightInHandMiddle_098_position_4.qad"
-        }
-        KeyframeGroup {
-            target: rightInHandMiddle_098
-            property: "rotation"
-            keyframeSource: "animations/rightInHandMiddle_098_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: skt_RightHand_0103
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(-48.0548, -20.9803, -0.725115)
-            }
-        }
-        KeyframeGroup {
-            target: skt_RightHand_0103
-            property: "rotation"
-            keyframeSource: "animations/skt_RightHand_0103_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: rightHandIndex4_0108
-            property: "position"
-            keyframeSource: "animations/rightHandIndex4_0108_position_4.qad"
-        }
-        KeyframeGroup {
-            target: rightHandIndex4_0108
-            property: "rotation"
-            keyframeSource: "animations/rightHandIndex4_0108_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: rightHandIndex3_0107
-            property: "position"
-            keyframeSource: "animations/rightHandIndex3_0107_position_4.qad"
-        }
-        KeyframeGroup {
-            target: rightHandIndex3_0107
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.899129, -0.0327185, 0.117394, 0.420376)
+                value: Qt.quaternion(0.940086, 0.0498861, 0.0225631, 0.336513)
             }
         }
         KeyframeGroup {
             target: rightHandIndex2_0106
-            property: "position"
-            keyframeSource: "animations/rightHandIndex2_0106_position_4.qad"
-        }
-        KeyframeGroup {
-            target: rightHandIndex2_0106
             property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.931262, -0.0566451, 0.0786065, 0.351231)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandIndex1_0105
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(-44.2472, 5.37654, 0.826616)
-            }
+            keyframeSource: "animations/rightHandIndex2_0106_rotation_4.qad"
         }
         KeyframeGroup {
             target: rightHandIndex1_0105
             property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.93939, -0.0955967, -0.0163223, 0.32885)
-            }
-        }
-        KeyframeGroup {
-            target: rightInHandIndex_0104
-            property: "position"
-            keyframeSource: "animations/rightInHandIndex_0104_position_4.qad"
+            keyframeSource: "animations/rightHandIndex1_0105_rotation_4.qad"
         }
         KeyframeGroup {
             target: rightInHandIndex_0104
@@ -10056,18 +6451,8 @@ Node {
         }
         KeyframeGroup {
             target: rightHandPinky4_0113
-            property: "position"
-            keyframeSource: "animations/rightHandPinky4_0113_position_4.qad"
-        }
-        KeyframeGroup {
-            target: rightHandPinky4_0113
             property: "rotation"
             keyframeSource: "animations/rightHandPinky4_0113_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: rightHandPinky3_0112
-            property: "position"
-            keyframeSource: "animations/rightHandPinky3_0112_position_4.qad"
         }
         KeyframeGroup {
             target: rightHandPinky3_0112
@@ -10076,34 +6461,13 @@ Node {
         }
         KeyframeGroup {
             target: rightHandPinky2_0111
-            property: "position"
-            keyframeSource: "animations/rightHandPinky2_0111_position_4.qad"
-        }
-        KeyframeGroup {
-            target: rightHandPinky2_0111
             property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.941364, 0.00502075, -0.0563829, 0.332612)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandPinky1_0110
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(-40.2537, -3.21834, -5.10352)
-            }
+            keyframeSource: "animations/rightHandPinky2_0111_rotation_4.qad"
         }
         KeyframeGroup {
             target: rightHandPinky1_0110
             property: "rotation"
             keyframeSource: "animations/rightHandPinky1_0110_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: rightInHandPinky_0109
-            property: "position"
-            keyframeSource: "animations/rightInHandPinky_0109_position_4.qad"
         }
         KeyframeGroup {
             target: rightInHandPinky_0109
@@ -10114,39 +6478,9 @@ Node {
             }
         }
         KeyframeGroup {
-            target: rightHand_092
-            property: "position"
-            keyframeSource: "animations/rightHand_092_position_4.qad"
-        }
-        KeyframeGroup {
-            target: rightHand_092
-            property: "rotation"
-            keyframeSource: "animations/rightHand_092_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArmTwist3_0114
-            property: "position"
-            keyframeSource: "animations/rightForeArmTwist3_0114_position_4.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArmTwist3_0114
-            property: "rotation"
-            keyframeSource: "animations/rightForeArmTwist3_0114_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArmTwist2_0115
-            property: "position"
-            keyframeSource: "animations/rightForeArmTwist2_0115_position_4.qad"
-        }
-        KeyframeGroup {
             target: rightForeArmTwist2_0115
             property: "rotation"
             keyframeSource: "animations/rightForeArmTwist2_0115_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArmTwist1_0116
-            property: "position"
-            keyframeSource: "animations/rightForeArmTwist1_0116_position_4.qad"
         }
         KeyframeGroup {
             target: rightForeArmTwist1_0116
@@ -10165,18 +6499,8 @@ Node {
         }
         KeyframeGroup {
             target: rightArmTwist2_0117
-            property: "position"
-            keyframeSource: "animations/rightArmTwist2_0117_position_4.qad"
-        }
-        KeyframeGroup {
-            target: rightArmTwist2_0117
             property: "rotation"
             keyframeSource: "animations/rightArmTwist2_0117_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: rightArm_089
-            property: "position"
-            keyframeSource: "animations/rightArm_089_position_4.qad"
         }
         KeyframeGroup {
             target: rightArm_089
@@ -10190,18 +6514,8 @@ Node {
         }
         KeyframeGroup {
             target: spine3_028
-            property: "position"
-            keyframeSource: "animations/spine3_028_position_4.qad"
-        }
-        KeyframeGroup {
-            target: spine3_028
             property: "rotation"
             keyframeSource: "animations/spine3_028_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: spine2_027
-            property: "position"
-            keyframeSource: "animations/spine2_027_position_4.qad"
         }
         KeyframeGroup {
             target: spine2_027
@@ -10210,18 +6524,8 @@ Node {
         }
         KeyframeGroup {
             target: spine1_026
-            property: "position"
-            keyframeSource: "animations/spine1_026_position_4.qad"
-        }
-        KeyframeGroup {
-            target: spine1_026
             property: "rotation"
             keyframeSource: "animations/spine1_026_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: spine_025
-            property: "position"
-            keyframeSource: "animations/spine_025_position_4.qad"
         }
         KeyframeGroup {
             target: spine_025
@@ -10230,91 +6534,8 @@ Node {
         }
         KeyframeGroup {
             target: leftLegTwist1_0120
-            property: "position"
-            keyframeSource: "animations/leftLegTwist1_0120_position_4.qad"
-        }
-        KeyframeGroup {
-            target: leftLegTwist1_0120
             property: "rotation"
             keyframeSource: "animations/leftLegTwist1_0120_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: leftFootBigToe3_0125
-            property: "position"
-            keyframeSource: "animations/leftFootBigToe3_0125_position_4.qad"
-        }
-        KeyframeGroup {
-            target: leftFootBigToe3_0125
-            property: "rotation"
-            keyframeSource: "animations/leftFootBigToe3_0125_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: leftFootBigToe2_0124
-            property: "position"
-            keyframeSource: "animations/leftFootBigToe2_0124_position_4.qad"
-        }
-        KeyframeGroup {
-            target: leftFootBigToe2_0124
-            property: "rotation"
-            keyframeSource: "animations/leftFootBigToe2_0124_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: leftFootBigToe1_0123
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(4.48676, 5.94025, 16.3631)
-            }
-        }
-        KeyframeGroup {
-            target: leftFootBigToe1_0123
-            property: "rotation"
-            keyframeSource: "animations/leftFootBigToe1_0123_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: leftFootIndex3_0128
-            property: "position"
-            keyframeSource: "animations/leftFootIndex3_0128_position_4.qad"
-        }
-        KeyframeGroup {
-            target: leftFootIndex3_0128
-            property: "rotation"
-            keyframeSource: "animations/leftFootIndex3_0128_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: leftFootIndex2_0127
-            property: "position"
-            keyframeSource: "animations/leftFootIndex2_0127_position_4.qad"
-        }
-        KeyframeGroup {
-            target: leftFootIndex2_0127
-            property: "rotation"
-            keyframeSource: "animations/leftFootIndex2_0127_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: leftFootIndex1_0126
-            property: "position"
-            keyframeSource: "animations/leftFootIndex1_0126_position_4.qad"
-        }
-        KeyframeGroup {
-            target: leftFootIndex1_0126
-            property: "rotation"
-            keyframeSource: "animations/leftFootIndex1_0126_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: leftToeBaseEnd_0129
-            property: "position"
-            keyframeSource: "animations/leftToeBaseEnd_0129_position_4.qad"
-        }
-        KeyframeGroup {
-            target: leftToeBaseEnd_0129
-            property: "rotation"
-            keyframeSource: "animations/leftToeBaseEnd_0129_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: leftToeBase_0122
-            property: "position"
-            keyframeSource: "animations/leftToeBase_0122_position_4.qad"
         }
         KeyframeGroup {
             target: leftToeBase_0122
@@ -10343,18 +6564,8 @@ Node {
         }
         KeyframeGroup {
             target: leftUpLegTwist1_0130
-            property: "position"
-            keyframeSource: "animations/leftUpLegTwist1_0130_position_4.qad"
-        }
-        KeyframeGroup {
-            target: leftUpLegTwist1_0130
             property: "rotation"
             keyframeSource: "animations/leftUpLegTwist1_0130_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: leftUpLegTwist2_0131
-            property: "position"
-            keyframeSource: "animations/leftUpLegTwist2_0131_position_4.qad"
         }
         KeyframeGroup {
             target: leftUpLegTwist2_0131
@@ -10365,16 +6576,6 @@ Node {
             target: leftUpLeg_0118
             property: "rotation"
             keyframeSource: "animations/leftUpLeg_0118_rotation_4.qad"
-        }
-        KeyframeGroup {
-            target: skt_Hips_0132
-            property: "position"
-            keyframeSource: "animations/skt_Hips_0132_position_4.qad"
-        }
-        KeyframeGroup {
-            target: skt_Hips_0132
-            property: "rotation"
-            keyframeSource: "animations/skt_Hips_0132_rotation_4.qad"
         }
         KeyframeGroup {
             target: hips_09
@@ -10394,10 +6595,7 @@ Node {
         KeyframeGroup {
             target: ik_Hips_0133
             property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(1, 2.36187e-17, 0, 0)
-            }
+            keyframeSource: "animations/ik_Hips_0133_rotation_4.qad"
         }
         KeyframeGroup {
             target: ik_LeftFoot_0134
@@ -10407,10 +6605,7 @@ Node {
         KeyframeGroup {
             target: ik_LeftFoot_0134
             property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(1, 2.36187e-17, 0, 0)
-            }
+            keyframeSource: "animations/ik_LeftFoot_0134_rotation_4.qad"
         }
         KeyframeGroup {
             target: ik_RightFoot_0135
@@ -10420,10 +6615,7 @@ Node {
         KeyframeGroup {
             target: ik_RightFoot_0135
             property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(1, 2.36187e-17, 0, 0)
-            }
+            keyframeSource: "animations/ik_RightFoot_0135_rotation_4.qad"
         }
         KeyframeGroup {
             target: ik_Head_0136
@@ -10433,31 +6625,28 @@ Node {
         KeyframeGroup {
             target: ik_Head_0136
             property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(1, 2.36187e-17, 0, 0)
-            }
+            keyframeSource: "animations/ik_Head_0136_rotation_4.qad"
         }
     }
     Timeline {
-        id: frames_004_timeline
-        objectName: "Frames.004"
+        id: frames_006_timeline
+        objectName: "Frames.006"
         property real framesPerSecond: 1000
         startFrame: 0
-        endFrame: 1200
+        endFrame: 3734
         currentFrame: 0
         enabled: true
         animations: TimelineAnimation {
-            duration: 1200
+            duration: 3734
             from: 0
-            to: 1200
+            to: 3734
             running: true
             loops: Animation.Infinite
         }
         KeyframeGroup {
-            target: rightFootIndex3_017
-            property: "position"
-            keyframeSource: "animations/rightFootIndex3_017_position_5.qad"
+            target: rightHandIndex2_0106
+            property: "rotation"
+            keyframeSource: "animations/rightHandIndex2_0106_rotation_5.qad"
         }
         KeyframeGroup {
             target: rightFootIndex3_017
@@ -10472,15 +6661,25 @@ Node {
         KeyframeGroup {
             target: ik_Spine3_02
             property: "rotation"
+            keyframeSource: "animations/ik_Spine3_02_rotation_5.qad"
+        }
+        KeyframeGroup {
+            target: rightInHandIndex_0104
+            property: "rotation"
             Keyframe {
                 frame: 0
-                value: Qt.quaternion(1, 2.36187e-17, 0, 1.57772e-30)
+                value: Qt.quaternion(0.921629, 0.353523, 0.113846, -0.112521)
             }
         }
         KeyframeGroup {
             target: rightFootIndex1_015
             property: "rotation"
             keyframeSource: "animations/rightFootIndex1_015_rotation_5.qad"
+        }
+        KeyframeGroup {
+            target: rightInHandMiddle_098
+            property: "rotation"
+            keyframeSource: "animations/rightInHandMiddle_098_rotation_5.qad"
         }
         KeyframeGroup {
             target: ik_LeftHand_07
@@ -10490,15 +6689,12 @@ Node {
         KeyframeGroup {
             target: ik_LeftHand_07
             property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(1, 2.36187e-17, 0, 1.57772e-30)
-            }
+            keyframeSource: "animations/ik_LeftHand_07_rotation_5.qad"
         }
         KeyframeGroup {
-            target: leftHandMiddle3_054
-            property: "position"
-            keyframeSource: "animations/leftHandMiddle3_054_position_5.qad"
+            target: rightHandThumb3_096
+            property: "rotation"
+            keyframeSource: "animations/rightHandThumb3_096_rotation_5.qad"
         }
         KeyframeGroup {
             target: leftHandMiddle3_054
@@ -10513,10 +6709,17 @@ Node {
         KeyframeGroup {
             target: ik_RightHand_03
             property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(1, 2.36187e-17, 0, 1.57772e-30)
-            }
+            keyframeSource: "animations/ik_RightHand_03_rotation_5.qad"
+        }
+        KeyframeGroup {
+            target: skt_RightHand_0103
+            property: "position"
+            keyframeSource: "animations/skt_RightHand_0103_position_5.qad"
+        }
+        KeyframeGroup {
+            target: skt_RightHand_0103
+            property: "rotation"
+            keyframeSource: "animations/skt_RightHand_0103_rotation_5.qad"
         }
         KeyframeGroup {
             target: skt_HeadCamera_08
@@ -10526,15 +6729,12 @@ Node {
         KeyframeGroup {
             target: skt_HeadCamera_08
             property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(1, -5.68198e-14, 8.96831e-44, 1.57772e-30)
-            }
+            keyframeSource: "animations/skt_HeadCamera_08_rotation_5.qad"
         }
         KeyframeGroup {
-            target: leftArm_032
-            property: "position"
-            keyframeSource: "animations/leftArm_032_position_5.qad"
+            target: rightHandIndex4_0108
+            property: "rotation"
+            keyframeSource: "animations/rightHandIndex4_0108_rotation_5.qad"
         }
         KeyframeGroup {
             target: leftArm_032
@@ -10543,28 +6743,13 @@ Node {
         }
         KeyframeGroup {
             target: rightLegTwist1_012
-            property: "position"
-            keyframeSource: "animations/rightLegTwist1_012_position_5.qad"
-        }
-        KeyframeGroup {
-            target: rightLegTwist1_012
             property: "rotation"
             keyframeSource: "animations/rightLegTwist1_012_rotation_5.qad"
         }
         KeyframeGroup {
-            target: skt_Head_062
-            property: "position"
-            keyframeSource: "animations/skt_Head_062_position_5.qad"
-        }
-        KeyframeGroup {
-            target: skt_Head_062
+            target: rightHandIndex1_0105
             property: "rotation"
-            keyframeSource: "animations/skt_Head_062_rotation_5.qad"
-        }
-        KeyframeGroup {
-            target: rightFootIndex2_016
-            property: "position"
-            keyframeSource: "animations/rightFootIndex2_016_position_5.qad"
+            keyframeSource: "animations/rightHandIndex1_0105_rotation_5.qad"
         }
         KeyframeGroup {
             target: rightFootIndex2_016
@@ -10573,28 +6758,8 @@ Node {
         }
         KeyframeGroup {
             target: rightFootBigToe3_020
-            property: "position"
-            keyframeSource: "animations/rightFootBigToe3_020_position_5.qad"
-        }
-        KeyframeGroup {
-            target: rightFootBigToe3_020
             property: "rotation"
             keyframeSource: "animations/rightFootBigToe3_020_rotation_5.qad"
-        }
-        KeyframeGroup {
-            target: jaw_065
-            property: "position"
-            keyframeSource: "animations/jaw_065_position_5.qad"
-        }
-        KeyframeGroup {
-            target: jaw_065
-            property: "rotation"
-            keyframeSource: "animations/jaw_065_rotation_5.qad"
-        }
-        KeyframeGroup {
-            target: rightFootBigToe2_019
-            property: "position"
-            keyframeSource: "animations/rightFootBigToe2_019_position_5.qad"
         }
         KeyframeGroup {
             target: rightFootBigToe2_019
@@ -10603,38 +6768,8 @@ Node {
         }
         KeyframeGroup {
             target: rightFootBigToe1_018
-            property: "position"
-            keyframeSource: "animations/rightFootBigToe1_018_position_5.qad"
-        }
-        KeyframeGroup {
-            target: rightFootBigToe1_018
             property: "rotation"
             keyframeSource: "animations/rightFootBigToe1_018_rotation_5.qad"
-        }
-        KeyframeGroup {
-            target: rightToeBaseEnd_021
-            property: "position"
-            keyframeSource: "animations/rightToeBaseEnd_021_position_5.qad"
-        }
-        KeyframeGroup {
-            target: rightToeBaseEnd_021
-            property: "rotation"
-            keyframeSource: "animations/rightToeBaseEnd_021_rotation_5.qad"
-        }
-        KeyframeGroup {
-            target: nose_067
-            property: "position"
-            keyframeSource: "animations/nose_067_position_5.qad"
-        }
-        KeyframeGroup {
-            target: nose_067
-            property: "rotation"
-            keyframeSource: "animations/nose_067_rotation_5.qad"
-        }
-        KeyframeGroup {
-            target: rightToeBase_014
-            property: "position"
-            keyframeSource: "animations/rightToeBase_014_position_5.qad"
         }
         KeyframeGroup {
             target: rightToeBase_014
@@ -10643,23 +6778,8 @@ Node {
         }
         KeyframeGroup {
             target: rightFoot_013
-            property: "position"
-            keyframeSource: "animations/rightFoot_013_position_5.qad"
-        }
-        KeyframeGroup {
-            target: rightFoot_013
             property: "rotation"
             keyframeSource: "animations/rightFoot_013_rotation_5.qad"
-        }
-        KeyframeGroup {
-            target: lip_upper_069
-            property: "position"
-            keyframeSource: "animations/lip_upper_069_position_5.qad"
-        }
-        KeyframeGroup {
-            target: lip_upper_069
-            property: "rotation"
-            keyframeSource: "animations/lip_upper_069_rotation_5.qad"
         }
         KeyframeGroup {
             target: rightLeg_011
@@ -10672,29 +6792,9 @@ Node {
             keyframeSource: "animations/rightLeg_011_rotation_5.qad"
         }
         KeyframeGroup {
-            target: lip_lower_070
-            property: "position"
-            keyframeSource: "animations/lip_lower_070_position_5.qad"
-        }
-        KeyframeGroup {
-            target: lip_lower_070
-            property: "rotation"
-            keyframeSource: "animations/lip_lower_070_rotation_5.qad"
-        }
-        KeyframeGroup {
-            target: rightUpLegTwist1_022
-            property: "position"
-            keyframeSource: "animations/rightUpLegTwist1_022_position_5.qad"
-        }
-        KeyframeGroup {
             target: rightUpLegTwist1_022
             property: "rotation"
             keyframeSource: "animations/rightUpLegTwist1_022_rotation_5.qad"
-        }
-        KeyframeGroup {
-            target: rightUpLegTwist2_023
-            property: "position"
-            keyframeSource: "animations/rightUpLegTwist2_023_position_5.qad"
         }
         KeyframeGroup {
             target: rightUpLegTwist2_023
@@ -10702,74 +6802,9 @@ Node {
             keyframeSource: "animations/rightUpLegTwist2_023_rotation_5.qad"
         }
         KeyframeGroup {
-            target: eye_lid_in_right_072
-            property: "position"
-            keyframeSource: "animations/eye_lid_in_right_072_position_5.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_in_right_072
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_in_right_072_rotation_5.qad"
-        }
-        KeyframeGroup {
             target: rightUpLeg_010
             property: "rotation"
             keyframeSource: "animations/rightUpLeg_010_rotation_5.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_out_right_073
-            property: "position"
-            keyframeSource: "animations/eye_lid_out_right_073_position_5.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_out_right_073
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_out_right_073_rotation_5.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_Hips_024
-            property: "position"
-            keyframeSource: "animations/skt_FX_Hips_024_position_5.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_Hips_024
-            property: "rotation"
-            keyframeSource: "animations/skt_FX_Hips_024_rotation_5.qad"
-        }
-        KeyframeGroup {
-            target: skt_Back_029
-            property: "position"
-            keyframeSource: "animations/skt_Back_029_position_5.qad"
-        }
-        KeyframeGroup {
-            target: skt_Back_029
-            property: "rotation"
-            keyframeSource: "animations/skt_Back_029_rotation_5.qad"
-        }
-        KeyframeGroup {
-            target: tongue_05_080
-            property: "position"
-            keyframeSource: "animations/tongue_05_080_position_5.qad"
-        }
-        KeyframeGroup {
-            target: tongue_05_080
-            property: "rotation"
-            keyframeSource: "animations/tongue_05_080_rotation_5.qad"
-        }
-        KeyframeGroup {
-            target: skt_Chest_030
-            property: "position"
-            keyframeSource: "animations/skt_Chest_030_position_5.qad"
-        }
-        KeyframeGroup {
-            target: skt_Chest_030
-            property: "rotation"
-            keyframeSource: "animations/skt_Chest_030_rotation_5.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArmTwist3_034
-            property: "position"
-            keyframeSource: "animations/leftForeArmTwist3_034_position_5.qad"
         }
         KeyframeGroup {
             target: leftForeArmTwist3_034
@@ -10778,18 +6813,8 @@ Node {
         }
         KeyframeGroup {
             target: leftForeArmTwist1_035
-            property: "position"
-            keyframeSource: "animations/leftForeArmTwist1_035_position_5.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArmTwist1_035
             property: "rotation"
             keyframeSource: "animations/leftForeArmTwist1_035_rotation_5.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky4_041
-            property: "position"
-            keyframeSource: "animations/leftHandPinky4_041_position_5.qad"
         }
         KeyframeGroup {
             target: leftHandPinky4_041
@@ -10798,18 +6823,8 @@ Node {
         }
         KeyframeGroup {
             target: leftHandPinky3_040
-            property: "position"
-            keyframeSource: "animations/leftHandPinky3_040_position_5.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky3_040
             property: "rotation"
             keyframeSource: "animations/leftHandPinky3_040_rotation_5.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky2_039
-            property: "position"
-            keyframeSource: "animations/leftHandPinky2_039_position_5.qad"
         }
         KeyframeGroup {
             target: leftHandPinky2_039
@@ -10818,33 +6833,13 @@ Node {
         }
         KeyframeGroup {
             target: leftHandPinky1_038
-            property: "position"
-            keyframeSource: "animations/leftHandPinky1_038_position_5.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky1_038
             property: "rotation"
             keyframeSource: "animations/leftHandPinky1_038_rotation_5.qad"
         }
         KeyframeGroup {
             target: leftInHandPinky_037
-            property: "position"
-            keyframeSource: "animations/leftInHandPinky_037_position_5.qad"
-        }
-        KeyframeGroup {
-            target: leftInHandPinky_037
             property: "rotation"
             keyframeSource: "animations/leftInHandPinky_037_rotation_5.qad"
-        }
-        KeyframeGroup {
-            target: skt_LeftHand_042
-            property: "rotation"
-            keyframeSource: "animations/skt_LeftHand_042_rotation_5.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex4_047
-            property: "position"
-            keyframeSource: "animations/leftHandIndex4_047_position_5.qad"
         }
         KeyframeGroup {
             target: leftHandIndex4_047
@@ -10853,18 +6848,8 @@ Node {
         }
         KeyframeGroup {
             target: leftHandIndex3_046
-            property: "position"
-            keyframeSource: "animations/leftHandIndex3_046_position_5.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex3_046
             property: "rotation"
             keyframeSource: "animations/leftHandIndex3_046_rotation_5.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex2_045
-            property: "position"
-            keyframeSource: "animations/leftHandIndex2_045_position_5.qad"
         }
         KeyframeGroup {
             target: leftHandIndex2_045
@@ -10873,18 +6858,8 @@ Node {
         }
         KeyframeGroup {
             target: leftHandIndex1_044
-            property: "position"
-            keyframeSource: "animations/leftHandIndex1_044_position_5.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex1_044
             property: "rotation"
             keyframeSource: "animations/leftHandIndex1_044_rotation_5.qad"
-        }
-        KeyframeGroup {
-            target: leftInHandIndex_043
-            property: "position"
-            keyframeSource: "animations/leftInHandIndex_043_position_5.qad"
         }
         KeyframeGroup {
             target: leftInHandIndex_043
@@ -10892,34 +6867,19 @@ Node {
             keyframeSource: "animations/leftInHandIndex_043_rotation_5.qad"
         }
         KeyframeGroup {
-            target: skt_FX_LeftHand_00
-            property: "rotation"
-            keyframeSource: "animations/skt_FX_LeftHand_00_rotation_5.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb4_050
-            property: "position"
-            keyframeSource: "animations/leftHandThumb4_050_position_5.qad"
-        }
-        KeyframeGroup {
             target: leftHandThumb4_050
             property: "rotation"
             keyframeSource: "animations/leftHandThumb4_050_rotation_5.qad"
         }
         KeyframeGroup {
-            target: leftHandThumb3_049
-            property: "position"
-            keyframeSource: "animations/leftHandThumb3_049_position_5.qad"
+            target: rightArmTwist1_090
+            property: "rotation"
+            keyframeSource: "animations/rightArmTwist1_090_rotation_5.qad"
         }
         KeyframeGroup {
             target: leftHandThumb3_049
             property: "rotation"
             keyframeSource: "animations/leftHandThumb3_049_rotation_5.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb2_048
-            property: "position"
-            keyframeSource: "animations/leftHandThumb2_048_position_5.qad"
         }
         KeyframeGroup {
             target: leftHandThumb2_048
@@ -10932,9 +6892,9 @@ Node {
             keyframeSource: "animations/leftHandThumb1_01_rotation_5.qad"
         }
         KeyframeGroup {
-            target: leftHandMiddle4_055
-            property: "position"
-            keyframeSource: "animations/leftHandMiddle4_055_position_5.qad"
+            target: rightHandThumb4_097
+            property: "rotation"
+            keyframeSource: "animations/rightHandThumb4_097_rotation_5.qad"
         }
         KeyframeGroup {
             target: leftHandMiddle4_055
@@ -10942,9 +6902,12 @@ Node {
             keyframeSource: "animations/leftHandMiddle4_055_rotation_5.qad"
         }
         KeyframeGroup {
-            target: leftHandMiddle2_053
-            property: "position"
-            keyframeSource: "animations/leftHandMiddle2_053_position_5.qad"
+            target: rightHandThumb2_095
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.969428, 0.224883, 0.0779004, 0.0597308)
+            }
         }
         KeyframeGroup {
             target: leftHandMiddle2_053
@@ -10952,9 +6915,9 @@ Node {
             keyframeSource: "animations/leftHandMiddle2_053_rotation_5.qad"
         }
         KeyframeGroup {
-            target: leftHandMiddle1_052
-            property: "position"
-            keyframeSource: "animations/leftHandMiddle1_052_position_5.qad"
+            target: rightHandThumb1_094
+            property: "rotation"
+            keyframeSource: "animations/rightHandThumb1_094_rotation_5.qad"
         }
         KeyframeGroup {
             target: leftHandMiddle1_052
@@ -10963,18 +6926,13 @@ Node {
         }
         KeyframeGroup {
             target: leftInHandMiddle_051
-            property: "position"
-            keyframeSource: "animations/leftInHandMiddle_051_position_5.qad"
-        }
-        KeyframeGroup {
-            target: leftInHandMiddle_051
             property: "rotation"
             keyframeSource: "animations/leftInHandMiddle_051_rotation_5.qad"
         }
         KeyframeGroup {
-            target: leftHand_036
-            property: "position"
-            keyframeSource: "animations/leftHand_036_position_5.qad"
+            target: rightHandMiddle4_0102
+            property: "rotation"
+            keyframeSource: "animations/rightHandMiddle4_0102_rotation_5.qad"
         }
         KeyframeGroup {
             target: leftHand_036
@@ -10982,14 +6940,19 @@ Node {
             keyframeSource: "animations/leftHand_036_rotation_5.qad"
         }
         KeyframeGroup {
-            target: leftForeArmTwist2_056
-            property: "position"
-            keyframeSource: "animations/leftForeArmTwist2_056_position_5.qad"
+            target: rightHandMiddle2_0100
+            property: "rotation"
+            keyframeSource: "animations/rightHandMiddle2_0100_rotation_5.qad"
         }
         KeyframeGroup {
             target: leftForeArmTwist2_056
             property: "rotation"
             keyframeSource: "animations/leftForeArmTwist2_056_rotation_5.qad"
+        }
+        KeyframeGroup {
+            target: rightHandMiddle1_099
+            property: "rotation"
+            keyframeSource: "animations/rightHandMiddle1_099_rotation_5.qad"
         }
         KeyframeGroup {
             target: leftForeArm_033
@@ -11003,18 +6966,8 @@ Node {
         }
         KeyframeGroup {
             target: leftArmTwist1_057
-            property: "position"
-            keyframeSource: "animations/leftArmTwist1_057_position_5.qad"
-        }
-        KeyframeGroup {
-            target: leftArmTwist1_057
             property: "rotation"
             keyframeSource: "animations/leftArmTwist1_057_rotation_5.qad"
-        }
-        KeyframeGroup {
-            target: leftArmTwist2_058
-            property: "position"
-            keyframeSource: "animations/leftArmTwist2_058_position_5.qad"
         }
         KeyframeGroup {
             target: leftArmTwist2_058
@@ -11022,11 +6975,11 @@ Node {
             keyframeSource: "animations/leftArmTwist2_058_rotation_5.qad"
         }
         KeyframeGroup {
-            target: leftShoulder_031
-            property: "position"
+            target: rightHandIndex3_0107
+            property: "rotation"
             Keyframe {
                 frame: 0
-                value: Qt.vector3d(8.80947, 6.33601, -4.19489)
+                value: Qt.quaternion(0.899129, -0.0327185, 0.117394, 0.420375)
             }
         }
         KeyframeGroup {
@@ -11035,199 +6988,9 @@ Node {
             keyframeSource: "animations/leftShoulder_031_rotation_5.qad"
         }
         KeyframeGroup {
-            target: headEnd_063
-            property: "position"
-            keyframeSource: "animations/headEnd_063_position_5.qad"
-        }
-        KeyframeGroup {
-            target: headEnd_063
-            property: "rotation"
-            keyframeSource: "animations/headEnd_063_rotation_5.qad"
-        }
-        KeyframeGroup {
-            target: eye_left_066
-            property: "position"
-            keyframeSource: "animations/eye_left_066_position_5.qad"
-        }
-        KeyframeGroup {
-            target: eye_left_066
-            property: "rotation"
-            keyframeSource: "animations/eye_left_066_rotation_5.qad"
-        }
-        KeyframeGroup {
-            target: lip_corners_068
-            property: "position"
-            keyframeSource: "animations/lip_corners_068_position_5.qad"
-        }
-        KeyframeGroup {
-            target: lip_corners_068
-            property: "rotation"
-            keyframeSource: "animations/lip_corners_068_rotation_5.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_right_071
-            property: "position"
-            keyframeSource: "animations/eye_lid_right_071_position_5.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_right_071
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_right_071_rotation_5.qad"
-        }
-        KeyframeGroup {
-            target: tongue_06_081
-            property: "position"
-            keyframeSource: "animations/tongue_06_081_position_5.qad"
-        }
-        KeyframeGroup {
-            target: tongue_06_081
-            property: "rotation"
-            keyframeSource: "animations/tongue_06_081_rotation_5.qad"
-        }
-        KeyframeGroup {
-            target: tongue_04_079
-            property: "position"
-            keyframeSource: "animations/tongue_04_079_position_5.qad"
-        }
-        KeyframeGroup {
-            target: tongue_04_079
-            property: "rotation"
-            keyframeSource: "animations/tongue_04_079_rotation_5.qad"
-        }
-        KeyframeGroup {
-            target: tongue_03_078
-            property: "position"
-            keyframeSource: "animations/tongue_03_078_position_5.qad"
-        }
-        KeyframeGroup {
-            target: tongue_03_078
-            property: "rotation"
-            keyframeSource: "animations/tongue_03_078_rotation_5.qad"
-        }
-        KeyframeGroup {
-            target: tongue_02_077
-            property: "position"
-            keyframeSource: "animations/tongue_02_077_position_5.qad"
-        }
-        KeyframeGroup {
-            target: tongue_02_077
-            property: "rotation"
-            keyframeSource: "animations/tongue_02_077_rotation_5.qad"
-        }
-        KeyframeGroup {
-            target: tongue_01_076
-            property: "position"
-            keyframeSource: "animations/tongue_01_076_position_5.qad"
-        }
-        KeyframeGroup {
-            target: tongue_01_076
-            property: "rotation"
-            keyframeSource: "animations/tongue_01_076_rotation_5.qad"
-        }
-        KeyframeGroup {
-            target: tongue_jaw_075
-            property: "position"
-            keyframeSource: "animations/tongue_jaw_075_position_5.qad"
-        }
-        KeyframeGroup {
-            target: tongue_jaw_075
-            property: "rotation"
-            keyframeSource: "animations/tongue_jaw_075_rotation_5.qad"
-        }
-        KeyframeGroup {
-            target: teeth_lwr_082
-            property: "position"
-            keyframeSource: "animations/teeth_lwr_082_position_5.qad"
-        }
-        KeyframeGroup {
-            target: teeth_lwr_082
-            property: "rotation"
-            keyframeSource: "animations/teeth_lwr_082_rotation_5.qad"
-        }
-        KeyframeGroup {
-            target: teeth_upr_083
-            property: "position"
-            keyframeSource: "animations/teeth_upr_083_position_5.qad"
-        }
-        KeyframeGroup {
-            target: teeth_upr_083
-            property: "rotation"
-            keyframeSource: "animations/teeth_upr_083_rotation_5.qad"
-        }
-        KeyframeGroup {
-            target: mouth_bag_074
-            property: "position"
-            keyframeSource: "animations/mouth_bag_074_position_5.qad"
-        }
-        KeyframeGroup {
-            target: mouth_bag_074
-            property: "rotation"
-            keyframeSource: "animations/mouth_bag_074_rotation_5.qad"
-        }
-        KeyframeGroup {
-            target: eye_right_084
-            property: "position"
-            keyframeSource: "animations/eye_right_084_position_5.qad"
-        }
-        KeyframeGroup {
-            target: eye_right_084
-            property: "rotation"
-            keyframeSource: "animations/eye_right_084_rotation_5.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_out_left_086
-            property: "position"
-            keyframeSource: "animations/eye_lid_out_left_086_position_5.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_out_left_086
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_out_left_086_rotation_5.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_in_left_087
-            property: "position"
-            keyframeSource: "animations/eye_lid_in_left_087_position_5.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_in_left_087
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_in_left_087_rotation_5.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_left_085
-            property: "position"
-            keyframeSource: "animations/eye_lid_left_085_position_5.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_left_085
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_left_085_rotation_5.qad"
-        }
-        KeyframeGroup {
-            target: face_064
-            property: "position"
-            keyframeSource: "animations/face_064_position_5.qad"
-        }
-        KeyframeGroup {
-            target: face_064
-            property: "rotation"
-            keyframeSource: "animations/face_064_rotation_5.qad"
-        }
-        KeyframeGroup {
-            target: head_061
-            property: "position"
-            keyframeSource: "animations/head_061_position_5.qad"
-        }
-        KeyframeGroup {
             target: head_061
             property: "rotation"
             keyframeSource: "animations/head_061_rotation_5.qad"
-        }
-        KeyframeGroup {
-            target: neck1_060
-            property: "position"
-            keyframeSource: "animations/neck1_060_position_5.qad"
         }
         KeyframeGroup {
             target: neck1_060
@@ -11245,210 +7008,12 @@ Node {
             keyframeSource: "animations/neck_059_rotation_5.qad"
         }
         KeyframeGroup {
-            target: rightArmTwist1_090
-            property: "position"
-            keyframeSource: "animations/rightArmTwist1_090_position_5.qad"
-        }
-        KeyframeGroup {
-            target: rightArmTwist1_090
-            property: "rotation"
-            keyframeSource: "animations/rightArmTwist1_090_rotation_5.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_RightHand_093
-            property: "position"
-            keyframeSource: "animations/skt_FX_RightHand_093_position_5.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_RightHand_093
-            property: "rotation"
-            keyframeSource: "animations/skt_FX_RightHand_093_rotation_5.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb4_097
-            property: "position"
-            keyframeSource: "animations/rightHandThumb4_097_position_5.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb4_097
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.999301, 0.0212543, -0.00852261, 0.0295586)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandThumb3_096
-            property: "position"
-            keyframeSource: "animations/rightHandThumb3_096_position_5.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb3_096
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.880625, -0.168961, 0.071146, 0.43691)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandThumb2_095
-            property: "position"
-            keyframeSource: "animations/rightHandThumb2_095_position_5.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb2_095
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.969429, 0.224882, 0.0779004, 0.0597307)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandThumb1_094
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.529089, 0.708823, 0.466079, -0.0201294)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandMiddle4_0102
-            property: "position"
-            keyframeSource: "animations/rightHandMiddle4_0102_position_5.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle4_0102
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.973604, -0.0497165, -0.0333389, 0.220253)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandMiddle3_0101
-            property: "position"
-            keyframeSource: "animations/rightHandMiddle3_0101_position_5.qad"
-        }
-        KeyframeGroup {
             target: rightHandMiddle3_0101
             property: "rotation"
-            keyframeSource: "animations/rightHandMiddle3_0101_rotation_5.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle2_0100
-            property: "position"
-            keyframeSource: "animations/rightHandMiddle2_0100_position_5.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle2_0100
-            property: "rotation"
             Keyframe {
                 frame: 0
-                value: Qt.quaternion(0.968908, 0.0430645, 0.0332209, 0.241368)
+                value: Qt.quaternion(0.940086, 0.0498864, 0.0225631, 0.336512)
             }
-        }
-        KeyframeGroup {
-            target: rightHandMiddle1_099
-            property: "position"
-            keyframeSource: "animations/rightHandMiddle1_099_position_5.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle1_099
-            property: "rotation"
-            keyframeSource: "animations/rightHandMiddle1_099_rotation_5.qad"
-        }
-        KeyframeGroup {
-            target: rightInHandMiddle_098
-            property: "position"
-            keyframeSource: "animations/rightInHandMiddle_098_position_5.qad"
-        }
-        KeyframeGroup {
-            target: rightInHandMiddle_098
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.997624, 0.0388622, 0.0290058, 0.04893)
-            }
-        }
-        KeyframeGroup {
-            target: skt_RightHand_0103
-            property: "position"
-            keyframeSource: "animations/skt_RightHand_0103_position_5.qad"
-        }
-        KeyframeGroup {
-            target: skt_RightHand_0103
-            property: "rotation"
-            keyframeSource: "animations/skt_RightHand_0103_rotation_5.qad"
-        }
-        KeyframeGroup {
-            target: rightHandIndex4_0108
-            property: "position"
-            keyframeSource: "animations/rightHandIndex4_0108_position_5.qad"
-        }
-        KeyframeGroup {
-            target: rightHandIndex4_0108
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.944937, 0.0293401, -0.033153, 0.324243)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandIndex3_0107
-            property: "position"
-            keyframeSource: "animations/rightHandIndex3_0107_position_5.qad"
-        }
-        KeyframeGroup {
-            target: rightHandIndex3_0107
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.899129, -0.0327185, 0.117394, 0.420376)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandIndex2_0106
-            property: "position"
-            keyframeSource: "animations/rightHandIndex2_0106_position_5.qad"
-        }
-        KeyframeGroup {
-            target: rightHandIndex2_0106
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.931262, -0.0566455, 0.0786066, 0.351231)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandIndex1_0105
-            property: "position"
-            keyframeSource: "animations/rightHandIndex1_0105_position_5.qad"
-        }
-        KeyframeGroup {
-            target: rightHandIndex1_0105
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.93939, -0.0955965, -0.0163222, 0.32885)
-            }
-        }
-        KeyframeGroup {
-            target: rightInHandIndex_0104
-            property: "position"
-            keyframeSource: "animations/rightInHandIndex_0104_position_5.qad"
-        }
-        KeyframeGroup {
-            target: rightInHandIndex_0104
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.921629, 0.353524, 0.113846, -0.112521)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandPinky4_0113
-            property: "position"
-            keyframeSource: "animations/rightHandPinky4_0113_position_5.qad"
         }
         KeyframeGroup {
             target: rightHandPinky4_0113
@@ -11457,21 +7022,8 @@ Node {
         }
         KeyframeGroup {
             target: rightHandPinky3_0112
-            property: "position"
-            keyframeSource: "animations/rightHandPinky3_0112_position_5.qad"
-        }
-        KeyframeGroup {
-            target: rightHandPinky3_0112
             property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.951109, 0.00298444, -0.0479821, 0.305092)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandPinky2_0111
-            property: "position"
-            keyframeSource: "animations/rightHandPinky2_0111_position_5.qad"
+            keyframeSource: "animations/rightHandPinky3_0112_rotation_5.qad"
         }
         KeyframeGroup {
             target: rightHandPinky2_0111
@@ -11480,28 +7032,15 @@ Node {
         }
         KeyframeGroup {
             target: rightHandPinky1_0110
-            property: "position"
-            keyframeSource: "animations/rightHandPinky1_0110_position_5.qad"
-        }
-        KeyframeGroup {
-            target: rightHandPinky1_0110
             property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.936626, -0.163248, 0.00375108, 0.309947)
-            }
-        }
-        KeyframeGroup {
-            target: rightInHandPinky_0109
-            property: "position"
-            keyframeSource: "animations/rightInHandPinky_0109_position_5.qad"
+            keyframeSource: "animations/rightHandPinky1_0110_rotation_5.qad"
         }
         KeyframeGroup {
             target: rightInHandPinky_0109
             property: "rotation"
             Keyframe {
                 frame: 0
-                value: Qt.quaternion(0.987487, 0.107136, 0.102255, -0.0541685)
+                value: Qt.quaternion(0.987487, 0.107136, 0.102255, -0.0541684)
             }
         }
         KeyframeGroup {
@@ -11516,28 +7055,13 @@ Node {
         }
         KeyframeGroup {
             target: rightForeArmTwist3_0114
-            property: "position"
-            keyframeSource: "animations/rightForeArmTwist3_0114_position_5.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArmTwist3_0114
             property: "rotation"
             keyframeSource: "animations/rightForeArmTwist3_0114_rotation_5.qad"
         }
         KeyframeGroup {
             target: rightForeArmTwist2_0115
-            property: "position"
-            keyframeSource: "animations/rightForeArmTwist2_0115_position_5.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArmTwist2_0115
             property: "rotation"
             keyframeSource: "animations/rightForeArmTwist2_0115_rotation_5.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArmTwist1_0116
-            property: "position"
-            keyframeSource: "animations/rightForeArmTwist1_0116_position_5.qad"
         }
         KeyframeGroup {
             target: rightForeArmTwist1_0116
@@ -11556,18 +7080,8 @@ Node {
         }
         KeyframeGroup {
             target: rightArmTwist2_0117
-            property: "position"
-            keyframeSource: "animations/rightArmTwist2_0117_position_5.qad"
-        }
-        KeyframeGroup {
-            target: rightArmTwist2_0117
             property: "rotation"
             keyframeSource: "animations/rightArmTwist2_0117_rotation_5.qad"
-        }
-        KeyframeGroup {
-            target: rightArm_089
-            property: "position"
-            keyframeSource: "animations/rightArm_089_position_5.qad"
         }
         KeyframeGroup {
             target: rightArm_089
@@ -11581,18 +7095,8 @@ Node {
         }
         KeyframeGroup {
             target: spine3_028
-            property: "position"
-            keyframeSource: "animations/spine3_028_position_5.qad"
-        }
-        KeyframeGroup {
-            target: spine3_028
             property: "rotation"
             keyframeSource: "animations/spine3_028_rotation_5.qad"
-        }
-        KeyframeGroup {
-            target: spine2_027
-            property: "position"
-            keyframeSource: "animations/spine2_027_position_5.qad"
         }
         KeyframeGroup {
             target: spine2_027
@@ -11601,18 +7105,8 @@ Node {
         }
         KeyframeGroup {
             target: spine1_026
-            property: "position"
-            keyframeSource: "animations/spine1_026_position_5.qad"
-        }
-        KeyframeGroup {
-            target: spine1_026
             property: "rotation"
             keyframeSource: "animations/spine1_026_rotation_5.qad"
-        }
-        KeyframeGroup {
-            target: spine_025
-            property: "position"
-            keyframeSource: "animations/spine_025_position_5.qad"
         }
         KeyframeGroup {
             target: spine_025
@@ -11621,28 +7115,13 @@ Node {
         }
         KeyframeGroup {
             target: leftLegTwist1_0120
-            property: "position"
-            keyframeSource: "animations/leftLegTwist1_0120_position_5.qad"
-        }
-        KeyframeGroup {
-            target: leftLegTwist1_0120
             property: "rotation"
             keyframeSource: "animations/leftLegTwist1_0120_rotation_5.qad"
         }
         KeyframeGroup {
             target: leftFootBigToe3_0125
-            property: "position"
-            keyframeSource: "animations/leftFootBigToe3_0125_position_5.qad"
-        }
-        KeyframeGroup {
-            target: leftFootBigToe3_0125
             property: "rotation"
             keyframeSource: "animations/leftFootBigToe3_0125_rotation_5.qad"
-        }
-        KeyframeGroup {
-            target: leftFootBigToe2_0124
-            property: "position"
-            keyframeSource: "animations/leftFootBigToe2_0124_position_5.qad"
         }
         KeyframeGroup {
             target: leftFootBigToe2_0124
@@ -11656,18 +7135,8 @@ Node {
         }
         KeyframeGroup {
             target: leftFootIndex3_0128
-            property: "position"
-            keyframeSource: "animations/leftFootIndex3_0128_position_5.qad"
-        }
-        KeyframeGroup {
-            target: leftFootIndex3_0128
             property: "rotation"
             keyframeSource: "animations/leftFootIndex3_0128_rotation_5.qad"
-        }
-        KeyframeGroup {
-            target: leftFootIndex2_0127
-            property: "position"
-            keyframeSource: "animations/leftFootIndex2_0127_position_5.qad"
         }
         KeyframeGroup {
             target: leftFootIndex2_0127
@@ -11676,28 +7145,8 @@ Node {
         }
         KeyframeGroup {
             target: leftFootIndex1_0126
-            property: "position"
-            keyframeSource: "animations/leftFootIndex1_0126_position_5.qad"
-        }
-        KeyframeGroup {
-            target: leftFootIndex1_0126
             property: "rotation"
             keyframeSource: "animations/leftFootIndex1_0126_rotation_5.qad"
-        }
-        KeyframeGroup {
-            target: leftToeBaseEnd_0129
-            property: "position"
-            keyframeSource: "animations/leftToeBaseEnd_0129_position_5.qad"
-        }
-        KeyframeGroup {
-            target: leftToeBaseEnd_0129
-            property: "rotation"
-            keyframeSource: "animations/leftToeBaseEnd_0129_rotation_5.qad"
-        }
-        KeyframeGroup {
-            target: leftToeBase_0122
-            property: "position"
-            keyframeSource: "animations/leftToeBase_0122_position_5.qad"
         }
         KeyframeGroup {
             target: leftToeBase_0122
@@ -11726,18 +7175,8 @@ Node {
         }
         KeyframeGroup {
             target: leftUpLegTwist1_0130
-            property: "position"
-            keyframeSource: "animations/leftUpLegTwist1_0130_position_5.qad"
-        }
-        KeyframeGroup {
-            target: leftUpLegTwist1_0130
             property: "rotation"
             keyframeSource: "animations/leftUpLegTwist1_0130_rotation_5.qad"
-        }
-        KeyframeGroup {
-            target: leftUpLegTwist2_0131
-            property: "position"
-            keyframeSource: "animations/leftUpLegTwist2_0131_position_5.qad"
         }
         KeyframeGroup {
             target: leftUpLegTwist2_0131
@@ -11746,23 +7185,8 @@ Node {
         }
         KeyframeGroup {
             target: leftUpLeg_0118
-            property: "position"
-            keyframeSource: "animations/leftUpLeg_0118_position_5.qad"
-        }
-        KeyframeGroup {
-            target: leftUpLeg_0118
             property: "rotation"
             keyframeSource: "animations/leftUpLeg_0118_rotation_5.qad"
-        }
-        KeyframeGroup {
-            target: skt_Hips_0132
-            property: "position"
-            keyframeSource: "animations/skt_Hips_0132_position_5.qad"
-        }
-        KeyframeGroup {
-            target: skt_Hips_0132
-            property: "rotation"
-            keyframeSource: "animations/skt_Hips_0132_rotation_5.qad"
         }
         KeyframeGroup {
             target: hips_09
@@ -11782,10 +7206,7 @@ Node {
         KeyframeGroup {
             target: ik_Hips_0133
             property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(1, 2.36187e-17, 0, 1.57772e-30)
-            }
+            keyframeSource: "animations/ik_Hips_0133_rotation_5.qad"
         }
         KeyframeGroup {
             target: ik_LeftFoot_0134
@@ -11795,10 +7216,7 @@ Node {
         KeyframeGroup {
             target: ik_LeftFoot_0134
             property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(1, 2.36187e-17, 0, 1.57772e-30)
-            }
+            keyframeSource: "animations/ik_LeftFoot_0134_rotation_5.qad"
         }
         KeyframeGroup {
             target: ik_RightFoot_0135
@@ -11808,10 +7226,7 @@ Node {
         KeyframeGroup {
             target: ik_RightFoot_0135
             property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(1, 2.36187e-17, 0, 1.57772e-30)
-            }
+            keyframeSource: "animations/ik_RightFoot_0135_rotation_5.qad"
         }
         KeyframeGroup {
             target: ik_Head_0136
@@ -11821,41 +7236,36 @@ Node {
         KeyframeGroup {
             target: ik_Head_0136
             property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(1, 2.36187e-17, 0, 1.57772e-30)
-            }
+            keyframeSource: "animations/ik_Head_0136_rotation_5.qad"
         }
     }
     Timeline {
-        id: frames_005_timeline
-        objectName: "Frames.005"
+        id: frames_007_timeline
+        objectName: "Frames.007"
         property real framesPerSecond: 1000
         startFrame: 0
-        endFrame: 4867
+        endFrame: 2800
         currentFrame: 0
         enabled: true
         animations: TimelineAnimation {
-            duration: 4867
+            duration: 2800
             from: 0
-            to: 4867
+            to: 2800
             running: true
             loops: Animation.Infinite
         }
         KeyframeGroup {
-            target: leftForeArmTwist2_056
-            property: "position"
-            keyframeSource: "animations/leftForeArmTwist2_056_position_6.qad"
+            target: rightHandIndex2_0106
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.931262, -0.0566451, 0.0786065, 0.351231)
+            }
         }
         KeyframeGroup {
-            target: leftForeArmTwist2_056
+            target: rightFootIndex3_017
             property: "rotation"
-            keyframeSource: "animations/leftForeArmTwist2_056_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: skt_Reference_06
-            property: "rotation"
-            keyframeSource: "animations/skt_Reference_06_rotation_6.qad"
+            keyframeSource: "animations/rightFootIndex3_017_rotation_6.qad"
         }
         KeyframeGroup {
             target: ik_Spine3_02
@@ -11868,6 +7278,16 @@ Node {
             keyframeSource: "animations/ik_Spine3_02_rotation_6.qad"
         }
         KeyframeGroup {
+            target: rightFootIndex1_015
+            property: "rotation"
+            keyframeSource: "animations/rightFootIndex1_015_rotation_6.qad"
+        }
+        KeyframeGroup {
+            target: rightInHandMiddle_098
+            property: "rotation"
+            keyframeSource: "animations/rightInHandMiddle_098_rotation_6.qad"
+        }
+        KeyframeGroup {
             target: ik_LeftHand_07
             property: "position"
             keyframeSource: "animations/ik_LeftHand_07_position_6.qad"
@@ -11878,9 +7298,12 @@ Node {
             keyframeSource: "animations/ik_LeftHand_07_rotation_6.qad"
         }
         KeyframeGroup {
-            target: leftHandMiddle3_054
-            property: "position"
-            keyframeSource: "animations/leftHandMiddle3_054_position_6.qad"
+            target: rightHandThumb3_096
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.880625, -0.168961, 0.0711457, 0.43691)
+            }
         }
         KeyframeGroup {
             target: leftHandMiddle3_054
@@ -11898,6 +7321,16 @@ Node {
             keyframeSource: "animations/ik_RightHand_03_rotation_6.qad"
         }
         KeyframeGroup {
+            target: skt_RightHand_0103
+            property: "position"
+            keyframeSource: "animations/skt_RightHand_0103_position_6.qad"
+        }
+        KeyframeGroup {
+            target: skt_RightHand_0103
+            property: "rotation"
+            keyframeSource: "animations/skt_RightHand_0103_rotation_6.qad"
+        }
+        KeyframeGroup {
             target: skt_HeadCamera_08
             property: "position"
             keyframeSource: "animations/skt_HeadCamera_08_position_6.qad"
@@ -11905,27 +7338,18 @@ Node {
         KeyframeGroup {
             target: skt_HeadCamera_08
             property: "rotation"
-            keyframeSource: "animations/skt_HeadCamera_08_rotation_6.qad"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(1, -5.68198e-14, 0, 0)
+            }
         }
         KeyframeGroup {
-            target: leftHandMiddle1_052
-            property: "position"
-            keyframeSource: "animations/leftHandMiddle1_052_position_6.qad"
-        }
-        KeyframeGroup {
-            target: leftHandMiddle1_052
+            target: rightHandIndex4_0108
             property: "rotation"
-            keyframeSource: "animations/leftHandMiddle1_052_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_Reference2_04
-            property: "rotation"
-            keyframeSource: "animations/skt_FX_Reference2_04_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: leftArm_032
-            property: "position"
-            keyframeSource: "animations/leftArm_032_position_6.qad"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.944937, 0.0293403, -0.0331532, 0.324243)
+            }
         }
         KeyframeGroup {
             target: leftArm_032
@@ -11934,53 +7358,16 @@ Node {
         }
         KeyframeGroup {
             target: rightLegTwist1_012
-            property: "position"
-            keyframeSource: "animations/rightLegTwist1_012_position_6.qad"
-        }
-        KeyframeGroup {
-            target: rightLegTwist1_012
             property: "rotation"
             keyframeSource: "animations/rightLegTwist1_012_rotation_6.qad"
         }
         KeyframeGroup {
-            target: leftHand_036
-            property: "position"
-            keyframeSource: "animations/leftHand_036_position_6.qad"
-        }
-        KeyframeGroup {
-            target: leftHand_036
+            target: rightHandIndex1_0105
             property: "rotation"
-            keyframeSource: "animations/leftHand_036_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_Reference1_05
-            property: "rotation"
-            keyframeSource: "animations/skt_FX_Reference1_05_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: rightFootIndex3_017
-            property: "position"
-            keyframeSource: "animations/rightFootIndex3_017_position_6.qad"
-        }
-        KeyframeGroup {
-            target: rightFootIndex3_017
-            property: "rotation"
-            keyframeSource: "animations/rightFootIndex3_017_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: skt_Head_062
-            property: "position"
-            keyframeSource: "animations/skt_Head_062_position_6.qad"
-        }
-        KeyframeGroup {
-            target: skt_Head_062
-            property: "rotation"
-            keyframeSource: "animations/skt_Head_062_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: rightFootIndex2_016
-            property: "position"
-            keyframeSource: "animations/rightFootIndex2_016_position_6.qad"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.939389, -0.0955966, -0.0163223, 0.32885)
+            }
         }
         KeyframeGroup {
             target: rightFootIndex2_016
@@ -11988,34 +7375,9 @@ Node {
             keyframeSource: "animations/rightFootIndex2_016_rotation_6.qad"
         }
         KeyframeGroup {
-            target: rightFootIndex1_015
-            property: "rotation"
-            keyframeSource: "animations/rightFootIndex1_015_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: rightFootBigToe3_020
-            property: "position"
-            keyframeSource: "animations/rightFootBigToe3_020_position_6.qad"
-        }
-        KeyframeGroup {
             target: rightFootBigToe3_020
             property: "rotation"
             keyframeSource: "animations/rightFootBigToe3_020_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: jaw_065
-            property: "position"
-            keyframeSource: "animations/jaw_065_position_6.qad"
-        }
-        KeyframeGroup {
-            target: jaw_065
-            property: "rotation"
-            keyframeSource: "animations/jaw_065_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: rightFootBigToe2_019
-            property: "position"
-            keyframeSource: "animations/rightFootBigToe2_019_position_6.qad"
         }
         KeyframeGroup {
             target: rightFootBigToe2_019
@@ -12028,54 +7390,14 @@ Node {
             keyframeSource: "animations/rightFootBigToe1_018_rotation_6.qad"
         }
         KeyframeGroup {
-            target: rightToeBaseEnd_021
-            property: "position"
-            keyframeSource: "animations/rightToeBaseEnd_021_position_6.qad"
-        }
-        KeyframeGroup {
-            target: rightToeBaseEnd_021
-            property: "rotation"
-            keyframeSource: "animations/rightToeBaseEnd_021_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: nose_067
-            property: "position"
-            keyframeSource: "animations/nose_067_position_6.qad"
-        }
-        KeyframeGroup {
-            target: nose_067
-            property: "rotation"
-            keyframeSource: "animations/nose_067_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: rightToeBase_014
-            property: "position"
-            keyframeSource: "animations/rightToeBase_014_position_6.qad"
-        }
-        KeyframeGroup {
             target: rightToeBase_014
             property: "rotation"
             keyframeSource: "animations/rightToeBase_014_rotation_6.qad"
         }
         KeyframeGroup {
             target: rightFoot_013
-            property: "position"
-            keyframeSource: "animations/rightFoot_013_position_6.qad"
-        }
-        KeyframeGroup {
-            target: rightFoot_013
             property: "rotation"
             keyframeSource: "animations/rightFoot_013_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: lip_upper_069
-            property: "position"
-            keyframeSource: "animations/lip_upper_069_position_6.qad"
-        }
-        KeyframeGroup {
-            target: lip_upper_069
-            property: "rotation"
-            keyframeSource: "animations/lip_upper_069_rotation_6.qad"
         }
         KeyframeGroup {
             target: rightLeg_011
@@ -12088,29 +7410,9 @@ Node {
             keyframeSource: "animations/rightLeg_011_rotation_6.qad"
         }
         KeyframeGroup {
-            target: lip_lower_070
-            property: "position"
-            keyframeSource: "animations/lip_lower_070_position_6.qad"
-        }
-        KeyframeGroup {
-            target: lip_lower_070
-            property: "rotation"
-            keyframeSource: "animations/lip_lower_070_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: rightUpLegTwist1_022
-            property: "position"
-            keyframeSource: "animations/rightUpLegTwist1_022_position_6.qad"
-        }
-        KeyframeGroup {
             target: rightUpLegTwist1_022
             property: "rotation"
             keyframeSource: "animations/rightUpLegTwist1_022_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: rightUpLegTwist2_023
-            property: "position"
-            keyframeSource: "animations/rightUpLegTwist2_023_position_6.qad"
         }
         KeyframeGroup {
             target: rightUpLegTwist2_023
@@ -12118,69 +7420,9 @@ Node {
             keyframeSource: "animations/rightUpLegTwist2_023_rotation_6.qad"
         }
         KeyframeGroup {
-            target: eye_lid_in_right_072
-            property: "position"
-            keyframeSource: "animations/eye_lid_in_right_072_position_6.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_in_right_072
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_in_right_072_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: rightUpLeg_010
-            property: "position"
-            keyframeSource: "animations/rightUpLeg_010_position_6.qad"
-        }
-        KeyframeGroup {
             target: rightUpLeg_010
             property: "rotation"
             keyframeSource: "animations/rightUpLeg_010_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_out_right_073
-            property: "position"
-            keyframeSource: "animations/eye_lid_out_right_073_position_6.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_out_right_073
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_out_right_073_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_Hips_024
-            property: "position"
-            keyframeSource: "animations/skt_FX_Hips_024_position_6.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_Hips_024
-            property: "rotation"
-            keyframeSource: "animations/skt_FX_Hips_024_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: skt_Back_029
-            property: "position"
-            keyframeSource: "animations/skt_Back_029_position_6.qad"
-        }
-        KeyframeGroup {
-            target: skt_Back_029
-            property: "rotation"
-            keyframeSource: "animations/skt_Back_029_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: skt_Chest_030
-            property: "position"
-            keyframeSource: "animations/skt_Chest_030_position_6.qad"
-        }
-        KeyframeGroup {
-            target: skt_Chest_030
-            property: "rotation"
-            keyframeSource: "animations/skt_Chest_030_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArmTwist3_034
-            property: "position"
-            keyframeSource: "animations/leftForeArmTwist3_034_position_6.qad"
         }
         KeyframeGroup {
             target: leftForeArmTwist3_034
@@ -12189,18 +7431,8 @@ Node {
         }
         KeyframeGroup {
             target: leftForeArmTwist1_035
-            property: "position"
-            keyframeSource: "animations/leftForeArmTwist1_035_position_6.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArmTwist1_035
             property: "rotation"
             keyframeSource: "animations/leftForeArmTwist1_035_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky4_041
-            property: "position"
-            keyframeSource: "animations/leftHandPinky4_041_position_6.qad"
         }
         KeyframeGroup {
             target: leftHandPinky4_041
@@ -12209,18 +7441,8 @@ Node {
         }
         KeyframeGroup {
             target: leftHandPinky3_040
-            property: "position"
-            keyframeSource: "animations/leftHandPinky3_040_position_6.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky3_040
             property: "rotation"
             keyframeSource: "animations/leftHandPinky3_040_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky2_039
-            property: "position"
-            keyframeSource: "animations/leftHandPinky2_039_position_6.qad"
         }
         KeyframeGroup {
             target: leftHandPinky2_039
@@ -12229,41 +7451,13 @@ Node {
         }
         KeyframeGroup {
             target: leftHandPinky1_038
-            property: "position"
-            keyframeSource: "animations/leftHandPinky1_038_position_6.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky1_038
             property: "rotation"
             keyframeSource: "animations/leftHandPinky1_038_rotation_6.qad"
         }
         KeyframeGroup {
             target: leftInHandPinky_037
-            property: "position"
-            keyframeSource: "animations/leftInHandPinky_037_position_6.qad"
-        }
-        KeyframeGroup {
-            target: leftInHandPinky_037
             property: "rotation"
             keyframeSource: "animations/leftInHandPinky_037_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: skt_LeftHand_042
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(48.0552, 20.9807, 0.725212)
-            }
-        }
-        KeyframeGroup {
-            target: skt_LeftHand_042
-            property: "rotation"
-            keyframeSource: "animations/skt_LeftHand_042_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex4_047
-            property: "position"
-            keyframeSource: "animations/leftHandIndex4_047_position_6.qad"
         }
         KeyframeGroup {
             target: leftHandIndex4_047
@@ -12272,31 +7466,13 @@ Node {
         }
         KeyframeGroup {
             target: leftHandIndex3_046
-            property: "position"
-            keyframeSource: "animations/leftHandIndex3_046_position_6.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex3_046
             property: "rotation"
             keyframeSource: "animations/leftHandIndex3_046_rotation_6.qad"
         }
         KeyframeGroup {
             target: leftHandIndex2_045
-            property: "position"
-            keyframeSource: "animations/leftHandIndex2_045_position_6.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex2_045
             property: "rotation"
             keyframeSource: "animations/leftHandIndex2_045_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex1_044
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(44.2476, -5.37628, -0.826429)
-            }
         }
         KeyframeGroup {
             target: leftHandIndex1_044
@@ -12309,32 +7485,14 @@ Node {
             keyframeSource: "animations/leftInHandIndex_043_rotation_6.qad"
         }
         KeyframeGroup {
-            target: skt_FX_LeftHand_00
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(48.0552, 20.9807, 0.725212)
-            }
-        }
-        KeyframeGroup {
-            target: skt_FX_LeftHand_00
-            property: "rotation"
-            keyframeSource: "animations/skt_FX_LeftHand_00_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb4_050
-            property: "position"
-            keyframeSource: "animations/leftHandThumb4_050_position_6.qad"
-        }
-        KeyframeGroup {
             target: leftHandThumb4_050
             property: "rotation"
             keyframeSource: "animations/leftHandThumb4_050_rotation_6.qad"
         }
         KeyframeGroup {
-            target: leftHandThumb3_049
-            property: "position"
-            keyframeSource: "animations/leftHandThumb3_049_position_6.qad"
+            target: rightArmTwist1_090
+            property: "rotation"
+            keyframeSource: "animations/rightArmTwist1_090_rotation_6.qad"
         }
         KeyframeGroup {
             target: leftHandThumb3_049
@@ -12343,13 +7501,18 @@ Node {
         }
         KeyframeGroup {
             target: leftHandThumb2_048
-            property: "position"
-            keyframeSource: "animations/leftHandThumb2_048_position_6.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb2_048
             property: "rotation"
             keyframeSource: "animations/leftHandThumb2_048_rotation_6.qad"
+        }
+        KeyframeGroup {
+            target: skt_FX_RightHand_093
+            property: "position"
+            keyframeSource: "animations/skt_FX_RightHand_093_position_6.qad"
+        }
+        KeyframeGroup {
+            target: skt_FX_RightHand_093
+            property: "rotation"
+            keyframeSource: "animations/skt_FX_RightHand_093_rotation_6.qad"
         }
         KeyframeGroup {
             target: leftHandThumb1_01
@@ -12357,9 +7520,12 @@ Node {
             keyframeSource: "animations/leftHandThumb1_01_rotation_6.qad"
         }
         KeyframeGroup {
-            target: leftHandMiddle4_055
-            property: "position"
-            keyframeSource: "animations/leftHandMiddle4_055_position_6.qad"
+            target: rightHandThumb4_097
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.999301, 0.0212542, -0.00852281, 0.0295585)
+            }
         }
         KeyframeGroup {
             target: leftHandMiddle4_055
@@ -12367,9 +7533,12 @@ Node {
             keyframeSource: "animations/leftHandMiddle4_055_rotation_6.qad"
         }
         KeyframeGroup {
-            target: leftHandMiddle2_053
-            property: "position"
-            keyframeSource: "animations/leftHandMiddle2_053_position_6.qad"
+            target: rightHandThumb2_095
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.969429, 0.224882, 0.0779004, 0.0597311)
+            }
         }
         KeyframeGroup {
             target: leftHandMiddle2_053
@@ -12377,14 +7546,55 @@ Node {
             keyframeSource: "animations/leftHandMiddle2_053_rotation_6.qad"
         }
         KeyframeGroup {
-            target: leftInHandMiddle_051
-            property: "position"
-            keyframeSource: "animations/leftInHandMiddle_051_position_6.qad"
+            target: rightHandThumb1_094
+            property: "rotation"
+            keyframeSource: "animations/rightHandThumb1_094_rotation_6.qad"
+        }
+        KeyframeGroup {
+            target: leftHandMiddle1_052
+            property: "rotation"
+            keyframeSource: "animations/leftHandMiddle1_052_rotation_6.qad"
         }
         KeyframeGroup {
             target: leftInHandMiddle_051
             property: "rotation"
             keyframeSource: "animations/leftInHandMiddle_051_rotation_6.qad"
+        }
+        KeyframeGroup {
+            target: rightHandMiddle4_0102
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.973604, -0.0497164, -0.0333392, 0.220253)
+            }
+        }
+        KeyframeGroup {
+            target: leftHand_036
+            property: "position"
+            keyframeSource: "animations/leftHand_036_position_6.qad"
+        }
+        KeyframeGroup {
+            target: leftHand_036
+            property: "rotation"
+            keyframeSource: "animations/leftHand_036_rotation_6.qad"
+        }
+        KeyframeGroup {
+            target: rightHandMiddle2_0100
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.968908, 0.0430647, 0.0332208, 0.241369)
+            }
+        }
+        KeyframeGroup {
+            target: leftForeArmTwist2_056
+            property: "rotation"
+            keyframeSource: "animations/leftForeArmTwist2_056_rotation_6.qad"
+        }
+        KeyframeGroup {
+            target: rightHandMiddle1_099
+            property: "rotation"
+            keyframeSource: "animations/rightHandMiddle1_099_rotation_6.qad"
         }
         KeyframeGroup {
             target: leftForeArm_033
@@ -12398,404 +7608,13 @@ Node {
         }
         KeyframeGroup {
             target: leftArmTwist1_057
-            property: "position"
-            keyframeSource: "animations/leftArmTwist1_057_position_6.qad"
-        }
-        KeyframeGroup {
-            target: leftArmTwist1_057
             property: "rotation"
             keyframeSource: "animations/leftArmTwist1_057_rotation_6.qad"
         }
         KeyframeGroup {
             target: leftArmTwist2_058
-            property: "position"
-            keyframeSource: "animations/leftArmTwist2_058_position_6.qad"
-        }
-        KeyframeGroup {
-            target: leftArmTwist2_058
             property: "rotation"
             keyframeSource: "animations/leftArmTwist2_058_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: leftShoulder_031
-            property: "position"
-            keyframeSource: "animations/leftShoulder_031_position_6.qad"
-        }
-        KeyframeGroup {
-            target: leftShoulder_031
-            property: "rotation"
-            keyframeSource: "animations/leftShoulder_031_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: headEnd_063
-            property: "position"
-            keyframeSource: "animations/headEnd_063_position_6.qad"
-        }
-        KeyframeGroup {
-            target: headEnd_063
-            property: "rotation"
-            keyframeSource: "animations/headEnd_063_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: eye_left_066
-            property: "position"
-            keyframeSource: "animations/eye_left_066_position_6.qad"
-        }
-        KeyframeGroup {
-            target: eye_left_066
-            property: "rotation"
-            keyframeSource: "animations/eye_left_066_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: lip_corners_068
-            property: "position"
-            keyframeSource: "animations/lip_corners_068_position_6.qad"
-        }
-        KeyframeGroup {
-            target: lip_corners_068
-            property: "rotation"
-            keyframeSource: "animations/lip_corners_068_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_right_071
-            property: "position"
-            keyframeSource: "animations/eye_lid_right_071_position_6.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_right_071
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_right_071_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: tongue_06_081
-            property: "position"
-            keyframeSource: "animations/tongue_06_081_position_6.qad"
-        }
-        KeyframeGroup {
-            target: tongue_06_081
-            property: "rotation"
-            keyframeSource: "animations/tongue_06_081_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: tongue_05_080
-            property: "position"
-            keyframeSource: "animations/tongue_05_080_position_6.qad"
-        }
-        KeyframeGroup {
-            target: tongue_05_080
-            property: "rotation"
-            keyframeSource: "animations/tongue_05_080_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: tongue_04_079
-            property: "position"
-            keyframeSource: "animations/tongue_04_079_position_6.qad"
-        }
-        KeyframeGroup {
-            target: tongue_04_079
-            property: "rotation"
-            keyframeSource: "animations/tongue_04_079_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: tongue_03_078
-            property: "position"
-            keyframeSource: "animations/tongue_03_078_position_6.qad"
-        }
-        KeyframeGroup {
-            target: tongue_03_078
-            property: "rotation"
-            keyframeSource: "animations/tongue_03_078_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: tongue_02_077
-            property: "position"
-            keyframeSource: "animations/tongue_02_077_position_6.qad"
-        }
-        KeyframeGroup {
-            target: tongue_02_077
-            property: "rotation"
-            keyframeSource: "animations/tongue_02_077_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: tongue_01_076
-            property: "position"
-            keyframeSource: "animations/tongue_01_076_position_6.qad"
-        }
-        KeyframeGroup {
-            target: tongue_01_076
-            property: "rotation"
-            keyframeSource: "animations/tongue_01_076_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: tongue_jaw_075
-            property: "position"
-            keyframeSource: "animations/tongue_jaw_075_position_6.qad"
-        }
-        KeyframeGroup {
-            target: tongue_jaw_075
-            property: "rotation"
-            keyframeSource: "animations/tongue_jaw_075_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: teeth_lwr_082
-            property: "position"
-            keyframeSource: "animations/teeth_lwr_082_position_6.qad"
-        }
-        KeyframeGroup {
-            target: teeth_lwr_082
-            property: "rotation"
-            keyframeSource: "animations/teeth_lwr_082_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: teeth_upr_083
-            property: "position"
-            keyframeSource: "animations/teeth_upr_083_position_6.qad"
-        }
-        KeyframeGroup {
-            target: teeth_upr_083
-            property: "rotation"
-            keyframeSource: "animations/teeth_upr_083_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: mouth_bag_074
-            property: "position"
-            keyframeSource: "animations/mouth_bag_074_position_6.qad"
-        }
-        KeyframeGroup {
-            target: mouth_bag_074
-            property: "rotation"
-            keyframeSource: "animations/mouth_bag_074_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: eye_right_084
-            property: "position"
-            keyframeSource: "animations/eye_right_084_position_6.qad"
-        }
-        KeyframeGroup {
-            target: eye_right_084
-            property: "rotation"
-            keyframeSource: "animations/eye_right_084_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_out_left_086
-            property: "position"
-            keyframeSource: "animations/eye_lid_out_left_086_position_6.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_out_left_086
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_out_left_086_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_in_left_087
-            property: "position"
-            keyframeSource: "animations/eye_lid_in_left_087_position_6.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_in_left_087
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_in_left_087_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_left_085
-            property: "position"
-            keyframeSource: "animations/eye_lid_left_085_position_6.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_left_085
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_left_085_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: face_064
-            property: "position"
-            keyframeSource: "animations/face_064_position_6.qad"
-        }
-        KeyframeGroup {
-            target: face_064
-            property: "rotation"
-            keyframeSource: "animations/face_064_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: head_061
-            property: "position"
-            keyframeSource: "animations/head_061_position_6.qad"
-        }
-        KeyframeGroup {
-            target: head_061
-            property: "rotation"
-            keyframeSource: "animations/head_061_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: neck1_060
-            property: "position"
-            keyframeSource: "animations/neck1_060_position_6.qad"
-        }
-        KeyframeGroup {
-            target: neck1_060
-            property: "rotation"
-            keyframeSource: "animations/neck1_060_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: neck_059
-            property: "position"
-            keyframeSource: "animations/neck_059_position_6.qad"
-        }
-        KeyframeGroup {
-            target: neck_059
-            property: "rotation"
-            keyframeSource: "animations/neck_059_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: rightArmTwist1_090
-            property: "position"
-            keyframeSource: "animations/rightArmTwist1_090_position_6.qad"
-        }
-        KeyframeGroup {
-            target: rightArmTwist1_090
-            property: "rotation"
-            keyframeSource: "animations/rightArmTwist1_090_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_RightHand_093
-            property: "position"
-            keyframeSource: "animations/skt_FX_RightHand_093_position_6.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_RightHand_093
-            property: "rotation"
-            keyframeSource: "animations/skt_FX_RightHand_093_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb4_097
-            property: "position"
-            keyframeSource: "animations/rightHandThumb4_097_position_6.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb4_097
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.999301, 0.0212542, -0.00852287, 0.0295585)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandThumb3_096
-            property: "position"
-            keyframeSource: "animations/rightHandThumb3_096_position_6.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb3_096
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.880625, -0.168961, 0.0711456, 0.43691)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandThumb2_095
-            property: "position"
-            keyframeSource: "animations/rightHandThumb2_095_position_6.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb2_095
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.969429, 0.224882, 0.0779006, 0.059731)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandThumb1_094
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.529089, 0.708823, 0.466079, -0.0201289)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandMiddle4_0102
-            property: "position"
-            keyframeSource: "animations/rightHandMiddle4_0102_position_6.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle4_0102
-            property: "rotation"
-            keyframeSource: "animations/rightHandMiddle4_0102_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle3_0101
-            property: "position"
-            keyframeSource: "animations/rightHandMiddle3_0101_position_6.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle3_0101
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.940086, 0.0498861, 0.0225631, 0.336513)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandMiddle2_0100
-            property: "position"
-            keyframeSource: "animations/rightHandMiddle2_0100_position_6.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle2_0100
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.968908, 0.0430646, 0.0332209, 0.241368)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandMiddle1_099
-            property: "position"
-            keyframeSource: "animations/rightHandMiddle1_099_position_6.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle1_099
-            property: "rotation"
-            keyframeSource: "animations/rightHandMiddle1_099_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: rightInHandMiddle_098
-            property: "position"
-            keyframeSource: "animations/rightInHandMiddle_098_position_6.qad"
-        }
-        KeyframeGroup {
-            target: rightInHandMiddle_098
-            property: "rotation"
-            keyframeSource: "animations/rightInHandMiddle_098_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: skt_RightHand_0103
-            property: "position"
-            keyframeSource: "animations/skt_RightHand_0103_position_6.qad"
-        }
-        KeyframeGroup {
-            target: skt_RightHand_0103
-            property: "rotation"
-            keyframeSource: "animations/skt_RightHand_0103_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: rightHandIndex4_0108
-            property: "position"
-            keyframeSource: "animations/rightHandIndex4_0108_position_6.qad"
-        }
-        KeyframeGroup {
-            target: rightHandIndex4_0108
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.944937, 0.0293401, -0.0331531, 0.324243)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandIndex3_0107
-            property: "position"
-            keyframeSource: "animations/rightHandIndex3_0107_position_6.qad"
         }
         KeyframeGroup {
             target: rightHandIndex3_0107
@@ -12806,27 +7625,32 @@ Node {
             }
         }
         KeyframeGroup {
-            target: rightHandIndex2_0106
-            property: "position"
-            keyframeSource: "animations/rightHandIndex2_0106_position_6.qad"
-        }
-        KeyframeGroup {
-            target: rightHandIndex2_0106
+            target: leftShoulder_031
             property: "rotation"
-            keyframeSource: "animations/rightHandIndex2_0106_rotation_6.qad"
+            keyframeSource: "animations/leftShoulder_031_rotation_6.qad"
         }
         KeyframeGroup {
-            target: rightHandIndex1_0105
-            property: "position"
+            target: head_061
+            property: "rotation"
+            keyframeSource: "animations/head_061_rotation_6.qad"
+        }
+        KeyframeGroup {
+            target: neck1_060
+            property: "rotation"
+            keyframeSource: "animations/neck1_060_rotation_6.qad"
+        }
+        KeyframeGroup {
+            target: neck_059
+            property: "rotation"
+            keyframeSource: "animations/neck_059_rotation_6.qad"
+        }
+        KeyframeGroup {
+            target: rightHandMiddle3_0101
+            property: "rotation"
             Keyframe {
                 frame: 0
-                value: Qt.vector3d(-44.2472, 5.37655, 0.826607)
+                value: Qt.quaternion(0.940086, 0.049886, 0.0225632, 0.336512)
             }
-        }
-        KeyframeGroup {
-            target: rightHandIndex1_0105
-            property: "rotation"
-            keyframeSource: "animations/rightHandIndex1_0105_rotation_6.qad"
         }
         KeyframeGroup {
             target: rightInHandIndex_0104
@@ -12838,18 +7662,8 @@ Node {
         }
         KeyframeGroup {
             target: rightHandPinky4_0113
-            property: "position"
-            keyframeSource: "animations/rightHandPinky4_0113_position_6.qad"
-        }
-        KeyframeGroup {
-            target: rightHandPinky4_0113
             property: "rotation"
             keyframeSource: "animations/rightHandPinky4_0113_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: rightHandPinky3_0112
-            property: "position"
-            keyframeSource: "animations/rightHandPinky3_0112_position_6.qad"
         }
         KeyframeGroup {
             target: rightHandPinky3_0112
@@ -12858,18 +7672,11 @@ Node {
         }
         KeyframeGroup {
             target: rightHandPinky2_0111
-            property: "position"
-            keyframeSource: "animations/rightHandPinky2_0111_position_6.qad"
-        }
-        KeyframeGroup {
-            target: rightHandPinky2_0111
             property: "rotation"
-            keyframeSource: "animations/rightHandPinky2_0111_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: rightHandPinky1_0110
-            property: "position"
-            keyframeSource: "animations/rightHandPinky1_0110_position_6.qad"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.941363, 0.00502077, -0.0563828, 0.332612)
+            }
         }
         KeyframeGroup {
             target: rightHandPinky1_0110
@@ -12878,19 +7685,8 @@ Node {
         }
         KeyframeGroup {
             target: rightInHandPinky_0109
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(-7.95186, 1.34685, -19.4511)
-            }
-        }
-        KeyframeGroup {
-            target: rightInHandPinky_0109
             property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.987487, 0.107136, 0.102255, -0.0541685)
-            }
+            keyframeSource: "animations/rightInHandPinky_0109_rotation_6.qad"
         }
         KeyframeGroup {
             target: rightHand_092
@@ -12904,28 +7700,13 @@ Node {
         }
         KeyframeGroup {
             target: rightForeArmTwist3_0114
-            property: "position"
-            keyframeSource: "animations/rightForeArmTwist3_0114_position_6.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArmTwist3_0114
             property: "rotation"
             keyframeSource: "animations/rightForeArmTwist3_0114_rotation_6.qad"
         }
         KeyframeGroup {
             target: rightForeArmTwist2_0115
-            property: "position"
-            keyframeSource: "animations/rightForeArmTwist2_0115_position_6.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArmTwist2_0115
             property: "rotation"
             keyframeSource: "animations/rightForeArmTwist2_0115_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArmTwist1_0116
-            property: "position"
-            keyframeSource: "animations/rightForeArmTwist1_0116_position_6.qad"
         }
         KeyframeGroup {
             target: rightForeArmTwist1_0116
@@ -12944,18 +7725,8 @@ Node {
         }
         KeyframeGroup {
             target: rightArmTwist2_0117
-            property: "position"
-            keyframeSource: "animations/rightArmTwist2_0117_position_6.qad"
-        }
-        KeyframeGroup {
-            target: rightArmTwist2_0117
             property: "rotation"
             keyframeSource: "animations/rightArmTwist2_0117_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: rightArm_089
-            property: "position"
-            keyframeSource: "animations/rightArm_089_position_6.qad"
         }
         KeyframeGroup {
             target: rightArm_089
@@ -12969,18 +7740,8 @@ Node {
         }
         KeyframeGroup {
             target: spine3_028
-            property: "position"
-            keyframeSource: "animations/spine3_028_position_6.qad"
-        }
-        KeyframeGroup {
-            target: spine3_028
             property: "rotation"
             keyframeSource: "animations/spine3_028_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: spine2_027
-            property: "position"
-            keyframeSource: "animations/spine2_027_position_6.qad"
         }
         KeyframeGroup {
             target: spine2_027
@@ -12989,18 +7750,8 @@ Node {
         }
         KeyframeGroup {
             target: spine1_026
-            property: "position"
-            keyframeSource: "animations/spine1_026_position_6.qad"
-        }
-        KeyframeGroup {
-            target: spine1_026
             property: "rotation"
             keyframeSource: "animations/spine1_026_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: spine_025
-            property: "position"
-            keyframeSource: "animations/spine_025_position_6.qad"
         }
         KeyframeGroup {
             target: spine_025
@@ -13009,18 +7760,8 @@ Node {
         }
         KeyframeGroup {
             target: leftLegTwist1_0120
-            property: "position"
-            keyframeSource: "animations/leftLegTwist1_0120_position_6.qad"
-        }
-        KeyframeGroup {
-            target: leftLegTwist1_0120
             property: "rotation"
             keyframeSource: "animations/leftLegTwist1_0120_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: leftFootBigToe3_0125
-            property: "position"
-            keyframeSource: "animations/leftFootBigToe3_0125_position_6.qad"
         }
         KeyframeGroup {
             target: leftFootBigToe3_0125
@@ -13029,21 +7770,8 @@ Node {
         }
         KeyframeGroup {
             target: leftFootBigToe2_0124
-            property: "position"
-            keyframeSource: "animations/leftFootBigToe2_0124_position_6.qad"
-        }
-        KeyframeGroup {
-            target: leftFootBigToe2_0124
             property: "rotation"
             keyframeSource: "animations/leftFootBigToe2_0124_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: leftFootBigToe1_0123
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(4.48676, 5.94022, 16.3631)
-            }
         }
         KeyframeGroup {
             target: leftFootBigToe1_0123
@@ -13052,18 +7780,8 @@ Node {
         }
         KeyframeGroup {
             target: leftFootIndex3_0128
-            property: "position"
-            keyframeSource: "animations/leftFootIndex3_0128_position_6.qad"
-        }
-        KeyframeGroup {
-            target: leftFootIndex3_0128
             property: "rotation"
             keyframeSource: "animations/leftFootIndex3_0128_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: leftFootIndex2_0127
-            property: "position"
-            keyframeSource: "animations/leftFootIndex2_0127_position_6.qad"
         }
         KeyframeGroup {
             target: leftFootIndex2_0127
@@ -13072,28 +7790,8 @@ Node {
         }
         KeyframeGroup {
             target: leftFootIndex1_0126
-            property: "position"
-            keyframeSource: "animations/leftFootIndex1_0126_position_6.qad"
-        }
-        KeyframeGroup {
-            target: leftFootIndex1_0126
             property: "rotation"
             keyframeSource: "animations/leftFootIndex1_0126_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: leftToeBaseEnd_0129
-            property: "position"
-            keyframeSource: "animations/leftToeBaseEnd_0129_position_6.qad"
-        }
-        KeyframeGroup {
-            target: leftToeBaseEnd_0129
-            property: "rotation"
-            keyframeSource: "animations/leftToeBaseEnd_0129_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: leftToeBase_0122
-            property: "position"
-            keyframeSource: "animations/leftToeBase_0122_position_6.qad"
         }
         KeyframeGroup {
             target: leftToeBase_0122
@@ -13122,18 +7820,8 @@ Node {
         }
         KeyframeGroup {
             target: leftUpLegTwist1_0130
-            property: "position"
-            keyframeSource: "animations/leftUpLegTwist1_0130_position_6.qad"
-        }
-        KeyframeGroup {
-            target: leftUpLegTwist1_0130
             property: "rotation"
             keyframeSource: "animations/leftUpLegTwist1_0130_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: leftUpLegTwist2_0131
-            property: "position"
-            keyframeSource: "animations/leftUpLegTwist2_0131_position_6.qad"
         }
         KeyframeGroup {
             target: leftUpLegTwist2_0131
@@ -13142,23 +7830,8 @@ Node {
         }
         KeyframeGroup {
             target: leftUpLeg_0118
-            property: "position"
-            keyframeSource: "animations/leftUpLeg_0118_position_6.qad"
-        }
-        KeyframeGroup {
-            target: leftUpLeg_0118
             property: "rotation"
             keyframeSource: "animations/leftUpLeg_0118_rotation_6.qad"
-        }
-        KeyframeGroup {
-            target: skt_Hips_0132
-            property: "position"
-            keyframeSource: "animations/skt_Hips_0132_position_6.qad"
-        }
-        KeyframeGroup {
-            target: skt_Hips_0132
-            property: "rotation"
-            keyframeSource: "animations/skt_Hips_0132_rotation_6.qad"
         }
         KeyframeGroup {
             target: hips_09
@@ -13188,7 +7861,10 @@ Node {
         KeyframeGroup {
             target: ik_LeftFoot_0134
             property: "rotation"
-            keyframeSource: "animations/ik_LeftFoot_0134_rotation_6.qad"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(1, 2.36187e-17, 0, 0)
+            }
         }
         KeyframeGroup {
             target: ik_RightFoot_0135
@@ -13212,34 +7888,24 @@ Node {
         }
     }
     Timeline {
-        id: frames_006_timeline
-        objectName: "Frames.006"
+        id: frames_008_timeline
+        objectName: "Frames.008"
         property real framesPerSecond: 1000
         startFrame: 0
-        endFrame: 3734
+        endFrame: 2034
         currentFrame: 0
         enabled: true
         animations: TimelineAnimation {
-            duration: 3734
+            duration: 2034
             from: 0
-            to: 3734
+            to: 2034
             running: true
             loops: Animation.Infinite
         }
         KeyframeGroup {
-            target: leftForeArmTwist2_056
-            property: "position"
-            keyframeSource: "animations/leftForeArmTwist2_056_position_7.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArmTwist2_056
+            target: rightFootIndex3_017
             property: "rotation"
-            keyframeSource: "animations/leftForeArmTwist2_056_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: skt_Reference_06
-            property: "rotation"
-            keyframeSource: "animations/skt_Reference_06_rotation_7.qad"
+            keyframeSource: "animations/rightFootIndex3_017_rotation_7.qad"
         }
         KeyframeGroup {
             target: ik_Spine3_02
@@ -13249,7 +7915,18 @@ Node {
         KeyframeGroup {
             target: ik_Spine3_02
             property: "rotation"
-            keyframeSource: "animations/ik_Spine3_02_rotation_7.qad"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(1, 2.36187e-17, 0, 0)
+            }
+        }
+        KeyframeGroup {
+            target: rightInHandMiddle_098
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.997624, 0.0388621, 0.0290057, 0.0489301)
+            }
         }
         KeyframeGroup {
             target: ik_LeftHand_07
@@ -13259,12 +7936,18 @@ Node {
         KeyframeGroup {
             target: ik_LeftHand_07
             property: "rotation"
-            keyframeSource: "animations/ik_LeftHand_07_rotation_7.qad"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(1, 2.36187e-17, 0, 0)
+            }
         }
         KeyframeGroup {
-            target: leftHandMiddle3_054
-            property: "position"
-            keyframeSource: "animations/leftHandMiddle3_054_position_7.qad"
+            target: rightHandThumb3_096
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.880625, -0.168961, 0.071146, 0.43691)
+            }
         }
         KeyframeGroup {
             target: leftHandMiddle3_054
@@ -13279,7 +7962,15 @@ Node {
         KeyframeGroup {
             target: ik_RightHand_03
             property: "rotation"
-            keyframeSource: "animations/ik_RightHand_03_rotation_7.qad"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(1, 2.36187e-17, 0, 0)
+            }
+        }
+        KeyframeGroup {
+            target: skt_RightHand_0103
+            property: "rotation"
+            keyframeSource: "animations/skt_RightHand_0103_rotation_7.qad"
         }
         KeyframeGroup {
             target: skt_HeadCamera_08
@@ -13289,12 +7980,15 @@ Node {
         KeyframeGroup {
             target: skt_HeadCamera_08
             property: "rotation"
-            keyframeSource: "animations/skt_HeadCamera_08_rotation_7.qad"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(1, -5.68198e-14, 0, 0)
+            }
         }
         KeyframeGroup {
-            target: leftHandMiddle1_052
-            property: "position"
-            keyframeSource: "animations/leftHandMiddle1_052_position_7.qad"
+            target: rightHandThumb1_094
+            property: "rotation"
+            keyframeSource: "animations/rightHandThumb1_094_rotation_7.qad"
         }
         KeyframeGroup {
             target: leftHandMiddle1_052
@@ -13303,13 +7997,11 @@ Node {
         }
         KeyframeGroup {
             target: skt_FX_Reference2_04
-            property: "rotation"
-            keyframeSource: "animations/skt_FX_Reference2_04_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: leftArm_032
             property: "position"
-            keyframeSource: "animations/leftArm_032_position_7.qad"
+            Keyframe {
+                frame: 0
+                value: Qt.vector3d(-0.0716953, -6.74049e-16, 14.2682)
+            }
         }
         KeyframeGroup {
             target: leftArm_032
@@ -13318,13 +8010,16 @@ Node {
         }
         KeyframeGroup {
             target: rightLegTwist1_012
-            property: "position"
-            keyframeSource: "animations/rightLegTwist1_012_position_7.qad"
-        }
-        KeyframeGroup {
-            target: rightLegTwist1_012
             property: "rotation"
             keyframeSource: "animations/rightLegTwist1_012_rotation_7.qad"
+        }
+        KeyframeGroup {
+            target: rightHandMiddle4_0102
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.973604, -0.0497163, -0.033339, 0.220253)
+            }
         }
         KeyframeGroup {
             target: leftHand_036
@@ -13338,33 +8033,11 @@ Node {
         }
         KeyframeGroup {
             target: skt_FX_Reference1_05
-            property: "rotation"
-            keyframeSource: "animations/skt_FX_Reference1_05_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: rightFootIndex3_017
             property: "position"
-            keyframeSource: "animations/rightFootIndex3_017_position_7.qad"
-        }
-        KeyframeGroup {
-            target: rightFootIndex3_017
-            property: "rotation"
-            keyframeSource: "animations/rightFootIndex3_017_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: skt_Head_062
-            property: "position"
-            keyframeSource: "animations/skt_Head_062_position_7.qad"
-        }
-        KeyframeGroup {
-            target: skt_Head_062
-            property: "rotation"
-            keyframeSource: "animations/skt_Head_062_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: rightFootIndex2_016
-            property: "position"
-            keyframeSource: "animations/rightFootIndex2_016_position_7.qad"
+            Keyframe {
+                frame: 0
+                value: Qt.vector3d(-0.0716953, -6.74049e-16, 14.2682)
+            }
         }
         KeyframeGroup {
             target: rightFootIndex2_016
@@ -13378,28 +8051,8 @@ Node {
         }
         KeyframeGroup {
             target: rightFootBigToe3_020
-            property: "position"
-            keyframeSource: "animations/rightFootBigToe3_020_position_7.qad"
-        }
-        KeyframeGroup {
-            target: rightFootBigToe3_020
             property: "rotation"
             keyframeSource: "animations/rightFootBigToe3_020_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: jaw_065
-            property: "position"
-            keyframeSource: "animations/jaw_065_position_7.qad"
-        }
-        KeyframeGroup {
-            target: jaw_065
-            property: "rotation"
-            keyframeSource: "animations/jaw_065_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: rightFootBigToe2_019
-            property: "position"
-            keyframeSource: "animations/rightFootBigToe2_019_position_7.qad"
         }
         KeyframeGroup {
             target: rightFootBigToe2_019
@@ -13412,54 +8065,14 @@ Node {
             keyframeSource: "animations/rightFootBigToe1_018_rotation_7.qad"
         }
         KeyframeGroup {
-            target: rightToeBaseEnd_021
-            property: "position"
-            keyframeSource: "animations/rightToeBaseEnd_021_position_7.qad"
-        }
-        KeyframeGroup {
-            target: rightToeBaseEnd_021
-            property: "rotation"
-            keyframeSource: "animations/rightToeBaseEnd_021_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: nose_067
-            property: "position"
-            keyframeSource: "animations/nose_067_position_7.qad"
-        }
-        KeyframeGroup {
-            target: nose_067
-            property: "rotation"
-            keyframeSource: "animations/nose_067_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: rightToeBase_014
-            property: "position"
-            keyframeSource: "animations/rightToeBase_014_position_7.qad"
-        }
-        KeyframeGroup {
             target: rightToeBase_014
             property: "rotation"
             keyframeSource: "animations/rightToeBase_014_rotation_7.qad"
         }
         KeyframeGroup {
             target: rightFoot_013
-            property: "position"
-            keyframeSource: "animations/rightFoot_013_position_7.qad"
-        }
-        KeyframeGroup {
-            target: rightFoot_013
             property: "rotation"
             keyframeSource: "animations/rightFoot_013_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: lip_upper_069
-            property: "position"
-            keyframeSource: "animations/lip_upper_069_position_7.qad"
-        }
-        KeyframeGroup {
-            target: lip_upper_069
-            property: "rotation"
-            keyframeSource: "animations/lip_upper_069_rotation_7.qad"
         }
         KeyframeGroup {
             target: rightLeg_011
@@ -13472,29 +8085,9 @@ Node {
             keyframeSource: "animations/rightLeg_011_rotation_7.qad"
         }
         KeyframeGroup {
-            target: lip_lower_070
-            property: "position"
-            keyframeSource: "animations/lip_lower_070_position_7.qad"
-        }
-        KeyframeGroup {
-            target: lip_lower_070
-            property: "rotation"
-            keyframeSource: "animations/lip_lower_070_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: rightUpLegTwist1_022
-            property: "position"
-            keyframeSource: "animations/rightUpLegTwist1_022_position_7.qad"
-        }
-        KeyframeGroup {
             target: rightUpLegTwist1_022
             property: "rotation"
             keyframeSource: "animations/rightUpLegTwist1_022_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: rightUpLegTwist2_023
-            property: "position"
-            keyframeSource: "animations/rightUpLegTwist2_023_position_7.qad"
         }
         KeyframeGroup {
             target: rightUpLegTwist2_023
@@ -13502,64 +8095,25 @@ Node {
             keyframeSource: "animations/rightUpLegTwist2_023_rotation_7.qad"
         }
         KeyframeGroup {
-            target: eye_lid_in_right_072
-            property: "position"
-            keyframeSource: "animations/eye_lid_in_right_072_position_7.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_in_right_072
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_in_right_072_rotation_7.qad"
-        }
-        KeyframeGroup {
             target: rightUpLeg_010
             property: "rotation"
             keyframeSource: "animations/rightUpLeg_010_rotation_7.qad"
         }
         KeyframeGroup {
-            target: eye_lid_out_right_073
-            property: "position"
-            keyframeSource: "animations/eye_lid_out_right_073_position_7.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_out_right_073
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_out_right_073_rotation_7.qad"
-        }
-        KeyframeGroup {
             target: skt_FX_Hips_024
             property: "position"
-            keyframeSource: "animations/skt_FX_Hips_024_position_7.qad"
+            Keyframe {
+                frame: 0
+                value: Qt.vector3d(-117.054, -10.1001, 92.348)
+            }
         }
         KeyframeGroup {
             target: skt_FX_Hips_024
             property: "rotation"
-            keyframeSource: "animations/skt_FX_Hips_024_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: skt_Back_029
-            property: "position"
-            keyframeSource: "animations/skt_Back_029_position_7.qad"
-        }
-        KeyframeGroup {
-            target: skt_Back_029
-            property: "rotation"
-            keyframeSource: "animations/skt_Back_029_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: skt_Chest_030
-            property: "position"
-            keyframeSource: "animations/skt_Chest_030_position_7.qad"
-        }
-        KeyframeGroup {
-            target: skt_Chest_030
-            property: "rotation"
-            keyframeSource: "animations/skt_Chest_030_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArmTwist3_034
-            property: "position"
-            keyframeSource: "animations/leftForeArmTwist3_034_position_7.qad"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.994426, 0.100752, -0.00991419, -0.0294678)
+            }
         }
         KeyframeGroup {
             target: leftForeArmTwist3_034
@@ -13568,18 +8122,8 @@ Node {
         }
         KeyframeGroup {
             target: leftForeArmTwist1_035
-            property: "position"
-            keyframeSource: "animations/leftForeArmTwist1_035_position_7.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArmTwist1_035
             property: "rotation"
             keyframeSource: "animations/leftForeArmTwist1_035_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky4_041
-            property: "position"
-            keyframeSource: "animations/leftHandPinky4_041_position_7.qad"
         }
         KeyframeGroup {
             target: leftHandPinky4_041
@@ -13588,18 +8132,8 @@ Node {
         }
         KeyframeGroup {
             target: leftHandPinky3_040
-            property: "position"
-            keyframeSource: "animations/leftHandPinky3_040_position_7.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky3_040
             property: "rotation"
             keyframeSource: "animations/leftHandPinky3_040_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky2_039
-            property: "position"
-            keyframeSource: "animations/leftHandPinky2_039_position_7.qad"
         }
         KeyframeGroup {
             target: leftHandPinky2_039
@@ -13617,42 +8151,14 @@ Node {
             keyframeSource: "animations/leftInHandPinky_037_rotation_7.qad"
         }
         KeyframeGroup {
-            target: skt_LeftHand_042
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(48.0552, 20.9808, 0.725223)
-            }
-        }
-        KeyframeGroup {
-            target: skt_LeftHand_042
-            property: "rotation"
-            keyframeSource: "animations/skt_LeftHand_042_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex4_047
-            property: "position"
-            keyframeSource: "animations/leftHandIndex4_047_position_7.qad"
-        }
-        KeyframeGroup {
             target: leftHandIndex4_047
             property: "rotation"
             keyframeSource: "animations/leftHandIndex4_047_rotation_7.qad"
         }
         KeyframeGroup {
             target: leftHandIndex3_046
-            property: "position"
-            keyframeSource: "animations/leftHandIndex3_046_position_7.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex3_046
             property: "rotation"
             keyframeSource: "animations/leftHandIndex3_046_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex2_045
-            property: "position"
-            keyframeSource: "animations/leftHandIndex2_045_position_7.qad"
         }
         KeyframeGroup {
             target: leftHandIndex2_045
@@ -13666,34 +8172,29 @@ Node {
         }
         KeyframeGroup {
             target: leftInHandIndex_043
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(3.42824, 2.70116, -10.2451)
-            }
-        }
-        KeyframeGroup {
-            target: leftInHandIndex_043
             property: "rotation"
             keyframeSource: "animations/leftInHandIndex_043_rotation_7.qad"
         }
         KeyframeGroup {
+            target: neck1_060
+            property: "rotation"
+            keyframeSource: "animations/neck1_060_rotation_7.qad"
+        }
+        KeyframeGroup {
             target: skt_FX_LeftHand_00
             property: "position"
             Keyframe {
                 frame: 0
-                value: Qt.vector3d(48.0552, 20.9808, 0.725223)
+                value: Qt.vector3d(252.326, 259.417, 219.558)
             }
         }
         KeyframeGroup {
             target: skt_FX_LeftHand_00
             property: "rotation"
-            keyframeSource: "animations/skt_FX_LeftHand_00_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb4_050
-            property: "position"
-            keyframeSource: "animations/leftHandThumb4_050_position_7.qad"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.692474, 0.449047, 0.47269, 0.308872)
+            }
         }
         KeyframeGroup {
             target: leftHandThumb4_050
@@ -13701,9 +8202,9 @@ Node {
             keyframeSource: "animations/leftHandThumb4_050_rotation_7.qad"
         }
         KeyframeGroup {
-            target: leftHandThumb3_049
-            property: "position"
-            keyframeSource: "animations/leftHandThumb3_049_position_7.qad"
+            target: rightArmTwist1_090
+            property: "rotation"
+            keyframeSource: "animations/rightArmTwist1_090_rotation_7.qad"
         }
         KeyframeGroup {
             target: leftHandThumb3_049
@@ -13712,13 +8213,21 @@ Node {
         }
         KeyframeGroup {
             target: leftHandThumb2_048
-            property: "position"
-            keyframeSource: "animations/leftHandThumb2_048_position_7.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb2_048
             property: "rotation"
             keyframeSource: "animations/leftHandThumb2_048_rotation_7.qad"
+        }
+        KeyframeGroup {
+            target: skt_FX_RightHand_093
+            property: "position"
+            Keyframe {
+                frame: 0
+                value: Qt.vector3d(-224.848, -4.95235, 9.36717)
+            }
+        }
+        KeyframeGroup {
+            target: skt_FX_RightHand_093
+            property: "rotation"
+            keyframeSource: "animations/skt_FX_RightHand_093_rotation_7.qad"
         }
         KeyframeGroup {
             target: leftHandThumb1_01
@@ -13726,9 +8235,9 @@ Node {
             keyframeSource: "animations/leftHandThumb1_01_rotation_7.qad"
         }
         KeyframeGroup {
-            target: leftHandMiddle4_055
-            property: "position"
-            keyframeSource: "animations/leftHandMiddle4_055_position_7.qad"
+            target: rightHandThumb4_097
+            property: "rotation"
+            keyframeSource: "animations/rightHandThumb4_097_rotation_7.qad"
         }
         KeyframeGroup {
             target: leftHandMiddle4_055
@@ -13736,9 +8245,12 @@ Node {
             keyframeSource: "animations/leftHandMiddle4_055_rotation_7.qad"
         }
         KeyframeGroup {
-            target: leftHandMiddle2_053
-            property: "position"
-            keyframeSource: "animations/leftHandMiddle2_053_position_7.qad"
+            target: rightHandThumb2_095
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.969428, 0.224882, 0.0779003, 0.059731)
+            }
         }
         KeyframeGroup {
             target: leftHandMiddle2_053
@@ -13747,13 +8259,26 @@ Node {
         }
         KeyframeGroup {
             target: leftInHandMiddle_051
-            property: "position"
-            keyframeSource: "animations/leftInHandMiddle_051_position_7.qad"
-        }
-        KeyframeGroup {
-            target: leftInHandMiddle_051
             property: "rotation"
             keyframeSource: "animations/leftInHandMiddle_051_rotation_7.qad"
+        }
+        KeyframeGroup {
+            target: rightHandMiddle2_0100
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.968908, 0.0430644, 0.0332207, 0.241368)
+            }
+        }
+        KeyframeGroup {
+            target: leftForeArmTwist2_056
+            property: "rotation"
+            keyframeSource: "animations/leftForeArmTwist2_056_rotation_7.qad"
+        }
+        KeyframeGroup {
+            target: rightHandMiddle1_099
+            property: "rotation"
+            keyframeSource: "animations/rightHandMiddle1_099_rotation_7.qad"
         }
         KeyframeGroup {
             target: leftForeArm_033
@@ -13767,18 +8292,8 @@ Node {
         }
         KeyframeGroup {
             target: leftArmTwist1_057
-            property: "position"
-            keyframeSource: "animations/leftArmTwist1_057_position_7.qad"
-        }
-        KeyframeGroup {
-            target: leftArmTwist1_057
             property: "rotation"
             keyframeSource: "animations/leftArmTwist1_057_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: leftArmTwist2_058
-            property: "position"
-            keyframeSource: "animations/leftArmTwist2_058_position_7.qad"
         }
         KeyframeGroup {
             target: leftArmTwist2_058
@@ -13787,211 +8302,8 @@ Node {
         }
         KeyframeGroup {
             target: leftShoulder_031
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(8.80947, 6.33601, -4.1949)
-            }
-        }
-        KeyframeGroup {
-            target: leftShoulder_031
             property: "rotation"
             keyframeSource: "animations/leftShoulder_031_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: headEnd_063
-            property: "position"
-            keyframeSource: "animations/headEnd_063_position_7.qad"
-        }
-        KeyframeGroup {
-            target: headEnd_063
-            property: "rotation"
-            keyframeSource: "animations/headEnd_063_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: eye_left_066
-            property: "position"
-            keyframeSource: "animations/eye_left_066_position_7.qad"
-        }
-        KeyframeGroup {
-            target: eye_left_066
-            property: "rotation"
-            keyframeSource: "animations/eye_left_066_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: lip_corners_068
-            property: "position"
-            keyframeSource: "animations/lip_corners_068_position_7.qad"
-        }
-        KeyframeGroup {
-            target: lip_corners_068
-            property: "rotation"
-            keyframeSource: "animations/lip_corners_068_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_right_071
-            property: "position"
-            keyframeSource: "animations/eye_lid_right_071_position_7.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_right_071
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_right_071_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: tongue_06_081
-            property: "position"
-            keyframeSource: "animations/tongue_06_081_position_7.qad"
-        }
-        KeyframeGroup {
-            target: tongue_06_081
-            property: "rotation"
-            keyframeSource: "animations/tongue_06_081_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: tongue_05_080
-            property: "position"
-            keyframeSource: "animations/tongue_05_080_position_7.qad"
-        }
-        KeyframeGroup {
-            target: tongue_05_080
-            property: "rotation"
-            keyframeSource: "animations/tongue_05_080_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: tongue_04_079
-            property: "position"
-            keyframeSource: "animations/tongue_04_079_position_7.qad"
-        }
-        KeyframeGroup {
-            target: tongue_04_079
-            property: "rotation"
-            keyframeSource: "animations/tongue_04_079_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: tongue_03_078
-            property: "position"
-            keyframeSource: "animations/tongue_03_078_position_7.qad"
-        }
-        KeyframeGroup {
-            target: tongue_03_078
-            property: "rotation"
-            keyframeSource: "animations/tongue_03_078_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: tongue_02_077
-            property: "position"
-            keyframeSource: "animations/tongue_02_077_position_7.qad"
-        }
-        KeyframeGroup {
-            target: tongue_02_077
-            property: "rotation"
-            keyframeSource: "animations/tongue_02_077_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: tongue_01_076
-            property: "position"
-            keyframeSource: "animations/tongue_01_076_position_7.qad"
-        }
-        KeyframeGroup {
-            target: tongue_01_076
-            property: "rotation"
-            keyframeSource: "animations/tongue_01_076_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: tongue_jaw_075
-            property: "position"
-            keyframeSource: "animations/tongue_jaw_075_position_7.qad"
-        }
-        KeyframeGroup {
-            target: tongue_jaw_075
-            property: "rotation"
-            keyframeSource: "animations/tongue_jaw_075_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: teeth_lwr_082
-            property: "position"
-            keyframeSource: "animations/teeth_lwr_082_position_7.qad"
-        }
-        KeyframeGroup {
-            target: teeth_lwr_082
-            property: "rotation"
-            keyframeSource: "animations/teeth_lwr_082_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: teeth_upr_083
-            property: "position"
-            keyframeSource: "animations/teeth_upr_083_position_7.qad"
-        }
-        KeyframeGroup {
-            target: teeth_upr_083
-            property: "rotation"
-            keyframeSource: "animations/teeth_upr_083_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: mouth_bag_074
-            property: "position"
-            keyframeSource: "animations/mouth_bag_074_position_7.qad"
-        }
-        KeyframeGroup {
-            target: mouth_bag_074
-            property: "rotation"
-            keyframeSource: "animations/mouth_bag_074_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: eye_right_084
-            property: "position"
-            keyframeSource: "animations/eye_right_084_position_7.qad"
-        }
-        KeyframeGroup {
-            target: eye_right_084
-            property: "rotation"
-            keyframeSource: "animations/eye_right_084_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_out_left_086
-            property: "position"
-            keyframeSource: "animations/eye_lid_out_left_086_position_7.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_out_left_086
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_out_left_086_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_in_left_087
-            property: "position"
-            keyframeSource: "animations/eye_lid_in_left_087_position_7.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_in_left_087
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_in_left_087_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_left_085
-            property: "position"
-            keyframeSource: "animations/eye_lid_left_085_position_7.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_left_085
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_left_085_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: face_064
-            property: "position"
-            keyframeSource: "animations/face_064_position_7.qad"
-        }
-        KeyframeGroup {
-            target: face_064
-            property: "rotation"
-            keyframeSource: "animations/face_064_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: head_061
-            property: "position"
-            keyframeSource: "animations/head_061_position_7.qad"
         }
         KeyframeGroup {
             target: head_061
@@ -13999,185 +8311,37 @@ Node {
             keyframeSource: "animations/head_061_rotation_7.qad"
         }
         KeyframeGroup {
-            target: neck1_060
-            property: "position"
-            keyframeSource: "animations/neck1_060_position_7.qad"
-        }
-        KeyframeGroup {
-            target: neck1_060
-            property: "rotation"
-            keyframeSource: "animations/neck1_060_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: neck_059
-            property: "position"
-            keyframeSource: "animations/neck_059_position_7.qad"
-        }
-        KeyframeGroup {
             target: neck_059
             property: "rotation"
             keyframeSource: "animations/neck_059_rotation_7.qad"
         }
         KeyframeGroup {
-            target: rightArmTwist1_090
-            property: "position"
-            keyframeSource: "animations/rightArmTwist1_090_position_7.qad"
-        }
-        KeyframeGroup {
-            target: rightArmTwist1_090
-            property: "rotation"
-            keyframeSource: "animations/rightArmTwist1_090_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_RightHand_093
-            property: "position"
-            keyframeSource: "animations/skt_FX_RightHand_093_position_7.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_RightHand_093
-            property: "rotation"
-            keyframeSource: "animations/skt_FX_RightHand_093_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb4_097
-            property: "position"
-            keyframeSource: "animations/rightHandThumb4_097_position_7.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb4_097
-            property: "rotation"
-            keyframeSource: "animations/rightHandThumb4_097_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb3_096
-            property: "position"
-            keyframeSource: "animations/rightHandThumb3_096_position_7.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb3_096
-            property: "rotation"
-            keyframeSource: "animations/rightHandThumb3_096_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb2_095
-            property: "position"
-            keyframeSource: "animations/rightHandThumb2_095_position_7.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb2_095
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.969428, 0.224883, 0.0779004, 0.0597308)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandThumb1_094
-            property: "rotation"
-            keyframeSource: "animations/rightHandThumb1_094_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle4_0102
-            property: "position"
-            keyframeSource: "animations/rightHandMiddle4_0102_position_7.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle4_0102
-            property: "rotation"
-            keyframeSource: "animations/rightHandMiddle4_0102_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle3_0101
-            property: "position"
-            keyframeSource: "animations/rightHandMiddle3_0101_position_7.qad"
-        }
-        KeyframeGroup {
             target: rightHandMiddle3_0101
             property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.940086, 0.0498864, 0.0225631, 0.336512)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandMiddle2_0100
-            property: "position"
-            keyframeSource: "animations/rightHandMiddle2_0100_position_7.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle2_0100
-            property: "rotation"
-            keyframeSource: "animations/rightHandMiddle2_0100_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle1_099
-            property: "position"
-            keyframeSource: "animations/rightHandMiddle1_099_position_7.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle1_099
-            property: "rotation"
-            keyframeSource: "animations/rightHandMiddle1_099_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: rightInHandMiddle_098
-            property: "position"
-            keyframeSource: "animations/rightInHandMiddle_098_position_7.qad"
-        }
-        KeyframeGroup {
-            target: rightInHandMiddle_098
-            property: "rotation"
-            keyframeSource: "animations/rightInHandMiddle_098_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: skt_RightHand_0103
-            property: "position"
-            keyframeSource: "animations/skt_RightHand_0103_position_7.qad"
-        }
-        KeyframeGroup {
-            target: skt_RightHand_0103
-            property: "rotation"
-            keyframeSource: "animations/skt_RightHand_0103_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: rightHandIndex4_0108
-            property: "position"
-            keyframeSource: "animations/rightHandIndex4_0108_position_7.qad"
+            keyframeSource: "animations/rightHandMiddle3_0101_rotation_7.qad"
         }
         KeyframeGroup {
             target: rightHandIndex4_0108
             property: "rotation"
-            keyframeSource: "animations/rightHandIndex4_0108_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: rightHandIndex3_0107
-            property: "position"
-            keyframeSource: "animations/rightHandIndex3_0107_position_7.qad"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.944937, 0.0293403, -0.033153, 0.324243)
+            }
         }
         KeyframeGroup {
             target: rightHandIndex3_0107
             property: "rotation"
             Keyframe {
                 frame: 0
-                value: Qt.quaternion(0.899129, -0.0327185, 0.117394, 0.420375)
+                value: Qt.quaternion(0.899129, -0.0327185, 0.117393, 0.420375)
             }
         }
         KeyframeGroup {
             target: rightHandIndex2_0106
-            property: "position"
-            keyframeSource: "animations/rightHandIndex2_0106_position_7.qad"
-        }
-        KeyframeGroup {
-            target: rightHandIndex2_0106
             property: "rotation"
-            keyframeSource: "animations/rightHandIndex2_0106_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: rightHandIndex1_0105
-            property: "position"
             Keyframe {
                 frame: 0
-                value: Qt.vector3d(-44.2472, 5.37654, 0.82662)
+                value: Qt.quaternion(0.931262, -0.0566454, 0.0786064, 0.351231)
             }
         }
         KeyframeGroup {
@@ -14195,18 +8359,8 @@ Node {
         }
         KeyframeGroup {
             target: rightHandPinky4_0113
-            property: "position"
-            keyframeSource: "animations/rightHandPinky4_0113_position_7.qad"
-        }
-        KeyframeGroup {
-            target: rightHandPinky4_0113
             property: "rotation"
             keyframeSource: "animations/rightHandPinky4_0113_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: rightHandPinky3_0112
-            property: "position"
-            keyframeSource: "animations/rightHandPinky3_0112_position_7.qad"
         }
         KeyframeGroup {
             target: rightHandPinky3_0112
@@ -14215,20 +8369,10 @@ Node {
         }
         KeyframeGroup {
             target: rightHandPinky2_0111
-            property: "position"
-            keyframeSource: "animations/rightHandPinky2_0111_position_7.qad"
-        }
-        KeyframeGroup {
-            target: rightHandPinky2_0111
             property: "rotation"
-            keyframeSource: "animations/rightHandPinky2_0111_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: rightHandPinky1_0110
-            property: "position"
             Keyframe {
                 frame: 0
-                value: Qt.vector3d(-40.2537, -3.21832, -5.10351)
+                value: Qt.quaternion(0.941364, 0.00502074, -0.0563829, 0.332611)
             }
         }
         KeyframeGroup {
@@ -14238,18 +8382,10 @@ Node {
         }
         KeyframeGroup {
             target: rightInHandPinky_0109
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(-7.95185, 1.34686, -19.4511)
-            }
-        }
-        KeyframeGroup {
-            target: rightInHandPinky_0109
             property: "rotation"
             Keyframe {
                 frame: 0
-                value: Qt.quaternion(0.987487, 0.107136, 0.102255, -0.0541684)
+                value: Qt.quaternion(0.987488, 0.107136, 0.102255, -0.0541683)
             }
         }
         KeyframeGroup {
@@ -14264,28 +8400,13 @@ Node {
         }
         KeyframeGroup {
             target: rightForeArmTwist3_0114
-            property: "position"
-            keyframeSource: "animations/rightForeArmTwist3_0114_position_7.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArmTwist3_0114
             property: "rotation"
             keyframeSource: "animations/rightForeArmTwist3_0114_rotation_7.qad"
         }
         KeyframeGroup {
             target: rightForeArmTwist2_0115
-            property: "position"
-            keyframeSource: "animations/rightForeArmTwist2_0115_position_7.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArmTwist2_0115
             property: "rotation"
             keyframeSource: "animations/rightForeArmTwist2_0115_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArmTwist1_0116
-            property: "position"
-            keyframeSource: "animations/rightForeArmTwist1_0116_position_7.qad"
         }
         KeyframeGroup {
             target: rightForeArmTwist1_0116
@@ -14304,18 +8425,8 @@ Node {
         }
         KeyframeGroup {
             target: rightArmTwist2_0117
-            property: "position"
-            keyframeSource: "animations/rightArmTwist2_0117_position_7.qad"
-        }
-        KeyframeGroup {
-            target: rightArmTwist2_0117
             property: "rotation"
             keyframeSource: "animations/rightArmTwist2_0117_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: rightArm_089
-            property: "position"
-            keyframeSource: "animations/rightArm_089_position_7.qad"
         }
         KeyframeGroup {
             target: rightArm_089
@@ -14329,18 +8440,8 @@ Node {
         }
         KeyframeGroup {
             target: spine3_028
-            property: "position"
-            keyframeSource: "animations/spine3_028_position_7.qad"
-        }
-        KeyframeGroup {
-            target: spine3_028
             property: "rotation"
             keyframeSource: "animations/spine3_028_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: spine2_027
-            property: "position"
-            keyframeSource: "animations/spine2_027_position_7.qad"
         }
         KeyframeGroup {
             target: spine2_027
@@ -14349,18 +8450,8 @@ Node {
         }
         KeyframeGroup {
             target: spine1_026
-            property: "position"
-            keyframeSource: "animations/spine1_026_position_7.qad"
-        }
-        KeyframeGroup {
-            target: spine1_026
             property: "rotation"
             keyframeSource: "animations/spine1_026_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: spine_025
-            property: "position"
-            keyframeSource: "animations/spine_025_position_7.qad"
         }
         KeyframeGroup {
             target: spine_025
@@ -14369,28 +8460,8 @@ Node {
         }
         KeyframeGroup {
             target: leftLegTwist1_0120
-            property: "position"
-            keyframeSource: "animations/leftLegTwist1_0120_position_7.qad"
-        }
-        KeyframeGroup {
-            target: leftLegTwist1_0120
             property: "rotation"
             keyframeSource: "animations/leftLegTwist1_0120_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: leftFootBigToe3_0125
-            property: "position"
-            keyframeSource: "animations/leftFootBigToe3_0125_position_7.qad"
-        }
-        KeyframeGroup {
-            target: leftFootBigToe3_0125
-            property: "rotation"
-            keyframeSource: "animations/leftFootBigToe3_0125_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: leftFootBigToe2_0124
-            property: "position"
-            keyframeSource: "animations/leftFootBigToe2_0124_position_7.qad"
         }
         KeyframeGroup {
             target: leftFootBigToe2_0124
@@ -14403,52 +8474,14 @@ Node {
             keyframeSource: "animations/leftFootBigToe1_0123_rotation_7.qad"
         }
         KeyframeGroup {
-            target: leftFootIndex3_0128
-            property: "position"
-            keyframeSource: "animations/leftFootIndex3_0128_position_7.qad"
-        }
-        KeyframeGroup {
-            target: leftFootIndex3_0128
-            property: "rotation"
-            keyframeSource: "animations/leftFootIndex3_0128_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: leftFootIndex2_0127
-            property: "position"
-            keyframeSource: "animations/leftFootIndex2_0127_position_7.qad"
-        }
-        KeyframeGroup {
             target: leftFootIndex2_0127
             property: "rotation"
             keyframeSource: "animations/leftFootIndex2_0127_rotation_7.qad"
         }
         KeyframeGroup {
             target: leftFootIndex1_0126
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(16.1654, 1.34477, -23.2399)
-            }
-        }
-        KeyframeGroup {
-            target: leftFootIndex1_0126
             property: "rotation"
             keyframeSource: "animations/leftFootIndex1_0126_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: leftToeBaseEnd_0129
-            property: "position"
-            keyframeSource: "animations/leftToeBaseEnd_0129_position_7.qad"
-        }
-        KeyframeGroup {
-            target: leftToeBaseEnd_0129
-            property: "rotation"
-            keyframeSource: "animations/leftToeBaseEnd_0129_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: leftToeBase_0122
-            property: "position"
-            keyframeSource: "animations/leftToeBase_0122_position_7.qad"
         }
         KeyframeGroup {
             target: leftToeBase_0122
@@ -14477,18 +8510,8 @@ Node {
         }
         KeyframeGroup {
             target: leftUpLegTwist1_0130
-            property: "position"
-            keyframeSource: "animations/leftUpLegTwist1_0130_position_7.qad"
-        }
-        KeyframeGroup {
-            target: leftUpLegTwist1_0130
             property: "rotation"
             keyframeSource: "animations/leftUpLegTwist1_0130_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: leftUpLegTwist2_0131
-            property: "position"
-            keyframeSource: "animations/leftUpLegTwist2_0131_position_7.qad"
         }
         KeyframeGroup {
             target: leftUpLegTwist2_0131
@@ -14499,16 +8522,6 @@ Node {
             target: leftUpLeg_0118
             property: "rotation"
             keyframeSource: "animations/leftUpLeg_0118_rotation_7.qad"
-        }
-        KeyframeGroup {
-            target: skt_Hips_0132
-            property: "position"
-            keyframeSource: "animations/skt_Hips_0132_position_7.qad"
-        }
-        KeyframeGroup {
-            target: skt_Hips_0132
-            property: "rotation"
-            keyframeSource: "animations/skt_Hips_0132_rotation_7.qad"
         }
         KeyframeGroup {
             target: hips_09
@@ -14528,7 +8541,10 @@ Node {
         KeyframeGroup {
             target: ik_Hips_0133
             property: "rotation"
-            keyframeSource: "animations/ik_Hips_0133_rotation_7.qad"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(1, 2.36187e-17, 0, 0)
+            }
         }
         KeyframeGroup {
             target: ik_LeftFoot_0134
@@ -14538,7 +8554,10 @@ Node {
         KeyframeGroup {
             target: ik_LeftFoot_0134
             property: "rotation"
-            keyframeSource: "animations/ik_LeftFoot_0134_rotation_7.qad"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(1, 2.36187e-17, 0, 0)
+            }
         }
         KeyframeGroup {
             target: ik_RightFoot_0135
@@ -14548,2814 +8567,15 @@ Node {
         KeyframeGroup {
             target: ik_RightFoot_0135
             property: "rotation"
-            keyframeSource: "animations/ik_RightFoot_0135_rotation_7.qad"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(1, 2.36187e-17, 0, 0)
+            }
         }
         KeyframeGroup {
             target: ik_Head_0136
             property: "position"
             keyframeSource: "animations/ik_Head_0136_position_7.qad"
-        }
-        KeyframeGroup {
-            target: ik_Head_0136
-            property: "rotation"
-            keyframeSource: "animations/ik_Head_0136_rotation_7.qad"
-        }
-    }
-    Timeline {
-        id: frames_007_timeline
-        objectName: "Frames.007"
-        property real framesPerSecond: 1000
-        startFrame: 0
-        endFrame: 2800
-        currentFrame: 0
-        enabled: true
-        animations: TimelineAnimation {
-            duration: 2800
-            from: 0
-            to: 2800
-            running: true
-            loops: Animation.Infinite
-        }
-        KeyframeGroup {
-            target: rightFootIndex3_017
-            property: "position"
-            keyframeSource: "animations/rightFootIndex3_017_position_8.qad"
-        }
-        KeyframeGroup {
-            target: rightFootIndex3_017
-            property: "rotation"
-            keyframeSource: "animations/rightFootIndex3_017_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: ik_Spine3_02
-            property: "position"
-            keyframeSource: "animations/ik_Spine3_02_position_8.qad"
-        }
-        KeyframeGroup {
-            target: ik_Spine3_02
-            property: "rotation"
-            keyframeSource: "animations/ik_Spine3_02_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: rightFootIndex1_015
-            property: "rotation"
-            keyframeSource: "animations/rightFootIndex1_015_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: ik_LeftHand_07
-            property: "position"
-            keyframeSource: "animations/ik_LeftHand_07_position_8.qad"
-        }
-        KeyframeGroup {
-            target: ik_LeftHand_07
-            property: "rotation"
-            keyframeSource: "animations/ik_LeftHand_07_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: leftHandMiddle3_054
-            property: "position"
-            keyframeSource: "animations/leftHandMiddle3_054_position_8.qad"
-        }
-        KeyframeGroup {
-            target: leftHandMiddle3_054
-            property: "rotation"
-            keyframeSource: "animations/leftHandMiddle3_054_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: ik_RightHand_03
-            property: "position"
-            keyframeSource: "animations/ik_RightHand_03_position_8.qad"
-        }
-        KeyframeGroup {
-            target: ik_RightHand_03
-            property: "rotation"
-            keyframeSource: "animations/ik_RightHand_03_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: skt_HeadCamera_08
-            property: "position"
-            keyframeSource: "animations/skt_HeadCamera_08_position_8.qad"
-        }
-        KeyframeGroup {
-            target: skt_HeadCamera_08
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(1, -5.68198e-14, 0, 0)
-            }
-        }
-        KeyframeGroup {
-            target: leftArm_032
-            property: "position"
-            keyframeSource: "animations/leftArm_032_position_8.qad"
-        }
-        KeyframeGroup {
-            target: leftArm_032
-            property: "rotation"
-            keyframeSource: "animations/leftArm_032_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: rightLegTwist1_012
-            property: "position"
-            keyframeSource: "animations/rightLegTwist1_012_position_8.qad"
-        }
-        KeyframeGroup {
-            target: rightLegTwist1_012
-            property: "rotation"
-            keyframeSource: "animations/rightLegTwist1_012_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: skt_Head_062
-            property: "position"
-            keyframeSource: "animations/skt_Head_062_position_8.qad"
-        }
-        KeyframeGroup {
-            target: skt_Head_062
-            property: "rotation"
-            keyframeSource: "animations/skt_Head_062_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: rightFootIndex2_016
-            property: "position"
-            keyframeSource: "animations/rightFootIndex2_016_position_8.qad"
-        }
-        KeyframeGroup {
-            target: rightFootIndex2_016
-            property: "rotation"
-            keyframeSource: "animations/rightFootIndex2_016_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: rightFootBigToe3_020
-            property: "position"
-            keyframeSource: "animations/rightFootBigToe3_020_position_8.qad"
-        }
-        KeyframeGroup {
-            target: rightFootBigToe3_020
-            property: "rotation"
-            keyframeSource: "animations/rightFootBigToe3_020_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: jaw_065
-            property: "position"
-            keyframeSource: "animations/jaw_065_position_8.qad"
-        }
-        KeyframeGroup {
-            target: jaw_065
-            property: "rotation"
-            keyframeSource: "animations/jaw_065_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: rightFootBigToe2_019
-            property: "position"
-            keyframeSource: "animations/rightFootBigToe2_019_position_8.qad"
-        }
-        KeyframeGroup {
-            target: rightFootBigToe2_019
-            property: "rotation"
-            keyframeSource: "animations/rightFootBigToe2_019_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: rightFootBigToe1_018
-            property: "rotation"
-            keyframeSource: "animations/rightFootBigToe1_018_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: rightToeBaseEnd_021
-            property: "position"
-            keyframeSource: "animations/rightToeBaseEnd_021_position_8.qad"
-        }
-        KeyframeGroup {
-            target: rightToeBaseEnd_021
-            property: "rotation"
-            keyframeSource: "animations/rightToeBaseEnd_021_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: nose_067
-            property: "position"
-            keyframeSource: "animations/nose_067_position_8.qad"
-        }
-        KeyframeGroup {
-            target: nose_067
-            property: "rotation"
-            keyframeSource: "animations/nose_067_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: rightToeBase_014
-            property: "position"
-            keyframeSource: "animations/rightToeBase_014_position_8.qad"
-        }
-        KeyframeGroup {
-            target: rightToeBase_014
-            property: "rotation"
-            keyframeSource: "animations/rightToeBase_014_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: rightFoot_013
-            property: "position"
-            keyframeSource: "animations/rightFoot_013_position_8.qad"
-        }
-        KeyframeGroup {
-            target: rightFoot_013
-            property: "rotation"
-            keyframeSource: "animations/rightFoot_013_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: lip_upper_069
-            property: "position"
-            keyframeSource: "animations/lip_upper_069_position_8.qad"
-        }
-        KeyframeGroup {
-            target: lip_upper_069
-            property: "rotation"
-            keyframeSource: "animations/lip_upper_069_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: rightLeg_011
-            property: "position"
-            keyframeSource: "animations/rightLeg_011_position_8.qad"
-        }
-        KeyframeGroup {
-            target: rightLeg_011
-            property: "rotation"
-            keyframeSource: "animations/rightLeg_011_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: lip_lower_070
-            property: "position"
-            keyframeSource: "animations/lip_lower_070_position_8.qad"
-        }
-        KeyframeGroup {
-            target: lip_lower_070
-            property: "rotation"
-            keyframeSource: "animations/lip_lower_070_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: rightUpLegTwist1_022
-            property: "position"
-            keyframeSource: "animations/rightUpLegTwist1_022_position_8.qad"
-        }
-        KeyframeGroup {
-            target: rightUpLegTwist1_022
-            property: "rotation"
-            keyframeSource: "animations/rightUpLegTwist1_022_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: rightUpLegTwist2_023
-            property: "position"
-            keyframeSource: "animations/rightUpLegTwist2_023_position_8.qad"
-        }
-        KeyframeGroup {
-            target: rightUpLegTwist2_023
-            property: "rotation"
-            keyframeSource: "animations/rightUpLegTwist2_023_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_in_right_072
-            property: "position"
-            keyframeSource: "animations/eye_lid_in_right_072_position_8.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_in_right_072
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_in_right_072_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: rightUpLeg_010
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(-38.4087, -25.5809, -1.47824)
-            }
-        }
-        KeyframeGroup {
-            target: rightUpLeg_010
-            property: "rotation"
-            keyframeSource: "animations/rightUpLeg_010_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_out_right_073
-            property: "position"
-            keyframeSource: "animations/eye_lid_out_right_073_position_8.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_out_right_073
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_out_right_073_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_Hips_024
-            property: "position"
-            keyframeSource: "animations/skt_FX_Hips_024_position_8.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_Hips_024
-            property: "rotation"
-            keyframeSource: "animations/skt_FX_Hips_024_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: skt_Back_029
-            property: "position"
-            keyframeSource: "animations/skt_Back_029_position_8.qad"
-        }
-        KeyframeGroup {
-            target: skt_Back_029
-            property: "rotation"
-            keyframeSource: "animations/skt_Back_029_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: tongue_05_080
-            property: "position"
-            keyframeSource: "animations/tongue_05_080_position_8.qad"
-        }
-        KeyframeGroup {
-            target: tongue_05_080
-            property: "rotation"
-            keyframeSource: "animations/tongue_05_080_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: skt_Chest_030
-            property: "position"
-            keyframeSource: "animations/skt_Chest_030_position_8.qad"
-        }
-        KeyframeGroup {
-            target: skt_Chest_030
-            property: "rotation"
-            keyframeSource: "animations/skt_Chest_030_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArmTwist3_034
-            property: "position"
-            keyframeSource: "animations/leftForeArmTwist3_034_position_8.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArmTwist3_034
-            property: "rotation"
-            keyframeSource: "animations/leftForeArmTwist3_034_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArmTwist1_035
-            property: "position"
-            keyframeSource: "animations/leftForeArmTwist1_035_position_8.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArmTwist1_035
-            property: "rotation"
-            keyframeSource: "animations/leftForeArmTwist1_035_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky4_041
-            property: "position"
-            keyframeSource: "animations/leftHandPinky4_041_position_8.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky4_041
-            property: "rotation"
-            keyframeSource: "animations/leftHandPinky4_041_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky3_040
-            property: "position"
-            keyframeSource: "animations/leftHandPinky3_040_position_8.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky3_040
-            property: "rotation"
-            keyframeSource: "animations/leftHandPinky3_040_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky2_039
-            property: "position"
-            keyframeSource: "animations/leftHandPinky2_039_position_8.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky2_039
-            property: "rotation"
-            keyframeSource: "animations/leftHandPinky2_039_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky1_038
-            property: "rotation"
-            keyframeSource: "animations/leftHandPinky1_038_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: leftInHandPinky_037
-            property: "position"
-            keyframeSource: "animations/leftInHandPinky_037_position_8.qad"
-        }
-        KeyframeGroup {
-            target: leftInHandPinky_037
-            property: "rotation"
-            keyframeSource: "animations/leftInHandPinky_037_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: skt_LeftHand_042
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(48.0552, 20.9808, 0.725225)
-            }
-        }
-        KeyframeGroup {
-            target: skt_LeftHand_042
-            property: "rotation"
-            keyframeSource: "animations/skt_LeftHand_042_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex4_047
-            property: "position"
-            keyframeSource: "animations/leftHandIndex4_047_position_8.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex4_047
-            property: "rotation"
-            keyframeSource: "animations/leftHandIndex4_047_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex3_046
-            property: "position"
-            keyframeSource: "animations/leftHandIndex3_046_position_8.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex3_046
-            property: "rotation"
-            keyframeSource: "animations/leftHandIndex3_046_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex2_045
-            property: "position"
-            keyframeSource: "animations/leftHandIndex2_045_position_8.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex2_045
-            property: "rotation"
-            keyframeSource: "animations/leftHandIndex2_045_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex1_044
-            property: "rotation"
-            keyframeSource: "animations/leftHandIndex1_044_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: leftInHandIndex_043
-            property: "rotation"
-            keyframeSource: "animations/leftInHandIndex_043_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_LeftHand_00
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(48.0552, 20.9808, 0.725225)
-            }
-        }
-        KeyframeGroup {
-            target: skt_FX_LeftHand_00
-            property: "rotation"
-            keyframeSource: "animations/skt_FX_LeftHand_00_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb4_050
-            property: "position"
-            keyframeSource: "animations/leftHandThumb4_050_position_8.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb4_050
-            property: "rotation"
-            keyframeSource: "animations/leftHandThumb4_050_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb3_049
-            property: "position"
-            keyframeSource: "animations/leftHandThumb3_049_position_8.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb3_049
-            property: "rotation"
-            keyframeSource: "animations/leftHandThumb3_049_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb2_048
-            property: "position"
-            keyframeSource: "animations/leftHandThumb2_048_position_8.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb2_048
-            property: "rotation"
-            keyframeSource: "animations/leftHandThumb2_048_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb1_01
-            property: "rotation"
-            keyframeSource: "animations/leftHandThumb1_01_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: leftHandMiddle4_055
-            property: "position"
-            keyframeSource: "animations/leftHandMiddle4_055_position_8.qad"
-        }
-        KeyframeGroup {
-            target: leftHandMiddle4_055
-            property: "rotation"
-            keyframeSource: "animations/leftHandMiddle4_055_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: leftHandMiddle2_053
-            property: "position"
-            keyframeSource: "animations/leftHandMiddle2_053_position_8.qad"
-        }
-        KeyframeGroup {
-            target: leftHandMiddle2_053
-            property: "rotation"
-            keyframeSource: "animations/leftHandMiddle2_053_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: leftHandMiddle1_052
-            property: "position"
-            keyframeSource: "animations/leftHandMiddle1_052_position_8.qad"
-        }
-        KeyframeGroup {
-            target: leftHandMiddle1_052
-            property: "rotation"
-            keyframeSource: "animations/leftHandMiddle1_052_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: leftInHandMiddle_051
-            property: "position"
-            keyframeSource: "animations/leftInHandMiddle_051_position_8.qad"
-        }
-        KeyframeGroup {
-            target: leftInHandMiddle_051
-            property: "rotation"
-            keyframeSource: "animations/leftInHandMiddle_051_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: leftHand_036
-            property: "position"
-            keyframeSource: "animations/leftHand_036_position_8.qad"
-        }
-        KeyframeGroup {
-            target: leftHand_036
-            property: "rotation"
-            keyframeSource: "animations/leftHand_036_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArmTwist2_056
-            property: "position"
-            keyframeSource: "animations/leftForeArmTwist2_056_position_8.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArmTwist2_056
-            property: "rotation"
-            keyframeSource: "animations/leftForeArmTwist2_056_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArm_033
-            property: "position"
-            keyframeSource: "animations/leftForeArm_033_position_8.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArm_033
-            property: "rotation"
-            keyframeSource: "animations/leftForeArm_033_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: leftArmTwist1_057
-            property: "position"
-            keyframeSource: "animations/leftArmTwist1_057_position_8.qad"
-        }
-        KeyframeGroup {
-            target: leftArmTwist1_057
-            property: "rotation"
-            keyframeSource: "animations/leftArmTwist1_057_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: leftArmTwist2_058
-            property: "position"
-            keyframeSource: "animations/leftArmTwist2_058_position_8.qad"
-        }
-        KeyframeGroup {
-            target: leftArmTwist2_058
-            property: "rotation"
-            keyframeSource: "animations/leftArmTwist2_058_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: leftShoulder_031
-            property: "rotation"
-            keyframeSource: "animations/leftShoulder_031_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: headEnd_063
-            property: "position"
-            keyframeSource: "animations/headEnd_063_position_8.qad"
-        }
-        KeyframeGroup {
-            target: headEnd_063
-            property: "rotation"
-            keyframeSource: "animations/headEnd_063_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: eye_left_066
-            property: "position"
-            keyframeSource: "animations/eye_left_066_position_8.qad"
-        }
-        KeyframeGroup {
-            target: eye_left_066
-            property: "rotation"
-            keyframeSource: "animations/eye_left_066_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: lip_corners_068
-            property: "position"
-            keyframeSource: "animations/lip_corners_068_position_8.qad"
-        }
-        KeyframeGroup {
-            target: lip_corners_068
-            property: "rotation"
-            keyframeSource: "animations/lip_corners_068_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_right_071
-            property: "position"
-            keyframeSource: "animations/eye_lid_right_071_position_8.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_right_071
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_right_071_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: tongue_06_081
-            property: "position"
-            keyframeSource: "animations/tongue_06_081_position_8.qad"
-        }
-        KeyframeGroup {
-            target: tongue_06_081
-            property: "rotation"
-            keyframeSource: "animations/tongue_06_081_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: tongue_04_079
-            property: "position"
-            keyframeSource: "animations/tongue_04_079_position_8.qad"
-        }
-        KeyframeGroup {
-            target: tongue_04_079
-            property: "rotation"
-            keyframeSource: "animations/tongue_04_079_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: tongue_03_078
-            property: "position"
-            keyframeSource: "animations/tongue_03_078_position_8.qad"
-        }
-        KeyframeGroup {
-            target: tongue_03_078
-            property: "rotation"
-            keyframeSource: "animations/tongue_03_078_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: tongue_02_077
-            property: "position"
-            keyframeSource: "animations/tongue_02_077_position_8.qad"
-        }
-        KeyframeGroup {
-            target: tongue_02_077
-            property: "rotation"
-            keyframeSource: "animations/tongue_02_077_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: tongue_01_076
-            property: "position"
-            keyframeSource: "animations/tongue_01_076_position_8.qad"
-        }
-        KeyframeGroup {
-            target: tongue_01_076
-            property: "rotation"
-            keyframeSource: "animations/tongue_01_076_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: tongue_jaw_075
-            property: "position"
-            keyframeSource: "animations/tongue_jaw_075_position_8.qad"
-        }
-        KeyframeGroup {
-            target: tongue_jaw_075
-            property: "rotation"
-            keyframeSource: "animations/tongue_jaw_075_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: teeth_lwr_082
-            property: "position"
-            keyframeSource: "animations/teeth_lwr_082_position_8.qad"
-        }
-        KeyframeGroup {
-            target: teeth_lwr_082
-            property: "rotation"
-            keyframeSource: "animations/teeth_lwr_082_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: teeth_upr_083
-            property: "position"
-            keyframeSource: "animations/teeth_upr_083_position_8.qad"
-        }
-        KeyframeGroup {
-            target: teeth_upr_083
-            property: "rotation"
-            keyframeSource: "animations/teeth_upr_083_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: mouth_bag_074
-            property: "position"
-            keyframeSource: "animations/mouth_bag_074_position_8.qad"
-        }
-        KeyframeGroup {
-            target: mouth_bag_074
-            property: "rotation"
-            keyframeSource: "animations/mouth_bag_074_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: eye_right_084
-            property: "position"
-            keyframeSource: "animations/eye_right_084_position_8.qad"
-        }
-        KeyframeGroup {
-            target: eye_right_084
-            property: "rotation"
-            keyframeSource: "animations/eye_right_084_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_out_left_086
-            property: "position"
-            keyframeSource: "animations/eye_lid_out_left_086_position_8.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_out_left_086
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_out_left_086_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_in_left_087
-            property: "position"
-            keyframeSource: "animations/eye_lid_in_left_087_position_8.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_in_left_087
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_in_left_087_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_left_085
-            property: "position"
-            keyframeSource: "animations/eye_lid_left_085_position_8.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_left_085
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_left_085_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: face_064
-            property: "position"
-            keyframeSource: "animations/face_064_position_8.qad"
-        }
-        KeyframeGroup {
-            target: face_064
-            property: "rotation"
-            keyframeSource: "animations/face_064_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: head_061
-            property: "position"
-            keyframeSource: "animations/head_061_position_8.qad"
-        }
-        KeyframeGroup {
-            target: head_061
-            property: "rotation"
-            keyframeSource: "animations/head_061_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: neck1_060
-            property: "position"
-            keyframeSource: "animations/neck1_060_position_8.qad"
-        }
-        KeyframeGroup {
-            target: neck1_060
-            property: "rotation"
-            keyframeSource: "animations/neck1_060_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: neck_059
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(27.1709, -16.9145, 8.96454e-05)
-            }
-        }
-        KeyframeGroup {
-            target: neck_059
-            property: "rotation"
-            keyframeSource: "animations/neck_059_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: rightArmTwist1_090
-            property: "position"
-            keyframeSource: "animations/rightArmTwist1_090_position_8.qad"
-        }
-        KeyframeGroup {
-            target: rightArmTwist1_090
-            property: "rotation"
-            keyframeSource: "animations/rightArmTwist1_090_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_RightHand_093
-            property: "position"
-            keyframeSource: "animations/skt_FX_RightHand_093_position_8.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_RightHand_093
-            property: "rotation"
-            keyframeSource: "animations/skt_FX_RightHand_093_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb4_097
-            property: "position"
-            keyframeSource: "animations/rightHandThumb4_097_position_8.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb4_097
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.999301, 0.0212542, -0.00852281, 0.0295585)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandThumb3_096
-            property: "position"
-            keyframeSource: "animations/rightHandThumb3_096_position_8.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb3_096
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.880625, -0.168961, 0.0711457, 0.43691)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandThumb2_095
-            property: "position"
-            keyframeSource: "animations/rightHandThumb2_095_position_8.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb2_095
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.969429, 0.224882, 0.0779004, 0.0597311)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandThumb1_094
-            property: "rotation"
-            keyframeSource: "animations/rightHandThumb1_094_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle4_0102
-            property: "position"
-            keyframeSource: "animations/rightHandMiddle4_0102_position_8.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle4_0102
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.973604, -0.0497164, -0.0333392, 0.220253)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandMiddle3_0101
-            property: "position"
-            keyframeSource: "animations/rightHandMiddle3_0101_position_8.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle3_0101
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.940086, 0.049886, 0.0225632, 0.336512)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandMiddle2_0100
-            property: "position"
-            keyframeSource: "animations/rightHandMiddle2_0100_position_8.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle2_0100
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.968908, 0.0430647, 0.0332208, 0.241369)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandMiddle1_099
-            property: "position"
-            keyframeSource: "animations/rightHandMiddle1_099_position_8.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle1_099
-            property: "rotation"
-            keyframeSource: "animations/rightHandMiddle1_099_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: rightInHandMiddle_098
-            property: "position"
-            keyframeSource: "animations/rightInHandMiddle_098_position_8.qad"
-        }
-        KeyframeGroup {
-            target: rightInHandMiddle_098
-            property: "rotation"
-            keyframeSource: "animations/rightInHandMiddle_098_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: skt_RightHand_0103
-            property: "position"
-            keyframeSource: "animations/skt_RightHand_0103_position_8.qad"
-        }
-        KeyframeGroup {
-            target: skt_RightHand_0103
-            property: "rotation"
-            keyframeSource: "animations/skt_RightHand_0103_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: rightHandIndex4_0108
-            property: "position"
-            keyframeSource: "animations/rightHandIndex4_0108_position_8.qad"
-        }
-        KeyframeGroup {
-            target: rightHandIndex4_0108
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.944937, 0.0293403, -0.0331532, 0.324243)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandIndex3_0107
-            property: "position"
-            keyframeSource: "animations/rightHandIndex3_0107_position_8.qad"
-        }
-        KeyframeGroup {
-            target: rightHandIndex3_0107
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.899129, -0.0327184, 0.117394, 0.420376)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandIndex2_0106
-            property: "position"
-            keyframeSource: "animations/rightHandIndex2_0106_position_8.qad"
-        }
-        KeyframeGroup {
-            target: rightHandIndex2_0106
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.931262, -0.0566451, 0.0786065, 0.351231)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandIndex1_0105
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(-44.2471, 5.37659, 0.826601)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandIndex1_0105
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.939389, -0.0955966, -0.0163223, 0.32885)
-            }
-        }
-        KeyframeGroup {
-            target: rightInHandIndex_0104
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.921629, 0.353523, 0.113846, -0.112521)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandPinky4_0113
-            property: "position"
-            keyframeSource: "animations/rightHandPinky4_0113_position_8.qad"
-        }
-        KeyframeGroup {
-            target: rightHandPinky4_0113
-            property: "rotation"
-            keyframeSource: "animations/rightHandPinky4_0113_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: rightHandPinky3_0112
-            property: "position"
-            keyframeSource: "animations/rightHandPinky3_0112_position_8.qad"
-        }
-        KeyframeGroup {
-            target: rightHandPinky3_0112
-            property: "rotation"
-            keyframeSource: "animations/rightHandPinky3_0112_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: rightHandPinky2_0111
-            property: "position"
-            keyframeSource: "animations/rightHandPinky2_0111_position_8.qad"
-        }
-        KeyframeGroup {
-            target: rightHandPinky2_0111
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.941363, 0.00502077, -0.0563828, 0.332612)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandPinky1_0110
-            property: "rotation"
-            keyframeSource: "animations/rightHandPinky1_0110_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: rightInHandPinky_0109
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(-7.95187, 1.34686, -19.4511)
-            }
-        }
-        KeyframeGroup {
-            target: rightInHandPinky_0109
-            property: "rotation"
-            keyframeSource: "animations/rightInHandPinky_0109_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: rightHand_092
-            property: "position"
-            keyframeSource: "animations/rightHand_092_position_8.qad"
-        }
-        KeyframeGroup {
-            target: rightHand_092
-            property: "rotation"
-            keyframeSource: "animations/rightHand_092_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArmTwist3_0114
-            property: "position"
-            keyframeSource: "animations/rightForeArmTwist3_0114_position_8.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArmTwist3_0114
-            property: "rotation"
-            keyframeSource: "animations/rightForeArmTwist3_0114_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArmTwist2_0115
-            property: "position"
-            keyframeSource: "animations/rightForeArmTwist2_0115_position_8.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArmTwist2_0115
-            property: "rotation"
-            keyframeSource: "animations/rightForeArmTwist2_0115_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArmTwist1_0116
-            property: "position"
-            keyframeSource: "animations/rightForeArmTwist1_0116_position_8.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArmTwist1_0116
-            property: "rotation"
-            keyframeSource: "animations/rightForeArmTwist1_0116_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArm_091
-            property: "position"
-            keyframeSource: "animations/rightForeArm_091_position_8.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArm_091
-            property: "rotation"
-            keyframeSource: "animations/rightForeArm_091_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: rightArmTwist2_0117
-            property: "position"
-            keyframeSource: "animations/rightArmTwist2_0117_position_8.qad"
-        }
-        KeyframeGroup {
-            target: rightArmTwist2_0117
-            property: "rotation"
-            keyframeSource: "animations/rightArmTwist2_0117_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: rightArm_089
-            property: "position"
-            keyframeSource: "animations/rightArm_089_position_8.qad"
-        }
-        KeyframeGroup {
-            target: rightArm_089
-            property: "rotation"
-            keyframeSource: "animations/rightArm_089_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: rightShoulder_088
-            property: "rotation"
-            keyframeSource: "animations/rightShoulder_088_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: spine3_028
-            property: "position"
-            keyframeSource: "animations/spine3_028_position_8.qad"
-        }
-        KeyframeGroup {
-            target: spine3_028
-            property: "rotation"
-            keyframeSource: "animations/spine3_028_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: spine2_027
-            property: "position"
-            keyframeSource: "animations/spine2_027_position_8.qad"
-        }
-        KeyframeGroup {
-            target: spine2_027
-            property: "rotation"
-            keyframeSource: "animations/spine2_027_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: spine1_026
-            property: "position"
-            keyframeSource: "animations/spine1_026_position_8.qad"
-        }
-        KeyframeGroup {
-            target: spine1_026
-            property: "rotation"
-            keyframeSource: "animations/spine1_026_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: spine_025
-            property: "position"
-            keyframeSource: "animations/spine_025_position_8.qad"
-        }
-        KeyframeGroup {
-            target: spine_025
-            property: "rotation"
-            keyframeSource: "animations/spine_025_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: leftLegTwist1_0120
-            property: "position"
-            keyframeSource: "animations/leftLegTwist1_0120_position_8.qad"
-        }
-        KeyframeGroup {
-            target: leftLegTwist1_0120
-            property: "rotation"
-            keyframeSource: "animations/leftLegTwist1_0120_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: leftFootBigToe3_0125
-            property: "position"
-            keyframeSource: "animations/leftFootBigToe3_0125_position_8.qad"
-        }
-        KeyframeGroup {
-            target: leftFootBigToe3_0125
-            property: "rotation"
-            keyframeSource: "animations/leftFootBigToe3_0125_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: leftFootBigToe2_0124
-            property: "position"
-            keyframeSource: "animations/leftFootBigToe2_0124_position_8.qad"
-        }
-        KeyframeGroup {
-            target: leftFootBigToe2_0124
-            property: "rotation"
-            keyframeSource: "animations/leftFootBigToe2_0124_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: leftFootBigToe1_0123
-            property: "rotation"
-            keyframeSource: "animations/leftFootBigToe1_0123_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: leftFootIndex3_0128
-            property: "position"
-            keyframeSource: "animations/leftFootIndex3_0128_position_8.qad"
-        }
-        KeyframeGroup {
-            target: leftFootIndex3_0128
-            property: "rotation"
-            keyframeSource: "animations/leftFootIndex3_0128_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: leftFootIndex2_0127
-            property: "position"
-            keyframeSource: "animations/leftFootIndex2_0127_position_8.qad"
-        }
-        KeyframeGroup {
-            target: leftFootIndex2_0127
-            property: "rotation"
-            keyframeSource: "animations/leftFootIndex2_0127_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: leftFootIndex1_0126
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(16.1655, 1.34471, -23.2399)
-            }
-        }
-        KeyframeGroup {
-            target: leftFootIndex1_0126
-            property: "rotation"
-            keyframeSource: "animations/leftFootIndex1_0126_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: leftToeBaseEnd_0129
-            property: "position"
-            keyframeSource: "animations/leftToeBaseEnd_0129_position_8.qad"
-        }
-        KeyframeGroup {
-            target: leftToeBaseEnd_0129
-            property: "rotation"
-            keyframeSource: "animations/leftToeBaseEnd_0129_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: leftToeBase_0122
-            property: "position"
-            keyframeSource: "animations/leftToeBase_0122_position_8.qad"
-        }
-        KeyframeGroup {
-            target: leftToeBase_0122
-            property: "rotation"
-            keyframeSource: "animations/leftToeBase_0122_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: leftFoot_0121
-            property: "position"
-            keyframeSource: "animations/leftFoot_0121_position_8.qad"
-        }
-        KeyframeGroup {
-            target: leftFoot_0121
-            property: "rotation"
-            keyframeSource: "animations/leftFoot_0121_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: leftLeg_0119
-            property: "position"
-            keyframeSource: "animations/leftLeg_0119_position_8.qad"
-        }
-        KeyframeGroup {
-            target: leftLeg_0119
-            property: "rotation"
-            keyframeSource: "animations/leftLeg_0119_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: leftUpLegTwist1_0130
-            property: "position"
-            keyframeSource: "animations/leftUpLegTwist1_0130_position_8.qad"
-        }
-        KeyframeGroup {
-            target: leftUpLegTwist1_0130
-            property: "rotation"
-            keyframeSource: "animations/leftUpLegTwist1_0130_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: leftUpLegTwist2_0131
-            property: "position"
-            keyframeSource: "animations/leftUpLegTwist2_0131_position_8.qad"
-        }
-        KeyframeGroup {
-            target: leftUpLegTwist2_0131
-            property: "rotation"
-            keyframeSource: "animations/leftUpLegTwist2_0131_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: leftUpLeg_0118
-            property: "rotation"
-            keyframeSource: "animations/leftUpLeg_0118_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: skt_Hips_0132
-            property: "position"
-            keyframeSource: "animations/skt_Hips_0132_position_8.qad"
-        }
-        KeyframeGroup {
-            target: skt_Hips_0132
-            property: "rotation"
-            keyframeSource: "animations/skt_Hips_0132_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: hips_09
-            property: "position"
-            keyframeSource: "animations/hips_09_position_8.qad"
-        }
-        KeyframeGroup {
-            target: hips_09
-            property: "rotation"
-            keyframeSource: "animations/hips_09_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: ik_Hips_0133
-            property: "position"
-            keyframeSource: "animations/ik_Hips_0133_position_8.qad"
-        }
-        KeyframeGroup {
-            target: ik_Hips_0133
-            property: "rotation"
-            keyframeSource: "animations/ik_Hips_0133_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: ik_LeftFoot_0134
-            property: "position"
-            keyframeSource: "animations/ik_LeftFoot_0134_position_8.qad"
-        }
-        KeyframeGroup {
-            target: ik_LeftFoot_0134
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(1, 2.36187e-17, 0, 0)
-            }
-        }
-        KeyframeGroup {
-            target: ik_RightFoot_0135
-            property: "position"
-            keyframeSource: "animations/ik_RightFoot_0135_position_8.qad"
-        }
-        KeyframeGroup {
-            target: ik_RightFoot_0135
-            property: "rotation"
-            keyframeSource: "animations/ik_RightFoot_0135_rotation_8.qad"
-        }
-        KeyframeGroup {
-            target: ik_Head_0136
-            property: "position"
-            keyframeSource: "animations/ik_Head_0136_position_8.qad"
-        }
-        KeyframeGroup {
-            target: ik_Head_0136
-            property: "rotation"
-            keyframeSource: "animations/ik_Head_0136_rotation_8.qad"
-        }
-    }
-    Timeline {
-        id: frames_008_timeline
-        objectName: "Frames.008"
-        property real framesPerSecond: 1000
-        startFrame: 0
-        endFrame: 2034
-        currentFrame: 0
-        enabled: true
-        animations: TimelineAnimation {
-            duration: 2034
-            from: 0
-            to: 2034
-            running: true
-            loops: Animation.Infinite
-        }
-        KeyframeGroup {
-            target: rightFootIndex3_017
-            property: "position"
-            keyframeSource: "animations/rightFootIndex3_017_position_9.qad"
-        }
-        KeyframeGroup {
-            target: rightFootIndex3_017
-            property: "rotation"
-            keyframeSource: "animations/rightFootIndex3_017_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: ik_Spine3_02
-            property: "position"
-            keyframeSource: "animations/ik_Spine3_02_position_9.qad"
-        }
-        KeyframeGroup {
-            target: ik_Spine3_02
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(1, 2.36187e-17, 0, 0)
-            }
-        }
-        KeyframeGroup {
-            target: ik_LeftHand_07
-            property: "position"
-            keyframeSource: "animations/ik_LeftHand_07_position_9.qad"
-        }
-        KeyframeGroup {
-            target: ik_LeftHand_07
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(1, 2.36187e-17, 0, 0)
-            }
-        }
-        KeyframeGroup {
-            target: leftHandMiddle3_054
-            property: "position"
-            keyframeSource: "animations/leftHandMiddle3_054_position_9.qad"
-        }
-        KeyframeGroup {
-            target: leftHandMiddle3_054
-            property: "rotation"
-            keyframeSource: "animations/leftHandMiddle3_054_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: ik_RightHand_03
-            property: "position"
-            keyframeSource: "animations/ik_RightHand_03_position_9.qad"
-        }
-        KeyframeGroup {
-            target: ik_RightHand_03
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(1, 2.36187e-17, 0, 0)
-            }
-        }
-        KeyframeGroup {
-            target: skt_HeadCamera_08
-            property: "position"
-            keyframeSource: "animations/skt_HeadCamera_08_position_9.qad"
-        }
-        KeyframeGroup {
-            target: skt_HeadCamera_08
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(1, -5.68198e-14, 0, 0)
-            }
-        }
-        KeyframeGroup {
-            target: leftHandMiddle1_052
-            property: "position"
-            keyframeSource: "animations/leftHandMiddle1_052_position_9.qad"
-        }
-        KeyframeGroup {
-            target: leftHandMiddle1_052
-            property: "rotation"
-            keyframeSource: "animations/leftHandMiddle1_052_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_Reference2_04
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(-0.0716953, -6.74049e-16, 14.2682)
-            }
-        }
-        KeyframeGroup {
-            target: leftArm_032
-            property: "position"
-            keyframeSource: "animations/leftArm_032_position_9.qad"
-        }
-        KeyframeGroup {
-            target: leftArm_032
-            property: "rotation"
-            keyframeSource: "animations/leftArm_032_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: rightLegTwist1_012
-            property: "position"
-            keyframeSource: "animations/rightLegTwist1_012_position_9.qad"
-        }
-        KeyframeGroup {
-            target: rightLegTwist1_012
-            property: "rotation"
-            keyframeSource: "animations/rightLegTwist1_012_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: leftHand_036
-            property: "position"
-            keyframeSource: "animations/leftHand_036_position_9.qad"
-        }
-        KeyframeGroup {
-            target: leftHand_036
-            property: "rotation"
-            keyframeSource: "animations/leftHand_036_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_Reference1_05
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(-0.0716953, -6.74049e-16, 14.2682)
-            }
-        }
-        KeyframeGroup {
-            target: skt_Head_062
-            property: "position"
-            keyframeSource: "animations/skt_Head_062_position_9.qad"
-        }
-        KeyframeGroup {
-            target: skt_Head_062
-            property: "rotation"
-            keyframeSource: "animations/skt_Head_062_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: rightFootIndex2_016
-            property: "position"
-            keyframeSource: "animations/rightFootIndex2_016_position_9.qad"
-        }
-        KeyframeGroup {
-            target: rightFootIndex2_016
-            property: "rotation"
-            keyframeSource: "animations/rightFootIndex2_016_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: rightFootIndex1_015
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(-16.1655, -1.34479, 23.24)
-            }
-        }
-        KeyframeGroup {
-            target: rightFootIndex1_015
-            property: "rotation"
-            keyframeSource: "animations/rightFootIndex1_015_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: rightFootBigToe3_020
-            property: "position"
-            keyframeSource: "animations/rightFootBigToe3_020_position_9.qad"
-        }
-        KeyframeGroup {
-            target: rightFootBigToe3_020
-            property: "rotation"
-            keyframeSource: "animations/rightFootBigToe3_020_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: jaw_065
-            property: "position"
-            keyframeSource: "animations/jaw_065_position_9.qad"
-        }
-        KeyframeGroup {
-            target: jaw_065
-            property: "rotation"
-            keyframeSource: "animations/jaw_065_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: rightFootBigToe2_019
-            property: "position"
-            keyframeSource: "animations/rightFootBigToe2_019_position_9.qad"
-        }
-        KeyframeGroup {
-            target: rightFootBigToe2_019
-            property: "rotation"
-            keyframeSource: "animations/rightFootBigToe2_019_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: rightFootBigToe1_018
-            property: "rotation"
-            keyframeSource: "animations/rightFootBigToe1_018_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: rightToeBaseEnd_021
-            property: "position"
-            keyframeSource: "animations/rightToeBaseEnd_021_position_9.qad"
-        }
-        KeyframeGroup {
-            target: rightToeBaseEnd_021
-            property: "rotation"
-            keyframeSource: "animations/rightToeBaseEnd_021_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: nose_067
-            property: "position"
-            keyframeSource: "animations/nose_067_position_9.qad"
-        }
-        KeyframeGroup {
-            target: nose_067
-            property: "rotation"
-            keyframeSource: "animations/nose_067_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: rightToeBase_014
-            property: "position"
-            keyframeSource: "animations/rightToeBase_014_position_9.qad"
-        }
-        KeyframeGroup {
-            target: rightToeBase_014
-            property: "rotation"
-            keyframeSource: "animations/rightToeBase_014_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: rightFoot_013
-            property: "position"
-            keyframeSource: "animations/rightFoot_013_position_9.qad"
-        }
-        KeyframeGroup {
-            target: rightFoot_013
-            property: "rotation"
-            keyframeSource: "animations/rightFoot_013_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: lip_upper_069
-            property: "position"
-            keyframeSource: "animations/lip_upper_069_position_9.qad"
-        }
-        KeyframeGroup {
-            target: lip_upper_069
-            property: "rotation"
-            keyframeSource: "animations/lip_upper_069_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: rightLeg_011
-            property: "position"
-            keyframeSource: "animations/rightLeg_011_position_9.qad"
-        }
-        KeyframeGroup {
-            target: rightLeg_011
-            property: "rotation"
-            keyframeSource: "animations/rightLeg_011_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: lip_lower_070
-            property: "position"
-            keyframeSource: "animations/lip_lower_070_position_9.qad"
-        }
-        KeyframeGroup {
-            target: lip_lower_070
-            property: "rotation"
-            keyframeSource: "animations/lip_lower_070_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: rightUpLegTwist1_022
-            property: "position"
-            keyframeSource: "animations/rightUpLegTwist1_022_position_9.qad"
-        }
-        KeyframeGroup {
-            target: rightUpLegTwist1_022
-            property: "rotation"
-            keyframeSource: "animations/rightUpLegTwist1_022_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: rightUpLegTwist2_023
-            property: "position"
-            keyframeSource: "animations/rightUpLegTwist2_023_position_9.qad"
-        }
-        KeyframeGroup {
-            target: rightUpLegTwist2_023
-            property: "rotation"
-            keyframeSource: "animations/rightUpLegTwist2_023_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_in_right_072
-            property: "position"
-            keyframeSource: "animations/eye_lid_in_right_072_position_9.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_in_right_072
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_in_right_072_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: rightUpLeg_010
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(-38.4087, -25.5809, -1.47822)
-            }
-        }
-        KeyframeGroup {
-            target: rightUpLeg_010
-            property: "rotation"
-            keyframeSource: "animations/rightUpLeg_010_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_out_right_073
-            property: "position"
-            keyframeSource: "animations/eye_lid_out_right_073_position_9.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_out_right_073
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_out_right_073_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_Hips_024
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(-117.054, -10.1001, 92.348)
-            }
-        }
-        KeyframeGroup {
-            target: skt_FX_Hips_024
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.994426, 0.100752, -0.00991419, -0.0294678)
-            }
-        }
-        KeyframeGroup {
-            target: skt_Back_029
-            property: "position"
-            keyframeSource: "animations/skt_Back_029_position_9.qad"
-        }
-        KeyframeGroup {
-            target: skt_Back_029
-            property: "rotation"
-            keyframeSource: "animations/skt_Back_029_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: skt_Chest_030
-            property: "position"
-            keyframeSource: "animations/skt_Chest_030_position_9.qad"
-        }
-        KeyframeGroup {
-            target: skt_Chest_030
-            property: "rotation"
-            keyframeSource: "animations/skt_Chest_030_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArmTwist3_034
-            property: "position"
-            keyframeSource: "animations/leftForeArmTwist3_034_position_9.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArmTwist3_034
-            property: "rotation"
-            keyframeSource: "animations/leftForeArmTwist3_034_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArmTwist1_035
-            property: "position"
-            keyframeSource: "animations/leftForeArmTwist1_035_position_9.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArmTwist1_035
-            property: "rotation"
-            keyframeSource: "animations/leftForeArmTwist1_035_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky4_041
-            property: "position"
-            keyframeSource: "animations/leftHandPinky4_041_position_9.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky4_041
-            property: "rotation"
-            keyframeSource: "animations/leftHandPinky4_041_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky3_040
-            property: "position"
-            keyframeSource: "animations/leftHandPinky3_040_position_9.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky3_040
-            property: "rotation"
-            keyframeSource: "animations/leftHandPinky3_040_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky2_039
-            property: "position"
-            keyframeSource: "animations/leftHandPinky2_039_position_9.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky2_039
-            property: "rotation"
-            keyframeSource: "animations/leftHandPinky2_039_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky1_038
-            property: "rotation"
-            keyframeSource: "animations/leftHandPinky1_038_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: leftInHandPinky_037
-            property: "position"
-            keyframeSource: "animations/leftInHandPinky_037_position_9.qad"
-        }
-        KeyframeGroup {
-            target: leftInHandPinky_037
-            property: "rotation"
-            keyframeSource: "animations/leftInHandPinky_037_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: skt_LeftHand_042
-            property: "position"
-            keyframeSource: "animations/skt_LeftHand_042_position_9.qad"
-        }
-        KeyframeGroup {
-            target: skt_LeftHand_042
-            property: "rotation"
-            keyframeSource: "animations/skt_LeftHand_042_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex4_047
-            property: "position"
-            keyframeSource: "animations/leftHandIndex4_047_position_9.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex4_047
-            property: "rotation"
-            keyframeSource: "animations/leftHandIndex4_047_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex3_046
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(17.2504, 0.657048, -8.58307e-06)
-            }
-        }
-        KeyframeGroup {
-            target: leftHandIndex3_046
-            property: "rotation"
-            keyframeSource: "animations/leftHandIndex3_046_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex2_045
-            property: "position"
-            keyframeSource: "animations/leftHandIndex2_045_position_9.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex2_045
-            property: "rotation"
-            keyframeSource: "animations/leftHandIndex2_045_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex1_044
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(44.2476, -5.37626, -0.826338)
-            }
-        }
-        KeyframeGroup {
-            target: leftHandIndex1_044
-            property: "rotation"
-            keyframeSource: "animations/leftHandIndex1_044_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: leftInHandIndex_043
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(3.42828, 2.70113, -10.2452)
-            }
-        }
-        KeyframeGroup {
-            target: leftInHandIndex_043
-            property: "rotation"
-            keyframeSource: "animations/leftInHandIndex_043_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_LeftHand_00
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(252.326, 259.417, 219.558)
-            }
-        }
-        KeyframeGroup {
-            target: skt_FX_LeftHand_00
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.692474, 0.449047, 0.47269, 0.308872)
-            }
-        }
-        KeyframeGroup {
-            target: leftHandThumb4_050
-            property: "position"
-            keyframeSource: "animations/leftHandThumb4_050_position_9.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb4_050
-            property: "rotation"
-            keyframeSource: "animations/leftHandThumb4_050_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb3_049
-            property: "position"
-            keyframeSource: "animations/leftHandThumb3_049_position_9.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb3_049
-            property: "rotation"
-            keyframeSource: "animations/leftHandThumb3_049_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb2_048
-            property: "position"
-            keyframeSource: "animations/leftHandThumb2_048_position_9.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb2_048
-            property: "rotation"
-            keyframeSource: "animations/leftHandThumb2_048_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb1_01
-            property: "rotation"
-            keyframeSource: "animations/leftHandThumb1_01_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: leftHandMiddle4_055
-            property: "position"
-            keyframeSource: "animations/leftHandMiddle4_055_position_9.qad"
-        }
-        KeyframeGroup {
-            target: leftHandMiddle4_055
-            property: "rotation"
-            keyframeSource: "animations/leftHandMiddle4_055_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: leftHandMiddle2_053
-            property: "position"
-            keyframeSource: "animations/leftHandMiddle2_053_position_9.qad"
-        }
-        KeyframeGroup {
-            target: leftHandMiddle2_053
-            property: "rotation"
-            keyframeSource: "animations/leftHandMiddle2_053_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: leftInHandMiddle_051
-            property: "position"
-            keyframeSource: "animations/leftInHandMiddle_051_position_9.qad"
-        }
-        KeyframeGroup {
-            target: leftInHandMiddle_051
-            property: "rotation"
-            keyframeSource: "animations/leftInHandMiddle_051_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArmTwist2_056
-            property: "position"
-            keyframeSource: "animations/leftForeArmTwist2_056_position_9.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArmTwist2_056
-            property: "rotation"
-            keyframeSource: "animations/leftForeArmTwist2_056_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArm_033
-            property: "position"
-            keyframeSource: "animations/leftForeArm_033_position_9.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArm_033
-            property: "rotation"
-            keyframeSource: "animations/leftForeArm_033_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: leftArmTwist1_057
-            property: "position"
-            keyframeSource: "animations/leftArmTwist1_057_position_9.qad"
-        }
-        KeyframeGroup {
-            target: leftArmTwist1_057
-            property: "rotation"
-            keyframeSource: "animations/leftArmTwist1_057_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: leftArmTwist2_058
-            property: "position"
-            keyframeSource: "animations/leftArmTwist2_058_position_9.qad"
-        }
-        KeyframeGroup {
-            target: leftArmTwist2_058
-            property: "rotation"
-            keyframeSource: "animations/leftArmTwist2_058_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: leftShoulder_031
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(8.80947, 6.33601, -4.19489)
-            }
-        }
-        KeyframeGroup {
-            target: leftShoulder_031
-            property: "rotation"
-            keyframeSource: "animations/leftShoulder_031_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: headEnd_063
-            property: "position"
-            keyframeSource: "animations/headEnd_063_position_9.qad"
-        }
-        KeyframeGroup {
-            target: headEnd_063
-            property: "rotation"
-            keyframeSource: "animations/headEnd_063_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: eye_left_066
-            property: "position"
-            keyframeSource: "animations/eye_left_066_position_9.qad"
-        }
-        KeyframeGroup {
-            target: eye_left_066
-            property: "rotation"
-            keyframeSource: "animations/eye_left_066_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: lip_corners_068
-            property: "position"
-            keyframeSource: "animations/lip_corners_068_position_9.qad"
-        }
-        KeyframeGroup {
-            target: lip_corners_068
-            property: "rotation"
-            keyframeSource: "animations/lip_corners_068_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_right_071
-            property: "position"
-            keyframeSource: "animations/eye_lid_right_071_position_9.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_right_071
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_right_071_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: tongue_06_081
-            property: "position"
-            keyframeSource: "animations/tongue_06_081_position_9.qad"
-        }
-        KeyframeGroup {
-            target: tongue_06_081
-            property: "rotation"
-            keyframeSource: "animations/tongue_06_081_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: tongue_05_080
-            property: "position"
-            keyframeSource: "animations/tongue_05_080_position_9.qad"
-        }
-        KeyframeGroup {
-            target: tongue_05_080
-            property: "rotation"
-            keyframeSource: "animations/tongue_05_080_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: tongue_04_079
-            property: "position"
-            keyframeSource: "animations/tongue_04_079_position_9.qad"
-        }
-        KeyframeGroup {
-            target: tongue_04_079
-            property: "rotation"
-            keyframeSource: "animations/tongue_04_079_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: tongue_03_078
-            property: "position"
-            keyframeSource: "animations/tongue_03_078_position_9.qad"
-        }
-        KeyframeGroup {
-            target: tongue_03_078
-            property: "rotation"
-            keyframeSource: "animations/tongue_03_078_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: tongue_02_077
-            property: "position"
-            keyframeSource: "animations/tongue_02_077_position_9.qad"
-        }
-        KeyframeGroup {
-            target: tongue_02_077
-            property: "rotation"
-            keyframeSource: "animations/tongue_02_077_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: tongue_01_076
-            property: "position"
-            keyframeSource: "animations/tongue_01_076_position_9.qad"
-        }
-        KeyframeGroup {
-            target: tongue_01_076
-            property: "rotation"
-            keyframeSource: "animations/tongue_01_076_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: tongue_jaw_075
-            property: "position"
-            keyframeSource: "animations/tongue_jaw_075_position_9.qad"
-        }
-        KeyframeGroup {
-            target: tongue_jaw_075
-            property: "rotation"
-            keyframeSource: "animations/tongue_jaw_075_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: teeth_lwr_082
-            property: "position"
-            keyframeSource: "animations/teeth_lwr_082_position_9.qad"
-        }
-        KeyframeGroup {
-            target: teeth_lwr_082
-            property: "rotation"
-            keyframeSource: "animations/teeth_lwr_082_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: teeth_upr_083
-            property: "position"
-            keyframeSource: "animations/teeth_upr_083_position_9.qad"
-        }
-        KeyframeGroup {
-            target: teeth_upr_083
-            property: "rotation"
-            keyframeSource: "animations/teeth_upr_083_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: mouth_bag_074
-            property: "position"
-            keyframeSource: "animations/mouth_bag_074_position_9.qad"
-        }
-        KeyframeGroup {
-            target: mouth_bag_074
-            property: "rotation"
-            keyframeSource: "animations/mouth_bag_074_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: eye_right_084
-            property: "position"
-            keyframeSource: "animations/eye_right_084_position_9.qad"
-        }
-        KeyframeGroup {
-            target: eye_right_084
-            property: "rotation"
-            keyframeSource: "animations/eye_right_084_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_out_left_086
-            property: "position"
-            keyframeSource: "animations/eye_lid_out_left_086_position_9.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_out_left_086
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_out_left_086_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_in_left_087
-            property: "position"
-            keyframeSource: "animations/eye_lid_in_left_087_position_9.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_in_left_087
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_in_left_087_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_left_085
-            property: "position"
-            keyframeSource: "animations/eye_lid_left_085_position_9.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_left_085
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_left_085_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: face_064
-            property: "position"
-            keyframeSource: "animations/face_064_position_9.qad"
-        }
-        KeyframeGroup {
-            target: face_064
-            property: "rotation"
-            keyframeSource: "animations/face_064_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: head_061
-            property: "position"
-            keyframeSource: "animations/head_061_position_9.qad"
-        }
-        KeyframeGroup {
-            target: head_061
-            property: "rotation"
-            keyframeSource: "animations/head_061_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: neck1_060
-            property: "position"
-            keyframeSource: "animations/neck1_060_position_9.qad"
-        }
-        KeyframeGroup {
-            target: neck1_060
-            property: "rotation"
-            keyframeSource: "animations/neck1_060_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: neck_059
-            property: "position"
-            keyframeSource: "animations/neck_059_position_9.qad"
-        }
-        KeyframeGroup {
-            target: neck_059
-            property: "rotation"
-            keyframeSource: "animations/neck_059_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: rightArmTwist1_090
-            property: "position"
-            keyframeSource: "animations/rightArmTwist1_090_position_9.qad"
-        }
-        KeyframeGroup {
-            target: rightArmTwist1_090
-            property: "rotation"
-            keyframeSource: "animations/rightArmTwist1_090_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_RightHand_093
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(-224.848, -4.95235, 9.36717)
-            }
-        }
-        KeyframeGroup {
-            target: skt_FX_RightHand_093
-            property: "rotation"
-            keyframeSource: "animations/skt_FX_RightHand_093_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb4_097
-            property: "position"
-            keyframeSource: "animations/rightHandThumb4_097_position_9.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb4_097
-            property: "rotation"
-            keyframeSource: "animations/rightHandThumb4_097_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb3_096
-            property: "position"
-            keyframeSource: "animations/rightHandThumb3_096_position_9.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb3_096
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.880625, -0.168961, 0.071146, 0.43691)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandThumb2_095
-            property: "position"
-            keyframeSource: "animations/rightHandThumb2_095_position_9.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb2_095
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.969428, 0.224882, 0.0779003, 0.059731)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandThumb1_094
-            property: "rotation"
-            keyframeSource: "animations/rightHandThumb1_094_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle4_0102
-            property: "position"
-            keyframeSource: "animations/rightHandMiddle4_0102_position_9.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle4_0102
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.973604, -0.0497163, -0.033339, 0.220253)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandMiddle3_0101
-            property: "position"
-            keyframeSource: "animations/rightHandMiddle3_0101_position_9.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle3_0101
-            property: "rotation"
-            keyframeSource: "animations/rightHandMiddle3_0101_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle2_0100
-            property: "position"
-            keyframeSource: "animations/rightHandMiddle2_0100_position_9.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle2_0100
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.968908, 0.0430644, 0.0332207, 0.241368)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandMiddle1_099
-            property: "position"
-            keyframeSource: "animations/rightHandMiddle1_099_position_9.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle1_099
-            property: "rotation"
-            keyframeSource: "animations/rightHandMiddle1_099_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: rightInHandMiddle_098
-            property: "position"
-            keyframeSource: "animations/rightInHandMiddle_098_position_9.qad"
-        }
-        KeyframeGroup {
-            target: rightInHandMiddle_098
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.997624, 0.0388621, 0.0290057, 0.0489301)
-            }
-        }
-        KeyframeGroup {
-            target: skt_RightHand_0103
-            property: "position"
-            keyframeSource: "animations/skt_RightHand_0103_position_9.qad"
-        }
-        KeyframeGroup {
-            target: skt_RightHand_0103
-            property: "rotation"
-            keyframeSource: "animations/skt_RightHand_0103_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: rightHandIndex4_0108
-            property: "position"
-            keyframeSource: "animations/rightHandIndex4_0108_position_9.qad"
-        }
-        KeyframeGroup {
-            target: rightHandIndex4_0108
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.944937, 0.0293403, -0.033153, 0.324243)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandIndex3_0107
-            property: "position"
-            keyframeSource: "animations/rightHandIndex3_0107_position_9.qad"
-        }
-        KeyframeGroup {
-            target: rightHandIndex3_0107
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.899129, -0.0327185, 0.117393, 0.420375)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandIndex2_0106
-            property: "position"
-            keyframeSource: "animations/rightHandIndex2_0106_position_9.qad"
-        }
-        KeyframeGroup {
-            target: rightHandIndex2_0106
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.931262, -0.0566454, 0.0786064, 0.351231)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandIndex1_0105
-            property: "position"
-            keyframeSource: "animations/rightHandIndex1_0105_position_9.qad"
-        }
-        KeyframeGroup {
-            target: rightHandIndex1_0105
-            property: "rotation"
-            keyframeSource: "animations/rightHandIndex1_0105_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: rightInHandIndex_0104
-            property: "position"
-            keyframeSource: "animations/rightInHandIndex_0104_position_9.qad"
-        }
-        KeyframeGroup {
-            target: rightInHandIndex_0104
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.921629, 0.353523, 0.113846, -0.112521)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandPinky4_0113
-            property: "position"
-            keyframeSource: "animations/rightHandPinky4_0113_position_9.qad"
-        }
-        KeyframeGroup {
-            target: rightHandPinky4_0113
-            property: "rotation"
-            keyframeSource: "animations/rightHandPinky4_0113_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: rightHandPinky3_0112
-            property: "position"
-            keyframeSource: "animations/rightHandPinky3_0112_position_9.qad"
-        }
-        KeyframeGroup {
-            target: rightHandPinky3_0112
-            property: "rotation"
-            keyframeSource: "animations/rightHandPinky3_0112_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: rightHandPinky2_0111
-            property: "position"
-            keyframeSource: "animations/rightHandPinky2_0111_position_9.qad"
-        }
-        KeyframeGroup {
-            target: rightHandPinky2_0111
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.941364, 0.00502074, -0.0563829, 0.332611)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandPinky1_0110
-            property: "position"
-            keyframeSource: "animations/rightHandPinky1_0110_position_9.qad"
-        }
-        KeyframeGroup {
-            target: rightHandPinky1_0110
-            property: "rotation"
-            keyframeSource: "animations/rightHandPinky1_0110_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: rightInHandPinky_0109
-            property: "position"
-            keyframeSource: "animations/rightInHandPinky_0109_position_9.qad"
-        }
-        KeyframeGroup {
-            target: rightInHandPinky_0109
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.987488, 0.107136, 0.102255, -0.0541683)
-            }
-        }
-        KeyframeGroup {
-            target: rightHand_092
-            property: "position"
-            keyframeSource: "animations/rightHand_092_position_9.qad"
-        }
-        KeyframeGroup {
-            target: rightHand_092
-            property: "rotation"
-            keyframeSource: "animations/rightHand_092_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArmTwist3_0114
-            property: "position"
-            keyframeSource: "animations/rightForeArmTwist3_0114_position_9.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArmTwist3_0114
-            property: "rotation"
-            keyframeSource: "animations/rightForeArmTwist3_0114_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArmTwist2_0115
-            property: "position"
-            keyframeSource: "animations/rightForeArmTwist2_0115_position_9.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArmTwist2_0115
-            property: "rotation"
-            keyframeSource: "animations/rightForeArmTwist2_0115_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArmTwist1_0116
-            property: "position"
-            keyframeSource: "animations/rightForeArmTwist1_0116_position_9.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArmTwist1_0116
-            property: "rotation"
-            keyframeSource: "animations/rightForeArmTwist1_0116_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArm_091
-            property: "position"
-            keyframeSource: "animations/rightForeArm_091_position_9.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArm_091
-            property: "rotation"
-            keyframeSource: "animations/rightForeArm_091_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: rightArmTwist2_0117
-            property: "position"
-            keyframeSource: "animations/rightArmTwist2_0117_position_9.qad"
-        }
-        KeyframeGroup {
-            target: rightArmTwist2_0117
-            property: "rotation"
-            keyframeSource: "animations/rightArmTwist2_0117_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: rightArm_089
-            property: "position"
-            keyframeSource: "animations/rightArm_089_position_9.qad"
-        }
-        KeyframeGroup {
-            target: rightArm_089
-            property: "rotation"
-            keyframeSource: "animations/rightArm_089_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: rightShoulder_088
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(8.80898, 6.33609, 4.19488)
-            }
-        }
-        KeyframeGroup {
-            target: rightShoulder_088
-            property: "rotation"
-            keyframeSource: "animations/rightShoulder_088_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: spine3_028
-            property: "position"
-            keyframeSource: "animations/spine3_028_position_9.qad"
-        }
-        KeyframeGroup {
-            target: spine3_028
-            property: "rotation"
-            keyframeSource: "animations/spine3_028_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: spine2_027
-            property: "position"
-            keyframeSource: "animations/spine2_027_position_9.qad"
-        }
-        KeyframeGroup {
-            target: spine2_027
-            property: "rotation"
-            keyframeSource: "animations/spine2_027_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: spine1_026
-            property: "position"
-            keyframeSource: "animations/spine1_026_position_9.qad"
-        }
-        KeyframeGroup {
-            target: spine1_026
-            property: "rotation"
-            keyframeSource: "animations/spine1_026_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: spine_025
-            property: "position"
-            keyframeSource: "animations/spine_025_position_9.qad"
-        }
-        KeyframeGroup {
-            target: spine_025
-            property: "rotation"
-            keyframeSource: "animations/spine_025_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: leftLegTwist1_0120
-            property: "position"
-            keyframeSource: "animations/leftLegTwist1_0120_position_9.qad"
-        }
-        KeyframeGroup {
-            target: leftLegTwist1_0120
-            property: "rotation"
-            keyframeSource: "animations/leftLegTwist1_0120_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: leftFootBigToe3_0125
-            property: "position"
-            keyframeSource: "animations/leftFootBigToe3_0125_position_9.qad"
-        }
-        KeyframeGroup {
-            target: leftFootBigToe3_0125
-            property: "rotation"
-            keyframeSource: "animations/leftFootBigToe3_0125_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: leftFootBigToe2_0124
-            property: "position"
-            keyframeSource: "animations/leftFootBigToe2_0124_position_9.qad"
-        }
-        KeyframeGroup {
-            target: leftFootBigToe2_0124
-            property: "rotation"
-            keyframeSource: "animations/leftFootBigToe2_0124_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: leftFootBigToe1_0123
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(4.48676, 5.94027, 16.3631)
-            }
-        }
-        KeyframeGroup {
-            target: leftFootBigToe1_0123
-            property: "rotation"
-            keyframeSource: "animations/leftFootBigToe1_0123_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: leftFootIndex3_0128
-            property: "position"
-            keyframeSource: "animations/leftFootIndex3_0128_position_9.qad"
-        }
-        KeyframeGroup {
-            target: leftFootIndex3_0128
-            property: "rotation"
-            keyframeSource: "animations/leftFootIndex3_0128_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: leftFootIndex2_0127
-            property: "position"
-            keyframeSource: "animations/leftFootIndex2_0127_position_9.qad"
-        }
-        KeyframeGroup {
-            target: leftFootIndex2_0127
-            property: "rotation"
-            keyframeSource: "animations/leftFootIndex2_0127_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: leftFootIndex1_0126
-            property: "position"
-            keyframeSource: "animations/leftFootIndex1_0126_position_9.qad"
-        }
-        KeyframeGroup {
-            target: leftFootIndex1_0126
-            property: "rotation"
-            keyframeSource: "animations/leftFootIndex1_0126_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: leftToeBaseEnd_0129
-            property: "position"
-            keyframeSource: "animations/leftToeBaseEnd_0129_position_9.qad"
-        }
-        KeyframeGroup {
-            target: leftToeBaseEnd_0129
-            property: "rotation"
-            keyframeSource: "animations/leftToeBaseEnd_0129_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: leftToeBase_0122
-            property: "position"
-            keyframeSource: "animations/leftToeBase_0122_position_9.qad"
-        }
-        KeyframeGroup {
-            target: leftToeBase_0122
-            property: "rotation"
-            keyframeSource: "animations/leftToeBase_0122_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: leftFoot_0121
-            property: "position"
-            keyframeSource: "animations/leftFoot_0121_position_9.qad"
-        }
-        KeyframeGroup {
-            target: leftFoot_0121
-            property: "rotation"
-            keyframeSource: "animations/leftFoot_0121_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: leftLeg_0119
-            property: "position"
-            keyframeSource: "animations/leftLeg_0119_position_9.qad"
-        }
-        KeyframeGroup {
-            target: leftLeg_0119
-            property: "rotation"
-            keyframeSource: "animations/leftLeg_0119_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: leftUpLegTwist1_0130
-            property: "position"
-            keyframeSource: "animations/leftUpLegTwist1_0130_position_9.qad"
-        }
-        KeyframeGroup {
-            target: leftUpLegTwist1_0130
-            property: "rotation"
-            keyframeSource: "animations/leftUpLegTwist1_0130_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: leftUpLegTwist2_0131
-            property: "position"
-            keyframeSource: "animations/leftUpLegTwist2_0131_position_9.qad"
-        }
-        KeyframeGroup {
-            target: leftUpLegTwist2_0131
-            property: "rotation"
-            keyframeSource: "animations/leftUpLegTwist2_0131_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: leftUpLeg_0118
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(38.4087, -25.5808, -1.47829)
-            }
-        }
-        KeyframeGroup {
-            target: leftUpLeg_0118
-            property: "rotation"
-            keyframeSource: "animations/leftUpLeg_0118_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: skt_Hips_0132
-            property: "position"
-            keyframeSource: "animations/skt_Hips_0132_position_9.qad"
-        }
-        KeyframeGroup {
-            target: skt_Hips_0132
-            property: "rotation"
-            keyframeSource: "animations/skt_Hips_0132_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: hips_09
-            property: "position"
-            keyframeSource: "animations/hips_09_position_9.qad"
-        }
-        KeyframeGroup {
-            target: hips_09
-            property: "rotation"
-            keyframeSource: "animations/hips_09_rotation_9.qad"
-        }
-        KeyframeGroup {
-            target: ik_Hips_0133
-            property: "position"
-            keyframeSource: "animations/ik_Hips_0133_position_9.qad"
-        }
-        KeyframeGroup {
-            target: ik_Hips_0133
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(1, 2.36187e-17, 0, 0)
-            }
-        }
-        KeyframeGroup {
-            target: ik_LeftFoot_0134
-            property: "position"
-            keyframeSource: "animations/ik_LeftFoot_0134_position_9.qad"
-        }
-        KeyframeGroup {
-            target: ik_LeftFoot_0134
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(1, 2.36187e-17, 0, 0)
-            }
-        }
-        KeyframeGroup {
-            target: ik_RightFoot_0135
-            property: "position"
-            keyframeSource: "animations/ik_RightFoot_0135_position_9.qad"
-        }
-        KeyframeGroup {
-            target: ik_RightFoot_0135
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(1, 2.36187e-17, 0, 0)
-            }
-        }
-        KeyframeGroup {
-            target: ik_Head_0136
-            property: "position"
-            keyframeSource: "animations/ik_Head_0136_position_9.qad"
         }
         KeyframeGroup {
             target: ik_Head_0136
@@ -17382,19 +8602,9 @@ Node {
             loops: Animation.Infinite
         }
         KeyframeGroup {
-            target: rightFootIndex3_017
-            property: "position"
-            keyframeSource: "animations/rightFootIndex3_017_position_10.qad"
-        }
-        KeyframeGroup {
-            target: rightFootIndex3_017
-            property: "rotation"
-            keyframeSource: "animations/rightFootIndex3_017_rotation_10.qad"
-        }
-        KeyframeGroup {
             target: ik_Spine3_02
             property: "position"
-            keyframeSource: "animations/ik_Spine3_02_position_10.qad"
+            keyframeSource: "animations/ik_Spine3_02_position_8.qad"
         }
         KeyframeGroup {
             target: ik_Spine3_02
@@ -17402,892 +8612,20 @@ Node {
             Keyframe {
                 frame: 0
                 value: Qt.quaternion(1, 2.36187e-17, 0, 0)
+            }
+        }
+        KeyframeGroup {
+            target: rightInHandIndex_0104
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.921629, 0.353523, 0.113846, -0.112521)
             }
         }
         KeyframeGroup {
             target: rightFootIndex1_015
             property: "rotation"
-            keyframeSource: "animations/rightFootIndex1_015_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: ik_LeftHand_07
-            property: "position"
-            keyframeSource: "animations/ik_LeftHand_07_position_10.qad"
-        }
-        KeyframeGroup {
-            target: ik_LeftHand_07
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(1, 2.36187e-17, 0, 0)
-            }
-        }
-        KeyframeGroup {
-            target: leftHandMiddle3_054
-            property: "position"
-            keyframeSource: "animations/leftHandMiddle3_054_position_10.qad"
-        }
-        KeyframeGroup {
-            target: leftHandMiddle3_054
-            property: "rotation"
-            keyframeSource: "animations/leftHandMiddle3_054_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: ik_RightHand_03
-            property: "position"
-            keyframeSource: "animations/ik_RightHand_03_position_10.qad"
-        }
-        KeyframeGroup {
-            target: ik_RightHand_03
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(1, 2.36187e-17, 0, 0)
-            }
-        }
-        KeyframeGroup {
-            target: skt_HeadCamera_08
-            property: "position"
-            keyframeSource: "animations/skt_HeadCamera_08_position_10.qad"
-        }
-        KeyframeGroup {
-            target: skt_HeadCamera_08
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(1, -5.68198e-14, 0, 0)
-            }
-        }
-        KeyframeGroup {
-            target: leftArm_032
-            property: "position"
-            keyframeSource: "animations/leftArm_032_position_10.qad"
-        }
-        KeyframeGroup {
-            target: leftArm_032
-            property: "rotation"
-            keyframeSource: "animations/leftArm_032_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: rightLegTwist1_012
-            property: "position"
-            keyframeSource: "animations/rightLegTwist1_012_position_10.qad"
-        }
-        KeyframeGroup {
-            target: rightLegTwist1_012
-            property: "rotation"
-            keyframeSource: "animations/rightLegTwist1_012_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: skt_Head_062
-            property: "position"
-            keyframeSource: "animations/skt_Head_062_position_10.qad"
-        }
-        KeyframeGroup {
-            target: skt_Head_062
-            property: "rotation"
-            keyframeSource: "animations/skt_Head_062_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: rightFootIndex2_016
-            property: "position"
-            keyframeSource: "animations/rightFootIndex2_016_position_10.qad"
-        }
-        KeyframeGroup {
-            target: rightFootIndex2_016
-            property: "rotation"
-            keyframeSource: "animations/rightFootIndex2_016_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: rightFootBigToe3_020
-            property: "position"
-            keyframeSource: "animations/rightFootBigToe3_020_position_10.qad"
-        }
-        KeyframeGroup {
-            target: rightFootBigToe3_020
-            property: "rotation"
-            keyframeSource: "animations/rightFootBigToe3_020_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: jaw_065
-            property: "position"
-            keyframeSource: "animations/jaw_065_position_10.qad"
-        }
-        KeyframeGroup {
-            target: jaw_065
-            property: "rotation"
-            keyframeSource: "animations/jaw_065_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: rightFootBigToe2_019
-            property: "position"
-            keyframeSource: "animations/rightFootBigToe2_019_position_10.qad"
-        }
-        KeyframeGroup {
-            target: rightFootBigToe2_019
-            property: "rotation"
-            keyframeSource: "animations/rightFootBigToe2_019_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: rightFootBigToe1_018
-            property: "rotation"
-            keyframeSource: "animations/rightFootBigToe1_018_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: rightToeBaseEnd_021
-            property: "position"
-            keyframeSource: "animations/rightToeBaseEnd_021_position_10.qad"
-        }
-        KeyframeGroup {
-            target: rightToeBaseEnd_021
-            property: "rotation"
-            keyframeSource: "animations/rightToeBaseEnd_021_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: nose_067
-            property: "position"
-            keyframeSource: "animations/nose_067_position_10.qad"
-        }
-        KeyframeGroup {
-            target: nose_067
-            property: "rotation"
-            keyframeSource: "animations/nose_067_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: rightToeBase_014
-            property: "position"
-            keyframeSource: "animations/rightToeBase_014_position_10.qad"
-        }
-        KeyframeGroup {
-            target: rightToeBase_014
-            property: "rotation"
-            keyframeSource: "animations/rightToeBase_014_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: rightFoot_013
-            property: "position"
-            keyframeSource: "animations/rightFoot_013_position_10.qad"
-        }
-        KeyframeGroup {
-            target: rightFoot_013
-            property: "rotation"
-            keyframeSource: "animations/rightFoot_013_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: lip_upper_069
-            property: "position"
-            keyframeSource: "animations/lip_upper_069_position_10.qad"
-        }
-        KeyframeGroup {
-            target: lip_upper_069
-            property: "rotation"
-            keyframeSource: "animations/lip_upper_069_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: rightLeg_011
-            property: "position"
-            keyframeSource: "animations/rightLeg_011_position_10.qad"
-        }
-        KeyframeGroup {
-            target: rightLeg_011
-            property: "rotation"
-            keyframeSource: "animations/rightLeg_011_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: lip_lower_070
-            property: "position"
-            keyframeSource: "animations/lip_lower_070_position_10.qad"
-        }
-        KeyframeGroup {
-            target: lip_lower_070
-            property: "rotation"
-            keyframeSource: "animations/lip_lower_070_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: rightUpLegTwist1_022
-            property: "position"
-            keyframeSource: "animations/rightUpLegTwist1_022_position_10.qad"
-        }
-        KeyframeGroup {
-            target: rightUpLegTwist1_022
-            property: "rotation"
-            keyframeSource: "animations/rightUpLegTwist1_022_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: rightUpLegTwist2_023
-            property: "position"
-            keyframeSource: "animations/rightUpLegTwist2_023_position_10.qad"
-        }
-        KeyframeGroup {
-            target: rightUpLegTwist2_023
-            property: "rotation"
-            keyframeSource: "animations/rightUpLegTwist2_023_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_in_right_072
-            property: "position"
-            keyframeSource: "animations/eye_lid_in_right_072_position_10.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_in_right_072
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_in_right_072_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: rightUpLeg_010
-            property: "rotation"
-            keyframeSource: "animations/rightUpLeg_010_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_out_right_073
-            property: "position"
-            keyframeSource: "animations/eye_lid_out_right_073_position_10.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_out_right_073
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_out_right_073_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_Hips_024
-            property: "position"
-            keyframeSource: "animations/skt_FX_Hips_024_position_10.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_Hips_024
-            property: "rotation"
-            keyframeSource: "animations/skt_FX_Hips_024_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: skt_Back_029
-            property: "position"
-            keyframeSource: "animations/skt_Back_029_position_10.qad"
-        }
-        KeyframeGroup {
-            target: skt_Back_029
-            property: "rotation"
-            keyframeSource: "animations/skt_Back_029_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: tongue_05_080
-            property: "position"
-            keyframeSource: "animations/tongue_05_080_position_10.qad"
-        }
-        KeyframeGroup {
-            target: tongue_05_080
-            property: "rotation"
-            keyframeSource: "animations/tongue_05_080_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: skt_Chest_030
-            property: "position"
-            keyframeSource: "animations/skt_Chest_030_position_10.qad"
-        }
-        KeyframeGroup {
-            target: skt_Chest_030
-            property: "rotation"
-            keyframeSource: "animations/skt_Chest_030_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArmTwist3_034
-            property: "position"
-            keyframeSource: "animations/leftForeArmTwist3_034_position_10.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArmTwist3_034
-            property: "rotation"
-            keyframeSource: "animations/leftForeArmTwist3_034_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArmTwist1_035
-            property: "position"
-            keyframeSource: "animations/leftForeArmTwist1_035_position_10.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArmTwist1_035
-            property: "rotation"
-            keyframeSource: "animations/leftForeArmTwist1_035_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky4_041
-            property: "position"
-            keyframeSource: "animations/leftHandPinky4_041_position_10.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky4_041
-            property: "rotation"
-            keyframeSource: "animations/leftHandPinky4_041_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky3_040
-            property: "position"
-            keyframeSource: "animations/leftHandPinky3_040_position_10.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky3_040
-            property: "rotation"
-            keyframeSource: "animations/leftHandPinky3_040_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky2_039
-            property: "position"
-            keyframeSource: "animations/leftHandPinky2_039_position_10.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky2_039
-            property: "rotation"
-            keyframeSource: "animations/leftHandPinky2_039_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky1_038
-            property: "rotation"
-            keyframeSource: "animations/leftHandPinky1_038_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: leftInHandPinky_037
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(7.95256, -1.34661, 19.4513)
-            }
-        }
-        KeyframeGroup {
-            target: leftInHandPinky_037
-            property: "rotation"
-            keyframeSource: "animations/leftInHandPinky_037_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: skt_LeftHand_042
-            property: "position"
-            keyframeSource: "animations/skt_LeftHand_042_position_10.qad"
-        }
-        KeyframeGroup {
-            target: skt_LeftHand_042
-            property: "rotation"
-            keyframeSource: "animations/skt_LeftHand_042_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex4_047
-            property: "position"
-            keyframeSource: "animations/leftHandIndex4_047_position_10.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex4_047
-            property: "rotation"
-            keyframeSource: "animations/leftHandIndex4_047_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex3_046
-            property: "position"
-            keyframeSource: "animations/leftHandIndex3_046_position_10.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex3_046
-            property: "rotation"
-            keyframeSource: "animations/leftHandIndex3_046_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex2_045
-            property: "position"
-            keyframeSource: "animations/leftHandIndex2_045_position_10.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex2_045
-            property: "rotation"
-            keyframeSource: "animations/leftHandIndex2_045_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex1_044
-            property: "position"
-            keyframeSource: "animations/leftHandIndex1_044_position_10.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex1_044
-            property: "rotation"
-            keyframeSource: "animations/leftHandIndex1_044_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: leftInHandIndex_043
-            property: "position"
-            keyframeSource: "animations/leftInHandIndex_043_position_10.qad"
-        }
-        KeyframeGroup {
-            target: leftInHandIndex_043
-            property: "rotation"
-            keyframeSource: "animations/leftInHandIndex_043_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_LeftHand_00
-            property: "position"
-            keyframeSource: "animations/skt_FX_LeftHand_00_position_10.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_LeftHand_00
-            property: "rotation"
-            keyframeSource: "animations/skt_FX_LeftHand_00_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb4_050
-            property: "position"
-            keyframeSource: "animations/leftHandThumb4_050_position_10.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb4_050
-            property: "rotation"
-            keyframeSource: "animations/leftHandThumb4_050_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb3_049
-            property: "position"
-            keyframeSource: "animations/leftHandThumb3_049_position_10.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb3_049
-            property: "rotation"
-            keyframeSource: "animations/leftHandThumb3_049_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb2_048
-            property: "position"
-            keyframeSource: "animations/leftHandThumb2_048_position_10.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb2_048
-            property: "rotation"
-            keyframeSource: "animations/leftHandThumb2_048_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb1_01
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(4.37416, 16.1999, -15.6615)
-            }
-        }
-        KeyframeGroup {
-            target: leftHandThumb1_01
-            property: "rotation"
-            keyframeSource: "animations/leftHandThumb1_01_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: leftHandMiddle4_055
-            property: "position"
-            keyframeSource: "animations/leftHandMiddle4_055_position_10.qad"
-        }
-        KeyframeGroup {
-            target: leftHandMiddle4_055
-            property: "rotation"
-            keyframeSource: "animations/leftHandMiddle4_055_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: leftHandMiddle2_053
-            property: "position"
-            keyframeSource: "animations/leftHandMiddle2_053_position_10.qad"
-        }
-        KeyframeGroup {
-            target: leftHandMiddle2_053
-            property: "rotation"
-            keyframeSource: "animations/leftHandMiddle2_053_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: leftHandMiddle1_052
-            property: "position"
-            keyframeSource: "animations/leftHandMiddle1_052_position_10.qad"
-        }
-        KeyframeGroup {
-            target: leftHandMiddle1_052
-            property: "rotation"
-            keyframeSource: "animations/leftHandMiddle1_052_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: leftInHandMiddle_051
-            property: "position"
-            keyframeSource: "animations/leftInHandMiddle_051_position_10.qad"
-        }
-        KeyframeGroup {
-            target: leftInHandMiddle_051
-            property: "rotation"
-            keyframeSource: "animations/leftInHandMiddle_051_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: leftHand_036
-            property: "position"
-            keyframeSource: "animations/leftHand_036_position_10.qad"
-        }
-        KeyframeGroup {
-            target: leftHand_036
-            property: "rotation"
-            keyframeSource: "animations/leftHand_036_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArmTwist2_056
-            property: "position"
-            keyframeSource: "animations/leftForeArmTwist2_056_position_10.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArmTwist2_056
-            property: "rotation"
-            keyframeSource: "animations/leftForeArmTwist2_056_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArm_033
-            property: "position"
-            keyframeSource: "animations/leftForeArm_033_position_10.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArm_033
-            property: "rotation"
-            keyframeSource: "animations/leftForeArm_033_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: leftArmTwist1_057
-            property: "position"
-            keyframeSource: "animations/leftArmTwist1_057_position_10.qad"
-        }
-        KeyframeGroup {
-            target: leftArmTwist1_057
-            property: "rotation"
-            keyframeSource: "animations/leftArmTwist1_057_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: leftArmTwist2_058
-            property: "position"
-            keyframeSource: "animations/leftArmTwist2_058_position_10.qad"
-        }
-        KeyframeGroup {
-            target: leftArmTwist2_058
-            property: "rotation"
-            keyframeSource: "animations/leftArmTwist2_058_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: leftShoulder_031
-            property: "rotation"
-            keyframeSource: "animations/leftShoulder_031_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: headEnd_063
-            property: "position"
-            keyframeSource: "animations/headEnd_063_position_10.qad"
-        }
-        KeyframeGroup {
-            target: headEnd_063
-            property: "rotation"
-            keyframeSource: "animations/headEnd_063_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: eye_left_066
-            property: "position"
-            keyframeSource: "animations/eye_left_066_position_10.qad"
-        }
-        KeyframeGroup {
-            target: eye_left_066
-            property: "rotation"
-            keyframeSource: "animations/eye_left_066_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: lip_corners_068
-            property: "position"
-            keyframeSource: "animations/lip_corners_068_position_10.qad"
-        }
-        KeyframeGroup {
-            target: lip_corners_068
-            property: "rotation"
-            keyframeSource: "animations/lip_corners_068_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_right_071
-            property: "position"
-            keyframeSource: "animations/eye_lid_right_071_position_10.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_right_071
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_right_071_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: tongue_06_081
-            property: "position"
-            keyframeSource: "animations/tongue_06_081_position_10.qad"
-        }
-        KeyframeGroup {
-            target: tongue_06_081
-            property: "rotation"
-            keyframeSource: "animations/tongue_06_081_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: tongue_04_079
-            property: "position"
-            keyframeSource: "animations/tongue_04_079_position_10.qad"
-        }
-        KeyframeGroup {
-            target: tongue_04_079
-            property: "rotation"
-            keyframeSource: "animations/tongue_04_079_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: tongue_03_078
-            property: "position"
-            keyframeSource: "animations/tongue_03_078_position_10.qad"
-        }
-        KeyframeGroup {
-            target: tongue_03_078
-            property: "rotation"
-            keyframeSource: "animations/tongue_03_078_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: tongue_02_077
-            property: "position"
-            keyframeSource: "animations/tongue_02_077_position_10.qad"
-        }
-        KeyframeGroup {
-            target: tongue_02_077
-            property: "rotation"
-            keyframeSource: "animations/tongue_02_077_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: tongue_01_076
-            property: "position"
-            keyframeSource: "animations/tongue_01_076_position_10.qad"
-        }
-        KeyframeGroup {
-            target: tongue_01_076
-            property: "rotation"
-            keyframeSource: "animations/tongue_01_076_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: tongue_jaw_075
-            property: "position"
-            keyframeSource: "animations/tongue_jaw_075_position_10.qad"
-        }
-        KeyframeGroup {
-            target: tongue_jaw_075
-            property: "rotation"
-            keyframeSource: "animations/tongue_jaw_075_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: teeth_lwr_082
-            property: "position"
-            keyframeSource: "animations/teeth_lwr_082_position_10.qad"
-        }
-        KeyframeGroup {
-            target: teeth_lwr_082
-            property: "rotation"
-            keyframeSource: "animations/teeth_lwr_082_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: teeth_upr_083
-            property: "position"
-            keyframeSource: "animations/teeth_upr_083_position_10.qad"
-        }
-        KeyframeGroup {
-            target: teeth_upr_083
-            property: "rotation"
-            keyframeSource: "animations/teeth_upr_083_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: mouth_bag_074
-            property: "position"
-            keyframeSource: "animations/mouth_bag_074_position_10.qad"
-        }
-        KeyframeGroup {
-            target: mouth_bag_074
-            property: "rotation"
-            keyframeSource: "animations/mouth_bag_074_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: eye_right_084
-            property: "position"
-            keyframeSource: "animations/eye_right_084_position_10.qad"
-        }
-        KeyframeGroup {
-            target: eye_right_084
-            property: "rotation"
-            keyframeSource: "animations/eye_right_084_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_out_left_086
-            property: "position"
-            keyframeSource: "animations/eye_lid_out_left_086_position_10.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_out_left_086
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_out_left_086_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_in_left_087
-            property: "position"
-            keyframeSource: "animations/eye_lid_in_left_087_position_10.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_in_left_087
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_in_left_087_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_left_085
-            property: "position"
-            keyframeSource: "animations/eye_lid_left_085_position_10.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_left_085
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_left_085_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: face_064
-            property: "position"
-            keyframeSource: "animations/face_064_position_10.qad"
-        }
-        KeyframeGroup {
-            target: face_064
-            property: "rotation"
-            keyframeSource: "animations/face_064_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: head_061
-            property: "position"
-            keyframeSource: "animations/head_061_position_10.qad"
-        }
-        KeyframeGroup {
-            target: head_061
-            property: "rotation"
-            keyframeSource: "animations/head_061_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: neck1_060
-            property: "position"
-            keyframeSource: "animations/neck1_060_position_10.qad"
-        }
-        KeyframeGroup {
-            target: neck1_060
-            property: "rotation"
-            keyframeSource: "animations/neck1_060_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: neck_059
-            property: "position"
-            keyframeSource: "animations/neck_059_position_10.qad"
-        }
-        KeyframeGroup {
-            target: neck_059
-            property: "rotation"
-            keyframeSource: "animations/neck_059_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: rightArmTwist1_090
-            property: "position"
-            keyframeSource: "animations/rightArmTwist1_090_position_10.qad"
-        }
-        KeyframeGroup {
-            target: rightArmTwist1_090
-            property: "rotation"
-            keyframeSource: "animations/rightArmTwist1_090_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_RightHand_093
-            property: "position"
-            keyframeSource: "animations/skt_FX_RightHand_093_position_10.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_RightHand_093
-            property: "rotation"
-            keyframeSource: "animations/skt_FX_RightHand_093_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb4_097
-            property: "position"
-            keyframeSource: "animations/rightHandThumb4_097_position_10.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb4_097
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.999301, 0.0212541, -0.00852275, 0.0295585)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandThumb3_096
-            property: "position"
-            keyframeSource: "animations/rightHandThumb3_096_position_10.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb3_096
-            property: "rotation"
-            keyframeSource: "animations/rightHandThumb3_096_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb2_095
-            property: "position"
-            keyframeSource: "animations/rightHandThumb2_095_position_10.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb2_095
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.969428, 0.224882, 0.0779004, 0.059731)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandThumb1_094
-            property: "rotation"
-            keyframeSource: "animations/rightHandThumb1_094_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle4_0102
-            property: "position"
-            keyframeSource: "animations/rightHandMiddle4_0102_position_10.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle4_0102
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.973604, -0.0497167, -0.0333391, 0.220254)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandMiddle3_0101
-            property: "position"
-            keyframeSource: "animations/rightHandMiddle3_0101_position_10.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle3_0101
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.940086, 0.0498863, 0.0225632, 0.336512)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandMiddle2_0100
-            property: "position"
-            keyframeSource: "animations/rightHandMiddle2_0100_position_10.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle2_0100
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.968908, 0.0430647, 0.0332209, 0.241368)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandMiddle1_099
-            property: "position"
-            keyframeSource: "animations/rightHandMiddle1_099_position_10.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle1_099
-            property: "rotation"
-            keyframeSource: "animations/rightHandMiddle1_099_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: rightInHandMiddle_098
-            property: "position"
-            keyframeSource: "animations/rightInHandMiddle_098_position_10.qad"
+            keyframeSource: "animations/rightFootIndex1_015_rotation_8.qad"
         }
         KeyframeGroup {
             target: rightInHandMiddle_098
@@ -18298,29 +8636,310 @@ Node {
             }
         }
         KeyframeGroup {
-            target: skt_RightHand_0103
+            target: ik_LeftHand_07
             property: "position"
-            keyframeSource: "animations/skt_RightHand_0103_position_10.qad"
+            keyframeSource: "animations/ik_LeftHand_07_position_8.qad"
+        }
+        KeyframeGroup {
+            target: ik_LeftHand_07
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(1, 2.36187e-17, 0, 0)
+            }
+        }
+        KeyframeGroup {
+            target: rightHandThumb3_096
+            property: "rotation"
+            keyframeSource: "animations/rightHandThumb3_096_rotation_8.qad"
+        }
+        KeyframeGroup {
+            target: leftHandMiddle3_054
+            property: "rotation"
+            keyframeSource: "animations/leftHandMiddle3_054_rotation_8.qad"
+        }
+        KeyframeGroup {
+            target: ik_RightHand_03
+            property: "position"
+            keyframeSource: "animations/ik_RightHand_03_position_8.qad"
+        }
+        KeyframeGroup {
+            target: ik_RightHand_03
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(1, 2.36187e-17, 0, 0)
+            }
         }
         KeyframeGroup {
             target: skt_RightHand_0103
             property: "rotation"
-            keyframeSource: "animations/skt_RightHand_0103_rotation_10.qad"
+            keyframeSource: "animations/skt_RightHand_0103_rotation_8.qad"
         }
         KeyframeGroup {
-            target: rightHandIndex4_0108
+            target: skt_HeadCamera_08
             property: "position"
-            keyframeSource: "animations/rightHandIndex4_0108_position_10.qad"
+            keyframeSource: "animations/skt_HeadCamera_08_position_8.qad"
+        }
+        KeyframeGroup {
+            target: skt_HeadCamera_08
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(1, -5.68198e-14, 0, 0)
+            }
+        }
+        KeyframeGroup {
+            target: rightHandPinky2_0111
+            property: "rotation"
+            keyframeSource: "animations/rightHandPinky2_0111_rotation_8.qad"
+        }
+        KeyframeGroup {
+            target: rightFootBigToe1_018
+            property: "rotation"
+            keyframeSource: "animations/rightFootBigToe1_018_rotation_8.qad"
         }
         KeyframeGroup {
             target: rightHandIndex4_0108
             property: "rotation"
-            keyframeSource: "animations/rightHandIndex4_0108_rotation_10.qad"
+            keyframeSource: "animations/rightHandIndex4_0108_rotation_8.qad"
         }
         KeyframeGroup {
-            target: rightHandIndex3_0107
+            target: leftArm_032
+            property: "rotation"
+            keyframeSource: "animations/leftArm_032_rotation_8.qad"
+        }
+        KeyframeGroup {
+            target: rightLegTwist1_012
+            property: "rotation"
+            keyframeSource: "animations/rightLegTwist1_012_rotation_8.qad"
+        }
+        KeyframeGroup {
+            target: rightHandPinky3_0112
+            property: "rotation"
+            keyframeSource: "animations/rightHandPinky3_0112_rotation_8.qad"
+        }
+        KeyframeGroup {
+            target: rightFootBigToe2_019
+            property: "rotation"
+            keyframeSource: "animations/rightFootBigToe2_019_rotation_8.qad"
+        }
+        KeyframeGroup {
+            target: rightToeBase_014
+            property: "rotation"
+            keyframeSource: "animations/rightToeBase_014_rotation_8.qad"
+        }
+        KeyframeGroup {
+            target: rightFoot_013
+            property: "rotation"
+            keyframeSource: "animations/rightFoot_013_rotation_8.qad"
+        }
+        KeyframeGroup {
+            target: rightLeg_011
             property: "position"
-            keyframeSource: "animations/rightHandIndex3_0107_position_10.qad"
+            keyframeSource: "animations/rightLeg_011_position_8.qad"
+        }
+        KeyframeGroup {
+            target: rightLeg_011
+            property: "rotation"
+            keyframeSource: "animations/rightLeg_011_rotation_8.qad"
+        }
+        KeyframeGroup {
+            target: rightUpLegTwist1_022
+            property: "rotation"
+            keyframeSource: "animations/rightUpLegTwist1_022_rotation_8.qad"
+        }
+        KeyframeGroup {
+            target: rightUpLegTwist2_023
+            property: "rotation"
+            keyframeSource: "animations/rightUpLegTwist2_023_rotation_8.qad"
+        }
+        KeyframeGroup {
+            target: rightUpLeg_010
+            property: "rotation"
+            keyframeSource: "animations/rightUpLeg_010_rotation_8.qad"
+        }
+        KeyframeGroup {
+            target: leftForeArmTwist3_034
+            property: "rotation"
+            keyframeSource: "animations/leftForeArmTwist3_034_rotation_8.qad"
+        }
+        KeyframeGroup {
+            target: leftForeArmTwist1_035
+            property: "rotation"
+            keyframeSource: "animations/leftForeArmTwist1_035_rotation_8.qad"
+        }
+        KeyframeGroup {
+            target: leftHandPinky4_041
+            property: "rotation"
+            keyframeSource: "animations/leftHandPinky4_041_rotation_8.qad"
+        }
+        KeyframeGroup {
+            target: leftHandPinky3_040
+            property: "rotation"
+            keyframeSource: "animations/leftHandPinky3_040_rotation_8.qad"
+        }
+        KeyframeGroup {
+            target: leftHandPinky2_039
+            property: "rotation"
+            keyframeSource: "animations/leftHandPinky2_039_rotation_8.qad"
+        }
+        KeyframeGroup {
+            target: leftHandPinky1_038
+            property: "rotation"
+            keyframeSource: "animations/leftHandPinky1_038_rotation_8.qad"
+        }
+        KeyframeGroup {
+            target: leftInHandPinky_037
+            property: "rotation"
+            keyframeSource: "animations/leftInHandPinky_037_rotation_8.qad"
+        }
+        KeyframeGroup {
+            target: leftHandIndex4_047
+            property: "rotation"
+            keyframeSource: "animations/leftHandIndex4_047_rotation_8.qad"
+        }
+        KeyframeGroup {
+            target: leftHandIndex3_046
+            property: "rotation"
+            keyframeSource: "animations/leftHandIndex3_046_rotation_8.qad"
+        }
+        KeyframeGroup {
+            target: leftHandIndex2_045
+            property: "rotation"
+            keyframeSource: "animations/leftHandIndex2_045_rotation_8.qad"
+        }
+        KeyframeGroup {
+            target: leftHandIndex1_044
+            property: "rotation"
+            keyframeSource: "animations/leftHandIndex1_044_rotation_8.qad"
+        }
+        KeyframeGroup {
+            target: leftInHandIndex_043
+            property: "rotation"
+            keyframeSource: "animations/leftInHandIndex_043_rotation_8.qad"
+        }
+        KeyframeGroup {
+            target: leftHandThumb4_050
+            property: "rotation"
+            keyframeSource: "animations/leftHandThumb4_050_rotation_8.qad"
+        }
+        KeyframeGroup {
+            target: rightArmTwist1_090
+            property: "rotation"
+            keyframeSource: "animations/rightArmTwist1_090_rotation_8.qad"
+        }
+        KeyframeGroup {
+            target: leftHandThumb3_049
+            property: "rotation"
+            keyframeSource: "animations/leftHandThumb3_049_rotation_8.qad"
+        }
+        KeyframeGroup {
+            target: leftHandThumb2_048
+            property: "rotation"
+            keyframeSource: "animations/leftHandThumb2_048_rotation_8.qad"
+        }
+        KeyframeGroup {
+            target: leftHandThumb1_01
+            property: "rotation"
+            keyframeSource: "animations/leftHandThumb1_01_rotation_8.qad"
+        }
+        KeyframeGroup {
+            target: rightHandThumb4_097
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.999301, 0.0212541, -0.00852275, 0.0295585)
+            }
+        }
+        KeyframeGroup {
+            target: leftHandMiddle4_055
+            property: "rotation"
+            keyframeSource: "animations/leftHandMiddle4_055_rotation_8.qad"
+        }
+        KeyframeGroup {
+            target: rightHandThumb2_095
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.969428, 0.224882, 0.0779004, 0.059731)
+            }
+        }
+        KeyframeGroup {
+            target: leftHandMiddle2_053
+            property: "rotation"
+            keyframeSource: "animations/leftHandMiddle2_053_rotation_8.qad"
+        }
+        KeyframeGroup {
+            target: rightHandThumb1_094
+            property: "rotation"
+            keyframeSource: "animations/rightHandThumb1_094_rotation_8.qad"
+        }
+        KeyframeGroup {
+            target: leftHandMiddle1_052
+            property: "rotation"
+            keyframeSource: "animations/leftHandMiddle1_052_rotation_8.qad"
+        }
+        KeyframeGroup {
+            target: leftInHandMiddle_051
+            property: "rotation"
+            keyframeSource: "animations/leftInHandMiddle_051_rotation_8.qad"
+        }
+        KeyframeGroup {
+            target: rightHandMiddle4_0102
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.973604, -0.0497167, -0.0333391, 0.220254)
+            }
+        }
+        KeyframeGroup {
+            target: leftHand_036
+            property: "position"
+            keyframeSource: "animations/leftHand_036_position_8.qad"
+        }
+        KeyframeGroup {
+            target: leftHand_036
+            property: "rotation"
+            keyframeSource: "animations/leftHand_036_rotation_8.qad"
+        }
+        KeyframeGroup {
+            target: rightHandMiddle2_0100
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.968908, 0.0430647, 0.0332209, 0.241368)
+            }
+        }
+        KeyframeGroup {
+            target: leftForeArmTwist2_056
+            property: "rotation"
+            keyframeSource: "animations/leftForeArmTwist2_056_rotation_8.qad"
+        }
+        KeyframeGroup {
+            target: rightHandMiddle1_099
+            property: "rotation"
+            keyframeSource: "animations/rightHandMiddle1_099_rotation_8.qad"
+        }
+        KeyframeGroup {
+            target: leftForeArm_033
+            property: "position"
+            keyframeSource: "animations/leftForeArm_033_position_8.qad"
+        }
+        KeyframeGroup {
+            target: leftForeArm_033
+            property: "rotation"
+            keyframeSource: "animations/leftForeArm_033_rotation_8.qad"
+        }
+        KeyframeGroup {
+            target: leftArmTwist1_057
+            property: "rotation"
+            keyframeSource: "animations/leftArmTwist1_057_rotation_8.qad"
+        }
+        KeyframeGroup {
+            target: leftArmTwist2_058
+            property: "rotation"
+            keyframeSource: "animations/leftArmTwist2_058_rotation_8.qad"
         }
         KeyframeGroup {
             target: rightHandIndex3_0107
@@ -18331,9 +8950,37 @@ Node {
             }
         }
         KeyframeGroup {
-            target: rightHandIndex2_0106
+            target: leftShoulder_031
+            property: "rotation"
+            keyframeSource: "animations/leftShoulder_031_rotation_8.qad"
+        }
+        KeyframeGroup {
+            target: head_061
+            property: "rotation"
+            keyframeSource: "animations/head_061_rotation_8.qad"
+        }
+        KeyframeGroup {
+            target: neck1_060
+            property: "rotation"
+            keyframeSource: "animations/neck1_060_rotation_8.qad"
+        }
+        KeyframeGroup {
+            target: neck_059
             property: "position"
-            keyframeSource: "animations/rightHandIndex2_0106_position_10.qad"
+            keyframeSource: "animations/neck_059_position_8.qad"
+        }
+        KeyframeGroup {
+            target: neck_059
+            property: "rotation"
+            keyframeSource: "animations/neck_059_rotation_8.qad"
+        }
+        KeyframeGroup {
+            target: rightHandMiddle3_0101
+            property: "rotation"
+            Keyframe {
+                frame: 0
+                value: Qt.quaternion(0.940086, 0.0498863, 0.0225632, 0.336512)
+            }
         }
         KeyframeGroup {
             target: rightHandIndex2_0106
@@ -18345,67 +8992,18 @@ Node {
         }
         KeyframeGroup {
             target: rightHandIndex1_0105
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(-44.2471, 5.37654, 0.826607)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandIndex1_0105
             property: "rotation"
-            keyframeSource: "animations/rightHandIndex1_0105_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: rightInHandIndex_0104
-            property: "rotation"
-            Keyframe {
-                frame: 0
-                value: Qt.quaternion(0.921629, 0.353523, 0.113846, -0.112521)
-            }
-        }
-        KeyframeGroup {
-            target: rightHandPinky4_0113
-            property: "position"
-            keyframeSource: "animations/rightHandPinky4_0113_position_10.qad"
+            keyframeSource: "animations/rightHandIndex1_0105_rotation_8.qad"
         }
         KeyframeGroup {
             target: rightHandPinky4_0113
             property: "rotation"
-            keyframeSource: "animations/rightHandPinky4_0113_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: rightHandPinky3_0112
-            property: "position"
-            keyframeSource: "animations/rightHandPinky3_0112_position_10.qad"
-        }
-        KeyframeGroup {
-            target: rightHandPinky3_0112
-            property: "rotation"
-            keyframeSource: "animations/rightHandPinky3_0112_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: rightHandPinky2_0111
-            property: "position"
-            keyframeSource: "animations/rightHandPinky2_0111_position_10.qad"
-        }
-        KeyframeGroup {
-            target: rightHandPinky2_0111
-            property: "rotation"
-            keyframeSource: "animations/rightHandPinky2_0111_rotation_10.qad"
+            keyframeSource: "animations/rightHandPinky4_0113_rotation_8.qad"
         }
         KeyframeGroup {
             target: rightHandPinky1_0110
             property: "rotation"
-            keyframeSource: "animations/rightHandPinky1_0110_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: rightInHandPinky_0109
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(-7.9519, 1.34685, -19.4511)
-            }
+            keyframeSource: "animations/rightHandPinky1_0110_rotation_8.qad"
         }
         KeyframeGroup {
             target: rightInHandPinky_0109
@@ -18417,276 +9015,143 @@ Node {
         }
         KeyframeGroup {
             target: rightHand_092
-            property: "position"
-            keyframeSource: "animations/rightHand_092_position_10.qad"
-        }
-        KeyframeGroup {
-            target: rightHand_092
             property: "rotation"
-            keyframeSource: "animations/rightHand_092_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArmTwist3_0114
-            property: "position"
-            keyframeSource: "animations/rightForeArmTwist3_0114_position_10.qad"
+            keyframeSource: "animations/rightHand_092_rotation_8.qad"
         }
         KeyframeGroup {
             target: rightForeArmTwist3_0114
             property: "rotation"
-            keyframeSource: "animations/rightForeArmTwist3_0114_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArmTwist2_0115
-            property: "position"
-            keyframeSource: "animations/rightForeArmTwist2_0115_position_10.qad"
+            keyframeSource: "animations/rightForeArmTwist3_0114_rotation_8.qad"
         }
         KeyframeGroup {
             target: rightForeArmTwist2_0115
             property: "rotation"
-            keyframeSource: "animations/rightForeArmTwist2_0115_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArmTwist1_0116
-            property: "position"
-            keyframeSource: "animations/rightForeArmTwist1_0116_position_10.qad"
+            keyframeSource: "animations/rightForeArmTwist2_0115_rotation_8.qad"
         }
         KeyframeGroup {
             target: rightForeArmTwist1_0116
             property: "rotation"
-            keyframeSource: "animations/rightForeArmTwist1_0116_rotation_10.qad"
+            keyframeSource: "animations/rightForeArmTwist1_0116_rotation_8.qad"
         }
         KeyframeGroup {
             target: rightForeArm_091
             property: "position"
-            keyframeSource: "animations/rightForeArm_091_position_10.qad"
+            keyframeSource: "animations/rightForeArm_091_position_8.qad"
         }
         KeyframeGroup {
             target: rightForeArm_091
             property: "rotation"
-            keyframeSource: "animations/rightForeArm_091_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: rightArmTwist2_0117
-            property: "position"
-            keyframeSource: "animations/rightArmTwist2_0117_position_10.qad"
+            keyframeSource: "animations/rightForeArm_091_rotation_8.qad"
         }
         KeyframeGroup {
             target: rightArmTwist2_0117
             property: "rotation"
-            keyframeSource: "animations/rightArmTwist2_0117_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: rightArm_089
-            property: "position"
-            keyframeSource: "animations/rightArm_089_position_10.qad"
+            keyframeSource: "animations/rightArmTwist2_0117_rotation_8.qad"
         }
         KeyframeGroup {
             target: rightArm_089
             property: "rotation"
-            keyframeSource: "animations/rightArm_089_rotation_10.qad"
+            keyframeSource: "animations/rightArm_089_rotation_8.qad"
         }
         KeyframeGroup {
             target: rightShoulder_088
             property: "rotation"
-            keyframeSource: "animations/rightShoulder_088_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: spine3_028
-            property: "position"
-            keyframeSource: "animations/spine3_028_position_10.qad"
+            keyframeSource: "animations/rightShoulder_088_rotation_8.qad"
         }
         KeyframeGroup {
             target: spine3_028
             property: "rotation"
-            keyframeSource: "animations/spine3_028_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: spine2_027
-            property: "position"
-            keyframeSource: "animations/spine2_027_position_10.qad"
+            keyframeSource: "animations/spine3_028_rotation_8.qad"
         }
         KeyframeGroup {
             target: spine2_027
             property: "rotation"
-            keyframeSource: "animations/spine2_027_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: spine1_026
-            property: "position"
-            keyframeSource: "animations/spine1_026_position_10.qad"
+            keyframeSource: "animations/spine2_027_rotation_8.qad"
         }
         KeyframeGroup {
             target: spine1_026
             property: "rotation"
-            keyframeSource: "animations/spine1_026_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: spine_025
-            property: "position"
-            keyframeSource: "animations/spine_025_position_10.qad"
+            keyframeSource: "animations/spine1_026_rotation_8.qad"
         }
         KeyframeGroup {
             target: spine_025
             property: "rotation"
-            keyframeSource: "animations/spine_025_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: leftLegTwist1_0120
-            property: "position"
-            keyframeSource: "animations/leftLegTwist1_0120_position_10.qad"
+            keyframeSource: "animations/spine_025_rotation_8.qad"
         }
         KeyframeGroup {
             target: leftLegTwist1_0120
             property: "rotation"
-            keyframeSource: "animations/leftLegTwist1_0120_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: leftFootBigToe3_0125
-            property: "position"
-            keyframeSource: "animations/leftFootBigToe3_0125_position_10.qad"
-        }
-        KeyframeGroup {
-            target: leftFootBigToe3_0125
-            property: "rotation"
-            keyframeSource: "animations/leftFootBigToe3_0125_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: leftFootBigToe2_0124
-            property: "position"
-            keyframeSource: "animations/leftFootBigToe2_0124_position_10.qad"
+            keyframeSource: "animations/leftLegTwist1_0120_rotation_8.qad"
         }
         KeyframeGroup {
             target: leftFootBigToe2_0124
             property: "rotation"
-            keyframeSource: "animations/leftFootBigToe2_0124_rotation_10.qad"
+            keyframeSource: "animations/leftFootBigToe2_0124_rotation_8.qad"
         }
         KeyframeGroup {
             target: leftFootBigToe1_0123
             property: "rotation"
-            keyframeSource: "animations/leftFootBigToe1_0123_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: leftFootIndex3_0128
-            property: "position"
-            keyframeSource: "animations/leftFootIndex3_0128_position_10.qad"
-        }
-        KeyframeGroup {
-            target: leftFootIndex3_0128
-            property: "rotation"
-            keyframeSource: "animations/leftFootIndex3_0128_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: leftFootIndex2_0127
-            property: "position"
-            keyframeSource: "animations/leftFootIndex2_0127_position_10.qad"
+            keyframeSource: "animations/leftFootBigToe1_0123_rotation_8.qad"
         }
         KeyframeGroup {
             target: leftFootIndex2_0127
             property: "rotation"
-            keyframeSource: "animations/leftFootIndex2_0127_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: leftFootIndex1_0126
-            property: "position"
-            Keyframe {
-                frame: 0
-                value: Qt.vector3d(16.1655, 1.34474, -23.2399)
-            }
+            keyframeSource: "animations/leftFootIndex2_0127_rotation_8.qad"
         }
         KeyframeGroup {
             target: leftFootIndex1_0126
             property: "rotation"
-            keyframeSource: "animations/leftFootIndex1_0126_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: leftToeBaseEnd_0129
-            property: "position"
-            keyframeSource: "animations/leftToeBaseEnd_0129_position_10.qad"
-        }
-        KeyframeGroup {
-            target: leftToeBaseEnd_0129
-            property: "rotation"
-            keyframeSource: "animations/leftToeBaseEnd_0129_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: leftToeBase_0122
-            property: "position"
-            keyframeSource: "animations/leftToeBase_0122_position_10.qad"
+            keyframeSource: "animations/leftFootIndex1_0126_rotation_8.qad"
         }
         KeyframeGroup {
             target: leftToeBase_0122
             property: "rotation"
-            keyframeSource: "animations/leftToeBase_0122_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: leftFoot_0121
-            property: "position"
-            keyframeSource: "animations/leftFoot_0121_position_10.qad"
+            keyframeSource: "animations/leftToeBase_0122_rotation_8.qad"
         }
         KeyframeGroup {
             target: leftFoot_0121
             property: "rotation"
-            keyframeSource: "animations/leftFoot_0121_rotation_10.qad"
+            keyframeSource: "animations/leftFoot_0121_rotation_8.qad"
         }
         KeyframeGroup {
             target: leftLeg_0119
             property: "position"
-            keyframeSource: "animations/leftLeg_0119_position_10.qad"
+            keyframeSource: "animations/leftLeg_0119_position_8.qad"
         }
         KeyframeGroup {
             target: leftLeg_0119
             property: "rotation"
-            keyframeSource: "animations/leftLeg_0119_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: leftUpLegTwist1_0130
-            property: "position"
-            keyframeSource: "animations/leftUpLegTwist1_0130_position_10.qad"
+            keyframeSource: "animations/leftLeg_0119_rotation_8.qad"
         }
         KeyframeGroup {
             target: leftUpLegTwist1_0130
             property: "rotation"
-            keyframeSource: "animations/leftUpLegTwist1_0130_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: leftUpLegTwist2_0131
-            property: "position"
-            keyframeSource: "animations/leftUpLegTwist2_0131_position_10.qad"
+            keyframeSource: "animations/leftUpLegTwist1_0130_rotation_8.qad"
         }
         KeyframeGroup {
             target: leftUpLegTwist2_0131
             property: "rotation"
-            keyframeSource: "animations/leftUpLegTwist2_0131_rotation_10.qad"
+            keyframeSource: "animations/leftUpLegTwist2_0131_rotation_8.qad"
         }
         KeyframeGroup {
             target: leftUpLeg_0118
             property: "rotation"
-            keyframeSource: "animations/leftUpLeg_0118_rotation_10.qad"
-        }
-        KeyframeGroup {
-            target: skt_Hips_0132
-            property: "position"
-            keyframeSource: "animations/skt_Hips_0132_position_10.qad"
-        }
-        KeyframeGroup {
-            target: skt_Hips_0132
-            property: "rotation"
-            keyframeSource: "animations/skt_Hips_0132_rotation_10.qad"
+            keyframeSource: "animations/leftUpLeg_0118_rotation_8.qad"
         }
         KeyframeGroup {
             target: hips_09
             property: "position"
-            keyframeSource: "animations/hips_09_position_10.qad"
+            keyframeSource: "animations/hips_09_position_8.qad"
         }
         KeyframeGroup {
             target: hips_09
             property: "rotation"
-            keyframeSource: "animations/hips_09_rotation_10.qad"
+            keyframeSource: "animations/hips_09_rotation_8.qad"
         }
         KeyframeGroup {
             target: ik_Hips_0133
             property: "position"
-            keyframeSource: "animations/ik_Hips_0133_position_10.qad"
+            keyframeSource: "animations/ik_Hips_0133_position_8.qad"
         }
         KeyframeGroup {
             target: ik_Hips_0133
@@ -18699,7 +9164,7 @@ Node {
         KeyframeGroup {
             target: ik_LeftFoot_0134
             property: "position"
-            keyframeSource: "animations/ik_LeftFoot_0134_position_10.qad"
+            keyframeSource: "animations/ik_LeftFoot_0134_position_8.qad"
         }
         KeyframeGroup {
             target: ik_LeftFoot_0134
@@ -18712,7 +9177,7 @@ Node {
         KeyframeGroup {
             target: ik_RightFoot_0135
             property: "position"
-            keyframeSource: "animations/ik_RightFoot_0135_position_10.qad"
+            keyframeSource: "animations/ik_RightFoot_0135_position_8.qad"
         }
         KeyframeGroup {
             target: ik_RightFoot_0135
@@ -18725,7 +9190,7 @@ Node {
         KeyframeGroup {
             target: ik_Head_0136
             property: "position"
-            keyframeSource: "animations/ik_Head_0136_position_10.qad"
+            keyframeSource: "animations/ik_Head_0136_position_8.qad"
         }
         KeyframeGroup {
             target: ik_Head_0136
@@ -18734,1267 +9199,6 @@ Node {
                 frame: 0
                 value: Qt.quaternion(1, 2.36187e-17, 0, 0)
             }
-        }
-    }
-    Timeline {
-        id: frames_010_timeline
-        objectName: "Frames.010"
-        property real framesPerSecond: 1000
-        startFrame: 0
-        endFrame: 27300
-        currentFrame: 0
-        enabled: true
-        animations: TimelineAnimation {
-            duration: 27300
-            from: 0
-            to: 27300
-            running: true
-            loops: Animation.Infinite
-        }
-        KeyframeGroup {
-            target: leftForeArmTwist2_056
-            property: "position"
-            keyframeSource: "animations/leftForeArmTwist2_056_position_11.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArmTwist2_056
-            property: "rotation"
-            keyframeSource: "animations/leftForeArmTwist2_056_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: skt_Reference_06
-            property: "rotation"
-            keyframeSource: "animations/skt_Reference_06_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: ik_Spine3_02
-            property: "position"
-            keyframeSource: "animations/ik_Spine3_02_position_11.qad"
-        }
-        KeyframeGroup {
-            target: ik_Spine3_02
-            property: "rotation"
-            keyframeSource: "animations/ik_Spine3_02_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: ik_LeftHand_07
-            property: "position"
-            keyframeSource: "animations/ik_LeftHand_07_position_11.qad"
-        }
-        KeyframeGroup {
-            target: ik_LeftHand_07
-            property: "rotation"
-            keyframeSource: "animations/ik_LeftHand_07_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: leftHandMiddle3_054
-            property: "position"
-            keyframeSource: "animations/leftHandMiddle3_054_position_11.qad"
-        }
-        KeyframeGroup {
-            target: leftHandMiddle3_054
-            property: "rotation"
-            keyframeSource: "animations/leftHandMiddle3_054_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: ik_RightHand_03
-            property: "position"
-            keyframeSource: "animations/ik_RightHand_03_position_11.qad"
-        }
-        KeyframeGroup {
-            target: ik_RightHand_03
-            property: "rotation"
-            keyframeSource: "animations/ik_RightHand_03_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: skt_HeadCamera_08
-            property: "position"
-            keyframeSource: "animations/skt_HeadCamera_08_position_11.qad"
-        }
-        KeyframeGroup {
-            target: skt_HeadCamera_08
-            property: "rotation"
-            keyframeSource: "animations/skt_HeadCamera_08_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: leftHandMiddle1_052
-            property: "position"
-            keyframeSource: "animations/leftHandMiddle1_052_position_11.qad"
-        }
-        KeyframeGroup {
-            target: leftHandMiddle1_052
-            property: "rotation"
-            keyframeSource: "animations/leftHandMiddle1_052_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_Reference2_04
-            property: "rotation"
-            keyframeSource: "animations/skt_FX_Reference2_04_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: leftArm_032
-            property: "position"
-            keyframeSource: "animations/leftArm_032_position_11.qad"
-        }
-        KeyframeGroup {
-            target: leftArm_032
-            property: "rotation"
-            keyframeSource: "animations/leftArm_032_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: rightLegTwist1_012
-            property: "position"
-            keyframeSource: "animations/rightLegTwist1_012_position_11.qad"
-        }
-        KeyframeGroup {
-            target: rightLegTwist1_012
-            property: "rotation"
-            keyframeSource: "animations/rightLegTwist1_012_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: leftHand_036
-            property: "position"
-            keyframeSource: "animations/leftHand_036_position_11.qad"
-        }
-        KeyframeGroup {
-            target: leftHand_036
-            property: "rotation"
-            keyframeSource: "animations/leftHand_036_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_Reference1_05
-            property: "rotation"
-            keyframeSource: "animations/skt_FX_Reference1_05_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: rightFootIndex3_017
-            property: "position"
-            keyframeSource: "animations/rightFootIndex3_017_position_11.qad"
-        }
-        KeyframeGroup {
-            target: rightFootIndex3_017
-            property: "rotation"
-            keyframeSource: "animations/rightFootIndex3_017_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: skt_Head_062
-            property: "position"
-            keyframeSource: "animations/skt_Head_062_position_11.qad"
-        }
-        KeyframeGroup {
-            target: skt_Head_062
-            property: "rotation"
-            keyframeSource: "animations/skt_Head_062_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: rightFootIndex2_016
-            property: "position"
-            keyframeSource: "animations/rightFootIndex2_016_position_11.qad"
-        }
-        KeyframeGroup {
-            target: rightFootIndex2_016
-            property: "rotation"
-            keyframeSource: "animations/rightFootIndex2_016_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: rightFootIndex1_015
-            property: "rotation"
-            keyframeSource: "animations/rightFootIndex1_015_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: rightFootBigToe3_020
-            property: "position"
-            keyframeSource: "animations/rightFootBigToe3_020_position_11.qad"
-        }
-        KeyframeGroup {
-            target: rightFootBigToe3_020
-            property: "rotation"
-            keyframeSource: "animations/rightFootBigToe3_020_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: jaw_065
-            property: "position"
-            keyframeSource: "animations/jaw_065_position_11.qad"
-        }
-        KeyframeGroup {
-            target: jaw_065
-            property: "rotation"
-            keyframeSource: "animations/jaw_065_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: rightFootBigToe2_019
-            property: "position"
-            keyframeSource: "animations/rightFootBigToe2_019_position_11.qad"
-        }
-        KeyframeGroup {
-            target: rightFootBigToe2_019
-            property: "rotation"
-            keyframeSource: "animations/rightFootBigToe2_019_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: rightFootBigToe1_018
-            property: "rotation"
-            keyframeSource: "animations/rightFootBigToe1_018_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: rightToeBaseEnd_021
-            property: "position"
-            keyframeSource: "animations/rightToeBaseEnd_021_position_11.qad"
-        }
-        KeyframeGroup {
-            target: rightToeBaseEnd_021
-            property: "rotation"
-            keyframeSource: "animations/rightToeBaseEnd_021_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: nose_067
-            property: "position"
-            keyframeSource: "animations/nose_067_position_11.qad"
-        }
-        KeyframeGroup {
-            target: nose_067
-            property: "rotation"
-            keyframeSource: "animations/nose_067_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: rightToeBase_014
-            property: "position"
-            keyframeSource: "animations/rightToeBase_014_position_11.qad"
-        }
-        KeyframeGroup {
-            target: rightToeBase_014
-            property: "rotation"
-            keyframeSource: "animations/rightToeBase_014_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: rightFoot_013
-            property: "position"
-            keyframeSource: "animations/rightFoot_013_position_11.qad"
-        }
-        KeyframeGroup {
-            target: rightFoot_013
-            property: "rotation"
-            keyframeSource: "animations/rightFoot_013_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: lip_upper_069
-            property: "position"
-            keyframeSource: "animations/lip_upper_069_position_11.qad"
-        }
-        KeyframeGroup {
-            target: lip_upper_069
-            property: "rotation"
-            keyframeSource: "animations/lip_upper_069_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: rightLeg_011
-            property: "position"
-            keyframeSource: "animations/rightLeg_011_position_11.qad"
-        }
-        KeyframeGroup {
-            target: rightLeg_011
-            property: "rotation"
-            keyframeSource: "animations/rightLeg_011_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: lip_lower_070
-            property: "position"
-            keyframeSource: "animations/lip_lower_070_position_11.qad"
-        }
-        KeyframeGroup {
-            target: lip_lower_070
-            property: "rotation"
-            keyframeSource: "animations/lip_lower_070_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: rightUpLegTwist1_022
-            property: "position"
-            keyframeSource: "animations/rightUpLegTwist1_022_position_11.qad"
-        }
-        KeyframeGroup {
-            target: rightUpLegTwist1_022
-            property: "rotation"
-            keyframeSource: "animations/rightUpLegTwist1_022_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: rightUpLegTwist2_023
-            property: "position"
-            keyframeSource: "animations/rightUpLegTwist2_023_position_11.qad"
-        }
-        KeyframeGroup {
-            target: rightUpLegTwist2_023
-            property: "rotation"
-            keyframeSource: "animations/rightUpLegTwist2_023_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_in_right_072
-            property: "position"
-            keyframeSource: "animations/eye_lid_in_right_072_position_11.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_in_right_072
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_in_right_072_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: rightUpLeg_010
-            property: "rotation"
-            keyframeSource: "animations/rightUpLeg_010_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_out_right_073
-            property: "position"
-            keyframeSource: "animations/eye_lid_out_right_073_position_11.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_out_right_073
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_out_right_073_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_Hips_024
-            property: "position"
-            keyframeSource: "animations/skt_FX_Hips_024_position_11.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_Hips_024
-            property: "rotation"
-            keyframeSource: "animations/skt_FX_Hips_024_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: skt_Back_029
-            property: "position"
-            keyframeSource: "animations/skt_Back_029_position_11.qad"
-        }
-        KeyframeGroup {
-            target: skt_Back_029
-            property: "rotation"
-            keyframeSource: "animations/skt_Back_029_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: skt_Chest_030
-            property: "position"
-            keyframeSource: "animations/skt_Chest_030_position_11.qad"
-        }
-        KeyframeGroup {
-            target: skt_Chest_030
-            property: "rotation"
-            keyframeSource: "animations/skt_Chest_030_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArmTwist3_034
-            property: "position"
-            keyframeSource: "animations/leftForeArmTwist3_034_position_11.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArmTwist3_034
-            property: "rotation"
-            keyframeSource: "animations/leftForeArmTwist3_034_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArmTwist1_035
-            property: "position"
-            keyframeSource: "animations/leftForeArmTwist1_035_position_11.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArmTwist1_035
-            property: "rotation"
-            keyframeSource: "animations/leftForeArmTwist1_035_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky4_041
-            property: "position"
-            keyframeSource: "animations/leftHandPinky4_041_position_11.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky4_041
-            property: "rotation"
-            keyframeSource: "animations/leftHandPinky4_041_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky3_040
-            property: "position"
-            keyframeSource: "animations/leftHandPinky3_040_position_11.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky3_040
-            property: "rotation"
-            keyframeSource: "animations/leftHandPinky3_040_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky2_039
-            property: "position"
-            keyframeSource: "animations/leftHandPinky2_039_position_11.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky2_039
-            property: "rotation"
-            keyframeSource: "animations/leftHandPinky2_039_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: leftHandPinky1_038
-            property: "rotation"
-            keyframeSource: "animations/leftHandPinky1_038_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: leftInHandPinky_037
-            property: "position"
-            keyframeSource: "animations/leftInHandPinky_037_position_11.qad"
-        }
-        KeyframeGroup {
-            target: leftInHandPinky_037
-            property: "rotation"
-            keyframeSource: "animations/leftInHandPinky_037_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: skt_LeftHand_042
-            property: "rotation"
-            keyframeSource: "animations/skt_LeftHand_042_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex4_047
-            property: "position"
-            keyframeSource: "animations/leftHandIndex4_047_position_11.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex4_047
-            property: "rotation"
-            keyframeSource: "animations/leftHandIndex4_047_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex3_046
-            property: "rotation"
-            keyframeSource: "animations/leftHandIndex3_046_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex2_045
-            property: "position"
-            keyframeSource: "animations/leftHandIndex2_045_position_11.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex2_045
-            property: "rotation"
-            keyframeSource: "animations/leftHandIndex2_045_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: leftHandIndex1_044
-            property: "rotation"
-            keyframeSource: "animations/leftHandIndex1_044_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_LeftHand_00
-            property: "rotation"
-            keyframeSource: "animations/skt_FX_LeftHand_00_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb4_050
-            property: "position"
-            keyframeSource: "animations/leftHandThumb4_050_position_11.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb4_050
-            property: "rotation"
-            keyframeSource: "animations/leftHandThumb4_050_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb3_049
-            property: "position"
-            keyframeSource: "animations/leftHandThumb3_049_position_11.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb3_049
-            property: "rotation"
-            keyframeSource: "animations/leftHandThumb3_049_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb2_048
-            property: "position"
-            keyframeSource: "animations/leftHandThumb2_048_position_11.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb2_048
-            property: "rotation"
-            keyframeSource: "animations/leftHandThumb2_048_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: leftHandThumb1_01
-            property: "rotation"
-            keyframeSource: "animations/leftHandThumb1_01_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: leftHandMiddle4_055
-            property: "position"
-            keyframeSource: "animations/leftHandMiddle4_055_position_11.qad"
-        }
-        KeyframeGroup {
-            target: leftHandMiddle4_055
-            property: "rotation"
-            keyframeSource: "animations/leftHandMiddle4_055_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: leftHandMiddle2_053
-            property: "position"
-            keyframeSource: "animations/leftHandMiddle2_053_position_11.qad"
-        }
-        KeyframeGroup {
-            target: leftHandMiddle2_053
-            property: "rotation"
-            keyframeSource: "animations/leftHandMiddle2_053_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: leftInHandMiddle_051
-            property: "position"
-            keyframeSource: "animations/leftInHandMiddle_051_position_11.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArm_033
-            property: "position"
-            keyframeSource: "animations/leftForeArm_033_position_11.qad"
-        }
-        KeyframeGroup {
-            target: leftForeArm_033
-            property: "rotation"
-            keyframeSource: "animations/leftForeArm_033_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: leftArmTwist1_057
-            property: "position"
-            keyframeSource: "animations/leftArmTwist1_057_position_11.qad"
-        }
-        KeyframeGroup {
-            target: leftArmTwist1_057
-            property: "rotation"
-            keyframeSource: "animations/leftArmTwist1_057_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: leftArmTwist2_058
-            property: "position"
-            keyframeSource: "animations/leftArmTwist2_058_position_11.qad"
-        }
-        KeyframeGroup {
-            target: leftArmTwist2_058
-            property: "rotation"
-            keyframeSource: "animations/leftArmTwist2_058_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: leftShoulder_031
-            property: "rotation"
-            keyframeSource: "animations/leftShoulder_031_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: headEnd_063
-            property: "position"
-            keyframeSource: "animations/headEnd_063_position_11.qad"
-        }
-        KeyframeGroup {
-            target: headEnd_063
-            property: "rotation"
-            keyframeSource: "animations/headEnd_063_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: eye_left_066
-            property: "position"
-            keyframeSource: "animations/eye_left_066_position_11.qad"
-        }
-        KeyframeGroup {
-            target: eye_left_066
-            property: "rotation"
-            keyframeSource: "animations/eye_left_066_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: lip_corners_068
-            property: "position"
-            keyframeSource: "animations/lip_corners_068_position_11.qad"
-        }
-        KeyframeGroup {
-            target: lip_corners_068
-            property: "rotation"
-            keyframeSource: "animations/lip_corners_068_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_right_071
-            property: "position"
-            keyframeSource: "animations/eye_lid_right_071_position_11.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_right_071
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_right_071_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: tongue_06_081
-            property: "position"
-            keyframeSource: "animations/tongue_06_081_position_11.qad"
-        }
-        KeyframeGroup {
-            target: tongue_06_081
-            property: "rotation"
-            keyframeSource: "animations/tongue_06_081_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: tongue_05_080
-            property: "position"
-            keyframeSource: "animations/tongue_05_080_position_11.qad"
-        }
-        KeyframeGroup {
-            target: tongue_05_080
-            property: "rotation"
-            keyframeSource: "animations/tongue_05_080_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: tongue_04_079
-            property: "position"
-            keyframeSource: "animations/tongue_04_079_position_11.qad"
-        }
-        KeyframeGroup {
-            target: tongue_04_079
-            property: "rotation"
-            keyframeSource: "animations/tongue_04_079_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: tongue_03_078
-            property: "position"
-            keyframeSource: "animations/tongue_03_078_position_11.qad"
-        }
-        KeyframeGroup {
-            target: tongue_03_078
-            property: "rotation"
-            keyframeSource: "animations/tongue_03_078_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: tongue_02_077
-            property: "position"
-            keyframeSource: "animations/tongue_02_077_position_11.qad"
-        }
-        KeyframeGroup {
-            target: tongue_02_077
-            property: "rotation"
-            keyframeSource: "animations/tongue_02_077_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: tongue_01_076
-            property: "position"
-            keyframeSource: "animations/tongue_01_076_position_11.qad"
-        }
-        KeyframeGroup {
-            target: tongue_01_076
-            property: "rotation"
-            keyframeSource: "animations/tongue_01_076_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: tongue_jaw_075
-            property: "position"
-            keyframeSource: "animations/tongue_jaw_075_position_11.qad"
-        }
-        KeyframeGroup {
-            target: tongue_jaw_075
-            property: "rotation"
-            keyframeSource: "animations/tongue_jaw_075_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: teeth_lwr_082
-            property: "position"
-            keyframeSource: "animations/teeth_lwr_082_position_11.qad"
-        }
-        KeyframeGroup {
-            target: teeth_lwr_082
-            property: "rotation"
-            keyframeSource: "animations/teeth_lwr_082_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: teeth_upr_083
-            property: "position"
-            keyframeSource: "animations/teeth_upr_083_position_11.qad"
-        }
-        KeyframeGroup {
-            target: teeth_upr_083
-            property: "rotation"
-            keyframeSource: "animations/teeth_upr_083_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: mouth_bag_074
-            property: "position"
-            keyframeSource: "animations/mouth_bag_074_position_11.qad"
-        }
-        KeyframeGroup {
-            target: mouth_bag_074
-            property: "rotation"
-            keyframeSource: "animations/mouth_bag_074_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: eye_right_084
-            property: "position"
-            keyframeSource: "animations/eye_right_084_position_11.qad"
-        }
-        KeyframeGroup {
-            target: eye_right_084
-            property: "rotation"
-            keyframeSource: "animations/eye_right_084_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_out_left_086
-            property: "position"
-            keyframeSource: "animations/eye_lid_out_left_086_position_11.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_out_left_086
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_out_left_086_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_in_left_087
-            property: "position"
-            keyframeSource: "animations/eye_lid_in_left_087_position_11.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_in_left_087
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_in_left_087_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_left_085
-            property: "position"
-            keyframeSource: "animations/eye_lid_left_085_position_11.qad"
-        }
-        KeyframeGroup {
-            target: eye_lid_left_085
-            property: "rotation"
-            keyframeSource: "animations/eye_lid_left_085_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: face_064
-            property: "position"
-            keyframeSource: "animations/face_064_position_11.qad"
-        }
-        KeyframeGroup {
-            target: face_064
-            property: "rotation"
-            keyframeSource: "animations/face_064_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: head_061
-            property: "position"
-            keyframeSource: "animations/head_061_position_11.qad"
-        }
-        KeyframeGroup {
-            target: head_061
-            property: "rotation"
-            keyframeSource: "animations/head_061_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: neck1_060
-            property: "position"
-            keyframeSource: "animations/neck1_060_position_11.qad"
-        }
-        KeyframeGroup {
-            target: neck1_060
-            property: "rotation"
-            keyframeSource: "animations/neck1_060_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: neck_059
-            property: "position"
-            keyframeSource: "animations/neck_059_position_11.qad"
-        }
-        KeyframeGroup {
-            target: neck_059
-            property: "rotation"
-            keyframeSource: "animations/neck_059_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: rightArmTwist1_090
-            property: "position"
-            keyframeSource: "animations/rightArmTwist1_090_position_11.qad"
-        }
-        KeyframeGroup {
-            target: rightArmTwist1_090
-            property: "rotation"
-            keyframeSource: "animations/rightArmTwist1_090_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_RightHand_093
-            property: "position"
-            keyframeSource: "animations/skt_FX_RightHand_093_position_11.qad"
-        }
-        KeyframeGroup {
-            target: skt_FX_RightHand_093
-            property: "rotation"
-            keyframeSource: "animations/skt_FX_RightHand_093_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb4_097
-            property: "position"
-            keyframeSource: "animations/rightHandThumb4_097_position_11.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb4_097
-            property: "rotation"
-            keyframeSource: "animations/rightHandThumb4_097_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb3_096
-            property: "position"
-            keyframeSource: "animations/rightHandThumb3_096_position_11.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb3_096
-            property: "rotation"
-            keyframeSource: "animations/rightHandThumb3_096_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb2_095
-            property: "position"
-            keyframeSource: "animations/rightHandThumb2_095_position_11.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb2_095
-            property: "rotation"
-            keyframeSource: "animations/rightHandThumb2_095_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: rightHandThumb1_094
-            property: "rotation"
-            keyframeSource: "animations/rightHandThumb1_094_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle4_0102
-            property: "position"
-            keyframeSource: "animations/rightHandMiddle4_0102_position_11.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle4_0102
-            property: "rotation"
-            keyframeSource: "animations/rightHandMiddle4_0102_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle3_0101
-            property: "position"
-            keyframeSource: "animations/rightHandMiddle3_0101_position_11.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle3_0101
-            property: "rotation"
-            keyframeSource: "animations/rightHandMiddle3_0101_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle2_0100
-            property: "position"
-            keyframeSource: "animations/rightHandMiddle2_0100_position_11.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle2_0100
-            property: "rotation"
-            keyframeSource: "animations/rightHandMiddle2_0100_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: rightHandMiddle1_099
-            property: "rotation"
-            keyframeSource: "animations/rightHandMiddle1_099_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: rightInHandMiddle_098
-            property: "position"
-            keyframeSource: "animations/rightInHandMiddle_098_position_11.qad"
-        }
-        KeyframeGroup {
-            target: skt_RightHand_0103
-            property: "position"
-            keyframeSource: "animations/skt_RightHand_0103_position_11.qad"
-        }
-        KeyframeGroup {
-            target: skt_RightHand_0103
-            property: "rotation"
-            keyframeSource: "animations/skt_RightHand_0103_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: rightHandIndex4_0108
-            property: "position"
-            keyframeSource: "animations/rightHandIndex4_0108_position_11.qad"
-        }
-        KeyframeGroup {
-            target: rightHandIndex4_0108
-            property: "rotation"
-            keyframeSource: "animations/rightHandIndex4_0108_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: rightHandIndex3_0107
-            property: "position"
-            keyframeSource: "animations/rightHandIndex3_0107_position_11.qad"
-        }
-        KeyframeGroup {
-            target: rightHandIndex3_0107
-            property: "rotation"
-            keyframeSource: "animations/rightHandIndex3_0107_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: rightHandIndex2_0106
-            property: "position"
-            keyframeSource: "animations/rightHandIndex2_0106_position_11.qad"
-        }
-        KeyframeGroup {
-            target: rightHandIndex2_0106
-            property: "rotation"
-            keyframeSource: "animations/rightHandIndex2_0106_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: rightHandIndex1_0105
-            property: "rotation"
-            keyframeSource: "animations/rightHandIndex1_0105_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: rightHandPinky4_0113
-            property: "position"
-            keyframeSource: "animations/rightHandPinky4_0113_position_11.qad"
-        }
-        KeyframeGroup {
-            target: rightHandPinky4_0113
-            property: "rotation"
-            keyframeSource: "animations/rightHandPinky4_0113_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: rightHandPinky3_0112
-            property: "position"
-            keyframeSource: "animations/rightHandPinky3_0112_position_11.qad"
-        }
-        KeyframeGroup {
-            target: rightHandPinky3_0112
-            property: "rotation"
-            keyframeSource: "animations/rightHandPinky3_0112_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: rightHandPinky2_0111
-            property: "position"
-            keyframeSource: "animations/rightHandPinky2_0111_position_11.qad"
-        }
-        KeyframeGroup {
-            target: rightHandPinky2_0111
-            property: "rotation"
-            keyframeSource: "animations/rightHandPinky2_0111_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: rightHandPinky1_0110
-            property: "position"
-            keyframeSource: "animations/rightHandPinky1_0110_position_11.qad"
-        }
-        KeyframeGroup {
-            target: rightHandPinky1_0110
-            property: "rotation"
-            keyframeSource: "animations/rightHandPinky1_0110_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: rightInHandPinky_0109
-            property: "position"
-            keyframeSource: "animations/rightInHandPinky_0109_position_11.qad"
-        }
-        KeyframeGroup {
-            target: rightHand_092
-            property: "position"
-            keyframeSource: "animations/rightHand_092_position_11.qad"
-        }
-        KeyframeGroup {
-            target: rightHand_092
-            property: "rotation"
-            keyframeSource: "animations/rightHand_092_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArmTwist3_0114
-            property: "position"
-            keyframeSource: "animations/rightForeArmTwist3_0114_position_11.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArmTwist3_0114
-            property: "rotation"
-            keyframeSource: "animations/rightForeArmTwist3_0114_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArmTwist2_0115
-            property: "position"
-            keyframeSource: "animations/rightForeArmTwist2_0115_position_11.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArmTwist2_0115
-            property: "rotation"
-            keyframeSource: "animations/rightForeArmTwist2_0115_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArmTwist1_0116
-            property: "position"
-            keyframeSource: "animations/rightForeArmTwist1_0116_position_11.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArmTwist1_0116
-            property: "rotation"
-            keyframeSource: "animations/rightForeArmTwist1_0116_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArm_091
-            property: "position"
-            keyframeSource: "animations/rightForeArm_091_position_11.qad"
-        }
-        KeyframeGroup {
-            target: rightForeArm_091
-            property: "rotation"
-            keyframeSource: "animations/rightForeArm_091_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: rightArmTwist2_0117
-            property: "position"
-            keyframeSource: "animations/rightArmTwist2_0117_position_11.qad"
-        }
-        KeyframeGroup {
-            target: rightArmTwist2_0117
-            property: "rotation"
-            keyframeSource: "animations/rightArmTwist2_0117_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: rightArm_089
-            property: "position"
-            keyframeSource: "animations/rightArm_089_position_11.qad"
-        }
-        KeyframeGroup {
-            target: rightArm_089
-            property: "rotation"
-            keyframeSource: "animations/rightArm_089_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: rightShoulder_088
-            property: "rotation"
-            keyframeSource: "animations/rightShoulder_088_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: spine3_028
-            property: "position"
-            keyframeSource: "animations/spine3_028_position_11.qad"
-        }
-        KeyframeGroup {
-            target: spine3_028
-            property: "rotation"
-            keyframeSource: "animations/spine3_028_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: spine2_027
-            property: "position"
-            keyframeSource: "animations/spine2_027_position_11.qad"
-        }
-        KeyframeGroup {
-            target: spine2_027
-            property: "rotation"
-            keyframeSource: "animations/spine2_027_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: spine1_026
-            property: "position"
-            keyframeSource: "animations/spine1_026_position_11.qad"
-        }
-        KeyframeGroup {
-            target: spine1_026
-            property: "rotation"
-            keyframeSource: "animations/spine1_026_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: spine_025
-            property: "position"
-            keyframeSource: "animations/spine_025_position_11.qad"
-        }
-        KeyframeGroup {
-            target: spine_025
-            property: "rotation"
-            keyframeSource: "animations/spine_025_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: leftLegTwist1_0120
-            property: "position"
-            keyframeSource: "animations/leftLegTwist1_0120_position_11.qad"
-        }
-        KeyframeGroup {
-            target: leftLegTwist1_0120
-            property: "rotation"
-            keyframeSource: "animations/leftLegTwist1_0120_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: leftFootBigToe3_0125
-            property: "position"
-            keyframeSource: "animations/leftFootBigToe3_0125_position_11.qad"
-        }
-        KeyframeGroup {
-            target: leftFootBigToe3_0125
-            property: "rotation"
-            keyframeSource: "animations/leftFootBigToe3_0125_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: leftFootBigToe2_0124
-            property: "position"
-            keyframeSource: "animations/leftFootBigToe2_0124_position_11.qad"
-        }
-        KeyframeGroup {
-            target: leftFootBigToe2_0124
-            property: "rotation"
-            keyframeSource: "animations/leftFootBigToe2_0124_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: leftFootBigToe1_0123
-            property: "rotation"
-            keyframeSource: "animations/leftFootBigToe1_0123_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: leftFootIndex3_0128
-            property: "position"
-            keyframeSource: "animations/leftFootIndex3_0128_position_11.qad"
-        }
-        KeyframeGroup {
-            target: leftFootIndex3_0128
-            property: "rotation"
-            keyframeSource: "animations/leftFootIndex3_0128_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: leftFootIndex2_0127
-            property: "position"
-            keyframeSource: "animations/leftFootIndex2_0127_position_11.qad"
-        }
-        KeyframeGroup {
-            target: leftFootIndex2_0127
-            property: "rotation"
-            keyframeSource: "animations/leftFootIndex2_0127_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: leftFootIndex1_0126
-            property: "rotation"
-            keyframeSource: "animations/leftFootIndex1_0126_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: leftToeBaseEnd_0129
-            property: "position"
-            keyframeSource: "animations/leftToeBaseEnd_0129_position_11.qad"
-        }
-        KeyframeGroup {
-            target: leftToeBaseEnd_0129
-            property: "rotation"
-            keyframeSource: "animations/leftToeBaseEnd_0129_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: leftToeBase_0122
-            property: "position"
-            keyframeSource: "animations/leftToeBase_0122_position_11.qad"
-        }
-        KeyframeGroup {
-            target: leftToeBase_0122
-            property: "rotation"
-            keyframeSource: "animations/leftToeBase_0122_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: leftFoot_0121
-            property: "position"
-            keyframeSource: "animations/leftFoot_0121_position_11.qad"
-        }
-        KeyframeGroup {
-            target: leftFoot_0121
-            property: "rotation"
-            keyframeSource: "animations/leftFoot_0121_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: leftLeg_0119
-            property: "position"
-            keyframeSource: "animations/leftLeg_0119_position_11.qad"
-        }
-        KeyframeGroup {
-            target: leftLeg_0119
-            property: "rotation"
-            keyframeSource: "animations/leftLeg_0119_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: leftUpLegTwist1_0130
-            property: "position"
-            keyframeSource: "animations/leftUpLegTwist1_0130_position_11.qad"
-        }
-        KeyframeGroup {
-            target: leftUpLegTwist1_0130
-            property: "rotation"
-            keyframeSource: "animations/leftUpLegTwist1_0130_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: leftUpLegTwist2_0131
-            property: "position"
-            keyframeSource: "animations/leftUpLegTwist2_0131_position_11.qad"
-        }
-        KeyframeGroup {
-            target: leftUpLegTwist2_0131
-            property: "rotation"
-            keyframeSource: "animations/leftUpLegTwist2_0131_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: leftUpLeg_0118
-            property: "rotation"
-            keyframeSource: "animations/leftUpLeg_0118_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: skt_Hips_0132
-            property: "position"
-            keyframeSource: "animations/skt_Hips_0132_position_11.qad"
-        }
-        KeyframeGroup {
-            target: skt_Hips_0132
-            property: "rotation"
-            keyframeSource: "animations/skt_Hips_0132_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: hips_09
-            property: "position"
-            keyframeSource: "animations/hips_09_position_11.qad"
-        }
-        KeyframeGroup {
-            target: hips_09
-            property: "rotation"
-            keyframeSource: "animations/hips_09_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: ik_Hips_0133
-            property: "position"
-            keyframeSource: "animations/ik_Hips_0133_position_11.qad"
-        }
-        KeyframeGroup {
-            target: ik_Hips_0133
-            property: "rotation"
-            keyframeSource: "animations/ik_Hips_0133_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: ik_LeftFoot_0134
-            property: "position"
-            keyframeSource: "animations/ik_LeftFoot_0134_position_11.qad"
-        }
-        KeyframeGroup {
-            target: ik_LeftFoot_0134
-            property: "rotation"
-            keyframeSource: "animations/ik_LeftFoot_0134_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: ik_RightFoot_0135
-            property: "position"
-            keyframeSource: "animations/ik_RightFoot_0135_position_11.qad"
-        }
-        KeyframeGroup {
-            target: ik_RightFoot_0135
-            property: "rotation"
-            keyframeSource: "animations/ik_RightFoot_0135_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: ik_Head_0136
-            property: "position"
-            keyframeSource: "animations/ik_Head_0136_position_11.qad"
-        }
-        KeyframeGroup {
-            target: ik_Head_0136
-            property: "rotation"
-            keyframeSource: "animations/ik_Head_0136_rotation_11.qad"
-        }
-        KeyframeGroup {
-            target: troll_Cave
-            property: "position"
-            keyframeSource: "animations/troll_Cave_position_11.qad"
-        }
-        KeyframeGroup {
-            target: troll_Cave
-            property: "rotation"
-            keyframeSource: "animations/troll_Cave_rotation_11.qad"
         }
     }
 }

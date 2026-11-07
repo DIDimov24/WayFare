@@ -14,6 +14,15 @@ Node {
     readonly property real roofRise: 1.25
     readonly property real gableRise: 1.15
     readonly property var torches: root.decorOf("torch")
+    readonly property real doorHeight: 3.6
+    readonly property real gateHeight: 4.4
+    readonly property real gateWidth: root.tileSize * 3
+    readonly property bool gateUnlocked: Level.hasBoss && Level.boss.state === "dead" && !Level.bossCutscene
+    property real gateOpen: root.gateUnlocked ? 1 : 0
+
+    Behavior on gateOpen {
+        NumberAnimation { duration: 1800; easing.type: Easing.InOutQuad }
+    }
 
     function decorOf(kind: string): var {
         const decor = Level.decor
@@ -160,6 +169,126 @@ Node {
         logList.instances = logs
     }
 
+    component GateLeaf: Node {
+        id: leaf
+
+        property real side: 1
+        property real width: 2.7
+        property real height: 3.6
+        property Material wood
+        property Material trim
+        readonly property real brace: Math.sqrt(leaf.width * leaf.width + leaf.height * leaf.height * 0.25)
+
+        Model {
+            source: "#Cube"
+            position: Qt.vector3d(leaf.side * leaf.width / 2, leaf.height / 2, 0)
+            scale: Qt.vector3d(leaf.width / 100, leaf.height / 100, 0.0014)
+            materials: leaf.wood
+        }
+
+        Model {
+            source: "#Cube"
+            position: Qt.vector3d(leaf.side * leaf.width / 2, leaf.height * 0.25, -0.09)
+            scale: Qt.vector3d((leaf.width - 0.1) / 100, 0.0016, 0.0005)
+            materials: leaf.trim
+        }
+
+        Model {
+            source: "#Cube"
+            position: Qt.vector3d(leaf.side * leaf.width / 2, leaf.height * 0.75, -0.09)
+            scale: Qt.vector3d((leaf.width - 0.1) / 100, 0.0016, 0.0005)
+            materials: leaf.trim
+        }
+
+        Model {
+            source: "#Cube"
+            position: Qt.vector3d(leaf.side * leaf.width / 2, leaf.height / 2, -0.09)
+            eulerRotation.z: leaf.side * Math.atan2(leaf.height * 0.5, leaf.width) * 180 / Math.PI
+            scale: Qt.vector3d((leaf.brace - 0.15) / 100, 0.0014, 0.0005)
+            materials: leaf.trim
+        }
+    }
+
+    component OutsideCabin: Node {
+        id: cabin
+
+        property real width: 5
+        property real depth: 4
+        property real height: 2.8
+        property Material wood
+        property Material trim
+        property Material snow
+        property Material pane
+        readonly property real slope: (cabin.width / 2 + 0.35) * Math.SQRT2
+
+        Model {
+            source: "#Cube"
+            y: cabin.height / 2
+            scale: Qt.vector3d(cabin.width / 100, cabin.height / 100, cabin.depth / 100)
+            materials: cabin.wood
+        }
+
+        Model {
+            source: "#Cube"
+            y: cabin.height
+            eulerRotation.z: 45
+            scale: Qt.vector3d(cabin.width / Math.SQRT2 / 100, cabin.width / Math.SQRT2 / 100, cabin.depth / 100)
+            materials: cabin.trim
+        }
+
+        Model {
+            source: "#Cube"
+            position: Qt.vector3d(-(cabin.width / 2 + 0.35) / 2, cabin.height + (cabin.width / 2 + 0.35) / 2, 0)
+            eulerRotation.z: 45
+            scale: Qt.vector3d(cabin.slope / 100, 0.0018, (cabin.depth + 0.6) / 100)
+            materials: cabin.snow
+        }
+
+        Model {
+            source: "#Cube"
+            position: Qt.vector3d((cabin.width / 2 + 0.35) / 2, cabin.height + (cabin.width / 2 + 0.35) / 2, 0)
+            eulerRotation.z: -45
+            scale: Qt.vector3d(cabin.slope / 100, 0.0018, (cabin.depth + 0.6) / 100)
+            materials: cabin.snow
+        }
+
+        Model {
+            source: "#Cube"
+            position: Qt.vector3d(cabin.width * 0.25, cabin.height + 1.1, -cabin.depth * 0.2)
+            scale: Qt.vector3d(0.005, 0.014, 0.005)
+            materials: cabin.trim
+        }
+
+        Model {
+            source: "#Cube"
+            position: Qt.vector3d(-cabin.width * 0.22, 1.05, cabin.depth / 2)
+            scale: Qt.vector3d(0.0095, 0.021, 0.001)
+            materials: cabin.trim
+        }
+
+        Model {
+            source: "#Cube"
+            position: Qt.vector3d(cabin.width * 0.22, 1.6, cabin.depth / 2)
+            scale: Qt.vector3d(0.0095, 0.0085, 0.0008)
+            materials: cabin.trim
+        }
+
+        Model {
+            source: "#Cube"
+            position: Qt.vector3d(cabin.width * 0.22, 1.6, cabin.depth / 2)
+            scale: Qt.vector3d(0.0075, 0.0065, 0.0012)
+            materials: cabin.pane
+        }
+
+        Model {
+            source: "#Cube"
+            position: Qt.vector3d(cabin.width / 2, 1.6, 0)
+            eulerRotation.y: 90
+            scale: Qt.vector3d(0.0075, 0.0065, 0.0012)
+            materials: cabin.pane
+        }
+    }
+
     Component.onCompleted: {
         root.buildCaps()
         root.buildDecor()
@@ -186,10 +315,133 @@ Node {
     }
 
     PrincipledMaterial {
+        id: warmPane
+
+        lighting: PrincipledMaterial.NoLighting
+        baseColor: "#ffb45c"
+    }
+
+    PrincipledMaterial {
         id: doorWood
 
         baseColor: "#5a4432"
         roughness: 1
+    }
+
+    Model {
+        visible: root.stage >= 2
+        source: "#Rectangle"
+        position: Qt.vector3d(Level.size * root.tileSize / 2, -0.02, Level.size * root.tileSize / 2)
+        eulerRotation.x: -90
+        scale: Qt.vector3d((Level.size + 30) * root.tileSize / 100, (Level.size + 30) * root.tileSize / 100, 1)
+        materials: PrincipledMaterial {
+            baseColorMap: Texture {
+                source: Assets.url + "textures/village/floor_diffuse.jpg"
+                scaleU: Level.size + 30
+                scaleV: Level.size + 30
+            }
+            normalMap: Texture {
+                source: Assets.url + "textures/village/floor_normal.jpg"
+                scaleU: Level.size + 30
+                scaleV: Level.size + 30
+            }
+            roughnessMap: Texture {
+                source: Assets.url + "textures/village/floor_roughness.jpg"
+                scaleU: Level.size + 30
+                scaleV: Level.size + 30
+            }
+            roughnessChannel: Material.R
+            specularAmount: 0
+        }
+    }
+
+    Node {
+        visible: root.stage >= 2 && Level.hasBoss
+        position: Qt.vector3d((Level.exitX + 0.5) * root.tileSize, 0, Level.exitY * root.tileSize)
+
+        Model {
+            source: "#Cube"
+            position: Qt.vector3d(-root.gateWidth / 2, root.gateHeight / 2, root.tileSize / 2)
+            scale: root.boxScale(0.6, root.gateHeight, root.tileSize + 0.2)
+            materials: darkWood
+        }
+
+        Model {
+            source: "#Cube"
+            position: Qt.vector3d(root.gateWidth / 2, root.gateHeight / 2, root.tileSize / 2)
+            scale: root.boxScale(0.6, root.gateHeight, root.tileSize + 0.2)
+            materials: darkWood
+        }
+
+        Model {
+            source: "#Cube"
+            position: Qt.vector3d(0, root.gateHeight - 0.25, root.tileSize / 2)
+            scale: root.boxScale(root.gateWidth + 1, 0.5, root.tileSize + 0.3)
+            materials: darkWood
+        }
+
+        Model {
+            source: "#Cube"
+            position: Qt.vector3d(0, root.gateHeight + 0.1, root.tileSize / 2)
+            scale: root.boxScale(root.gateWidth + 1.2, 0.2, root.tileSize + 0.5)
+            materials: snowMaterial
+        }
+
+        GateLeaf {
+            position: Qt.vector3d(-root.gateWidth / 2 + 0.3, 0, 0.1)
+            eulerRotation.y: -100 * root.gateOpen
+            side: 1
+            width: root.gateWidth / 2 - 0.3
+            height: root.doorHeight
+            wood: doorWood
+            trim: darkWood
+        }
+
+        GateLeaf {
+            position: Qt.vector3d(root.gateWidth / 2 - 0.3, 0, 0.1)
+            eulerRotation.y: 100 * root.gateOpen
+            side: -1
+            width: root.gateWidth / 2 - 0.3
+            height: root.doorHeight
+            wood: doorWood
+            trim: darkWood
+        }
+    }
+
+    Node {
+        visible: root.stage >= 4 && Level.hasBoss
+        position: Qt.vector3d((Level.exitX + 0.5) * root.tileSize, 0, Level.size * root.tileSize)
+
+        OutsideCabin {
+            position: Qt.vector3d(-11, 0, 10)
+            eulerRotation.y: 132
+            wood: doorWood
+            trim: darkWood
+            snow: snowMaterial
+            pane: warmPane
+        }
+
+        OutsideCabin {
+            position: Qt.vector3d(13, 0, 11)
+            eulerRotation.y: -130
+            width: 4.4
+            depth: 3.6
+            height: 2.6
+            wood: doorWood
+            trim: darkWood
+            snow: snowMaterial
+            pane: warmPane
+        }
+
+        LogStackModel {
+            position: Qt.vector3d(-7, 0, 12.5)
+            eulerRotation.y: 40
+        }
+
+        StumpModel {
+            position: Qt.vector3d(9, 0, 7.5)
+            scale: Qt.vector3d(1.4, 1.4, 1.4)
+        }
     }
 
     Model {

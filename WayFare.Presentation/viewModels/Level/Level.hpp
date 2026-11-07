@@ -6,8 +6,10 @@
 #include <QString>
 #include <QStringList>
 #include <QVariantList>
+#include <QVariantMap>
 #include <QtQml/qqmlregistration.h>
 
+#include "WayFare.Business/models/Boss.hpp"
 #include "WayFare.Business/models/Combat.hpp"
 #include "WayFare.Business/models/Drowning.hpp"
 #include "WayFare.Business/models/Enemy.hpp"
@@ -47,6 +49,10 @@ namespace WayFare::Presentation {
 		Q_PROPERTY(QVariantList enemies READ enemies NOTIFY enemiesChanged)
 		Q_PROPERTY(QVariantList traps READ traps NOTIFY mazeChanged)
 		Q_PROPERTY(QVariantList trapHeights READ trapHeights NOTIFY trapsChanged)
+		Q_PROPERTY(bool hasBoss READ hasBoss NOTIFY mazeChanged)
+		Q_PROPERTY(QVariantMap boss READ boss NOTIFY bossChanged)
+		Q_PROPERTY(bool bossCutscene READ bossCutscene NOTIFY bossChanged)
+		Q_PROPERTY(int bossMaxHealth READ bossMaxHealth CONSTANT)
 
 	public:
 		explicit Level(Settings& settings, Game& game, QObject* parent = nullptr);
@@ -77,6 +83,10 @@ namespace WayFare::Presentation {
 		QVariantList enemies() const;
 		QVariantList traps() const;
 		QVariantList trapHeights() const;
+		bool hasBoss() const;
+		QVariantMap boss() const;
+		bool bossCutscene() const;
+		int bossMaxHealth() const;
 
 		void load(int number, uint32_t seed);
 
@@ -105,6 +115,9 @@ namespace WayFare::Presentation {
 		void playerDamaged();
 		void weaponUsed(QString weapon, bool hit);
 		void potionUsed();
+		void bossChanged();
+		void bossSlammed();
+		void bossDefeated();
 
 	private:
 		Settings& _settings;
@@ -119,6 +132,7 @@ namespace WayFare::Presentation {
 		std::vector<Business::Pickup> _pickups;
 		std::vector<Business::Enemy> _enemies;
 		std::vector<Business::SpikeTrap> _traps;
+		Business::Boss _boss;
 		QString _theme;
 		QVariantList _walls;
 		QVariantList _decor;
@@ -129,6 +143,7 @@ namespace WayFare::Presentation {
 		int _exitY;
 		bool _onExit;
 		bool _dead;
+		bool _hasBoss;
 		double _pitch;
 	};
 }

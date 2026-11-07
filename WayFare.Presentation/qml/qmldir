@@ -16,9 +16,13 @@ RockModel 1.0 models/RockModel.qml
 SeaweedModel 1.0 models/SeaweedModel.qml
 StumpModel 1.0 models/StumpModel.qml
 TempleWallMaterial 1.0 models/TempleWallMaterial.qml
+TrollModel 1.0 models/TrollModel.qml
+BossAudio 1.0 views/BossAudio.qml
+CreditsRoll 1.0 views/CreditsRoll.qml
 DeathScreen 1.0 views/DeathScreen.qml
 DungeonExitCutscene 1.0 views/DungeonExitCutscene.qml
 DungeonScene 1.0 views/DungeonScene.qml
+EndingCutscene 1.0 views/EndingCutscene.qml
 FirstPersonWeapon 1.0 views/FirstPersonWeapon.qml
 HowToPlayPanel 1.0 views/HowToPlayPanel.qml
 Hud 1.0 views/Hud.qml

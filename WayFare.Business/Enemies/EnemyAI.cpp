@@ -179,7 +179,7 @@ namespace WayFare::Business {
 				enemy.hurtTime = 0.0;
 			}
 
-			if (enemy.state == EnemyState::Dead) {
+			if (enemy.state == EnemyState::Dead || enemy.state == EnemyState::Dormant) {
 				continue;
 			}
 

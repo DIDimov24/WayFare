@@ -3,7 +3,7 @@
 namespace WayFare::Presentation {
 	Settings::Settings(QObject* parent) : QObject(parent) {
 		// in memory until DAL implementation
-		_sensitivity = 50;
+		_sensitivity = 25;
 		_musicVolume = 100;
 		_sfxVolume = 100;
 	}

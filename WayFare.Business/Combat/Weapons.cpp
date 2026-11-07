@@ -26,7 +26,7 @@ namespace WayFare::Business {
 	}
 
 	bool damageEnemy(Enemy& enemy, int amount) {
-		if (enemy.state == EnemyState::Dead || amount <= 0) {
+		if (enemy.state == EnemyState::Dead || enemy.state == EnemyState::Dormant || amount <= 0) {
 			return false;
 		}
 
@@ -112,7 +112,7 @@ namespace WayFare::Business {
 		double forwardY = std::sin(player.facing);
 
 		for (size_t i = 0; i < enemies.size(); i++) {
-			if (enemies[i].state == EnemyState::Dead) {
+			if (enemies[i].state == EnemyState::Dead || enemies[i].state == EnemyState::Dormant) {
 				continue;
 			}
 
@@ -166,7 +166,7 @@ namespace WayFare::Business {
 			bool hit = false;
 
 			for (size_t i = 0; i < enemies.size(); i++) {
-				if (enemies[i].state == EnemyState::Dead) {
+				if (enemies[i].state == EnemyState::Dead || enemies[i].state == EnemyState::Dormant) {
 					continue;
 				}
 
