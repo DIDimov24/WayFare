@@ -289,7 +289,7 @@ Item {
             Model {
                 source: "#Cube"
                 position: Qt.vector3d(0, 4.2, -2.4)
-                scale: Qt.vector3d(0.009, 0.022, 0.008)
+                scale: Qt.vector3d(0.0094, 0.022, 0.0084)
                 materials: PrincipledMaterial {
                     lighting: PrincipledMaterial.NoLighting
                     baseColor: "#010405"

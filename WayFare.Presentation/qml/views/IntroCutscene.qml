@@ -318,13 +318,13 @@ Item {
             visible: root.stage >= 2
 
             TempleBlock {
-                position: Qt.vector3d(0, 0.15, -30.5)
+                position: Qt.vector3d(0, 0.15, -30.54)
                 size: Qt.vector3d(19.6, 0.3, 11)
                 top: 0.3
             }
 
             TempleBlock {
-                position: Qt.vector3d(0, 0.3, -30)
+                position: Qt.vector3d(0, 0.3, -30.02)
                 size: Qt.vector3d(18, 0.6, 10)
                 top: 0.6
             }
@@ -428,7 +428,7 @@ Item {
             Model {
                 source: "#Cube"
                 position: Qt.vector3d(0, 2.8, -28.95)
-                scale: Qt.vector3d(0.024, 0.032, 0.002)
+                scale: Qt.vector3d(0.0242, 0.032, 0.002)
                 materials: PrincipledMaterial {
                     lighting: PrincipledMaterial.NoLighting
                     baseColor: "#020608"
@@ -773,26 +773,6 @@ Item {
                             to: 0
                             duration: 19000
                         }
-                    }
-                }
-            }
-
-            Repeater3D {
-                model: [Qt.vector3d(-7, 10, -12), Qt.vector3d(5, 10, -6), Qt.vector3d(-3, 10, -24), Qt.vector3d(9, 10, -18)]
-
-                delegate: Model {
-                    required property vector3d modelData
-
-                    position: modelData
-                    source: "#Cylinder"
-                    scale: Qt.vector3d(0.025, 0.2, 0.025)
-                    castsShadows: false
-                    receivesShadows: false
-                    materials: PrincipledMaterial {
-                        lighting: PrincipledMaterial.NoLighting
-                        blendMode: PrincipledMaterial.Screen
-                        baseColor: "#061a1e"
-                        depthDrawMode: Material.NeverDepthDraw
                     }
                 }
             }

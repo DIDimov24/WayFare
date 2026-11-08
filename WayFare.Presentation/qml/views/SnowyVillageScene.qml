@@ -75,7 +75,7 @@ Node {
         gables.push(entry.createObject(gableList, {
             position: Qt.vector3d(x, root.wallHeight, z),
             eulerRotation: Qt.vector3d(45, cabin.yaw, 0),
-            scale: root.boxScale(length, gableSide, gableSide)
+            scale: root.boxScale(length - 0.1, gableSide, gableSide)
         }))
         gables.push(entry.createObject(gableList, {
             position: Qt.vector3d(x + alongX * length * 0.25 + acrossX * 0.4, root.wallHeight + 1.1, z + alongZ * length * 0.25 + acrossZ * 0.4),

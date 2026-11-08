@@ -586,18 +586,6 @@ Item {
                         quadraticFade: 6000
                     }
                 }
-
-                Node {
-                    visible: !root.ladderExit && (!Level.hasBoss || (Level.boss.state === "dead" && !Level.bossCutscene))
-                    position: Qt.vector3d((Level.exitX + 0.5) * root.tileSize, 0, (Level.exitY + 0.5) * root.tileSize)
-
-                    PointLight {
-                        y: 1.2
-                        color: Level.exitUnlocked ? "#9ff4ff" : "#e09040"
-                        brightness: 1
-                        quadraticFade: 6000
-                    }
-                }
             }
 
             Model {
