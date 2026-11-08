@@ -9,6 +9,7 @@
 #include <QVariantMap>
 #include <QtQml/qqmlregistration.h>
 
+#include "WayFare.Business/Game/GameService.hpp"
 #include "WayFare.Business/models/Boss.hpp"
 #include "WayFare.Business/models/Combat.hpp"
 #include "WayFare.Business/models/Drowning.hpp"
@@ -16,6 +17,7 @@
 #include "WayFare.Business/models/Inventory.hpp"
 #include "WayFare.Business/models/Maze.hpp"
 #include "WayFare.Business/models/Player.hpp"
+#include "WayFare.Business/models/SavedGame.hpp"
 #include "WayFare.Business/models/Trap.hpp"
 #include "WayFare.Presentation/viewModels/Game/Game.hpp"
 #include "WayFare.Presentation/viewModels/Settings/Settings.hpp"
@@ -55,7 +57,7 @@ namespace WayFare::Presentation {
 		Q_PROPERTY(int bossMaxHealth READ bossMaxHealth CONSTANT)
 
 	public:
-		explicit Level(Settings& settings, Game& game, QObject* parent = nullptr);
+		explicit Level(Settings& settings, Game& game, Business::GameService& gameService, QObject* parent = nullptr);
 
 		int size() const;
 		QString theme() const;
@@ -89,6 +91,8 @@ namespace WayFare::Presentation {
 		int bossMaxHealth() const;
 
 		void load(int number, uint32_t seed);
+		void restore(const Business::SavedGame& game);
+		void save();
 
 	public slots:
 		void move(double forward, double strafe, double deltaTime);
@@ -99,6 +103,7 @@ namespace WayFare::Presentation {
 		void respawn();
 		void nextLevel();
 		void quitToMenu();
+		void saveAndQuit();
 
 	signals:
 		void mazeChanged();
@@ -122,6 +127,7 @@ namespace WayFare::Presentation {
 	private:
 		Settings& _settings;
 		Game& _game;
+		Business::GameService& _gameService;
 		Business::Maze _maze;
 		Business::Player _player;
 		Business::Inventory _inventory;

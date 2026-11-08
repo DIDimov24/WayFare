@@ -114,6 +114,10 @@
     <ClInclude Include="models\Boss.hpp" />
     <ClInclude Include="Boss\BossFight.hpp" />
     <ClCompile Include="Boss\BossFight.cpp" />
+    <ClInclude Include="models\SavedGame.hpp" />
+    <ClInclude Include="models\GameSettings.hpp" />
+    <ClInclude Include="Game\GameService.hpp" />
+    <ClCompile Include="Game\GameService.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WayFare.DataAccess\WayFare.DataAccess.vcxproj">
