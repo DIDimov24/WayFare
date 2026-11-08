@@ -24,7 +24,7 @@ Item {
     property int stage: 0
     property real spin: 0
     property real strength: Level.air > 0.4 ? 0 : (Level.air > 0 ? 0.6 * (0.4 - Level.air) / 0.4 : 0.6 + 0.4 * (1 - Level.health / Level.maxHealth))
-    readonly property bool shaking: root.strength > 0 && !Level.dead
+    readonly property bool shaking: root.strength > 0 && !Level.dead && !root.paused
     property real blur: root.strength > 0 ? 0.1 + 0.7 * root.strength : 0
     property real hurtTilt: 0
     property real quake: 0
@@ -97,6 +97,7 @@ Item {
     property bool leftKey: false
     property bool rightKey: false
     property bool mapLarge: false
+    property bool paused: false
 
     focus: true
 
@@ -173,6 +174,16 @@ Item {
         root.rightKey = false
     }
 
+    function setPaused(value: bool) {
+        root.paused = value
+        if (value) {
+            root.releaseInput()
+            return
+        }
+        root.forceActiveFocus()
+        root.captured = root.Window.active
+    }
+
     Component.onCompleted: root.buildWalls()
 
     onCapturedChanged: {
@@ -183,7 +194,17 @@ Item {
 
     Keys.onPressed: (event) => {
         if (event.key === Qt.Key_Escape) {
-            root.releaseInput()
+            if (root.readyFrames < 3 || Level.dead) {
+                return
+            }
+            if (root.paused && pauseMenu.panel !== "") {
+                pauseMenu.panel = ""
+                return
+            }
+            root.setPaused(!root.paused)
+            return
+        }
+        if (root.paused) {
             return
         }
         if (event.key === Qt.Key_M && !event.isAutoRepeat) {
@@ -239,6 +260,9 @@ Item {
         function onActiveChanged() {
             if (!root.Window.active) {
                 root.releaseInput()
+                if (root.readyFrames >= 3 && !Level.dead) {
+                    root.paused = true
+                }
             }
         }
     }
@@ -343,7 +367,7 @@ Item {
     }
 
     FrameAnimation {
-        running: root.readyFrames >= 3 && !Level.dead
+        running: root.readyFrames >= 3 && !Level.dead && !root.paused
         onTriggered: {
             if (root.captured) {
                 const delta = Cursor.takeDelta(root)
@@ -688,7 +712,7 @@ Item {
         cursorShape: root.captured ? Qt.BlankCursor : Qt.ArrowCursor
 
         onPressed: {
-            if (root.readyFrames < 3 || Level.dead) {
+            if (root.readyFrames < 3 || Level.dead || root.paused) {
                 return
             }
             if (root.captured) {
@@ -706,6 +730,15 @@ Item {
         message: Level.deathMessage
         onRespawnClicked: Level.respawn()
         onMenuClicked: Level.quitToMenu()
+    }
+
+    PauseMenu {
+        id: pauseMenu
+
+        anchors.fill: parent
+        visible: root.paused
+        onResumeClicked: root.setPaused(false)
+        onMenuClicked: Level.saveAndQuit()
     }
 
     LoadingCover {

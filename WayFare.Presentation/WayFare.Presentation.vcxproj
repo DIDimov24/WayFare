@@ -151,6 +151,7 @@
     <None Include="qml\views\MainMenuButton.qml" />
     <None Include="qml\views\MainMenuView.qml" />
     <None Include="qml\views\Minimap.qml" />
+    <None Include="qml\views\PauseMenu.qml" />
     <None Include="qml\views\SettingsPanel.qml" />
     <None Include="qml\views\SettingsSlider.qml" />
     <None Include="qml\views\Sounds.qml" />

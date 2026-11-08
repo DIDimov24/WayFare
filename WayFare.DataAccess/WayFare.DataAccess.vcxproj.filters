@@ -1,7 +1,49 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="DataAccess.cpp" />
-    <ClInclude Include="DataAccess.hpp" />
+    <Filter Include="Database">
+      <UniqueIdentifier>{5b3a1c2e-7d41-4f0a-9e62-1c8d4a7b9e01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="models">
+      <UniqueIdentifier>{8e2f4d6a-1b3c-4e5f-a7b9-2c4d6e8f0a12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SaveRepository">
+      <UniqueIdentifier>{c4a6e8f0-2b4d-4f6a-8c0e-3d5f7a9b1c23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SettingsRepository">
+      <UniqueIdentifier>{f1b3d5e7-9a2c-4e6f-b8d0-4e6a8c0b2d34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="data">
+      <UniqueIdentifier>{2d4f6a8c-0e1b-4a3c-9d5e-5f7b9d1c3e45}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Database\Database.hpp">
+      <Filter>Database</Filter>
+    </ClInclude>
+    <ClCompile Include="Database\Database.cpp">
+      <Filter>Database</Filter>
+    </ClCompile>
+    <ClInclude Include="models\SaveData.hpp">
+      <Filter>models</Filter>
+    </ClInclude>
+    <ClInclude Include="models\SettingsData.hpp">
+      <Filter>models</Filter>
+    </ClInclude>
+    <ClInclude Include="SaveRepository\SaveRepository.hpp">
+      <Filter>SaveRepository</Filter>
+    </ClInclude>
+    <ClCompile Include="SaveRepository\SaveRepository.cpp">
+      <Filter>SaveRepository</Filter>
+    </ClCompile>
+    <ClInclude Include="SettingsRepository\SettingsRepository.hpp">
+      <Filter>SettingsRepository</Filter>
+    </ClInclude>
+    <ClCompile Include="SettingsRepository\SettingsRepository.cpp">
+      <Filter>SettingsRepository</Filter>
+    </ClCompile>
+    <None Include="data\WayFare.db">
+      <Filter>data</Filter>
+    </None>
   </ItemGroup>
 </Project>

@@ -35,6 +35,7 @@
         <file>views/MainMenuButton.qml</file>
         <file>views/MainMenuView.qml</file>
         <file>views/Minimap.qml</file>
+        <file>views/PauseMenu.qml</file>
         <file>views/SettingsPanel.qml</file>
         <file>views/SettingsSlider.qml</file>
         <file>views/SnowyVillageScene.qml</file>

@@ -3,6 +3,7 @@
 #include <algorithm>
 #include <cmath>
 #include <random>
+#include <QDebug>
 #include <QPoint>
 #include <QRandomGenerator>
 #include <QVariantMap>
@@ -459,7 +460,7 @@ namespace WayFare::Presentation {
 		return QStringLiteral("waiting");
 	}
 
-	Level::Level(Settings& settings, Game& game, QObject* parent) : QObject(parent), _settings(settings), _game(game) {
+	Level::Level(Settings& settings, Game& game, Business::GameService& gameService, QObject* parent) : QObject(parent), _settings(settings), _game(game), _gameService(gameService) {
 		_player = { 0.0, 0.0, 0.0, 0, 0.0 };
 		_inventory = Business::createInventory();
 		_startInventory = Business::createInventory();
@@ -756,6 +757,29 @@ namespace WayFare::Presentation {
 		emit deadChanged();
 	}
 
+	void Level::restore(const Business::SavedGame& game) {
+		load(game.level, game.seed);
+		_player = game.player;
+		_inventory = game.inventory;
+		_startInventory = game.inventory;
+		Business::removeOwnedPickups(_pickups, _inventory);
+
+		emit playerChanged();
+		emit hudChanged();
+		emit inventoryChanged();
+		emit pickupsChanged();
+	}
+
+	void Level::save() {
+		if (_maze.tiles.size() == 0 || _dead) {
+			return;
+		}
+
+		Business::SavedGame game = { _number, _seed, _player, _inventory };
+		if (_gameService.saveGame(game) != Business::SaveGameStatus::Success) {
+			qWarning() << "Could not save the game";
+		}
+	}
 
 	void Level::move(double forward, double strafe, double deltaTime) {
 		if (_maze.tiles.size() == 0 || _dead) {
@@ -864,6 +888,7 @@ namespace WayFare::Presentation {
 			_onExit = locked;
 
 			if (status == Business::ExitStatus::Success) {
+				_gameService.deleteSave();
 				_game.setPhase(QStringLiteral("ending"));
 			}
 			return;
@@ -940,10 +965,16 @@ namespace WayFare::Presentation {
 	void Level::nextLevel() {
 		_startInventory = _inventory;
 		load(_number + 1, QRandomGenerator::global()->generate());
+		save();
 		_game.setPhase(QStringLiteral("level"));
 	}
 
 	void Level::quitToMenu() {
+		_game.setPhase(QStringLiteral("menu"));
+	}
+
+	void Level::saveAndQuit() {
+		save();
 		_game.setPhase(QStringLiteral("menu"));
 	}
 

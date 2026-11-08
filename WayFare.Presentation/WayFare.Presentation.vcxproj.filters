@@ -411,6 +411,9 @@
     <None Include="qml\views\Minimap.qml">
       <Filter>qml\views</Filter>
     </None>
+    <None Include="qml\views\PauseMenu.qml">
+      <Filter>qml\views</Filter>
+    </None>
     <None Include="qml\views\SettingsPanel.qml">
       <Filter>qml\views</Filter>
     </None>

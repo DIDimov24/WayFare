@@ -100,6 +100,18 @@
     <ClCompile Include="Boss\BossFight.cpp">
       <Filter>Boss</Filter>
     </ClCompile>
+    <ClInclude Include="models\SavedGame.hpp">
+      <Filter>models</Filter>
+    </ClInclude>
+    <ClInclude Include="models\GameSettings.hpp">
+      <Filter>models</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\GameService.hpp">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClCompile Include="Game\GameService.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="MazeGenerator">
@@ -128,6 +140,9 @@
     </Filter>
     <Filter Include="Boss">
       <UniqueIdentifier>{6f1d2a4b-3c8e-4b7a-9d52-1e0f7c3a8b64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{a7c2e4f6-8b1d-4c3e-9f5a-6b8d0e2f4a71}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

@@ -11,4 +11,6 @@ namespace WayFare::Business {
 	std::vector<Pickup> placePickups(const Maze& maze, uint32_t seed, const std::vector<ItemType>& levelItems);
 
 	std::vector<ItemType> collectPickups(const Player& player, Inventory& inventory, std::vector<Pickup>& pickups);
+
+	void removeOwnedPickups(std::vector<Pickup>& pickups, const Inventory& inventory);
 }
