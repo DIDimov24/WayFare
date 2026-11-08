@@ -6,5 +6,10 @@
     <ClCompile Include="HealthTests.cpp" />
     <ClCompile Include="InventoryTests.cpp" />
     <ClCompile Include="DrowningTests.cpp" />
+    <ClCompile Include="CombatTests.cpp" />
+    <ClCompile Include="EnemyAITests.cpp" />
+    <ClCompile Include="SpikeTrapTests.cpp" />
+    <ClCompile Include="BossTests.cpp" />
+    <ClCompile Include="SaveLoadTests.cpp" />
   </ItemGroup>
 </Project>
