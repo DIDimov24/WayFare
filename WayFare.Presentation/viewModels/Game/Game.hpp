@@ -14,6 +14,9 @@ namespace WayFare::Presentation {
 		QString phase() const;
 		void setPhase(const QString& phase);
 
+	public slots:
+		void startLevel();
+
 	signals:
 		void phaseChanged();
 

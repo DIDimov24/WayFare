@@ -58,6 +58,60 @@
     <ClCompile Include="Level\TempleExit.cpp">
       <Filter>Level</Filter>
     </ClCompile>
+    <ClInclude Include="models\Enemy.hpp">
+      <Filter>models</Filter>
+    </ClInclude>
+    <ClInclude Include="models\Combat.hpp">
+      <Filter>models</Filter>
+    </ClInclude>
+    <ClInclude Include="models\Trap.hpp">
+      <Filter>models</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemies\EnemySpawner.hpp">
+      <Filter>Enemies</Filter>
+    </ClInclude>
+    <ClCompile Include="Enemies\EnemySpawner.cpp">
+      <Filter>Enemies</Filter>
+    </ClCompile>
+    <ClInclude Include="Enemies\EnemyAI.hpp">
+      <Filter>Enemies</Filter>
+    </ClInclude>
+    <ClCompile Include="Enemies\EnemyAI.cpp">
+      <Filter>Enemies</Filter>
+    </ClCompile>
+    <ClInclude Include="Combat\Weapons.hpp">
+      <Filter>Combat</Filter>
+    </ClInclude>
+    <ClCompile Include="Combat\Weapons.cpp">
+      <Filter>Combat</Filter>
+    </ClCompile>
+    <ClInclude Include="Hazards\SpikeTraps.hpp">
+      <Filter>Hazards</Filter>
+    </ClInclude>
+    <ClCompile Include="Hazards\SpikeTraps.cpp">
+      <Filter>Hazards</Filter>
+    </ClCompile>
+    <ClInclude Include="models\Boss.hpp">
+      <Filter>models</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss\BossFight.hpp">
+      <Filter>Boss</Filter>
+    </ClInclude>
+    <ClCompile Include="Boss\BossFight.cpp">
+      <Filter>Boss</Filter>
+    </ClCompile>
+    <ClInclude Include="models\SavedGame.hpp">
+      <Filter>models</Filter>
+    </ClInclude>
+    <ClInclude Include="models\GameSettings.hpp">
+      <Filter>models</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\GameService.hpp">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClCompile Include="Game\GameService.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="MazeGenerator">
@@ -77,6 +131,18 @@
     </Filter>
     <Filter Include="Level">
       <UniqueIdentifier>{2d7b4e91-6a3f-4c18-8e52-b9f0a1c6d473}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Enemies">
+      <UniqueIdentifier>{5b2f7c1e-8a4d-4e39-9c61-2d7e0a3b4f15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Combat">
+      <UniqueIdentifier>{c3e81a94-6f27-4b0d-a5d8-91f4e2b6c708}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Boss">
+      <UniqueIdentifier>{6f1d2a4b-3c8e-4b7a-9d52-1e0f7c3a8b64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{a7c2e4f6-8b1d-4c3e-9f5a-6b8d0e2f4a71}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

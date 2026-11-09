@@ -19,13 +19,13 @@ void initializeResources() {
 }
 
 namespace WayFare::Presentation {
-	void initialize() {
+	void initialize(Business::GameService& gameService) {
 		initializeResources();
 
 		QCoreApplication* app = QCoreApplication::instance();
-		Settings* settings = new Settings(app);
+		Settings* settings = new Settings(gameService, app);
 		Game* game = new Game(app);
-		Level* level = new Level(*settings, app);
+		Level* level = new Level(*settings, *game, gameService, app);
 		Assets* assets = new Assets(app);
 
 		QGuiApplication::setWindowIcon(QIcon(assets->url().toLocalFile() + QStringLiteral("logo/wayfare-logo.svg")));
@@ -34,7 +34,7 @@ namespace WayFare::Presentation {
 		qmlRegisterSingletonInstance(QmlModuleUri, 1, 0, "Cursor", new Cursor(app));
 		qmlRegisterSingletonInstance(QmlModuleUri, 1, 0, "Game", game);
 		qmlRegisterSingletonInstance(QmlModuleUri, 1, 0, "Level", level);
-		qmlRegisterSingletonInstance(QmlModuleUri, 1, 0, "MainMenu", new MainMenu(*game, *level, app));
+		qmlRegisterSingletonInstance(QmlModuleUri, 1, 0, "MainMenu", new MainMenu(*game, *level, gameService, app));
 		qmlRegisterSingletonInstance(QmlModuleUri, 1, 0, "Settings", settings);
 	}
 }

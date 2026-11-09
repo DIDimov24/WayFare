@@ -104,7 +104,21 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="WayFare.Tests.cpp" />
+    <ClCompile Include="MazeGeneratorTests.cpp" />
+    <ClCompile Include="CollisionTests.cpp" />
+    <ClCompile Include="HealthTests.cpp" />
+    <ClCompile Include="InventoryTests.cpp" />
+    <ClCompile Include="DrowningTests.cpp" />
+    <ClCompile Include="CombatTests.cpp" />
+    <ClCompile Include="EnemyAITests.cpp" />
+    <ClCompile Include="SpikeTrapTests.cpp" />
+    <ClCompile Include="BossTests.cpp" />
+    <ClCompile Include="SaveLoadTests.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WayFare.Business\WayFare.Business.vcxproj">
+      <Project>{d2f6950f-c02f-4333-92cd-87a03609d9a8}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

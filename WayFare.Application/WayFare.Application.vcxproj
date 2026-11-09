@@ -38,13 +38,13 @@
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="QtSettings">
     <QtInstall>6.12.0_msvc2022_64</QtInstall>
-    <QtModules>core;gui;qml;quick</QtModules>
+    <QtModules>core;gui;qml;quick;sql</QtModules>
     <QtBuildConfig>debug</QtBuildConfig>
     <QtQMLDebugEnable>false</QtQMLDebugEnable>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="QtSettings">
     <QtInstall>6.12.0_msvc2022_64</QtInstall>
-    <QtModules>core;gui;qml;quick</QtModules>
+    <QtModules>core;gui;qml;quick;sql</QtModules>
     <QtBuildConfig>release</QtBuildConfig>
   </PropertyGroup>
   <Target Name="QtMsBuildNotFound"

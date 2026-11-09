@@ -7,6 +7,9 @@
     <Filter Include="qml\models">
       <UniqueIdentifier>{6b0e2d1c-4f5a-4e8b-9c27-3a1d5e7f9b40}</UniqueIdentifier>
     </Filter>
+    <Filter Include="qml\shaders">
+      <UniqueIdentifier>{65c41fb1-2b77-4b79-a252-18615b27f9ee}</UniqueIdentifier>
+    </Filter>
     <Filter Include="qml\views">
       <UniqueIdentifier>{a7f42d32-05f9-491f-907a-2f359c8bd776}</UniqueIdentifier>
     </Filter>
@@ -39,6 +42,9 @@
     </Filter>
     <Filter Include="assets">
       <UniqueIdentifier>{05afdb01-a8c3-4f2e-859b-c69c23660636}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\audio">
+      <UniqueIdentifier>{7c3e9a52-4b1d-4f6e-a8d2-91e5c0b3f7a4}</UniqueIdentifier>
     </Filter>
     <Filter Include="assets\icons">
       <UniqueIdentifier>{d03e1da9-761b-4d18-b4c3-3707999a8dd3}</UniqueIdentifier>
@@ -106,14 +112,20 @@
     <Filter Include="assets\models\troll_cave\meshes">
       <UniqueIdentifier>{2ec9390c-25cf-4f6d-8786-b8c6e3cf7c5a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="assets\models\zombie">
+    <Filter Include="assets\models\zombie_fantasy">
       <UniqueIdentifier>{3853598e-83d0-4a16-b04a-c2a6b7040294}</UniqueIdentifier>
     </Filter>
-    <Filter Include="assets\models\zombie\maps">
+    <Filter Include="assets\models\zombie_fantasy\maps">
       <UniqueIdentifier>{77816386-88fb-4b2e-b661-4912b561bdc7}</UniqueIdentifier>
     </Filter>
-    <Filter Include="assets\models\zombie\meshes">
+    <Filter Include="assets\models\zombie_fantasy\meshes">
       <UniqueIdentifier>{37b8c286-b257-476c-bc74-fc40ea98a174}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\fan_coral">
+      <UniqueIdentifier>{027a96d8-91aa-4017-b351-c4e846f74200}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\fan_coral\meshes">
+      <UniqueIdentifier>{a61837af-4ea7-46ca-9d07-96464baab41c}</UniqueIdentifier>
     </Filter>
     <Filter Include="assets\models\fence_planks">
       <UniqueIdentifier>{e9fc9c65-94f7-4a42-9a70-4135e36aa1fe}</UniqueIdentifier>
@@ -133,11 +145,44 @@
     <Filter Include="assets\models\grass_large\meshes">
       <UniqueIdentifier>{ecf0d968-789b-4778-8094-59741b218768}</UniqueIdentifier>
     </Filter>
+    <Filter Include="assets\models\spike_trap">
+      <UniqueIdentifier>{5d0c7a11-3e42-4f6b-9a18-6c2b7e4d1a01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\spike_trap\maps">
+      <UniqueIdentifier>{5d0c7a11-3e42-4f6b-9a18-6c2b7e4d1a02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\spike_trap\meshes">
+      <UniqueIdentifier>{5d0c7a11-3e42-4f6b-9a18-6c2b7e4d1a03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\torch_mounted">
+      <UniqueIdentifier>{5d0c7a11-3e42-4f6b-9a18-6c2b7e4d1a04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\torch_mounted\maps">
+      <UniqueIdentifier>{5d0c7a11-3e42-4f6b-9a18-6c2b7e4d1a05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\torch_mounted\meshes">
+      <UniqueIdentifier>{5d0c7a11-3e42-4f6b-9a18-6c2b7e4d1a06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\ladder_long">
+      <UniqueIdentifier>{0a799de8-2278-4922-a67e-a48b02e11e38}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\ladder_long\maps">
+      <UniqueIdentifier>{a38d66c1-4ad2-4488-aee5-3dfcda2e99dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\ladder_long\meshes">
+      <UniqueIdentifier>{7515e273-fac9-4bd8-b0ea-1fe15a580a2b}</UniqueIdentifier>
+    </Filter>
     <Filter Include="assets\models\log_stack">
       <UniqueIdentifier>{06ba5f19-bcc6-4457-8846-5251fe3526f4}</UniqueIdentifier>
     </Filter>
     <Filter Include="assets\models\log_stack\meshes">
       <UniqueIdentifier>{2c67c062-1574-4060-a8fc-75b02eca2a49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\orange_coral">
+      <UniqueIdentifier>{66989ee0-7c66-4cac-a63a-3239a99eee00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\orange_coral\meshes">
+      <UniqueIdentifier>{f831886b-6a79-4053-9b67-c282beb690a2}</UniqueIdentifier>
     </Filter>
     <Filter Include="assets\models\pine_default">
       <UniqueIdentifier>{bd7f26a7-b32c-4152-97f2-9832b6e1f879}</UniqueIdentifier>
@@ -181,6 +226,12 @@
     <Filter Include="assets\models\rock_tall\meshes">
       <UniqueIdentifier>{d72b6a73-e4f1-4a2f-aedb-d7b791796aac}</UniqueIdentifier>
     </Filter>
+    <Filter Include="assets\models\seaweed">
+      <UniqueIdentifier>{2fc015df-ea30-4368-90d1-70c9e24fcb39}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\models\seaweed\meshes">
+      <UniqueIdentifier>{d50c784f-29c2-48d9-bc6e-d92e20c50c03}</UniqueIdentifier>
+    </Filter>
     <Filter Include="assets\models\stump_old">
       <UniqueIdentifier>{30bf6cf4-b70e-4e38-891e-f9d94cf780e4}</UniqueIdentifier>
     </Filter>
@@ -198,6 +249,9 @@
     </Filter>
     <Filter Include="assets\textures\temple">
       <UniqueIdentifier>{05be5575-8c30-49b0-b534-59ed82681043}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\textures\temple\caustics">
+      <UniqueIdentifier>{c4b7752e-e003-491c-97ef-001c6f2b8013}</UniqueIdentifier>
     </Filter>
     <Filter Include="assets\textures\village">
       <UniqueIdentifier>{ef2f6020-4d09-4cdc-8ef5-b08ab9f7488c}</UniqueIdentifier>
@@ -255,10 +309,34 @@
     <None Include="qml\models\HeroModel.qml">
       <Filter>qml\models</Filter>
     </None>
+    <None Include="qml\models\CoralModel.qml">
+      <Filter>qml\models</Filter>
+    </None>
     <None Include="qml\models\FenceModel.qml">
       <Filter>qml\models</Filter>
     </None>
     <None Include="qml\models\GrassModel.qml">
+      <Filter>qml\models</Filter>
+    </None>
+    <None Include="qml\models\ItemModel.qml">
+      <Filter>qml\models</Filter>
+    </None>
+    <None Include="qml\models\SpikeTrapModel.qml">
+      <Filter>qml\models</Filter>
+    </None>
+    <None Include="qml\models\TorchModel.qml">
+      <Filter>qml\models</Filter>
+    </None>
+    <None Include="qml\models\EnemyModel.qml">
+      <Filter>qml\models</Filter>
+    </None>
+    <None Include="qml\models\NightmareCreatureModel.qml">
+      <Filter>qml\models</Filter>
+    </None>
+    <None Include="qml\models\ZombieModel.qml">
+      <Filter>qml\models</Filter>
+    </None>
+    <None Include="qml\models\LadderModel.qml">
       <Filter>qml\models</Filter>
     </None>
     <None Include="qml\models\LogStackModel.qml">
@@ -270,13 +348,55 @@
     <None Include="qml\models\RockModel.qml">
       <Filter>qml\models</Filter>
     </None>
+    <None Include="qml\models\SeaweedModel.qml">
+      <Filter>qml\models</Filter>
+    </None>
     <None Include="qml\models\StumpModel.qml">
       <Filter>qml\models</Filter>
+    </None>
+    <None Include="qml\models\TempleWallMaterial.qml">
+      <Filter>qml\models</Filter>
+    </None>
+    <None Include="qml\models\TrollModel.qml">
+      <Filter>qml\models</Filter>
+    </None>
+    <None Include="qml\shaders\TempleWall.frag">
+      <Filter>qml\shaders</Filter>
+    </None>
+    <None Include="qml\views\DungeonExitCutscene.qml">
+      <Filter>qml\views</Filter>
+    </None>
+    <None Include="qml\views\DungeonScene.qml">
+      <Filter>qml\views</Filter>
+    </None>
+    <None Include="qml\views\EndingCutscene.qml">
+      <Filter>qml\views</Filter>
+    </None>
+    <None Include="qml\views\BossAudio.qml">
+      <Filter>qml\views</Filter>
+    </None>
+    <None Include="qml\views\CreditsRoll.qml">
+      <Filter>qml\views</Filter>
+    </None>
+    <None Include="qml\views\SnowyVillageScene.qml">
+      <Filter>qml\views</Filter>
+    </None>
+    <None Include="qml\views\WallTorches.qml">
+      <Filter>qml\views</Filter>
+    </None>
+    <None Include="qml\views\FirstPersonWeapon.qml">
+      <Filter>qml\views</Filter>
+    </None>
+    <None Include="qml\views\DeathScreen.qml">
+      <Filter>qml\views</Filter>
     </None>
     <None Include="qml\views\HowToPlayPanel.qml">
       <Filter>qml\views</Filter>
     </None>
     <None Include="qml\views\Hud.qml">
+      <Filter>qml\views</Filter>
+    </None>
+    <None Include="qml\views\IntroCutscene.qml">
       <Filter>qml\views</Filter>
     </None>
     <None Include="qml\views\LevelView.qml">
@@ -294,7 +414,22 @@
     <None Include="qml\views\Minimap.qml">
       <Filter>qml\views</Filter>
     </None>
+    <None Include="qml\views\PauseMenu.qml">
+      <Filter>qml\views</Filter>
+    </None>
     <None Include="qml\views\SettingsPanel.qml">
+      <Filter>qml\views</Filter>
+    </None>
+    <None Include="qml\views\SettingsSlider.qml">
+      <Filter>qml\views</Filter>
+    </None>
+    <None Include="qml\views\Sounds.qml">
+      <Filter>qml\views</Filter>
+    </None>
+    <None Include="qml\views\TempleExitCutscene.qml">
+      <Filter>qml\views</Filter>
+    </None>
+    <None Include="qml\views\TempleScene.qml">
       <Filter>qml\views</Filter>
     </None>
     <None Include="qml\views\VillageScene.qml">
@@ -459,20 +594,26 @@
     <None Include="assets\models\troll_cave\meshes\node0004_SK_Troll_Cave_MI_Troll_Heads_Teeth_0_mesh.mesh">
       <Filter>assets\models\troll_cave\meshes</Filter>
     </None>
-    <None Include="assets\models\zombie\Zombie.qml">
-      <Filter>assets\models\zombie</Filter>
+    <None Include="assets\models\zombie_fantasy\ZombieFantasy.qml">
+      <Filter>assets\models\zombie_fantasy</Filter>
     </None>
-    <None Include="assets\models\zombie\maps\zombie1_diffuse.png">
-      <Filter>assets\models\zombie\maps</Filter>
+    <None Include="assets\models\zombie_fantasy\maps\zombieBody_baseColor.png">
+      <Filter>assets\models\zombie_fantasy\maps</Filter>
     </None>
-    <None Include="assets\models\zombie\maps\zombie1_normal.png">
-      <Filter>assets\models\zombie\maps</Filter>
+    <None Include="assets\models\zombie_fantasy\maps\zombieBody_normal.png">
+      <Filter>assets\models\zombie_fantasy\maps</Filter>
     </None>
-    <None Include="assets\models\zombie\maps\zombie1_specularGlossiness.png">
-      <Filter>assets\models\zombie\maps</Filter>
+    <None Include="assets\models\zombie_fantasy\maps\zombieBody_metallicRoughness.png">
+      <Filter>assets\models\zombie_fantasy\maps</Filter>
     </None>
-    <None Include="assets\models\zombie\meshes\mesh_zombie1_0_mesh.mesh">
-      <Filter>assets\models\zombie\meshes</Filter>
+    <None Include="assets\models\zombie_fantasy\meshes\body_zombieBody_0_mesh.mesh">
+      <Filter>assets\models\zombie_fantasy\meshes</Filter>
+    </None>
+    <None Include="assets\models\fan_coral\FanCoral.qml">
+      <Filter>assets\models\fan_coral</Filter>
+    </None>
+    <None Include="assets\models\fan_coral\meshes\mesh1533979519_mesh.mesh">
+      <Filter>assets\models\fan_coral\meshes</Filter>
     </None>
     <None Include="assets\models\fence_planks\FencePlanks.qml">
       <Filter>assets\models\fence_planks</Filter>
@@ -492,11 +633,47 @@
     <None Include="assets\models\grass_large\meshes\mesh_grass_large_mesh.mesh">
       <Filter>assets\models\grass_large\meshes</Filter>
     </None>
+    <None Include="assets\models\spike_trap\SpikeTrap.qml">
+      <Filter>assets\models\spike_trap</Filter>
+    </None>
+    <None Include="assets\models\spike_trap\maps\textureData.png">
+      <Filter>assets\models\spike_trap\maps</Filter>
+    </None>
+    <None Include="assets\models\spike_trap\meshes\cube_14375_mesh.mesh">
+      <Filter>assets\models\spike_trap\meshes</Filter>
+    </None>
+    <None Include="assets\models\spike_trap\meshes\cube_14376_mesh.mesh">
+      <Filter>assets\models\spike_trap\meshes</Filter>
+    </None>
+    <None Include="assets\models\torch_mounted\TorchMounted.qml">
+      <Filter>assets\models\torch_mounted</Filter>
+    </None>
+    <None Include="assets\models\torch_mounted\maps\textureData.png">
+      <Filter>assets\models\torch_mounted\maps</Filter>
+    </None>
+    <None Include="assets\models\torch_mounted\meshes\cylinder_022_mesh.mesh">
+      <Filter>assets\models\torch_mounted\meshes</Filter>
+    </None>
+    <None Include="assets\models\ladder_long\LadderLong.qml">
+      <Filter>assets\models\ladder_long</Filter>
+    </None>
+    <None Include="assets\models\ladder_long\maps\colormap.png">
+      <Filter>assets\models\ladder_long\maps</Filter>
+    </None>
+    <None Include="assets\models\ladder_long\meshes\ladder_long_mesh.mesh">
+      <Filter>assets\models\ladder_long\meshes</Filter>
+    </None>
     <None Include="assets\models\log_stack\LogStack.qml">
       <Filter>assets\models\log_stack</Filter>
     </None>
     <None Include="assets\models\log_stack\meshes\log_stack_mesh.mesh">
       <Filter>assets\models\log_stack\meshes</Filter>
+    </None>
+    <None Include="assets\models\orange_coral\OrangeCoral.qml">
+      <Filter>assets\models\orange_coral</Filter>
+    </None>
+    <None Include="assets\models\orange_coral\meshes\group1965416314_mesh.mesh">
+      <Filter>assets\models\orange_coral\meshes</Filter>
     </None>
     <None Include="assets\models\pine_default\PineDefault.qml">
       <Filter>assets\models\pine_default</Filter>
@@ -540,11 +717,83 @@
     <None Include="assets\models\rock_tall\meshes\rock_tallA_mesh.mesh">
       <Filter>assets\models\rock_tall\meshes</Filter>
     </None>
+    <None Include="assets\models\seaweed\Seaweed.qml">
+      <Filter>assets\models\seaweed</Filter>
+    </None>
+    <None Include="assets\models\seaweed\meshes\node_Mesh_mesh.mesh">
+      <Filter>assets\models\seaweed\meshes</Filter>
+    </None>
     <None Include="assets\models\stump_old\StumpOld.qml">
       <Filter>assets\models\stump_old</Filter>
     </None>
     <None Include="assets\models\stump_old\meshes\mesh_stump_old_mesh.mesh">
       <Filter>assets\models\stump_old\meshes</Filter>
+    </None>
+    <None Include="assets\audio\54427377-sword-slash-476148.wav">
+      <Filter>assets\audio</Filter>
+    </None>
+    <None Include="assets\audio\click.wav">
+      <Filter>assets\audio</Filter>
+    </None>
+    <None Include="assets\audio\daviddumaisaudio-sword-slash-with-metallic-impact-185435.wav">
+      <Filter>assets\audio</Filter>
+    </None>
+    <None Include="assets\audio\pistol_shot.wav">
+      <Filter>assets\audio</Filter>
+    </None>
+    <None Include="assets\audio\dragon-studio-sword-clashhit-393837.wav">
+      <Filter>assets\audio</Filter>
+    </None>
+    <None Include="assets\audio\dragon-studio-violent-sword-slice-2-393841.wav">
+      <Filter>assets\audio</Filter>
+    </None>
+    <None Include="assets\audio\sword_swing.wav">
+      <Filter>assets\audio</Filter>
+    </None>
+    <None Include="assets\audio\equip.wav">
+      <Filter>assets\audio</Filter>
+    </None>
+    <None Include="assets\audio\freesound_community-bottle-break-1-89987.wav">
+      <Filter>assets\audio</Filter>
+    </None>
+    <None Include="assets\audio\ladder.wav">
+      <Filter>assets\audio</Filter>
+    </None>
+    <None Include="assets\audio\pistol_cock.wav">
+      <Filter>assets\audio</Filter>
+    </None>
+    <None Include="assets\audio\gasp.wav">
+      <Filter>assets\audio</Filter>
+    </None>
+    <None Include="assets\audio\hover.wav">
+      <Filter>assets\audio</Filter>
+    </None>
+    <None Include="assets\audio\intro_music.ogg">
+      <Filter>assets\audio</Filter>
+    </None>
+    <None Include="assets\audio\melbeebelbee-gun-full-reload-384507.wav">
+      <Filter>assets\audio</Filter>
+    </None>
+    <None Include="assets\audio\menu_music.ogg">
+      <Filter>assets\audio</Filter>
+    </None>
+    <None Include="assets\audio\temple_ambience.ogg">
+      <Filter>assets\audio</Filter>
+    </None>
+    <None Include="assets\audio\temple_outro.ogg">
+      <Filter>assets\audio</Filter>
+    </None>
+    <None Include="assets\audio\tinnitus.wav">
+      <Filter>assets\audio</Filter>
+    </None>
+    <None Include="assets\audio\universfield-pistol-shot-278821.wav">
+      <Filter>assets\audio</Filter>
+    </None>
+    <None Include="assets\audio\sword_hit.wav">
+      <Filter>assets\audio</Filter>
+    </None>
+    <None Include="assets\audio\potion_drink.wav">
+      <Filter>assets\audio</Filter>
     </None>
     <None Include="assets\icons\air.png">
       <Filter>assets\icons</Filter>
@@ -593,6 +842,9 @@
     </None>
     <None Include="assets\textures\dungeon\wall_roughness.jpg">
       <Filter>assets\textures\dungeon</Filter>
+    </None>
+    <None Include="assets\textures\temple\caustics\caust00.png">
+      <Filter>assets\textures\temple\caustics</Filter>
     </None>
     <None Include="assets\textures\temple\floor_diffuse.jpg">
       <Filter>assets\textures\temple</Filter>

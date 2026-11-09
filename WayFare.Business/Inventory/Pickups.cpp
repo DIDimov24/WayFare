@@ -60,4 +60,12 @@ namespace WayFare::Business {
 
 		return collected;
 	}
+
+	void removeOwnedPickups(std::vector<Pickup>& pickups, const Inventory& inventory) {
+		for (size_t i = 0; i < pickups.size(); i++) {
+			if (pickups[i].type != ItemType::Potion && hasItem(inventory, pickups[i].type)) {
+				pickups[i].collected = true;
+			}
+		}
+	}
 }
