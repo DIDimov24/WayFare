@@ -1,6 +1,8 @@
 #include "WayFare.Presentation/Register/Register.hpp"
 
 #include <QCoreApplication>
+#include <QGuiApplication>
+#include <QIcon>
 #include <QtCore/qtresource.h>
 #include <QtQml/qqml.h>
 
@@ -24,8 +26,11 @@ namespace WayFare::Presentation {
 		Settings* settings = new Settings(gameService, app);
 		Game* game = new Game(app);
 		Level* level = new Level(*settings, *game, gameService, app);
+		Assets* assets = new Assets(app);
 
-		qmlRegisterSingletonInstance(QmlModuleUri, 1, 0, "Assets", new Assets(app));
+		QGuiApplication::setWindowIcon(QIcon(assets->url().toLocalFile() + QStringLiteral("logo/wayfare-logo.svg")));
+
+		qmlRegisterSingletonInstance(QmlModuleUri, 1, 0, "Assets", assets);
 		qmlRegisterSingletonInstance(QmlModuleUri, 1, 0, "Cursor", new Cursor(app));
 		qmlRegisterSingletonInstance(QmlModuleUri, 1, 0, "Game", game);
 		qmlRegisterSingletonInstance(QmlModuleUri, 1, 0, "Level", level);

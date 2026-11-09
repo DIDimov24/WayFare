@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="420" viewBox="0 0 420 420">
+<g fill="none" stroke-width="20" stroke-linecap="square" stroke-linejoin="miter">
+<path stroke="#1f6f78" transform="translate(110 0)" d="M10 190 L10 10 L190 10 L190 190 L50 190 L50 50 L150 50 L150 150 L90 150 L90 90 L110 90"/>
+<path stroke="#5a4636" transform="translate(0 220) rotate(180 100 100)" d="M10 190 L10 10 L190 10 L190 190 L50 190 L50 50 L150 50 L150 150 L90 150 L90 90 L110 90"/>
+<path stroke="#cdd6df" transform="translate(220 220) translate(0 200) scale(1 -1)" d="M10 190 L10 10 L190 10 L190 190 L50 190 L50 50 L150 50 L150 150 L90 150 L90 90 L110 90"/>
+</g>
+</svg>

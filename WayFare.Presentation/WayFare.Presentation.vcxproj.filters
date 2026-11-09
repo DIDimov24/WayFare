@@ -49,6 +49,9 @@
     <Filter Include="assets\icons">
       <UniqueIdentifier>{d03e1da9-761b-4d18-b4c3-3707999a8dd3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="assets\logo">
+      <UniqueIdentifier>{7c3e9a41-5d2b-4f6e-9b18-2a6d4c0e8f53}</UniqueIdentifier>
+    </Filter>
     <Filter Include="assets\models">
       <UniqueIdentifier>{ff4b769d-ba0e-4cd0-853c-67ec9512c3f6}</UniqueIdentifier>
     </Filter>
@@ -815,6 +818,9 @@
     </None>
     <None Include="assets\icons\sword.png">
       <Filter>assets\icons</Filter>
+    </None>
+    <None Include="assets\logo\wayfare-logo.svg">
+      <Filter>assets\logo</Filter>
     </None>
     <None Include="assets\sky\kloofendal_overcast_puresky_2k.hdr">
       <Filter>assets\sky</Filter>
