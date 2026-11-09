@@ -82,12 +82,27 @@ Item {
             NumberAnimation { duration: 150 }
         }
 
-        Text {
-            text: "WayFare"
-            color: "#ffffff"
-            font.pixelSize: 64
-            font.weight: Font.Light
-            font.letterSpacing: 2
+        Row {
+            spacing: 20
+
+            Image {
+                anchors.verticalCenter: parent.verticalCenter
+                width: 72
+                height: 72
+                sourceSize.width: 144
+                sourceSize.height: 144
+                source: Assets.url + "logo/wayfare-logo.svg"
+                smooth: true
+            }
+
+            Text {
+                anchors.verticalCenter: parent.verticalCenter
+                text: "WayFare"
+                color: "#ffffff"
+                font.pixelSize: 64
+                font.weight: Font.Light
+                font.letterSpacing: 2
+            }
         }
 
         Item {
