@@ -10,6 +10,8 @@ namespace WayFare::Business {
 
 	void addItem(Inventory& inventory, ItemType type);
 
+	void removeItem(Inventory& inventory, ItemType type);
+
 	bool hasItem(const Inventory& inventory, ItemType type);
 
 	HealStatus usePotion(Player& player, Inventory& inventory);

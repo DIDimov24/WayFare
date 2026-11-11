@@ -18,6 +18,16 @@ namespace WayFare::Business {
 		}
 	}
 
+	void removeItem(Inventory& inventory, ItemType type) {
+		std::vector<ItemType> kept;
+		for (size_t i = 0; i < inventory.items.size(); i++) {
+			if (inventory.items[i] != type) {
+				kept.push_back(inventory.items[i]);
+			}
+		}
+		inventory.items = kept;
+	}
+
 	bool hasItem(const Inventory& inventory, ItemType type) {
 		if (type == ItemType::Potion) {
 			return inventory.potionCount > 0;
