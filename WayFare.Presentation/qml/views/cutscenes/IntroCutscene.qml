@@ -6,23 +6,36 @@ import QtQuick3D.Particles3D
 import QtQuick.Timeline
 import wayfare.presentation
 
-Item {
+Cutscene {
     id: root
 
-    readonly property int lastStage: 4
-    readonly property real length: 16000
-    property int stage: 0
-    property bool started: false
-    property int warmFrames: 0
-    property real waited: 0
-    property real time: 0
+    readonly property real prologue: 19200
+    readonly property real kneelAt: 5200
+    readonly property real dive: Math.max(0, root.time - root.prologue)
+    readonly property bool above: root.time < root.prologue
 
-    focus: true
+    lastStage: 5
+    length: 35200
+    heroReady: hero.ready
+    title: "The Underwater Temple"
+    titleAtBottom: true
+    lines: [
+        { start: 500, end: 5100, text: "She was right behind me. I only looked away for a moment.", voice: "intro_1" },
+        { start: 7000, end: 11000, text: "Her footprints end right here, at the edge of the ice.", voice: "intro_2" },
+        { start: 11500, end: 15400, text: "It dragged her under, the same way it took the other children.", voice: "intro_3" },
+        { start: 15600, end: 19600, text: "Hold on, Mila. I'm coming down to get you.", voice: "intro_4" },
+        { start: 29500, end: 35100, text: "I can't hold my breath much longer. There has to be air somewhere inside.", voice: "intro_5" }
+    ]
 
-    function start() {
-        root.started = true
-        music.play()
+    readonly property bool diving: root.started && !root.above
+
+    onDivingChanged: {
+        if (root.diving) {
+            music.play()
+        }
     }
+    onSkipRequested: Game.startLevel()
+    onEnded: Game.startLevel()
 
     MediaPlayer {
         id: music
@@ -32,59 +45,60 @@ Item {
         }
     }
 
-    Keys.onPressed: (event) => {
-        if (event.key === Qt.Key_Space || event.key === Qt.Key_Escape) {
-            Game.startLevel()
+    Timeline {
+        startFrame: 0
+        endFrame: root.prologue
+        currentFrame: root.time
+        enabled: root.above
+
+        KeyframeGroup {
+            target: camera
+            property: "position"
+
+            Keyframe { frame: 0; value: Qt.vector3d(5.8, 102.3, 6.4) }
+            Keyframe { frame: 5199; value: Qt.vector3d(4.6, 101.9, 5.2) }
+            Keyframe { frame: 5200; value: Qt.vector3d(1.9, 100.8, 0.6) }
+            Keyframe { frame: 11199; value: Qt.vector3d(1.6, 100.9, 0.3) }
+            Keyframe { frame: 11200; value: Qt.vector3d(-0.3, 100.3, 3.4) }
+            Keyframe { frame: 19200; value: Qt.vector3d(-0.15, 100.4, 2.9) }
         }
-    }
 
-    Connections {
-        target: root.Window.window
-        enabled: !root.started
+        KeyframeGroup {
+            target: focusPoint
+            property: "position"
 
-        function onAfterAnimating() {
-            if (root.stage < root.lastStage) {
-                root.stage++
-                return
-            }
-            if (hero.ready) {
-                root.warmFrames++
-            }
-            if (root.warmFrames >= 10) {
-                root.start()
-            }
+            Keyframe { frame: 0; value: Qt.vector3d(0, 101.1, -0.6) }
+            Keyframe { frame: 5199; value: Qt.vector3d(0, 101.1, -0.8) }
+            Keyframe { frame: 5200; value: Qt.vector3d(0.1, 100.6, -0.7) }
+            Keyframe { frame: 11199; value: Qt.vector3d(0.1, 100.8, -0.8) }
+            Keyframe { frame: 11200; value: Qt.vector3d(0, 100.85, -1) }
+            Keyframe { frame: 19200; value: Qt.vector3d(0, 100.9, -1) }
         }
-    }
 
-    Timer {
-        interval: 100
-        repeat: true
-        running: !root.started
+        KeyframeGroup {
+            target: hero
+            property: "position"
 
-        onTriggered: {
-            root.waited = root.waited + 100
-            if (root.waited >= 60000) {
-                root.start()
-            }
+            Keyframe { frame: 0; value: Qt.vector3d(0, 100, -1.1) }
+            Keyframe { frame: 19200; value: Qt.vector3d(0, 100, -1.1) }
         }
-    }
 
-    FrameAnimation {
-        running: root.started && root.time < root.length
+        KeyframeGroup {
+            target: root
+            property: "fadeOpacity"
 
-        onTriggered: {
-            root.time = Math.min(root.length, root.time + Math.min(frameTime, 0.05) * 1000)
-            if (root.time >= root.length) {
-                Game.startLevel()
-            }
+            Keyframe { frame: 0; value: 1 }
+            Keyframe { frame: 1400; value: 0 }
+            Keyframe { frame: 18500; value: 0 }
+            Keyframe { frame: 19200; value: 1 }
         }
     }
 
     Timeline {
         startFrame: 0
-        endFrame: root.length
-        currentFrame: root.time
-        enabled: true
+        endFrame: 16000
+        currentFrame: root.dive
+        enabled: !root.above
 
         KeyframeGroup {
             target: camera
@@ -124,8 +138,8 @@ Item {
         }
 
         KeyframeGroup {
-            target: title
-            property: "opacity"
+            target: root
+            property: "titleOpacity"
 
             Keyframe { frame: 0; value: 0 }
             Keyframe { frame: 6500; value: 0 }
@@ -135,8 +149,8 @@ Item {
         }
 
         KeyframeGroup {
-            target: fade
-            property: "opacity"
+            target: root
+            property: "fadeOpacity"
 
             Keyframe { frame: 0; value: 1 }
             Keyframe { frame: 1200; value: 0 }
@@ -224,19 +238,19 @@ Item {
 
         environment: SceneEnvironment {
             backgroundMode: SceneEnvironment.Color
-            clearColor: "#082d35"
+            clearColor: root.above ? "#10151f" : "#082d35"
             antialiasingMode: SceneEnvironment.MSAA
             antialiasingQuality: SceneEnvironment.Medium
             tonemapMode: SceneEnvironment.TonemapModeFilmic
             fog: Fog {
                 enabled: true
-                color: "#082d35"
+                color: root.above ? "#10151f" : "#082d35"
                 density: 1
                 depthEnabled: true
                 depthNear: 3
-                depthFar: 30
+                depthFar: root.above ? 26 : 30
                 depthCurve: 1.2
-                heightEnabled: true
+                heightEnabled: !root.above
                 mostIntenseY: 16
                 leastIntenseY: 6
                 heightCurve: 1.5
@@ -258,9 +272,9 @@ Item {
 
         DirectionalLight {
             eulerRotation: Qt.vector3d(-70, 25, 0)
-            color: "#7fd6e0"
-            brightness: 0.55
-            ambientColor: "#143c46"
+            color: root.above ? "#9fb4d8" : "#7fd6e0"
+            brightness: root.above ? 0.7 : 0.55
+            ambientColor: root.above ? "#20283a" : "#143c46"
         }
 
         DirectionalLight {
@@ -276,13 +290,225 @@ Item {
             quadraticFade: 150
         }
 
+        Node {
+            visible: root.stage >= 5 && root.above
+
+            Model {
+                source: "#Rectangle"
+                position: Qt.vector3d(0, 100, 0)
+                eulerRotation.x: -90
+                scale: Qt.vector3d(1.2, 1.2, 1)
+                materials: PrincipledMaterial {
+                    baseColorMap: Texture {
+                        source: Assets.url + "textures/village/floor_diffuse.jpg"
+                        scaleU: 40
+                        scaleV: 40
+                    }
+                    normalMap: Texture {
+                        source: Assets.url + "textures/village/floor_normal.jpg"
+                        scaleU: 40
+                        scaleV: 40
+                    }
+                    normalStrength: 1.6
+                    roughnessMap: Texture {
+                        source: Assets.url + "textures/village/floor_roughness.jpg"
+                        scaleU: 40
+                        scaleV: 40
+                    }
+                    roughnessChannel: Material.R
+                }
+            }
+
+            Model {
+                source: "#Cylinder"
+                position: Qt.vector3d(0.1, 100.004, 0.9)
+                scale: Qt.vector3d(0.046, 0.0002, 0.04)
+                materials: PrincipledMaterial {
+                    baseColor: "#8fa9bd"
+                    roughness: 0.2
+                    specularAmount: 1
+                }
+            }
+
+            Model {
+                source: "#Cylinder"
+                position: Qt.vector3d(0.1, 100.012, 0.9)
+                scale: Qt.vector3d(0.033, 0.0002, 0.027)
+                materials: PrincipledMaterial {
+                    baseColor: "#dfeaf2"
+                    roughness: 0.5
+                }
+            }
+
+            Model {
+                source: "#Cylinder"
+                position: Qt.vector3d(0.1, 100.024, 0.9)
+                scale: Qt.vector3d(0.03, 0.0002, 0.024)
+                materials: PrincipledMaterial {
+                    baseColor: "#123c4a"
+                    roughness: 0.08
+                    specularAmount: 1
+                }
+            }
+
+            Model {
+                source: "#Cylinder"
+                position: Qt.vector3d(0.1, 100.03, 0.9)
+                scale: Qt.vector3d(0.0296, 0.0001, 0.0236)
+                castsShadows: false
+                receivesShadows: false
+                materials: PrincipledMaterial {
+                    alphaMode: PrincipledMaterial.Blend
+                    baseColor: "#000000"
+                    emissiveFactor: Qt.vector3d(0.45, 0.8, 0.9)
+                    specularAmount: 0
+                    opacity: 0.5
+                    opacityChannel: Material.R
+                    depthDrawMode: Material.NeverDepthDraw
+                    opacityMap: Texture {
+                        source: Assets.url + "textures/temple/caustics/caust00.png"
+                        tilingModeHorizontal: Texture.Repeat
+                        tilingModeVertical: Texture.Repeat
+                        scaleU: 2
+                        scaleV: 2
+
+                        NumberAnimation on positionU {
+                            loops: Animation.Infinite
+                            from: 0
+                            to: 1
+                            duration: 14000
+                        }
+
+                        NumberAnimation on positionV {
+                            loops: Animation.Infinite
+                            from: 0
+                            to: 1
+                            duration: 19000
+                        }
+                    }
+                }
+            }
+
+            Repeater3D {
+                model: [
+                    Qt.vector4d(-1.4, 0.7, 25, 0.5), Qt.vector4d(1.7, 1.2, -18, 0.6), Qt.vector4d(0.5, 2.3, 40, 0.45),
+                    Qt.vector4d(-1.1, 1.9, -30, 0.55), Qt.vector4d(1.5, 0.1, 12, 0.4), Qt.vector4d(-0.6, -0.3, -22, 0.35)
+                ]
+
+                delegate: Model {
+                    required property vector4d modelData
+
+                    source: "#Cube"
+                    position: Qt.vector3d(modelData.x, 100.04, modelData.y)
+                    eulerRotation: Qt.vector3d(modelData.z * 0.4, modelData.z * 3, modelData.z)
+                    scale: Qt.vector3d(modelData.w * 0.012, 0.0012, modelData.w * 0.008)
+                    materials: PrincipledMaterial {
+                        baseColor: "#b9cbdc"
+                        roughness: 0.25
+                    }
+                }
+            }
+
+            PointLight {
+                position: Qt.vector3d(-1.6, 100.5, -0.4)
+                color: "#ffb870"
+                brightness: 1.3 + Math.sin(root.time * 0.013) * 0.15
+                quadraticFade: 500
+            }
+
+            ParticleSystem3D {
+                running: root.started && root.above
+
+                ModelParticle3D {
+                    id: snowflake
+
+                    maxAmount: 320
+                    color: "#ffffff"
+                    fadeInDuration: 300
+                    fadeOutDuration: 400
+                    delegate: Model {
+                        source: "#Sphere"
+                        scale: Qt.vector3d(0.0003, 0.0003, 0.0003)
+                        castsShadows: false
+                        receivesShadows: false
+                        materials: PrincipledMaterial {
+                            lighting: PrincipledMaterial.NoLighting
+                            baseColor: "#ffffff"
+                        }
+                    }
+                }
+
+                ParticleEmitter3D {
+                    particle: snowflake
+                    position: Qt.vector3d(1, 106, 1.5)
+                    shape: ParticleShape3D {
+                        type: ParticleShape3D.Cube
+                        extents: Qt.vector3d(9, 0.5, 9)
+                    }
+                    emitRate: 60
+                    lifeSpan: 5000
+                    particleScale: 1
+                    particleScaleVariation: 0.5
+                    velocity: VectorDirection3D {
+                        direction: Qt.vector3d(0.2, -1.25, 0.05)
+                        directionVariation: Qt.vector3d(0.15, 0.2, 0.15)
+                    }
+                }
+            }
+
+            RockModel {
+                position: Qt.vector3d(-4.2, 100, -3.4)
+                eulerRotation.y: 40
+            }
+
+            RockModel {
+                position: Qt.vector3d(5.4, 100, -5.5)
+                eulerRotation.y: 210
+                variant: 1
+            }
+
+            StumpModel {
+                position: Qt.vector3d(3.6, 100, -2.2)
+                scale: Qt.vector3d(1.4, 1.4, 1.4)
+            }
+
+            FenceModel {
+                position: Qt.vector3d(-6.5, 100, -1)
+                eulerRotation.y: 75
+            }
+
+            PineModel {
+                position: Qt.vector3d(-9, 100, -7)
+            }
+
+            PineModel {
+                position: Qt.vector3d(7, 100, -10)
+                variant: 1
+            }
+
+            PineModel {
+                position: Qt.vector3d(-4, 100, -14)
+                variant: 2
+            }
+
+            PineModel {
+                position: Qt.vector3d(12, 100, -3)
+                variant: 3
+            }
+
+            PineModel {
+                position: Qt.vector3d(1, 100, -19)
+                variant: 3
+            }
+        }
+
         HeroModel {
             id: hero
 
-            eulerRotation.y: 180
-            clip: root.time < 6000 ? "swimming" : (root.time < 11030 ? "swimming_to_edge" : "walking")
-            loop: clip !== "swimming_to_edge"
-            time: root.time < 6000 ? root.time : Math.max(0, root.time - (root.time < 11030 ? 6001 : 11031))
+            eulerRotation.y: root.above ? 0 : 180
+            clip: root.above ? (root.time < root.kneelAt ? "looking_around" : "pick_up_ice") : (root.dive < 6000 ? "swimming" : (root.dive < 11030 ? "swimming_to_edge" : "walking"))
+            loop: clip === "swimming" || clip === "walking"
+            time: root.above ? (root.time < root.kneelAt ? root.time : root.time - root.kneelAt) : (root.dive < 6000 ? root.dive : Math.max(0, root.dive - (root.dive < 11030 ? 6001 : 11031)))
         }
 
         Model {
@@ -803,6 +1029,7 @@ Item {
 
                 ParticleEmitter3D {
                     particle: bubble
+                    enabled: !root.above
                     position: hero.position.plus(Qt.vector3d(0, 1, 0))
                     shape: ParticleShape3D {
                         type: ParticleShape3D.Sphere
@@ -851,68 +1078,10 @@ Item {
         anchors.right: parent.right
         anchors.top: parent.top
         height: parent.height * 0.45
+        visible: !root.above
         gradient: Gradient {
             GradientStop { position: 0; color: "#2e3a9fb0" }
             GradientStop { position: 1; color: "#003a9fb0" }
         }
-    }
-
-    Rectangle {
-        anchors.left: parent.left
-        anchors.right: parent.right
-        anchors.top: parent.top
-        height: parent.height * 0.11
-        color: "#000000"
-    }
-
-    Rectangle {
-        id: bottomBar
-
-        anchors.left: parent.left
-        anchors.right: parent.right
-        anchors.bottom: parent.bottom
-        height: parent.height * 0.11
-        color: "#000000"
-    }
-
-    Text {
-        id: title
-
-        anchors.horizontalCenter: parent.horizontalCenter
-        anchors.bottom: parent.bottom
-        anchors.bottomMargin: parent.height * 0.18
-        text: "The Underwater Temple"
-        color: "#e6f4f6"
-        font.pixelSize: 44
-        font.weight: Font.Light
-        font.letterSpacing: 2
-        opacity: 0
-    }
-
-    Text {
-        anchors.right: parent.right
-        anchors.rightMargin: 24
-        anchors.verticalCenter: bottomBar.verticalCenter
-        text: "Space to skip"
-        color: "#8a96a8"
-        font.pixelSize: 14
-        font.letterSpacing: 1
-    }
-
-    Rectangle {
-        id: fade
-
-        anchors.fill: parent
-        color: "#000000"
-    }
-
-    MouseArea {
-        anchors.fill: parent
-        onClicked: Game.startLevel()
-    }
-
-    LoadingCover {
-        anchors.fill: parent
-        loading: !root.started
     }
 }

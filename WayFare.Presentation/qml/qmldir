@@ -13,12 +13,15 @@ LadderModel 1.0 models/LadderModel.qml
 LogStackModel 1.0 models/LogStackModel.qml
 PineModel 1.0 models/PineModel.qml
 RockModel 1.0 models/RockModel.qml
+ScubaGearModel 1.0 models/ScubaGearModel.qml
 SeaweedModel 1.0 models/SeaweedModel.qml
+StatueModel 1.0 models/StatueModel.qml
 StumpModel 1.0 models/StumpModel.qml
 TempleWallMaterial 1.0 models/TempleWallMaterial.qml
 TrollModel 1.0 models/TrollModel.qml
 BossAudio 1.0 views/audio/BossAudio.qml
 CreditsRoll 1.0 views/cutscenes/CreditsRoll.qml
+Cutscene 1.0 views/cutscenes/Cutscene.qml
 DeathScreen 1.0 views/hud/DeathScreen.qml
 DungeonExitCutscene 1.0 views/cutscenes/DungeonExitCutscene.qml
 DungeonScene 1.0 views/level/DungeonScene.qml
@@ -37,6 +40,7 @@ SettingsPanel 1.0 views/menu/SettingsPanel.qml
 SettingsSlider 1.0 views/menu/SettingsSlider.qml
 SnowyVillageScene 1.0 views/level/SnowyVillageScene.qml
 singleton Sounds 1.0 views/audio/Sounds.qml
+Subtitles 1.0 views/cutscenes/Subtitles.qml
 TempleExitCutscene 1.0 views/cutscenes/TempleExitCutscene.qml
 TempleScene 1.0 views/level/TempleScene.qml
 VillageScene 1.0 views/menu/VillageScene.qml

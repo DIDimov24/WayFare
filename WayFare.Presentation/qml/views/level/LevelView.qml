@@ -3,6 +3,7 @@ pragma ComponentBehavior: Bound
 import QtQuick
 import QtMultimedia
 import QtQuick3D
+import QtQuick3D.Particles3D
 import QtQuick.Effects
 import wayfare.presentation
 
@@ -77,6 +78,8 @@ Item {
     }
 
     BossAudio {
+        id: bossAudio
+
         active: root.readyFrames >= 3
     }
 
@@ -562,8 +565,52 @@ Item {
                     eulerRotation.y: root.exitYaw()
 
                     LadderModel {
+                        visible: root.dungeon
                         z: -root.tileSize / 2 - root.nicheDepth + 0.08
                         height: root.wallHeight
+                    }
+
+                    ParticleSystem3D {
+                        visible: root.temple
+                        running: root.temple
+
+                        ModelParticle3D {
+                            id: shaftBubble
+
+                            maxAmount: 60
+                            color: "#b4e6f0"
+                            fadeInDuration: 300
+                            fadeOutDuration: 500
+                            delegate: Model {
+                                source: "#Sphere"
+                                scale: Qt.vector3d(0.0005, 0.0005, 0.0005)
+                                castsShadows: false
+                                receivesShadows: false
+                                materials: PrincipledMaterial {
+                                    lighting: PrincipledMaterial.NoLighting
+                                    alphaMode: PrincipledMaterial.Blend
+                                    baseColor: "#ffffff"
+                                    opacity: 0.6
+                                }
+                            }
+                        }
+
+                        ParticleEmitter3D {
+                            particle: shaftBubble
+                            position: Qt.vector3d(0, 0.2, -root.tileSize / 2 - root.nicheDepth / 2)
+                            shape: ParticleShape3D {
+                                type: ParticleShape3D.Cube
+                                extents: Qt.vector3d(0.5, 0.05, 0.25)
+                            }
+                            emitRate: 14
+                            lifeSpan: 2600
+                            particleScale: 1
+                            particleScaleVariation: 0.6
+                            velocity: VectorDirection3D {
+                                direction: Qt.vector3d(0, 1.1, 0)
+                                directionVariation: Qt.vector3d(0.08, 0.2, 0.08)
+                            }
+                        }
                     }
 
                     Model {
@@ -654,6 +701,17 @@ Item {
             anchors.fill: parent
             visible: !root.deathView
             flash: root.pulse
+        }
+
+        Text {
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.bottom: parent.bottom
+            anchors.bottomMargin: parent.height * 0.13
+            text: bossAudio.caption
+            color: "#f2f4f6"
+            font.pixelSize: 26
+            style: Text.Outline
+            styleColor: "#000000"
         }
 
         Minimap {

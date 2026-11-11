@@ -761,7 +761,10 @@ namespace WayFare::Presentation {
 		load(game.level, game.seed);
 		_player = game.player;
 		_inventory = game.inventory;
-		_startInventory = game.inventory;
+		if (game.level > 1) {
+			Business::removeItem(_inventory, Business::ItemType::DivingGear);
+		}
+		_startInventory = _inventory;
 		Business::removeOwnedPickups(_pickups, _inventory);
 
 		emit playerChanged();
@@ -963,6 +966,7 @@ namespace WayFare::Presentation {
 	}
 
 	void Level::nextLevel() {
+		Business::removeItem(_inventory, Business::ItemType::DivingGear);
 		_startInventory = _inventory;
 		load(_number + 1, QRandomGenerator::global()->generate());
 		save();

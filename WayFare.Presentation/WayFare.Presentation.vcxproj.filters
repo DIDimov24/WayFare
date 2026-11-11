@@ -363,7 +363,13 @@
     <None Include="qml\models\RockModel.qml">
       <Filter>qml\models</Filter>
     </None>
+    <None Include="qml\models\ScubaGearModel.qml">
+      <Filter>qml\models</Filter>
+    </None>
     <None Include="qml\models\SeaweedModel.qml">
+      <Filter>qml\models</Filter>
+    </None>
+    <None Include="qml\models\StatueModel.qml">
       <Filter>qml\models</Filter>
     </None>
     <None Include="qml\models\StumpModel.qml">
@@ -391,6 +397,9 @@
       <Filter>qml\views\audio</Filter>
     </None>
     <None Include="qml\views\cutscenes\CreditsRoll.qml">
+      <Filter>qml\views\cutscenes</Filter>
+    </None>
+    <None Include="qml\views\cutscenes\Cutscene.qml">
       <Filter>qml\views\cutscenes</Filter>
     </None>
     <None Include="qml\views\level\SnowyVillageScene.qml">
@@ -440,6 +449,9 @@
     </None>
     <None Include="qml\views\audio\Sounds.qml">
       <Filter>qml\views\audio</Filter>
+    </None>
+    <None Include="qml\views\cutscenes\Subtitles.qml">
+      <Filter>qml\views\cutscenes</Filter>
     </None>
     <None Include="qml\views\cutscenes\TempleExitCutscene.qml">
       <Filter>qml\views\cutscenes</Filter>

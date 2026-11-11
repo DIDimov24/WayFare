@@ -9,6 +9,7 @@ Item {
 
     property string message: ""
     property real flash: 0
+    readonly property bool masked: Level.items.indexOf("diving_gear") >= 0
     readonly property string bossState: Level.hasBoss ? Level.boss.state : "waiting"
     property real bossFill: root.bossState === "waiting" ? 0 : Level.boss.health / Level.bossMaxHealth
 
@@ -32,6 +33,34 @@ Item {
             root.message = "The exit is open"
             messageFade.restart()
         }
+    }
+
+    Rectangle {
+        anchors.fill: parent
+        visible: root.masked
+        color: "#143a8fa8"
+    }
+
+    Rectangle {
+        anchors.centerIn: parent
+        visible: root.masked
+        width: parent.width + 200
+        height: parent.height + 200
+        radius: 420
+        color: "transparent"
+        border.color: "#05080a"
+        border.width: 150
+    }
+
+    Rectangle {
+        anchors.centerIn: parent
+        visible: root.masked
+        width: parent.width - 100
+        height: parent.height - 100
+        radius: 270
+        color: "transparent"
+        border.color: "#402a3a40"
+        border.width: 6
     }
 
     Rectangle {
@@ -183,14 +212,14 @@ Item {
         anchors.top: parent.top
         anchors.topMargin: 24
         spacing: 8
-        visible: Level.showAir
+        visible: Level.showAir || root.masked
 
         Image {
             anchors.verticalCenter: parent.verticalCenter
             width: 36
             height: 36
             smooth: false
-            source: root.iconPath("air")
+            source: root.iconPath(root.masked ? "diving_gear" : "air")
         }
 
         Rectangle {
@@ -202,9 +231,9 @@ Item {
             Rectangle {
                 x: 2
                 y: 2
-                width: Level.air * (parent.width - 4)
+                width: (root.masked ? 1 : Level.air) * (parent.width - 4)
                 height: parent.height - 4
-                color: Level.air < 0.25 ? "#e04a3a" : "#e8eef4"
+                color: root.masked ? "#6fc3e0" : (Level.air < 0.25 ? "#e04a3a" : "#e8eef4")
             }
         }
     }

@@ -15,13 +15,16 @@
         <file>models/LogStackModel.qml</file>
         <file>models/PineModel.qml</file>
         <file>models/RockModel.qml</file>
+        <file>models/ScubaGearModel.qml</file>
         <file>models/SeaweedModel.qml</file>
+        <file>models/StatueModel.qml</file>
         <file>models/StumpModel.qml</file>
         <file>models/TempleWallMaterial.qml</file>
         <file>models/TrollModel.qml</file>
         <file>shaders/TempleWall.frag</file>
         <file>views/audio/BossAudio.qml</file>
         <file>views/cutscenes/CreditsRoll.qml</file>
+        <file>views/cutscenes/Cutscene.qml</file>
         <file>views/hud/DeathScreen.qml</file>
         <file>views/cutscenes/DungeonExitCutscene.qml</file>
         <file>views/level/DungeonScene.qml</file>
@@ -40,6 +43,7 @@
         <file>views/menu/SettingsSlider.qml</file>
         <file>views/level/SnowyVillageScene.qml</file>
         <file>views/audio/Sounds.qml</file>
+        <file>views/cutscenes/Subtitles.qml</file>
         <file>views/cutscenes/TempleExitCutscene.qml</file>
         <file>views/level/TempleScene.qml</file>
         <file>views/menu/VillageScene.qml</file>

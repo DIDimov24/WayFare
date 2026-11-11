@@ -5,21 +5,33 @@ import QtQuick3D.Particles3D
 import QtQuick.Timeline
 import wayfare.presentation
 
-Item {
+Cutscene {
     id: root
 
-    readonly property int lastStage: 3
-    readonly property real length: 11500
-    readonly property real kneelStart: 900
+    readonly property real kneelAt: 5000
+    readonly property real handAt: 9000
+    readonly property real faceAt: 12500
+    readonly property real wideAt: 18000
+    property real stone: 0
+    property real dawn: 0
     readonly property bool rolling: root.time >= root.length
-    property int stage: 0
-    property bool started: false
     property bool finished: false
-    property int warmFrames: 0
-    property real waited: 0
-    property real time: 0
 
-    focus: true
+    lastStage: 3
+    length: 26000
+    heroReady: hero.ready
+    title: "The End"
+    titleSize: 56
+    titleSpacing: 3
+    hint: root.rolling ? "Space to return to the menu" : "Space to skip"
+
+    lines: [
+        { start: 900, end: 6500, text: "No. They are all here. Every one of them.", voice: "ending_1" },
+        { start: 7600, end: 10700, text: "Mila. I found you.", voice: "ending_2" },
+        { start: 13000, end: 17700, text: "It's alright, sweetheart. I'm not going anywhere.", voice: "ending_3" }
+    ]
+
+    onSkipRequested: root.skip()
 
     function skip() {
         if (!root.started) {
@@ -41,63 +53,18 @@ Item {
         Level.quitToMenu()
     }
 
-    Keys.onPressed: (event) => {
-        if (event.key === Qt.Key_Space || event.key === Qt.Key_Escape) {
-            root.skip()
-        }
-    }
-
     MediaPlayer {
         id: music
         source: Assets.url + "audio/menu_music.ogg"
         loops: MediaPlayer.Infinite
         audioOutput: AudioOutput {
-            volume: Settings.musicVolume / 100 * Math.min(1, root.time / 3000)
+            volume: Settings.musicVolume / 100 * Math.max(0, Math.min(1, (root.time - root.wideAt) / 3000))
         }
     }
 
     onStartedChanged: {
         if (root.started) {
             music.play()
-        }
-    }
-
-    Connections {
-        target: root.Window.window
-        enabled: !root.started
-
-        function onAfterAnimating() {
-            if (root.stage < root.lastStage) {
-                root.stage++
-                return
-            }
-            if (hero.ready) {
-                root.warmFrames++
-            }
-            if (root.warmFrames >= 10) {
-                root.started = true
-            }
-        }
-    }
-
-    Timer {
-        interval: 100
-        repeat: true
-        running: !root.started
-
-        onTriggered: {
-            root.waited = root.waited + 100
-            if (root.waited >= 60000) {
-                root.started = true
-            }
-        }
-    }
-
-    FrameAnimation {
-        running: root.started && root.time < root.length
-
-        onTriggered: {
-            root.time = Math.min(root.length, root.time + Math.min(frameTime, 0.05) * 1000)
         }
     }
 
@@ -111,37 +78,109 @@ Item {
             target: camera
             property: "position"
 
-            Keyframe { frame: 0; value: Qt.vector3d(2.2, 1.3, -2.6) }
-            Keyframe { frame: 10500; value: Qt.vector3d(4.6, 3.6, -6.8); easing.type: Easing.InOutSine }
+            Keyframe { frame: 0; value: Qt.vector3d(3.4, 1.1, -5.2) }
+            Keyframe { frame: 4999; value: Qt.vector3d(2.8, 1.3, -1.6) }
+            Keyframe { frame: 5000; value: Qt.vector3d(2.3, 1.1, 1.5) }
+            Keyframe { frame: 8999; value: Qt.vector3d(2, 0.95, 1.3) }
+            Keyframe { frame: 9000; value: Qt.vector3d(1.9, 0.9, 1.6) }
+            Keyframe { frame: 12499; value: Qt.vector3d(1.7, 0.88, 1.45) }
+            Keyframe { frame: 12500; value: Qt.vector3d(-0.95, 1, 1.5) }
+            Keyframe { frame: 17999; value: Qt.vector3d(-0.82, 1.03, 1.36) }
+            Keyframe { frame: 18000; value: Qt.vector3d(4.2, 2.6, -4.8) }
+            Keyframe { frame: 25500; value: Qt.vector3d(6.4, 4.8, -8.2); easing.type: Easing.InOutSine }
         }
 
         KeyframeGroup {
             target: focusPoint
             property: "position"
 
-            Keyframe { frame: 0; value: Qt.vector3d(0, 0.9, 1) }
-            Keyframe { frame: 10500; value: Qt.vector3d(-0.4, 0.6, 2.4); easing.type: Easing.InOutSine }
+            Keyframe { frame: 0; value: Qt.vector3d(0, 1.1, -4.6) }
+            Keyframe { frame: 4999; value: Qt.vector3d(0, 1.1, 0.2) }
+            Keyframe { frame: 5000; value: Qt.vector3d(0, 1.1, 0.3) }
+            Keyframe { frame: 8999; value: Qt.vector3d(0, 0.75, 0.4) }
+            Keyframe { frame: 9000; value: Qt.vector3d(0.05, 0.72, 0.45) }
+            Keyframe { frame: 12499; value: Qt.vector3d(0.05, 0.72, 0.45) }
+            Keyframe { frame: 12500; value: Qt.vector3d(0, 1.1, 0.15) }
+            Keyframe { frame: 17999; value: Qt.vector3d(0, 1.1, 0.15) }
+            Keyframe { frame: 18000; value: Qt.vector3d(-0.1, 0.7, 0.6) }
+            Keyframe { frame: 25500; value: Qt.vector3d(-0.4, 0.5, 1.6); easing.type: Easing.InOutSine }
         }
 
         KeyframeGroup {
-            target: fade
-            property: "opacity"
+            target: camera
+            property: "fieldOfView"
+
+            Keyframe { frame: 0; value: 50 }
+            Keyframe { frame: 4999; value: 50 }
+            Keyframe { frame: 5000; value: 42 }
+            Keyframe { frame: 8999; value: 40 }
+            Keyframe { frame: 9000; value: 34 }
+            Keyframe { frame: 12499; value: 31 }
+            Keyframe { frame: 12500; value: 32 }
+            Keyframe { frame: 17999; value: 30 }
+            Keyframe { frame: 18000; value: 50 }
+            Keyframe { frame: 25500; value: 50 }
+        }
+
+        KeyframeGroup {
+            target: hero
+            property: "position"
+
+            Keyframe { frame: 0; value: Qt.vector3d(0, 0, -5) }
+            Keyframe { frame: 5000; value: Qt.vector3d(0, 0, 0) }
+        }
+
+        KeyframeGroup {
+            target: root
+            property: "stone"
+
+            Keyframe { frame: 11000; value: 0 }
+            Keyframe { frame: 17500; value: 1 }
+        }
+
+        KeyframeGroup {
+            target: root
+            property: "dawn"
+
+            Keyframe { frame: 18000; value: 0 }
+            Keyframe { frame: 24500; value: 1 }
+        }
+
+        KeyframeGroup {
+            target: root
+            property: "fadeOpacity"
 
             Keyframe { frame: 0; value: 1 }
             Keyframe { frame: 1500; value: 0 }
-            Keyframe { frame: 9800; value: 0 }
-            Keyframe { frame: 11000; value: 1 }
+            Keyframe { frame: 24300; value: 0 }
+            Keyframe { frame: 25500; value: 1 }
         }
 
         KeyframeGroup {
-            target: title
-            property: "opacity"
+            target: root
+            property: "titleOpacity"
 
             Keyframe { frame: 0; value: 0 }
-            Keyframe { frame: 5200; value: 0 }
-            Keyframe { frame: 6400; value: 1 }
-            Keyframe { frame: 9600; value: 1 }
-            Keyframe { frame: 10800; value: 0 }
+            Keyframe { frame: 20500; value: 0 }
+            Keyframe { frame: 21700; value: 1 }
+            Keyframe { frame: 24300; value: 1 }
+            Keyframe { frame: 25300; value: 0 }
+        }
+    }
+
+    component Pair: Node {
+        id: pair
+
+        property string kind: "kneel"
+        property real gap: 1
+
+        StatueModel {
+            kind: pair.kind
+        }
+
+        StatueModel {
+            z: pair.gap
+            eulerRotation.y: 180
         }
     }
 
@@ -186,19 +225,71 @@ Item {
             ambientColor: "#364256"
         }
 
-        PointLight {
-            position: Qt.vector3d(-2.5, 2.2, 1.5)
-            color: "#ffb870"
-            brightness: 1.6 + Math.sin(root.time * 0.013) * 0.2 + Math.sin(root.time * 0.031) * 0.1
-            quadraticFade: 600
+        DirectionalLight {
+            eulerRotation: Qt.vector3d(-12, 60, 0)
+            color: "#ffc9a0"
+            brightness: root.dawn * 0.9
         }
 
         HeroModel {
             id: hero
 
-            clip: "kneeling_down"
-            time: Math.max(0, root.time - root.kneelStart)
-            loop: false
+            visible: root.stone < 1
+            clip: root.time < root.kneelAt ? "walking" : "reach_hand"
+            time: root.time < root.kneelAt ? root.time : root.time - root.kneelAt
+            loop: root.time < root.kneelAt
+            stone: root.stone
+        }
+
+        StatueModel {
+            visible: found && root.stone > 0
+            fade: root.stone
+            grow: 1.015
+            kind: "hold"
+        }
+
+        StatueModel {
+            position: Qt.vector3d(0.02, 0, 0.86)
+            eulerRotation.y: 180
+        }
+
+        Node {
+            visible: root.stage >= 2
+
+            Pair {
+                position: Qt.vector3d(-2.4, 0, -3.6)
+                eulerRotation.y: 70
+                kind: "kneel"
+                gap: 0.9
+            }
+
+            Pair {
+                position: Qt.vector3d(3.6, 0, -2.6)
+                eulerRotation.y: -110
+                kind: "reach"
+                gap: 0.8
+            }
+
+            Pair {
+                position: Qt.vector3d(-3.1, 0, 0.9)
+                eulerRotation.y: 30
+                kind: "hold"
+                gap: 1.02
+            }
+
+            Pair {
+                position: Qt.vector3d(2.9, 0, 3.4)
+                eulerRotation.y: -150
+                kind: "look"
+                gap: 0.7
+            }
+
+            Pair {
+                position: Qt.vector3d(-1.6, 0, 5.2)
+                eulerRotation.y: 160
+                kind: "kneel"
+                gap: 0.9
+            }
         }
 
         Model {
@@ -307,66 +398,9 @@ Item {
         }
     }
 
-    Rectangle {
-        anchors.left: parent.left
-        anchors.right: parent.right
-        anchors.top: parent.top
-        height: parent.height * 0.11
-        color: "#000000"
-    }
-
-    Rectangle {
-        id: bottomBar
-
-        anchors.left: parent.left
-        anchors.right: parent.right
-        anchors.bottom: parent.bottom
-        height: parent.height * 0.11
-        color: "#000000"
-    }
-
-    Rectangle {
-        id: fade
-
-        anchors.fill: parent
-        color: "#000000"
-    }
-
-    Text {
-        id: title
-
-        anchors.centerIn: parent
-        text: "The End"
-        color: "#e6f4f6"
-        font.pixelSize: 56
-        font.weight: Font.Light
-        font.letterSpacing: 3
-        opacity: 0
-    }
-
-    CreditsRoll {
+    overlay: CreditsRoll {
         anchors.fill: parent
         running: root.rolling
         onFinished: root.finish()
-    }
-
-    Text {
-        anchors.right: parent.right
-        anchors.rightMargin: 24
-        anchors.verticalCenter: bottomBar.verticalCenter
-        text: root.rolling ? "Space to return to the menu" : "Space to skip"
-        color: "#8a96a8"
-        font.pixelSize: 14
-        font.letterSpacing: 1
-    }
-
-    MouseArea {
-        anchors.fill: parent
-        onClicked: root.skip()
-    }
-
-    LoadingCover {
-        anchors.fill: parent
-        loading: !root.started
     }
 }

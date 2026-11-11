@@ -131,13 +131,16 @@
     <None Include="qml\models\LogStackModel.qml" />
     <None Include="qml\models\PineModel.qml" />
     <None Include="qml\models\RockModel.qml" />
+    <None Include="qml\models\ScubaGearModel.qml" />
     <None Include="qml\models\SeaweedModel.qml" />
+    <None Include="qml\models\StatueModel.qml" />
     <None Include="qml\models\StumpModel.qml" />
     <None Include="qml\models\TempleWallMaterial.qml" />
     <None Include="qml\models\TrollModel.qml" />
     <None Include="qml\shaders\TempleWall.frag" />
     <None Include="qml\views\audio\BossAudio.qml" />
     <None Include="qml\views\cutscenes\CreditsRoll.qml" />
+    <None Include="qml\views\cutscenes\Cutscene.qml" />
     <None Include="qml\views\hud\DeathScreen.qml" />
     <None Include="qml\views\cutscenes\DungeonExitCutscene.qml" />
     <None Include="qml\views\level\DungeonScene.qml" />
@@ -155,6 +158,7 @@
     <None Include="qml\views\menu\SettingsPanel.qml" />
     <None Include="qml\views\menu\SettingsSlider.qml" />
     <None Include="qml\views\audio\Sounds.qml" />
+    <None Include="qml\views\cutscenes\Subtitles.qml" />
     <None Include="qml\views\cutscenes\TempleExitCutscene.qml" />
     <None Include="qml\views\level\TempleScene.qml" />
     <None Include="qml\views\level\SnowyVillageScene.qml" />

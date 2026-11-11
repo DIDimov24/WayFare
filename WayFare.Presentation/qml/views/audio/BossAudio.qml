@@ -16,6 +16,15 @@ Item {
     property real lastY: 0
     property real movedAt: 0
     property bool hurt: Level.hasBoss && Level.boss.hurt
+    property string caption: ""
+
+    function say(voice: string, text: string, duration: int) {
+        speech.source = Assets.url + "audio/voice/" + voice + ".wav"
+        speech.play()
+        root.caption = text
+        captionEnd.interval = duration
+        captionEnd.restart()
+    }
 
     Behavior on musicLevel {
         NumberAnimation { duration: root.fighting ? 1500 : 3000 }
@@ -37,6 +46,7 @@ Item {
         switch (root.mode) {
             case "intro":
                 introRoar.restart()
+                root.say("boss_1", "Where is my daughter?", 2400)
                 break
             case "roaring":
                 roar.play()
@@ -51,6 +61,7 @@ Item {
             case "dead":
                 deathRoar.play()
                 stone.restart()
+                deathLine.restart()
                 break
         }
     }
@@ -85,6 +96,25 @@ Item {
         audioOutput: AudioOutput {
             volume: root.musicLevel * Settings.musicVolume / 100
         }
+    }
+
+    MediaPlayer {
+        id: speech
+        audioOutput: AudioOutput {
+            volume: Settings.sfxVolume / 100
+        }
+    }
+
+    Timer {
+        id: captionEnd
+        interval: 3000
+        onTriggered: root.caption = ""
+    }
+
+    Timer {
+        id: deathLine
+        interval: 3200
+        onTriggered: root.say("boss_2", "It turned to stone, just like the statues outside.", 4200)
     }
 
     Timer {

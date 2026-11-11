@@ -5,11 +5,9 @@ import QtQuick3D.Particles3D
 import QtQuick.Timeline
 import wayfare.presentation
 
-Item {
+Cutscene {
     id: root
 
-    readonly property int lastStage: 4
-    readonly property real length: 12400
     readonly property real climbStart: 2030
     readonly property real barnStart: 4300
     readonly property real doorStart: 6400
@@ -19,16 +17,20 @@ Item {
     readonly property real doorX: 0.6
     readonly property bool climbing: root.started && root.time >= 1000 && root.time < root.doorStart
     readonly property bool inBarn: root.time >= root.barnStart
-    property int stage: 0
-    property bool started: false
     property bool finished: false
-    property int warmFrames: 0
-    property real waited: 0
-    property real time: 0
     property real lidAngle: 0
     property real doorAngle: 0
 
-    focus: true
+    lastStage: 4
+    length: 17200
+    lines: [
+        { start: 8700, end: 14000, text: "A statue, all the way out here? Who would carve a face that frightened?", voice: "dungeon_1" }
+    ]
+    heroReady: hero.ready
+    title: "The Snowy Village"
+
+    onSkipRequested: root.finish()
+    onEnded: root.finish()
 
     onClimbingChanged: {
         if (root.climbing) {
@@ -72,54 +74,6 @@ Item {
         return root.time
     }
 
-    Keys.onPressed: (event) => {
-        if (event.key === Qt.Key_Space || event.key === Qt.Key_Escape) {
-            root.finish()
-        }
-    }
-
-    Connections {
-        target: root.Window.window
-        enabled: !root.started
-
-        function onAfterAnimating() {
-            if (root.stage < root.lastStage) {
-                root.stage++
-                return
-            }
-            if (hero.ready) {
-                root.warmFrames++
-            }
-            if (root.warmFrames >= 10) {
-                root.started = true
-            }
-        }
-    }
-
-    Timer {
-        interval: 100
-        repeat: true
-        running: !root.started
-
-        onTriggered: {
-            root.waited = root.waited + 100
-            if (root.waited >= 60000) {
-                root.started = true
-            }
-        }
-    }
-
-    FrameAnimation {
-        running: root.started && root.time < root.length
-
-        onTriggered: {
-            root.time = Math.min(root.length, root.time + Math.min(frameTime, 0.05) * 1000)
-            if (root.time >= root.length) {
-                root.finish()
-            }
-        }
-    }
-
     Timeline {
         startFrame: 0
         endFrame: root.length
@@ -136,7 +90,8 @@ Item {
             Keyframe { frame: 4300; value: Qt.vector3d(-1.3, 5, -5) }
             Keyframe { frame: 6399; value: Qt.vector3d(-1.1, 5.07, -5.14) }
             Keyframe { frame: 6400; value: Qt.vector3d(-1.8, 5.7, 1.9) }
-            Keyframe { frame: 10000; value: Qt.vector3d(-1.2, 5.6, 2.6) }
+            Keyframe { frame: 9300; value: Qt.vector3d(-1.2, 5.6, 2.6) }
+            Keyframe { frame: 14600; value: Qt.vector3d(-0.4, 5.6, 4); easing.type: Easing.InOutSine }
         }
 
         KeyframeGroup {
@@ -149,7 +104,8 @@ Item {
             Keyframe { frame: 4300; value: Qt.vector3d(0.5, 5, -2) }
             Keyframe { frame: 6399; value: Qt.vector3d(0.5, 5.41, -1.86) }
             Keyframe { frame: 6400; value: Qt.vector3d(0.4, 5.2, 6.2) }
-            Keyframe { frame: 10000; value: Qt.vector3d(0.6, 5.3, 8) }
+            Keyframe { frame: 9300; value: Qt.vector3d(0.6, 5.3, 8) }
+            Keyframe { frame: 14600; value: Qt.vector3d(1.3, 5.2, 10.4); easing.type: Easing.InOutSine }
         }
 
         KeyframeGroup {
@@ -212,24 +168,24 @@ Item {
         }
 
         KeyframeGroup {
-            target: fade
-            property: "opacity"
+            target: root
+            property: "fadeOpacity"
 
             Keyframe { frame: 0; value: 1 }
             Keyframe { frame: 1000; value: 0 }
-            Keyframe { frame: 9300; value: 0 }
-            Keyframe { frame: 10000; value: 1 }
+            Keyframe { frame: 14000; value: 0 }
+            Keyframe { frame: 14700; value: 1 }
         }
 
         KeyframeGroup {
-            target: title
-            property: "opacity"
+            target: root
+            property: "titleOpacity"
 
             Keyframe { frame: 0; value: 0 }
-            Keyframe { frame: 10100; value: 0 }
-            Keyframe { frame: 10700; value: 1 }
-            Keyframe { frame: 11800; value: 1 }
-            Keyframe { frame: 12400; value: 0 }
+            Keyframe { frame: 14800; value: 0 }
+            Keyframe { frame: 15400; value: 1 }
+            Keyframe { frame: 16600; value: 1 }
+            Keyframe { frame: 17200; value: 0 }
         }
     }
 
@@ -538,6 +494,12 @@ Item {
                 position: Qt.vector3d(-3, root.floorY, 11)
             }
 
+            StatueModel {
+                position: Qt.vector3d(root.doorX + 1.3, root.floorY, 10.6)
+                eulerRotation.y: 205
+                kind: "reach"
+            }
+
             FenceModel {
                 position: Qt.vector3d(4.5, root.floorY, 12)
                 eulerRotation.y: 20
@@ -598,62 +560,5 @@ Item {
                 }
             }
         }
-    }
-
-    Rectangle {
-        anchors.left: parent.left
-        anchors.right: parent.right
-        anchors.top: parent.top
-        height: parent.height * 0.11
-        color: "#000000"
-    }
-
-    Rectangle {
-        id: bottomBar
-
-        anchors.left: parent.left
-        anchors.right: parent.right
-        anchors.bottom: parent.bottom
-        height: parent.height * 0.11
-        color: "#000000"
-    }
-
-    Text {
-        anchors.right: parent.right
-        anchors.rightMargin: 24
-        anchors.verticalCenter: bottomBar.verticalCenter
-        text: "Space to skip"
-        color: "#8a96a8"
-        font.pixelSize: 14
-        font.letterSpacing: 1
-    }
-
-    Rectangle {
-        id: fade
-
-        anchors.fill: parent
-        color: "#000000"
-    }
-
-    Text {
-        id: title
-
-        anchors.centerIn: parent
-        text: "The Snowy Village"
-        color: "#e6f4f6"
-        font.pixelSize: 44
-        font.weight: Font.Light
-        font.letterSpacing: 2
-        opacity: 0
-    }
-
-    MouseArea {
-        anchors.fill: parent
-        onClicked: root.finish()
-    }
-
-    LoadingCover {
-        anchors.fill: parent
-        loading: !root.started
     }
 }
