@@ -19,6 +19,9 @@ WayFare uses only free third-party assets.
 | Healing potion | [KayKit Dungeon Remastered 1.0](https://github.com/KayKit-Game-Assets/KayKit-Dungeon-Remastered-1.0) | [Kay Lousberg](https://www.kaylousberg.com) | CC0 1.0 |
 | Pistol | ["Pistol"](https://poly.pizza/m/J3i9KDQ3kt) | Quaternius | CC0 1.0 |
 | Diving gear | ["Scuba tank"](https://poly.pizza/m/4GhtCNARi8c) | Steren Giannini | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) |
+| Scuba rig worn by the hero (temple exit cutscene) | ["Scuba equipment"](https://poly.pizza/m/7igrHLjaQlW) | Steren Giannini | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) |
+| Diving mask worn by the hero (temple exit cutscene) | ["Scuba Mask"](https://sketchfab.com/3d-models/scuba-mask-a12059a9ff8f45e1979bd1af6fc1b8b2), scaled, shown in one plain colour | [pixelated_stars](https://sketchfab.com/pixelated_stars) | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
+| Fins worn by the hero (temple exit cutscene) | ["Diver - Low Poly"](https://sketchfab.com/3d-models/diver-low-poly-9f52833e1ee04b3a90f24f5ca6a98d55): only the fins, cut from the model and scaled | [arifduman](https://sketchfab.com/arifduman) | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
 
 ## Environment
 
@@ -28,7 +31,8 @@ WayFare uses only free third-party assets.
 | Seaweed (Underwater Temple) | ["Seaweed"](https://poly.pizza/m/461xlaa6SZW) | Laney XR Labs | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) |
 | Orange coral (Underwater Temple) | ["Orange Coral"](https://poly.pizza/m/3HEc6LvqCJd) | Device Lab | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) |
 | Spike traps (Dungeon) and wall torches (Dungeon, Snowy Village) | [KayKit Dungeon Remastered 1.0](https://github.com/KayKit-Game-Assets/KayKit-Dungeon-Remastered-1.0) | [Kay Lousberg](https://www.kaylousberg.com) | CC0 1.0 |
-| Exit ladder (Underwater Temple, Dungeon) | [Platformer Kit](https://kenney.nl/assets/platformer-kit) | [Kenney](https://www.kenney.nl) | CC0 1.0 |
+| Exit ladder (Dungeon) | [Platformer Kit](https://kenney.nl/assets/platformer-kit) | [Kenney](https://www.kenney.nl) | CC0 1.0 |
+| Child statues (ending) | "Rogue Hooded" from [KayKit Character Pack: Adventurers 1.0](https://github.com/KayKit-Game-Assets/KayKit-Character-Pack-Adventures-1.0), posed and baked to a static mesh | [Kay Lousberg](https://www.kaylousberg.com) | CC0 1.0 |
 | Fan coral (Underwater Temple) | ["underwater_enviro_coral"](https://poly.pizza/m/0CrDBiCnI5e) | God Appeasers | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) |
 
 ## HUD and minimap icons
@@ -59,6 +63,8 @@ Converted to OGG (music) and WAV (effects), and levelled to the same loudness (-
 | Main menu music | ["snow city NL 0009PM 210206_0243.wav"](https://freesound.org/s/610365/) | klankbeeld (Freesound) | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
 | Underwater Temple ambience | ["Underwater Ambience.wav"](https://freesound.org/s/482167/) | Tim_Verberne (Freesound) | CC0 1.0 |
 | Underwater Temple exit cutscene | ["C0005i_c.aif"](https://freesound.org/s/61672/) | thanvannispen (Freesound) | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
+| Hero voice lines | Generated offline with [Piper](https://github.com/rhasspy/piper) (MIT), voice `en_GB-northern_english_male-medium` from [piper-voices](https://huggingface.co/rhasspy/piper-voices); pitch lowered, echoes added | Voice trained on the [OpenSLR 83](http://www.openslr.org/83/) dataset | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) |
+| Tank dropped on stone (temple exit cutscene) | [Impact Sounds](https://kenney.nl/assets/impact-sounds) | [Kenney](https://www.kenney.nl) | CC0 1.0 |
 | Button click | ["Button Click / Selection.wav"](https://freesound.org/s/623175/) | aphom000 (Freesound) | CC0 1.0 |
 | Button hover | ["fidget toy"](https://freesound.org/s/857285/) | dyingSatyr (Freesound) | CC0 1.0 |
 | Drowning tinnitus | ["High pitched tone [quiet to loud]"](https://freesound.org/s/207744/), via [Pixabay](https://pixabay.com/sound-effects/film-special-effects-high-pitched-tone-quiet-to-loud-14549/) | SoundsExciting (Freesound) | CC0 1.0 |
