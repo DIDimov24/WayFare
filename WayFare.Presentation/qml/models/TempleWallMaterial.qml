@@ -30,5 +30,5 @@ CustomMaterial {
     }
 
     shadingMode: CustomMaterial.Shaded
-    fragmentShader: "../shaders/TempleWall.frag"
+    fragmentShader: Qt.resolvedUrl("../shaders/TempleWall.frag")
 }

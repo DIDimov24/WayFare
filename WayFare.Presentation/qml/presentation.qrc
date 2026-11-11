@@ -20,29 +20,29 @@
         <file>models/TempleWallMaterial.qml</file>
         <file>models/TrollModel.qml</file>
         <file>shaders/TempleWall.frag</file>
-        <file>views/BossAudio.qml</file>
-        <file>views/CreditsRoll.qml</file>
-        <file>views/DeathScreen.qml</file>
-        <file>views/DungeonExitCutscene.qml</file>
-        <file>views/DungeonScene.qml</file>
-        <file>views/EndingCutscene.qml</file>
-        <file>views/FirstPersonWeapon.qml</file>
-        <file>views/HowToPlayPanel.qml</file>
-        <file>views/Hud.qml</file>
-        <file>views/IntroCutscene.qml</file>
-        <file>views/LevelView.qml</file>
-        <file>views/LoadingCover.qml</file>
-        <file>views/MainMenuButton.qml</file>
-        <file>views/MainMenuView.qml</file>
-        <file>views/Minimap.qml</file>
-        <file>views/PauseMenu.qml</file>
-        <file>views/SettingsPanel.qml</file>
-        <file>views/SettingsSlider.qml</file>
-        <file>views/SnowyVillageScene.qml</file>
-        <file>views/Sounds.qml</file>
-        <file>views/TempleExitCutscene.qml</file>
-        <file>views/TempleScene.qml</file>
-        <file>views/VillageScene.qml</file>
-        <file>views/WallTorches.qml</file>
+        <file>views/audio/BossAudio.qml</file>
+        <file>views/cutscenes/CreditsRoll.qml</file>
+        <file>views/hud/DeathScreen.qml</file>
+        <file>views/cutscenes/DungeonExitCutscene.qml</file>
+        <file>views/level/DungeonScene.qml</file>
+        <file>views/cutscenes/EndingCutscene.qml</file>
+        <file>views/level/FirstPersonWeapon.qml</file>
+        <file>views/menu/HowToPlayPanel.qml</file>
+        <file>views/hud/Hud.qml</file>
+        <file>views/cutscenes/IntroCutscene.qml</file>
+        <file>views/level/LevelView.qml</file>
+        <file>views/hud/LoadingCover.qml</file>
+        <file>views/menu/MainMenuButton.qml</file>
+        <file>views/menu/MainMenuView.qml</file>
+        <file>views/hud/Minimap.qml</file>
+        <file>views/menu/PauseMenu.qml</file>
+        <file>views/menu/SettingsPanel.qml</file>
+        <file>views/menu/SettingsSlider.qml</file>
+        <file>views/level/SnowyVillageScene.qml</file>
+        <file>views/audio/Sounds.qml</file>
+        <file>views/cutscenes/TempleExitCutscene.qml</file>
+        <file>views/level/TempleScene.qml</file>
+        <file>views/menu/VillageScene.qml</file>
+        <file>views/level/WallTorches.qml</file>
     </qresource>
 </RCC>

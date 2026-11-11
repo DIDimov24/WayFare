@@ -13,6 +13,21 @@
     <Filter Include="qml\views">
       <UniqueIdentifier>{a7f42d32-05f9-491f-907a-2f359c8bd776}</UniqueIdentifier>
     </Filter>
+    <Filter Include="qml\views\menu">
+      <UniqueIdentifier>{3b1f6c0e-52a4-4d0b-8a57-6f0c2d9e1a01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="qml\views\level">
+      <UniqueIdentifier>{3b1f6c0e-52a4-4d0b-8a57-6f0c2d9e1a02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="qml\views\hud">
+      <UniqueIdentifier>{3b1f6c0e-52a4-4d0b-8a57-6f0c2d9e1a03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="qml\views\cutscenes">
+      <UniqueIdentifier>{3b1f6c0e-52a4-4d0b-8a57-6f0c2d9e1a04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="qml\views\audio">
+      <UniqueIdentifier>{3b1f6c0e-52a4-4d0b-8a57-6f0c2d9e1a05}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Register">
       <UniqueIdentifier>{c978270d-b4a4-4f09-8fec-48e433324b62}</UniqueIdentifier>
     </Filter>
@@ -363,77 +378,77 @@
     <None Include="qml\shaders\TempleWall.frag">
       <Filter>qml\shaders</Filter>
     </None>
-    <None Include="qml\views\DungeonExitCutscene.qml">
-      <Filter>qml\views</Filter>
+    <None Include="qml\views\cutscenes\DungeonExitCutscene.qml">
+      <Filter>qml\views\cutscenes</Filter>
     </None>
-    <None Include="qml\views\DungeonScene.qml">
-      <Filter>qml\views</Filter>
+    <None Include="qml\views\level\DungeonScene.qml">
+      <Filter>qml\views\level</Filter>
     </None>
-    <None Include="qml\views\EndingCutscene.qml">
-      <Filter>qml\views</Filter>
+    <None Include="qml\views\cutscenes\EndingCutscene.qml">
+      <Filter>qml\views\cutscenes</Filter>
     </None>
-    <None Include="qml\views\BossAudio.qml">
-      <Filter>qml\views</Filter>
+    <None Include="qml\views\audio\BossAudio.qml">
+      <Filter>qml\views\audio</Filter>
     </None>
-    <None Include="qml\views\CreditsRoll.qml">
-      <Filter>qml\views</Filter>
+    <None Include="qml\views\cutscenes\CreditsRoll.qml">
+      <Filter>qml\views\cutscenes</Filter>
     </None>
-    <None Include="qml\views\SnowyVillageScene.qml">
-      <Filter>qml\views</Filter>
+    <None Include="qml\views\level\SnowyVillageScene.qml">
+      <Filter>qml\views\level</Filter>
     </None>
-    <None Include="qml\views\WallTorches.qml">
-      <Filter>qml\views</Filter>
+    <None Include="qml\views\level\WallTorches.qml">
+      <Filter>qml\views\level</Filter>
     </None>
-    <None Include="qml\views\FirstPersonWeapon.qml">
-      <Filter>qml\views</Filter>
+    <None Include="qml\views\level\FirstPersonWeapon.qml">
+      <Filter>qml\views\level</Filter>
     </None>
-    <None Include="qml\views\DeathScreen.qml">
-      <Filter>qml\views</Filter>
+    <None Include="qml\views\hud\DeathScreen.qml">
+      <Filter>qml\views\hud</Filter>
     </None>
-    <None Include="qml\views\HowToPlayPanel.qml">
-      <Filter>qml\views</Filter>
+    <None Include="qml\views\menu\HowToPlayPanel.qml">
+      <Filter>qml\views\menu</Filter>
     </None>
-    <None Include="qml\views\Hud.qml">
-      <Filter>qml\views</Filter>
+    <None Include="qml\views\hud\Hud.qml">
+      <Filter>qml\views\hud</Filter>
     </None>
-    <None Include="qml\views\IntroCutscene.qml">
-      <Filter>qml\views</Filter>
+    <None Include="qml\views\cutscenes\IntroCutscene.qml">
+      <Filter>qml\views\cutscenes</Filter>
     </None>
-    <None Include="qml\views\LevelView.qml">
-      <Filter>qml\views</Filter>
+    <None Include="qml\views\level\LevelView.qml">
+      <Filter>qml\views\level</Filter>
     </None>
-    <None Include="qml\views\LoadingCover.qml">
-      <Filter>qml\views</Filter>
+    <None Include="qml\views\hud\LoadingCover.qml">
+      <Filter>qml\views\hud</Filter>
     </None>
-    <None Include="qml\views\MainMenuButton.qml">
-      <Filter>qml\views</Filter>
+    <None Include="qml\views\menu\MainMenuButton.qml">
+      <Filter>qml\views\menu</Filter>
     </None>
-    <None Include="qml\views\MainMenuView.qml">
-      <Filter>qml\views</Filter>
+    <None Include="qml\views\menu\MainMenuView.qml">
+      <Filter>qml\views\menu</Filter>
     </None>
-    <None Include="qml\views\Minimap.qml">
-      <Filter>qml\views</Filter>
+    <None Include="qml\views\hud\Minimap.qml">
+      <Filter>qml\views\hud</Filter>
     </None>
-    <None Include="qml\views\PauseMenu.qml">
-      <Filter>qml\views</Filter>
+    <None Include="qml\views\menu\PauseMenu.qml">
+      <Filter>qml\views\menu</Filter>
     </None>
-    <None Include="qml\views\SettingsPanel.qml">
-      <Filter>qml\views</Filter>
+    <None Include="qml\views\menu\SettingsPanel.qml">
+      <Filter>qml\views\menu</Filter>
     </None>
-    <None Include="qml\views\SettingsSlider.qml">
-      <Filter>qml\views</Filter>
+    <None Include="qml\views\menu\SettingsSlider.qml">
+      <Filter>qml\views\menu</Filter>
     </None>
-    <None Include="qml\views\Sounds.qml">
-      <Filter>qml\views</Filter>
+    <None Include="qml\views\audio\Sounds.qml">
+      <Filter>qml\views\audio</Filter>
     </None>
-    <None Include="qml\views\TempleExitCutscene.qml">
-      <Filter>qml\views</Filter>
+    <None Include="qml\views\cutscenes\TempleExitCutscene.qml">
+      <Filter>qml\views\cutscenes</Filter>
     </None>
-    <None Include="qml\views\TempleScene.qml">
-      <Filter>qml\views</Filter>
+    <None Include="qml\views\level\TempleScene.qml">
+      <Filter>qml\views\level</Filter>
     </None>
-    <None Include="qml\views\VillageScene.qml">
-      <Filter>qml\views</Filter>
+    <None Include="qml\views\menu\VillageScene.qml">
+      <Filter>qml\views\menu</Filter>
     </None>
     <None Include="assets\models\diving_gear\DivingGear.qml">
       <Filter>assets\models\diving_gear</Filter>

@@ -1,4 +1,5 @@
 import QtQuick
+import wayfare.presentation
 
 Column {
     id: root
