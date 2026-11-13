@@ -95,7 +95,8 @@ In every level the player starts in the top-left room of the maze and must reach
 | Mouse             | Look around                     |
 | Left mouse button | Attack with the selected weapon |
 | 1 / 2             | Select sword / pistol           |
-| Q                 | Drink a healing potion          |
+| 3                 | Select the healing potion       |
+| Q                 | Drink the healing potion        |
 | M                 | Enlarge the minimap             |
 | Esc               | Pause menu                      |
 | Space or Esc      | Skip a cutscene                 |
@@ -169,8 +170,9 @@ There is one test file per area (maze generator, collision, health, inventory, d
 
 ## Documentation
 
-- **Project Documentation** - [WayFare-Documentation.docx](./docs/WayFare-Documentation.docx)
-- **QA Test Cases** - [WayFare-QA.xlsx](./docs/WayFare-QA.xlsx)
+- **Project Documentation** - [WayFare-Documentation.docx](https://codingburgas-my.sharepoint.com/:w:/g/personal/vybolotov24_codingburgas_bg/IQBDIgQ3BhEjQ7wddqrtbZDxAbgvhXK3Xng8uSmnVYiRRq4)
+- **QA Test Cases** - [WayFare-QA.xlsx](https://codingburgas-my.sharepoint.com/:x:/g/personal/vybolotov24_codingburgas_bg/IQCJW0-H2RQiRr5cgHnmPARLAdGK1-xRLaN0MvjBBqK4p-Q)
+- **Project Presentation** - [WayFare-Presentation.pptx](https://canva.link/xr9947vdleoch1w)
 - **Asset Credits** - [CREDITS.md](./CREDITS.md)
 
 ## Contributors
