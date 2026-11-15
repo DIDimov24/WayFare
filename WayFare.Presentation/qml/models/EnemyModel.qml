@@ -27,6 +27,8 @@ Node {
     property real runSpeed: 1
     property real alertSpeed: 1
     property real phase: 0
+    property string poseClip: ""
+    property real poseFrame: 0
     property real sink: 0
     property real clock: 0
     property real clipStart: 0
@@ -86,6 +88,9 @@ Node {
     }
 
     function nextClip(): string {
+        if (root.poseClip !== "") {
+            return root.poseClip
+        }
         if (root.mode === "dead") {
             return root.deathClip
         }
@@ -105,6 +110,9 @@ Node {
     }
 
     function clipFrame(): real {
+        if (root.poseClip !== "") {
+            return root.poseFrame
+        }
         const time = root.clock - root.clipStart
         if (root.clip === root.idleClip) {
             return (time + root.phase) % root.idleLength

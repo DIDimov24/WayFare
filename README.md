@@ -31,6 +31,7 @@
 ## Table of Contents
 
 - [Overview](#overview)
+  - [Story](#story)
   - [Objectives](#objectives)
   - [Levels](#levels)
   - [Screenshots](#screenshots)
@@ -49,6 +50,14 @@
 
 **WayFare is a first-person 3D story game written in C++20 with Qt Quick 3D. The player crosses three maze levels, the Underwater Temple, the Dungeon and the Snowy Village, and then defeats a boss, the Cave Troll, to finish the game.**
 
+### Story
+
+One winter night something comes up through the ice of the village lake and takes the children. Mila, the hero's daughter, is the last. Her footprints end at a hole in the ice, and he dives in after her with nothing.
+
+Under the lake lies a drowned temple. The diving gear, the sword and the pistol he finds there belong to parents who came this way before him, but he never finds the parents. He surfaces in a dungeon pool, climbs up into an abandoned barn and walks out into a snowed-in village full of stone statues, and past the village he faces the Cave Troll. Behind its gate the statues stand in pairs: every parent kneeling beside a small stone child. He finds Mila there, kneels and takes her hand, and the stone spreads into him. He does not let go.
+
+The story is told only through the cutscenes and the hero's spoken lines, with captions; there is no narrator.
+
 ### Objectives
 
 - Build a complete maze game that meets the assignment: start top-left, exit bottom-right, walls that block the player, a new maze on every run
@@ -62,15 +71,16 @@ In every level the player starts in the top-left room of the maze and must reach
 
 | Level             | Size  | Enemies                         | Hazards          | Items                               | Exit condition                       |
 | ----------------- | ----- | ------------------------------- | ---------------- | ----------------------------------- | ------------------------------------ |
-| Underwater Temple | 15x15 | None                            | Drowning         | Diving gear, sword, pistol, potions | Sword and pistol collected           |
+| Underwater Temple | 15x15 | None                            | Drowning         | Diving gear, sword, pistol, potions | Sword and pistol collected, then swim up the flooded shaft |
 | Dungeon           | 25x25 | 14 zombies                      | 12 spike traps   | Potions                             | Reach the exit ladder                |
 | Snowy Village     | 45x45 | 16 nightmare creatures, Cave Troll | None          | Potions                             | Defeat the Cave Troll                |
 
 - The player has **8 hearts** and is invincible for 1 second after a hit. At zero hearts the current level restarts.
-- In the temple the air meter drains for 45 seconds, then the player loses one heart every 3 seconds. The diving gear stops the drowning.
+- In the temple the air meter drains for 45 seconds, then the player loses one heart every 3 seconds. The diving gear stops the drowning; the hero leaves it behind when he reaches the dungeon.
 - The **sword** hits enemies in front at close range; the **pistol** fires a ray with infinite ammo. There is no fighting in the temple.
 - A **healing potion** restores 4 hearts; 2 to 3 potions spawn on every map.
 - The **Cave Troll** has 75 health and 3 phases. Each phase starts with a roar during which it cannot be hurt, and its attacks have a windup, so they can be dodged.
+- Four cutscenes tell the story: the frozen lake and the dive into the temple, the swim up into the dungeon (the hero takes off the diving gear), the climb into the barn, and the ending. Each has several camera shots, the hero's voice lines with captions, and can be skipped.
 - The game saves on New Game, at the start of every level, and when leaving through the pause menu. Resume rebuilds the same maze from the saved seed; enemies respawn.
 
 ### Screenshots
@@ -156,7 +166,7 @@ The SQLite database `WayFare.DataAccess/data/WayFare.db` is created on the first
 
 Qt VS Tools runs moc and the QML tools as part of the build, and a post-build step copies the `assets/` folder next to the executable. If the first build after changing Qt modules fails to link, build again.
 
-The Mixamo hero animations are not in the repository (the Mixamo licence does not allow sharing them). The game still runs without them; only the cutscenes show no hero.
+The Mixamo hero animations are not in the repository (the Mixamo licence does not allow sharing them). The game still runs without them; only the cutscenes show no hero and no adult statues.
 
 ### Testing
 

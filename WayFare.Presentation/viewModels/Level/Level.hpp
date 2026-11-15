@@ -34,6 +34,7 @@ namespace WayFare::Presentation {
 		Q_PROPERTY(bool exitUnlocked READ exitUnlocked NOTIFY inventoryChanged)
 		Q_PROPERTY(bool dead READ dead NOTIFY deadChanged)
 		Q_PROPERTY(QString deathMessage READ deathMessage NOTIFY deadChanged)
+		Q_PROPERTY(QString deathCause READ deathCause NOTIFY deadChanged)
 		Q_PROPERTY(QVariantList pickups READ pickups NOTIFY pickupsChanged)
 		Q_PROPERTY(double playerX READ playerX NOTIFY playerChanged)
 		Q_PROPERTY(double playerY READ playerY NOTIFY playerChanged)
@@ -68,6 +69,7 @@ namespace WayFare::Presentation {
 		bool exitUnlocked() const;
 		bool dead() const;
 		QString deathMessage() const;
+		QString deathCause() const;
 		QVariantList pickups() const;
 		double playerX() const;
 		double playerY() const;
@@ -117,7 +119,7 @@ namespace WayFare::Presentation {
 		void weaponChanged();
 		void enemiesChanged();
 		void trapsChanged();
-		void playerDamaged();
+		void playerDamaged(QString source);
 		void weaponUsed(QString weapon, bool hit);
 		void potionUsed();
 		void bossChanged();
@@ -143,6 +145,8 @@ namespace WayFare::Presentation {
 		QVariantList _walls;
 		QVariantList _decor;
 		QString _deathMessage;
+		QString _deathCause;
+		QString _lastDamage;
 		int _number;
 		uint32_t _seed;
 		int _exitX;
