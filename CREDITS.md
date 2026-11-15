@@ -94,6 +94,7 @@ Converted to OGG (music) and WAV (effects), and levelled to the same loudness (-
 | Nightmare Creature steps | ["Foot Drags Dirt 2 .wav"](https://freesound.org/s/319210/), one step | worthahep88 (Freesound) | CC0 1.0 |
 | Nightmare Creature attack and death | ["80 CC0 creature SFX"](https://opengameart.org/content/80-cc0-creature-sfx) (scream_01, monster_03 pitched down) | rubberduck (OpenGameArt) | CC0 1.0 |
 | Rising as a creature (death scene, Snowy Village) | ["Monster Screech.wav"](https://freesound.org/s/125388/), shortened | thegoose09 (Freesound) | CC0 1.0 |
+| Dungeon exit cutscene music | ["eerie atmosphere ambiance.wav"](https://freesound.org/s/427743/), the first 28 s | DeVern (Freesound) | CC0 1.0 |
 | Warm-up screen finished | ["wind chimes - single 04.wav"](https://freesound.org/s/398496/), with a fade-out | Anthousai (Freesound) | CC0 1.0 |
 | Hurt underwater | ["Grunt.wav"](https://freesound.org/s/370036/), muffled, layered with ["SFX_UnderWater"](https://freesound.org/s/173439/) | punisherman, Perel (Freesound) | CC0 1.0 |
 | Drowning (death scene, Underwater Temple) | ["Man Drowning Underwater"](https://freesound.org/s/752733/), shortened | simonjeffery13 (Freesound) | CC0 1.0 |
