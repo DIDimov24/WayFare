@@ -16,6 +16,7 @@ RockModel 1.0 models/RockModel.qml
 ScubaGearModel 1.0 models/ScubaGearModel.qml
 SeaweedModel 1.0 models/SeaweedModel.qml
 StatueModel 1.0 models/StatueModel.qml
+StoneStatueModel 1.0 models/StoneStatueModel.qml
 StumpModel 1.0 models/StumpModel.qml
 TempleWallMaterial 1.0 models/TempleWallMaterial.qml
 TrollModel 1.0 models/TrollModel.qml

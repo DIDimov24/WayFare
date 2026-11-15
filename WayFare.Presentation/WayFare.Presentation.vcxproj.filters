@@ -372,6 +372,9 @@
     <None Include="qml\models\StatueModel.qml">
       <Filter>qml\models</Filter>
     </None>
+    <None Include="qml\models\StoneStatueModel.qml">
+      <Filter>qml\models</Filter>
+    </None>
     <None Include="qml\models\StumpModel.qml">
       <Filter>qml\models</Filter>
     </None>

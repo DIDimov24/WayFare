@@ -134,6 +134,7 @@
     <None Include="qml\models\ScubaGearModel.qml" />
     <None Include="qml\models\SeaweedModel.qml" />
     <None Include="qml\models\StatueModel.qml" />
+    <None Include="qml\models\StoneStatueModel.qml" />
     <None Include="qml\models\StumpModel.qml" />
     <None Include="qml\models\TempleWallMaterial.qml" />
     <None Include="qml\models\TrollModel.qml" />
