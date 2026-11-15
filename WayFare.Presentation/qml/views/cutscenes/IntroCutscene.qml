@@ -28,11 +28,10 @@ Cutscene {
     readonly property real lanternLevel: root.time < 11200 ? 1 : 0.15 + 0.85 * (root.lanternRise < 0.5 ? 2 * root.lanternRise * root.lanternRise : 1 - Math.pow(-2 * root.lanternRise + 2, 2) / 2)
 
     lastStage: 6
-    length: 51100
+    length: 54600
     shots: [0, 6000, 12000, 22500, 29000, 36000, 46000]
     heroReady: hero.ready
     title: "The Underwater Temple"
-    titleAtBottom: true
     lines: [
         { start: 500, end: 5100, text: "She was right behind me. I only looked away for a moment.", voice: "intro_1" },
         { start: 7000, end: 11000, text: "Her footprints end right here, at the edge of the ice.", voice: "intro_2" },
@@ -230,7 +229,7 @@ Cutscene {
 
     Timeline {
         startFrame: 0
-        endFrame: 16000
+        endFrame: 19500
         currentFrame: root.dive
         enabled: root.time >= root.swimStart + root.swimLength
 
@@ -275,10 +274,10 @@ Cutscene {
             property: "titleOpacity"
 
             Keyframe { frame: 0; value: 0 }
-            Keyframe { frame: 6500; value: 0 }
-            Keyframe { frame: 7500; value: 1 }
-            Keyframe { frame: 9800; value: 1 }
-            Keyframe { frame: 10800; value: 0 }
+            Keyframe { frame: 16100; value: 0 }
+            Keyframe { frame: 16700; value: 1 }
+            Keyframe { frame: 18900; value: 1 }
+            Keyframe { frame: 19500; value: 0 }
         }
 
         KeyframeGroup {
@@ -289,6 +288,7 @@ Cutscene {
             Keyframe { frame: 1200; value: 0 }
             Keyframe { frame: 14400; value: 0 }
             Keyframe { frame: 16000; value: 1 }
+            Keyframe { frame: 19500; value: 1 }
         }
     }
 

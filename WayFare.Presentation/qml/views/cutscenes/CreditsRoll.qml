@@ -44,10 +44,11 @@ Item {
         ListElement { heading: "Zombies"; names: "\"Zombie Fantasy Animated\" by Larnox Assets" }
         ListElement { heading: "Nightmare Creatures"; names: "\"Nightmare Creature 1#\" by Idk" }
         ListElement { heading: "Cave Troll"; names: "\"Troll Cave\" by Vasian-Digital3D" }
-        ListElement { heading: "Items"; names: "Sword and potion: KayKit by Kay Lousberg\nPistol: Quaternius\nDiving gear: Steren Giannini" }
-        ListElement { heading: "Environment"; names: "Nature Kit, Platformer Kit and 1-Bit Pack by Kenney\nSpike traps and torches: KayKit by Kay Lousberg\nSeaweed: Laney XR Labs\nOrange coral: Device Lab\nFan coral: God Appeasers\nCaustics: Calinou" }
+        ListElement { heading: "Items"; names: "Sword and potion: KayKit by Kay Lousberg\nPistol: Quaternius\nDiving gear: Steren Giannini,\npixelated_stars (mask) and arifduman (fins)" }
+        ListElement { heading: "Environment"; names: "Nature Kit, Platformer Kit and 1-Bit Pack by Kenney\nSpike traps, torches and stone statues: KayKit by Kay Lousberg\nSeaweed: Laney XR Labs\nOrange coral: Device Lab\nFan coral: God Appeasers\nCaustics: Calinou\nLake water: zookeeper" }
         ListElement { heading: "Textures and sky"; names: "Poly Haven" }
-        ListElement { heading: "Audio"; names: "klankbeeld, Tim_Verberne, thanvannispen, aphom000,\ndyingSatyr and SoundsExciting (Freesound)\nmeditativetiger, DRAGON-STUDIO, freesound_community,\nUniversfield and yodguard (Pixabay)\nEmma_MA, trazzz123, rubberduck and spookymodem (OpenGameArt)\nImpact Sounds by Kenney" }
+        ListElement { heading: "Hero voice"; names: "Piper, with a voice trained on the OpenSLR 83 dataset" }
+        ListElement { heading: "Audio"; names: "Freesound:\nklankbeeld, Tim_Verberne, thanvannispen, aphom000,\ndyingSatyr, SoundsExciting, cheesepuff, abbahoot,\nsoykevin, tonsil5, kathol, worthahep88,\nthegoose09, punisherman, Perel, simonjeffery13,\nmrickey13, Qvantor, ihitokage, Deathscyp,\ncryanrautha, Yoyamen1212, oscaraudiogeek, facklere,\ncylon8472, jasonLON, Anthousai and DeVern\n\nPixabay:\nmeditativetiger, DRAGON-STUDIO, freesound_community,\nUniversfield and yodguard\n\nOpenGameArt:\nSketchMan3, IgnasD, Thimras, cinameng,\nyd, Indieteur, rubberduck, Emma_MA,\ntrazzz123 and spookymodem\n\nImpact Sounds by Kenney" }
     }
 
     Column {
