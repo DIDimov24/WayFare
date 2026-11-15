@@ -36,7 +36,7 @@ Item {
 
     Connections {
         target: root.Window.window
-        enabled: root.sceneFrames < 3
+        enabled: root.sceneFrames < 3 && root.visible
 
         function onAfterAnimating() {
             if (!sceneLoader.active) {

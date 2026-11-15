@@ -161,6 +161,7 @@
     <None Include="qml\views\cutscenes\IntroCutscene.qml" />
     <None Include="qml\views\level\LevelView.qml" />
     <None Include="qml\views\hud\LoadingCover.qml" />
+    <None Include="qml\views\warmup\WarmUpView.qml" />
     <None Include="qml\views\menu\MainMenuButton.qml" />
     <None Include="qml\views\menu\MainMenuView.qml" />
     <None Include="qml\views\hud\Minimap.qml" />

@@ -53,4 +53,10 @@ Window {
         focus: Game.phase === "level"
         sourceComponent: LevelView {}
     }
+
+    Loader {
+        anchors.fill: parent
+        active: Game.phase === "warmup"
+        sourceComponent: WarmUpView {}
+    }
 }

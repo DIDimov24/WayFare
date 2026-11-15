@@ -17,6 +17,9 @@ Item {
     property real fadeOpacity: 1
     property string hint: "Space to skip"
     property var lines: []
+    property var shots: [0]
+    property bool preview: false
+    property bool prepared: false
     property int stage: 0
     property bool started: false
     property int warmFrames: 0
@@ -29,14 +32,14 @@ Item {
     focus: true
 
     Keys.onPressed: e => {
-        if (e.key === Qt.Key_Space || e.key === Qt.Key_Escape) {
+        if (!root.preview && (e.key === Qt.Key_Space || e.key === Qt.Key_Escape)) {
             root.skipRequested()
         }
     }
 
     Connections {
         target: root.Window.window
-        enabled: !root.started
+        enabled: !root.started && !root.prepared
 
         function onAfterAnimating() {
             if (root.stage < root.lastStage) {
@@ -47,7 +50,7 @@ Item {
                 root.warmFrames++
             }
             if (root.warmFrames >= 10) {
-                root.started = true
+                root.begin()
             }
         }
     }
@@ -55,14 +58,22 @@ Item {
     Timer {
         interval: 100
         repeat: true
-        running: !root.started
+        running: !root.started && !root.prepared
 
         onTriggered: {
             root.waited = root.waited + 100
             if (root.waited >= 60000) {
-                root.started = true
+                root.begin()
             }
         }
+    }
+
+    function begin() {
+        if (root.preview) {
+            root.prepared = true
+            return
+        }
+        root.started = true
     }
 
     FrameAnimation {
@@ -119,7 +130,7 @@ Item {
 
     Subtitles {
         anchors.fill: parent
-        lines: root.lines
+        lines: root.preview ? [] : root.lines
         time: root.time
     }
 
@@ -141,11 +152,15 @@ Item {
 
     MouseArea {
         anchors.fill: parent
-        onClicked: root.skipRequested()
+        onClicked: {
+            if (!root.preview) {
+                root.skipRequested()
+            }
+        }
     }
 
     LoadingCover {
         anchors.fill: parent
-        loading: !root.started
+        loading: !root.started && !root.preview
     }
 }

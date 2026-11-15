@@ -16,6 +16,7 @@ namespace WayFare::Presentation {
 
 	public slots:
 		void startLevel();
+		void finishWarmUp();
 
 	signals:
 		void phaseChanged();

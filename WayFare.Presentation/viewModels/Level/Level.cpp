@@ -1018,6 +1018,17 @@ namespace WayFare::Presentation {
 		emit potionUsed();
 	}
 
+	void Level::preview(int number) {
+		load(number, 1);
+		if (number > 1) {
+			_inventory = Business::createInventory();
+			Business::addItem(_inventory, Business::ItemType::Sword);
+			Business::addItem(_inventory, Business::ItemType::Pistol);
+			emit hudChanged();
+			emit inventoryChanged();
+		}
+	}
+
 	void Level::respawn() {
 		load(_number, _seed);
 	}

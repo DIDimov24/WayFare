@@ -28,6 +28,9 @@
     <Filter Include="qml\views\audio">
       <UniqueIdentifier>{3b1f6c0e-52a4-4d0b-8a57-6f0c2d9e1a05}</UniqueIdentifier>
     </Filter>
+    <Filter Include="qml\views\warmup">
+      <UniqueIdentifier>{3b1f6c0e-52a4-4d0b-8a57-6f0c2d9e1a06}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Register">
       <UniqueIdentifier>{c978270d-b4a4-4f09-8fec-48e433324b62}</UniqueIdentifier>
     </Filter>
@@ -458,6 +461,9 @@
     </None>
     <None Include="qml\views\hud\LoadingCover.qml">
       <Filter>qml\views\hud</Filter>
+    </None>
+    <None Include="qml\views\warmup\WarmUpView.qml">
+      <Filter>qml\views\warmup</Filter>
     </None>
     <None Include="qml\views\menu\MainMenuButton.qml">
       <Filter>qml\views\menu</Filter>

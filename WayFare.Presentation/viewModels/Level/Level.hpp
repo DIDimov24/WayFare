@@ -103,6 +103,7 @@ namespace WayFare::Presentation {
 		void selectWeapon(const QString& weapon);
 		void drinkPotion();
 		void respawn();
+		void preview(int number);
 		void nextLevel();
 		void quitToMenu();
 		void saveAndQuit();

@@ -45,6 +45,7 @@
         <file>views/cutscenes/IntroCutscene.qml</file>
         <file>views/level/LevelView.qml</file>
         <file>views/hud/LoadingCover.qml</file>
+        <file>views/warmup/WarmUpView.qml</file>
         <file>views/menu/MainMenuButton.qml</file>
         <file>views/menu/MainMenuView.qml</file>
         <file>views/hud/Minimap.qml</file>

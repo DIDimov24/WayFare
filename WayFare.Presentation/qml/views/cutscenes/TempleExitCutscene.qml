@@ -22,6 +22,7 @@ Cutscene {
 
     lastStage: 3
     length: 31900
+    shots: [0, 4100, 6600, 11600, 15100, 18300, 22100, 29500]
     heroReady: hero.ready
     title: "The Dungeon"
     lines: [
