@@ -30,14 +30,27 @@ Cutscene {
     shots: [0, 4400, 11400, 13600, 16200, 21200, 26000]
     lines: [
         { start: 5600, end: 10200, text: "What were those things down there? They moved like people.", voice: "station_1" },
-        { start: 16600, end: 20900, text: "A statue, all the way out here? Who would carve a face that frightened?", voice: "dungeon_1" },
-        { start: 21500, end: 24700, text: "Nobody has lived here for a long time.", voice: "village_1" }
+        { start: 16200, end: 21450, text: "A statue, all the way out here? Who would carve a face that frightened?", voice: "dungeon_1" },
+        { start: 21550, end: 24750, text: "Nobody has lived here for a long time.", voice: "village_1" }
     ]
     heroReady: hero.ready
     title: "The Snowy Village"
 
     onSkipRequested: root.finish()
     onEnded: root.finish()
+    onStartedChanged: {
+        if (root.started) {
+            music.play()
+        }
+    }
+
+    MediaPlayer {
+        id: music
+        source: Assets.url + "audio/dungeon_exit_music.ogg"
+        audioOutput: AudioOutput {
+            volume: Settings.musicVolume / 100 * Math.min(1, root.time / 1000, (root.length - root.time) / 1200)
+        }
+    }
 
     onClimbingChanged: {
         if (root.climbing) {
@@ -566,9 +579,9 @@ Cutscene {
             }
 
             Plank {
-                position: Qt.vector3d(0, root.floorY + 3.7, 3.85)
-                size: Qt.vector3d(11, 0.2, 5.9)
-                uv: Qt.vector2d(5.5, 2.95)
+                position: Qt.vector3d(0, root.floorY + 3.7, 3.4)
+                size: Qt.vector3d(11, 0.2, 6.8)
+                uv: Qt.vector2d(5.5, 3.4)
             }
 
             Node {
