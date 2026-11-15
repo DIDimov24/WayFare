@@ -5,10 +5,11 @@ Rectangle {
     id: root
 
     property string message
+    property color shade: "#cc1a0505"
     signal respawnClicked()
     signal menuClicked()
 
-    color: "#cc1a0505"
+    color: root.shade
     opacity: visible ? 1 : 0
 
     Behavior on opacity {

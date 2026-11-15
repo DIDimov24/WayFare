@@ -510,6 +510,10 @@ namespace WayFare::Presentation {
 		return _deathMessage;
 	}
 
+	QString Level::deathCause() const {
+		return _deathCause;
+	}
+
 	bool Level::exitUnlocked() const {
 		if (_theme == QStringLiteral("temple")) {
 			return Business::isTempleExitUnlocked(_inventory);
@@ -743,6 +747,8 @@ namespace WayFare::Presentation {
 		_onExit = false;
 		_dead = false;
 		_deathMessage.clear();
+		_deathCause.clear();
+		_lastDamage.clear();
 		_pitch = 0.0;
 
 		emit enemiesChanged();
@@ -815,22 +821,32 @@ namespace WayFare::Presentation {
 		}
 
 		bool damaged = false;
+		QString source;
 		if (_enemies.size() > 0 && !cutscene) {
 			Business::EnemyUpdateResponse response = Business::updateEnemies(_enemies, _player, _maze, deltaTime);
-			damaged = response.playerHit;
+			if (response.playerHit) {
+				damaged = true;
+				source = _theme == QStringLiteral("dungeon") ? QStringLiteral("zombie") : QStringLiteral("creature");
+			}
 			emit enemiesChanged();
 		}
 
 		if (_traps.size() > 0) {
 			Business::TrapUpdateResponse response = Business::updateSpikeTraps(_traps, _player, deltaTime);
-			damaged = damaged || response.playerHit;
+			if (response.playerHit) {
+				damaged = true;
+				source = QStringLiteral("trap");
+			}
 			emit trapsChanged();
 		}
 
 		if (_hasBoss) {
 			Business::BossUpdateResponse response = Business::updateBoss(_boss, _player, _maze, deltaTime);
 			Business::pushEnemiesFromBoss(_boss, _enemies, _player, _maze);
-			damaged = damaged || response.playerHit;
+			if (response.playerHit) {
+				damaged = true;
+				source = QStringLiteral("boss");
+			}
 			if (cutscene && _boss.state == Business::BossState::Intro) {
 				_pitch = _pitch * (1.0 - std::min(1.0, deltaTime * 3.0));
 			}
@@ -847,8 +863,14 @@ namespace WayFare::Presentation {
 			}
 		}
 
+		if (!damaged && _theme == QStringLiteral("temple") && _player.health < health) {
+			damaged = true;
+			source = QStringLiteral("drowning");
+		}
+
 		if (damaged) {
-			emit playerDamaged();
+			_lastDamage = source;
+			emit playerDamaged(source);
 		}
 
 		if (_player.health != health || _drowning.air != air) {
@@ -858,8 +880,13 @@ namespace WayFare::Presentation {
 		if (drowning == Business::DrowningStatus::Died || Business::isPlayerDead(_player)) {
 			_dead = true;
 			_deathMessage = QStringLiteral("You died");
-			if (drowning == Business::DrowningStatus::Died) {
+			_deathCause = _lastDamage;
+			if (drowning == Business::DrowningStatus::Died || _theme == QStringLiteral("temple")) {
 				_deathMessage = QStringLiteral("You drowned");
+				_deathCause = QStringLiteral("drowned");
+			}
+			if (_deathCause.isEmpty()) {
+				_deathCause = _theme == QStringLiteral("dungeon") ? QStringLiteral("zombie") : QStringLiteral("creature");
 			}
 			emit deadChanged();
 			return;
@@ -943,7 +970,7 @@ namespace WayFare::Presentation {
 			type = Business::ItemType::Pistol;
 		}
 
-		if (!armed() || type == _weapon || !Business::hasItem(_inventory, type)) {
+		if (_dead || !armed() || type == _weapon || !Business::hasItem(_inventory, type)) {
 			return;
 		}
 
