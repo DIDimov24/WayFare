@@ -22,6 +22,7 @@ Item {
     readonly property bool ladderExit: root.temple || root.dungeon
     readonly property var enemies: Level.enemies
     readonly property var trapHeights: Level.trapHeights
+    property bool preview: false
     property int loadedEnemies: 0
     property int stage: 0
     property real spin: 0
@@ -240,7 +241,7 @@ Item {
     BossAudio {
         id: bossAudio
 
-        active: root.readyFrames >= 3
+        active: root.readyFrames >= 3 && !root.preview
     }
 
     NumberAnimation {
@@ -427,7 +428,7 @@ Item {
                 return
             }
             root.readyFrames++
-            if (root.readyFrames === 3) {
+            if (root.readyFrames === 3 && !root.preview) {
                 root.forceActiveFocus()
                 root.captured = root.Window.active
                 ambience.play()
@@ -441,7 +442,7 @@ Item {
         function onActiveChanged() {
             if (!root.Window.active) {
                 root.releaseInput()
-                if (root.readyFrames >= 3 && !Level.dead) {
+                if (root.readyFrames >= 3 && !Level.dead && !root.preview) {
                     root.paused = true
                 }
             }
@@ -567,7 +568,7 @@ Item {
     }
 
     FrameAnimation {
-        running: root.readyFrames >= 3 && !Level.dead && !root.paused
+        running: root.readyFrames >= 3 && !Level.dead && !root.paused && !root.preview
         onTriggered: {
             if (root.captured) {
                 const delta = Cursor.takeDelta(root)
@@ -844,7 +845,7 @@ Item {
                             rise: trap.rise
                             tileX: trap.modelData.x
                             tileY: trap.modelData.y
-                            active: root.readyFrames >= 3 && !Level.dead
+                            active: root.readyFrames >= 3 && !Level.dead && !root.preview
                         }
                     }
                 }
@@ -864,7 +865,7 @@ Item {
                         EnemyAudio {
                             enemy: zombie.enemy
                             kind: "zombie"
-                            active: root.readyFrames >= 3 && !Level.dead
+                            active: root.readyFrames >= 3 && !Level.dead && !root.preview
                         }
                         onReadyChanged: {
                             if (zombie.ready) {
@@ -889,7 +890,7 @@ Item {
                         EnemyAudio {
                             enemy: creature.enemy
                             kind: "creature"
-                            active: root.readyFrames >= 3 && !Level.dead
+                            active: root.readyFrames >= 3 && !Level.dead && !root.preview
                         }
                         onReadyChanged: {
                             if (creature.ready) {

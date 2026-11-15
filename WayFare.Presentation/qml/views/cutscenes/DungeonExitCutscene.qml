@@ -27,6 +27,7 @@ Cutscene {
 
     lastStage: 5
     length: 28000
+    shots: [0, 4400, 11400, 13600, 16200, 21200, 26000]
     lines: [
         { start: 5600, end: 10200, text: "What were those things down there? They moved like people.", voice: "station_1" },
         { start: 16600, end: 20900, text: "A statue, all the way out here? Who would carve a face that frightened?", voice: "dungeon_1" },

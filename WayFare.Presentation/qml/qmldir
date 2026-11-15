@@ -40,6 +40,7 @@ Hud 1.0 views/hud/Hud.qml
 IntroCutscene 1.0 views/cutscenes/IntroCutscene.qml
 LevelView 1.0 views/level/LevelView.qml
 LoadingCover 1.0 views/hud/LoadingCover.qml
+WarmUpView 1.0 views/warmup/WarmUpView.qml
 MainMenuButton 1.0 views/menu/MainMenuButton.qml
 MainMenuView 1.0 views/menu/MainMenuView.qml
 Minimap 1.0 views/hud/Minimap.qml

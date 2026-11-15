@@ -29,6 +29,7 @@ Cutscene {
 
     lastStage: 6
     length: 51100
+    shots: [0, 6000, 12000, 22500, 29000, 36000, 46000]
     heroReady: hero.ready
     title: "The Underwater Temple"
     titleAtBottom: true
@@ -61,12 +62,12 @@ Cutscene {
         }
     }
     onSplashedChanged: {
-        if (root.splashed) {
+        if (root.splashed && root.started) {
             splashSound.play()
         }
     }
     onSwimmingChanged: {
-        if (root.swimming) {
+        if (root.swimming && root.started) {
             rumbleSound.play()
             depths.play()
         }

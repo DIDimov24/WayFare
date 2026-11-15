@@ -20,6 +20,7 @@ Cutscene {
 
     lastStage: 4
     length: 28000
+    shots: [0, 7100, 11100, 14600, 20100, 24500]
     heroReady: hero.ready
     title: "The End"
     titleSize: 56

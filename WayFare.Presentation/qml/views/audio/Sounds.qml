@@ -22,6 +22,11 @@ QtObject {
         volume: Settings.sfxVolume / 100
     }
 
+    readonly property SoundEffect warmUpDone: SoundEffect {
+        source: Assets.url + "audio/warmup_done.wav"
+        volume: Settings.sfxVolume / 100
+    }
+
     readonly property SoundEffect gasp: SoundEffect {
         source: Assets.url + "audio/gasp.wav"
         volume: Settings.sfxVolume / 100
