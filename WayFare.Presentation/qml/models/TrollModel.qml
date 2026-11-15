@@ -29,6 +29,7 @@ Node {
     property real movingLeft: 0
     property real stone: 0
     property var surfaces: []
+    property var maps: []
     property real jolt: 0
     property vector3d lastPosition: root.position
     property string clip: root.idleClip
@@ -52,10 +53,19 @@ Node {
     }
 
     onStoneChanged: {
-        const shade = 1 - root.stone * 0.55
+        const grey = Qt.rgba(0.518, 0.529, 0.553, 1)
+        const t = Math.min(1, root.stone / 0.85)
         for (let i = 0; i < root.surfaces.length; i++) {
-            root.surfaces[i].baseColor = Qt.rgba(shade, shade, shade * 1.03, 1)
-            root.surfaces[i].roughness = 0.5 + root.stone * 0.5
+            const surface = root.surfaces[i]
+            if (root.stone >= 0.85) {
+                surface.baseColorMap = null
+                surface.baseColor = grey
+                surface.roughness = 0.95
+                continue
+            }
+            surface.baseColorMap = root.maps[i]
+            surface.baseColor = Qt.rgba(1 + (grey.r * 0.7 - 1) * t, 1 + (grey.g * 0.7 - 1) * t, 1.03 + (grey.b * 0.7 - 1.03) * t, 1)
+            surface.roughness = 0.5 + 0.45 * t
         }
     }
 
@@ -90,6 +100,11 @@ Node {
             }
             timeline.enabled = false
         }
+        const maps = []
+        for (let i = 0; i < surfaces.length; i++) {
+            maps.push(surfaces[i].baseColorMap)
+        }
+        root.maps = maps
         root.surfaces = surfaces
     }
 
