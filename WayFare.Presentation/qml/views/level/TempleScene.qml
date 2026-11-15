@@ -11,10 +11,22 @@ Node {
     property real tileSize: 2
     property int stage: 0
     property real sway: 0
+    property vector4d hole: Qt.vector4d(0, 0, 0, 0)
 
     readonly property var shafts: root.decorOf("shaft")
     readonly property var vents: root.decorOf("vent")
     readonly property var glows: root.decorOf("glow")
+
+    function ceilingPieces(): var {
+        const size = Level.size * root.tileSize
+        const h = root.hole
+        return [
+            Qt.vector4d(0, 0, size, h.y),
+            Qt.vector4d(0, h.w, size, size),
+            Qt.vector4d(0, h.y, h.x, h.w),
+            Qt.vector4d(h.z, h.y, size, h.w)
+        ]
+    }
 
     function decorOf(kind: string): var {
         const decor = Level.decor
@@ -135,27 +147,87 @@ Node {
         }
     }
 
-    Model {
+    Repeater3D {
         visible: root.stage >= 6
-        source: "#Rectangle"
-        position: Qt.vector3d(Level.size * root.tileSize / 2, 3, Level.size * root.tileSize / 2)
-        eulerRotation.x: 90
-        scale: Qt.vector3d(Level.size * root.tileSize / 100, Level.size * root.tileSize / 100, 1)
-        castsShadows: false
-        receivesShadows: false
-        materials: PrincipledMaterial {
-            baseColor: "#6f8f95"
-            baseColorMap: Texture {
-                source: Assets.url + "textures/temple/wall_diffuse.jpg"
-                scaleU: Level.size
-                scaleV: Level.size
+        model: root.ceilingPieces()
+
+        delegate: Model {
+            required property vector4d modelData
+
+            visible: modelData.z > modelData.x && modelData.w > modelData.y
+            source: "#Rectangle"
+            position: Qt.vector3d((modelData.x + modelData.z) / 2, 3, (modelData.y + modelData.w) / 2)
+            eulerRotation.x: 90
+            scale: Qt.vector3d((modelData.z - modelData.x) / 100, (modelData.w - modelData.y) / 100, 1)
+            castsShadows: false
+            receivesShadows: false
+            materials: PrincipledMaterial {
+                baseColor: "#6f8f95"
+                baseColorMap: Texture {
+                    source: Assets.url + "textures/temple/wall_diffuse.jpg"
+                    scaleU: (modelData.z - modelData.x) / root.tileSize
+                    scaleV: (modelData.w - modelData.y) / root.tileSize
+                }
+                normalMap: Texture {
+                    source: Assets.url + "textures/temple/wall_normal.jpg"
+                    scaleU: (modelData.z - modelData.x) / root.tileSize
+                    scaleV: (modelData.w - modelData.y) / root.tileSize
+                }
+                roughness: 1
             }
-            normalMap: Texture {
-                source: Assets.url + "textures/temple/wall_normal.jpg"
-                scaleU: Level.size
-                scaleV: Level.size
+        }
+    }
+
+    Node {
+        visible: root.stage >= 6
+        position: Qt.vector3d(root.tileSize, 0, 1.5 * root.tileSize)
+        eulerRotation.y: 90
+
+        TempleWallMaterial {
+            id: doorStone
+
+            wallTop: 3
+            uvScale: Qt.vector2d(0.5, 1)
+        }
+
+        Model {
+            source: "#Rectangle"
+            position: Qt.vector3d(0, 1.2, 0.012)
+            scale: Qt.vector3d(0.0128, 0.024, 1)
+            castsShadows: false
+            receivesShadows: false
+            materials: PrincipledMaterial {
+                lighting: PrincipledMaterial.NoLighting
+                baseColor: "#010506"
             }
-            roughness: 1
+        }
+
+        Model {
+            source: "#Cube"
+            position: Qt.vector3d(-0.82, 1.3, 0.1)
+            scale: Qt.vector3d(0.0036, 0.026, 0.002)
+            materials: doorStone
+        }
+
+        Model {
+            source: "#Cube"
+            position: Qt.vector3d(0.82, 1.3, 0.1)
+            scale: Qt.vector3d(0.0036, 0.026, 0.002)
+            materials: doorStone
+        }
+
+        Model {
+            source: "#Cube"
+            position: Qt.vector3d(0, 2.74, 0.13)
+            scale: Qt.vector3d(0.02, 0.0032, 0.0026)
+            materials: doorStone
+        }
+
+        Model {
+            source: "#Cube"
+            position: Qt.vector3d(0, 0.05, 0.22)
+            scale: Qt.vector3d(0.019, 0.001, 0.0044)
+            materials: doorStone
         }
     }
 

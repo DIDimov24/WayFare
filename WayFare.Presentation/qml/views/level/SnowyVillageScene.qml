@@ -24,6 +24,85 @@ Node {
         NumberAnimation { duration: 1800; easing.type: Easing.InOutQuad }
     }
 
+    Node {
+        visible: root.stage >= 6
+        position: Qt.vector3d(root.tileSize, 0, 1.5 * root.tileSize)
+        eulerRotation.y: 90
+
+        PrincipledMaterial {
+            id: entranceDoorWood
+
+            baseColor: "#c9a67e"
+            roughness: 0.9
+            baseColorMap: Texture {
+                source: Assets.url + "textures/village/wall_diffuse.jpg"
+            }
+        }
+
+        PrincipledMaterial {
+            id: entranceFrameWood
+
+            baseColor: "#8a6a50"
+            roughness: 0.9
+            baseColorMap: Texture {
+                source: Assets.url + "textures/village/wall_diffuse.jpg"
+            }
+        }
+
+        Model {
+            source: "#Rectangle"
+            position: Qt.vector3d(0, 1.3, 0.012)
+            scale: Qt.vector3d(0.0128, 0.026, 1)
+            castsShadows: false
+            receivesShadows: false
+            materials: PrincipledMaterial {
+                lighting: PrincipledMaterial.NoLighting
+                baseColor: "#020203"
+            }
+        }
+
+        Model {
+            source: "#Cube"
+            position: Qt.vector3d(-0.72, 1.4, 0.08)
+            scale: Qt.vector3d(0.0016, 0.028, 0.0016)
+            materials: entranceFrameWood
+        }
+
+        Model {
+            source: "#Cube"
+            position: Qt.vector3d(0.72, 1.4, 0.08)
+            scale: Qt.vector3d(0.0016, 0.028, 0.0016)
+            materials: entranceFrameWood
+        }
+
+        Model {
+            source: "#Cube"
+            position: Qt.vector3d(0, 2.68, 0.08)
+            scale: Qt.vector3d(0.0164, 0.0018, 0.0018)
+            materials: entranceFrameWood
+        }
+
+        Node {
+            position: Qt.vector3d(0.64, 0, 0.1)
+            eulerRotation.y: 105
+
+            Model {
+                source: "#Cube"
+                position: Qt.vector3d(-0.64, 1.3, 0)
+                scale: Qt.vector3d(0.0128, 0.026, 0.0008)
+                materials: entranceDoorWood
+            }
+
+            Model {
+                source: "#Cube"
+                position: Qt.vector3d(-0.64, 1.3, 0.05)
+                eulerRotation.z: 63
+                scale: Qt.vector3d(0.026, 0.0012, 0.0006)
+                materials: entranceFrameWood
+            }
+        }
+    }
+
     function decorOf(kind: string): var {
         const decor = Level.decor
         const list = []
@@ -441,6 +520,60 @@ Node {
         StumpModel {
             position: Qt.vector3d(9, 0, 7.5)
             scale: Qt.vector3d(1.4, 1.4, 1.4)
+        }
+    }
+
+    Node {
+        visible: root.stage >= 5 && Level.hasBoss
+        position: Qt.vector3d((Level.exitX + 0.5) * root.tileSize, 0, Level.size * root.tileSize)
+
+        Repeater3D {
+            model: [
+                { v: "stand", x: -4.2, z: 4.2, yaw: 160, s: 0.85, tilt: 0, tip: 0, lift: 0, sink: 0 },
+                { v: "reach", x: 3.8, z: 5.2, yaw: -150, s: 0.82, tilt: 0, tip: 0, lift: 0, sink: 0 },
+                { v: "bend", x: 7.8, z: 4.4, yaw: -120, s: 0.78, tilt: 0, tip: 0, lift: 0, sink: 0 },
+                { v: "fallen", x: -8.6, z: 5.6, yaw: 70, s: 0.8, tilt: 0, tip: 0, lift: 0, sink: 0 },
+                { v: "shield", x: -6.2, z: 8, yaw: 120, s: 0.8, tilt: 14, tip: 0, lift: 0, sink: 0.15 },
+                { v: "cower", x: 5.4, z: 9.2, yaw: -100, s: 0.82, tilt: 0, tip: 0, lift: 0, sink: 0 },
+                { v: "kneel", x: -3.2, z: 9.8, yaw: 170, s: 0.8, tilt: 0, tip: 0, lift: 0, sink: 0 },
+                { v: "stand", x: 3.1, z: 13, yaw: 200, s: 0.45, tilt: 0, tip: 0, lift: 0, sink: 0 },
+                { v: "recoil", x: -4.8, z: 14.4, yaw: 140, s: 0.44, tilt: 0, tip: 0, lift: 0, sink: 0 },
+                { v: "lying", x: 6.6, z: 14.6, yaw: 30, s: 0.75, tilt: 0, tip: 0, lift: 0, sink: 0 },
+                { v: "kneel", x: 9.6, z: 16.6, yaw: -140, s: 0.43, tilt: 0, tip: 0, lift: 0, sink: 0 },
+                { v: "sit", x: -2.8, z: 17.6, yaw: 180, s: 0.6, tilt: 0, tip: 0, lift: 0, sink: 0 },
+                { v: "stand", x: -7.6, z: 18, yaw: 150, s: 0.86, tilt: -12, tip: 0, lift: 0, sink: 0.2 },
+                { v: "reach", x: 4.6, z: 18.6, yaw: -160, s: 0.8, tilt: 0, tip: -82, lift: 0.4, sink: 0 }
+            ]
+
+            delegate: StoneStatueModel {
+                required property var modelData
+
+                variant: modelData.v
+                size: modelData.s
+                position: Qt.vector3d(modelData.x, modelData.lift - modelData.sink, modelData.z)
+                eulerRotation: Qt.vector3d(modelData.tilt, modelData.yaw, modelData.tip)
+            }
+        }
+
+        Repeater3D {
+            model: [
+                Qt.vector4d(5.3, 18.1, 0.16, 32), Qt.vector4d(5.6, 19.2, 0.12, 141), Qt.vector4d(3.9, 19.4, 0.18, 77),
+                Qt.vector4d(5.9, 18.6, 0.11, 260), Qt.vector4d(-8.1, 6.3, 0.15, 12), Qt.vector4d(-9.4, 4.9, 0.12, 199),
+                Qt.vector4d(-7.9, 5.1, 0.17, 305), Qt.vector4d(-9.2, 6.4, 0.1, 88)
+            ]
+
+            delegate: Model {
+                required property vector4d modelData
+
+                source: "#Cube"
+                position: Qt.vector3d(modelData.x, modelData.z * 0.35, modelData.y)
+                eulerRotation: Qt.vector3d(modelData.w * 0.4, modelData.w, modelData.w * 0.25)
+                scale: Qt.vector3d(modelData.z * 0.011, modelData.z * 0.008, modelData.z * 0.009)
+                materials: PrincipledMaterial {
+                    baseColor: "#84878d"
+                    roughness: 0.95
+                }
+            }
         }
     }
 

@@ -28,7 +28,7 @@ Node {
 
     function torchLight(entry: var): vector3d {
         const yaw = entry.yaw * Math.PI / 180
-        return Qt.vector3d(entry.x * root.tileSize + Math.sin(yaw) * 0.44, root.torchHeight + 0.68, entry.y * root.tileSize + Math.cos(yaw) * 0.44)
+        return Qt.vector3d(entry.x * root.tileSize + Math.sin(yaw) * 0.23, root.torchHeight + 0.68, entry.y * root.tileSize + Math.cos(yaw) * 0.23)
     }
 
     Component.onCompleted: root.buildTorches()
@@ -73,8 +73,8 @@ Node {
 
             Model {
                 source: "#Sphere"
-                y: -0.3
-                scale: Qt.vector3d(0.0013, 0.0034 + torch.wave * 0.0003, 0.0013)
+                y: -0.27
+                scale: Qt.vector3d(0.0011, 0.0028 + torch.wave * 0.0003, 0.0013)
                 castsShadows: false
                 receivesShadows: false
                 materials: PrincipledMaterial {
@@ -85,8 +85,8 @@ Node {
 
             Model {
                 source: "#Sphere"
-                y: -0.28
-                scale: Qt.vector3d(0.0024, 0.0056 + torch.wave * 0.0005, 0.0024)
+                y: -0.24
+                scale: Qt.vector3d(0.0019, 0.0044 + torch.wave * 0.0005, 0.0019)
                 castsShadows: false
                 receivesShadows: false
                 materials: PrincipledMaterial {
