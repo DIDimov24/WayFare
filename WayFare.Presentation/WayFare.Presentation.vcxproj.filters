@@ -390,6 +390,9 @@
     <None Include="qml\models\MittenModel.qml">
       <Filter>qml\models</Filter>
     </None>
+    <None Include="qml\models\MineEntrance.qml">
+      <Filter>qml\models</Filter>
+    </None>
     <None Include="qml\models\TempleWallMaterial.qml">
       <Filter>qml\models</Filter>
     </None>

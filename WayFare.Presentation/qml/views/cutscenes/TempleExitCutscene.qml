@@ -74,16 +74,16 @@ Cutscene {
             return "swimming"
         }
         if (root.time < root.climbAt) {
-            return "surface_gasp"
+            return "treading_water"
         }
         if (root.time < root.wipeAt) {
             return "swimming_to_edge"
         }
         if (root.time < root.dropAt) {
-            return "mask_off"
+            return "breathing_idle"
         }
         if (root.time < root.restAt) {
-            return "drop_tank"
+            return "kneeling_down"
         }
         return "breathing_idle"
     }
@@ -117,20 +117,20 @@ Cutscene {
             target: camera
             property: "position"
 
-            Keyframe { frame: 0; value: Qt.vector3d(1.6, -10.6, 1.9) }
-            Keyframe { frame: 3999; value: Qt.vector3d(1.4, -5.6, 1.7) }
-            Keyframe { frame: 4000; value: Qt.vector3d(-1.5, 0.42, -3.3) }
-            Keyframe { frame: 6499; value: Qt.vector3d(-1.2, 0.5, -3) }
-            Keyframe { frame: 6500; value: Qt.vector3d(3.2, 0.9, 0.1) }
-            Keyframe { frame: 11530; value: Qt.vector3d(2.8, 0.85, -0.9) }
-            Keyframe { frame: 11531; value: Qt.vector3d(0.7, 1.9, -4.5) }
-            Keyframe { frame: 14999; value: Qt.vector3d(0.5, 1.95, -4.2) }
-            Keyframe { frame: 15000; value: Qt.vector3d(-2.6, 1.5, -0.2) }
-            Keyframe { frame: 18200; value: Qt.vector3d(-2.9, 1.3, 0) }
-            Keyframe { frame: 18201; value: Qt.vector3d(-0.4, 0.3, -3.5) }
-            Keyframe { frame: 22000; value: Qt.vector3d(-0.55, 0.34, -3.2) }
-            Keyframe { frame: 22001; value: Qt.vector3d(0.45, 2, -3.7) }
-            Keyframe { frame: 29000; value: Qt.vector3d(0.38, 2, -3.4) }
+            Keyframe { frame: 0; value: Qt.vector3d(1, -10.6, 1.1) }
+            Keyframe { frame: 3999; value: Qt.vector3d(0.9, -5.6, 1) }
+            Keyframe { frame: 4000; value: Qt.vector3d(-1.3, 1.5, -2.7) }
+            Keyframe { frame: 6499; value: Qt.vector3d(-1.1, 1.45, -2.4) }
+            Keyframe { frame: 6500; value: Qt.vector3d(2.8, 1.7, 0.4) }
+            Keyframe { frame: 11530; value: Qt.vector3d(2.5, 1.6, -0.6) }
+            Keyframe { frame: 11531; value: Qt.vector3d(0.7, 1.9, -5.4) }
+            Keyframe { frame: 14999; value: Qt.vector3d(0.5, 1.95, -5.1) }
+            Keyframe { frame: 15000; value: Qt.vector3d(-2.6, 1.5, -1.1) }
+            Keyframe { frame: 18200; value: Qt.vector3d(-2.9, 1.3, -0.9) }
+            Keyframe { frame: 18201; value: Qt.vector3d(-0.4, 0.3, -4.4) }
+            Keyframe { frame: 22000; value: Qt.vector3d(-0.55, 0.34, -4.1) }
+            Keyframe { frame: 22001; value: Qt.vector3d(0.45, 2, -4.6) }
+            Keyframe { frame: 29000; value: Qt.vector3d(0.38, 2, -4.3) }
         }
 
         KeyframeGroup {
@@ -143,14 +143,14 @@ Cutscene {
             Keyframe { frame: 6499; value: Qt.vector3d(0, 0.2, 0.1) }
             Keyframe { frame: 6500; value: Qt.vector3d(0, -0.15, -0.3) }
             Keyframe { frame: 11530; value: Qt.vector3d(0, 0.05, -1.3) }
-            Keyframe { frame: 11531; value: Qt.vector3d(0, 1.85, -2.4) }
-            Keyframe { frame: 14999; value: Qt.vector3d(0, 1.85, -2.4) }
-            Keyframe { frame: 15000; value: Qt.vector3d(0, 1.25, -2.4) }
-            Keyframe { frame: 18200; value: Qt.vector3d(-0.5, 0.6, -2.1) }
-            Keyframe { frame: 18201; value: Qt.vector3d(-1.1, 0.25, -1.75) }
-            Keyframe { frame: 22000; value: Qt.vector3d(-1.1, 0.3, -1.75) }
-            Keyframe { frame: 22001; value: Qt.vector3d(0, 1.92, -2.4) }
-            Keyframe { frame: 29000; value: Qt.vector3d(0, 1.92, -2.4) }
+            Keyframe { frame: 11531; value: Qt.vector3d(0, 1.85, -3.3) }
+            Keyframe { frame: 14999; value: Qt.vector3d(0, 1.85, -3.3) }
+            Keyframe { frame: 15000; value: Qt.vector3d(0, 1.25, -3.3) }
+            Keyframe { frame: 18200; value: Qt.vector3d(-0.5, 0.6, -3) }
+            Keyframe { frame: 18201; value: Qt.vector3d(-1.1, 0.25, -2.65) }
+            Keyframe { frame: 22000; value: Qt.vector3d(-1.1, 0.3, -2.65) }
+            Keyframe { frame: 22001; value: Qt.vector3d(0, 1.92, -3.3) }
+            Keyframe { frame: 29000; value: Qt.vector3d(0, 1.92, -3.3) }
         }
 
         KeyframeGroup {
@@ -179,11 +179,11 @@ Cutscene {
 
             Keyframe { frame: 0; value: Qt.vector3d(0, -9, 0.2) }
             Keyframe { frame: 3999; value: Qt.vector3d(0, -3.6, 0.2) }
-            Keyframe { frame: 4000; value: Qt.vector3d(0, -1.82, 0.1) }
-            Keyframe { frame: 6499; value: Qt.vector3d(0, -1.82, -0.1) }
-            Keyframe { frame: 6500; value: Qt.vector3d(0, -2.02, 0.32) }
-            Keyframe { frame: 11530; value: Qt.vector3d(0, -2.02, 0.32) }
-            Keyframe { frame: 11531; value: Qt.vector3d(0, 0, -2.4) }
+            Keyframe { frame: 4000; value: Qt.vector3d(0, -1.01, 0.1) }
+            Keyframe { frame: 6499; value: Qt.vector3d(0, -1.01, -0.1) }
+            Keyframe { frame: 6500; value: Qt.vector3d(0, -1.41, -0.28) }
+            Keyframe { frame: 11530; value: Qt.vector3d(0, -1.41, -0.28) }
+            Keyframe { frame: 11531; value: Qt.vector3d(0, 0, -3.3) }
         }
 
         KeyframeGroup {
@@ -199,9 +199,9 @@ Cutscene {
             target: looseTank
             property: "position"
 
-            Keyframe { frame: 16450; value: Qt.vector3d(0, 1.59, -2.39) }
-            Keyframe { frame: 16950; value: Qt.vector3d(-0.5, 0.4, -1.95); easing.type: Easing.InQuad }
-            Keyframe { frame: 17900; value: Qt.vector3d(-1.1, 0.34, -1.75); easing.type: Easing.OutQuad }
+            Keyframe { frame: 16450; value: Qt.vector3d(0, 1.59, -3.29) }
+            Keyframe { frame: 16950; value: Qt.vector3d(-0.5, 0.4, -2.85); easing.type: Easing.InQuad }
+            Keyframe { frame: 17900; value: Qt.vector3d(-1.1, 0.34, -2.65); easing.type: Easing.OutQuad }
         }
 
         KeyframeGroup {
@@ -211,6 +211,33 @@ Cutscene {
             Keyframe { frame: 16450; value: Qt.vector3d(0, 0, 0) }
             Keyframe { frame: 16950; value: Qt.vector3d(-70, 20, 0); easing.type: Easing.InQuad }
             Keyframe { frame: 17900; value: Qt.vector3d(-90, 40, 0); easing.type: Easing.OutQuad }
+        }
+
+        KeyframeGroup {
+            target: looseMask
+            property: "position"
+
+            Keyframe { frame: 16450; value: Qt.vector3d(-0.25, 0.9, -3.1) }
+            Keyframe { frame: 16900; value: Qt.vector3d(-0.8, 0.06, -2.5); easing.type: Easing.InQuad }
+            Keyframe { frame: 17400; value: Qt.vector3d(-0.9, 0.06, -2.4); easing.type: Easing.OutQuad }
+        }
+
+        KeyframeGroup {
+            target: looseMask
+            property: "eulerRotation"
+
+            Keyframe { frame: 16450; value: Qt.vector3d(0, 160, 0) }
+            Keyframe { frame: 16900; value: Qt.vector3d(-80, 200, 10); easing.type: Easing.InQuad }
+            Keyframe { frame: 17400; value: Qt.vector3d(-90, 210, 0) }
+        }
+
+        KeyframeGroup {
+            target: looseFins
+            property: "position"
+
+            Keyframe { frame: 16450; value: Qt.vector3d(0, 0.25, -3.3) }
+            Keyframe { frame: 16800; value: Qt.vector3d(-0.3, 0.02, -3); easing.type: Easing.InQuad }
+            Keyframe { frame: 17300; value: Qt.vector3d(-0.4, 0.02, -2.9) }
         }
 
         KeyframeGroup {
@@ -327,10 +354,11 @@ Cutscene {
             eulerRotation: Qt.vector3d(root.heroPitch, 180, 0)
             clip: root.heroClip()
             time: root.heroTime()
-            loop: root.time < root.climbAt || root.time >= root.restAt
+            loop: root.time < root.climbAt || (root.time >= root.wipeAt && root.time < root.dropAt) || root.time >= root.restAt
             gear: root.time < root.tankFree
             suit: root.time <= root.restAt
-            mask: root.time < root.wipeAt + 1300
+            mask: root.time < root.dropAt
+            maskInHand: root.time >= root.dropAt && root.time < root.tankFree
         }
 
         ScubaGearModel {
@@ -340,17 +368,110 @@ Cutscene {
         }
 
         Node {
+            id: looseMask
+
+            visible: root.time >= root.tankFree
+
+            Model {
+                source: Assets.url + "models/dive_mask/meshes/dive_mask.mesh"
+                position: Qt.vector3d(-0.018, -2.088, -0.084)
+                scale: Qt.vector3d(0.6, 0.6, 0.6)
+                materials: PrincipledMaterial {
+                    baseColor: "#15181c"
+                    roughness: 0.45
+                    cullMode: Material.NoCulling
+                }
+            }
+        }
+
+        Node {
+            id: looseFins
+
+            visible: root.time >= root.tankFree
+            eulerRotation.y: 150
+
+            Model {
+                source: Assets.url + "models/dive_fins/meshes/dive_fin_left.mesh"
+                position: Qt.vector3d(-0.36, 0, -0.2)
+                scale: Qt.vector3d(0.6, 0.6, 0.6)
+                materials: PrincipledMaterial {
+                    baseColor: "#0f2f42"
+                    roughness: 0.45
+                    cullMode: Material.NoCulling
+                }
+            }
+
+            Model {
+                source: Assets.url + "models/dive_fins/meshes/dive_fin_right.mesh"
+                position: Qt.vector3d(0.3, 0, -0.1)
+                eulerRotation.y: 20
+                scale: Qt.vector3d(0.6, 0.6, 0.6)
+                materials: PrincipledMaterial {
+                    baseColor: "#0f2f42"
+                    roughness: 0.45
+                    cullMode: Material.NoCulling
+                }
+            }
+        }
+
+        Node {
             visible: root.stage >= 1
 
             Model {
                 visible: root.under
-                source: "#Rectangle"
+                source: "#Cylinder"
                 position: Qt.vector3d(0, -0.4, 0)
-                eulerRotation.x: 90
-                scale: Qt.vector3d(0.026, 0.026, 1)
+                scale: Qt.vector3d(0.038, 0.0002, 0.038)
                 materials: PrincipledMaterial {
                     lighting: PrincipledMaterial.NoLighting
                     baseColor: "#e0a868"
+                }
+            }
+
+            Repeater3D {
+                visible: root.under
+                model: [
+                    Qt.vector4d(2.94, -13.16, -0.04, 1.79), Qt.vector4d(2.26, -13.43, 1.86, 1.76), Qt.vector4d(0.78, -13.4, 2.82, 1.76),
+                    Qt.vector4d(-1.63, -13.66, 2.33, 1.47), Qt.vector4d(-2.66, -13.35, 1.36, 1.97), Qt.vector4d(-2.96, -13.13, -0.64, 2.09),
+                    Qt.vector4d(-1.36, -13.77, -2.62, 1.83), Qt.vector4d(0.09, -13.85, -2.93, 1.77), Qt.vector4d(2.02, -13.88, -2.04, 1.57),
+                    Qt.vector4d(2.75, -11.73, 0.97, 1.71), Qt.vector4d(1.46, -12.0, 2.57, 1.85), Qt.vector4d(-0.65, -12.18, 2.84, 1.72),
+                    Qt.vector4d(-2.58, -11.73, 1.58, 2.1), Qt.vector4d(-2.88, -12.22, -0.18, 1.62), Qt.vector4d(-2.28, -11.79, -1.68, 1.45),
+                    Qt.vector4d(-0.61, -12.09, -2.94, 1.99), Qt.vector4d(1.84, -12.4, -2.37, 1.99), Qt.vector4d(2.73, -12.02, -1.27, 2.04),
+                    Qt.vector4d(2.87, -10.84, 0.42, 1.68), Qt.vector4d(2.21, -10.68, 2.01, 1.94), Qt.vector4d(0.85, -10.13, 2.76, 1.63),
+                    Qt.vector4d(-1.61, -10.7, 2.35, 1.48), Qt.vector4d(-2.53, -10.26, 1.28, 1.44), Qt.vector4d(-2.84, -10.54, -0.73, 1.79),
+                    Qt.vector4d(-1.72, -10.8, -2.43, 1.91), Qt.vector4d(0.61, -10.56, -2.78, 1.48), Qt.vector4d(2.04, -10.12, -2.03, 1.59),
+                    Qt.vector4d(2.61, -8.69, 1.23, 1.61), Qt.vector4d(1.66, -8.72, 2.38, 1.68), Qt.vector4d(-0.61, -8.61, 2.77, 1.47),
+                    Qt.vector4d(-2.03, -8.78, 2.03, 1.58), Qt.vector4d(-2.88, -9.34, 0.15, 1.61), Qt.vector4d(-2.47, -9.21, -1.6, 1.81),
+                    Qt.vector4d(-0.42, -9.04, -2.87, 1.66), Qt.vector4d(1.79, -8.94, -2.31, 1.74), Qt.vector4d(2.78, -9.28, -0.68, 1.53),
+                    Qt.vector4d(2.97, -7.7, 0.37, 1.97), Qt.vector4d(2.45, -7.15, 1.69, 1.92), Qt.vector4d(0.79, -7.19, 2.91, 2.07),
+                    Qt.vector4d(-1.53, -7.82, 2.47, 1.7), Qt.vector4d(-2.67, -7.71, 1.42, 2.07), Qt.vector4d(-2.64, -7.24, -1.15, 1.58),
+                    Qt.vector4d(-1.37, -7.76, -2.54, 1.61), Qt.vector4d(0.68, -7.72, -2.75, 1.45), Qt.vector4d(2.33, -7.41, -1.89, 2.0),
+                    Qt.vector4d(2.89, -6.24, 0.84, 2.04), Qt.vector4d(1.78, -6.04, 2.26, 1.59), Qt.vector4d(-0.12, -6.1, 2.85, 1.52),
+                    Qt.vector4d(-2.22, -6.11, 1.78, 1.49), Qt.vector4d(-3.01, -5.87, -0.35, 2.09), Qt.vector4d(-2.14, -6.29, -2.02, 1.81),
+                    Qt.vector4d(-0.87, -5.67, -2.69, 1.41), Qt.vector4d(1.67, -6.38, -2.52, 2.07), Qt.vector4d(2.78, -5.82, -0.89, 1.74),
+                    Qt.vector4d(3.03, -4.84, -0.16, 2.1), Qt.vector4d(2.25, -4.18, 1.94, 1.92), Qt.vector4d(0.31, -4.27, 2.95, 1.89),
+                    Qt.vector4d(-1.75, -4.35, 2.31, 1.65), Qt.vector4d(-2.92, -4.57, 0.68, 2.01), Qt.vector4d(-2.72, -4.44, -1.27, 2.0),
+                    Qt.vector4d(-1.35, -4.43, -2.56, 1.67), Qt.vector4d(0.58, -4.39, -2.78, 1.46), Qt.vector4d(2.56, -4.32, -1.57, 2.02),
+                    Qt.vector4d(2.83, -2.94, 0.92, 1.91), Qt.vector4d(1.54, -3.33, 2.57, 1.99), Qt.vector4d(-0.7, -2.92, 2.74, 1.42),
+                    Qt.vector4d(-2.19, -2.84, 1.86, 1.56), Qt.vector4d(-2.95, -2.66, 0.0, 1.83), Qt.vector4d(-2.29, -3.16, -1.65, 1.41),
+                    Qt.vector4d(-0.35, -3.26, -2.84, 1.54), Qt.vector4d(1.78, -3.05, -2.36, 1.86), Qt.vector4d(2.81, -2.87, -0.66, 1.63),
+                    Qt.vector4d(2.9, -1.26, -0.26, 1.7), Qt.vector4d(2.04, -1.59, 2.2, 2.02), Qt.vector4d(0.43, -1.79, 2.85, 1.62),
+                    Qt.vector4d(-1.5, -1.22, 2.6, 1.99), Qt.vector4d(-2.9, -1.68, 0.85, 2.07), Qt.vector4d(-2.82, -1.68, -0.72, 1.72),
+                    Qt.vector4d(-1.66, -1.4, -2.38, 1.69), Qt.vector4d(0.5, -1.23, -2.84, 1.62), Qt.vector4d(2.48, -1.84, -1.53, 1.72)
+                ]
+
+                delegate: Model {
+                    required property vector4d modelData
+                    required property int index
+
+                    source: Assets.url + (index % 2 === 0 ? "models/rock_large/meshes/rock_largeA_mesh.mesh" : "models/rock_tall/meshes/rock_tallA_mesh.mesh")
+                    position: Qt.vector3d(modelData.x, modelData.y - modelData.w * 0.4, modelData.z)
+                    eulerRotation: Qt.vector3d(index * 41, index * 67, index * 23)
+                    scale: Qt.vector3d(modelData.w * 1.1, modelData.w * 0.9, modelData.w)
+                    materials: PrincipledMaterial {
+                        baseColor: index % 3 === 0 ? "#0d1d20" : "#122427"
+                        roughness: 1
+                    }
                 }
             }
 
@@ -372,30 +493,257 @@ Cutscene {
 
             Block {
                 surface: "dungeon/floor"
-                position: Qt.vector3d(-3.9, -0.15, -1)
-                size: Qt.vector3d(5.2, 0.3, 14)
-                uv: Qt.vector2d(2.6, 7)
+                position: Qt.vector3d(-4.05, -0.15, -1)
+                size: Qt.vector3d(4.9, 0.3, 14)
+                uv: Qt.vector2d(2.45, 7)
             }
 
             Block {
                 surface: "dungeon/floor"
-                position: Qt.vector3d(3.9, -0.15, -1)
-                size: Qt.vector3d(5.2, 0.3, 14)
-                uv: Qt.vector2d(2.6, 7)
+                position: Qt.vector3d(4.05, -0.15, -1)
+                size: Qt.vector3d(4.9, 0.3, 14)
+                uv: Qt.vector2d(2.45, 7)
             }
 
             Block {
                 surface: "dungeon/floor"
-                position: Qt.vector3d(0, -0.15, -4.65)
-                size: Qt.vector3d(2.6, 0.3, 6.7)
-                uv: Qt.vector2d(1.3, 3.35)
+                position: Qt.vector3d(0, -0.15, -4.8)
+                size: Qt.vector3d(3.2, 0.3, 6.4)
+                uv: Qt.vector2d(1.6, 3.2)
             }
 
             Block {
                 surface: "dungeon/floor"
-                position: Qt.vector3d(0, -0.15, 3.65)
-                size: Qt.vector3d(2.6, 0.3, 4.7)
-                uv: Qt.vector2d(1.3, 2.35)
+                position: Qt.vector3d(0, -0.15, 3.8)
+                size: Qt.vector3d(3.2, 0.3, 4.4)
+                uv: Qt.vector2d(1.6, 2.2)
+            }
+
+            Repeater3D {
+                model: 36
+
+                delegate: Block {
+                    required property int index
+                    readonly property real course: index < 18 ? 0 : 1
+                    readonly property real angle: ((index % 18) + course * 0.5) * Math.PI / 9
+
+                    surface: "temple/wall"
+                    position: Qt.vector3d(Math.cos(angle) * 2.15, 0.13 + course * 0.26, Math.sin(angle) * 2.15)
+                    eulerRotation.y: -angle * 180 / Math.PI + 90
+                    size: Qt.vector3d(0.76, 0.25, 0.5)
+                    uv: Qt.vector2d(0.76, 0.5)
+                }
+            }
+
+            Repeater3D {
+                model: 18
+
+                delegate: Block {
+                    required property int index
+                    readonly property real angle: (index + 0.25) * Math.PI / 9
+
+                    surface: "temple/wall"
+                    position: Qt.vector3d(Math.cos(angle) * 2.17, 0.56, Math.sin(angle) * 2.17)
+                    eulerRotation.y: -angle * 180 / Math.PI + 90
+                    size: Qt.vector3d(0.8, 0.1, 0.6)
+                    uv: Qt.vector2d(0.8, 0.6)
+                }
+            }
+
+            WallTorches {
+                tileSize: 1
+                torches: [
+                    { x: -5.45, y: -1.5, yaw: 90, phase: 0 },
+                    { x: 5.45, y: -3.6, yaw: -90, phase: 1.7 },
+                    { x: 5.45, y: 2.4, yaw: -90, phase: 3.1 },
+                    { x: -2.4, y: 5.45, yaw: 180, phase: 4.4 }
+                ]
+                brightness: 1.4
+            }
+
+            Node {
+                eulerRotation.y: 45
+
+                PrincipledMaterial {
+                    id: wellWood
+
+                    baseColor: "#6b4428"
+                    roughness: 0.9
+                }
+
+                PrincipledMaterial {
+                    id: wellRoof
+
+                    baseColor: "#4a3020"
+                    roughness: 0.95
+                }
+
+                Model {
+                    source: "#Cube"
+                    position: Qt.vector3d(-2.3, 1.35, 0)
+                    scale: Qt.vector3d(0.0016, 0.026, 0.0016)
+                    materials: wellWood
+                }
+
+                Model {
+                    source: "#Cube"
+                    position: Qt.vector3d(2.3, 1.35, 0)
+                    scale: Qt.vector3d(0.0016, 0.026, 0.0016)
+                    materials: wellWood
+                }
+
+                Model {
+                    source: "#Cylinder"
+                    position: Qt.vector3d(0, 2.45, 0)
+                    eulerRotation.z: 90
+                    scale: Qt.vector3d(0.0012, 0.049, 0.0012)
+                    materials: wellWood
+                }
+
+                Model {
+                    source: "#Cube"
+                    position: Qt.vector3d(0, 2.86, 0.36)
+                    eulerRotation.x: 35
+                    scale: Qt.vector3d(0.052, 0.0008, 0.009)
+                    materials: wellRoof
+                }
+
+                Model {
+                    source: "#Cube"
+                    position: Qt.vector3d(0, 2.86, -0.36)
+                    eulerRotation.x: -35
+                    scale: Qt.vector3d(0.052, 0.0008, 0.009)
+                    materials: wellRoof
+                }
+
+                Model {
+                    source: "#Cylinder"
+                    position: Qt.vector3d(0.6, 2.1, 0)
+                    scale: Qt.vector3d(0.0003, 0.007, 0.0003)
+                    materials: PrincipledMaterial {
+                        baseColor: "#a08a64"
+                        roughness: 1
+                    }
+                }
+
+                Model {
+                    source: "#Cylinder"
+                    position: Qt.vector3d(0.6, 1.62, 0)
+                    scale: Qt.vector3d(0.0018, 0.0022, 0.0018)
+                    materials: wellWood
+                }
+            }
+
+            LanternModel {
+                position: Qt.vector3d(3.1, 0, -2.4)
+            }
+
+            LanternModel {
+                position: Qt.vector3d(-3.3, 0, 1.9)
+            }
+
+            LanternModel {
+                position: Qt.vector3d(-2.2, 0, -6.6)
+                post: false
+            }
+
+            Node {
+                position: Qt.vector3d(2.75, 0, 0.9)
+
+                Model {
+                    source: "#Cylinder"
+                    y: 0.2
+                    scale: Qt.vector3d(0.0036, 0.004, 0.0036)
+                    materials: PrincipledMaterial {
+                        baseColor: "#6b4a2c"
+                        roughness: 0.9
+                    }
+                }
+
+                Model {
+                    source: "#Cylinder"
+                    y: 0.12
+                    scale: Qt.vector3d(0.0037, 0.0003, 0.0037)
+                    materials: PrincipledMaterial {
+                        baseColor: "#2a2622"
+                        metalness: 0.6
+                        roughness: 0.5
+                    }
+                }
+
+                Model {
+                    source: "#Cylinder"
+                    y: 0.32
+                    scale: Qt.vector3d(0.0037, 0.0003, 0.0037)
+                    materials: PrincipledMaterial {
+                        baseColor: "#2a2622"
+                        metalness: 0.6
+                        roughness: 0.5
+                    }
+                }
+
+                Model {
+                    source: "#Cylinder"
+                    y: 0.395
+                    scale: Qt.vector3d(0.0033, 0.0002, 0.0033)
+                    materials: PrincipledMaterial {
+                        baseColor: "#0a2a31"
+                        roughness: 0.15
+                        specularAmount: 1
+                    }
+                }
+            }
+
+            Block {
+                surface: "village/wall"
+                position: Qt.vector3d(4.6, 0.35, 4.5)
+                eulerRotation.y: 12
+                size: Qt.vector3d(0.7, 0.7, 0.7)
+                uv: Qt.vector2d(0.7, 0.7)
+            }
+
+            Block {
+                surface: "village/wall"
+                position: Qt.vector3d(3.85, 0.25, 4.9)
+                eulerRotation.y: -20
+                size: Qt.vector3d(0.5, 0.5, 0.5)
+                uv: Qt.vector2d(0.5, 0.5)
+            }
+
+            Block {
+                surface: "village/wall"
+                position: Qt.vector3d(4.5, 0.95, 4.5)
+                eulerRotation.y: 35
+                size: Qt.vector3d(0.45, 0.5, 0.45)
+                uv: Qt.vector2d(0.45, 0.5)
+            }
+
+            LogStackModel {
+                position: Qt.vector3d(-4.7, 0, -5.4)
+                eulerRotation.y: 90
+            }
+
+            RockModel {
+                position: Qt.vector3d(-4.8, 0, 4.6)
+                eulerRotation.y: 40
+                variant: 1
+                scale: Qt.vector3d(0.8, 0.8, 0.8)
+            }
+
+            RockModel {
+                position: Qt.vector3d(4.9, 0, -6.6)
+                eulerRotation.y: 200
+                scale: Qt.vector3d(0.6, 0.6, 0.6)
+            }
+
+            RockModel {
+                position: Qt.vector3d(-3.6, 0, 3.3)
+                eulerRotation.y: 120
+                scale: Qt.vector3d(0.4, 0.4, 0.4)
+            }
+
+            MineEntrance {
+                position: Qt.vector3d(0, 0, -7.49)
             }
 
             Block {
@@ -433,10 +781,9 @@ Cutscene {
             visible: root.stage >= 3
 
             Model {
-                source: "#Rectangle"
-                position: Qt.vector3d(0, -0.22, 0)
-                eulerRotation.x: -90
-                scale: Qt.vector3d(0.026, 0.026, 1)
+                source: "#Cylinder"
+                position: Qt.vector3d(0, 0.59, 0)
+                scale: Qt.vector3d(0.0382, 0.0001, 0.0382)
                 materials: PrincipledMaterial {
                     baseColor: "#0a2a31"
                     roughness: 0.15

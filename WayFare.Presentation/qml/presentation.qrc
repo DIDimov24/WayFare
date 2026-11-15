@@ -7,6 +7,7 @@
         <file>models/TorchModel.qml</file>
         <file>models/EnemyModel.qml</file>
         <file>models/LanternModel.qml</file>
+        <file>models/MineEntrance.qml</file>
         <file>models/MittenModel.qml</file>
         <file>models/NightmareCreatureModel.qml</file>
         <file>models/ZombieModel.qml</file>

@@ -3,6 +3,7 @@ CoralModel 1.0 models/CoralModel.qml
 EnemyModel 1.0 models/EnemyModel.qml
 LanternModel 1.0 models/LanternModel.qml
 MittenModel 1.0 models/MittenModel.qml
+MineEntrance 1.0 models/MineEntrance.qml
 NightmareCreatureModel 1.0 models/NightmareCreatureModel.qml
 ZombieModel 1.0 models/ZombieModel.qml
 SpikeTrapModel 1.0 models/SpikeTrapModel.qml

@@ -138,6 +138,7 @@
     <None Include="qml\models\StumpModel.qml" />
     <None Include="qml\models\SnowTracksMaterial.qml" />
     <None Include="qml\models\LanternModel.qml" />
+    <None Include="qml\models\MineEntrance.qml" />
     <None Include="qml\models\MittenModel.qml" />
     <None Include="qml\models\TempleWallMaterial.qml" />
     <None Include="qml\models\TrollModel.qml" />
