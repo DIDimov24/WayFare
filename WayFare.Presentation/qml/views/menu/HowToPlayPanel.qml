@@ -277,12 +277,33 @@ Column {
                     border.width: 1
                 }
             }
+
+            Text {
+                width: Math.max(28, implicitWidth)
+                height: 26
+                leftPadding: 8
+                rightPadding: 8
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+                text: "3"
+                color: "#ffffff"
+                font.pixelSize: 14
+
+                Rectangle {
+                    anchors.fill: parent
+                    z: -1
+                    radius: 4
+                    color: "#1affffff"
+                    border.color: "#66ffffff"
+                    border.width: 1
+                }
+            }
         }
 
         Text {
             x: 150
             anchors.verticalCenter: parent.verticalCenter
-            text: "Sword / Pistol"
+            text: "Sword / Pistol / Potion"
             color: "#d6dde6"
             font.pixelSize: 18
         }
@@ -321,7 +342,7 @@ Column {
         Text {
             x: 150
             anchors.verticalCenter: parent.verticalCenter
-            text: "Drink a potion"
+            text: "Drink the potion in hand"
             color: "#d6dde6"
             font.pixelSize: 18
         }

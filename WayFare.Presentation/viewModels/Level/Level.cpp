@@ -571,10 +571,14 @@ namespace WayFare::Presentation {
 
 	QStringList Level::items() const {
 		QStringList keys;
-		for (size_t i = 0; i < _inventory.items.size(); i++) {
-			if (_inventory.items[i] != Business::ItemType::Potion) {
-				keys.append(levelItemKey(_inventory.items[i]));
-			}
+		if (Business::hasItem(_inventory, Business::ItemType::DivingGear)) {
+			keys.append(levelItemKey(Business::ItemType::DivingGear));
+		}
+		if (Business::hasItem(_inventory, Business::ItemType::Sword)) {
+			keys.append(levelItemKey(Business::ItemType::Sword));
+		}
+		if (Business::hasItem(_inventory, Business::ItemType::Pistol)) {
+			keys.append(levelItemKey(Business::ItemType::Pistol));
 		}
 		return keys;
 	}
@@ -928,7 +932,16 @@ namespace WayFare::Presentation {
 	}
 
 	void Level::attack() {
-		if (_dead || !armed() || bossCutscene()) {
+		if (_dead || bossCutscene()) {
+			return;
+		}
+
+		if (_weapon == Business::ItemType::Potion) {
+			drinkPotion();
+			return;
+		}
+
+		if (!armed()) {
 			return;
 		}
 
@@ -969,8 +982,17 @@ namespace WayFare::Presentation {
 		if (weapon == QStringLiteral("pistol")) {
 			type = Business::ItemType::Pistol;
 		}
+		if (weapon == QStringLiteral("potion")) {
+			type = Business::ItemType::Potion;
+		}
 
-		if (_dead || !armed() || type == _weapon || !Business::hasItem(_inventory, type)) {
+		if (_dead || type == _weapon) {
+			return;
+		}
+		if (type == Business::ItemType::Potion && _inventory.potionCount <= 0) {
+			return;
+		}
+		if (type != Business::ItemType::Potion && (!armed() || !Business::hasItem(_inventory, type))) {
 			return;
 		}
 
@@ -979,8 +1001,16 @@ namespace WayFare::Presentation {
 	}
 
 	void Level::drinkPotion() {
-		if (_dead || Business::usePotion(_player, _inventory) != Business::HealStatus::Success) {
+		if (_dead || _weapon != Business::ItemType::Potion) {
 			return;
+		}
+		if (Business::usePotion(_player, _inventory) != Business::HealStatus::Success) {
+			return;
+		}
+
+		if (_weapon == Business::ItemType::Potion && _inventory.potionCount <= 0) {
+			_weapon = Business::ItemType::Sword;
+			emit weaponChanged();
 		}
 
 		emit hudChanged();

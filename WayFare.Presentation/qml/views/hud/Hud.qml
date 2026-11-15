@@ -10,6 +10,7 @@ Item {
     property string message: ""
     property real flash: 0
     readonly property bool masked: Level.items.indexOf("diving_gear") >= 0
+    readonly property real maskEdge: 1200
     readonly property string bossState: Level.hasBoss ? Level.boss.state : "waiting"
     property real bossFill: root.bossState === "waiting" ? 0 : Level.boss.health / Level.bossMaxHealth
 
@@ -42,14 +43,37 @@ Item {
     }
 
     Rectangle {
+        anchors.fill: parent
+        visible: root.masked
+        color: "#38000000"
+    }
+
+    Repeater {
+        model: 6
+
+        Rectangle {
+            required property int index
+
+            anchors.centerIn: parent
+            visible: root.masked
+            width: parent.width - 100 + 2 * root.maskEdge + index * 10
+            height: parent.height - 100 + 2 * root.maskEdge + index * 10
+            radius: 240 + root.maskEdge + index * 5
+            color: "transparent"
+            border.color: Qt.rgba(0, 0, 0, 0.16)
+            border.width: root.maskEdge + 6 * (6 - index)
+        }
+    }
+
+    Rectangle {
         anchors.centerIn: parent
         visible: root.masked
-        width: parent.width + 200
-        height: parent.height + 200
-        radius: 420
+        width: parent.width - 100 + 2 * root.maskEdge
+        height: parent.height - 100 + 2 * root.maskEdge
+        radius: 240 + root.maskEdge
         color: "transparent"
-        border.color: "#05080a"
-        border.width: 150
+        border.color: "#020304"
+        border.width: root.maskEdge
     }
 
     Rectangle {
@@ -57,10 +81,10 @@ Item {
         visible: root.masked
         width: parent.width - 100
         height: parent.height - 100
-        radius: 270
+        radius: 240
         color: "transparent"
-        border.color: "#402a3a40"
-        border.width: 6
+        border.color: "#302a3a40"
+        border.width: 3
     }
 
     Rectangle {
@@ -180,8 +204,8 @@ Item {
                 width: 52
                 height: 52
                 color: "#cc0a0806"
-                border.color: "#a87a35"
-                border.width: 2
+                border.color: Level.weapon === "potion" ? "#f3d48e" : "#a87a35"
+                border.width: Level.weapon === "potion" ? 3 : 2
 
                 Image {
                     anchors.centerIn: parent

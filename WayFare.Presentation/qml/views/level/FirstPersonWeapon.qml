@@ -8,8 +8,9 @@ Node {
     property real swing: 0
     property real kick: 0
     property real flash: 0
+    property real sip: 0
 
-    visible: Level.armed
+    visible: Level.armed || Level.weapon === "potion"
 
     Connections {
         target: Level
@@ -21,6 +22,18 @@ Node {
             }
             fireAnimation.restart()
         }
+
+        function onPotionUsed() {
+            sipAnimation.restart()
+        }
+    }
+
+    SequentialAnimation {
+        id: sipAnimation
+
+        NumberAnimation { target: root; property: "sip"; from: 0; to: 1; duration: 220; easing.type: Easing.OutQuad }
+        PauseAnimation { duration: 250 }
+        NumberAnimation { target: root; property: "sip"; to: 0; duration: 300; easing.type: Easing.InOutQuad }
     }
 
     SequentialAnimation {
@@ -54,6 +67,14 @@ Node {
         position: Qt.vector3d(0.32, -0.38 + root.kick * 0.03, -0.82 + root.kick * 0.05)
         eulerRotation: Qt.vector3d(root.kick * 12, 90, 0)
         scale: Qt.vector3d(0.85, 0.85, 0.85)
+    }
+
+    ItemModel {
+        visible: Level.weapon === "potion" && Level.potionCount > 0
+        item: "potion"
+        position: Qt.vector3d(0.36 - root.sip * 0.3, -0.36 + root.sip * 0.22, -0.78 + root.sip * 0.22)
+        eulerRotation: Qt.vector3d(root.sip * 70, -20, -8 + root.sip * 20)
+        scale: Qt.vector3d(0.55, 0.55, 0.55)
     }
 
     Model {
