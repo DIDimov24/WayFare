@@ -6,6 +6,7 @@
 #include <QSqlDatabase>
 #include <QSqlError>
 #include <QSqlQuery>
+#include <QStandardPaths>
 #include <QString>
 #include <QStringList>
 
@@ -13,7 +14,12 @@ namespace WayFare::DataAccess {
 	QString databaseDataFolder() {
 		QDir dir = QFileInfo(QString::fromUtf8(__FILE__)).absoluteDir();
 		dir.cdUp();
-		return dir.absoluteFilePath(QStringLiteral("data"));
+
+		if (dir.exists()) {
+			return dir.absoluteFilePath(QStringLiteral("data"));
+		}
+
+		return QStandardPaths::writableLocation(QStandardPaths::AppDataLocation);
 	}
 
 	bool createDatabaseTables() {
