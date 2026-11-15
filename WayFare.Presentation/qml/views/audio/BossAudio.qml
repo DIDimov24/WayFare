@@ -8,7 +8,7 @@ Item {
     property bool active: true
     readonly property string mode: Level.hasBoss ? Level.boss.state : "waiting"
     readonly property real distance: Level.hasBoss ? Math.hypot(Level.boss.x - Level.playerX, Level.boss.y - Level.playerY) : 99
-    readonly property real near: Math.max(0.2, Math.min(1, 1.4 - root.distance * 0.08))
+    readonly property real near: Math.max(0.55, Math.min(1, 1.6 - root.distance * 0.06))
     readonly property real effects: root.near * Settings.sfxVolume / 100
     readonly property bool fighting: root.active && !Level.dead && root.mode !== "waiting" && root.mode !== "intro" && root.mode !== "dead"
     property real musicLevel: root.fighting ? 1 : 0
@@ -189,7 +189,7 @@ Item {
 
     SoundEffect {
         id: step
-        source: Assets.url + "audio/troll_step.wav"
+        source: Assets.url + "audio/troll_stomp.wav"
         volume: root.effects
     }
 

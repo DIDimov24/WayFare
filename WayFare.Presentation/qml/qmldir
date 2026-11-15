@@ -21,6 +21,8 @@ StumpModel 1.0 models/StumpModel.qml
 TempleWallMaterial 1.0 models/TempleWallMaterial.qml
 TrollModel 1.0 models/TrollModel.qml
 BossAudio 1.0 views/audio/BossAudio.qml
+EnemyAudio 1.0 views/audio/EnemyAudio.qml
+TrapAudio 1.0 views/audio/TrapAudio.qml
 CreditsRoll 1.0 views/cutscenes/CreditsRoll.qml
 Cutscene 1.0 views/cutscenes/Cutscene.qml
 DeathScreen 1.0 views/hud/DeathScreen.qml

@@ -399,6 +399,12 @@
     <None Include="qml\views\audio\BossAudio.qml">
       <Filter>qml\views\audio</Filter>
     </None>
+    <None Include="qml\views\audio\EnemyAudio.qml">
+      <Filter>qml\views\audio</Filter>
+    </None>
+    <None Include="qml\views\audio\TrapAudio.qml">
+      <Filter>qml\views\audio</Filter>
+    </None>
     <None Include="qml\views\cutscenes\CreditsRoll.qml">
       <Filter>qml\views\cutscenes</Filter>
     </None>

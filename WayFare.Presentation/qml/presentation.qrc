@@ -24,6 +24,8 @@
         <file>models/TrollModel.qml</file>
         <file>shaders/TempleWall.frag</file>
         <file>views/audio/BossAudio.qml</file>
+        <file>views/audio/EnemyAudio.qml</file>
+        <file>views/audio/TrapAudio.qml</file>
         <file>views/cutscenes/CreditsRoll.qml</file>
         <file>views/cutscenes/Cutscene.qml</file>
         <file>views/hud/DeathScreen.qml</file>

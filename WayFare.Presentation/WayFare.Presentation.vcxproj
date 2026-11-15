@@ -140,6 +140,8 @@
     <None Include="qml\models\TrollModel.qml" />
     <None Include="qml\shaders\TempleWall.frag" />
     <None Include="qml\views\audio\BossAudio.qml" />
+    <None Include="qml\views\audio\EnemyAudio.qml" />
+    <None Include="qml\views\audio\TrapAudio.qml" />
     <None Include="qml\views\cutscenes\CreditsRoll.qml" />
     <None Include="qml\views\cutscenes\Cutscene.qml" />
     <None Include="qml\views\hud\DeathScreen.qml" />
