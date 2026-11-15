@@ -9,6 +9,7 @@ Item {
     property real time: 0
     property int current: -1
     property string shown: ""
+    property bool thought: false
 
     onTimeChanged: {
         let next = -1
@@ -28,6 +29,7 @@ Item {
         }
 
         root.shown = root.lines[next].text
+        root.thought = root.lines[next].thought === true
         const file = "audio/voice/" + root.lines[next].voice + ".wav"
         if (root.lines[next].voice !== "" && Assets.exists(file)) {
             voice.source = Assets.url + file
@@ -53,6 +55,7 @@ Item {
         text: root.shown
         color: "#f2f4f6"
         font.pixelSize: 26
+        font.italic: root.thought
         style: Text.Outline
         styleColor: "#000000"
         opacity: root.current >= 0 ? 1 : 0

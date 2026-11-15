@@ -378,11 +378,29 @@
     <None Include="qml\models\StumpModel.qml">
       <Filter>qml\models</Filter>
     </None>
+    <None Include="qml\models\SnowTracksMaterial.qml">
+      <Filter>qml\models</Filter>
+    </None>
+    <None Include="qml\models\WaterSurfaceMaterial.qml">
+      <Filter>qml\models</Filter>
+    </None>
+    <None Include="qml\models\LanternModel.qml">
+      <Filter>qml\models</Filter>
+    </None>
+    <None Include="qml\models\MittenModel.qml">
+      <Filter>qml\models</Filter>
+    </None>
     <None Include="qml\models\TempleWallMaterial.qml">
       <Filter>qml\models</Filter>
     </None>
     <None Include="qml\models\TrollModel.qml">
       <Filter>qml\models</Filter>
+    </None>
+    <None Include="qml\shaders\SnowTracks.frag">
+      <Filter>qml\shaders</Filter>
+    </None>
+    <None Include="qml\shaders\WaterSurface.frag">
+      <Filter>qml\shaders</Filter>
     </None>
     <None Include="qml\shaders\TempleWall.frag">
       <Filter>qml\shaders</Filter>

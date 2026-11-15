@@ -13,12 +13,17 @@ Node {
     property bool gear: false
     property bool suit: false
     property bool mask: false
+    property bool maskInHand: false
+    property bool mitten: false
     property real stone: 0
     property var surfaces: []
+    property var maps: []
     property Node spine: null
     property Node head: null
     property Node leftFoot: null
     property Node rightFoot: null
+    property Node rightHand: null
+    property Node leftHand: null
     readonly property real firstFrame: 1000 / 30
     readonly property bool ready: !loader.active || loader.status === Loader3D.Ready || loader.status === Loader3D.Error
 
@@ -49,7 +54,7 @@ Node {
         property color tint: "#15181c"
         readonly property quaternion jointTurn: worn.joint === null ? Qt.quaternion(1, 0, 0, 0) : root.sceneRotation.inverted().times(worn.joint.sceneRotation)
 
-        position: worn.joint === null ? Qt.vector3d(0, 0, 0) : root.place(worn.joint, worn.at)
+        position: worn.joint === null ? Qt.vector3d(0, 0, 0) : root.mapPositionFromScene(worn.joint.scenePosition.plus(worn.joint.sceneRotation.times(worn.at.times(worn.joint.sceneScale))))
         rotation: worn.jointTurn.times(worn.turn)
         scale: Qt.vector3d(0.6, 0.6, 0.6)
         materials: PrincipledMaterial {
@@ -85,8 +90,31 @@ Node {
         tint: "#0f2f42"
     }
 
-    function place(joint: Node, at: vector3d): vector3d {
-        return root.mapPositionFromScene(joint.mapPositionToScene(at))
+    Node {
+        visible: root.maskInHand && root.leftHand !== null
+        position: root.leftHand === null ? Qt.vector3d(0, 0, 0) : root.mapPositionFromScene(root.leftHand.scenePosition.plus(root.leftHand.sceneRotation.times(Qt.vector3d(0, 0.1, 0.05))))
+        rotation: root.leftHand === null ? Qt.quaternion(1, 0, 0, 0) : root.sceneRotation.inverted().times(root.leftHand.sceneRotation)
+
+        Model {
+            source: Assets.url + "models/dive_mask/meshes/dive_mask.mesh"
+            position: Qt.vector3d(-0.018, -2.088, -0.084)
+            scale: Qt.vector3d(0.6, 0.6, 0.6)
+            materials: PrincipledMaterial {
+                baseColor: "#15181c"
+                roughness: 0.45
+                cullMode: Material.NoCulling
+            }
+        }
+    }
+
+    Node {
+        visible: root.mitten && root.rightHand !== null
+        position: root.rightHand === null ? Qt.vector3d(0, 0, 0) : root.mapPositionFromScene(root.rightHand.scenePosition.plus(root.rightHand.sceneRotation.times(Qt.vector3d(0, 0.11, 0.04))))
+        rotation: root.rightHand === null ? Qt.quaternion(1, 0, 0, 0) : root.sceneRotation.inverted().times(root.rightHand.sceneRotation)
+
+        MittenModel {
+            stone: root.stone >= 0.85
+        }
     }
 
     ScubaGearModel {
@@ -120,6 +148,8 @@ Node {
         root.head = root.findJoint(item, "mixamorig:Head")
         root.leftFoot = root.findJoint(item, "mixamorig:LeftFoot")
         root.rightFoot = root.findJoint(item, "mixamorig:RightFoot")
+        root.rightHand = root.findJoint(item, "mixamorig:RightHand")
+        root.leftHand = root.findJoint(item, "mixamorig:LeftHand")
 
         const surfaces = []
         for (let i = 0; i < item.data.length; i++) {
@@ -127,22 +157,31 @@ Node {
                 surfaces.push(item.data[i])
             }
         }
+        const maps = []
+        for (let i = 0; i < surfaces.length; i++) {
+            maps.push(surfaces[i].baseColorMap)
+        }
+        root.maps = maps
         root.surfaces = surfaces
         root.shade()
     }
 
     function shade() {
-        const level = 1 - root.stone * 0.3
+        const grey = Qt.rgba(0.518, 0.529, 0.553, 1)
+        const t = Math.min(1, root.stone / 0.85)
         for (let i = 0; i < root.surfaces.length; i++) {
             const surface = root.surfaces[i]
             const cloth = surface.objectName === "Topmat" || surface.objectName === "Bottommat"
-            if (root.suit && cloth) {
-                surface.baseColor = Qt.rgba(0.05, 0.06, 0.08, 1)
-                surface.roughness = 0.45
+            if (root.stone >= 0.85) {
+                surface.baseColorMap = null
+                surface.baseColor = grey
+                surface.roughness = 0.95
                 continue
             }
-            surface.baseColor = Qt.rgba(level, level, level * 1.04, 1)
-            surface.roughness = 0.6 + root.stone * 0.4
+            surface.baseColorMap = root.maps[i]
+            const base = root.suit && cloth ? Qt.rgba(0.05, 0.06, 0.08, 1) : Qt.rgba(1, 1, 1.04, 1)
+            surface.baseColor = Qt.rgba(base.r + (grey.r * 0.7 - base.r) * t, base.g + (grey.g * 0.7 - base.g) * t, base.b + (grey.b * 0.7 - base.b) * t, 1)
+            surface.roughness = (root.suit && cloth ? 0.45 : 0.6) + 0.35 * t
         }
     }
 

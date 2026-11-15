@@ -6,6 +6,8 @@
         <file>models/SpikeTrapModel.qml</file>
         <file>models/TorchModel.qml</file>
         <file>models/EnemyModel.qml</file>
+        <file>models/LanternModel.qml</file>
+        <file>models/MittenModel.qml</file>
         <file>models/NightmareCreatureModel.qml</file>
         <file>models/ZombieModel.qml</file>
         <file>models/FenceModel.qml</file>
@@ -17,12 +19,16 @@
         <file>models/RockModel.qml</file>
         <file>models/ScubaGearModel.qml</file>
         <file>models/SeaweedModel.qml</file>
+        <file>models/SnowTracksMaterial.qml</file>
         <file>models/StatueModel.qml</file>
         <file>models/StoneStatueModel.qml</file>
         <file>models/StumpModel.qml</file>
         <file>models/TempleWallMaterial.qml</file>
         <file>models/TrollModel.qml</file>
+        <file>models/WaterSurfaceMaterial.qml</file>
+        <file>shaders/SnowTracks.frag</file>
         <file>shaders/TempleWall.frag</file>
+        <file>shaders/WaterSurface.frag</file>
         <file>views/audio/BossAudio.qml</file>
         <file>views/audio/EnemyAudio.qml</file>
         <file>views/audio/TrapAudio.qml</file>

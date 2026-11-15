@@ -136,9 +136,15 @@
     <None Include="qml\models\StatueModel.qml" />
     <None Include="qml\models\StoneStatueModel.qml" />
     <None Include="qml\models\StumpModel.qml" />
+    <None Include="qml\models\SnowTracksMaterial.qml" />
+    <None Include="qml\models\LanternModel.qml" />
+    <None Include="qml\models\MittenModel.qml" />
     <None Include="qml\models\TempleWallMaterial.qml" />
     <None Include="qml\models\TrollModel.qml" />
+    <None Include="qml\models\WaterSurfaceMaterial.qml" />
+    <None Include="qml\shaders\SnowTracks.frag" />
     <None Include="qml\shaders\TempleWall.frag" />
+    <None Include="qml\shaders\WaterSurface.frag" />
     <None Include="qml\views\audio\BossAudio.qml" />
     <None Include="qml\views\audio\EnemyAudio.qml" />
     <None Include="qml\views\audio\TrapAudio.qml" />

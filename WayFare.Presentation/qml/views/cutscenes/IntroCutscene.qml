@@ -10,12 +10,25 @@ Cutscene {
     id: root
 
     readonly property real prologue: 19200
+    readonly property real breakLength: 2900
+    readonly property real swimLength: 13000
     readonly property real kneelAt: 5200
-    readonly property real dive: Math.max(0, root.time - root.prologue)
+    readonly property real pickAt: 7700
+    readonly property real swimStart: root.prologue + root.breakLength
+    readonly property real swim: Math.max(0, root.time - root.swimStart)
+    readonly property real dive: Math.max(0, root.time - root.swimStart - root.swimLength)
     readonly property bool above: root.time < root.prologue
+    readonly property bool swimming: root.time >= root.swimStart && root.swim < root.swimLength
+    readonly property bool underIce: root.swimming && root.swim < 6000
+    readonly property bool iceBroken: root.started && root.time >= root.kneelAt + 300
+    readonly property bool splashed: root.time >= root.prologue + 100
+    readonly property bool windy: root.started && root.above
+    property real swimPitch: 0
+    readonly property real lanternRise: Math.max(0, Math.min(1, (root.time - 11200) / 2500))
+    readonly property real lanternLevel: root.time < 11200 ? 1 : 0.15 + 0.85 * (root.lanternRise < 0.5 ? 2 * root.lanternRise * root.lanternRise : 1 - Math.pow(-2 * root.lanternRise + 2, 2) / 2)
 
-    lastStage: 5
-    length: 35200
+    lastStage: 6
+    length: 51100
     heroReady: hero.ready
     title: "The Underwater Temple"
     titleAtBottom: true
@@ -24,14 +37,38 @@ Cutscene {
         { start: 7000, end: 11000, text: "Her footprints end right here, at the edge of the ice.", voice: "intro_2" },
         { start: 11500, end: 15400, text: "It dragged her under, the same way it took the other children.", voice: "intro_3" },
         { start: 15600, end: 19600, text: "Hold on, Mila. I'm coming down to get you.", voice: "intro_4" },
-        { start: 29500, end: 35100, text: "I can't hold my breath much longer. There has to be air somewhere inside.", voice: "intro_5" }
+        { start: 28400, end: 34800, text: "The water's warm down here. Coral, under a frozen lake. This was never just a lake.", voice: "intro_6", thought: true },
+        { start: 45400, end: 51000, text: "I can't hold my breath much longer. There has to be air somewhere inside.", voice: "intro_5", thought: true }
     ]
 
-    readonly property bool diving: root.started && !root.above
+    readonly property bool diving: root.started && root.time >= root.swimStart + root.swimLength
 
     onDivingChanged: {
         if (root.diving) {
             music.play()
+        }
+    }
+    onIceBrokenChanged: {
+        if (root.iceBroken) {
+            iceSound.play()
+        }
+    }
+    onWindyChanged: {
+        if (root.windy) {
+            wind.play()
+        } else {
+            wind.stop()
+        }
+    }
+    onSplashedChanged: {
+        if (root.splashed) {
+            splashSound.play()
+        }
+    }
+    onSwimmingChanged: {
+        if (root.swimming) {
+            rumbleSound.play()
+            depths.play()
         }
     }
     onSkipRequested: Game.startLevel()
@@ -43,6 +80,41 @@ Cutscene {
         audioOutput: AudioOutput {
             volume: Settings.musicVolume / 100 * Math.min(1, (root.length - root.time) / 1200)
         }
+    }
+
+    MediaPlayer {
+        id: wind
+        source: Assets.url + "audio/lake_wind.ogg"
+        loops: MediaPlayer.Infinite
+        audioOutput: AudioOutput {
+            volume: Settings.musicVolume / 100 * Math.max(0, Math.min(1, root.time / 1500, (root.prologue - root.time) / 700))
+        }
+    }
+
+    MediaPlayer {
+        id: depths
+        source: Assets.url + "audio/temple_ambience.ogg"
+        audioOutput: AudioOutput {
+            volume: Settings.musicVolume / 100 * Math.max(0, Math.min(1, root.swim / 1500, (root.swimStart + root.swimLength + 1500 - root.time) / 1500))
+        }
+    }
+
+    SoundEffect {
+        id: iceSound
+        source: Assets.url + "audio/ice_crack.wav"
+        volume: Settings.sfxVolume / 100
+    }
+
+    SoundEffect {
+        id: splashSound
+        source: Assets.url + "audio/splash.wav"
+        volume: Settings.sfxVolume / 100
+    }
+
+    SoundEffect {
+        id: rumbleSound
+        source: Assets.url + "audio/rumble.wav"
+        volume: Settings.sfxVolume / 100
     }
 
     Timeline {
@@ -89,8 +161,69 @@ Cutscene {
 
             Keyframe { frame: 0; value: 1 }
             Keyframe { frame: 1400; value: 0 }
-            Keyframe { frame: 18500; value: 0 }
+            Keyframe { frame: 18700; value: 0 }
             Keyframe { frame: 19200; value: 1 }
+        }
+    }
+
+    Timeline {
+        startFrame: 0
+        endFrame: root.swimLength
+        currentFrame: root.swim
+        enabled: root.swimming
+
+        KeyframeGroup {
+            target: camera
+            property: "position"
+
+            Keyframe { frame: 0; value: Qt.vector3d(2.6, 46.2, 6) }
+            Keyframe { frame: 5999; value: Qt.vector3d(2, 46.3, 3) }
+            Keyframe { frame: 6000; value: Qt.vector3d(1.4, 8.7, 9.4) }
+            Keyframe { frame: 13000; value: Qt.vector3d(1, 8.3, 8.4) }
+        }
+
+        KeyframeGroup {
+            target: focusPoint
+            property: "position"
+
+            Keyframe { frame: 0; value: Qt.vector3d(0, 48.2, -7) }
+            Keyframe { frame: 5999; value: Qt.vector3d(0, 45.6, -11.5) }
+            Keyframe { frame: 6000; value: Qt.vector3d(0, 3.6, -26) }
+            Keyframe { frame: 13000; value: Qt.vector3d(0, 3.9, -27) }
+        }
+
+        KeyframeGroup {
+            target: hero
+            property: "position"
+
+            Keyframe { frame: 0; value: Qt.vector3d(0.3, 53.6, 1.6) }
+            Keyframe { frame: 5999; value: Qt.vector3d(0, 45, -11.5) }
+            Keyframe { frame: 6000; value: Qt.vector3d(0, 6.6, 6.4) }
+            Keyframe { frame: 13000; value: Qt.vector3d(0, 6.4, 5.8) }
+        }
+
+        KeyframeGroup {
+            target: root
+            property: "swimPitch"
+
+            Keyframe { frame: 0; value: 50 }
+            Keyframe { frame: 5999; value: 50 }
+            Keyframe { frame: 6000; value: 0 }
+            Keyframe { frame: 13000; value: 0 }
+        }
+
+        KeyframeGroup {
+            target: root
+            property: "fadeOpacity"
+
+            Keyframe { frame: 0; value: 1 }
+            Keyframe { frame: 500; value: 0 }
+            Keyframe { frame: 5500; value: 0 }
+            Keyframe { frame: 5999; value: 1 }
+            Keyframe { frame: 6000; value: 1 }
+            Keyframe { frame: 6600; value: 0 }
+            Keyframe { frame: 12500; value: 0 }
+            Keyframe { frame: 13000; value: 1 }
         }
     }
 
@@ -98,7 +231,7 @@ Cutscene {
         startFrame: 0
         endFrame: 16000
         currentFrame: root.dive
-        enabled: !root.above
+        enabled: root.time >= root.swimStart + root.swimLength
 
         KeyframeGroup {
             target: camera
@@ -132,9 +265,8 @@ Cutscene {
             Keyframe { frame: 6000; value: Qt.vector3d(0, 1.2, -18) }
             Keyframe { frame: 6001; value: Qt.vector3d(0, 0, -23.4) }
             Keyframe { frame: 11030; value: Qt.vector3d(0, 0, -23.4) }
-            Keyframe { frame: 11031; value: Qt.vector3d(0, 1.2, -25.6) }
-            Keyframe { frame: 15200; value: Qt.vector3d(0, 1.2, -29.8) }
-            Keyframe { frame: 16000; value: Qt.vector3d(0, 1.2, -29.8) }
+            Keyframe { frame: 11031; value: Qt.vector3d(0, 2.2, -25.4) }
+            Keyframe { frame: 16000; value: Qt.vector3d(0, 2.5, -30.4) }
         }
 
         KeyframeGroup {
@@ -219,6 +351,129 @@ Cutscene {
         }
     }
 
+    SnowTracksMaterial {
+        id: snowTracks
+    }
+
+    SnowTracksMaterial {
+        id: snowGround
+
+        lakeCut: 1
+    }
+
+    component Woods: PineModel {
+        id: woods
+
+        property int count: 10
+        property int seed: 1
+        property vector3d from
+        property vector3d to
+
+        scale: Qt.vector3d(1, 1, 1)
+        instancing: RandomInstancing {
+            instanceCount: woods.count
+            randomSeed: woods.seed
+            position: InstanceRange {
+                from: woods.from
+                to: woods.to
+            }
+            scale: InstanceRange {
+                from: Qt.vector3d(7.5, 5, 7.5)
+                to: Qt.vector3d(12, 8, 12)
+                proportional: true
+            }
+            rotation: InstanceRange {
+                from: Qt.vector3d(0, 0, 0)
+                to: Qt.vector3d(0, 360, 0)
+            }
+        }
+    }
+
+    component IceSlab: Model {
+        property vector3d size: Qt.vector3d(1, 1, 1)
+
+        source: "#Cube"
+        scale: size.times(0.01)
+        materials: snowTracks
+    }
+
+    component Cabin: Node {
+        id: cabin
+
+        property real width: 4
+        property real depth: 3.5
+        property real height: 2.6
+
+        Model {
+            source: "#Cube"
+            y: cabin.height / 2
+            scale: Qt.vector3d(cabin.width, cabin.height, cabin.depth).times(0.01)
+            materials: PrincipledMaterial {
+                baseColor: "#4e4036"
+                roughness: 0.9
+            }
+        }
+
+        Model {
+            source: "#Cube"
+            y: cabin.height
+            eulerRotation.z: 45
+            scale: Qt.vector3d(cabin.width / Math.SQRT2, cabin.width / Math.SQRT2, cabin.depth).times(0.01)
+            materials: PrincipledMaterial {
+                baseColor: "#4e4036"
+                roughness: 0.9
+            }
+        }
+
+        Model {
+            source: "#Cube"
+            x: -(cabin.width / 2 + 0.3) / 2
+            y: cabin.height + (cabin.width / 2 + 0.3) / 2
+            eulerRotation.z: 45
+            scale: Qt.vector3d((cabin.width / 2 + 0.3) * Math.SQRT2, 0.15, cabin.depth + 0.5).times(0.01)
+            materials: PrincipledMaterial {
+                baseColor: "#dfe6ee"
+                roughness: 0.9
+            }
+        }
+
+        Model {
+            source: "#Cube"
+            x: (cabin.width / 2 + 0.3) / 2
+            y: cabin.height + (cabin.width / 2 + 0.3) / 2
+            eulerRotation.z: -45
+            scale: Qt.vector3d((cabin.width / 2 + 0.3) * Math.SQRT2, 0.15, cabin.depth + 0.5).times(0.01)
+            materials: PrincipledMaterial {
+                baseColor: "#dfe6ee"
+                roughness: 0.9
+            }
+        }
+
+        Model {
+            source: "#Cube"
+            x: -cabin.width / 4
+            y: 1
+            z: cabin.depth / 2
+            scale: Qt.vector3d(0.9, 2, 0.08).times(0.01)
+            materials: PrincipledMaterial {
+                baseColor: "#15110e"
+                roughness: 0.8
+            }
+        }
+
+        Model {
+            source: "#Cube"
+            x: cabin.width / 4
+            y: 1.5
+            z: cabin.depth / 2
+            scale: Qt.vector3d(0.7, 0.6, 0.06).times(0.01)
+            materials: PrincipledMaterial {
+                baseColor: "#000000"
+                emissiveFactor: Qt.vector3d(1, 0.62, 0.3)
+            }
+        }
+    }
+
     component LyingDrum: Node {
         id: lying
 
@@ -238,19 +493,19 @@ Cutscene {
 
         environment: SceneEnvironment {
             backgroundMode: SceneEnvironment.Color
-            clearColor: root.above ? "#10151f" : "#082d35"
+            clearColor: root.above ? "#10151f" : (root.underIce ? "#0a3640" : "#082d35")
             antialiasingMode: SceneEnvironment.MSAA
             antialiasingQuality: SceneEnvironment.Medium
             tonemapMode: SceneEnvironment.TonemapModeFilmic
             fog: Fog {
                 enabled: true
-                color: root.above ? "#10151f" : "#082d35"
+                color: root.above ? "#10151f" : (root.underIce ? "#0a3640" : "#082d35")
                 density: 1
                 depthEnabled: true
                 depthNear: 3
-                depthFar: root.above ? 26 : 30
+                depthFar: root.above ? 45 : (root.underIce ? 22 : (root.swimming ? 48 : 30))
                 depthCurve: 1.2
-                heightEnabled: !root.above
+                heightEnabled: !root.above && !root.underIce
                 mostIntenseY: 16
                 leastIntenseY: 6
                 heightCurve: 1.5
@@ -272,9 +527,9 @@ Cutscene {
 
         DirectionalLight {
             eulerRotation: Qt.vector3d(-70, 25, 0)
-            color: root.above ? "#9fb4d8" : "#7fd6e0"
-            brightness: root.above ? 0.7 : 0.55
-            ambientColor: root.above ? "#20283a" : "#143c46"
+            color: root.above ? "#9fb4d8" : (root.underIce ? "#8fdde6" : "#7fd6e0")
+            brightness: root.above ? 0.7 : (root.underIce ? 0.7 : 0.55)
+            ambientColor: root.above ? "#20283a" : (root.underIce ? "#16424c" : "#143c46")
         }
 
         DirectionalLight {
@@ -295,98 +550,190 @@ Cutscene {
 
             Model {
                 source: "#Rectangle"
+                position: Qt.vector3d(-1.5, 99.9, 1)
+                eulerRotation.x: -90
+                scale: Qt.vector3d(0.25, 0.36, 1)
+                materials: WaterSurfaceMaterial {
+                    time: root.time / 1000
+                }
+            }
+
+            Model {
+                source: "#Rectangle"
                 position: Qt.vector3d(0, 100, 0)
                 eulerRotation.x: -90
-                scale: Qt.vector3d(1.2, 1.2, 1)
+                scale: Qt.vector3d(2.4, 2.4, 1)
+                materials: snowGround
+            }
+
+            IceSlab {
+                position: Qt.vector3d(0.1, 99.92, -0.6)
+                eulerRotation.y: 8
+                size: Qt.vector3d(7, 0.16, 6)
+            }
+
+            IceSlab {
+                position: Qt.vector3d(-2.8, 99.92, 2.4)
+                eulerRotation.y: 25
+                size: Qt.vector3d(3.5, 0.16, 3)
+            }
+
+            IceSlab {
+                position: Qt.vector3d(3, 99.92, 2.6)
+                eulerRotation.y: -20
+                size: Qt.vector3d(3, 0.16, 3.4)
+            }
+
+            IceSlab {
+                position: Qt.vector3d(0, 99.92, -4.2)
+                eulerRotation.y: -5
+                size: Qt.vector3d(5, 0.16, 4)
+            }
+
+            IceSlab {
+                position: Qt.vector3d(-4.6, 99.92, -1.5)
+                eulerRotation.y: 40
+                size: Qt.vector3d(2.2, 0.16, 1.6)
+            }
+
+            Model {
+                source: "#Cube"
+                position: Qt.vector3d(0, 100.29, -8.9)
+                scale: Qt.vector3d(0.016, 0.0012, 0.133)
                 materials: PrincipledMaterial {
-                    baseColorMap: Texture {
-                        source: Assets.url + "textures/village/floor_diffuse.jpg"
-                        scaleU: 40
-                        scaleV: 40
+                    baseColor: "#4a3a2c"
+                    roughness: 0.85
+                }
+            }
+
+            IceSlab {
+                position: Qt.vector3d(0, 100.36, -8.9)
+                size: Qt.vector3d(1.25, 0.03, 13.3)
+            }
+
+            Repeater3D {
+                model: [
+                    Qt.vector2d(-0.85, -2.6), Qt.vector2d(0.85, -2.6), Qt.vector2d(-0.85, -5.8), Qt.vector2d(0.85, -5.8),
+                    Qt.vector2d(-0.85, -9), Qt.vector2d(0.85, -9), Qt.vector2d(-0.85, -12.2), Qt.vector2d(0.85, -12.2),
+                    Qt.vector2d(-0.85, -15.2), Qt.vector2d(0.85, -15.2)
+                ]
+
+                delegate: Model {
+                    required property vector2d modelData
+
+                    source: "#Cylinder"
+                    position: Qt.vector3d(modelData.x, 100.1, modelData.y)
+                    scale: Qt.vector3d(0.0026, 0.013, 0.0026)
+                    materials: PrincipledMaterial {
+                        baseColor: "#33281f"
+                        roughness: 0.9
                     }
-                    normalMap: Texture {
-                        source: Assets.url + "textures/village/floor_normal.jpg"
-                        scaleU: 40
-                        scaleV: 40
-                    }
-                    normalStrength: 1.6
-                    roughnessMap: Texture {
-                        source: Assets.url + "textures/village/floor_roughness.jpg"
-                        scaleU: 40
-                        scaleV: 40
-                    }
-                    roughnessChannel: Material.R
-                }
-            }
 
-            Model {
-                source: "#Cylinder"
-                position: Qt.vector3d(0.1, 100.004, 0.9)
-                scale: Qt.vector3d(0.046, 0.0002, 0.04)
-                materials: PrincipledMaterial {
-                    baseColor: "#8fa9bd"
-                    roughness: 0.2
-                    specularAmount: 1
-                }
-            }
-
-            Model {
-                source: "#Cylinder"
-                position: Qt.vector3d(0.1, 100.012, 0.9)
-                scale: Qt.vector3d(0.033, 0.0002, 0.027)
-                materials: PrincipledMaterial {
-                    baseColor: "#dfeaf2"
-                    roughness: 0.5
-                }
-            }
-
-            Model {
-                source: "#Cylinder"
-                position: Qt.vector3d(0.1, 100.024, 0.9)
-                scale: Qt.vector3d(0.03, 0.0002, 0.024)
-                materials: PrincipledMaterial {
-                    baseColor: "#123c4a"
-                    roughness: 0.08
-                    specularAmount: 1
-                }
-            }
-
-            Model {
-                source: "#Cylinder"
-                position: Qt.vector3d(0.1, 100.03, 0.9)
-                scale: Qt.vector3d(0.0296, 0.0001, 0.0236)
-                castsShadows: false
-                receivesShadows: false
-                materials: PrincipledMaterial {
-                    alphaMode: PrincipledMaterial.Blend
-                    baseColor: "#000000"
-                    emissiveFactor: Qt.vector3d(0.45, 0.8, 0.9)
-                    specularAmount: 0
-                    opacity: 0.5
-                    opacityChannel: Material.R
-                    depthDrawMode: Material.NeverDepthDraw
-                    opacityMap: Texture {
-                        source: Assets.url + "textures/temple/caustics/caust00.png"
-                        tilingModeHorizontal: Texture.Repeat
-                        tilingModeVertical: Texture.Repeat
-                        scaleU: 2
-                        scaleV: 2
-
-                        NumberAnimation on positionU {
-                            loops: Animation.Infinite
-                            from: 0
-                            to: 1
-                            duration: 14000
-                        }
-
-                        NumberAnimation on positionV {
-                            loops: Animation.Infinite
-                            from: 0
-                            to: 1
-                            duration: 19000
+                    Model {
+                        source: "#Cylinder"
+                        y: 51
+                        scale: Qt.vector3d(1, 0.04, 1)
+                        materials: PrincipledMaterial {
+                            baseColor: "#eef3f7"
+                            roughness: 0.8
                         }
                     }
                 }
+            }
+
+            Node {
+                y: Math.sin(root.time * 0.0011) * 0.02
+
+                Model {
+                    source: "#Cube"
+                    instancing: RandomInstancing {
+                        instanceCount: 22
+                        randomSeed: 41
+                        position: InstanceRange {
+                            from: Qt.vector3d(-10, 99.9, -11)
+                            to: Qt.vector3d(7, 99.9, 14)
+                        }
+                        scale: InstanceRange {
+                            from: Qt.vector3d(0.012, 0.0012, 0.008)
+                            to: Qt.vector3d(0.045, 0.0016, 0.03)
+                        }
+                        rotation: InstanceRange {
+                            from: Qt.vector3d(0, 0, 0)
+                            to: Qt.vector3d(0, 360, 0)
+                        }
+                    }
+                    materials: PrincipledMaterial {
+                        baseColor: "#d6e4ee"
+                        roughness: 0.35
+                    }
+                }
+
+                Model {
+                    source: "#Cube"
+                    instancing: RandomInstancing {
+                        instanceCount: 14
+                        randomSeed: 42
+                        position: InstanceRange {
+                            from: Qt.vector3d(-7, 99.9, -13)
+                            to: Qt.vector3d(4, 99.9, -7)
+                        }
+                        scale: InstanceRange {
+                            from: Qt.vector3d(0.008, 0.0012, 0.006)
+                            to: Qt.vector3d(0.03, 0.0016, 0.02)
+                        }
+                        rotation: InstanceRange {
+                            from: Qt.vector3d(0, 0, 0)
+                            to: Qt.vector3d(0, 360, 0)
+                        }
+                    }
+                    materials: PrincipledMaterial {
+                        baseColor: "#e4edf4"
+                        roughness: 0.4
+                    }
+                }
+
+                Model {
+                    source: "#Cube"
+                    instancing: RandomInstancing {
+                        instanceCount: 40
+                        randomSeed: 43
+                        position: InstanceRange {
+                            from: Qt.vector3d(-8, 99.93, -9)
+                            to: Qt.vector3d(5, 99.93, 12)
+                        }
+                        scale: InstanceRange {
+                            from: Qt.vector3d(0.003, 0.002, 0.003)
+                            to: Qt.vector3d(0.011, 0.004, 0.009)
+                        }
+                        rotation: InstanceRange {
+                            from: Qt.vector3d(-8, 0, -8)
+                            to: Qt.vector3d(8, 360, 8)
+                        }
+                    }
+                    materials: PrincipledMaterial {
+                        baseColor: "#f2f6fa"
+                        roughness: 0.7
+                    }
+                }
+            }
+
+            Cabin {
+                position: Qt.vector3d(-10, 100, -26)
+                eulerRotation.y: 30
+            }
+
+            Cabin {
+                position: Qt.vector3d(6, 100, -29)
+                eulerRotation.y: -15
+                width: 4.5
+                height: 3
+            }
+
+            Cabin {
+                position: Qt.vector3d(-1, 100, -35)
+                eulerRotation.y: 8
+                width: 5
+                depth: 4
             }
 
             Repeater3D {
@@ -399,9 +746,9 @@ Cutscene {
                     required property vector4d modelData
 
                     source: "#Cube"
-                    position: Qt.vector3d(modelData.x, 100.04, modelData.y)
-                    eulerRotation: Qt.vector3d(modelData.z * 0.4, modelData.z * 3, modelData.z)
-                    scale: Qt.vector3d(modelData.w * 0.012, 0.0012, modelData.w * 0.008)
+                    position: Qt.vector3d(modelData.x * 0.5 + 0.1, 99.93 + Math.sin(root.time * 0.002 + modelData.z) * 0.012, modelData.y * 0.45 + 0.8)
+                    eulerRotation: Qt.vector3d(modelData.z * 0.2, modelData.z * 3, modelData.z * 0.3)
+                    scale: Qt.vector3d(modelData.w * 0.008, 0.0012, modelData.w * 0.006)
                     materials: PrincipledMaterial {
                         baseColor: "#b9cbdc"
                         roughness: 0.25
@@ -409,12 +756,65 @@ Cutscene {
                 }
             }
 
-            PointLight {
-                position: Qt.vector3d(-1.6, 100.5, -0.4)
-                color: "#ffb870"
-                brightness: 1.3 + Math.sin(root.time * 0.013) * 0.15
-                quadraticFade: 500
+            MittenModel {
+                visible: root.time < root.pickAt
+                position: Qt.vector3d(-0.22, 100.05, -0.55)
+                eulerRotation: Qt.vector3d(90, 0, 30)
             }
+
+            LanternModel {
+                position: Qt.vector3d(-1.5, 100, -0.9)
+                eulerRotation.y: 20
+                post: false
+                glow: root.lanternLevel
+            }
+
+            PointLight {
+                position: Qt.vector3d(-1.5, 100.35, -0.9)
+                color: "#ffb46a"
+                brightness: 1.2 * root.lanternLevel * (1 + Math.sin(root.time * 0.011) * 0.05 + Math.sin(root.time * 0.027 + 1.3) * 0.04)
+                quadraticFade: 260
+            }
+
+            LanternModel {
+                position: Qt.vector3d(1.6, 100, -16.4)
+            }
+
+            LanternModel {
+                position: Qt.vector3d(-7.2, 100, -23.2)
+            }
+
+            Woods { variant: 2; count: 12; seed: 61; from: Qt.vector3d(-34, 100, -26); to: Qt.vector3d(-17, 100, 26) }
+            Woods { variant: 3; count: 12; seed: 62; from: Qt.vector3d(15, 100, -26); to: Qt.vector3d(34, 100, 26) }
+            Woods { variant: 1; count: 14; seed: 63; from: Qt.vector3d(-34, 100, -62); to: Qt.vector3d(34, 100, -42) }
+            Woods { variant: 3; count: 10; seed: 64; from: Qt.vector3d(-28, 100, 22); to: Qt.vector3d(28, 100, 36) }
+
+            PineModel { position: Qt.vector3d(-14.5, 100, 0) }
+            PineModel { position: Qt.vector3d(-16, 100, 9); variant: 3 }
+            PineModel { position: Qt.vector3d(-13, 100, 15); variant: 1 }
+            PineModel { position: Qt.vector3d(-15, 100, -7); variant: 4 }
+            PineModel { position: Qt.vector3d(11.5, 100, -3); variant: 2 }
+            PineModel { position: Qt.vector3d(13.5, 100, 7); variant: 4 }
+            PineModel { position: Qt.vector3d(10.5, 100, 14.5); variant: 3 }
+            PineModel { position: Qt.vector3d(14, 100, -10) }
+            PineModel { position: Qt.vector3d(-8, 100, 19.5); variant: 3 }
+            PineModel { position: Qt.vector3d(4, 100, 20.5); variant: 1 }
+            PineModel { position: Qt.vector3d(9, 100, 18.5); variant: 4 }
+
+            RockModel { position: Qt.vector3d(-12.3, 100, -3); eulerRotation.y: 70; scale: Qt.vector3d(2.2, 2, 2.2) }
+            RockModel { position: Qt.vector3d(-12.6, 100, 8); eulerRotation.y: 150; variant: 1; scale: Qt.vector3d(1.6, 1.6, 1.6) }
+            RockModel { position: Qt.vector3d(-11.2, 100, -10.5); eulerRotation.y: 20; variant: 1; scale: Qt.vector3d(1.1, 1.1, 1.1) }
+            RockModel { position: Qt.vector3d(9.6, 100, 2); eulerRotation.y: 240; variant: 1; scale: Qt.vector3d(1.8, 1.8, 1.8) }
+            RockModel { position: Qt.vector3d(9.7, 100, 11); eulerRotation.y: 300; scale: Qt.vector3d(1.4, 1.2, 1.4) }
+            RockModel { position: Qt.vector3d(-2, 100, 18.6); eulerRotation.y: 10; scale: Qt.vector3d(2.6, 2.2, 2.6) }
+            RockModel { position: Qt.vector3d(6, 100, 18); eulerRotation.y: 80; variant: 1; scale: Qt.vector3d(1.3, 1.3, 1.3) }
+
+            StumpModel { position: Qt.vector3d(10.6, 100, -6) }
+            FenceModel { position: Qt.vector3d(10.4, 100, 5.5); eulerRotation.y: 95; variant: 1 }
+            LogStackModel { position: Qt.vector3d(-12.5, 100, -11.5); eulerRotation.y: 60 }
+            GrassModel { position: Qt.vector3d(-12.4, 100, 3) }
+            GrassModel { position: Qt.vector3d(10.2, 100, -1) }
+            GrassModel { position: Qt.vector3d(3, 100, 18) }
 
             ParticleSystem3D {
                 running: root.started && root.above
@@ -457,58 +857,354 @@ Cutscene {
             }
 
             RockModel {
-                position: Qt.vector3d(-4.2, 100, -3.4)
+                position: Qt.vector3d(-4.2, 100, -17.6)
                 eulerRotation.y: 40
             }
 
             RockModel {
-                position: Qt.vector3d(5.4, 100, -5.5)
+                position: Qt.vector3d(5.4, 100, -18.5)
                 eulerRotation.y: 210
                 variant: 1
             }
 
             StumpModel {
-                position: Qt.vector3d(3.6, 100, -2.2)
+                position: Qt.vector3d(3.2, 100, -17.2)
                 scale: Qt.vector3d(1.4, 1.4, 1.4)
             }
 
             FenceModel {
-                position: Qt.vector3d(-6.5, 100, -1)
+                position: Qt.vector3d(-6.5, 100, -16.8)
                 eulerRotation.y: 75
             }
 
             PineModel {
-                position: Qt.vector3d(-9, 100, -7)
+                position: Qt.vector3d(-14, 100, -21)
             }
 
             PineModel {
-                position: Qt.vector3d(7, 100, -10)
+                position: Qt.vector3d(12, 100, -23)
                 variant: 1
             }
 
             PineModel {
-                position: Qt.vector3d(-4, 100, -14)
+                position: Qt.vector3d(-6, 100, -40)
                 variant: 2
             }
 
             PineModel {
-                position: Qt.vector3d(12, 100, -3)
+                position: Qt.vector3d(17, 100, -19)
                 variant: 3
             }
 
             PineModel {
-                position: Qt.vector3d(1, 100, -19)
+                position: Qt.vector3d(8, 100, -38)
                 variant: 3
+            }
+        }
+
+        Node {
+            visible: root.stage >= 6 && root.underIce
+
+            Model {
+                source: "#Rectangle"
+                position: Qt.vector3d(0, 54, 0)
+                eulerRotation.x: 90
+                scale: Qt.vector3d(1.4, 1.4, 1)
+                castsShadows: false
+                receivesShadows: false
+                materials: PrincipledMaterial {
+                    baseColor: "#1f5f6a"
+                    roughness: 0.4
+                    cullMode: Material.NoCulling
+                    emissiveFactor: Qt.vector3d(0.16, 0.38, 0.42)
+                    emissiveMap: Texture {
+                        source: Assets.url + "textures/lake/water_height.png"
+                        tilingModeHorizontal: Texture.Repeat
+                        tilingModeVertical: Texture.Repeat
+                        scaleU: 7
+                        scaleV: 7
+
+                        NumberAnimation on positionU {
+                            loops: Animation.Infinite
+                            from: 0
+                            to: 1
+                            duration: 26000
+                        }
+                    }
+                }
+            }
+
+            Model {
+                source: "#Cylinder"
+                position: Qt.vector3d(0.3, 53.98, 1.6)
+                scale: Qt.vector3d(0.03, 0.0002, 0.026)
+                castsShadows: false
+                materials: PrincipledMaterial {
+                    baseColor: "#000000"
+                    emissiveFactor: Qt.vector3d(0.5, 0.72, 0.76)
+                }
+            }
+
+            Model {
+                source: "#Cube"
+                castsShadows: false
+                instancing: RandomInstancing {
+                    instanceCount: 28
+                    randomSeed: 72
+                    position: InstanceRange {
+                        from: Qt.vector3d(-16, 53.8, -26)
+                        to: Qt.vector3d(16, 53.8, 8)
+                    }
+                    scale: InstanceRange {
+                        from: Qt.vector3d(0.016, 0.004, 0.012)
+                        to: Qt.vector3d(0.05, 0.006, 0.035)
+                    }
+                    rotation: InstanceRange {
+                        from: Qt.vector3d(0, 0, 0)
+                        to: Qt.vector3d(0, 360, 0)
+                    }
+                }
+                materials: PrincipledMaterial {
+                    baseColor: "#6fa3ab"
+                    roughness: 0.3
+                    emissiveFactor: Qt.vector3d(0.14, 0.27, 0.3)
+                }
+            }
+
+            Model {
+                source: "#Cube"
+                castsShadows: false
+                instancing: RandomInstancing {
+                    instanceCount: 40
+                    randomSeed: 73
+                    position: InstanceRange {
+                        from: Qt.vector3d(-12, 53.85, -20)
+                        to: Qt.vector3d(12, 53.85, 6)
+                    }
+                    scale: InstanceRange {
+                        from: Qt.vector3d(0.004, 0.003, 0.004)
+                        to: Qt.vector3d(0.012, 0.005, 0.01)
+                    }
+                    rotation: InstanceRange {
+                        from: Qt.vector3d(-6, 0, -6)
+                        to: Qt.vector3d(6, 360, 6)
+                    }
+                }
+                materials: PrincipledMaterial {
+                    baseColor: "#7eb0b6"
+                    roughness: 0.5
+                    emissiveFactor: Qt.vector3d(0.16, 0.3, 0.33)
+                }
+            }
+
+            Model {
+                source: "#Rectangle"
+                position: Qt.vector3d(0, 44, 0)
+                eulerRotation.x: -90
+                scale: Qt.vector3d(1.4, 1.4, 1)
+                materials: PrincipledMaterial {
+                    baseColor: "#a9bcb2"
+                    roughness: 1
+                    baseColorMap: Texture {
+                        source: Assets.url + "textures/temple/floor_diffuse.jpg"
+                        scaleU: 28
+                        scaleV: 28
+                    }
+                }
+            }
+
+            Model {
+                source: "#Rectangle"
+                position: Qt.vector3d(0, 44.02, 0)
+                eulerRotation.x: -90
+                scale: Qt.vector3d(1.4, 1.4, 1)
+                castsShadows: false
+                receivesShadows: false
+                materials: PrincipledMaterial {
+                    alphaMode: PrincipledMaterial.Blend
+                    baseColor: "#000000"
+                    emissiveFactor: Qt.vector3d(0.5, 0.89, 0.94)
+                    specularAmount: 0
+                    opacity: 0.24
+                    opacityChannel: Material.R
+                    depthDrawMode: Material.NeverDepthDraw
+                    opacityMap: Texture {
+                        source: Assets.url + "textures/temple/caustics/caust00.png"
+                        tilingModeHorizontal: Texture.Repeat
+                        tilingModeVertical: Texture.Repeat
+                        scaleU: 22
+                        scaleV: 22
+
+                        NumberAnimation on positionU {
+                            loops: Animation.Infinite
+                            from: 0
+                            to: 1
+                            duration: 21000
+                        }
+
+                        NumberAnimation on positionV {
+                            loops: Animation.Infinite
+                            from: 0
+                            to: 1
+                            duration: 29000
+                        }
+                    }
+                }
+            }
+
+            Model {
+                source: "#Rectangle"
+                position: Qt.vector3d(0, 44.03, 0)
+                eulerRotation.x: -90
+                scale: Qt.vector3d(1.4, 1.4, 1)
+                castsShadows: false
+                receivesShadows: false
+                materials: PrincipledMaterial {
+                    alphaMode: PrincipledMaterial.Blend
+                    baseColor: "#000000"
+                    emissiveFactor: Qt.vector3d(0.5, 0.89, 0.94)
+                    specularAmount: 0
+                    opacity: 0.18
+                    opacityChannel: Material.R
+                    depthDrawMode: Material.NeverDepthDraw
+                    opacityMap: Texture {
+                        source: Assets.url + "textures/temple/caustics/caust00.png"
+                        tilingModeHorizontal: Texture.Repeat
+                        tilingModeVertical: Texture.Repeat
+                        scaleU: 15
+                        scaleV: 15
+
+                        NumberAnimation on positionU {
+                            loops: Animation.Infinite
+                            from: 1
+                            to: 0
+                            duration: 33000
+                        }
+
+                        NumberAnimation on positionV {
+                            loops: Animation.Infinite
+                            from: 1
+                            to: 0
+                            duration: 23000
+                        }
+                    }
+                }
+            }
+
+            Repeater3D {
+                model: [
+                    Qt.vector4d(-3.2, -6, 1.1, 0), Qt.vector4d(4.5, -9, 1.4, 1), Qt.vector4d(-6, -14, 1.8, 2), Qt.vector4d(2.2, -3.5, 0.7, 3),
+                    Qt.vector4d(7.5, -16, 2, 4), Qt.vector4d(-1.5, -11, 0.9, 5), Qt.vector4d(-9, -4, 1.3, 6), Qt.vector4d(5.8, 1.5, 0.8, 7),
+                    Qt.vector4d(-4.6, 3, 0.6, 8), Qt.vector4d(0.6, -18, 1.6, 9)
+                ]
+
+                delegate: Model {
+                    required property vector4d modelData
+
+                    source: "#Sphere"
+                    position: Qt.vector3d(modelData.x, 44 + modelData.z * 0.28, modelData.y)
+                    eulerRotation.y: modelData.w * 37
+                    scale: Qt.vector3d(modelData.z * 0.011, modelData.z * 0.0075, modelData.z * 0.0095)
+                    materials: PrincipledMaterial {
+                        baseColor: modelData.w % 3 === 0 ? "#5d6b62" : (modelData.w % 3 === 1 ? "#7a7b6c" : "#4c5a5e")
+                        roughness: 0.75
+                    }
+                }
+            }
+
+            RockModel {
+                position: Qt.vector3d(-7.5, 44, -9)
+                eulerRotation.y: 30
+                scale: Qt.vector3d(2.4, 1.8, 2.4)
+            }
+
+            RockModel {
+                position: Qt.vector3d(9, 44, -6)
+                eulerRotation.y: 200
+                variant: 1
+                scale: Qt.vector3d(2, 2, 2)
+            }
+
+            SeaweedModel {
+                id: lakeWeed
+
+                instancing: RandomInstancing {
+                    instanceCount: 18
+                    randomSeed: 71
+                    position: InstanceRange {
+                        from: Qt.vector3d(-14, 44 + lakeWeed.meshLift * lakeWeed.meshScale, -22)
+                        to: Qt.vector3d(14, 44 + lakeWeed.meshLift * lakeWeed.meshScale, 4)
+                    }
+                    scale: InstanceRange {
+                        from: Qt.vector3d(lakeWeed.meshScale * 0.6, lakeWeed.meshScale * 0.6, lakeWeed.meshScale * 0.6)
+                        to: Qt.vector3d(lakeWeed.meshScale * 0.9, lakeWeed.meshScale * 0.9, lakeWeed.meshScale * 0.9)
+                        proportional: true
+                    }
+                    rotation: InstanceRange {
+                        from: Qt.vector3d(0, 0, 0)
+                        to: Qt.vector3d(0, 360, 0)
+                    }
+                }
+            }
+
+            Model {
+                source: "#Cylinder"
+                position: Qt.vector3d(0, 44.04, -12)
+                scale: Qt.vector3d(0.075, 0.0002, 0.055)
+                castsShadows: false
+                materials: PrincipledMaterial {
+                    lighting: PrincipledMaterial.NoLighting
+                    baseColor: "#010607"
+                }
+            }
+
+            Model {
+                source: "#Cylinder"
+                position: Qt.vector3d(0, 44.05, -12)
+                scale: Qt.vector3d(0.088, 0.0002, 0.068)
+                castsShadows: false
+                materials: PrincipledMaterial {
+                    baseColor: "#13262a"
+                    roughness: 1
+                }
+            }
+
+            Repeater3D {
+                model: [
+                    Qt.vector4d(-4.6, -11, 0, 2.6), Qt.vector4d(4.4, -12.5, 1, 2.4), Qt.vector4d(-2.6, -15.4, 0, 3),
+                    Qt.vector4d(2.8, -15.2, 1, 2.8), Qt.vector4d(-4.2, -8.6, 1, 1.6), Qt.vector4d(3.9, -9, 0, 1.8),
+                    Qt.vector4d(0.4, -16.6, 0, 3.2)
+                ]
+
+                delegate: RockModel {
+                    required property vector4d modelData
+
+                    position: Qt.vector3d(modelData.x, 44, modelData.y)
+                    eulerRotation.y: modelData.x * 40 + modelData.y * 13
+                    variant: modelData.z
+                    scale: Qt.vector3d(modelData.w, modelData.w * 0.9, modelData.w)
+                }
+            }
+
+            SpotLight {
+                position: Qt.vector3d(0.3, 54, 1.6)
+                eulerRotation.x: -90
+                color: "#e6f6ff"
+                brightness: 3
+                coneAngle: 35
+                innerConeAngle: 12
+                quadraticFade: 1
             }
         }
 
         HeroModel {
             id: hero
 
-            eulerRotation.y: root.above ? 0 : 180
-            clip: root.above ? (root.time < root.kneelAt ? "looking_around" : "pick_up_ice") : (root.dive < 6000 ? "swimming" : (root.dive < 11030 ? "swimming_to_edge" : "walking"))
-            loop: clip === "swimming" || clip === "walking"
-            time: root.above ? (root.time < root.kneelAt ? root.time : root.time - root.kneelAt) : (root.dive < 6000 ? root.dive : Math.max(0, root.dive - (root.dive < 11030 ? 6001 : 11031)))
+            eulerRotation: Qt.vector3d(root.swimming ? root.swimPitch : 0, root.above ? 0 : 180, 0)
+            mitten: root.above && root.time >= root.pickAt
+            clip: root.above ? (root.time < root.kneelAt ? "looking_around" : (root.time < 11200 ? "kneeling_down" : "breathing_idle")) : (root.swimming ? (root.underIce ? "swimming" : "treading_water") : (root.dive < 6000 ? "swimming" : (root.dive < 11030 ? "swimming_to_edge" : "swimming")))
+            loop: clip === "swimming" || clip === "walking" || clip === "treading_water" || clip === "breathing_idle"
+            time: root.above ? (root.time < root.kneelAt ? root.time : (root.time < 11200 ? root.time - root.kneelAt : root.time - 11200)) : (root.swimming ? (root.underIce ? root.swim : root.swim - 6000) : (root.dive < 6000 ? root.dive : (root.dive < 11030 ? Math.max(0, root.dive - 6001) : Math.max(0, root.dive - 11031) * 0.6)))
         }
 
         Model {
@@ -519,7 +1215,7 @@ Cutscene {
             receivesShadows: false
             materials: PrincipledMaterial {
                 lighting: PrincipledMaterial.NoLighting
-                baseColor: "#082d35"
+                baseColor: root.underIce ? "#0a3640" : "#082d35"
                 cullMode: Material.FrontFaceCulling
             }
         }
@@ -1003,6 +1699,130 @@ Cutscene {
                 }
             }
 
+            Repeater3D {
+                model: [Qt.vector3d(-5, 0, -16), Qt.vector3d(7.5, 0, -17.5), Qt.vector3d(-9.5, 0, -21)]
+
+                delegate: Node {
+                    required property vector3d modelData
+
+                    position: modelData
+
+                    Model {
+                        source: "#Cone"
+                        scale: Qt.vector3d(0.012, 0.005, 0.012)
+                        materials: PrincipledMaterial {
+                            baseColor: "#1c2a2c"
+                            roughness: 1
+                        }
+                    }
+
+                    Model {
+                        source: "#Cylinder"
+                        y: 0.42
+                        scale: Qt.vector3d(0.0016, 0.0004, 0.0016)
+                        materials: PrincipledMaterial {
+                            baseColor: "#000000"
+                            emissiveFactor: Qt.vector3d(1, 0.5, 0.18)
+                        }
+                    }
+                }
+            }
+
+            Repeater3D {
+                model: [
+                    Qt.vector4d(-6, -18, 4.5, 1), Qt.vector4d(5.5, -14, 3.6, 0.8), Qt.vector4d(-11, -27, 5, 1.2),
+                    Qt.vector4d(11.5, -24, 4.2, 1), Qt.vector4d(-2.5, -8, 3, 0.7), Qt.vector4d(8, -31, 5.5, 1.3),
+                    Qt.vector4d(-14, -16, 4.8, 1.1), Qt.vector4d(14, -9, 3.8, 0.9), Qt.vector4d(2.5, -36, 6, 1.4)
+                ]
+
+                delegate: Model {
+                    required property vector4d modelData
+
+                    source: "#Cone"
+                    position: Qt.vector3d(modelData.x, 15, modelData.y)
+                    eulerRotation.x: 180
+                    scale: Qt.vector3d(modelData.w * 0.02, modelData.z * 0.01, modelData.w * 0.02)
+                    materials: PrincipledMaterial {
+                        baseColor: "#122a2e"
+                        roughness: 1
+                    }
+                }
+            }
+
+            Repeater3D {
+                model: [
+                    Qt.vector4d(6.02, 7.62, 5.18, 2.18), Qt.vector4d(6.05, 8.7, 4.84, 2.64), Qt.vector4d(5.31, 9.86, 4.44, 2.61),
+                    Qt.vector4d(3.56, 10.8, 4.51, 2.08), Qt.vector4d(2.02, 11.57, 4.55, 2.99), Qt.vector4d(0.43, 11.52, 5.54, 2.75),
+                    Qt.vector4d(-1.65, 10.92, 5.57, 2.48), Qt.vector4d(-2.7, 10.58, 4.75, 3.03), Qt.vector4d(-3.55, 9.28, 4.77, 2.14),
+                    Qt.vector4d(-4.03, 7.48, 5.1, 2.22), Qt.vector4d(-3.76, 6.18, 5.06, 2.45), Qt.vector4d(-3.14, 5.46, 4.65, 2.07),
+                    Qt.vector4d(-1.38, 3.94, 4.78, 2.51), Qt.vector4d(0.21, 3.49, 4.76, 2.54), Qt.vector4d(2.28, 3.46, 4.69, 2.84),
+                    Qt.vector4d(3.68, 4.03, 5.45, 2.63), Qt.vector4d(5.07, 5.23, 5.58, 2.35), Qt.vector4d(5.66, 5.94, 5.31, 2.5),
+                    Qt.vector4d(6.91, 7.09, 0.66, 2.99), Qt.vector4d(6.68, 9.01, 1.52, 3.32), Qt.vector4d(5.41, 10.23, 1.71, 2.78),
+                    Qt.vector4d(4.4, 11.02, 1.33, 3.1), Qt.vector4d(2.42, 11.82, 1.36, 3.53), Qt.vector4d(0.77, 11.54, 1.72, 2.47),
+                    Qt.vector4d(-1.11, 11.69, 1.92, 3.59), Qt.vector4d(-2.21, 11.01, 1.67, 2.86), Qt.vector4d(-3.36, 10.36, 0.87, 2.95),
+                    Qt.vector4d(-4.27, 9.1, 1.83, 2.47), Qt.vector4d(-4.8, 7.87, 1.23, 2.7), Qt.vector4d(-4.29, 5.64, 1.32, 2.5),
+                    Qt.vector4d(-3.9, 4.44, 1.91, 3.46), Qt.vector4d(-2.01, 3.35, 1.26, 2.73), Qt.vector4d(-1.09, 2.69, 2.13, 3.46),
+                    Qt.vector4d(0.52, 2.72, 0.97, 2.61), Qt.vector4d(2.47, 2.72, 1.54, 2.98), Qt.vector4d(4.09, 3.53, 1.27, 2.4),
+                    Qt.vector4d(5.72, 4.45, 2.12, 3.08), Qt.vector4d(6.73, 6.19, 1.59, 3.02)
+                ]
+
+                delegate: Model {
+                    required property vector4d modelData
+                    required property int index
+
+                    source: Assets.url + (index % 2 === 0 ? "models/rock_large/meshes/rock_largeA_mesh.mesh" : "models/rock_tall/meshes/rock_tallA_mesh.mesh")
+                    position: Qt.vector3d(modelData.x, modelData.y - modelData.w * 0.4, modelData.z)
+                    eulerRotation: Qt.vector3d(index * 37, index * 53, index * 29)
+                    scale: Qt.vector3d(modelData.w * 1.1, modelData.w * 0.9, modelData.w * 1.0)
+                    materials: PrincipledMaterial {
+                        baseColor: index % 3 === 0 ? "#1c2a2c" : "#122a2e"
+                        roughness: 1
+                        normalStrength: 1.4
+                        normalMap: Texture {
+                            source: Assets.url + "textures/temple/wall_normal.jpg"
+                            scaleU: 2
+                            scaleV: 2
+                        }
+                    }
+                }
+            }
+
+            Repeater3D {
+                model: [Qt.vector4d(-0.6, -34, 8, 1.1), Qt.vector4d(1.6, -30, -6, 0.8), Qt.vector4d(3.4, -38, -14, 1.3)]
+
+                delegate: Model {
+                    required property vector4d modelData
+
+                    source: "#Cube"
+                    position: Qt.vector3d(modelData.x, 6.5, -4)
+                    eulerRotation: Qt.vector3d(modelData.y, modelData.z, 0)
+                    scale: Qt.vector3d(modelData.w * 0.01, 0.16, modelData.w * 0.004)
+                    castsShadows: false
+                    receivesShadows: false
+                    materials: PrincipledMaterial {
+                        alphaMode: PrincipledMaterial.Blend
+                        baseColor: "#000000"
+                        emissiveFactor: Qt.vector3d(0.5, 0.89, 0.94)
+                        specularAmount: 0
+                        opacity: 0.05
+                        depthDrawMode: Material.NeverDepthDraw
+                        cullMode: Material.NoCulling
+                    }
+                }
+            }
+
+            Model {
+                source: "#Rectangle"
+                position: Qt.vector3d(0, 15, -15)
+                eulerRotation.x: 90
+                scale: Qt.vector3d(1.4, 1.4, 1)
+                materials: PrincipledMaterial {
+                    baseColor: "#0d2226"
+                    roughness: 1
+                    cullMode: Material.NoCulling
+                }
+            }
+
             ParticleSystem3D {
                 id: bubbles
 
@@ -1060,6 +1880,40 @@ Cutscene {
                     velocity: VectorDirection3D {
                         direction: Qt.vector3d(0, 0.8, 0)
                         directionVariation: Qt.vector3d(0.06, 0.12, 0.06)
+                    }
+                }
+
+                ParticleEmitter3D {
+                    particle: bubble
+                    position: Qt.vector3d(7.5, 0.3, -17.5)
+                    shape: ParticleShape3D {
+                        type: ParticleShape3D.Sphere
+                        extents: Qt.vector3d(0.15, 0.05, 0.15)
+                    }
+                    emitRate: 9
+                    lifeSpan: 6000
+                    particleScale: 1
+                    particleScaleVariation: 0.6
+                    velocity: VectorDirection3D {
+                        direction: Qt.vector3d(0, 1, 0)
+                        directionVariation: Qt.vector3d(0.05, 0.15, 0.05)
+                    }
+                }
+
+                ParticleEmitter3D {
+                    particle: bubble
+                    position: Qt.vector3d(-9.5, 0.3, -21)
+                    shape: ParticleShape3D {
+                        type: ParticleShape3D.Sphere
+                        extents: Qt.vector3d(0.15, 0.05, 0.15)
+                    }
+                    emitRate: 9
+                    lifeSpan: 6000
+                    particleScale: 1
+                    particleScaleVariation: 0.6
+                    velocity: VectorDirection3D {
+                        direction: Qt.vector3d(0, 1, 0)
+                        directionVariation: Qt.vector3d(0.05, 0.15, 0.05)
                     }
                 }
 
